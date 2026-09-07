@@ -6,4 +6,5 @@ categories: [Análisis, Interactivo]
 
 A lo largo de este blog discutiremos de manera interactiva, las principales nociones del cálculo diferencial.
 
-El objbeto matemático sobre el que se desarrolla todo el cálculo diferencial, es el conjunto de los números reales, que se denota con el símbolo $\mathbb{R}$.
+
+
