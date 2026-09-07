@@ -1,7 +1,6 @@
 ---
-title: "Visualizando la Identidad de Euler"
-author: "Tu Nombre"
-date: "2026-09-07"
+title: "Números"
+author: "Juan Pablo Hernández Rodas"
 categories: [Análisis, Interactivo]
 ---
 
