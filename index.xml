@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Calculo diferencial interactivo</title>
+<link>https://your-website-url.example.com/</link>
+<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
+<description>A blog built with Quarto</description>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Mon, 07 Sep 2026 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Visualizando la Identidad de Euler</title>
+  <dc:creator>Tu Nombre</dc:creator>
+  <link>https://your-website-url.example.com/posts/post-with-code/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>La relación fundamental entre números complejos y trigonometría está dada por:</p>
+<p><img src="https://latex.codecogs.com/png.latex?e%5E%7Bi%5Cpi%7D%20+%201%20=%200"></p>
+<p>Explora el comportamiento de la función en el plano complejo con el siguiente gráfico dinámico:</p>
+<div style="width: 100%; max-width: 600px; margin: 0 auto;">
+<p><iframe src="https://www.desmos.com/calculator/tuzj0nksxk?embed" width="100%" height="400" style="border: 1px solid #ccc; border-radius: 8px;" loading="lazy"> </iframe></p>
+</div>
+
+
+
+ ]]></description>
+  <category>Análisis</category>
+  <category>Interactivo</category>
+  <guid>https://your-website-url.example.com/posts/post-with-code/</guid>
+  <pubDate>Mon, 07 Sep 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Welcome To My Blog</title>
+  <dc:creator>Tristan O&#39;Malley</dc:creator>
+  <link>https://your-website-url.example.com/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is the first post in a Quarto blog. Welcome!</p>
+<p><img src="https://your-website-url.example.com/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
+<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://your-website-url.example.com/posts/welcome/</guid>
+  <pubDate>Fri, 04 Sep 2026 05:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
