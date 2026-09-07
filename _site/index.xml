@@ -10,9 +10,9 @@
 <atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Mon, 07 Sep 2026 21:18:24 GMT</lastBuildDate>
+<lastBuildDate>Mon, 07 Sep 2026 21:30:22 GMT</lastBuildDate>
 <item>
-  <title>Números</title>
+  <title>Bienvenido a mi blog interactivo sobre cálculo diferencial</title>
   <dc:creator>Juan Pablo Hernández Rodas</dc:creator>
   <link>https://your-website-url.example.com/posts/post-with-code/</link>
   <description><![CDATA[ 
@@ -21,12 +21,8 @@
 
 
 
-<p>La relación fundamental entre números complejos y trigonometría está dada por:</p>
-<p><img src="https://latex.codecogs.com/png.latex?e%5E%7Bi%5Cpi%7D%20+%201%20=%200"></p>
-<p>Explora el comportamiento de la función en el plano complejo con el siguiente gráfico dinámico:</p>
-<div style="width: 100%; max-width: 600px; margin: 0 auto;">
-<p><iframe src="https://www.desmos.com/calculator/tuzj0nksxk?embed" width="100%" height="400" style="border: 1px solid #ccc; border-radius: 8px;" loading="lazy"> </iframe></p>
-</div>
+<p>A lo largo de este blog discutiremos de manera interactiva, las principales nociones del cálculo diferencial.</p>
+<p>El objbeto matemático sobre el que se desarrolla todo el cálculo diferencial, es el conjunto de los números reales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D">.</p>
 
 
 
@@ -34,7 +30,7 @@
   <category>Análisis</category>
   <category>Interactivo</category>
   <guid>https://your-website-url.example.com/posts/post-with-code/</guid>
-  <pubDate>Mon, 07 Sep 2026 21:18:24 GMT</pubDate>
+  <pubDate>Mon, 07 Sep 2026 21:30:22 GMT</pubDate>
 </item>
 </channel>
 </rss>
