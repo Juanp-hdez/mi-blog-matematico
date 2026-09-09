@@ -10,7 +10,7 @@
 <atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Wed, 09 Sep 2026 19:54:13 GMT</lastBuildDate>
+<lastBuildDate>Wed, 09 Sep 2026 20:13:02 GMT</lastBuildDate>
 <item>
   <title>Números</title>
   <dc:creator>Juan Pablo Hernández Rodas</dc:creator>
@@ -41,7 +41,7 @@
   <category>Cálculo</category>
   <category>Interactivo</category>
   <guid>https://your-website-url.example.com/posts/numeros/numeros.html</guid>
-  <pubDate>Wed, 09 Sep 2026 19:54:13 GMT</pubDate>
+  <pubDate>Wed, 09 Sep 2026 20:13:02 GMT</pubDate>
 </item>
 <item>
   <title>Bienvenido a mi blog interactivo sobre cálculo diferencial</title>
@@ -61,7 +61,7 @@
   <category>Análisis</category>
   <category>Interactivo</category>
   <guid>https://your-website-url.example.com/posts/pagina-inicial/</guid>
-  <pubDate>Wed, 09 Sep 2026 19:54:13 GMT</pubDate>
+  <pubDate>Wed, 09 Sep 2026 20:13:02 GMT</pubDate>
 </item>
 </channel>
 </rss>
