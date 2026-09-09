@@ -1,0 +1,27 @@
+---
+title: "Entendiendo la Derivada Visualmente"
+description: "Una exploración interactiva de la tasa de cambio."
+author: "Tu Nombre"
+date: "2026-09-07"
+categories: [Cálculo, Interactivo]
+---
+
+## La definición matemática
+
+La derivada de una función $f(x)$ nos da la pendiente de la recta tangente en un punto dado. Formalmente se define con el límite:
+
+$$ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} $$
+
+## Experimenta tú mismo
+
+Mueve el deslizador **$a$** en el siguiente gráfico para ver cómo cambia la pendiente de la recta tangente sobre la curva de $f(x) = x^2$.
+
+<div style="width: 100%; max-width: 600px; margin: 0 auto;">
+  <iframe 
+    src="https://www.desmos.com/calculator/tuzj0nksxk?embed" 
+    width="100%" 
+    height="400" 
+    style="border: 1px solid #ccc; border-radius: 8px;" 
+    loading="lazy">
+  </iframe>
+</div>

@@ -18,14 +18,14 @@
     "href": "posts/post-with-code/index.html",
     "title": "Bienvenido a mi blog interactivo sobre cálculo diferencial",
     "section": "",
-    "text": "A lo largo de este blog discutiremos de manera interactiva, las principales nociones del cálculo diferencial.\nEl objbeto matemático sobre el que se desarrolla todo el cálculo diferencial, es el conjunto de los números reales \\[\\mathbb{R}\\]."
+    "text": "A lo largo de este blog discutiremos de manera interactiva, las principales nociones del cálculo diferencial."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Calculo diferencial interactivo",
     "section": "",
-    "text": "Bienvenido a mi blog interactivo sobre cálculo diferencial\n\n\n\nAnálisis\n\nInteractivo\n\n\n\n\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\nNo matching items"
+    "text": "Bienvenido a mi blog interactivo sobre cálculo diferencial\n\n\n\nAnálisis\n\nInteractivo\n\n\n\n\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\n\n\n\n\n\n\n\nEntendiendo la Derivada Visualmente\n\n\n\nCálculo\n\nInteractivo\n\n\n\nUna exploración interactiva de la tasa de cambio.\n\n\n\n\n\nSep 7, 2026\n\n\nTu Nombre\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/clase-1/index.html",
@@ -33,5 +33,33 @@
     "title": "Calculo diferencial interactivo",
     "section": "",
     "text": "title: “Bienvenido a mi blog interactivo sobre cálculo diferencial” author: “Juan Pablo Hernandez Rodas” categories: [news] —\nA lo largo de este blog encontraras discutidas de manera interactiva, distintas nociones del cálculo diferencial."
+  },
+  {
+    "objectID": "posts/derivadas-visuales/index.html",
+    "href": "posts/derivadas-visuales/index.html",
+    "title": "Entendiendo la Derivada Visualmente",
+    "section": "",
+    "text": "La derivada de una función \\(f(x)\\) nos da la pendiente de la recta tangente en un punto dado. Formalmente se define con el límite:\n\\[ f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h} \\]"
+  },
+  {
+    "objectID": "posts/derivadas-visuales/index.html#la-definición-matemática",
+    "href": "posts/derivadas-visuales/index.html#la-definición-matemática",
+    "title": "Entendiendo la Derivada Visualmente",
+    "section": "",
+    "text": "La derivada de una función \\(f(x)\\) nos da la pendiente de la recta tangente en un punto dado. Formalmente se define con el límite:\n\\[ f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h} \\]"
+  },
+  {
+    "objectID": "posts/derivadas-visuales/index.html#experimenta-tú-mismo",
+    "href": "posts/derivadas-visuales/index.html#experimenta-tú-mismo",
+    "title": "Entendiendo la Derivada Visualmente",
+    "section": "Experimenta tú mismo",
+    "text": "Experimenta tú mismo\nMueve el deslizador \\(a\\) en el siguiente gráfico para ver cómo cambia la pendiente de la recta tangente sobre la curva de \\(f(x) = x^2\\)."
+  },
+  {
+    "objectID": "posts/pagina-inicial/index.html",
+    "href": "posts/pagina-inicial/index.html",
+    "title": "Bienvenido a mi blog interactivo sobre cálculo diferencial",
+    "section": "",
+    "text": "A lo largo de este blog discutiremos de manera interactiva, las principales nociones del cálculo diferencial."
   }
 ]

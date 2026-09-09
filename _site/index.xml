@@ -10,11 +10,42 @@
 <atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Mon, 07 Sep 2026 21:34:26 GMT</lastBuildDate>
+<lastBuildDate>Mon, 07 Sep 2026 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Entendiendo la Derivada Visualmente</title>
+  <dc:creator>Tu Nombre</dc:creator>
+  <link>https://your-website-url.example.com/posts/derivadas-visuales/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="la-definición-matemática" class="level2">
+<h2 class="anchored" data-anchor-id="la-definición-matemática">La definición matemática</h2>
+<p>La derivada de una función <img src="https://latex.codecogs.com/png.latex?f(x)"> nos da la pendiente de la recta tangente en un punto dado. Formalmente se define con el límite:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20f'(x)%20=%20%5Clim_%7Bh%20%5Cto%200%7D%20%5Cfrac%7Bf(x+h)%20-%20f(x)%7D%7Bh%7D%20"></p>
+</section>
+<section id="experimenta-tú-mismo" class="level2">
+<h2 class="anchored" data-anchor-id="experimenta-tú-mismo">Experimenta tú mismo</h2>
+<p>Mueve el deslizador <strong><img src="https://latex.codecogs.com/png.latex?a"></strong> en el siguiente gráfico para ver cómo cambia la pendiente de la recta tangente sobre la curva de <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20x%5E2">.</p>
+<div style="width: 100%; max-width: 600px; margin: 0 auto;">
+<p><iframe src="https://www.desmos.com/calculator/tuzj0nksxk?embed" width="100%" height="400" style="border: 1px solid #ccc; border-radius: 8px;" loading="lazy"> </iframe></p>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Cálculo</category>
+  <category>Interactivo</category>
+  <guid>https://your-website-url.example.com/posts/derivadas-visuales/</guid>
+  <pubDate>Mon, 07 Sep 2026 05:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Bienvenido a mi blog interactivo sobre cálculo diferencial</title>
   <dc:creator>Juan Pablo Hernández Rodas</dc:creator>
-  <link>https://your-website-url.example.com/posts/post-with-code/</link>
+  <link>https://your-website-url.example.com/posts/pagina-inicial/</link>
   <description><![CDATA[ 
 
 
@@ -22,15 +53,14 @@
 
 
 <p>A lo largo de este blog discutiremos de manera interactiva, las principales nociones del cálculo diferencial.</p>
-<p>El objbeto matemático sobre el que se desarrolla todo el cálculo diferencial, es el conjunto de los números reales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D">.</p>
 
 
 
  ]]></description>
   <category>Análisis</category>
   <category>Interactivo</category>
-  <guid>https://your-website-url.example.com/posts/post-with-code/</guid>
-  <pubDate>Mon, 07 Sep 2026 21:34:26 GMT</pubDate>
+  <guid>https://your-website-url.example.com/posts/pagina-inicial/</guid>
+  <pubDate>Mon, 07 Sep 2026 22:08:25 GMT</pubDate>
 </item>
 </channel>
 </rss>

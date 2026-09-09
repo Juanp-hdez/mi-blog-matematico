@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://your-website-url.example.com/posts/post-with-code/index.html</loc>
-    <lastmod>2026-09-07T21:30:08.384Z</lastmod>
+    <lastmod>2026-09-07T22:03:50.791Z</lastmod>
   </url>
   <url>
     <loc>https://your-website-url.example.com/index.html</loc>
@@ -19,5 +19,13 @@
   <url>
     <loc>https://your-website-url.example.com/posts/clase-1/index.html</loc>
     <lastmod>2026-09-07T20:22:11.540Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/posts/derivadas-visuales/index.html</loc>
+    <lastmod>2026-09-07T22:08:24.291Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/posts/pagina-inicial/index.html</loc>
+    <lastmod>2026-09-07T22:03:50.791Z</lastmod>
   </url>
 </urlset>
