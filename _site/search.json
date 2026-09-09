@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Calculo diferencial interactivo",
     "section": "",
-    "text": "Bienvenido a mi blog interactivo sobre cálculo diferencial\n\n\n\nAnálisis\n\nInteractivo\n\n\n\n\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\n\n\n\n\n\n\n\nEntendiendo la Derivada Visualmente\n\n\n\nCálculo\n\nInteractivo\n\n\n\nUna exploración interactiva de la tasa de cambio.\n\n\n\n\n\nSep 7, 2026\n\n\nTu Nombre\n\n\n\n\n\nNo matching items"
+    "text": "Números\n\n\n\nCálculo\n\nInteractivo\n\n\n\nConstruyendo los números naturales, los números racionales y los números reales.\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\n\n\n\n\n\n\n\nBienvenido a mi blog interactivo sobre cálculo diferencial\n\n\n\nAnálisis\n\nInteractivo\n\n\n\n\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/clase-1/index.html",
@@ -61,5 +61,26 @@
     "title": "Bienvenido a mi blog interactivo sobre cálculo diferencial",
     "section": "",
     "text": "A lo largo de este blog discutiremos de manera interactiva, las principales nociones del cálculo diferencial."
+  },
+  {
+    "objectID": "posts/numeros/numeros.html",
+    "href": "posts/numeros/numeros.html",
+    "title": "Números",
+    "section": "",
+    "text": "Todo el cálculo diferencial se desarrolla sobre el conjunto de los números reales \\(\\mathbb{R}\\). Las propiedades que definen este conjunto, son las que permiten definir formalmente el concepto de límite, que es la idea central para el desarrollo del cálculo diferencial."
+  },
+  {
+    "objectID": "posts/numeros/numeros.html#la-definición-matemática",
+    "href": "posts/numeros/numeros.html#la-definición-matemática",
+    "title": "Números",
+    "section": "La definición matemática",
+    "text": "La definición matemática\nLa derivada de una función \\(f(x)\\) nos da la pendiente de la recta tangente en un punto dado. Formalmente se define con el límite:\n\\[ f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h} \\]"
+  },
+  {
+    "objectID": "posts/numeros/numeros.html#experimenta-tú-mismo",
+    "href": "posts/numeros/numeros.html#experimenta-tú-mismo",
+    "title": "Números",
+    "section": "Experimenta tú mismo",
+    "text": "Experimenta tú mismo\nMueve el deslizador \\(a\\) en el siguiente gráfico para ver cómo cambia la pendiente de la recta tangente sobre la curva de \\(f(x) = x^2\\)."
   }
 ]

@@ -10,17 +10,18 @@
 <atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Mon, 07 Sep 2026 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 09 Sep 2026 19:50:58 GMT</lastBuildDate>
 <item>
-  <title>Entendiendo la Derivada Visualmente</title>
-  <dc:creator>Tu Nombre</dc:creator>
-  <link>https://your-website-url.example.com/posts/derivadas-visuales/</link>
+  <title>Números</title>
+  <dc:creator>Juan Pablo Hernández Rodas</dc:creator>
+  <link>https://your-website-url.example.com/posts/numeros/numeros.html</link>
   <description><![CDATA[ 
 
 
 
 
 
+<p>Todo el cálculo diferencial se desarrolla sobre el conjunto de los números reales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D">. Las propiedades que definen este conjunto, son las que permiten definir formalmente el concepto de límite, que es la idea central para el desarrollo del cálculo diferencial.</p>
 <section id="la-definición-matemática" class="level2">
 <h2 class="anchored" data-anchor-id="la-definición-matemática">La definición matemática</h2>
 <p>La derivada de una función <img src="https://latex.codecogs.com/png.latex?f(x)"> nos da la pendiente de la recta tangente en un punto dado. Formalmente se define con el límite:</p>
@@ -39,8 +40,8 @@
  ]]></description>
   <category>Cálculo</category>
   <category>Interactivo</category>
-  <guid>https://your-website-url.example.com/posts/derivadas-visuales/</guid>
-  <pubDate>Mon, 07 Sep 2026 05:00:00 GMT</pubDate>
+  <guid>https://your-website-url.example.com/posts/numeros/numeros.html</guid>
+  <pubDate>Wed, 09 Sep 2026 19:50:58 GMT</pubDate>
 </item>
 <item>
   <title>Bienvenido a mi blog interactivo sobre cálculo diferencial</title>
@@ -60,7 +61,7 @@
   <category>Análisis</category>
   <category>Interactivo</category>
   <guid>https://your-website-url.example.com/posts/pagina-inicial/</guid>
-  <pubDate>Mon, 07 Sep 2026 22:08:25 GMT</pubDate>
+  <pubDate>Wed, 09 Sep 2026 19:50:58 GMT</pubDate>
 </item>
 </channel>
 </rss>

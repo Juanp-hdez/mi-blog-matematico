@@ -1,10 +1,11 @@
 ---
-title: "Entendiendo la Derivada Visualmente"
-description: "Una exploración interactiva de la tasa de cambio."
-author: "Tu Nombre"
-date: "2026-09-07"
+title: "Números"
+description: "Construyendo los números naturales, los números racionales y los números reales."
+author: "Juan Pablo Hernández Rodas"
 categories: [Cálculo, Interactivo]
 ---
+
+Todo el cálculo diferencial se desarrolla sobre el conjunto de los números reales $\mathbb{R}$. Las propiedades que definen este conjunto, son las que permiten definir formalmente el concepto de límite, que es la idea central para el desarrollo del cálculo diferencial.
 
 ## La definición matemática
 
