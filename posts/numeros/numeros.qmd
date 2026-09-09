@@ -18,7 +18,7 @@ Antes de introducir los axiomas de Peano, definamos el concepto de función.
 
 De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida $A$ y un conjunto de llegada $B$, que a cada elemento del conjunto $A$ le asigna un único elemento del conjunto $B$.  
 
-```{tikz}
+{tikz}
 #| label: fig-mi-diagrama
 #| fig-cap: "Representación gráfica"
 #| fig-align: center
@@ -51,6 +51,7 @@ De manera informal, una función es una regla de asignación entre dos conjuntos
 % 5. Agregar anotaciones didácticas con corchetes
 \draw[|{latex}-{latex}|, shorten >=5pt, shorten <=5pt] ($(a.south)-(0,0.1)$) -- ++(0,-0.6)
     node[below, font=\scriptsize] {elemento específico};
+  
 
 \draw[|{latex}-{latex}|, shorten >=5pt, shorten <=5pt] ($(b.south)-(0,0.1)$) -- ++(0,-0.6)
     node[below, font=\scriptsize] {imagen de $a$};
@@ -60,4 +61,3 @@ De manera informal, una función es una regla de asignación entre dos conjuntos
     node[midway, above=3pt] {$f: A \to B$};
 
 \end{tikzpicture}
-```
