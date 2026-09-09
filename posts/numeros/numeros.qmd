@@ -60,3 +60,4 @@ De manera informal, una función es una regla de asignación entre dos conjuntos
     node[midway, above=3pt] {$f: A \to B$};
 
 \end{tikzpicture}
+```
