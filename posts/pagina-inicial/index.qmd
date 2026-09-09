@@ -1,6 +1,7 @@
 ---
 title: "Bienvenido a mi blog interactivo sobre cálculo diferencial"
 author: "Juan Pablo Hernández Rodas"
+date: "2026-09-07"
 categories: [Análisis, Interactivo]
 ---
 
