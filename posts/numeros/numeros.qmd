@@ -24,7 +24,7 @@ De manera informal, una función es una regla de asignación entre dos conjuntos
 #| fig-align: center
 #| ext: png
 
-\usetikzlibrary{arrows.meta, positioning}
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
 
 \begin{tikzpicture}[>=stealth]
 
