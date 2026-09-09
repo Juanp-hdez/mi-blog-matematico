@@ -208,44 +208,15 @@ window.Quarto = {
 <pre class="{tikz}"><code>#| label: fig-mi-diagrama
 #| fig-cap: "Representación gráfica"
 #| fig-align: center
-#| ext: png
+#| ext: svg
 
-\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+\usetikzlibrary{arrows.meta, positioning}
 
-\begin{tikzpicture}[&gt;=stealth]
-
-% 1. Dibujar los conjuntos principales y sus etiquetas
-\draw[setA] (0,0) ellipse (1.5cm and 2.5cm) node[above=2.7cm, font=\large] {A};
-\draw[setB] (6,0) ellipse (1.5cm and 2.5cm) node[above=2.7cm, font=\large] {B};
-
-% 2. Agregar otros puntos genéricos (para el contexto)
-\foreach \i in {1,...,6} {
-    \fill ($(0,0)+(1.5*rand, 2.3*rand)$) circle (1pt) node [below right, font=\tiny, text=gray] {};
-}
-\foreach \i in {1,...,6} {
-    \fill ($(6,0)+(1.5*rand, 2.3*rand)$) circle (1pt) node [below right, font=\tiny, text=gray] {};
-}
-
-% 3. Dibujar y etiquetar los elementos específicos
-\node (a) at (0.3, 0.2) [circle, fill, inner sep=1.8pt, label=left:$a$] {};
-\node (b) at (5.7, 0.2) [circle, fill, inner sep=1.8pt, label=right:$b=f(a)$] {};
-
-% 4. Dibujar la flecha de la función principal
-\draw[-&gt;, thick, shortened &gt;=2pt, shortened &lt;=2pt] (a) -- (b)
-    node[midway, above, font=\small, text=red!80!black] {$f$};
-
-% 5. Agregar anotaciones didácticas con corchetes
-\draw[|{latex}-{latex}|, shorten &gt;=5pt, shorten &lt;=5pt] ($(a.south)-(0,0.1)$) -- ++(0,-0.6)
-    node[below, font=\scriptsize] {elemento específico};
+\begin{tikzpicture}[node distance=2cm]
+  \node (A) [draw, circle] {$a$};
+  \node (B) [draw, circle, right=of A] {$b$};
   
-
-\draw[|{latex}-{latex}|, shorten &gt;=5pt, shorten &lt;=5pt] ($(b.south)-(0,0.1)$) -- ++(0,-0.6)
-    node[below, font=\scriptsize] {imagen de $a$};
-
-% 6. Agregar la flecha global de función en la parte superior
-\draw[-&gt;, thick] ($(0,2.5)+(0,0.6)$) to[out=25,in=155] ($(6,2.5)+(0,0.6)$)
-    node[midway, above=3pt] {$f: A \to B$};
-
+  \draw[-&gt;, thick] (A) -- (B) node[midway, above] {$f$};
 \end{tikzpicture}</code></pre>
 
 
