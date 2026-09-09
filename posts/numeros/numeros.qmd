@@ -2,28 +2,61 @@
 title: "Números"
 description: "Construyendo los números naturales, los números racionales y los números reales."
 author: "Juan Pablo Hernández Rodas"
-date: " "
+date: "2026-09-09"
 categories: [Cálculo, Interactivo]
 ---
 
 Todo el cálculo diferencial se desarrolla sobre el conjunto de los números reales $\mathbb{R}$. Las propiedades que definen este conjunto, son las que permiten definir formalmente el concepto de límite, que es la idea central para el desarrollo del cálculo diferencial.
 
-## La definición matemática
+## Los números naturales $\mathbb{N}$
 
-La derivada de una función $f(x)$ nos da la pendiente de la recta tangente en un punto dado. Formalmente se define con el límite:
+La construcción de los números naturales $\mathbb{N}$ es el paso inicial en la construcción de los números reales. Los naturales son el conjunto que usamos para contar, que generalmente escribimos como $\mathbb{N}=\{1,2, \dots, n, \dots\}$. A pesar de que estamos muy acostumbrados a usar el conjunto de los números naturales, para tener una formalización matemática de este conjunto, tocó esperar hasta el siglo XIX, cuando en el año 1889, el matemático italiano Giuseppe Peano introdujo un conjunto de axiomas conocidos como los **Axiomas de Peano**. Existen otras construcciones de los números naturales, como por ejemplo la construcción a partir de la teoría de conjuntos, desarrollada por Ernst Zermelo y Abraham Fraenkel.
 
-$$ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} $$
+Antes de introducir los axiomas de Peano, definamos el concepto de función.
 
-## Experimenta tú mismo
+### Funciones
 
-Mueve el deslizador **$a$** en el siguiente gráfico para ver cómo cambia la pendiente de la recta tangente sobre la curva de $f(x) = x^2$.
+De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida $A$ y un conjunto de llegada $B$, que a cada elemento del conjunto $A$ le asigna un único elemento del conjunto $B$.  
 
-<div style="width: 100%; max-width: 600px; margin: 0 auto;">
-  <iframe 
-    src="https://www.desmos.com/calculator/tuzj0nksxk?embed" 
-    width="100%" 
-    height="400" 
-    style="border: 1px solid #ccc; border-radius: 8px;" 
-    loading="lazy">
-  </iframe>
-</div>
+```{tikz}
+#| label: fig-mi-diagrama
+#| fig-cap: "Representación gráfica"
+#| fig-align: center
+#| ext: svg
+
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{tikzpicture}[>=stealth]
+
+% 1. Dibujar los conjuntos principales y sus etiquetas
+\draw[setA] (0,0) ellipse (1.5cm and 2.5cm) node[above=2.7cm, font=\large] {A};
+\draw[setB] (6,0) ellipse (1.5cm and 2.5cm) node[above=2.7cm, font=\large] {B};
+
+% 2. Agregar otros puntos genéricos (para el contexto)
+\foreach \i in {1,...,6} {
+    \fill ($(0,0)+(1.5*rand, 2.3*rand)$) circle (1pt) node [below right, font=\tiny, text=gray] {};
+}
+\foreach \i in {1,...,6} {
+    \fill ($(6,0)+(1.5*rand, 2.3*rand)$) circle (1pt) node [below right, font=\tiny, text=gray] {};
+}
+
+% 3. Dibujar y etiquetar los elementos específicos
+\node (a) at (0.3, 0.2) [circle, fill, inner sep=1.8pt, label=left:$a$] {};
+\node (b) at (5.7, 0.2) [circle, fill, inner sep=1.8pt, label=right:$b=f(a)$] {};
+
+% 4. Dibujar la flecha de la función principal
+\draw[->, thick, shortened >=2pt, shortened <=2pt] (a) -- (b)
+    node[midway, above, font=\small, text=red!80!black] {$f$};
+
+% 5. Agregar anotaciones didácticas con corchetes
+\draw[|{latex}-{latex}|, shorten >=5pt, shorten <=5pt] ($(a.south)-(0,0.1)$) -- ++(0,-0.6)
+    node[below, font=\scriptsize] {elemento específico};
+
+\draw[|{latex}-{latex}|, shorten >=5pt, shorten <=5pt] ($(b.south)-(0,0.1)$) -- ++(0,-0.6)
+    node[below, font=\scriptsize] {imagen de $a$};
+
+% 6. Agregar la flecha global de función en la parte superior
+\draw[->, thick] ($(0,2.5)+(0,0.6)$) to[out=25,in=155] ($(6,2.5)+(0,0.6)$)
+    node[midway, above=3pt] {$f: A \to B$};
+
+\end{tikzpicture}

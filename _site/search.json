@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Calculo diferencial interactivo",
     "section": "",
-    "text": "Números\n\n\n\nCálculo\n\nInteractivo\n\n\n\nConstruyendo los números naturales, los números racionales y los números reales.\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\n\n\n\n\n\n\n\nBienvenido a mi blog interactivo sobre cálculo diferencial\n\n\n\nAnálisis\n\nInteractivo\n\n\n\n\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\nNo matching items"
+    "text": "Bienvenido a mi blog interactivo sobre cálculo diferencial\n\n\n\nAnálisis\n\nInteractivo\n\n\n\n\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\n\n\n\n\n\n\n\nNúmeros\n\n\n\nCálculo\n\nInteractivo\n\n\n\nConstruyendo los números naturales, los números racionales y los números reales.\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/clase-1/index.html",
@@ -82,5 +82,19 @@
     "title": "Números",
     "section": "Experimenta tú mismo",
     "text": "Experimenta tú mismo\nMueve el deslizador \\(a\\) en el siguiente gráfico para ver cómo cambia la pendiente de la recta tangente sobre la curva de \\(f(x) = x^2\\)."
+  },
+  {
+    "objectID": "posts/numeros/numeros.html#los-números-naturales",
+    "href": "posts/numeros/numeros.html#los-números-naturales",
+    "title": "Números",
+    "section": "Los números naturales",
+    "text": "Los números naturales\nLa construcción de los números naturales \\(\\mathbb{N}\\) es el paso inicial en la construcción de los números reales. Los naturales son el conjunto que usamos para contar, que generalmente escribimos como \\(\\mathbb{N}=\\{1,2, \\dots, n, \\dots\\}\\). A pesar de que estamos muy acostumbrados a usar el conjunto de los números naturales, para tener una formalización matemática de este conjunto, tocó esperar hasta el siglo XIX, cuando en el año 1889, el matemático italiano Giuseppe Peano introdujo un conjunto de axiomas conocidos como los Axiomas de Peano. Existen otras construcciones de los números naturales, como por ejemplo la construcción a partir de la teoría de conjuntos, desarrollada por Ernst Zermelo y Abraham Fraenkel."
+  },
+  {
+    "objectID": "posts/numeros/numeros.html#los-números-naturales-mathbbn",
+    "href": "posts/numeros/numeros.html#los-números-naturales-mathbbn",
+    "title": "Números",
+    "section": "Los números naturales \\(\\mathbb{N}\\)",
+    "text": "Los números naturales \\(\\mathbb{N}\\)\nLa construcción de los números naturales \\(\\mathbb{N}\\) es el paso inicial en la construcción de los números reales. Los naturales son el conjunto que usamos para contar, que generalmente escribimos como \\(\\mathbb{N}=\\{1,2, \\dots, n, \\dots\\}\\). A pesar de que estamos muy acostumbrados a usar el conjunto de los números naturales, para tener una formalización matemática de este conjunto, tocó esperar hasta el siglo XIX, cuando en el año 1889, el matemático italiano Giuseppe Peano introdujo un conjunto de axiomas conocidos como los Axiomas de Peano. Existen otras construcciones de los números naturales, como por ejemplo la construcción a partir de la teoría de conjuntos, desarrollada por Ernst Zermelo y Abraham Fraenkel.\nAntes de introducir los axiomas de Peano, definamos el concepto de función.\n\nFunciones"
   }
 ]
