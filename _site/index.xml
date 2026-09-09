@@ -28,6 +28,9 @@
 <p>Antes de introducir los axiomas de Peano, definamos el concepto de función.</p>
 <section id="funciones" class="level3">
 <h3 class="anchored" data-anchor-id="funciones">Funciones</h3>
+<p>De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida <img src="https://latex.codecogs.com/png.latex?A"> y un conjunto de llegada <img src="https://latex.codecogs.com/png.latex?B">, que a cada elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A"> le asigna un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">.</p>
+<p>$$```{tikz} #| label: fig-mi-diagrama #| fig-cap: “Representación gráfica” #| fig-align: center #| ext: svg</p>
+<p>```$$</p>
 
 
 </section>
