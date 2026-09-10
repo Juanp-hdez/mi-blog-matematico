@@ -28,6 +28,12 @@ Otra forma de representar una función, es como una caja negra, con una entrada 
 
 #### Ejemplo de función
 
-Consideremos un conjunto con tres elementos $A=\{a, b, c\}$ y un conjunto con cinco elementos $B=\{x,y,z,w,v\}$. La asignaci\'on $a \mapsto z$, $b \mapsto v$ y $c \mapsto z$ es un ejemplo de funci\'on $f$ representada gr\'aficamente como:
+Consideremos un conjunto con tres elementos $A=\{a, b, c\}$ y un conjunto con cinco elementos $B=\{x,y,z,w,v\}$. La asignación $a \mapsto z$, $b \mapsto v$ y $c \mapsto z$ es un ejemplo de una funcióon $f$ representada gráficamente como:
 
 ![Figura 3.](ejemplo_funcion.png)
+
+#### Ejemplo de alguien que no es una función
+
+Con los mismos conjuntos del ejemplo anterior, la figura
+
+![Figura 4.](ejemplo_no_funcion.png)

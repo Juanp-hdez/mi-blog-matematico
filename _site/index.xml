@@ -30,11 +30,41 @@
 <h3 class="anchored" data-anchor-id="funciones">Funciones</h3>
 <p>De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida <img src="https://latex.codecogs.com/png.latex?A"> y un conjunto de llegada <img src="https://latex.codecogs.com/png.latex?B">, que a cada elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A"> le asigna un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">.</p>
 <p>Una manera de representar las funciones es mediante un diagrama de flechas, como muestra la siguiente figura:</p>
-<p><img src="https://your-website-url.example.com/posts/numeros/figura_funcion.png" class="img-fluid"></p>
-<p>Otra forma de representar una función, es como una caja negra, con una entrada y una salida, donde al introducir en la cajaun elemento <img src="https://latex.codecogs.com/png.latex?x"> del conjunto <img src="https://latex.codecogs.com/png.latex?A">, se produce una única salida <img src="https://latex.codecogs.com/png.latex?f(x)"> del conjunto <img src="https://latex.codecogs.com/png.latex?B">, como se muestra en la siguiente figura:</p>
-<p><img src="https://your-website-url.example.com/posts/numeros/figura_caja_funcion.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/figura_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 1.</figcaption>
+</figure>
+</div>
+<p>Otra forma de representar una función, es como una caja negra, con una entrada y una salida, donde al introducir en la caja un elemento <img src="https://latex.codecogs.com/png.latex?x"> del conjunto <img src="https://latex.codecogs.com/png.latex?A">, se produce una única salida <img src="https://latex.codecogs.com/png.latex?f(x)"> del conjunto <img src="https://latex.codecogs.com/png.latex?B">, como se muestra en la siguiente figura:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/figura_caja_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 2.</figcaption>
+</figure>
+</div>
+<section id="ejemplo-de-función" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-de-función">Ejemplo de función</h4>
+<p>Consideremos un conjunto con tres elementos <img src="https://latex.codecogs.com/png.latex?A=%5C%7Ba,%20b,%20c%5C%7D"> y un conjunto con cinco elementos <img src="https://latex.codecogs.com/png.latex?B=%5C%7Bx,y,z,w,v%5C%7D">. La asignación <img src="https://latex.codecogs.com/png.latex?a%20%5Cmapsto%20z">, <img src="https://latex.codecogs.com/png.latex?b%20%5Cmapsto%20v"> y <img src="https://latex.codecogs.com/png.latex?c%20%5Cmapsto%20z"> es un ejemplo de una funcióon <img src="https://latex.codecogs.com/png.latex?f"> representada gráficamente como:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/ejemplo_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 3.</figcaption>
+</figure>
+</div>
+</section>
+<section id="ejemplo-de-alguien-que-no-es-una-función" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-de-alguien-que-no-es-una-función">Ejemplo de alguien que no es una función</h4>
+<p>Con los mismos conjuntos del ejemplo anterior, la figura</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/ejemplo_no_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 4.</figcaption>
+</figure>
+</div>
 
 
+</section>
 </section>
 </section>
 
