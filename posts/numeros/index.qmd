@@ -20,8 +20,14 @@ De manera informal, una función es una regla de asignación entre dos conjuntos
 
 Una manera de representar las funciones es mediante un diagrama de flechas, como muestra la siguiente figura:
 
-![ ](figura_funcion.png)
+![Figura 1.](figura_funcion.png)
 
-Otra forma de representar una función, es como una caja negra, con una entrada y una salida, donde al introducir en la cajaun elemento $x$ del conjunto $A$, se produce una única salida $f(x)$ del conjunto $B$, como se muestra en la siguiente figura:
+Otra forma de representar una función, es como una caja negra, con una entrada y una salida, donde al introducir en la caja un elemento $x$ del conjunto $A$, se produce una única salida $f(x)$ del conjunto $B$, como se muestra en la siguiente figura:
 
-![ ](figura_caja_funcion.png)
+![Figura 2.](figura_caja_funcion.png)
+
+#### Ejemplo de función
+
+Consideremos un conjunto con tres elementos $A=\{a, b, c\}$ y un conjunto con cinco elementos $B=\{x,y,z,w,v\}$. La asignaci\'on $a \mapsto z$, $b \mapsto v$ y $c \mapsto z$ es un ejemplo de funci\'on $f$ representada gr\'aficamente como:
+
+![Figura 3.](ejemplo_funcion.png)
