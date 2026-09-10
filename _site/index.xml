@@ -29,12 +29,7 @@
 <section id="funciones" class="level3">
 <h3 class="anchored" data-anchor-id="funciones">Funciones</h3>
 <p>De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida <img src="https://latex.codecogs.com/png.latex?A"> y un conjunto de llegada <img src="https://latex.codecogs.com/png.latex?B">, que a cada elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A"> le asigna un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/numeros/figura_1.png" class="img-fluid figure-img"></p>
-<figcaption>Diagrama de una función f: A -&gt; B</figcaption>
-</figure>
-</div>
+<p><img src="https://your-website-url.example.com/posts/numeros/figura_funcion.png" class="img-fluid"></p>
 
 
 </section>

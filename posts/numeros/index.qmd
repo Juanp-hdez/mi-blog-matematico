@@ -18,5 +18,5 @@ Antes de introducir los axiomas de Peano, definamos el concepto de función.
 
 De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida $A$ y un conjunto de llegada $B$, que a cada elemento del conjunto $A$ le asigna un único elemento del conjunto $B$.  
 
-![Diagrama de una función f: A -> B](figura_1.png)
+![ ](figura_funcion.png)
 
