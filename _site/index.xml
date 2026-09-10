@@ -32,7 +32,7 @@
 <p>Una manera de representar las funciones es mediante un diagrama de flechas, como muestra la siguiente figura:</p>
 <p><img src="https://your-website-url.example.com/posts/numeros/figura_funcion.png" class="img-fluid"></p>
 <p>Otra forma de representar una función, es como una caja negra, con una entrada y una salida, donde al introducir en la cajaun elemento <img src="https://latex.codecogs.com/png.latex?x"> del conjunto <img src="https://latex.codecogs.com/png.latex?A">, se produce una única salida <img src="https://latex.codecogs.com/png.latex?f(x)"> del conjunto <img src="https://latex.codecogs.com/png.latex?B">, como se muestra en la siguiente figura:</p>
-<p><img src="https://your-website-url.example.com/posts/numeros/figura_caja_negra.png" class="img-fluid"></p>
+<p><img src="https://your-website-url.example.com/posts/numeros/figura_caja_funcion.png" class="img-fluid"></p>
 
 
 </section>
