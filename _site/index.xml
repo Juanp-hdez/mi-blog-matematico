@@ -56,12 +56,12 @@
 <section id="ejemplo-de-alguien-que-no-es-una-función" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-de-alguien-que-no-es-una-función">Ejemplo de alguien que no es una función</h4>
 <p>Con los mismos conjuntos del ejemplo anterior, la figura</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/numeros/ejemplo_no_funcion.png" class="img-fluid figure-img"></p>
-<figcaption>Figura 4.</figcaption>
-</figure>
-</div>
+<p><img src="https://your-website-url.example.com/posts/numeros/ejemplo_no_funcion.png" class="img-fluid" alt="Figura 4."> no representa una función, ya que al elemento <img src="https://latex.codecogs.com/png.latex?b"> no se le está asignando un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">, sino que se le están asignando dos elementos distintos, <img src="https://latex.codecogs.com/png.latex?v"> y <img src="https://latex.codecogs.com/png.latex?w">.</p>
+</section>
+<section id="definición-formal-de-función" class="level4">
+<h4 class="anchored" data-anchor-id="definición-formal-de-función">Definición formal de función</h4>
+<p>Recordemos que si <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B"> son dos conjuntos, el producto cartesiano <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20B"> se define como <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20B%20=%20%5C%7B(a,b)%20:%20a%20%5Cin%20A,%20b%20%5Cin%20B%5C%7D">.</p>
+<p>De manera formal, una función de un conjunto <img src="https://latex.codecogs.com/png.latex?A"> a un conjunto <img src="https://latex.codecogs.com/png.latex?B">, es un subconjunto <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> tal que: 1. Para cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, existe un elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> tal que <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20F">. 2. Si <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20F"> y <img src="https://latex.codecogs.com/png.latex?(a,c)%20%5Cin%20F">, entonces <img src="https://latex.codecogs.com/png.latex?b=c">.</p>
 
 
 </section>
