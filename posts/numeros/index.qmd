@@ -37,11 +37,12 @@ Consideremos un conjunto con tres elementos $A=\{a, b, c\}$ y un conjunto con ci
 Con los mismos conjuntos del ejemplo anterior, la figura
 
 ![Figura 4.](ejemplo_no_funcion.png)
+
 no representa una función, ya que al elemento $b$ no se le está asignando un único elemento del conjunto $B$, sino que se le están asignando dos elementos distintos, $v$ y $w$. 
 
 #### Definición formal de función
 
-Recordemos que si $A$ y $B$ son dos conjuntos, el producto cartesiano $A \times B$ se define como  $$A \times B = \{(a,b) : a \in A, b \in B\}$$.
+Recordemos que si $A$ y $B$ son dos conjuntos, el producto cartesiano $A \times B$ se define como  $$A \times B = \{(a,b) : a \in A, b \in B\}.$$
 
 De manera formal, una función de un conjunto $A$ a un conjunto $B$, es un subconjunto $F \subseteq A \times B$ tal que:
 1. Para cada elemento $a \in A$, existe un elemento $b \in B$ tal que $(a,b) \in F$.
