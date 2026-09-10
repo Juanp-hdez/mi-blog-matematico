@@ -18,20 +18,5 @@ Antes de introducir los axiomas de Peano, definamos el concepto de función.
 
 De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida $A$ y un conjunto de llegada $B$, que a cada elemento del conjunto $A$ le asigna un único elemento del conjunto $B$.  
 
-```{tikz}
-#| label: fig-mi-diagrama
-#| fig-cap: "Representación gráfica"
-#| fig-align: center
-#| ext: svg
-
-\usetikzlibrary{arrows.meta, positioning}
-
-\begin{tikzpicture}[node distance=2cm]
-  \node (A) [draw, circle] {$a$};
-  \node (B) [draw, circle, right=of A] {$b$};
-  
-  \draw[->, thick] (A) -- (B) node[midway, above] {$f$};
-\end{tikzpicture}
-```
-
+![Diagrama de una función f: A -> B](figura_1.png)
 

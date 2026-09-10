@@ -32,4 +32,8 @@
     <loc>https://your-website-url.example.com/posts/numeros/numeros.html</loc>
     <lastmod>2026-09-09T22:43:32.049Z</lastmod>
   </url>
+  <url>
+    <loc>https://your-website-url.example.com/posts/numeros/index.html</loc>
+    <lastmod>2026-09-10T01:09:53.553Z</lastmod>
+  </url>
 </urlset>

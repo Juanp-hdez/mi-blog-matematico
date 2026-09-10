@@ -14,7 +14,7 @@
 <item>
   <title>Números</title>
   <dc:creator>Juan Pablo Hernández Rodas</dc:creator>
-  <link>https://your-website-url.example.com/posts/numeros/numeros.html</link>
+  <link>https://your-website-url.example.com/posts/numeros/</link>
   <description><![CDATA[ 
 
 
@@ -29,19 +29,12 @@
 <section id="funciones" class="level3">
 <h3 class="anchored" data-anchor-id="funciones">Funciones</h3>
 <p>De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida <img src="https://latex.codecogs.com/png.latex?A"> y un conjunto de llegada <img src="https://latex.codecogs.com/png.latex?B">, que a cada elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A"> le asigna un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">.</p>
-<pre class="{tikz}"><code>#| label: fig-mi-diagrama
-#| fig-cap: "Representación gráfica"
-#| fig-align: center
-#| ext: svg
-
-\usetikzlibrary{arrows.meta, positioning}
-
-\begin{tikzpicture}[node distance=2cm]
-  \node (A) [draw, circle] {$a$};
-  \node (B) [draw, circle, right=of A] {$b$};
-  
-  \draw[-&gt;, thick] (A) -- (B) node[midway, above] {$f$};
-\end{tikzpicture}</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/figura_1.png" class="img-fluid figure-img"></p>
+<figcaption>Diagrama de una función f: A -&gt; B</figcaption>
+</figure>
+</div>
 
 
 </section>
@@ -50,7 +43,7 @@
  ]]></description>
   <category>Cálculo</category>
   <category>Interactivo</category>
-  <guid>https://your-website-url.example.com/posts/numeros/numeros.html</guid>
+  <guid>https://your-website-url.example.com/posts/numeros/</guid>
   <pubDate>Wed, 09 Sep 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
