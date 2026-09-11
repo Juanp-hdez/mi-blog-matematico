@@ -7,24 +7,31 @@
     "text": "About this blog"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/pagina-inicial/index.html",
+    "href": "posts/pagina-inicial/index.html",
+    "title": "Bienvenido a mi blog interactivo sobre cálculo diferencial",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "A lo largo de este blog discutiremos de manera interactiva, las principales nociones del cálculo diferencial."
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Visualizando la Identidad de Euler",
+    "objectID": "posts/numeros/index.html",
+    "href": "posts/numeros/index.html",
+    "title": "Números",
     "section": "",
-    "text": "La relación fundamental entre números complejos y trigonometría está dada por:\n\\[e^{i\\pi} + 1 = 0\\]\nExplora el comportamiento de la función en el plano complejo con el siguiente gráfico dinámico:"
+    "text": "Todo el cálculo diferencial se desarrolla sobre el conjunto de los números reales \\(\\mathbb{R}\\). Las propiedades que definen este conjunto, son las que permiten definir formalmente el concepto de límite, que es la idea central para el desarrollo del cálculo diferencial."
+  },
+  {
+    "objectID": "posts/numeros/index.html#los-números-naturales-mathbbn",
+    "href": "posts/numeros/index.html#los-números-naturales-mathbbn",
+    "title": "Números",
+    "section": "Los números naturales \\(\\mathbb{N}\\)",
+    "text": "Los números naturales \\(\\mathbb{N}\\)\nLa construcción de los números naturales \\(\\mathbb{N}\\) es el paso inicial en la construcción de los números reales. Los naturales son el conjunto que usamos para contar, que generalmente escribimos como \\(\\mathbb{N}=\\{1,2, \\dots, n, \\dots\\}\\). A pesar de que estamos muy acostumbrados a usar el conjunto de los números naturales, para tener una formalización matemática de este conjunto, tocó esperar hasta el siglo XIX, cuando en el año 1889, el matemático italiano Giuseppe Peano introdujo un conjunto de axiomas conocidos como los Axiomas de Peano. Existen otras construcciones de los números naturales, como por ejemplo la construcción a partir de la teoría de conjuntos, desarrollada por Ernst Zermelo y Abraham Fraenkel.\nAntes de introducir los axiomas de Peano, definamos el concepto de función.\n\nFunciones\nDe manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida \\(A\\) y un conjunto de llegada \\(B\\), que a cada elemento del conjunto \\(A\\) le asigna un único elemento del conjunto \\(B\\).\nUna manera de representar las funciones es mediante un diagrama de flechas, como muestra la siguiente figura:\n\n\n\nFigura 1.\n\n\nOtra forma de representar una función, es como una caja negra, con una entrada y una salida, donde al introducir en la caja un elemento \\(x\\) del conjunto \\(A\\), se produce una única salida \\(f(x)\\) del conjunto \\(B\\), como se muestra en la siguiente figura:\n\n\n\nFigura 2.\n\n\n\nEjemplo de función\nConsideremos un conjunto con tres elementos \\(A=\\{a, b, c\\}\\) y un conjunto con cinco elementos \\(B=\\{x,y,z,w,v\\}\\). La asignación \\(a \\mapsto z\\), \\(b \\mapsto v\\) y \\(c \\mapsto z\\) es un ejemplo de una funcióon \\(f\\) representada gráficamente como:\n\n\n\nFigura 3.\n\n\n\n\nEjemplo de alguien que no es una función\nCon los mismos conjuntos del ejemplo anterior, la figura\n\n\n\nFigura 4.\n\n\nno representa una función, ya que al elemento \\(b\\) no se le está asignando un único elemento del conjunto \\(B\\), sino que se le están asignando dos elementos distintos, \\(v\\) y \\(w\\).\n\n\nDefinición formal de función\nRecordemos que si \\(A\\) y \\(B\\) son dos conjuntos, el producto cartesiano \\(A \\times B\\) se define como \\[A \\times B = \\{(a,b) : a \\in A, b \\in B\\}.\\]\nDe manera formal, una función de un conjunto \\(A\\) a un conjunto \\(B\\), es un subconjunto \\(F \\subseteq A \\times B\\) tal que:\n\nPara cada elemento \\(a \\in A\\), existe un elemento \\(b \\in B\\) tal que \\((a,b) \\in F\\).\nSi \\((a,b) \\in F\\) y \\((a,c) \\in F\\), entonces \\(b=c\\)."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Calculo diferencial interactivo",
     "section": "",
-    "text": "Visualizando la Identidad de Euler\n\n\n\nAnálisis\n\nInteractivo\n\n\n\n\n\n\n\n\n\nSep 7, 2026\n\n\nTu Nombre\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 4, 2026\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+    "text": "Bienvenido a mi blog interactivo sobre cálculo diferencial\n\n\n\nAnálisis\n\nInteractivo\n\n\n\n\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\n\n\n\n\n\n\n\nNúmeros\n\n\n\nCálculo\n\nInteractivo\n\n\n\nConstruyendo los números naturales, los números racionales y los números reales.\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -10,52 +10,99 @@
 <atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Mon, 07 Sep 2026 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 09 Sep 2026 05:00:00 GMT</lastBuildDate>
 <item>
-  <title>Visualizando la Identidad de Euler</title>
-  <dc:creator>Tu Nombre</dc:creator>
-  <link>https://your-website-url.example.com/posts/post-with-code/</link>
+  <title>Números</title>
+  <dc:creator>Juan Pablo Hernández Rodas</dc:creator>
+  <link>https://your-website-url.example.com/posts/numeros/</link>
   <description><![CDATA[ 
 
 
 
 
 
-<p>La relación fundamental entre números complejos y trigonometría está dada por:</p>
-<p><img src="https://latex.codecogs.com/png.latex?e%5E%7Bi%5Cpi%7D%20+%201%20=%200"></p>
-<p>Explora el comportamiento de la función en el plano complejo con el siguiente gráfico dinámico:</p>
-<div style="width: 100%; max-width: 600px; margin: 0 auto;">
-<p><iframe src="https://www.desmos.com/calculator/tuzj0nksxk?embed" width="100%" height="400" style="border: 1px solid #ccc; border-radius: 8px;" loading="lazy"> </iframe></p>
+<p>Todo el cálculo diferencial se desarrolla sobre el conjunto de los números reales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D">. Las propiedades que definen este conjunto, son las que permiten definir formalmente el concepto de límite, que es la idea central para el desarrollo del cálculo diferencial.</p>
+<section id="los-números-naturales-mathbbn" class="level2">
+<h2 class="anchored" data-anchor-id="los-números-naturales-mathbbn">Los números naturales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"></h2>
+<p>La construcción de los números naturales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> es el paso inicial en la construcción de los números reales. Los naturales son el conjunto que usamos para contar, que generalmente escribimos como <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D=%5C%7B1,2,%20%5Cdots,%20n,%20%5Cdots%5C%7D">. A pesar de que estamos muy acostumbrados a usar el conjunto de los números naturales, para tener una formalización matemática de este conjunto, tocó esperar hasta el siglo XIX, cuando en el año 1889, el matemático italiano Giuseppe Peano introdujo un conjunto de axiomas conocidos como los <strong>Axiomas de Peano</strong>. Existen otras construcciones de los números naturales, como por ejemplo la construcción a partir de la teoría de conjuntos, desarrollada por Ernst Zermelo y Abraham Fraenkel.</p>
+<p>Antes de introducir los axiomas de Peano, definamos el concepto de función.</p>
+<section id="funciones" class="level3">
+<h3 class="anchored" data-anchor-id="funciones">Funciones</h3>
+<p>De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida <img src="https://latex.codecogs.com/png.latex?A"> y un conjunto de llegada <img src="https://latex.codecogs.com/png.latex?B">, que a cada elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A"> le asigna un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">.</p>
+<p>Una manera de representar las funciones es mediante un diagrama de flechas, como muestra la siguiente figura:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/figura_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 1.</figcaption>
+</figure>
 </div>
+<p>Otra forma de representar una función, es como una caja negra, con una entrada y una salida, donde al introducir en la caja un elemento <img src="https://latex.codecogs.com/png.latex?x"> del conjunto <img src="https://latex.codecogs.com/png.latex?A">, se produce una única salida <img src="https://latex.codecogs.com/png.latex?f(x)"> del conjunto <img src="https://latex.codecogs.com/png.latex?B">, como se muestra en la siguiente figura:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/figura_caja_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 2.</figcaption>
+</figure>
+</div>
+<section id="ejemplo-de-función" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-de-función">Ejemplo de función</h4>
+<p>Consideremos un conjunto con tres elementos <img src="https://latex.codecogs.com/png.latex?A=%5C%7Ba,%20b,%20c%5C%7D"> y un conjunto con cinco elementos <img src="https://latex.codecogs.com/png.latex?B=%5C%7Bx,y,z,w,v%5C%7D">. La asignación <img src="https://latex.codecogs.com/png.latex?a%20%5Cmapsto%20z">, <img src="https://latex.codecogs.com/png.latex?b%20%5Cmapsto%20v"> y <img src="https://latex.codecogs.com/png.latex?c%20%5Cmapsto%20z"> es un ejemplo de una funcióon <img src="https://latex.codecogs.com/png.latex?f"> representada gráficamente como:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/ejemplo_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 3.</figcaption>
+</figure>
+</div>
+</section>
+<section id="ejemplo-de-alguien-que-no-es-una-función" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-de-alguien-que-no-es-una-función">Ejemplo de alguien que no es una función</h4>
+<p>Con los mismos conjuntos del ejemplo anterior, la figura</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/ejemplo_no_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 4.</figcaption>
+</figure>
+</div>
+<p>no representa una función, ya que al elemento <img src="https://latex.codecogs.com/png.latex?b"> no se le está asignando un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">, sino que se le están asignando dos elementos distintos, <img src="https://latex.codecogs.com/png.latex?v"> y <img src="https://latex.codecogs.com/png.latex?w">.</p>
+</section>
+<section id="definición-formal-de-función" class="level4">
+<h4 class="anchored" data-anchor-id="definición-formal-de-función">Definición formal de función</h4>
+<p>Recordemos que si <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B"> son dos conjuntos, el producto cartesiano <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20B"> se define como <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20B%20=%20%5C%7B(a,b)%20:%20a%20%5Cin%20A,%20b%20%5Cin%20B%5C%7D."></p>
+<p>De manera formal, una función de un conjunto <img src="https://latex.codecogs.com/png.latex?A"> a un conjunto <img src="https://latex.codecogs.com/png.latex?B">, es un subconjunto <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> tal que:</p>
+<ol type="1">
+<li><p>Para cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, existe un elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> tal que <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20F">.</p></li>
+<li><p>Si <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20F"> y <img src="https://latex.codecogs.com/png.latex?(a,c)%20%5Cin%20F">, entonces <img src="https://latex.codecogs.com/png.latex?b=c">.</p></li>
+</ol>
+
+
+</section>
+</section>
+</section>
+
+ ]]></description>
+  <category>Cálculo</category>
+  <category>Interactivo</category>
+  <guid>https://your-website-url.example.com/posts/numeros/</guid>
+  <pubDate>Wed, 09 Sep 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Bienvenido a mi blog interactivo sobre cálculo diferencial</title>
+  <dc:creator>Juan Pablo Hernández Rodas</dc:creator>
+  <link>https://your-website-url.example.com/posts/pagina-inicial/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A lo largo de este blog discutiremos de manera interactiva, las principales nociones del cálculo diferencial.</p>
 
 
 
  ]]></description>
   <category>Análisis</category>
   <category>Interactivo</category>
-  <guid>https://your-website-url.example.com/posts/post-with-code/</guid>
+  <guid>https://your-website-url.example.com/posts/pagina-inicial/</guid>
   <pubDate>Mon, 07 Sep 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Welcome To My Blog</title>
-  <dc:creator>Tristan O&#39;Malley</dc:creator>
-  <link>https://your-website-url.example.com/posts/welcome/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="https://your-website-url.example.com/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
-
-
-
- ]]></description>
-  <category>news</category>
-  <guid>https://your-website-url.example.com/posts/welcome/</guid>
-  <pubDate>Fri, 04 Sep 2026 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

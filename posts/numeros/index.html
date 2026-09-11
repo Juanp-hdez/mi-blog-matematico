@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Juan Pablo Hernández Rodas">
+<meta name="dcterms.date" content="2026-09-09">
+<meta name="description" content="Construyendo los números naturales, los números racionales y los números reales.">
 
-<title>Calculo diferencial interactivo</title>
+<title>Números – Calculo diferencial interactivo</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,25 +32,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,35 +76,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description','listing-author','listing-image','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -135,17 +107,17 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Calculo diferencial interactivo" href="index.xml" data-external="1"></head>
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Calculo diferencial interactivo</span>
     </a>
   </div>
@@ -156,7 +128,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -179,100 +151,110 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Calculo diferencial interactivo</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Números</h1>
+                  <div>
+        <div class="description">
+          Construyendo los números naturales, los números racionales y los números reales.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Cálculo</div>
+                <div class="quarto-category">Interactivo</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Juan Pablo Hernández Rodas </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 9, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QW4lQzMlQTFsaXNpcw==">Análisis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QyVDMyVBMWxjdWxv">Cálculo <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW50ZXJhY3Rpdm8=">Interactivo <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="QW4lQzMlQTFsaXNpcyUyQ0ludGVyYWN0aXZv" data-listing-date-sort="1788757200000" data-listing-file-modified-sort="1788984977410" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
-<div class="thumbnail"><a href="./posts/pagina-inicial/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/pagina-inicial/index.html" class="no-external">Bienvenido a mi blog interactivo sobre cálculo diferencial</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('QW4lQzMlQTFsaXNpcw=='); return false;">Análisis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJhY3Rpdm8='); return false;">Interactivo</div>
-
+<p>Todo el cálculo diferencial se desarrolla sobre el conjunto de los números reales <span class="math inline">\(\mathbb{R}\)</span>. Las propiedades que definen este conjunto, son las que permiten definir formalmente el concepto de límite, que es la idea central para el desarrollo del cálculo diferencial.</p>
+<section id="los-números-naturales-mathbbn" class="level2">
+<h2 class="anchored" data-anchor-id="los-números-naturales-mathbbn">Los números naturales <span class="math inline">\(\mathbb{N}\)</span></h2>
+<p>La construcción de los números naturales <span class="math inline">\(\mathbb{N}\)</span> es el paso inicial en la construcción de los números reales. Los naturales son el conjunto que usamos para contar, que generalmente escribimos como <span class="math inline">\(\mathbb{N}=\{1,2, \dots, n, \dots\}\)</span>. A pesar de que estamos muy acostumbrados a usar el conjunto de los números naturales, para tener una formalización matemática de este conjunto, tocó esperar hasta el siglo XIX, cuando en el año 1889, el matemático italiano Giuseppe Peano introdujo un conjunto de axiomas conocidos como los <strong>Axiomas de Peano</strong>. Existen otras construcciones de los números naturales, como por ejemplo la construcción a partir de la teoría de conjuntos, desarrollada por Ernst Zermelo y Abraham Fraenkel.</p>
+<p>Antes de introducir los axiomas de Peano, definamos el concepto de función.</p>
+<section id="funciones" class="level3">
+<h3 class="anchored" data-anchor-id="funciones">Funciones</h3>
+<p>De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida <span class="math inline">\(A\)</span> y un conjunto de llegada <span class="math inline">\(B\)</span>, que a cada elemento del conjunto <span class="math inline">\(A\)</span> le asigna un único elemento del conjunto <span class="math inline">\(B\)</span>.</p>
+<p>Una manera de representar las funciones es mediante un diagrama de flechas, como muestra la siguiente figura:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figura_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 1.</figcaption>
+</figure>
 </div>
-<div class="delink listing-description"><a href="./posts/pagina-inicial/index.html" class="no-external">
-A lo largo de este blog discutiremos de manera interactiva, las principales nociones del cálculo diferencial.
-</a></div>
+<p>Otra forma de representar una función, es como una caja negra, con una entrada y una salida, donde al introducir en la caja un elemento <span class="math inline">\(x\)</span> del conjunto <span class="math inline">\(A\)</span>, se produce una única salida <span class="math inline">\(f(x)\)</span> del conjunto <span class="math inline">\(B\)</span>, como se muestra en la siguiente figura:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figura_caja_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 2.</figcaption>
+</figure>
 </div>
-<div class="metadata">
-<a href="./posts/pagina-inicial/index.html" class="no-external">
-<div class="listing-author">
-Juan Pablo Hernández Rodas
+<section id="ejemplo-de-función" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-de-función">Ejemplo de función</h4>
+<p>Consideremos un conjunto con tres elementos <span class="math inline">\(A=\{a, b, c\}\)</span> y un conjunto con cinco elementos <span class="math inline">\(B=\{x,y,z,w,v\}\)</span>. La asignación <span class="math inline">\(a \mapsto z\)</span>, <span class="math inline">\(b \mapsto v\)</span> y <span class="math inline">\(c \mapsto z\)</span> es un ejemplo de una funcióon <span class="math inline">\(f\)</span> representada gráficamente como:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ejemplo_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 3.</figcaption>
+</figure>
 </div>
-</a>
+</section>
+<section id="ejemplo-de-alguien-que-no-es-una-función" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-de-alguien-que-no-es-una-función">Ejemplo de alguien que no es una función</h4>
+<p>Con los mismos conjuntos del ejemplo anterior, la figura</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ejemplo_no_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 4.</figcaption>
+</figure>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="QyVDMyVBMWxjdWxvJTJDSW50ZXJhY3Rpdm8=" data-listing-date-sort="1788930000000" data-listing-file-modified-sort="1789138349181" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="436">
-<div class="thumbnail"><a href="./posts/numeros/index.html" class="no-external">
+<p>no representa una función, ya que al elemento <span class="math inline">\(b\)</span> no se le está asignando un único elemento del conjunto <span class="math inline">\(B\)</span>, sino que se le están asignando dos elementos distintos, <span class="math inline">\(v\)</span> y <span class="math inline">\(w\)</span>.</p>
+</section>
+<section id="definición-formal-de-función" class="level4">
+<h4 class="anchored" data-anchor-id="definición-formal-de-función">Definición formal de función</h4>
+<p>Recordemos que si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son dos conjuntos, el producto cartesiano <span class="math inline">\(A \times B\)</span> se define como <span class="math display">\[A \times B = \{(a,b) : a \in A, b \in B\}.\]</span></p>
+<p>De manera formal, una función de un conjunto <span class="math inline">\(A\)</span> a un conjunto <span class="math inline">\(B\)</span>, es un subconjunto <span class="math inline">\(F \subseteq A \times B\)</span> tal que:</p>
+<ol type="1">
+<li><p>Para cada elemento <span class="math inline">\(a \in A\)</span>, existe un elemento <span class="math inline">\(b \in B\)</span> tal que <span class="math inline">\((a,b) \in F\)</span>.</p></li>
+<li><p>Si <span class="math inline">\((a,b) \in F\)</span> y <span class="math inline">\((a,c) \in F\)</span>, entonces <span class="math inline">\(b=c\)</span>.</p></li>
+</ol>
 
-<p class="card-img-top"><img loading='lazy' src="posts/numeros/figura_funcion.png"  class="thumbnail-image card-img"/></p>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/numeros/index.html" class="no-external">Números</a>
-</h3>
-<div class="listing-categories">
+</section>
+</section>
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('QyVDMyVBMWxjdWxv'); return false;">Cálculo</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJhY3Rpdm8='); return false;">Interactivo</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/numeros/index.html" class="no-external">
-<p>Construyendo los números naturales, los números racionales y los números reales.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/numeros/index.html" class="no-external">
-<div class="listing-author">
-Juan Pablo Hernández Rodas
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
