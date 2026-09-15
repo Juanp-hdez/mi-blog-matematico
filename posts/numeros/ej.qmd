@@ -1,78 +1,108 @@
 ---
-title: "Función Interactiva"
+title: "Emparejamiento de Conjuntos"
 format: html
 ---
 
-Selecciona la imagen en $B$ para cada elemento de $A$:
-
-```{ojs}
-//| echo: false
-viewof f_a = Inputs.select(["x", "y", "z", "w"], {label: "f(a) ->", value: "x"})
-viewof f_b = Inputs.select(["x", "y", "z", "w"], {label: "f(b) ->", value: "y"})
-viewof f_c = Inputs.select(["x", "y", "z", "w"], {label: "f(c) ->", value: "z"})
-
-//| echo: false
-{
-  const width = 400;
-  const height = 280;
+```{=html}
+<div style="font-family: sans-serif; max-width: 500px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+  <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
+    Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para trazar la flecha.
+  </p>
   
-  // Coordenadas Y para cada nodo
-  const posA = { a: 50, b: 140, c: 230 };
-  const posB = { x: 35, y: 105, z: 175, w: 245 };
-  
-  // Mapeo actual según los selectores
-  const mapping = [
-    { src: "a", target: f_a },
-    { src: "b", target: f_b },
-    { src: "c", target: f_c }
-  ];
+  <div style="text-align: center; margin-bottom: 15px;">
+    <button onclick="reiniciar()" style="padding: 6px 16px; cursor: pointer; border: 1px solid #cbd5e0; background: #edf2f7; border-radius: 6px; font-weight: bold; color: #4a5568;">↻ Borrar flechas</button>
+  </div>
 
-  const svg = d3.create("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .attr("viewBox", [0, 0, width, height]);
+  <!-- Lienzo donde se dibuja el gráfico -->
+  <svg id="lienzo-funcion" width="100%" height="320" viewBox="0 0 400 320" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7;"></svg>
+</div>
 
-  // Marcador de la punta de la flecha
-  svg.append("defs").append("marker")
-    .attr("id", "arrow")
-    .attr("viewBox", "0 -5 10 10")
-    .attr("refX", 26)
-    .attr("refY", 0)
-    .attr("markerWidth", 6)
-    .attr("markerHeight", 6)
-    .attr("orient", "auto")
-    .append("path")
-    .attr("d", "M0,-5L10,0L0,5")
-    .attr("fill", "#2b6cb0");
+<script>
+// 1. Configuración de los elementos y sus coordenadas verticales (Y)
+const elementosA = ['a', 'b', 'c', 'd'];
+const elementosB = ['x', 'y', 'z', 'w'];
+const yA = { a: 50, b: 120, c: 190, d: 260 };
+const yB = { x: 50, y: 120, z: 190, w: 260 };
 
-  // Flechas indicadoras de la función
-  mapping.forEach(d => {
-    svg.append("line")
-      .attr("x1", 100)
-      .attr("y1", posA[d.src])
-      .attr("x2", 300)
-      .attr("y2", posB[d.target])
-      .attr("stroke", "#2b6cb0")
-      .attr("stroke-width", 2.5)
-      .attr("marker-end", "url(#arrow)");
+// 2. Variables para recordar qué seleccionó el usuario
+let selA = null; // Guarda la letra de A seleccionada
+let selB = null; // Guarda la letra de B seleccionada
+let funcion = {}; // Guarda las parejas creadas, ej: { a: 'x' }
+
+// 3. Función principal que dibuja los elementos
+function dibujarSVG() {
+  const svg = document.getElementById('lienzo-funcion');
+  if (!svg) return;
+
+  let html = `
+    <defs>
+      <marker id="punta-flecha" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
+      </marker>
+    </defs>
+    <text x="100" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto A</text>
+    <text x="300" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto B</text>
+  `;
+
+  // Trazar las flechas basadas en las parejas guardadas en la variable 'funcion'
+  for (const [a, b] of Object.entries(funcion)) {
+    html += `<line x1="100" y1="${yA[a]}" x2="300" y2="${yB[b]}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#punta-flecha)"/>`;
+  }
+
+  // Dibujar los círculos del Conjunto A
+  elementosA.forEach(nodo => {
+    const seleccionado = (selA === nodo);
+    const relleno = seleccionado ? "#bee3f8" : "#ebf8ff"; // Se oscurece si está marcado
+    const grosor = seleccionado ? "3" : "2";
+    html += `<circle cx="100" cy="${yA[nodo]}" r="18" fill="${relleno}" stroke="#3182ce" stroke-width="${grosor}" style="cursor: pointer; transition: 0.2s;" onclick="clicEnA('${nodo}')"/>`;
+    html += `<text x="100" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0" style="pointer-events: none;">${nodo}</text>`;
   });
 
-  // Nodos del Conjunto A (Dominio)
-  Object.entries(posA).forEach(([key, y]) => {
-    svg.append("circle").attr("cx", 100).attr("cy", y).attr("r", 18).attr("fill", "#ebf8ff").attr("stroke", "#3182ce").attr("stroke-width", 2);
-    svg.append("text").attr("x", 100).attr("y", y + 5).attr("text-anchor", "middle").attr("font-weight", "bold").text(key);
+  // Dibujar los círculos del Conjunto B
+  elementosB.forEach(nodo => {
+    const seleccionado = (selB === nodo);
+    const relleno = seleccionado ? "#fbd38d" : "#feebc8"; // Se oscurece si está marcado
+    const grosor = seleccionado ? "3" : "2";
+    html += `<circle cx="300" cy="${yB[nodo]}" r="18" fill="${relleno}" stroke="#dd6b20" stroke-width="${grosor}" style="cursor: pointer; transition: 0.2s;" onclick="clicEnB('${nodo}')"/>`;
+    html += `<text x="300" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#c05621" style="pointer-events: none;">${nodo}</text>`;
   });
 
-  // Nodos del Conjunto B (Codominio)
-  Object.entries(posB).forEach(([key, y]) => {
-    svg.append("circle").attr("cx", 300).attr("cy", y).attr("r", 18).attr("fill", "#feebc8").attr("stroke", "#dd6b20").attr("stroke-width", 2);
-    svg.append("text").attr("x", 300).attr("y", y + 5).attr("text-anchor", "middle").attr("font-weight", "bold").text(key);
-  });
-
-  // Etiquetas de los conjuntos
-  svg.append("text").attr("x", 100).attr("y", 15).attr("text-anchor", "middle").attr("font-weight", "bold").text("Conjunto A");
-  svg.append("text").attr("x", 300).attr("y", 15).attr("text-anchor", "middle").attr("font-weight", "bold").text("Conjunto B");
-
-  return svg.node();
+  svg.innerHTML = html;
 }
+
+// 4. Lógica al hacer clic en los elementos
+window.clicEnA = function(nodo) {
+  // Si vuelve a hacer clic en el mismo, se desmarca. Si no, lo selecciona.
+  selA = (selA === nodo) ? null : nodo;
+  comprobarEmparejamiento();
+  dibujarSVG();
+};
+
+window.clicEnB = function(nodo) {
+  selB = (selB === nodo) ? null : nodo;
+  comprobarEmparejamiento();
+  dibujarSVG();
+};
+
+// 5. Verifica si ya hay un A y un B seleccionados para trazar la flecha
+function comprobarEmparejamiento() {
+  if (selA !== null && selB !== null) {
+    funcion[selA] = selB; // Guarda la pareja
+    selA = null; // Resetea la selección
+    selB = null; // Resetea la selección
+  }
+}
+
+// 6. Botón de reiniciar
+window.reiniciar = function() {
+  funcion = {};
+  selA = null;
+  selB = null;
+  dibujarSVG();
+};
+
+// Ejecutar al iniciar la página
+document.addEventListener("DOMContentLoaded", dibujarSVG);
+dibujarSVG();
+</script>
 ```
