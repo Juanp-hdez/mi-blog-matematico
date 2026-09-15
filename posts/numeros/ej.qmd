@@ -6,7 +6,7 @@ format: html
 ```{=html}
 <div style="font-family: sans-serif; max-width: 500px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
   <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
-    Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para trazar la flecha.
+    Selecciona un elemento del <b>Conjunto A</b> y luego selecciona el elemento del <b>Conjunto B</b> a donde quieres que vaya la flecha.
   </p>
   
   <div style="text-align: center; margin-bottom: 15px;">
