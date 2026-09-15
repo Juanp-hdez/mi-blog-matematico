@@ -75,17 +75,7 @@
 </section>
 <section id="ejemplo-interactivo-de-función" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función">Ejemplo interactivo de función</h4>
-<p>//| echo: false viewof f_a = Inputs.select([“x”, “y”, “z”, “w”], {label: “f(a) -&gt;”, value: “x”}) viewof f_b = Inputs.select([“x”, “y”, “z”, “w”], {label: “f(b) -&gt;”, value: “y”}) viewof f_c = Inputs.select([“x”, “y”, “z”, “w”], {label: “f(c) -&gt;”, value: “z”})</p>
-<p>//| echo: false { const width = 400; const height = 280;</p>
-<p>// Coordenadas Y para cada nodo const posA = { a: 50, b: 140, c: 230 }; const posB = { x: 35, y: 105, z: 175, w: 245 };</p>
-<p>// Mapeo actual según los selectores const mapping = [ { src: “a”, target: f_a }, { src: “b”, target: f_b }, { src: “c”, target: f_c } ];</p>
-<p>const svg = d3.create(“svg”) .attr(“width”, width) .attr(“height”, height) .attr(“viewBox”, [0, 0, width, height]);</p>
-<p>// Marcador de la punta de la flecha svg.append(“defs”).append(“marker”) .attr(“id”, “arrow”) .attr(“viewBox”, “0 -5 10 10”) .attr(“refX”, 26) .attr(“refY”, 0) .attr(“markerWidth”, 6) .attr(“markerHeight”, 6) .attr(“orient”, “auto”) .append(“path”) .attr(“d”, “M0,-5L10,0L0,5”) .attr(“fill”, “#2b6cb0”);</p>
-<p>// Flechas indicadoras de la función mapping.forEach(d =&gt; { svg.append(“line”) .attr(“x1”, 100) .attr(“y1”, posA[d.src]) .attr(“x2”, 300) .attr(“y2”, posB[d.target]) .attr(“stroke”, “#2b6cb0”) .attr(“stroke-width”, 2.5) .attr(“marker-end”, “url(#arrow)”); });</p>
-<p>// Nodos del Conjunto A (Dominio) Object.entries(posA).forEach(([key, y]) =&gt; { svg.append(“circle”).attr(“cx”, 100).attr(“cy”, y).attr(“r”, 18).attr(“fill”, “#ebf8ff”).attr(“stroke”, “#3182ce”).attr(“stroke-width”, 2); svg.append(“text”).attr(“x”, 100).attr(“y”, y + 5).attr(“text-anchor”, “middle”).attr(“font-weight”, “bold”).text(key); });</p>
-<p>// Nodos del Conjunto B (Codominio) Object.entries(posB).forEach(([key, y]) =&gt; { svg.append(“circle”).attr(“cx”, 300).attr(“cy”, y).attr(“r”, 18).attr(“fill”, “#feebc8”).attr(“stroke”, “#dd6b20”).attr(“stroke-width”, 2); svg.append(“text”).attr(“x”, 300).attr(“y”, y + 5).attr(“text-anchor”, “middle”).attr(“font-weight”, “bold”).text(key); });</p>
-<p>// Etiquetas de los conjuntos svg.append(“text”).attr(“x”, 100).attr(“y”, 15).attr(“text-anchor”, “middle”).attr(“font-weight”, “bold”).text(“Conjunto A”); svg.append(“text”).attr(“x”, 300).attr(“y”, 15).attr(“text-anchor”, “middle”).attr(“font-weight”, “bold”).text(“Conjunto B”);</p>
-<p>return svg.node(); }</p>
+<p>viewof x = Inputs.range([0, 100]) x</p>
 
 
 </section>
