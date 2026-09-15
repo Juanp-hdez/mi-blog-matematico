@@ -1,0 +1,7 @@
+---
+title: "Prueba OJS"
+format: html
+---
+
+{ojs}
+Inputs.range([0, 10], {label: "Prueba"})
