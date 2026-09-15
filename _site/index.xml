@@ -72,6 +72,122 @@
 <li><p>Para cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, existe un elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> tal que <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20F">.</p></li>
 <li><p>Si <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20F"> y <img src="https://latex.codecogs.com/png.latex?(a,c)%20%5Cin%20F">, entonces <img src="https://latex.codecogs.com/png.latex?b=c">.</p></li>
 </ol>
+</section>
+<section id="ejemplo-interactivo-de-función" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función">Ejemplo interactivo de función</h4>
+<div id="container-fun" style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 20px; font-family: sans-serif; background-color: #f9f9f9; border-radius: 8px; border: 1px solid #ddd; width: 100%; box-sizing: border-box;">
+<p><!-- SVG para dibujar las flechas por encima/debajo --> <svg id="svg-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"> <defs> <marker id="arrow" viewbox="0 0 10 10" refx="6" refy="5" markerwidth="6" markerheight="6" orient="auto-start-reverse"> <path d="M 0 0 L 10 5 L 0 10 z" fill="#007bff"></path> </marker> </defs> </svg></p>
+<!-- Conjunto A -->
+<div style="text-align: center; z-index: 2;">
+<pre><code>&lt;h3&gt;Conjunto A&lt;/h3&gt;
+&lt;div style="display: flex; flex-direction: column; gap: 15px;"&gt;
+  &lt;button class="node-a" data-val="a" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #007bff; background: white; font-weight: bold;"&gt;a&lt;/button&gt;
+  &lt;button class="node-a" data-val="b" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #007bff; background: white; font-weight: bold;"&gt;b&lt;/button&gt;
+  &lt;button class="node-a" data-val="c" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #007bff; background: white; font-weight: bold;"&gt;c&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<!-- Panel de Control / Reset -->
+<div style="text-align: center; z-index: 2;">
+<pre><code>&lt;button id="reset-btn" style="padding: 8px 14px; cursor: pointer; background: #dc3545; color: white; border: none; border-radius: 4px; font-weight: bold;"&gt;Reiniciar&lt;/button&gt;</code></pre>
+</div>
+<!-- Conjunto B -->
+<div style="text-align: center; z-index: 2;">
+<pre><code>&lt;h3&gt;Conjunto B&lt;/h3&gt;
+&lt;div style="display: flex; flex-direction: column; gap: 15px;"&gt;
+  &lt;button class="node-b" data-val="x" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #28a745; background: white; font-weight: bold;"&gt;x&lt;/button&gt;
+  &lt;button class="node-b" data-val="y" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #28a745; background: white; font-weight: bold;"&gt;y&lt;/button&gt;
+  &lt;button class="node-b" data-val="z" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #28a745; background: white; font-weight: bold;"&gt;z&lt;/button&gt;
+  &lt;button class="node-b" data-val="w" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #28a745; background: white; font-weight: bold;"&gt;w&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let selectedA = null;
+    const relations = {}; // Mapeo de A -> B
+
+    const buttonsA = document.querySelectorAll('.node-a');
+    const buttonsB = document.querySelectorAll('.node-b');
+    const svgCanvas = document.getElementById('svg-canvas');
+    const container = document.getElementById('container-fun');
+    const resetBtn = document.getElementById('reset-btn');
+
+    // Selección de elemento en A
+    buttonsA.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttonsA.forEach(b => b.style.backgroundColor = 'white');
+            btn.style.backgroundColor = '#bde0fe';
+            selectedA = btn;
+        });
+    });
+
+    // Selección de elemento en B para emparejar
+    buttonsB.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (!selectedA) {
+                alert("Primero selecciona un elemento del Conjunto A.");
+                return;
+            }
+            const keyA = selectedA.getAttribute('data-val');
+            const keyB = btn.getAttribute('data-val');
+            
+            relations[keyA] = { nodeA: selectedA, nodeB: btn };
+            
+            // Limpiar selección de A
+            buttonsA.forEach(b => b.style.backgroundColor = 'white');
+            selectedA = null;
+            
+            drawLines();
+        });
+    });
+
+    // Función para calcular posiciones relativas y dibujar las flechas SVG
+    function drawLines() {
+        // Limpiar líneas anteriores (manteniendo la definición de la flecha)
+        const defs = svgCanvas.querySelector('defs');
+        svgCanvas.innerHTML = '';
+        if (defs) svgCanvas.appendChild(defs);
+
+        const containerRect = container.getBoundingClientRect();
+
+        for (let key in relations) {
+            const elA = relations[key].nodeA;
+            const elB = relations[key].nodeB;
+
+            const rectA = elA.getBoundingClientRect();
+            const rectB = elB.getBoundingClientRect();
+
+            // Coordenadas relativas al contenedor principal
+            const x1 = rectA.right - containerRect.left;
+            const y1 = rectA.top + rectA.height / 2 - containerRect.top;
+            const x2 = rectB.left - containerRect.left;
+            const y2 = rectB.top + rectB.height / 2 - containerRect.top;
+
+            const line = document.createElementNS('[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)', 'line');
+            line.setAttribute('x1', x1);
+            line.setAttribute('y1', y1);
+            line.setAttribute('x2', x2);
+            line.setAttribute('y2', y2);
+            line.setAttribute('stroke', '#007bff');
+            line.setAttribute('stroke-width', '2');
+            line.setAttribute('marker-end', 'url(#arrow)');
+
+            svgCanvas.appendChild(line);
+        }
+    }
+
+    // Redibujar si la ventana cambia de tamaño
+    window.addEventListener('resize', drawLines);
+
+    // Botón de reinicio
+    resetBtn.addEventListener('click', () => {
+        for (let key in relations) delete relations[key];
+        buttonsA.forEach(b => b.style.backgroundColor = 'white');
+        selectedA = null;
+        drawLines();
+    });
+});
+</script>
 
 
 </section>

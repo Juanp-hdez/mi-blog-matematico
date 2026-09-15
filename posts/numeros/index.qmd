@@ -52,10 +52,10 @@ De manera formal, una función de un conjunto $A$ a un conjunto $B$, es un subco
 
 #### Ejemplo interactivo de función
 
-```{html}
-<div id="container-fun" style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 20px; font-family: sans-serif; background-color: #f9f9f9; border-radius: 8px; border: 1px solid #ddd; width: 100%; box-sizing: border-box;">
+```{=html}
+<div id="container-fun" style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 20px; font-family: sans-serif; background-color: #f9f9f9; border-radius: 8px; border: 1px solid #ddd; width: 100%; box-sizing: border-box; margin-top: 20px;">
   
-  <!-- SVG para dibujar las flechas por encima/debajo -->
+  <!-- SVG para dibujar las flechas -->
   <svg id="svg-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;">
     <defs>
       <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -95,7 +95,7 @@ De manera formal, una función de un conjunto $A$ a un conjunto $B$, es un subco
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     let selectedA = null;
-    const relations = {}; // Mapeo de A -> B
+    const relations = {};
 
     const buttonsA = document.querySelectorAll('.node-a');
     const buttonsB = document.querySelectorAll('.node-b');
@@ -103,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById('container-fun');
     const resetBtn = document.getElementById('reset-btn');
 
-    // Selección de elemento en A
     buttonsA.forEach(btn => {
         btn.addEventListener('click', () => {
             buttonsA.forEach(b => b.style.backgroundColor = 'white');
@@ -112,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Selección de elemento en B para emparejar
     buttonsB.forEach(btn => {
         btn.addEventListener('click', () => {
             if (!selectedA) {
@@ -120,11 +118,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
             const keyA = selectedA.getAttribute('data-val');
-            const keyB = btn.getAttribute('data-val');
-            
             relations[keyA] = { nodeA: selectedA, nodeB: btn };
             
-            // Limpiar selección de A
             buttonsA.forEach(b => b.style.backgroundColor = 'white');
             selectedA = null;
             
@@ -132,13 +127,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Función para calcular posiciones relativas y dibujar las flechas SVG
     function drawLines() {
-        // Limpiar líneas anteriores (manteniendo la definición de la flecha)
         const defs = svgCanvas.querySelector('defs');
         svgCanvas.innerHTML = '';
         if (defs) svgCanvas.appendChild(defs);
 
+        if (!container) return;
         const containerRect = container.getBoundingClientRect();
 
         for (let key in relations) {
@@ -148,13 +142,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const rectA = elA.getBoundingClientRect();
             const rectB = elB.getBoundingClientRect();
 
-            // Coordenadas relativas al contenedor principal
             const x1 = rectA.right - containerRect.left;
             const y1 = rectA.top + rectA.height / 2 - containerRect.top;
             const x2 = rectB.left - containerRect.left;
             const y2 = rectB.top + rectB.height / 2 - containerRect.top;
 
-            const line = document.createElementNS('[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)', 'line');
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
             line.setAttribute('x1', x1);
             line.setAttribute('y1', y1);
             line.setAttribute('x2', x2);
@@ -167,10 +160,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Redibujar si la ventana cambia de tamaño
     window.addEventListener('resize', drawLines);
 
-    // Botón de reinicio
     resetBtn.addEventListener('click', () => {
         for (let key in relations) delete relations[key];
         buttonsA.forEach(b => b.style.backgroundColor = 'white');
