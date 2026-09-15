@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Juan Pablo Hernández Rodas">
+<meta name="dcterms.date" content="2026-09-09">
+<meta name="description" content="Construyendo los números naturales, los números racionales y los números reales.">
 
-<title>Ejemplo Interactivo de Función – Calculo diferencial interactivo</title>
+<title>Números – Calculo diferencial interactivo</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -149,14 +152,35 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Ejemplo Interactivo de Función</h1>
-                      </div>
+      <h1 class="title">Números</h1>
+                  <div>
+        <div class="description">
+          Construyendo los números naturales, los números racionales y los números reales.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Cálculo</div>
+                <div class="quarto-category">Interactivo</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Juan Pablo Hernández Rodas </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 9, 2026</p>
+      </div>
+    </div>
     
       
     </div>
@@ -173,89 +197,65 @@ window.Quarto = {
 
 
 
-<p>Selecciona la imagen en <span class="math inline">\(B\)</span> para cada elemento del conjunto <span class="math inline">\(A\)</span>:</p>
-<div style="font-family: sans-serif; max-width: 450px; margin: 10px 0; padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff;">
-  <div style="margin-bottom: 15px; display: flex; gap: 12px; justify-content: space-between;">
-    <label><b>f(a):</b> 
-      <select id="fa" onchange="actualizarDiagrama()">
-        <option value="x">x</option>
-        <option value="y">y</option>
-        <option value="z">z</option>
-        <option value="w">w</option>
-      </select>
-    </label>
-    <label><b>f(b):</b> 
-      <select id="fb" onchange="actualizarDiagrama()">
-        <option value="x">x</option>
-        <option value="y" selected="">y</option>
-        <option value="z">z</option>
-        <option value="w">w</option>
-      </select>
-    </label>
-    <label><b>f(c):</b> 
-      <select id="fc" onchange="actualizarDiagrama()">
-        <option value="x">x</option>
-        <option value="y">y</option>
-        <option value="z" selected="">z</option>
-        <option value="w">w</option>
-      </select>
-    </label>
-  </div>
-
-  <svg id="diagrama" width="400" height="280" style="background: #f8fafc; border-radius: 6px; width: 100%;"></svg>
+<p>Todo el cálculo diferencial se desarrolla sobre el conjunto de los números reales <span class="math inline">\(\mathbb{R}\)</span>. Las propiedades que definen este conjunto, son las que permiten definir formalmente el concepto de límite, que es la idea central para el desarrollo del cálculo diferencial.</p>
+<section id="los-números-naturales-mathbbn" class="level2">
+<h2 class="anchored" data-anchor-id="los-números-naturales-mathbbn">Los números naturales <span class="math inline">\(\mathbb{N}\)</span></h2>
+<p>La construcción de los números naturales <span class="math inline">\(\mathbb{N}\)</span> es el paso inicial en la construcción de los números reales. Los naturales son el conjunto que usamos para contar, que generalmente escribimos como <span class="math inline">\(\mathbb{N}=\{1,2, \dots, n, \dots\}\)</span>. A pesar de que estamos muy acostumbrados a usar el conjunto de los números naturales, para tener una formalización matemática de este conjunto, tocó esperar hasta el siglo XIX, cuando en el año 1889, el matemático italiano Giuseppe Peano introdujo un conjunto de axiomas conocidos como los <strong>Axiomas de Peano</strong>. Existen otras construcciones de los números naturales, como por ejemplo la construcción a partir de la teoría de conjuntos, desarrollada por Ernst Zermelo y Abraham Fraenkel.</p>
+<p>Antes de introducir los axiomas de Peano, definamos el concepto de función.</p>
+<section id="funciones" class="level3">
+<h3 class="anchored" data-anchor-id="funciones">Funciones</h3>
+<p>De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida <span class="math inline">\(A\)</span> y un conjunto de llegada <span class="math inline">\(B\)</span>, que a cada elemento del conjunto <span class="math inline">\(A\)</span> le asigna un único elemento del conjunto <span class="math inline">\(B\)</span>.</p>
+<p>Una manera de representar las funciones es mediante un diagrama de flechas, como muestra la siguiente figura:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figura_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 1.</figcaption>
+</figure>
 </div>
-
-<script>
-function actualizarDiagrama() {
-  const svg = document.getElementById('diagrama');
-  const fa = document.getElementById('fa').value;
-  const fb = document.getElementById('fb').value;
-  const fc = document.getElementById('fc').value;
-  
-  const posA = { a: 50, b: 140, c: 230 };
-  const posB = { x: 35, y: 105, z: 175, w: 245 };
-  const parejas = [ {src:'a', tgt:fa}, {src:'b', tgt:fb}, {src:'c', tgt:fc} ];
-
-  let contenido = `
-    <defs>
-      <marker id="flecha" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-        <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
-      </marker>
-    </defs>
-    <text x="100" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto A</text>
-    <text x="300" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto B</text>
-  `;
-
-  // Dibujar flechas
-  parejas.forEach(p => {
-    const y1 = posA[p.src];
-    const y2 = posB[p.tgt];
-    contenido += `<line x1="100" y1="${y1}" x2="300" y2="${y2}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#flecha)"/>`;
-  });
-
-  // Dibujar Nodos A
-  Object.keys(posA).forEach(key => {
-    const y = posA[key];
-    contenido += `<circle cx="100" cy="${y}" r="18" fill="#ebf8ff" stroke="#3182ce" stroke-width="2"/>`;
-    contenido += `<text x="100" y="${y+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0">${key}</text>`;
-  });
-
-  // Dibujar Nodos B
-  Object.keys(posB).forEach(key => {
-    const y = posB[key];
-    contenido += `<circle cx="300" cy="${y}" r="18" fill="#feebc8" stroke="#dd6b20" stroke-width="2"/>`;
-    contenido += `<text x="300" y="${y+5}" text-anchor="middle" font-weight="bold" fill="#c05621">${key}</text>`;
-  });
-
-  svg.innerHTML = contenido;
-}
-
-// Inicializar al cargar la página
-document.addEventListener("DOMContentLoaded", actualizarDiagrama);
-actualizarDiagrama();
-</script>
+<p>Otra forma de representar una función, es como una caja negra, con una entrada y una salida, donde al introducir en la caja un elemento <span class="math inline">\(x\)</span> del conjunto <span class="math inline">\(A\)</span>, se produce una única salida <span class="math inline">\(f(x)\)</span> del conjunto <span class="math inline">\(B\)</span>, como se muestra en la siguiente figura:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figura_caja_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 2.</figcaption>
+</figure>
+</div>
+<section id="ejemplo-de-función" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-de-función">Ejemplo de función</h4>
+<p>Consideremos un conjunto con tres elementos <span class="math inline">\(A=\{a, b, c\}\)</span> y un conjunto con cinco elementos <span class="math inline">\(B=\{x,y,z,w,v\}\)</span>. La asignación <span class="math inline">\(a \mapsto z\)</span>, <span class="math inline">\(b \mapsto v\)</span> y <span class="math inline">\(c \mapsto z\)</span> es un ejemplo de una funcióon <span class="math inline">\(f\)</span> representada gráficamente como:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ejemplo_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 3.</figcaption>
+</figure>
+</div>
+</section>
+<section id="ejemplo-de-alguien-que-no-es-una-función" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-de-alguien-que-no-es-una-función">Ejemplo de alguien que no es una función</h4>
+<p>Con los mismos conjuntos del ejemplo anterior, la figura</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ejemplo_no_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 4.</figcaption>
+</figure>
+</div>
+<p>no representa una función, ya que al elemento <span class="math inline">\(b\)</span> no se le está asignando un único elemento del conjunto <span class="math inline">\(B\)</span>, sino que se le están asignando dos elementos distintos, <span class="math inline">\(v\)</span> y <span class="math inline">\(w\)</span>.</p>
+</section>
+<section id="definición-formal-de-función" class="level4">
+<h4 class="anchored" data-anchor-id="definición-formal-de-función">Definición formal de función</h4>
+<p>Recordemos que si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son dos conjuntos, el producto cartesiano <span class="math inline">\(A \times B\)</span> se define como <span class="math display">\[A \times B = \{(a,b) : a \in A, b \in B\}.\]</span></p>
+<p>De manera formal, una función de un conjunto <span class="math inline">\(A\)</span> a un conjunto <span class="math inline">\(B\)</span>, es un subconjunto <span class="math inline">\(F \subseteq A \times B\)</span> tal que:</p>
+<ol type="1">
+<li><p>Para cada elemento <span class="math inline">\(a \in A\)</span>, existe un elemento <span class="math inline">\(b \in B\)</span> tal que <span class="math inline">\((a,b) \in F\)</span>.</p></li>
+<li><p>Si <span class="math inline">\((a,b) \in F\)</span> y <span class="math inline">\((a,c) \in F\)</span>, entonces <span class="math inline">\(b=c\)</span>.</p></li>
+</ol>
+</section>
+<section id="ejemplo-interactivo-de-función" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función">Ejemplo interactivo de función</h4>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,89 +1,78 @@
 ---
-title: "Ejemplo Interactivo de Función"
+title: "Función Interactiva"
 format: html
 ---
 
-Selecciona la imagen en $B$ para cada elemento del conjunto $A$:
+Selecciona la imagen en $B$ para cada elemento de $A$:
 
-```{=html}
-<div style="font-family: sans-serif; max-width: 450px; margin: 10px 0; padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff;">
-  <div style="margin-bottom: 15px; display: flex; gap: 12px; justify-content: space-between;">
-    <label><b>f(a):</b> 
-      <select id="fa" onchange="actualizarDiagrama()">
-        <option value="x">x</option>
-        <option value="y">y</option>
-        <option value="z">z</option>
-        <option value="w">w</option>
-      </select>
-    </label>
-    <label><b>f(b):</b> 
-      <select id="fb" onchange="actualizarDiagrama()">
-        <option value="x">x</option>
-        <option value="y" selected>y</option>
-        <option value="z">z</option>
-        <option value="w">w</option>
-      </select>
-    </label>
-    <label><b>f(c):</b> 
-      <select id="fc" onchange="actualizarDiagrama()">
-        <option value="x">x</option>
-        <option value="y">y</option>
-        <option value="z" selected>z</option>
-        <option value="w">w</option>
-      </select>
-    </label>
-  </div>
+```{ojs}
+//| echo: false
+viewof f_a = Inputs.select(["x", "y", "z", "w"], {label: "f(a) ->", value: "x"})
+viewof f_b = Inputs.select(["x", "y", "z", "w"], {label: "f(b) ->", value: "y"})
+viewof f_c = Inputs.select(["x", "y", "z", "w"], {label: "f(c) ->", value: "z"})
 
-  <svg id="diagrama" width="400" height="280" style="background: #f8fafc; border-radius: 6px; width: 100%;"></svg>
-</div>
-
-<script>
-function actualizarDiagrama() {
-  const svg = document.getElementById('diagrama');
-  const fa = document.getElementById('fa').value;
-  const fb = document.getElementById('fb').value;
-  const fc = document.getElementById('fc').value;
+//| echo: false
+{
+  const width = 400;
+  const height = 280;
   
+  // Coordenadas Y para cada nodo
   const posA = { a: 50, b: 140, c: 230 };
   const posB = { x: 35, y: 105, z: 175, w: 245 };
-  const parejas = [ {src:'a', tgt:fa}, {src:'b', tgt:fb}, {src:'c', tgt:fc} ];
+  
+  // Mapeo actual según los selectores
+  const mapping = [
+    { src: "a", target: f_a },
+    { src: "b", target: f_b },
+    { src: "c", target: f_c }
+  ];
 
-  let contenido = `
-    <defs>
-      <marker id="flecha" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-        <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
-      </marker>
-    </defs>
-    <text x="100" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto A</text>
-    <text x="300" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto B</text>
-  `;
+  const svg = d3.create("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("viewBox", [0, 0, width, height]);
 
-  // Dibujar flechas
-  parejas.forEach(p => {
-    const y1 = posA[p.src];
-    const y2 = posB[p.tgt];
-    contenido += `<line x1="100" y1="${y1}" x2="300" y2="${y2}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#flecha)"/>`;
+  // Marcador de la punta de la flecha
+  svg.append("defs").append("marker")
+    .attr("id", "arrow")
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX", 26)
+    .attr("refY", 0)
+    .attr("markerWidth", 6)
+    .attr("markerHeight", 6)
+    .attr("orient", "auto")
+    .append("path")
+    .attr("d", "M0,-5L10,0L0,5")
+    .attr("fill", "#2b6cb0");
+
+  // Flechas indicadoras de la función
+  mapping.forEach(d => {
+    svg.append("line")
+      .attr("x1", 100)
+      .attr("y1", posA[d.src])
+      .attr("x2", 300)
+      .attr("y2", posB[d.target])
+      .attr("stroke", "#2b6cb0")
+      .attr("stroke-width", 2.5)
+      .attr("marker-end", "url(#arrow)");
   });
 
-  // Dibujar Nodos A
-  Object.keys(posA).forEach(key => {
-    const y = posA[key];
-    contenido += `<circle cx="100" cy="${y}" r="18" fill="#ebf8ff" stroke="#3182ce" stroke-width="2"/>`;
-    contenido += `<text x="100" y="${y+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0">${key}</text>`;
+  // Nodos del Conjunto A (Dominio)
+  Object.entries(posA).forEach(([key, y]) => {
+    svg.append("circle").attr("cx", 100).attr("cy", y).attr("r", 18).attr("fill", "#ebf8ff").attr("stroke", "#3182ce").attr("stroke-width", 2);
+    svg.append("text").attr("x", 100).attr("y", y + 5).attr("text-anchor", "middle").attr("font-weight", "bold").text(key);
   });
 
-  // Dibujar Nodos B
-  Object.keys(posB).forEach(key => {
-    const y = posB[key];
-    contenido += `<circle cx="300" cy="${y}" r="18" fill="#feebc8" stroke="#dd6b20" stroke-width="2"/>`;
-    contenido += `<text x="300" y="${y+5}" text-anchor="middle" font-weight="bold" fill="#c05621">${key}</text>`;
+  // Nodos del Conjunto B (Codominio)
+  Object.entries(posB).forEach(([key, y]) => {
+    svg.append("circle").attr("cx", 300).attr("cy", y).attr("r", 18).attr("fill", "#feebc8").attr("stroke", "#dd6b20").attr("stroke-width", 2);
+    svg.append("text").attr("x", 300).attr("y", y + 5).attr("text-anchor", "middle").attr("font-weight", "bold").text(key);
   });
 
-  svg.innerHTML = contenido;
+  // Etiquetas de los conjuntos
+  svg.append("text").attr("x", 100).attr("y", 15).attr("text-anchor", "middle").attr("font-weight", "bold").text("Conjunto A");
+  svg.append("text").attr("x", 300).attr("y", 15).attr("text-anchor", "middle").attr("font-weight", "bold").text("Conjunto B");
+
+  return svg.node();
 }
-
-// Inicializar al cargar la página
-document.addEventListener("DOMContentLoaded", actualizarDiagrama);
-actualizarDiagrama();
-</script>
 ```
