@@ -251,110 +251,17 @@ window.Quarto = {
 </section>
 <section id="ejemplo-interactivo-de-función" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función">Ejemplo interactivo de función</h4>
-<div id="container-fun" style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 20px; font-family: sans-serif; background-color: #f9f9f9; border-radius: 8px; border: 1px solid #ddd; width: 100%; box-sizing: border-box; margin-top: 20px;">
-<p><!-- SVG para dibujar las flechas --> <svg id="svg-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"> <defs> <marker id="arrow" viewbox="0 0 10 10" refx="6" refy="5" markerwidth="6" markerheight="6" orient="auto-start-reverse"> <path d="M 0 0 L 10 5 L 0 10 z" fill="#007bff"></path> </marker> </defs> </svg></p>
-<!-- Conjunto A -->
-<div style="text-align: center; z-index: 2;">
-<pre><code>&lt;h3&gt;Conjunto A&lt;/h3&gt;
-&lt;div style="display: flex; flex-direction: column; gap: 15px;"&gt;
-  &lt;button class="node-a" data-val="a" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #007bff; background: white; font-weight: bold;"&gt;a&lt;/button&gt;
-  &lt;button class="node-a" data-val="b" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #007bff; background: white; font-weight: bold;"&gt;b&lt;/button&gt;
-  &lt;button class="node-a" data-val="c" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #007bff; background: white; font-weight: bold;"&gt;c&lt;/button&gt;
-&lt;/div&gt;</code></pre>
-</div>
-<!-- Panel de Control / Reset -->
-<div style="text-align: center; z-index: 2;">
-<pre><code>&lt;button id="reset-btn" style="padding: 8px 14px; cursor: pointer; background: #dc3545; color: white; border: none; border-radius: 4px; font-weight: bold;"&gt;Reiniciar&lt;/button&gt;</code></pre>
-</div>
-<!-- Conjunto B -->
-<div style="text-align: center; z-index: 2;">
-<pre><code>&lt;h3&gt;Conjunto B&lt;/h3&gt;
-&lt;div style="display: flex; flex-direction: column; gap: 15px;"&gt;
-  &lt;button class="node-b" data-val="x" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #28a745; background: white; font-weight: bold;"&gt;x&lt;/button&gt;
-  &lt;button class="node-b" data-val="y" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #28a745; background: white; font-weight: bold;"&gt;y&lt;/button&gt;
-  &lt;button class="node-b" data-val="z" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #28a745; background: white; font-weight: bold;"&gt;z&lt;/button&gt;
-  &lt;button class="node-b" data-val="w" style="padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #28a745; background: white; font-weight: bold;"&gt;w&lt;/button&gt;
-&lt;/div&gt;</code></pre>
-</div>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    let selectedA = null;
-    const relations = {};
-
-    const buttonsA = document.querySelectorAll('.node-a');
-    const buttonsB = document.querySelectorAll('.node-b');
-    const svgCanvas = document.getElementById('svg-canvas');
-    const container = document.getElementById('container-fun');
-    const resetBtn = document.getElementById('reset-btn');
-
-    buttonsA.forEach(btn => {
-        btn.addEventListener('click', () => {
-            buttonsA.forEach(b => b.style.backgroundColor = 'white');
-            btn.style.backgroundColor = '#bde0fe';
-            selectedA = btn;
-        });
-    });
-
-    buttonsB.forEach(btn => {
-        btn.addEventListener('click', () => {
-            if (!selectedA) {
-                alert("Primero selecciona un elemento del Conjunto A.");
-                return;
-            }
-            const keyA = selectedA.getAttribute('data-val');
-            relations[keyA] = { nodeA: selectedA, nodeB: btn };
-            
-            buttonsA.forEach(b => b.style.backgroundColor = 'white');
-            selectedA = null;
-            
-            drawLines();
-        });
-    });
-
-    function drawLines() {
-        const defs = svgCanvas.querySelector('defs');
-        svgCanvas.innerHTML = '';
-        if (defs) svgCanvas.appendChild(defs);
-
-        if (!container) return;
-        const containerRect = container.getBoundingClientRect();
-
-        for (let key in relations) {
-            const elA = relations[key].nodeA;
-            const elB = relations[key].nodeB;
-
-            const rectA = elA.getBoundingClientRect();
-            const rectB = elB.getBoundingClientRect();
-
-            const x1 = rectA.right - containerRect.left;
-            const y1 = rectA.top + rectA.height / 2 - containerRect.top;
-            const x2 = rectB.left - containerRect.left;
-            const y2 = rectB.top + rectB.height / 2 - containerRect.top;
-
-            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            line.setAttribute('x1', x1);
-            line.setAttribute('y1', y1);
-            line.setAttribute('x2', x2);
-            line.setAttribute('y2', y2);
-            line.setAttribute('stroke', '#007bff');
-            line.setAttribute('stroke-width', '2');
-            line.setAttribute('marker-end', 'url(#arrow)');
-
-            svgCanvas.appendChild(line);
-        }
-    }
-
-    window.addEventListener('resize', drawLines);
-
-    resetBtn.addEventListener('click', () => {
-        for (let key in relations) delete relations[key];
-        buttonsA.forEach(b => b.style.backgroundColor = 'white');
-        selectedA = null;
-        drawLines();
-    });
-});
-</script>
+<p>//| echo: false viewof f_a = Inputs.select([“x”, “y”, “z”, “w”], {label: “f(a) -&gt;”, value: “x”}) viewof f_b = Inputs.select([“x”, “y”, “z”, “w”], {label: “f(b) -&gt;”, value: “y”}) viewof f_c = Inputs.select([“x”, “y”, “z”, “w”], {label: “f(c) -&gt;”, value: “z”})</p>
+<p>//| echo: false { const width = 400; const height = 280;</p>
+<p>// Coordenadas Y para cada nodo const posA = { a: 50, b: 140, c: 230 }; const posB = { x: 35, y: 105, z: 175, w: 245 };</p>
+<p>// Mapeo actual según los selectores const mapping = [ { src: “a”, target: f_a }, { src: “b”, target: f_b }, { src: “c”, target: f_c } ];</p>
+<p>const svg = d3.create(“svg”) .attr(“width”, width) .attr(“height”, height) .attr(“viewBox”, [0, 0, width, height]);</p>
+<p>// Marcador de la punta de la flecha svg.append(“defs”).append(“marker”) .attr(“id”, “arrow”) .attr(“viewBox”, “0 -5 10 10”) .attr(“refX”, 26) .attr(“refY”, 0) .attr(“markerWidth”, 6) .attr(“markerHeight”, 6) .attr(“orient”, “auto”) .append(“path”) .attr(“d”, “M0,-5L10,0L0,5”) .attr(“fill”, “#2b6cb0”);</p>
+<p>// Flechas indicadoras de la función mapping.forEach(d =&gt; { svg.append(“line”) .attr(“x1”, 100) .attr(“y1”, posA[d.src]) .attr(“x2”, 300) .attr(“y2”, posB[d.target]) .attr(“stroke”, “#2b6cb0”) .attr(“stroke-width”, 2.5) .attr(“marker-end”, “url(#arrow)”); });</p>
+<p>// Nodos del Conjunto A (Dominio) Object.entries(posA).forEach(([key, y]) =&gt; { svg.append(“circle”).attr(“cx”, 100).attr(“cy”, y).attr(“r”, 18).attr(“fill”, “#ebf8ff”).attr(“stroke”, “#3182ce”).attr(“stroke-width”, 2); svg.append(“text”).attr(“x”, 100).attr(“y”, y + 5).attr(“text-anchor”, “middle”).attr(“font-weight”, “bold”).text(key); });</p>
+<p>// Nodos del Conjunto B (Codominio) Object.entries(posB).forEach(([key, y]) =&gt; { svg.append(“circle”).attr(“cx”, 300).attr(“cy”, y).attr(“r”, 18).attr(“fill”, “#feebc8”).attr(“stroke”, “#dd6b20”).attr(“stroke-width”, 2); svg.append(“text”).attr(“x”, 300).attr(“y”, y + 5).attr(“text-anchor”, “middle”).attr(“font-weight”, “bold”).text(key); });</p>
+<p>// Etiquetas de los conjuntos svg.append(“text”).attr(“x”, 100).attr(“y”, 15).attr(“text-anchor”, “middle”).attr(“font-weight”, “bold”).text(“Conjunto A”); svg.append(“text”).attr(“x”, 300).attr(“y”, 15).attr(“text-anchor”, “middle”).attr(“font-weight”, “bold”).text(“Conjunto B”);</p>
+<p>return svg.node(); }</p>
 
 
 </section>
