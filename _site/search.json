@@ -32,6 +32,13 @@
     "href": "index.html",
     "title": "Calculo diferencial interactivo",
     "section": "",
-    "text": "Bienvenido a mi blog interactivo sobre cálculo diferencial\n\n\n\nAnálisis\n\nInteractivo\n\n\n\n\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\n\n\n\n\n\n\n\nNúmeros\n\n\n\nCálculo\n\nInteractivo\n\n\n\nConstruyendo los números naturales, los números racionales y los números reales.\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\nNo matching items"
+    "text": "Bienvenido a mi blog interactivo sobre cálculo diferencial\n\n\n\nAnálisis\n\nInteractivo\n\n\n\n\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\n\n\n\n\n\n\n\nNúmeros\n\n\n\nCálculo\n\nInteractivo\n\n\n\nConstruyendo los números naturales, los números racionales y los números reales.\n\n\n\n\n\nJuan Pablo Hernández Rodas\n\n\n\n\n\n\n\n\n\n\n\n\nPrueba OJS\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/numeros/ej.html",
+    "href": "posts/numeros/ej.html",
+    "title": "Prueba OJS",
+    "section": "",
+    "text": "{ojs} Inputs.range([0, 10], {label: “Prueba”})"
   }
 ]

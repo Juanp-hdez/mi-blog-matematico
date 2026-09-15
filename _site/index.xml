@@ -108,5 +108,22 @@
   <guid>https://your-website-url.example.com/posts/pagina-inicial/</guid>
   <pubDate>Mon, 07 Sep 2026 05:00:00 GMT</pubDate>
 </item>
+<item>
+  <title>Prueba OJS</title>
+  <link>https://your-website-url.example.com/posts/numeros/ej.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>{ojs} Inputs.range([0, 10], {label: “Prueba”})</p>
+
+
+
+ ]]></description>
+  <guid>https://your-website-url.example.com/posts/numeros/ej.html</guid>
+  <pubDate>Tue, 15 Sep 2026 21:03:54 GMT</pubDate>
+</item>
 </channel>
 </rss>
