@@ -54,5 +54,4 @@ De manera formal, una función de un conjunto $A$ a un conjunto $B$, es un subco
 #### Ejemplo interactivo de función
 
 {ojs}
-viewof x = Inputs.range([0, 100])
-x
+Inputs.range([0, 10], {label: "Prueba"})
