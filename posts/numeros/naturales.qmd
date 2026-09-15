@@ -29,7 +29,7 @@ Otra forma de representar una función, es como una caja negra, con una entrada 
 
 #### Ejemplo de función
 
-Consideremos un conjunto con tres elementos $A=\{a, b, c\}$ y un conjunto con cinco elementos $B=\{x,y,z,w,v\}$. La asignación $a \mapsto z$, $b \mapsto v$ y $c \mapsto z$ es un ejemplo de una funcióon $f$ representada gráficamente como:
+Consideremos un conjunto con tres elementos $A=\{a, b, c\}$ y un conjunto con cinco elementos $B=\{x,y,z,w,v\}$. La asignación $a \mapsto z$, $b \mapsto v$ y $c \mapsto z$ es un ejemplo de una función $f$ representada gráficamente como:
 
 ![Figura 3.](ejemplo_funcion.png)
 
@@ -51,12 +51,14 @@ De manera formal, una función de un conjunto $A$ a un conjunto $B$, es un subco
 
 2. Si $(a,b) \in F$ y $(a,c) \in F$, entonces $b=c$.
 
+Veamos que esta definición formal coincide con la noción informal anterior. Si $F \subseteq A \times B$ es una función, la condición $(a,b) \in F$ la vamos a escribir como $b=f(a)$, y a la función $F \subseteq A \times B$ la representaremos por $f: A \rightarrow B$. Con esta notación, 1) se convierte en: para todo $a \in A$ existe $b \in B$ tal que $b=f(a)$, es decir, a cada elemento de $A$ le corresponde un elemento de $B$, y la condición 2) se traduce en: si $f(a)=b$ y $f(a)=c$ entonces $b=c$, lo que garantiza que a cada elemento de $A$ le corresponde un único elemento de $B$.
+
 #### Ejemplo interactivo de función
 
 ```{=html}
 <div style="font-family: sans-serif; max-width: 500px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
   <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
-    Selecciona un elemento del <b>Conjunto A</b> y luego selecciona el elemento del <b>Conjunto B</b> a donde quieres que vaya la flecha.
+    Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para trazar la flecha.
   </p>
   
   <div style="text-align: center; margin-bottom: 15px;">
@@ -65,21 +67,23 @@ De manera formal, una función de un conjunto $A$ a un conjunto $B$, es un subco
 
   <!-- Lienzo donde se dibuja el gráfico -->
   <svg id="lienzo-funcion" width="100%" height="320" viewBox="0 0 400 320" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7;"></svg>
+
+  <!-- Contenedor para mostrar el conjunto de parejas ordenadas -->
+  <div id="texto-conjunto" style="text-align: center; font-size: 18px; font-family: 'Courier New', monospace; font-weight: bold; margin-top: 15px; padding: 10px; background: #edf2f7; border-radius: 6px; color: #2d3748;">
+    f = { }
+  </div>
 </div>
 
 <script>
-// 1. Configuración de los elementos y sus coordenadas verticales (Y)
 const elementosA = ['a', 'b', 'c', 'd'];
 const elementosB = ['x', 'y', 'z', 'w'];
 const yA = { a: 50, b: 120, c: 190, d: 260 };
 const yB = { x: 50, y: 120, z: 190, w: 260 };
 
-// 2. Variables para recordar qué seleccionó el usuario
-let selA = null; // Guarda la letra de A seleccionada
-let selB = null; // Guarda la letra de B seleccionada
-let funcion = {}; // Guarda las parejas creadas, ej: { a: 'x' }
+let selA = null;
+let selB = null;
+let funcion = {};
 
-// 3. Función principal que dibuja los elementos
 function dibujarSVG() {
   const svg = document.getElementById('lienzo-funcion');
   if (!svg) return;
@@ -94,35 +98,53 @@ function dibujarSVG() {
     <text x="300" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto B</text>
   `;
 
-  // Trazar las flechas basadas en las parejas guardadas en la variable 'funcion'
+  // Trazar flechas
   for (const [a, b] of Object.entries(funcion)) {
     html += `<line x1="100" y1="${yA[a]}" x2="300" y2="${yB[b]}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#punta-flecha)"/>`;
   }
 
-  // Dibujar los círculos del Conjunto A
+  // Círculos del Conjunto A
   elementosA.forEach(nodo => {
     const seleccionado = (selA === nodo);
-    const relleno = seleccionado ? "#bee3f8" : "#ebf8ff"; // Se oscurece si está marcado
+    const relleno = seleccionado ? "#bee3f8" : "#ebf8ff";
     const grosor = seleccionado ? "3" : "2";
     html += `<circle cx="100" cy="${yA[nodo]}" r="18" fill="${relleno}" stroke="#3182ce" stroke-width="${grosor}" style="cursor: pointer; transition: 0.2s;" onclick="clicEnA('${nodo}')"/>`;
     html += `<text x="100" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0" style="pointer-events: none;">${nodo}</text>`;
   });
 
-  // Dibujar los círculos del Conjunto B
+  // Círculos del Conjunto B
   elementosB.forEach(nodo => {
     const seleccionado = (selB === nodo);
-    const relleno = seleccionado ? "#fbd38d" : "#feebc8"; // Se oscurece si está marcado
+    const relleno = seleccionado ? "#fbd38d" : "#feebc8";
     const grosor = seleccionado ? "3" : "2";
     html += `<circle cx="300" cy="${yB[nodo]}" r="18" fill="${relleno}" stroke="#dd6b20" stroke-width="${grosor}" style="cursor: pointer; transition: 0.2s;" onclick="clicEnB('${nodo}')"/>`;
     html += `<text x="300" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#c05621" style="pointer-events: none;">${nodo}</text>`;
   });
 
   svg.innerHTML = html;
+  actualizarTextoConjunto();
 }
 
-// 4. Lógica al hacer clic en los elementos
+// Función para construir y mostrar el conjunto en notación matemática
+function actualizarTextoConjunto() {
+  const contenedor = document.getElementById('texto-conjunto');
+  if (!contenedor) return;
+
+  const parejas = [];
+  elementosA.forEach(a => {
+    if (funcion[a]) {
+      parejas.push(`(${a}, ${funcion[a]})`);
+    }
+  });
+
+  if (parejas.length === 0) {
+    contenedor.innerHTML = 'f = { }';
+  } else {
+    contenedor.innerHTML = `f = { ${parejas.join(', ')} }`;
+  }
+}
+
 window.clicEnA = function(nodo) {
-  // Si vuelve a hacer clic en el mismo, se desmarca. Si no, lo selecciona.
   selA = (selA === nodo) ? null : nodo;
   comprobarEmparejamiento();
   dibujarSVG();
@@ -134,16 +156,14 @@ window.clicEnB = function(nodo) {
   dibujarSVG();
 };
 
-// 5. Verifica si ya hay un A y un B seleccionados para trazar la flecha
 function comprobarEmparejamiento() {
   if (selA !== null && selB !== null) {
-    funcion[selA] = selB; // Guarda la pareja
-    selA = null; // Resetea la selección
-    selB = null; // Resetea la selección
+    funcion[selA] = selB;
+    selA = null;
+    selB = null;
   }
 }
 
-// 6. Botón de reiniciar
 window.reiniciar = function() {
   funcion = {};
   selA = null;
@@ -151,7 +171,6 @@ window.reiniciar = function() {
   dibujarSVG();
 };
 
-// Ejecutar al iniciar la página
 document.addEventListener("DOMContentLoaded", dibujarSVG);
 dibujarSVG();
 </script>
