@@ -86,3 +86,4 @@ function actualizarDiagrama() {
 document.addEventListener("DOMContentLoaded", actualizarDiagrama);
 actualizarDiagrama();
 </script>
+```

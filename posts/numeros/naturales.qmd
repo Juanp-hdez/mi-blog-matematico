@@ -52,6 +52,3 @@ De manera formal, una función de un conjunto $A$ a un conjunto $B$, es un subco
 2. Si $(a,b) \in F$ y $(a,c) \in F$, entonces $b=c$.
 
 #### Ejemplo interactivo de función
-
-{ojs}
-Inputs.range([0, 10], {label: "Prueba"})
