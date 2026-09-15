@@ -39,6 +39,6 @@
     "href": "posts/numeros/ej.html",
     "title": "Prueba OJS",
     "section": "",
-    "text": "{ojs} Inputs.range([0, 10], {label: “Prueba”})"
+    "text": "Inputs.range([0, 10], {label: “Prueba”})"
   }
 ]
