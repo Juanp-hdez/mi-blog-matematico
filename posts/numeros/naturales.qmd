@@ -181,12 +181,66 @@ dibujarSVG();
 #### Notación para las funciones
 
 De ahora en adelante, denotaremos a una función $F \subseteq A \times B$ como $f: A \rightarrow B$ y para cada $a \in A$ denotaremos por $f(a)$ al único elemento del conjunto $B$ tal que $(a,f(a)) \in F$.
-El conjunto $A$ recibe el nombre de conjunto de salida o dominio de la función $f$, y el conjunto $B$ recibe el noombre de conjunto de llegada o codominio de la función $f$.
+El conjunto $A$ recibe el nombre de conjunto de salida o dominio de la función $f$, y el conjunto $B$ recibe el nombre de conjunto de llegada o codominio de la función $f$.
 
 
 #### Otros ejemplos de funciones
 
 1) Supongamos que $A \subseteq B$ es un subconjunto. Definimos la función **inclusión** $i: A \rightarrow B$, como la función que a cada elemento $a \in A$ le asigna el mismo elemento $a \in B$, es decir, $i(a)=a$ para todo $a \in A$.
-Si vemos esta función como un subconjunto de $A \times B$, tenemos que el subconjunto correspondiente es $\{(a,a): a \in A\} \subseteq A \times B$.
+Si vemos esta función como un subconjunto de $A \times B$, tenemos que el subconjunto correspondiente es $\{(a,a): a \in A\} \subseteq A \times B$, que claramente satisface las dos condiciones de la definición formal de función.
 
+2) Supongamos que tenemos dos conjuntos $A$ y $B$. Definimos las funciones proyecciones $\pi_{1}: A \times B \rightarrow A$ y $\pi_{2}: A \times B \rightarrow B$ como $\pi_{1}(a,b)=a$ y $\pi_{2}(a,b)=b$ para todo $(a,b) \in A \times B$. Los respectivos conjuntos correspondientes a estas funciones son $\{((a,b),a): (a,b) \in A \times B\} \subseteq (A \times B) \times A$ y $\{((a,b),b): (a,b) \in A \times B\} \subseteq (A \times B) \times B$, que satisfacen las dos condiciones de la definición formal de función.
+
+```{=html}
+<div style="text-align: center; margin: 20px 0;">
+  <svg width="480" height="380" viewBox="0 0 480 380" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px;">
+    <defs>
+      <marker id="flecha-eje" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#2d3748"/>
+      </marker>
+      <marker id="flecha-proj" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#e53e3e"/>
+      </marker>
+    </defs>
+
+    <!-- Ejes Cartesianos -->
+    <line x1="60" y1="320" x2="440" y2="320" stroke="#2d3748" stroke-width="2" marker-end="url(#flecha-eje)"/>
+    <line x1="60" y1="320" x2="60" y2="30" stroke="#2d3748" stroke-width="2" marker-end="url(#flecha-eje)"/>
+
+    <!-- Nombres de Ejes -->
+    <text x="450" y="325" font-weight="bold" font-family="serif" font-size="18" fill="#2d3748">A</text>
+    <text x="55" y="20" font-weight="bold" font-family="serif" font-size="18" fill="#2d3748">B</text>
+
+    <!-- Conjuntos A y B sobre los ejes -->
+    <line x1="130" y1="320" x2="370" y2="320" stroke="#3182ce" stroke-width="5"/>
+    <line x1="60" y1="260" x2="60" y2="100" stroke="#dd6b20" stroke-width="5"/>
+
+    <!-- Rectángulo A x B -->
+    <rect x="130" y="100" width="240" height="160" fill="#ebf8ff" fill-opacity="0.6" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 4"/>
+    <text x="340" y="125" font-family="serif" font-style="italic" font-size="16" fill="#2b6cb0">A × B</text>
+
+    <!-- Líneas de Proyección -->
+    <line x1="240" y1="180" x2="240" y2="315" stroke="#e53e3e" stroke-width="2" stroke-dasharray="5 3"/>
+    <line x1="240" y1="180" x2="65" y2="180" stroke="#e53e3e" stroke-width="2" stroke-dasharray="5 3"/>
+
+    <!-- Indicadores de Proyección -->
+    <path d="M 240 220 L 240 235" stroke="#e53e3e" stroke-width="2" marker-end="url(#flecha-proj)"/>
+    <text x="250" y="235" font-family="serif" font-size="16" fill="#e53e3e" font-weight="bold">π₁</text>
+
+    <path d="M 160 180 L 145 180" stroke="#e53e3e" stroke-width="2" marker-end="url(#flecha-proj)"/>
+    <text x="150" y="170" font-family="serif" font-size="16" fill="#e53e3e" font-weight="bold">π₂</text>
+
+    <!-- Punto (a,b) -->
+    <circle cx="240" cy="180" r="5" fill="#2b6cb0"/>
+    <text x="250" y="175" font-family="serif" font-size="16" font-weight="bold" fill="#2d3748">(a, b)</text>
+
+    <!-- Puntos proyectados a y b -->
+    <circle cx="240" cy="320" r="5" fill="#e53e3e"/>
+    <text x="240" y="345" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#e53e3e" text-anchor="middle">a</text>
+
+    <circle cx="60" cy="180" r="5" fill="#e53e3e"/>
+    <text x="42" y="185" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#e53e3e" text-anchor="end">b</text>
+  </svg>
+</div>
+```
 
