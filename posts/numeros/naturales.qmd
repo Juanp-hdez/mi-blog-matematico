@@ -39,7 +39,7 @@ Con los mismos conjuntos del ejemplo anterior, la figura
 
 ![Figura 4.](ejemplo_no_funcion.png)
 
-no representa una función, ya que al elemento $b$ no se le está asignando un único elemento del conjunto $B$, sino que se le están asignando dos elementos distintos, $v$ y $w$. 
+no representa una función, ya que al elemento $b$ **no** se le está asignando un único elemento del conjunto $B$, sino que se le están asignando dos elementos distintos, $v$ y $w$. 
 
 #### Definición formal de función
 
@@ -177,3 +177,16 @@ document.addEventListener("DOMContentLoaded", dibujarSVG);
 dibujarSVG();
 </script>
 ```
+
+#### Notación para las funciones
+
+De ahora en adelante, denotaremos a una función $F \subseteq A \times B$ como $f: A \rightarrow B$ y para cada $a \in A$ denotaremos por $f(a)$ al único elemento del conjunto $B$ tal que $(a,f(a)) \in F$.
+El conjunto $A$ recibe el nombre de conjunto de salida o dominio de la función $f$, y el conjunto $B$ recibe el noombre de conjunto de llegada o codominio de la función $f$.
+
+
+#### Otros ejemplos de funciones
+
+1) Supongamos que $A \subseteq B$ es un subconjunto. Definimos la función **inclusión** $i: A \rightarrow B$, como la función que a cada elemento $a \in A$ le asigna el mismo elemento $a \in B$, es decir, $i(a)=a$ para todo $a \in A$.
+Si vemos esta función como un subconjunto de $A \times B$, tenemos que el subconjunto correspondiente es $\{(a,a): a \in A\} \subseteq A \times B$.
+
+
