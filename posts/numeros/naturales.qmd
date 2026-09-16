@@ -250,4 +250,4 @@ Formalmente, dos funciones de $A$ a $B$ son iguales, si definen el mismo subconj
 
 #### Pregunta
 
-En @interactivo-funcion, ¿cuántas funciones distintas se pueden construir?   
+En [ejemplo interactivo de función](#interactivo-funcion), ¿cuántas funciones distintas se pueden construir?   
