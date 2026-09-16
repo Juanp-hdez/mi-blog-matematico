@@ -178,6 +178,7 @@ document.addEventListener("DOMContentLoaded", dibujarSVG);
 dibujarSVG();
 </script>
 ```
+Ejemplo interactivo de función. 
 :::
 
 #### Notación para las funciones
