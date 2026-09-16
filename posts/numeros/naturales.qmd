@@ -57,6 +57,7 @@ Veamos que esta definición formal coincide con la noción informal anterior. Si
 
 En el siguiente ejemplo interactivo, al decidir la asignación de flechas que a cada elemento del conjunto $A$ lo apareja con un único elemento del conjunto $B$, se está construyendo una función $f: A \rightarrow B$, que en la parte de abajo es representada de manera formal como un subconjunto de $A \times B$.
 
+::: {#interactivo-funcion}
 ```{=html}
 <div style="font-family: sans-serif; max-width: 500px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
   <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
@@ -241,3 +242,10 @@ Si vemos esta función como un subconjunto de $A \times B$, tenemos que el subco
 </div>
 ```
 
+#### ¿Cuándo dos funciones son iguales?
+
+Formalmente, dos funciones de $A$ a $B$ son iguales, si definen el mismo subconjunto de $A \times B$. Con nuestra nueva notación, dos funciones $f: A \rightarrow B$ y $g: C \rightarrow D$ son iguales, si $A=C$, $B=D$ y $f(a)=g(a)$ para todo $a \in A$.
+
+#### Pregunta
+
+En @interactivo-funcion, ¿cuántas funciones distintas se pueden construir?   
