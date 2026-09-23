@@ -221,7 +221,7 @@ window.Quarto = {
 </div>
 <section id="ejemplo-de-función" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-de-función">Ejemplo de función</h4>
-<p>Consideremos un conjunto con tres elementos <span class="math inline">\(A=\{a, b, c\}\)</span> y un conjunto con cinco elementos <span class="math inline">\(B=\{x,y,z,w,v\}\)</span>. La asignación <span class="math inline">\(a \mapsto z\)</span>, <span class="math inline">\(b \mapsto v\)</span> y <span class="math inline">\(c \mapsto z\)</span> es un ejemplo de una funcióon <span class="math inline">\(f\)</span> representada gráficamente como:</p>
+<p>Consideremos un conjunto con tres elementos <span class="math inline">\(A=\{a, b, c\}\)</span> y un conjunto con cinco elementos <span class="math inline">\(B=\{x,y,z,w,v\}\)</span>. La asignación <span class="math inline">\(a \mapsto z\)</span>, <span class="math inline">\(b \mapsto v\)</span> y <span class="math inline">\(c \mapsto z\)</span> es un ejemplo de una función <span class="math inline">\(f\)</span> representada gráficamente como:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="ejemplo_funcion.png" class="img-fluid figure-img"></p>
@@ -238,7 +238,7 @@ window.Quarto = {
 <figcaption>Figura 4.</figcaption>
 </figure>
 </div>
-<p>no representa una función, ya que al elemento <span class="math inline">\(b\)</span> no se le está asignando un único elemento del conjunto <span class="math inline">\(B\)</span>, sino que se le están asignando dos elementos distintos, <span class="math inline">\(v\)</span> y <span class="math inline">\(w\)</span>.</p>
+<p>no representa una función, ya que al elemento <span class="math inline">\(b\)</span> <strong>no</strong> se le está asignando un único elemento del conjunto <span class="math inline">\(B\)</span>, sino que se le están asignando dos elementos distintos, <span class="math inline">\(v\)</span> y <span class="math inline">\(w\)</span>.</p>
 </section>
 <section id="definición-formal-de-función" class="level4">
 <h4 class="anchored" data-anchor-id="definición-formal-de-función">Definición formal de función</h4>
@@ -248,9 +248,202 @@ window.Quarto = {
 <li><p>Para cada elemento <span class="math inline">\(a \in A\)</span>, existe un elemento <span class="math inline">\(b \in B\)</span> tal que <span class="math inline">\((a,b) \in F\)</span>.</p></li>
 <li><p>Si <span class="math inline">\((a,b) \in F\)</span> y <span class="math inline">\((a,c) \in F\)</span>, entonces <span class="math inline">\(b=c\)</span>.</p></li>
 </ol>
+<p>Veamos que esta definición formal coincide con la noción informal anterior. Si <span class="math inline">\(F \subseteq A \times B\)</span> es una función, la condición <span class="math inline">\((a,b) \in F\)</span> la vamos a escribir como <span class="math inline">\(b=f(a)\)</span>, y a la función <span class="math inline">\(F \subseteq A \times B\)</span> la representaremos por <span class="math inline">\(f: A \rightarrow B\)</span>. Con esta notación, 1) se convierte en: para todo <span class="math inline">\(a \in A\)</span> existe <span class="math inline">\(b \in B\)</span> tal que <span class="math inline">\(b=f(a)\)</span>, es decir, a cada elemento de <span class="math inline">\(A\)</span> le corresponde un elemento de <span class="math inline">\(B\)</span>, y la condición 2) se traduce en: si <span class="math inline">\(f(a)=b\)</span> y <span class="math inline">\(f(a)=c\)</span> entonces <span class="math inline">\(b=c\)</span>, lo que garantiza que a cada elemento de <span class="math inline">\(A\)</span> le corresponde un único elemento de <span class="math inline">\(B\)</span>.</p>
 </section>
 <section id="ejemplo-interactivo-de-función" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función">Ejemplo interactivo de función</h4>
+<p>En el siguiente ejemplo interactivo, al decidir la asignación de flechas que a cada elemento del conjunto <span class="math inline">\(A\)</span> lo apareja con un único elemento del conjunto <span class="math inline">\(B\)</span>, se está construyendo una función <span class="math inline">\(f: A \rightarrow B\)</span>, que en la parte de abajo es representada de manera formal como un subconjunto de <span class="math inline">\(A \times B\)</span>.</p>
+<div id="interactivo-funcion">
+<div style="font-family: sans-serif; max-width: 500px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+  <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
+    Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para trazar la flecha.
+  </p>
+  
+  <div style="text-align: center; margin-bottom: 15px;">
+    <button onclick="reiniciar()" style="padding: 6px 16px; cursor: pointer; border: 1px solid #cbd5e0; background: #edf2f7; border-radius: 6px; font-weight: bold; color: #4a5568;">↻ Borrar flechas</button>
+  </div>
+
+  <!-- Lienzo donde se dibuja el gráfico -->
+  <svg id="lienzo-funcion" width="100%" height="320" viewbox="0 0 400 320" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7;"></svg>
+
+  <!-- Contenedor para mostrar el conjunto de parejas ordenadas -->
+  <div id="texto-conjunto" style="text-align: center; font-size: 18px; font-family: 'Courier New', monospace; font-weight: bold; margin-top: 15px; padding: 10px; background: #edf2f7; border-radius: 6px; color: #2d3748;">
+    f = { }
+  </div>
+</div>
+
+<script>
+const elementosA = ['a', 'b', 'c', 'd'];
+const elementosB = ['x', 'y', 'z', 'w'];
+const yA = { a: 50, b: 120, c: 190, d: 260 };
+const yB = { x: 50, y: 120, z: 190, w: 260 };
+
+let selA = null;
+let selB = null;
+let funcion = {};
+
+function dibujarSVG() {
+  const svg = document.getElementById('lienzo-funcion');
+  if (!svg) return;
+
+  let html = `
+    <defs>
+      <marker id="punta-flecha" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
+      </marker>
+    </defs>
+    <text x="100" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto A</text>
+    <text x="300" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto B</text>
+  `;
+
+  // Trazar flechas
+  for (const [a, b] of Object.entries(funcion)) {
+    html += `<line x1="100" y1="${yA[a]}" x2="300" y2="${yB[b]}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#punta-flecha)"/>`;
+  }
+
+  // Círculos del Conjunto A
+  elementosA.forEach(nodo => {
+    const seleccionado = (selA === nodo);
+    const relleno = seleccionado ? "#bee3f8" : "#ebf8ff";
+    const grosor = seleccionado ? "3" : "2";
+    html += `<circle cx="100" cy="${yA[nodo]}" r="18" fill="${relleno}" stroke="#3182ce" stroke-width="${grosor}" style="cursor: pointer; transition: 0.2s;" onclick="clicEnA('${nodo}')"/>`;
+    html += `<text x="100" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0" style="pointer-events: none;">${nodo}</text>`;
+  });
+
+  // Círculos del Conjunto B
+  elementosB.forEach(nodo => {
+    const seleccionado = (selB === nodo);
+    const relleno = seleccionado ? "#fbd38d" : "#feebc8";
+    const grosor = seleccionado ? "3" : "2";
+    html += `<circle cx="300" cy="${yB[nodo]}" r="18" fill="${relleno}" stroke="#dd6b20" stroke-width="${grosor}" style="cursor: pointer; transition: 0.2s;" onclick="clicEnB('${nodo}')"/>`;
+    html += `<text x="300" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#c05621" style="pointer-events: none;">${nodo}</text>`;
+  });
+
+  svg.innerHTML = html;
+  actualizarTextoConjunto();
+}
+
+// Función para construir y mostrar el conjunto en notación matemática
+function actualizarTextoConjunto() {
+  const contenedor = document.getElementById('texto-conjunto');
+  if (!contenedor) return;
+
+  const parejas = [];
+  elementosA.forEach(a => {
+    if (funcion[a]) {
+      parejas.push(`(${a}, ${funcion[a]})`);
+    }
+  });
+
+  if (parejas.length === 0) {
+    contenedor.innerHTML = 'f = { }';
+  } else {
+    contenedor.innerHTML = `f = { ${parejas.join(', ')} }`;
+  }
+}
+
+window.clicEnA = function(nodo) {
+  selA = (selA === nodo) ? null : nodo;
+  comprobarEmparejamiento();
+  dibujarSVG();
+};
+
+window.clicEnB = function(nodo) {
+  selB = (selB === nodo) ? null : nodo;
+  comprobarEmparejamiento();
+  dibujarSVG();
+};
+
+function comprobarEmparejamiento() {
+  if (selA !== null && selB !== null) {
+    funcion[selA] = selB;
+    selA = null;
+    selB = null;
+  }
+}
+
+window.reiniciar = function() {
+  funcion = {};
+  selA = null;
+  selB = null;
+  dibujarSVG();
+};
+
+document.addEventListener("DOMContentLoaded", dibujarSVG);
+dibujarSVG();
+</script>
+<p>Ejemplo interactivo de función.</p>
+</div>
+</section>
+<section id="notación-para-las-funciones" class="level4">
+<h4 class="anchored" data-anchor-id="notación-para-las-funciones">Notación para las funciones</h4>
+<p>De ahora en adelante, denotaremos a una función <span class="math inline">\(F \subseteq A \times B\)</span> como <span class="math inline">\(f: A \rightarrow B\)</span> y para cada <span class="math inline">\(a \in A\)</span> denotaremos por <span class="math inline">\(f(a)\)</span> al único elemento del conjunto <span class="math inline">\(B\)</span> tal que <span class="math inline">\((a,f(a)) \in F\)</span>. El conjunto <span class="math inline">\(A\)</span> recibe el nombre de conjunto de salida o dominio de la función <span class="math inline">\(f\)</span>, y el conjunto <span class="math inline">\(B\)</span> recibe el nombre de conjunto de llegada o codominio de la función <span class="math inline">\(f\)</span>.</p>
+</section>
+<section id="otros-ejemplos-de-funciones" class="level4">
+<h4 class="anchored" data-anchor-id="otros-ejemplos-de-funciones">Otros ejemplos de funciones</h4>
+<ol type="1">
+<li><p>Supongamos que <span class="math inline">\(A \subseteq B\)</span> es un subconjunto. Definimos la función <strong>inclusión</strong> <span class="math inline">\(i: A \rightarrow B\)</span>, como la función que a cada elemento <span class="math inline">\(a \in A\)</span> le asigna el mismo elemento <span class="math inline">\(a \in B\)</span>, es decir, <span class="math inline">\(i(a)=a\)</span> para todo <span class="math inline">\(a \in A\)</span>. Si vemos esta función como un subconjunto de <span class="math inline">\(A \times B\)</span>, tenemos que el subconjunto correspondiente es <span class="math inline">\(\{(a,a): a \in A\} \subseteq A \times B\)</span>, que claramente satisface las dos condiciones de la definición formal de función.</p></li>
+<li><p>Supongamos que tenemos dos conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>. Definimos las funciones proyecciones <span class="math inline">\(\pi_{1}: A \times B \rightarrow A\)</span> y <span class="math inline">\(\pi_{2}: A \times B \rightarrow B\)</span> como <span class="math inline">\(\pi_{1}(a,b)=a\)</span> y <span class="math inline">\(\pi_{2}(a,b)=b\)</span> para todo <span class="math inline">\((a,b) \in A \times B\)</span>. Los respectivos conjuntos correspondientes a estas funciones son <span class="math display">\[\{((a,b),a): (a,b) \in A \times B\} \subseteq (A \times B) \times A\]</span> y <span class="math display">\[\{((a,b),b): (a,b) \in A \times B\} \subseteq (A \times B) \times B,\]</span> que satisfacen las dos condiciones de la definición formal de función.</p></li>
+</ol>
+<p>El siguiente diagrama ilustra una forma de representar las funciones proyecciones.</p>
+<div class="#funciones-proyeccion">
+<div style="text-align: center; margin: 20px 0;">
+  <svg width="480" height="380" viewbox="0 0 480 380" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px;">
+    <defs>
+      <marker id="flecha-proj" viewbox="0 0 10 10" refx="6" refy="5" markerwidth="5" markerheight="5" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#e53e3e"></path>
+      </marker>
+    </defs>
+
+    <!-- Ejes principales sin flechas de x e y -->
+    <line x1="60" y1="320" x2="440" y2="320" stroke="#cbd5e0" stroke-width="2"></line>
+    <line x1="60" y1="320" x2="60" y2="40" stroke="#cbd5e0" stroke-width="2"></line>
+
+    <!-- Segmento del Conjunto A y su etiqueta -->
+    <line x1="130" y1="320" x2="370" y2="320" stroke="#3182ce" stroke-width="5"></line>
+    <text x="300" y="365" font-weight="bold" font-family="serif" font-size="20" fill="#3182ce" text-anchor="middle">A</text>
+
+    <!-- Segmento del Conjunto B y su etiqueta -->
+    <line x1="60" y1="260" x2="60" y2="100" stroke="#dd6b20" stroke-width="5"></line>
+    <text x="25" y="250" font-weight="bold" font-family="serif" font-size="20" fill="#dd6b20" text-anchor="middle">B</text>
+
+    <!-- Rectángulo A x B -->
+    <rect x="130" y="100" width="240" height="160" fill="#ebf8ff" fill-opacity="0.6" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 4"></rect>
+    <text x="400" y="125" font-family="serif" font-style="italic" font-size="16" fill="#2b6cb0">A × B</text>
+
+    <!-- Líneas de Proyección -->
+    <line x1="240" y1="180" x2="240" y2="320" stroke="#e53e3e" stroke-width="2" stroke-dasharray="5 3"></line>
+    <line x1="240" y1="180" x2="60" y2="180" stroke="#e53e3e" stroke-width="2" stroke-dasharray="5 3"></line>
+
+    <!-- Indicadores de Proyección -->
+    <path d="M 240 220 L 240 235" stroke="#e53e3e" stroke-width="2" marker-end="url(#flecha-proj)"></path>
+    <text x="250" y="235" font-family="serif" font-size="16" fill="#e53e3e" font-weight="bold">π₁</text>
+
+    <path d="M 160 180 L 145 180" stroke="#e53e3e" stroke-width="2" marker-end="url(#flecha-proj)"></path>
+    <text x="150" y="170" font-family="serif" font-size="16" fill="#e53e3e" font-weight="bold">π₂</text>
+
+    <!-- Punto (a,b) -->
+    <circle cx="240" cy="180" r="5" fill="#2b6cb0"></circle>
+    <text x="250" y="175" font-family="serif" font-size="16" font-weight="bold" fill="#2d3748">(a, b)</text>
+
+    <!-- Puntos proyectados a y b -->
+    <circle cx="240" cy="320" r="5" fill="#e53e3e"></circle>
+    <text x="240" y="340" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#e53e3e" text-anchor="middle">a</text>
+
+    <circle cx="60" cy="180" r="5" fill="#e53e3e"></circle>
+    <text x="48" y="185" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#e53e3e" text-anchor="end">b</text>
+  </svg>
+</div>
+<p>Funciones proyecciones</p>
+</div>
+</section>
+<section id="cuándo-dos-funciones-son-iguales" class="level4">
+<h4 class="anchored" data-anchor-id="cuándo-dos-funciones-son-iguales">¿Cuándo dos funciones son iguales?</h4>
+<p>Formalmente, dos funciones de <span class="math inline">\(A\)</span> a <span class="math inline">\(B\)</span> son iguales, si definen el mismo subconjunto de <span class="math inline">\(A \times B\)</span>. Con nuestra nueva notación, dos funciones <span class="math inline">\(f: A \rightarrow B\)</span> y <span class="math inline">\(g: C \rightarrow D\)</span> son iguales, si <span class="math inline">\(A=C\)</span>, <span class="math inline">\(B=D\)</span> y <span class="math inline">\(f(a)=g(a)\)</span> para todo <span class="math inline">\(a \in A\)</span>.</p>
+</section>
+<section id="pregunta" class="level4">
+<h4 class="anchored" data-anchor-id="pregunta">Pregunta</h4>
+<p>En <a href="#interactivo-funcion">ejemplo interactivo de función</a>, ¿cuántas funciones distintas se pueden construir?</p>
 
 
 </section>

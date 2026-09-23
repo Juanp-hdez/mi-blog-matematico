@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Ejemplo Interactivo de Función – Calculo diferencial interactivo</title>
+<title>Emparejamiento de Conjuntos – Calculo diferencial interactivo</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,35 +74,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -149,7 +120,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Ejemplo Interactivo de Función</h1>
+      <h1 class="title">Emparejamiento de Conjuntos</h1>
                       </div>
   </div>
     
@@ -173,52 +144,39 @@ window.Quarto = {
 
 
 
-<p>Selecciona la imagen en <span class="math inline">\(B\)</span> para cada elemento del conjunto <span class="math inline">\(A\)</span>:</p>
-<div style="font-family: sans-serif; max-width: 450px; margin: 10px 0; padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff;">
-  <div style="margin-bottom: 15px; display: flex; gap: 12px; justify-content: space-between;">
-    <label><b>f(a):</b> 
-      <select id="fa" onchange="actualizarDiagrama()">
-        <option value="x">x</option>
-        <option value="y">y</option>
-        <option value="z">z</option>
-        <option value="w">w</option>
-      </select>
-    </label>
-    <label><b>f(b):</b> 
-      <select id="fb" onchange="actualizarDiagrama()">
-        <option value="x">x</option>
-        <option value="y" selected="">y</option>
-        <option value="z">z</option>
-        <option value="w">w</option>
-      </select>
-    </label>
-    <label><b>f(c):</b> 
-      <select id="fc" onchange="actualizarDiagrama()">
-        <option value="x">x</option>
-        <option value="y">y</option>
-        <option value="z" selected="">z</option>
-        <option value="w">w</option>
-      </select>
-    </label>
+<div style="font-family: sans-serif; max-width: 500px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+  <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
+    Selecciona un elemento del <b>Conjunto A</b> y luego selecciona el elemento del <b>Conjunto B</b> a donde quieres que vaya la flecha.
+  </p>
+  
+  <div style="text-align: center; margin-bottom: 15px;">
+    <button onclick="reiniciar()" style="padding: 6px 16px; cursor: pointer; border: 1px solid #cbd5e0; background: #edf2f7; border-radius: 6px; font-weight: bold; color: #4a5568;">↻ Borrar flechas</button>
   </div>
 
-  <svg id="diagrama" width="400" height="280" style="background: #f8fafc; border-radius: 6px; width: 100%;"></svg>
+  <!-- Lienzo donde se dibuja el gráfico -->
+  <svg id="lienzo-funcion" width="100%" height="320" viewbox="0 0 400 320" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7;"></svg>
 </div>
 
 <script>
-function actualizarDiagrama() {
-  const svg = document.getElementById('diagrama');
-  const fa = document.getElementById('fa').value;
-  const fb = document.getElementById('fb').value;
-  const fc = document.getElementById('fc').value;
-  
-  const posA = { a: 50, b: 140, c: 230 };
-  const posB = { x: 35, y: 105, z: 175, w: 245 };
-  const parejas = [ {src:'a', tgt:fa}, {src:'b', tgt:fb}, {src:'c', tgt:fc} ];
+// 1. Configuración de los elementos y sus coordenadas verticales (Y)
+const elementosA = ['a', 'b', 'c', 'd'];
+const elementosB = ['x', 'y', 'z', 'w'];
+const yA = { a: 50, b: 120, c: 190, d: 260 };
+const yB = { x: 50, y: 120, z: 190, w: 260 };
 
-  let contenido = `
+// 2. Variables para recordar qué seleccionó el usuario
+let selA = null; // Guarda la letra de A seleccionada
+let selB = null; // Guarda la letra de B seleccionada
+let funcion = {}; // Guarda las parejas creadas, ej: { a: 'x' }
+
+// 3. Función principal que dibuja los elementos
+function dibujarSVG() {
+  const svg = document.getElementById('lienzo-funcion');
+  if (!svg) return;
+
+  let html = `
     <defs>
-      <marker id="flecha" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <marker id="punta-flecha" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
         <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
       </marker>
     </defs>
@@ -226,33 +184,66 @@ function actualizarDiagrama() {
     <text x="300" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto B</text>
   `;
 
-  // Dibujar flechas
-  parejas.forEach(p => {
-    const y1 = posA[p.src];
-    const y2 = posB[p.tgt];
-    contenido += `<line x1="100" y1="${y1}" x2="300" y2="${y2}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#flecha)"/>`;
+  // Trazar las flechas basadas en las parejas guardadas en la variable 'funcion'
+  for (const [a, b] of Object.entries(funcion)) {
+    html += `<line x1="100" y1="${yA[a]}" x2="300" y2="${yB[b]}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#punta-flecha)"/>`;
+  }
+
+  // Dibujar los círculos del Conjunto A
+  elementosA.forEach(nodo => {
+    const seleccionado = (selA === nodo);
+    const relleno = seleccionado ? "#bee3f8" : "#ebf8ff"; // Se oscurece si está marcado
+    const grosor = seleccionado ? "3" : "2";
+    html += `<circle cx="100" cy="${yA[nodo]}" r="18" fill="${relleno}" stroke="#3182ce" stroke-width="${grosor}" style="cursor: pointer; transition: 0.2s;" onclick="clicEnA('${nodo}')"/>`;
+    html += `<text x="100" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0" style="pointer-events: none;">${nodo}</text>`;
   });
 
-  // Dibujar Nodos A
-  Object.keys(posA).forEach(key => {
-    const y = posA[key];
-    contenido += `<circle cx="100" cy="${y}" r="18" fill="#ebf8ff" stroke="#3182ce" stroke-width="2"/>`;
-    contenido += `<text x="100" y="${y+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0">${key}</text>`;
+  // Dibujar los círculos del Conjunto B
+  elementosB.forEach(nodo => {
+    const seleccionado = (selB === nodo);
+    const relleno = seleccionado ? "#fbd38d" : "#feebc8"; // Se oscurece si está marcado
+    const grosor = seleccionado ? "3" : "2";
+    html += `<circle cx="300" cy="${yB[nodo]}" r="18" fill="${relleno}" stroke="#dd6b20" stroke-width="${grosor}" style="cursor: pointer; transition: 0.2s;" onclick="clicEnB('${nodo}')"/>`;
+    html += `<text x="300" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#c05621" style="pointer-events: none;">${nodo}</text>`;
   });
 
-  // Dibujar Nodos B
-  Object.keys(posB).forEach(key => {
-    const y = posB[key];
-    contenido += `<circle cx="300" cy="${y}" r="18" fill="#feebc8" stroke="#dd6b20" stroke-width="2"/>`;
-    contenido += `<text x="300" y="${y+5}" text-anchor="middle" font-weight="bold" fill="#c05621">${key}</text>`;
-  });
-
-  svg.innerHTML = contenido;
+  svg.innerHTML = html;
 }
 
-// Inicializar al cargar la página
-document.addEventListener("DOMContentLoaded", actualizarDiagrama);
-actualizarDiagrama();
+// 4. Lógica al hacer clic en los elementos
+window.clicEnA = function(nodo) {
+  // Si vuelve a hacer clic en el mismo, se desmarca. Si no, lo selecciona.
+  selA = (selA === nodo) ? null : nodo;
+  comprobarEmparejamiento();
+  dibujarSVG();
+};
+
+window.clicEnB = function(nodo) {
+  selB = (selB === nodo) ? null : nodo;
+  comprobarEmparejamiento();
+  dibujarSVG();
+};
+
+// 5. Verifica si ya hay un A y un B seleccionados para trazar la flecha
+function comprobarEmparejamiento() {
+  if (selA !== null && selB !== null) {
+    funcion[selA] = selB; // Guarda la pareja
+    selA = null; // Resetea la selección
+    selB = null; // Resetea la selección
+  }
+}
+
+// 6. Botón de reiniciar
+window.reiniciar = function() {
+  funcion = {};
+  selA = null;
+  selB = null;
+  dibujarSVG();
+};
+
+// Ejecutar al iniciar la página
+document.addEventListener("DOMContentLoaded", dibujarSVG);
+dibujarSVG();
 </script>
 
 

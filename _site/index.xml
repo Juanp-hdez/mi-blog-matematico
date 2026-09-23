@@ -45,7 +45,7 @@
 </div>
 <section id="ejemplo-de-función" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-de-función">Ejemplo de función</h4>
-<p>Consideremos un conjunto con tres elementos <img src="https://latex.codecogs.com/png.latex?A=%5C%7Ba,%20b,%20c%5C%7D"> y un conjunto con cinco elementos <img src="https://latex.codecogs.com/png.latex?B=%5C%7Bx,y,z,w,v%5C%7D">. La asignación <img src="https://latex.codecogs.com/png.latex?a%20%5Cmapsto%20z">, <img src="https://latex.codecogs.com/png.latex?b%20%5Cmapsto%20v"> y <img src="https://latex.codecogs.com/png.latex?c%20%5Cmapsto%20z"> es un ejemplo de una funcióon <img src="https://latex.codecogs.com/png.latex?f"> representada gráficamente como:</p>
+<p>Consideremos un conjunto con tres elementos <img src="https://latex.codecogs.com/png.latex?A=%5C%7Ba,%20b,%20c%5C%7D"> y un conjunto con cinco elementos <img src="https://latex.codecogs.com/png.latex?B=%5C%7Bx,y,z,w,v%5C%7D">. La asignación <img src="https://latex.codecogs.com/png.latex?a%20%5Cmapsto%20z">, <img src="https://latex.codecogs.com/png.latex?b%20%5Cmapsto%20v"> y <img src="https://latex.codecogs.com/png.latex?c%20%5Cmapsto%20z"> es un ejemplo de una función <img src="https://latex.codecogs.com/png.latex?f"> representada gráficamente como:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://your-website-url.example.com/posts/numeros/ejemplo_funcion.png" class="img-fluid figure-img"></p>
@@ -62,7 +62,7 @@
 <figcaption>Figura 4.</figcaption>
 </figure>
 </div>
-<p>no representa una función, ya que al elemento <img src="https://latex.codecogs.com/png.latex?b"> no se le está asignando un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">, sino que se le están asignando dos elementos distintos, <img src="https://latex.codecogs.com/png.latex?v"> y <img src="https://latex.codecogs.com/png.latex?w">.</p>
+<p>no representa una función, ya que al elemento <img src="https://latex.codecogs.com/png.latex?b"> <strong>no</strong> se le está asignando un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">, sino que se le están asignando dos elementos distintos, <img src="https://latex.codecogs.com/png.latex?v"> y <img src="https://latex.codecogs.com/png.latex?w">.</p>
 </section>
 <section id="definición-formal-de-función" class="level4">
 <h4 class="anchored" data-anchor-id="definición-formal-de-función">Definición formal de función</h4>
@@ -72,9 +72,202 @@
 <li><p>Para cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, existe un elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> tal que <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20F">.</p></li>
 <li><p>Si <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20F"> y <img src="https://latex.codecogs.com/png.latex?(a,c)%20%5Cin%20F">, entonces <img src="https://latex.codecogs.com/png.latex?b=c">.</p></li>
 </ol>
+<p>Veamos que esta definición formal coincide con la noción informal anterior. Si <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> es una función, la condición <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20F"> la vamos a escribir como <img src="https://latex.codecogs.com/png.latex?b=f(a)">, y a la función <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> la representaremos por <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B">. Con esta notación, 1) se convierte en: para todo <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> existe <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> tal que <img src="https://latex.codecogs.com/png.latex?b=f(a)">, es decir, a cada elemento de <img src="https://latex.codecogs.com/png.latex?A"> le corresponde un elemento de <img src="https://latex.codecogs.com/png.latex?B">, y la condición 2) se traduce en: si <img src="https://latex.codecogs.com/png.latex?f(a)=b"> y <img src="https://latex.codecogs.com/png.latex?f(a)=c"> entonces <img src="https://latex.codecogs.com/png.latex?b=c">, lo que garantiza que a cada elemento de <img src="https://latex.codecogs.com/png.latex?A"> le corresponde un único elemento de <img src="https://latex.codecogs.com/png.latex?B">.</p>
 </section>
 <section id="ejemplo-interactivo-de-función" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función">Ejemplo interactivo de función</h4>
+<p>En el siguiente ejemplo interactivo, al decidir la asignación de flechas que a cada elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A"> lo apareja con un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">, se está construyendo una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B">, que en la parte de abajo es representada de manera formal como un subconjunto de <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20B">.</p>
+<div id="interactivo-funcion">
+<div style="font-family: sans-serif; max-width: 500px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+  <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
+    Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para trazar la flecha.
+  </p>
+  
+  <div style="text-align: center; margin-bottom: 15px;">
+    <button onclick="reiniciar()" style="padding: 6px 16px; cursor: pointer; border: 1px solid #cbd5e0; background: #edf2f7; border-radius: 6px; font-weight: bold; color: #4a5568;">↻ Borrar flechas</button>
+  </div>
+
+  <!-- Lienzo donde se dibuja el gráfico -->
+  <svg id="lienzo-funcion" width="100%" height="320" viewbox="0 0 400 320" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7;"></svg>
+
+  <!-- Contenedor para mostrar el conjunto de parejas ordenadas -->
+  <div id="texto-conjunto" style="text-align: center; font-size: 18px; font-family: 'Courier New', monospace; font-weight: bold; margin-top: 15px; padding: 10px; background: #edf2f7; border-radius: 6px; color: #2d3748;">
+    f = { }
+  </div>
+</div>
+
+<script>
+const elementosA = ['a', 'b', 'c', 'd'];
+const elementosB = ['x', 'y', 'z', 'w'];
+const yA = { a: 50, b: 120, c: 190, d: 260 };
+const yB = { x: 50, y: 120, z: 190, w: 260 };
+
+let selA = null;
+let selB = null;
+let funcion = {};
+
+function dibujarSVG() {
+  const svg = document.getElementById('lienzo-funcion');
+  if (!svg) return;
+
+  let html = `
+    <defs>
+      <marker id="punta-flecha" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
+      </marker>
+    </defs>
+    <text x="100" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto A</text>
+    <text x="300" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto B</text>
+  `;
+
+  // Trazar flechas
+  for (const [a, b] of Object.entries(funcion)) {
+    html += `<line x1="100" y1="${yA[a]}" x2="300" y2="${yB[b]}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#punta-flecha)"/>`;
+  }
+
+  // Círculos del Conjunto A
+  elementosA.forEach(nodo => {
+    const seleccionado = (selA === nodo);
+    const relleno = seleccionado ? "#bee3f8" : "#ebf8ff";
+    const grosor = seleccionado ? "3" : "2";
+    html += `<circle cx="100" cy="${yA[nodo]}" r="18" fill="${relleno}" stroke="#3182ce" stroke-width="${grosor}" style="cursor: pointer; transition: 0.2s;" onclick="clicEnA('${nodo}')"/>`;
+    html += `<text x="100" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0" style="pointer-events: none;">${nodo}</text>`;
+  });
+
+  // Círculos del Conjunto B
+  elementosB.forEach(nodo => {
+    const seleccionado = (selB === nodo);
+    const relleno = seleccionado ? "#fbd38d" : "#feebc8";
+    const grosor = seleccionado ? "3" : "2";
+    html += `<circle cx="300" cy="${yB[nodo]}" r="18" fill="${relleno}" stroke="#dd6b20" stroke-width="${grosor}" style="cursor: pointer; transition: 0.2s;" onclick="clicEnB('${nodo}')"/>`;
+    html += `<text x="300" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#c05621" style="pointer-events: none;">${nodo}</text>`;
+  });
+
+  svg.innerHTML = html;
+  actualizarTextoConjunto();
+}
+
+// Función para construir y mostrar el conjunto en notación matemática
+function actualizarTextoConjunto() {
+  const contenedor = document.getElementById('texto-conjunto');
+  if (!contenedor) return;
+
+  const parejas = [];
+  elementosA.forEach(a => {
+    if (funcion[a]) {
+      parejas.push(`(${a}, ${funcion[a]})`);
+    }
+  });
+
+  if (parejas.length === 0) {
+    contenedor.innerHTML = 'f = { }';
+  } else {
+    contenedor.innerHTML = `f = { ${parejas.join(', ')} }`;
+  }
+}
+
+window.clicEnA = function(nodo) {
+  selA = (selA === nodo) ? null : nodo;
+  comprobarEmparejamiento();
+  dibujarSVG();
+};
+
+window.clicEnB = function(nodo) {
+  selB = (selB === nodo) ? null : nodo;
+  comprobarEmparejamiento();
+  dibujarSVG();
+};
+
+function comprobarEmparejamiento() {
+  if (selA !== null && selB !== null) {
+    funcion[selA] = selB;
+    selA = null;
+    selB = null;
+  }
+}
+
+window.reiniciar = function() {
+  funcion = {};
+  selA = null;
+  selB = null;
+  dibujarSVG();
+};
+
+document.addEventListener("DOMContentLoaded", dibujarSVG);
+dibujarSVG();
+</script>
+<p>Ejemplo interactivo de función.</p>
+</div>
+</section>
+<section id="notación-para-las-funciones" class="level4">
+<h4 class="anchored" data-anchor-id="notación-para-las-funciones">Notación para las funciones</h4>
+<p>De ahora en adelante, denotaremos a una función <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> como <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y para cada <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> denotaremos por <img src="https://latex.codecogs.com/png.latex?f(a)"> al único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B"> tal que <img src="https://latex.codecogs.com/png.latex?(a,f(a))%20%5Cin%20F">. El conjunto <img src="https://latex.codecogs.com/png.latex?A"> recibe el nombre de conjunto de salida o dominio de la función <img src="https://latex.codecogs.com/png.latex?f">, y el conjunto <img src="https://latex.codecogs.com/png.latex?B"> recibe el nombre de conjunto de llegada o codominio de la función <img src="https://latex.codecogs.com/png.latex?f">.</p>
+</section>
+<section id="otros-ejemplos-de-funciones" class="level4">
+<h4 class="anchored" data-anchor-id="otros-ejemplos-de-funciones">Otros ejemplos de funciones</h4>
+<ol type="1">
+<li><p>Supongamos que <img src="https://latex.codecogs.com/png.latex?A%20%5Csubseteq%20B"> es un subconjunto. Definimos la función <strong>inclusión</strong> <img src="https://latex.codecogs.com/png.latex?i:%20A%20%5Crightarrow%20B">, como la función que a cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> le asigna el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20B">, es decir, <img src="https://latex.codecogs.com/png.latex?i(a)=a"> para todo <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">. Si vemos esta función como un subconjunto de <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20B">, tenemos que el subconjunto correspondiente es <img src="https://latex.codecogs.com/png.latex?%5C%7B(a,a):%20a%20%5Cin%20A%5C%7D%20%5Csubseteq%20A%20%5Ctimes%20B">, que claramente satisface las dos condiciones de la definición formal de función.</p></li>
+<li><p>Supongamos que tenemos dos conjuntos <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B">. Definimos las funciones proyecciones <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20A"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20B"> como <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D(a,b)=a"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D(a,b)=b"> para todo <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20A%20%5Ctimes%20B">. Los respectivos conjuntos correspondientes a estas funciones son <img src="https://latex.codecogs.com/png.latex?%5C%7B((a,b),a):%20(a,b)%20%5Cin%20A%20%5Ctimes%20B%5C%7D%20%5Csubseteq%20(A%20%5Ctimes%20B)%20%5Ctimes%20A"> y <img src="https://latex.codecogs.com/png.latex?%5C%7B((a,b),b):%20(a,b)%20%5Cin%20A%20%5Ctimes%20B%5C%7D%20%5Csubseteq%20(A%20%5Ctimes%20B)%20%5Ctimes%20B,"> que satisfacen las dos condiciones de la definición formal de función.</p></li>
+</ol>
+<p>El siguiente diagrama ilustra una forma de representar las funciones proyecciones.</p>
+<div class="#funciones-proyeccion">
+<div style="text-align: center; margin: 20px 0;">
+  <svg width="480" height="380" viewbox="0 0 480 380" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px;">
+    <defs>
+      <marker id="flecha-proj" viewbox="0 0 10 10" refx="6" refy="5" markerwidth="5" markerheight="5" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#e53e3e"></path>
+      </marker>
+    </defs>
+
+    <!-- Ejes principales sin flechas de x e y -->
+    <line x1="60" y1="320" x2="440" y2="320" stroke="#cbd5e0" stroke-width="2"></line>
+    <line x1="60" y1="320" x2="60" y2="40" stroke="#cbd5e0" stroke-width="2"></line>
+
+    <!-- Segmento del Conjunto A y su etiqueta -->
+    <line x1="130" y1="320" x2="370" y2="320" stroke="#3182ce" stroke-width="5"></line>
+    <text x="300" y="365" font-weight="bold" font-family="serif" font-size="20" fill="#3182ce" text-anchor="middle">A</text>
+
+    <!-- Segmento del Conjunto B y su etiqueta -->
+    <line x1="60" y1="260" x2="60" y2="100" stroke="#dd6b20" stroke-width="5"></line>
+    <text x="25" y="250" font-weight="bold" font-family="serif" font-size="20" fill="#dd6b20" text-anchor="middle">B</text>
+
+    <!-- Rectángulo A x B -->
+    <rect x="130" y="100" width="240" height="160" fill="#ebf8ff" fill-opacity="0.6" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 4"></rect>
+    <text x="400" y="125" font-family="serif" font-style="italic" font-size="16" fill="#2b6cb0">A × B</text>
+
+    <!-- Líneas de Proyección -->
+    <line x1="240" y1="180" x2="240" y2="320" stroke="#e53e3e" stroke-width="2" stroke-dasharray="5 3"></line>
+    <line x1="240" y1="180" x2="60" y2="180" stroke="#e53e3e" stroke-width="2" stroke-dasharray="5 3"></line>
+
+    <!-- Indicadores de Proyección -->
+    <path d="M 240 220 L 240 235" stroke="#e53e3e" stroke-width="2" marker-end="url(#flecha-proj)"></path>
+    <text x="250" y="235" font-family="serif" font-size="16" fill="#e53e3e" font-weight="bold">π₁</text>
+
+    <path d="M 160 180 L 145 180" stroke="#e53e3e" stroke-width="2" marker-end="url(#flecha-proj)"></path>
+    <text x="150" y="170" font-family="serif" font-size="16" fill="#e53e3e" font-weight="bold">π₂</text>
+
+    <!-- Punto (a,b) -->
+    <circle cx="240" cy="180" r="5" fill="#2b6cb0"></circle>
+    <text x="250" y="175" font-family="serif" font-size="16" font-weight="bold" fill="#2d3748">(a, b)</text>
+
+    <!-- Puntos proyectados a y b -->
+    <circle cx="240" cy="320" r="5" fill="#e53e3e"></circle>
+    <text x="240" y="340" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#e53e3e" text-anchor="middle">a</text>
+
+    <circle cx="60" cy="180" r="5" fill="#e53e3e"></circle>
+    <text x="48" y="185" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#e53e3e" text-anchor="end">b</text>
+  </svg>
+</div>
+<p>Funciones proyecciones</p>
+</div>
+</section>
+<section id="cuándo-dos-funciones-son-iguales" class="level4">
+<h4 class="anchored" data-anchor-id="cuándo-dos-funciones-son-iguales">¿Cuándo dos funciones son iguales?</h4>
+<p>Formalmente, dos funciones de <img src="https://latex.codecogs.com/png.latex?A"> a <img src="https://latex.codecogs.com/png.latex?B"> son iguales, si definen el mismo subconjunto de <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20B">. Con nuestra nueva notación, dos funciones <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y <img src="https://latex.codecogs.com/png.latex?g:%20C%20%5Crightarrow%20D"> son iguales, si <img src="https://latex.codecogs.com/png.latex?A=C">, <img src="https://latex.codecogs.com/png.latex?B=D"> y <img src="https://latex.codecogs.com/png.latex?f(a)=g(a)"> para todo <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">.</p>
+</section>
+<section id="pregunta" class="level4">
+<h4 class="anchored" data-anchor-id="pregunta">Pregunta</h4>
+<p>En ejemplo interactivo de función, ¿cuántas funciones distintas se pueden construir?</p>
 
 
 </section>
@@ -106,103 +299,6 @@
   <category>Interactivo</category>
   <guid>https://your-website-url.example.com/posts/pagina-inicial/</guid>
   <pubDate>Mon, 07 Sep 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Ejemplo Interactivo de Función</title>
-  <link>https://your-website-url.example.com/posts/numeros/ej.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Selecciona la imagen en <img src="https://latex.codecogs.com/png.latex?B"> para cada elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A">:</p>
-<div style="font-family: sans-serif; max-width: 450px; margin: 10px 0; padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff;">
-  <div style="margin-bottom: 15px; display: flex; gap: 12px; justify-content: space-between;">
-    <label><b>f(a):</b> 
-      <select id="fa" onchange="actualizarDiagrama()">
-        <option value="x">x</option>
-        <option value="y">y</option>
-        <option value="z">z</option>
-        <option value="w">w</option>
-      </select>
-    </label>
-    <label><b>f(b):</b> 
-      <select id="fb" onchange="actualizarDiagrama()">
-        <option value="x">x</option>
-        <option value="y" selected="">y</option>
-        <option value="z">z</option>
-        <option value="w">w</option>
-      </select>
-    </label>
-    <label><b>f(c):</b> 
-      <select id="fc" onchange="actualizarDiagrama()">
-        <option value="x">x</option>
-        <option value="y">y</option>
-        <option value="z" selected="">z</option>
-        <option value="w">w</option>
-      </select>
-    </label>
-  </div>
-
-  <svg id="diagrama" width="400" height="280" style="background: #f8fafc; border-radius: 6px; width: 100%;"></svg>
-</div>
-
-<script>
-function actualizarDiagrama() {
-  const svg = document.getElementById('diagrama');
-  const fa = document.getElementById('fa').value;
-  const fb = document.getElementById('fb').value;
-  const fc = document.getElementById('fc').value;
-  
-  const posA = { a: 50, b: 140, c: 230 };
-  const posB = { x: 35, y: 105, z: 175, w: 245 };
-  const parejas = [ {src:'a', tgt:fa}, {src:'b', tgt:fb}, {src:'c', tgt:fc} ];
-
-  let contenido = `
-    <defs>
-      <marker id="flecha" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-        <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
-      </marker>
-    </defs>
-    <text x="100" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto A</text>
-    <text x="300" y="20" text-anchor="middle" font-weight="bold" fill="#2d3748">Conjunto B</text>
-  `;
-
-  // Dibujar flechas
-  parejas.forEach(p => {
-    const y1 = posA[p.src];
-    const y2 = posB[p.tgt];
-    contenido += `<line x1="100" y1="${y1}" x2="300" y2="${y2}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#flecha)"/>`;
-  });
-
-  // Dibujar Nodos A
-  Object.keys(posA).forEach(key => {
-    const y = posA[key];
-    contenido += `<circle cx="100" cy="${y}" r="18" fill="#ebf8ff" stroke="#3182ce" stroke-width="2"/>`;
-    contenido += `<text x="100" y="${y+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0">${key}</text>`;
-  });
-
-  // Dibujar Nodos B
-  Object.keys(posB).forEach(key => {
-    const y = posB[key];
-    contenido += `<circle cx="300" cy="${y}" r="18" fill="#feebc8" stroke="#dd6b20" stroke-width="2"/>`;
-    contenido += `<text x="300" y="${y+5}" text-anchor="middle" font-weight="bold" fill="#c05621">${key}</text>`;
-  });
-
-  svg.innerHTML = contenido;
-}
-
-// Inicializar al cargar la página
-document.addEventListener("DOMContentLoaded", actualizarDiagrama);
-actualizarDiagrama();
-</script>
-
-
-
- ]]></description>
-  <guid>https://your-website-url.example.com/posts/numeros/ej.html</guid>
-  <pubDate>Tue, 15 Sep 2026 21:36:03 GMT</pubDate>
 </item>
 </channel>
 </rss>
