@@ -47,9 +47,9 @@ Recordemos que si $A$ y $B$ son dos conjuntos, el producto cartesiano $A \times 
 
 De manera formal, una función de un conjunto $A$ a un conjunto $B$, es un subconjunto $F \subseteq A \times B$ tal que:
 
-1. Para cada elemento $a \in A$, existe un elemento $b \in B$ tal que $(a,b) \in F$.
+1. Para cada elemento $a \in A$, existe un elemento $b \in B$ tal que $(a,b) \in F$. (Todo elemento de $A$ está relacionado con algún elemento de $B$).
 
-2. Si $(a,b) \in F$ y $(a,c) \in F$, entonces $b=c$.
+2. Si $(a,b) \in F$ y $(a,c) \in F$, entonces $b=c$. (Los elementos de $A$ están relacionados con un único elemento de $B$).
 
 Veamos que esta definición formal coincide con la noción informal anterior. Si $F \subseteq A \times B$ es una función, la condición $(a,b) \in F$ la vamos a escribir como $b=f(a)$, y a la función $F \subseteq A \times B$ la representaremos por $f: A \rightarrow B$. Con esta notación, 1) se convierte en: para todo $a \in A$ existe $b \in B$ tal que $b=f(a)$, es decir, a cada elemento de $A$ le corresponde un elemento de $B$, y la condición 2) se traduce en: si $f(a)=b$ y $f(a)=c$ entonces $b=c$, lo que garantiza que a cada elemento de $A$ le corresponde un único elemento de $B$.
 
@@ -183,7 +183,7 @@ Ejemplo interactivo de función.
 
 #### Notación para las funciones
 
-De ahora en adelante, denotaremos a una función $F \subseteq A \times B$ como $f: A \rightarrow B$ y para cada $a \in A$ denotaremos por $f(a)$ al único elemento del conjunto $B$ tal que $(a,f(a)) \in F$.
+De ahora en adelante, denotaremos a una función $F \subseteq A \times B$ como $f: A \rightarrow B$ donde para cada $a \in A$ denotaremos por $f(a)$ al único elemento del conjunto $B$ tal que $(a,f(a)) \in F$.
 El conjunto $A$ recibe el nombre de conjunto de salida o dominio de la función $f$, y el conjunto $B$ recibe el nombre de conjunto de llegada o codominio de la función $f$.
 
 
@@ -255,4 +255,14 @@ Formalmente, dos funciones de $A$ a $B$ son iguales, si definen el mismo subconj
 
 #### Pregunta
 
-En [ejemplo interactivo de función](#interactivo-funcion), ¿cuántas funciones distintas se pueden construir?   
+En [ejemplo interactivo de función](#interactivo-funcion), ¿cuántas funciones distintas se pueden construir?  
+
+#### Funciones sobreyectivas e inyectivas
+
+Observe que en la definición de función $f:A \rightarrow B$, se permite que elementos del conjunto $B$ no estén relacionados con ningún elemento del conjunto $A$, es decir, puede existir un elemento $b \in B$ para el cual no existe ningún $a \in A$ tal que $b=f(a)$, o de manera equivalente, tal que $(a,b) \notin F \subseteq A \times B$. 
+
+Por ejemplo, en la función
+
+![Figura 5.](ejemplo_funcion.png)
+
+los elementos $x,y,w \in B$ no están relacionados con ningún elemento del conjunto $A$, es decir, no existen elementos $a \in A$ tales que $f(a)=x$, $f(a)=y$ o $f(a)=w$.
