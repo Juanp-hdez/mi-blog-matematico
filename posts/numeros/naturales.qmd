@@ -504,8 +504,9 @@ El problema anterior es un ejemplo del **Principio del Palomar**, que establece 
 Esta función es claramente sobreyectiva, ya que todo elemento del conjunto de llegada $a \in A$ está relacionado con el mismo elemento $a \in A$ del conjunto de salida.
 
 2) Si $A$ y $B$ son conjuntos, las funciones proyecciones $\pi_{1}: A \times B \rightarrow A$ y $\pi_{2}: A \times B \rightarrow B$ definidas como $\pi_{1}(a,b)=a$ y $\pi_{2}(a,b)=b$ para todo $(a,b) \in A \times B$, son sobreyectivas.
+Como se puede ver en el siguiente gráfico, un elemento $a \in A$ está relacionado con todos los elementos de la linea roja vertical por medio de la función $\pi_{1}$, y un elemento $b \in B$ está relacionado con todos los elementos de la linea azul horizontal por medio de la función $\pi_{2}$.
 
-:::
+:::{#sobreyectividad-proyecciones}
 ```{=html}
 <div style="text-align: center; margin: 20px 0;">
   <svg width="480" height="380" viewBox="0 0 480 380" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px;">
@@ -561,4 +562,5 @@ Esta función es claramente sobreyectiva, ya que todo elemento del conjunto de l
   </svg>
 </div>
 ```
+Sobreyectividad de las funciones proyecciones
 :::
