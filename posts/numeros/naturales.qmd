@@ -268,3 +268,9 @@ Por ejemplo, en la función
 los elementos $x,y,w \in B$ no están relacionados con ningún elemento del conjunto $A$, es decir, no existen elementos en $A$ que se relacionen con $x$, $y$ o $w$.
 
 **Función sobreyectiva:** Una función $f: A \rightarrow B$ es sobreyectiva si todos los elementos de $B$ quedan relacionados con elementos de $A$, es decir, si para cada $b \in B$ existe un $a \in A$ tal que $f(a) = b$.
+
+Por ejemplo, la función
+
+![Figura 7.](funcion_sobre.png)
+
+es sobreyectiva, ya que todos los elementos del conjunto $B$ están relacionados con algún elemento del conjunto $A$.

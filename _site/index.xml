@@ -258,7 +258,7 @@ dibujarSVG();
     <text x="48" y="185" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#e53e3e" text-anchor="end">b</text>
   </svg>
 </div>
-<p>Funciones proyecciones</p>
+<p>![Figura 5.]Funciones proyecciones</p>
 </div>
 </section>
 <section id="cuándo-dos-funciones-son-iguales" class="level4">
@@ -276,10 +276,11 @@ dibujarSVG();
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://your-website-url.example.com/posts/numeros/ejemplo_funcion.png" class="img-fluid figure-img"></p>
-<figcaption>Figura 5.</figcaption>
+<figcaption>Figura 6.</figcaption>
 </figure>
 </div>
-<p>los elementos <img src="https://latex.codecogs.com/png.latex?x,y,w%20%5Cin%20B"> no están relacionados con ningún elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A">, es decir, no existen elementos <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> tales que <img src="https://latex.codecogs.com/png.latex?f(a)=x">, <img src="https://latex.codecogs.com/png.latex?f(a)=y"> o <img src="https://latex.codecogs.com/png.latex?f(a)=w">.</p>
+<p>los elementos <img src="https://latex.codecogs.com/png.latex?x,y,w%20%5Cin%20B"> no están relacionados con ningún elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A">, es decir, no existen elementos en <img src="https://latex.codecogs.com/png.latex?A"> que se relacionen con <img src="https://latex.codecogs.com/png.latex?x">, <img src="https://latex.codecogs.com/png.latex?y"> o <img src="https://latex.codecogs.com/png.latex?w">.</p>
+<p><strong>Función sobreyectiva:</strong> Una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es sobreyectiva si todos los elementos de <img src="https://latex.codecogs.com/png.latex?B"> quedan relacionados con elementos de <img src="https://latex.codecogs.com/png.latex?A">, es decir, si para cada <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> existe un <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> tal que <img src="https://latex.codecogs.com/png.latex?f(a)%20=%20b">.</p>
 
 
 </section>
