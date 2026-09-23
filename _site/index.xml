@@ -756,6 +756,173 @@ render();
 <section id="pregunta-2" class="level4">
 <h4 class="anchored" data-anchor-id="pregunta-2">Pregunta</h4>
 <p>¿Cuántas funciones sobreyectivas distintas se pueden construir en Construyendo una función sobreyectiva ?</p>
+<p><strong>Ayuda:</strong> Encuentre cuántas funciones que no sean sobreyectivas se pueden construir y réstelas del total de funciones posibles.</p>
+</section>
+<section id="ejemplo-interactivo-de-función-inyectiva" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-inyectiva">Ejemplo interactivo de función inyectiva</h4>
+<div id="construyendo-funcion-inyectiva">
+<div id="app-inyectiva-v1" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+<p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
+Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para trazar la flecha.
+</p>
+<div style="text-align: center; margin-bottom: 15px;">
+<pre><code>&lt;button id="btn-reiniciar-iny1" style="padding: 6px 16px; cursor: pointer; border: 1px solid #cbd5e0; background: #edf2f7; border-radius: 6px; font-weight: bold; color: #4a5568;"&gt;↻ Borrar flechas&lt;/button&gt;</code></pre>
+</div>
+<div style="width: 100%; min-height: 340px; position: relative;">
+<pre><code>&lt;svg id="lienzo-inyectiva-v1" width="100%" height="340" viewBox="0 0 400 340" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7; display: block; touch-action: manipulation;"&gt;&lt;/svg&gt;</code></pre>
+</div>
+<div id="texto-conjunto-iny1" style="text-align: center; font-size: 16px; font-family: 'Courier New', monospace; font-weight: bold; margin-top: 15px; padding: 10px; background: #edf2f7; border-radius: 6px; color: #2d3748;">
+<pre><code>f = { }</code></pre>
+</div>
+<div id="panel-inyectiva-v1" style="margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a;">
+<pre><code>Asigna flechas desde los 3 elementos del Conjunto A.</code></pre>
+</div>
+</div>
+<script>
+(function() {
+  function iniciarModulo() {
+    const root = document.getElementById('app-inyectiva-v1');
+    if (!root) return;
+
+    const svg = root.querySelector('#lienzo-inyectiva-v1');
+    const txtConjunto = root.querySelector('#texto-conjunto-iny1');
+    const panelIny = root.querySelector('#panel-inyectiva-v1');
+    const btnReiniciar = root.querySelector('#btn-reiniciar-iny1');
+
+    if (!svg) return;
+
+    const elemA = ['a', 'b', 'c'];
+    const elemB = ['x', 'y', 'z', 'w'];
+    const yA = { a: 95, b: 167, c: 239 };
+    const yB = { x: 70, y: 135, z: 200, w: 265 };
+
+    let selA = null;
+    let selB = null;
+    let funcion = {};
+
+    function render() {
+      let html = `
+        <defs>
+          <marker id="punta-flecha-iny1" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
+          </marker>
+        </defs>
+
+        <!-- Conjunto A (3 elementos) -->
+        <ellipse cx="100" cy="167" rx="55" ry="110" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="100" y="25" text-anchor="middle" font-weight="bold" font-size="16" fill="#2b6cb0">Conjunto A</text>
+
+        <!-- Conjunto B (4 elementos) -->
+        <ellipse cx="300" cy="167" rx="55" ry="125" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="300" y="25" text-anchor="middle" font-weight="bold" font-size="16" fill="#c05621">Conjunto B</text>
+      `;
+
+      // Trazado de flechas
+      for (const [a, b] of Object.entries(funcion)) {
+        if (b) {
+          html += `<line x1="100" y1="${yA[a]}" x2="300" y2="${yB[b]}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#punta-flecha-iny1)"/>`;
+        }
+      }
+
+      // Nodos A
+      elemA.forEach(nodo => {
+        const esSel = (selA === nodo);
+        const fill = esSel ? "#bee3f8" : "#ffffff";
+        const strokeW = esSel ? "3" : "2";
+        html += `<g data-grupo="A" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="100" cy="${yA[nodo]}" r="18" fill="${fill}" stroke="#3182ce" stroke-width="${strokeW}"/>
+          <text x="100" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      // Nodos B
+      elemB.forEach(nodo => {
+        const esSel = (selB === nodo);
+        const fill = esSel ? "#fbd38d" : "#ffffff";
+        const strokeW = esSel ? "3" : "2";
+        html += `<g data-grupo="B" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="300" cy="${yB[nodo]}" r="18" fill="${fill}" stroke="#dd6b20" stroke-width="${strokeW}"/>
+          <text x="300" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#c05621" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      svg.innerHTML = html;
+      actualizarEstado();
+    }
+
+    function actualizarEstado() {
+      const parejas = [];
+      elemA.forEach(a => {
+        if (funcion[a]) parejas.push(`(${a}, ${funcion[a]})`);
+      });
+
+      txtConjunto.innerHTML = parejas.length ? `f = { ${parejas.join(', ')} }` : 'f = { }';
+
+      const asignados = Object.keys(funcion).length;
+      if (asignados < elemA.length) {
+        panelIny.style.cssText = "margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a;";
+        panelIny.innerHTML = `⚠️ Función incompleta: asigna los ${elemA.length - asignados} elemento(s) faltantes de A.`;
+        return;
+      }
+
+      const valoresB = Object.values(funcion);
+      const imagenesUnicas = new Set(valoresB);
+
+      if (imagenesUnicas.size === elemA.length) {
+        panelIny.style.cssText = "margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #dcfce7; color: #166534; border: 1px solid #86efac;";
+        panelIny.innerHTML = "✅ ES INYECTIVA: Cada elemento de A tiene una imagen distinta en B (ningún elemento de B recibe más de una flecha).";
+      } else {
+        const conteo = {};
+        valoresB.forEach(val => conteo[val] = (conteo[val] || 0) + 1);
+        const repetidos = Object.keys(conteo).filter(k => conteo[k] > 1);
+
+        panelIny.style.cssText = "margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5;";
+        panelIny.innerHTML = `❌ NO ES INYECTIVA: El elemento { ${repetidos.join(', ')} } de B recibe más de una flecha (imágenes duplicadas).`;
+      }
+    }
+
+    // Delegación de eventos
+    svg.addEventListener('click', (e) => {
+      const targetGroup = e.target.closest('[data-grupo]');
+      if (!targetGroup) return;
+
+      const grupo = targetGroup.getAttribute('data-grupo');
+      const nodo = targetGroup.getAttribute('data-nodo');
+
+      if (grupo === 'A') {
+        selA = (selA === nodo) ? null : nodo;
+      } else if (grupo === 'B') {
+        selB = (selB === nodo) ? null : nodo;
+      }
+
+      if (selA && selB) {
+        funcion[selA] = selB;
+        selA = null;
+        selB = null;
+      }
+
+      render();
+    });
+
+    btnReiniciar.addEventListener('click', () => {
+      funcion = {};
+      selA = null;
+      selB = null;
+      render();
+    });
+
+    render();
+  }
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(iniciarModulo, 10);
+  } else {
+    document.addEventListener('DOMContentLoaded', iniciarModulo);
+  }
+})();
+</script>
+<p>```` Construyendo una función inyectiva</p>
+</div>
 
 
 </section>

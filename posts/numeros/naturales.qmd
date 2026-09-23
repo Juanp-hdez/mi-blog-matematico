@@ -927,6 +927,6 @@ Construyendo una función sobreyectiva
   }
 })();
 </script>
-````
+```
 Construyendo una función inyectiva
 :::
