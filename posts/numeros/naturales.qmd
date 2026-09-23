@@ -545,7 +545,7 @@ Como se puede ver en el siguiente gráfico, un elemento $a \in A$ está relacion
     <!-- Indicadores de Proyección -->
     <path d="M 240 270 L 240 285" stroke="#e53e3e" stroke-width="2" marker-end="url(#flecha-proj)"/>
     <text x="250" y="285" font-family="serif" font-size="16" fill="#e53e3e" font-weight="bold">π₁</text>
-
+    <path d="M 160 180 L 145 180" stroke="#2b6cb0" stroke-width="2" marker-end="url(#flecha-proj)"/>
     <text x="95" y="170" font-family="serif" font-size="16" fill="#2b6cb0" font-weight="bold">π₂</text>
 
     <!-- Punto (a,b) -->
