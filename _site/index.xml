@@ -575,7 +575,7 @@ render();
 <figcaption>figura 7.</figcaption>
 </figure>
 </div>
-<p>los elementos <img src="https://latex.codecogs.com/png.latex?b"> y <img src="https://latex.codecogs.com/png.latex?c"> se relacionan con el mismo elemento <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20B">, es decir, <img src="https://latex.codecogs.com/png.latex?f(b)=x=f(c)">.</p>
+<p>los elementos <img src="https://latex.codecogs.com/png.latex?b"> y <img src="https://latex.codecogs.com/png.latex?c"> se relacionan con el mismo elemento <img src="https://latex.codecogs.com/png.latex?z%20%5Cin%20B">, es decir, <img src="https://latex.codecogs.com/png.latex?f(b)=z=f(c)">.</p>
 
 
 </section>

@@ -571,3 +571,9 @@ Por ejemplo, en la función del siguiente gráfico,
 ![figura 7.](no_inyectiva.png)
 
 los elementos $b$ y $c$ se relacionan con el mismo elemento $z \in B$, es decir, $f(b)=z=f(c)$.
+
+Uno función es **inyectiva** si no ocurre lo anterior, es decir:
+
+**Función inyectiva:** Decimos que una función $f: A \rightarrow B$ es inyectiva si para cada elemento $b \in B$ existe a lo sumo un elemento $a \in A$ tal que $f(a) = b$, es decir, no existen dos elementos distintos de $A$ que se relacionen con el mismo elemento de $B$. De manera equivalente, $f(a_1) = f(a_2)$ implica $a_1 = a_2$ (la única forma que de hayan dos flechas llegando un mismo elemento, es que sean la misma flecha). 
+
+Del gráfico [Sobreyectividad de las funciones proyecciones](#sobreyectividad-proyecciones), podemos ver que las funciones $\pi_{1}: A \times B \rightarrow A$ y $\pi_{2}: A \times B \rightarrow B$ no son inyectivas, ya que dado $a \in A$ todos los elementos de la línea roja vertical continua se relacionan con el mismo elemento $a \in A$, y dado $b \in B$ todos los elementos de la línea azul horizontal continua se relacionan con el mismo elemento $b \in B$.
