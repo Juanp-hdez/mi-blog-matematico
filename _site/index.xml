@@ -294,91 +294,160 @@ dibujarSVG();
 <h4 class="anchored">Pregunta</h4>
 <p>¿Es posible construir una función sobreyectiva <img src="https://latex.codecogs.com/png.latex?f:%20%5C%7Ba,b,c%5C%7D%20%5Crightarrow%20%5C%7Bx,y,z,w%5C%7D">?</p>
 <p>:::</p>
-<div style="font-family: system-ui, -apple-system, sans-serif; max-width: 580px; margin: 20px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
+<div style="font-family: system-ui, -apple-system, sans-serif; max-width: 650px; margin: 20px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
 
-  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 8px;" class="anchored" data-anchor-id="pregunta-1">Cajas de Asignación Interactivas</h3>
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 8px;" class="anchored" data-anchor-id="pregunta-1">Cajas de Asignación Multielemento</h3>
   <p style="text-align: center; color: #64748b; font-size: 14px; margin-bottom: 20px;">
-    Introduce o selecciona una letra (<b>x, y, z, w</b>) para guardar dentro de cada caja (<b>a, b, c</b>).
+    Inserta letras (<b>x, y, z, w</b>) dentro de las cajas (<b>a, b, c</b>). Puedes agregar varias por caja o borrarlas para reiniciar.
   </p>
 
-  <!-- Grilla de las 3 Cajas rotuladas -->
+  <!-- Botón de vaciado global -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <button onclick="vaciarTodo()" style="padding: 6px 14px; background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 6px; color: #475569; font-weight: bold; cursor: pointer;">
+      🗑️ Vaciar todas las cajas
+    </button>
+  </div>
+
+  <!-- Grilla de las 3 Cajas -->
   <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 25px;">
     
     <!-- Caja a -->
-    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center;">
-      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 6px;">CAJA a</div>
-      <div id="display-a" style="height: 50px; line-height: 50px; font-size: 28px; font-weight: bold; color: #0284c7; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 10px;">x</div>
-      <label style="font-size: 12px; color: #475569; display: block; margin-bottom: 4px;">Guardar letra:</label>
-      <select id="input-a" onchange="actualizarCajas()" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #94a3b8; font-size: 15px; font-weight: bold; text-align: center; cursor: pointer;">
-        <option value="x">x</option>
-        <option value="y">y</option>
-        <option value="z">z</option>
-        <option value="w">w</option>
-      </select>
+    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
+      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 8px;">CAJA a</div>
+      
+      <!-- Contenedor visual de las letras agregadas -->
+      <div id="box-a" style="min-height: 60px; padding: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; margin-bottom: 10px;">
+        <span style="color: #94a3b8; font-size: 13px; font-style: italic;">(Vacía)</span>
+      </div>
+
+      <!-- Botones para agregar letras -->
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-bottom: 8px;">
+        <button onclick="agregar('a', 'x')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ x</button>
+        <button onclick="agregar('a', 'y')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ y</button>
+        <button onclick="agregar('a', 'z')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ z</button>
+        <button onclick="agregar('a', 'w')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ w</button>
+      </div>
+
+      <button onclick="vaciarCaja('a')" style="padding: 4px; background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; border-radius: 4px; font-size: 12px; font-weight: bold; cursor: pointer;">Borrar a</button>
     </div>
 
     <!-- Caja b -->
-    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center;">
-      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 6px;">CAJA b</div>
-      <div id="display-b" style="height: 50px; line-height: 50px; font-size: 28px; font-weight: bold; color: #0284c7; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 10px;">y</div>
-      <label style="font-size: 12px; color: #475569; display: block; margin-bottom: 4px;">Guardar letra:</label>
-      <select id="input-b" onchange="actualizarCajas()" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #94a3b8; font-size: 15px; font-weight: bold; text-align: center; cursor: pointer;">
-        <option value="x">x</option>
-        <option value="y" selected="">y</option>
-        <option value="z">z</option>
-        <option value="w">w</option>
-      </select>
+    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
+      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 8px;">CAJA b</div>
+      
+      <div id="box-b" style="min-height: 60px; padding: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; margin-bottom: 10px;">
+        <span style="color: #94a3b8; font-size: 13px; font-style: italic;">(Vacía)</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-bottom: 8px;">
+        <button onclick="agregar('b', 'x')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ x</button>
+        <button onclick="agregar('b', 'y')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ y</button>
+        <button onclick="agregar('b', 'z')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ z</button>
+        <button onclick="agregar('b', 'w')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ w</button>
+      </div>
+
+      <button onclick="vaciarCaja('b')" style="padding: 4px; background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; border-radius: 4px; font-size: 12px; font-weight: bold; cursor: pointer;">Borrar b</button>
     </div>
 
     <!-- Caja c -->
-    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center;">
-      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 6px;">CAJA c</div>
-      <div id="display-c" style="height: 50px; line-height: 50px; font-size: 28px; font-weight: bold; color: #0284c7; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 10px;">z</div>
-      <label style="font-size: 12px; color: #475569; display: block; margin-bottom: 4px;">Guardar letra:</label>
-      <select id="input-c" onchange="actualizarCajas()" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #94a3b8; font-size: 15px; font-weight: bold; text-align: center; cursor: pointer;">
-        <option value="x">x</option>
-        <option value="y">y</option>
-        <option value="z" selected="">z</option>
-        <option value="w">w</option>
-      </select>
+    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
+      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 8px;">CAJA c</div>
+      
+      <div id="box-c" style="min-height: 60px; padding: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; margin-bottom: 10px;">
+        <span style="color: #94a3b8; font-size: 13px; font-style: italic;">(Vacía)</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-bottom: 8px;">
+        <button onclick="agregar('c', 'x')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ x</button>
+        <button onclick="agregar('c', 'y')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ y</button>
+        <button onclick="agregar('c', 'z')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ z</button>
+        <button onclick="agregar('c', 'w')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ w</button>
+      </div>
+
+      <button onclick="vaciarCaja('c')" style="padding: 4px; background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; border-radius: 4px; font-size: 12px; font-weight: bold; cursor: pointer;">Borrar c</button>
     </div>
 
   </div>
 
-  <!-- Resultado y Representación Matemática -->
+  <!-- Estado / Notación Matemática -->
   <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; text-align: center;">
-    <div style="font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 6px;">Estado del Contenido de las Cajas</div>
-    <div id="resumen-cajas" style="font-family: 'Courier New', monospace; font-size: 18px; font-weight: bold; color: #0f172a;">
-      a ↦ x, &nbsp; b ↦ y, &nbsp; c ↦ z
+    <div style="font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 6px;">Representación en Notación de Conjuntos</div>
+    <div id="resumen-conjuntos" style="font-family: 'Courier New', monospace; font-size: 16px; font-weight: bold; color: #0f172a;">
+      a ↦ ∅, &nbsp; b ↦ ∅, &nbsp; c ↦ ∅
     </div>
   </div>
 
 </div>
 
 <script>
-function actualizarCajas() {
-  const cajas = ['a', 'b', 'c'];
-  const estado = {};
+// Estado de contenidos
+const estadoCajas = {
+  a: [],
+  b: [],
+  c: []
+};
 
+function agregar(caja, letra) {
+  estadoCajas[caja].push(letra);
+  render();
+}
+
+function vaciarCaja(caja) {
+  estadoCajas[caja] = [];
+  render();
+}
+
+function vaciarTodo() {
+  estadoCajas.a = [];
+  estadoCajas.b = [];
+  estadoCajas.c = [];
+  render();
+}
+
+function eliminarElemento(caja, index) {
+  estadoCajas[caja].splice(index, 1);
+  render();
+}
+
+function render() {
+  const cajas = ['a', 'b', 'c'];
+  
   cajas.forEach(caja => {
-    const selectElem = document.getElementById(`input-${caja}`);
-    if (selectElem) {
-      const val = selectElem.value;
-      const disp = document.getElementById(`display-${caja}`);
-      if (disp) disp.innerText = val;
-      estado[caja] = val;
+    const container = document.getElementById(`box-${caja}`);
+    if (!container) return;
+    
+    const items = estadoCajas[caja];
+    
+    if (items.length === 0) {
+      container.innerHTML = `<span style="color: #94a3b8; font-size: 13px; font-style: italic;">(Vacía)</span>`;
+    } else {
+      let html = '';
+      items.forEach((item, idx) => {
+        html += `
+          <span onclick="eliminarElemento('${caja}', ${idx})" 
+                title="Haz clic para borrar este elemento"
+                style="background: #0284c7; color: white; padding: 2px 8px; border-radius: 12px; font-weight: bold; font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+            ${item} <small style="font-size: 10px; opacity: 0.8;">✕</small>
+          </span>`;
+      });
+      container.innerHTML = html;
     }
   });
 
-  const resumenElem = document.getElementById('resumen-cajas');
+  // Notación matemática dinámica
+  const resumenElem = document.getElementById('resumen-conjuntos');
   if (resumenElem) {
-    const resumen = cajas.map(c => `${c} ↦ ${estado[c] || ''}`).join(', &nbsp; ');
-    resumenElem.innerHTML = resumen;
+    const texto = cajas.map(c => {
+      const elems = estadoCajas[c];
+      const strContent = elems.length > 0 ? `{ ${elems.join(', ')} }` : '∅';
+      return `${c} ↦ ${strContent}`;
+    }).join(', &nbsp; ');
+    resumenElem.innerHTML = texto;
   }
 }
 
-document.addEventListener("DOMContentLoaded", actualizarCajas);
-actualizarCajas();
+document.addEventListener("DOMContentLoaded", render);
+render();
 </script>
 <p>:::</p>
 
