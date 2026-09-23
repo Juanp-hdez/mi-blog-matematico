@@ -465,6 +465,111 @@ dibujarSVG();
 </figure>
 </div>
 <p>es sobreyectiva, ya que todos los elementos del conjunto <span class="math inline">\(B\)</span> están relacionados con algún elemento del conjunto <span class="math inline">\(A\)</span>.</p>
+</section>
+<section id="pregunta-1" class="level4">
+<h4 class="anchored">Pregunta</h4>
+<p>¿Es posible construir una función sobreyectiva <span class="math inline">\(f: \{a,b,c\} \rightarrow \{x,y,z,w\}\)</span>?</p>
+<p>:::</p>
+<div style="font-family: system-ui, -apple-system, sans-serif; max-width: 650px; margin: 20px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
+
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 8px;" class="anchored" data-anchor-id="pregunta-1">Cajas de Asignación Interactivas</h3>
+  <p style="text-align: center; color: #64748b; font-size: 14px; margin-bottom: 20px;">
+    Introduce o selecciona una letra (<b>x, y, z, w</b>) para guardar dentro de cada caja (<b>a, b, c, d</b>).
+  </p>
+
+  <!-- Grilla de las 4 Cajas rotuladas -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; margin-bottom: 25px;">
+    
+    <!-- Caja a -->
+    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center;">
+      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 6px;">CAJA a</div>
+      <div id="display-a" style="height: 50px; line-height: 50px; font-size: 28px; font-weight: bold; color: #0284c7; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 10px;">x</div>
+      <label style="font-size: 12px; color: #475569; display: block; margin-bottom: 4px;">Guardar letra:</label>
+      <select id="input-a" onchange="actualizarCajas()" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #94a3b8; font-size: 15px; font-weight: bold; text-align: center; cursor: pointer;">
+        <option value="x">x</option>
+        <option value="y">y</option>
+        <option value="z">z</option>
+        <option value="w">w</option>
+      </select>
+    </div>
+
+    <!-- Caja b -->
+    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center;">
+      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 6px;">CAJA b</div>
+      <div id="display-b" style="height: 50px; line-height: 50px; font-size: 28px; font-weight: bold; color: #0284c7; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 10px;">y</div>
+      <label style="font-size: 12px; color: #475569; display: block; margin-bottom: 4px;">Guardar letra:</label>
+      <select id="input-b" onchange="actualizarCajas()" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #94a3b8; font-size: 15px; font-weight: bold; text-align: center; cursor: pointer;">
+        <option value="x">x</option>
+        <option value="y" selected="">y</option>
+        <option value="z">z</option>
+        <option value="w">w</option>
+      </select>
+    </div>
+
+    <!-- Caja c -->
+    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center;">
+      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 6px;">CAJA c</div>
+      <div id="display-c" style="height: 50px; line-height: 50px; font-size: 28px; font-weight: bold; color: #0284c7; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 10px;">z</div>
+      <label style="font-size: 12px; color: #475569; display: block; margin-bottom: 4px;">Guardar letra:</label>
+      <select id="input-c" onchange="actualizarCajas()" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #94a3b8; font-size: 15px; font-weight: bold; text-align: center; cursor: pointer;">
+        <option value="x">x</option>
+        <option value="y">y</option>
+        <option value="z" selected="">z</option>
+        <option value="w">w</option>
+      </select>
+    </div>
+
+    <!-- Caja d -->
+    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center;">
+      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 6px;">CAJA d</div>
+      <div id="display-d" style="height: 50px; line-height: 50px; font-size: 28px; font-weight: bold; color: #0284c7; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 10px;">w</div>
+      <label style="font-size: 12px; color: #475569; display: block; margin-bottom: 4px;">Guardar letra:</label>
+      <select id="input-d" onchange="actualizarCajas()" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #94a3b8; font-size: 15px; font-weight: bold; text-align: center; cursor: pointer;">
+        <option value="x">x</option>
+        <option value="y">y</option>
+        <option value="z">z</option>
+        <option value="w" selected="">w</option>
+      </select>
+    </div>
+
+  </div>
+
+  <!-- Resultado y Representación Matemática de las Asignaciones -->
+  <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; text-align: center;">
+    <div style="font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 6px;">Estado del Contenido de las Cajas</div>
+    <div id="resumen-cajas" style="font-family: 'Courier New', monospace; font-size: 18px; font-weight: bold; color: #0f172a;">
+      a ↦ x, &nbsp; b ↦ y, &nbsp; c ↦ z, &nbsp; d ↦ w
+    </div>
+  </div>
+
+</div>
+
+<script>
+function actualizarCajas() {
+  const cajas = ['a', 'b', 'c', 'd'];
+  const estado = {};
+
+  cajas.forEach(caja => {
+    const selectElem = document.getElementById(`input-${caja}`);
+    if (selectElem) {
+      const val = selectElem.value;
+      const disp = document.getElementById(`display-${caja}`);
+      if (disp) disp.innerText = val;
+      estado[caja] = val;
+    }
+  });
+
+  const resumenElem = document.getElementById('resumen-cajas');
+  if (resumenElem) {
+    const resumen = cajas.map(c => `${c} ↦ ${estado[c] || ''}`).join(', &nbsp; ');
+    resumenElem.innerHTML = resumen;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", actualizarCajas);
+actualizarCajas();
+</script>
+<p>:::</p>
 
 
 </section>
