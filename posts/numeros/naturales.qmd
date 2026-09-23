@@ -246,7 +246,7 @@ El siguiente diagrama ilustra una forma de representar las funciones proyeccione
   </svg>
 </div>
 ```
-![Figura 5.]Funciones proyecciones
+Funciones proyecciones
 :::
 
 #### ¿Cuándo dos funciones son iguales?
@@ -263,7 +263,7 @@ Observe que en la definición de función $f:A \rightarrow B$, se permite que el
 
 Por ejemplo, en la función
 
-![Figura 6.](ejemplo_funcion.png)
+![Figura 5.](ejemplo_funcion.png)
 
 los elementos $x,y,w \in B$ no están relacionados con ningún elemento del conjunto $A$, es decir, no existen elementos en $A$ que se relacionen con $x$, $y$ o $w$.
 
@@ -271,7 +271,7 @@ los elementos $x,y,w \in B$ no están relacionados con ningún elemento del conj
 
 Por ejemplo, la función
 
-![Figura 7.](funcion_sobre.png)
+![Figura 6.](funcion_sobre.png)
 
 es sobreyectiva, ya que todos los elementos del conjunto $B$ están relacionados con algún elemento del conjunto $A$.
 
@@ -504,7 +504,7 @@ El problema anterior es un ejemplo del **Principio del Palomar**, que establece 
 Esta función es claramente sobreyectiva, ya que todo elemento del conjunto de llegada $a \in A$ está relacionado con el mismo elemento $a \in A$ del conjunto de salida.
 
 2) Si $A$ y $B$ son conjuntos, las funciones proyecciones $\pi_{1}: A \times B \rightarrow A$ y $\pi_{2}: A \times B \rightarrow B$ definidas como $\pi_{1}(a,b)=a$ y $\pi_{2}(a,b)=b$ para todo $(a,b) \in A \times B$, son sobreyectivas.
-Como se puede ver en el siguiente gráfico, un elemento $a \in A$ está relacionado con todos los elementos de la linea roja vertical por medio de la función $\pi_{1}$, y un elemento $b \in B$ está relacionado con todos los elementos de la linea azul horizontal por medio de la función $\pi_{2}$.
+Como se puede ver en el siguiente gráfico, un elemento $a \in A$ está relacionado con todos los elementos de la linea roja vertical continua por medio de la función $\pi_{1}$, y un elemento $b \in B$ está relacionado con todos los elementos de la linea azul horizontal continua por medio de la función $\pi_{2}$.
 
 :::{#sobreyectividad-proyecciones}
 ```{=html}
@@ -561,3 +561,13 @@ Como se puede ver en el siguiente gráfico, un elemento $a \in A$ está relacion
 ```
 Sobreyectividad de las funciones proyecciones
 :::
+
+#### Funciones inyectivas
+
+En la definición de función $f:A \rightarrow B$, sabemos que cada elemento de $A$ tiene que estar conectado con un único elemento de $B$, pero en la definición de función se permite que dos elementos distintos del conjunto $A$ estén relacionados con el mismo elemento del conjunto $B$, es decir, puede existir un elemento $b \in B$ para el cual existen dos elementos distintos $a_{1}, a_{2} \in A$ tal que $b=f(a_{1})=f(a_{2})$, o de manera equivalente, tal que $(a_{1},b), (a_{2},b) \in F \subseteq A \times B$.
+
+Por ejemplo, en la función del siguiente gráfico, 
+
+![figura 7.](no_inyectiva.png)
+
+los elementos $b$ y $c$ se relacionan con el mismo elemento $x \in B$, es decir, $f(b)=x=f(c)$.
