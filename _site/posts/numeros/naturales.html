@@ -434,7 +434,7 @@ dibujarSVG();
     <text x="48" y="185" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#e53e3e" text-anchor="end">b</text>
   </svg>
 </div>
-<p>![Figura 5.]Funciones proyecciones</p>
+<p>Funciones proyecciones</p>
 </div>
 </section>
 <section id="cuándo-dos-funciones-son-iguales" class="level4">
@@ -452,7 +452,7 @@ dibujarSVG();
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="ejemplo_funcion.png" class="img-fluid figure-img"></p>
-<figcaption>Figura 6.</figcaption>
+<figcaption>Figura 5.</figcaption>
 </figure>
 </div>
 <p>los elementos <span class="math inline">\(x,y,w \in B\)</span> no están relacionados con ningún elemento del conjunto <span class="math inline">\(A\)</span>, es decir, no existen elementos en <span class="math inline">\(A\)</span> que se relacionen con <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> o <span class="math inline">\(w\)</span>.</p>
@@ -461,7 +461,7 @@ dibujarSVG();
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="funcion_sobre.png" class="img-fluid figure-img"></p>
-<figcaption>Figura 7.</figcaption>
+<figcaption>Figura 6.</figcaption>
 </figure>
 </div>
 <p>es sobreyectiva, ya que todos los elementos del conjunto <span class="math inline">\(B\)</span> están relacionados con algún elemento del conjunto <span class="math inline">\(A\)</span>.</p>
@@ -685,7 +685,7 @@ render();
 <h4 class="anchored" data-anchor-id="ejemplos-de-funciones-sobreyectivas">Ejemplos de funciones sobreyectivas</h4>
 <ol type="1">
 <li><p>Si <span class="math inline">\(A\)</span> es un conjunto, definimos la función identidad <span class="math inline">\(\textrm{id}_{A}: A \rightarrow A\)</span> que a cada elemento <span class="math inline">\(a \in A\)</span> le asigna el mismo elemento <span class="math inline">\(a \in A\)</span>, es decir, <span class="math inline">\(\textrm{id}_{A}(a)=a\)</span>. Esta función como subconjunto de <span class="math inline">\(A \times A\)</span> corresponde a <span class="math inline">\(F=\{(a,a)~ :~ a \in A\}\)</span>. Esta función es claramente sobreyectiva, ya que todo elemento del conjunto de llegada <span class="math inline">\(a \in A\)</span> está relacionado con el mismo elemento <span class="math inline">\(a \in A\)</span> del conjunto de salida.</p></li>
-<li><p>Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son conjuntos, las funciones proyecciones <span class="math inline">\(\pi_{1}: A \times B \rightarrow A\)</span> y <span class="math inline">\(\pi_{2}: A \times B \rightarrow B\)</span> definidas como <span class="math inline">\(\pi_{1}(a,b)=a\)</span> y <span class="math inline">\(\pi_{2}(a,b)=b\)</span> para todo <span class="math inline">\((a,b) \in A \times B\)</span>, son sobreyectivas. Como se puede ver en el siguiente gráfico, un elemento <span class="math inline">\(a \in A\)</span> está relacionado con todos los elementos de la linea roja vertical por medio de la función <span class="math inline">\(\pi_{1}\)</span>, y un elemento <span class="math inline">\(b \in B\)</span> está relacionado con todos los elementos de la linea azul horizontal por medio de la función <span class="math inline">\(\pi_{2}\)</span>.</p></li>
+<li><p>Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son conjuntos, las funciones proyecciones <span class="math inline">\(\pi_{1}: A \times B \rightarrow A\)</span> y <span class="math inline">\(\pi_{2}: A \times B \rightarrow B\)</span> definidas como <span class="math inline">\(\pi_{1}(a,b)=a\)</span> y <span class="math inline">\(\pi_{2}(a,b)=b\)</span> para todo <span class="math inline">\((a,b) \in A \times B\)</span>, son sobreyectivas. Como se puede ver en el siguiente gráfico, un elemento <span class="math inline">\(a \in A\)</span> está relacionado con todos los elementos de la linea roja vertical continua por medio de la función <span class="math inline">\(\pi_{1}\)</span>, y un elemento <span class="math inline">\(b \in B\)</span> está relacionado con todos los elementos de la linea azul horizontal continua por medio de la función <span class="math inline">\(\pi_{2}\)</span>.</p></li>
 </ol>
 <div id="sobreyectividad-proyecciones">
 <div style="text-align: center; margin: 20px 0;">
@@ -740,6 +740,18 @@ render();
 </div>
 <p>Sobreyectividad de las funciones proyecciones</p>
 </div>
+</section>
+<section id="funciones-inyectivas" class="level4">
+<h4 class="anchored" data-anchor-id="funciones-inyectivas">Funciones inyectivas</h4>
+<p>En la definición de función <span class="math inline">\(f:A \rightarrow B\)</span>, sabemos que cada elemento de <span class="math inline">\(A\)</span> tiene que estar conectado con un único elemento de <span class="math inline">\(B\)</span>, pero en la definición de función se permite que dos elementos distintos del conjunto <span class="math inline">\(A\)</span> estén relacionados con el mismo elemento del conjunto <span class="math inline">\(B\)</span>, es decir, puede existir un elemento <span class="math inline">\(b \in B\)</span> para el cual existen dos elementos distintos <span class="math inline">\(a_{1}, a_{2} \in A\)</span> tal que <span class="math inline">\(b=f(a_{1})=f(a_{2})\)</span>, o de manera equivalente, tal que <span class="math inline">\((a_{1},b), (a_{2},b) \in F \subseteq A \times B\)</span>.</p>
+<p>Por ejemplo, en la función del siguiente gráfico,</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="no_inyectiva.png" class="img-fluid figure-img"></p>
+<figcaption>figura 7.</figcaption>
+</figure>
+</div>
+<p>los elementos <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> se relacionan con el mismo elemento <span class="math inline">\(x \in B\)</span>, es decir, <span class="math inline">\(f(b)=x=f(c)\)</span>.</p>
 
 
 </section>

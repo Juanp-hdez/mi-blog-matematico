@@ -570,4 +570,4 @@ Por ejemplo, en la función del siguiente gráfico,
 
 ![figura 7.](no_inyectiva.png)
 
-los elementos $b$ y $c$ se relacionan con el mismo elemento $x \in B$, es decir, $f(b)=x=f(c)$.
+los elementos $b$ y $c$ se relacionan con el mismo elemento $z \in B$, es decir, $f(b)=z=f(c)$.

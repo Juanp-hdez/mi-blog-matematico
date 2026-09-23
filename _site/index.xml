@@ -258,7 +258,7 @@ dibujarSVG();
     <text x="48" y="185" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#e53e3e" text-anchor="end">b</text>
   </svg>
 </div>
-<p>![Figura 5.]Funciones proyecciones</p>
+<p>Funciones proyecciones</p>
 </div>
 </section>
 <section id="cuándo-dos-funciones-son-iguales" class="level4">
@@ -276,7 +276,7 @@ dibujarSVG();
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://your-website-url.example.com/posts/numeros/ejemplo_funcion.png" class="img-fluid figure-img"></p>
-<figcaption>Figura 6.</figcaption>
+<figcaption>Figura 5.</figcaption>
 </figure>
 </div>
 <p>los elementos <img src="https://latex.codecogs.com/png.latex?x,y,w%20%5Cin%20B"> no están relacionados con ningún elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A">, es decir, no existen elementos en <img src="https://latex.codecogs.com/png.latex?A"> que se relacionen con <img src="https://latex.codecogs.com/png.latex?x">, <img src="https://latex.codecogs.com/png.latex?y"> o <img src="https://latex.codecogs.com/png.latex?w">.</p>
@@ -285,7 +285,7 @@ dibujarSVG();
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://your-website-url.example.com/posts/numeros/funcion_sobre.png" class="img-fluid figure-img"></p>
-<figcaption>Figura 7.</figcaption>
+<figcaption>Figura 6.</figcaption>
 </figure>
 </div>
 <p>es sobreyectiva, ya que todos los elementos del conjunto <img src="https://latex.codecogs.com/png.latex?B"> están relacionados con algún elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A">.</p>
@@ -509,7 +509,7 @@ render();
 <h4 class="anchored" data-anchor-id="ejemplos-de-funciones-sobreyectivas">Ejemplos de funciones sobreyectivas</h4>
 <ol type="1">
 <li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> es un conjunto, definimos la función identidad <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D:%20A%20%5Crightarrow%20A"> que a cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> le asigna el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, es decir, <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D(a)=a">. Esta función como subconjunto de <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20A"> corresponde a <img src="https://latex.codecogs.com/png.latex?F=%5C%7B(a,a)~%20:~%20a%20%5Cin%20A%5C%7D">. Esta función es claramente sobreyectiva, ya que todo elemento del conjunto de llegada <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> está relacionado con el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> del conjunto de salida.</p></li>
-<li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B"> son conjuntos, las funciones proyecciones <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20A"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20B"> definidas como <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D(a,b)=a"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D(a,b)=b"> para todo <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20A%20%5Ctimes%20B">, son sobreyectivas. Como se puede ver en el siguiente gráfico, un elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> está relacionado con todos los elementos de la linea roja vertical por medio de la función <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D">, y un elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> está relacionado con todos los elementos de la linea azul horizontal por medio de la función <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D">.</p></li>
+<li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B"> son conjuntos, las funciones proyecciones <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20A"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20B"> definidas como <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D(a,b)=a"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D(a,b)=b"> para todo <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20A%20%5Ctimes%20B">, son sobreyectivas. Como se puede ver en el siguiente gráfico, un elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> está relacionado con todos los elementos de la linea roja vertical continua por medio de la función <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D">, y un elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> está relacionado con todos los elementos de la linea azul horizontal continua por medio de la función <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D">.</p></li>
 </ol>
 <div id="sobreyectividad-proyecciones">
 <div style="text-align: center; margin: 20px 0;">
@@ -564,6 +564,18 @@ render();
 </div>
 <p>Sobreyectividad de las funciones proyecciones</p>
 </div>
+</section>
+<section id="funciones-inyectivas" class="level4">
+<h4 class="anchored" data-anchor-id="funciones-inyectivas">Funciones inyectivas</h4>
+<p>En la definición de función <img src="https://latex.codecogs.com/png.latex?f:A%20%5Crightarrow%20B">, sabemos que cada elemento de <img src="https://latex.codecogs.com/png.latex?A"> tiene que estar conectado con un único elemento de <img src="https://latex.codecogs.com/png.latex?B">, pero en la definición de función se permite que dos elementos distintos del conjunto <img src="https://latex.codecogs.com/png.latex?A"> estén relacionados con el mismo elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">, es decir, puede existir un elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> para el cual existen dos elementos distintos <img src="https://latex.codecogs.com/png.latex?a_%7B1%7D,%20a_%7B2%7D%20%5Cin%20A"> tal que <img src="https://latex.codecogs.com/png.latex?b=f(a_%7B1%7D)=f(a_%7B2%7D)">, o de manera equivalente, tal que <img src="https://latex.codecogs.com/png.latex?(a_%7B1%7D,b),%20(a_%7B2%7D,b)%20%5Cin%20F%20%5Csubseteq%20A%20%5Ctimes%20B">.</p>
+<p>Por ejemplo, en la función del siguiente gráfico,</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/no_inyectiva.png" class="img-fluid figure-img"></p>
+<figcaption>figura 7.</figcaption>
+</figure>
+</div>
+<p>los elementos <img src="https://latex.codecogs.com/png.latex?b"> y <img src="https://latex.codecogs.com/png.latex?c"> se relacionan con el mismo elemento <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20B">, es decir, <img src="https://latex.codecogs.com/png.latex?f(b)=x=f(c)">.</p>
 
 
 </section>
