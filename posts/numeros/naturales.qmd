@@ -246,7 +246,7 @@ El siguiente diagrama ilustra una forma de representar las funciones proyeccione
   </svg>
 </div>
 ```
-Funciones proyecciones
+![Figura 5.]Funciones proyecciones
 :::
 
 #### ¿Cuándo dos funciones son iguales?
@@ -263,6 +263,8 @@ Observe que en la definición de función $f:A \rightarrow B$, se permite que el
 
 Por ejemplo, en la función
 
-![Figura 5.](ejemplo_funcion.png)
+![Figura 6.](ejemplo_funcion.png)
 
-los elementos $x,y,w \in B$ no están relacionados con ningún elemento del conjunto $A$, es decir, no existen elementos $a \in A$ tales que $f(a)=x$, $f(a)=y$ o $f(a)=w$.
+los elementos $x,y,w \in B$ no están relacionados con ningún elemento del conjunto $A$, es decir, no existen elementos en $A$ que se relacionen con $x$, $y$ o $w$.
+
+**Función sobreyectiva:** Una función $f: A \rightarrow B$ es sobreyectiva si todos los elementos de $B$ quedan relacionados con elementos de $A$, es decir, si para cada $b \in B$ existe un $a \in A$ tal que $f(a) = b$.

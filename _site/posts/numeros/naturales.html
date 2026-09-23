@@ -245,8 +245,8 @@ window.Quarto = {
 <p>Recordemos que si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son dos conjuntos, el producto cartesiano <span class="math inline">\(A \times B\)</span> se define como <span class="math display">\[A \times B = \{(a,b) : a \in A, b \in B\}.\]</span></p>
 <p>De manera formal, una función de un conjunto <span class="math inline">\(A\)</span> a un conjunto <span class="math inline">\(B\)</span>, es un subconjunto <span class="math inline">\(F \subseteq A \times B\)</span> tal que:</p>
 <ol type="1">
-<li><p>Para cada elemento <span class="math inline">\(a \in A\)</span>, existe un elemento <span class="math inline">\(b \in B\)</span> tal que <span class="math inline">\((a,b) \in F\)</span>.</p></li>
-<li><p>Si <span class="math inline">\((a,b) \in F\)</span> y <span class="math inline">\((a,c) \in F\)</span>, entonces <span class="math inline">\(b=c\)</span>.</p></li>
+<li><p>Para cada elemento <span class="math inline">\(a \in A\)</span>, existe un elemento <span class="math inline">\(b \in B\)</span> tal que <span class="math inline">\((a,b) \in F\)</span>. (Todo elemento de <span class="math inline">\(A\)</span> está relacionado con algún elemento de <span class="math inline">\(B\)</span>).</p></li>
+<li><p>Si <span class="math inline">\((a,b) \in F\)</span> y <span class="math inline">\((a,c) \in F\)</span>, entonces <span class="math inline">\(b=c\)</span>. (Los elementos de <span class="math inline">\(A\)</span> están relacionados con un único elemento de <span class="math inline">\(B\)</span>).</p></li>
 </ol>
 <p>Veamos que esta definición formal coincide con la noción informal anterior. Si <span class="math inline">\(F \subseteq A \times B\)</span> es una función, la condición <span class="math inline">\((a,b) \in F\)</span> la vamos a escribir como <span class="math inline">\(b=f(a)\)</span>, y a la función <span class="math inline">\(F \subseteq A \times B\)</span> la representaremos por <span class="math inline">\(f: A \rightarrow B\)</span>. Con esta notación, 1) se convierte en: para todo <span class="math inline">\(a \in A\)</span> existe <span class="math inline">\(b \in B\)</span> tal que <span class="math inline">\(b=f(a)\)</span>, es decir, a cada elemento de <span class="math inline">\(A\)</span> le corresponde un elemento de <span class="math inline">\(B\)</span>, y la condición 2) se traduce en: si <span class="math inline">\(f(a)=b\)</span> y <span class="math inline">\(f(a)=c\)</span> entonces <span class="math inline">\(b=c\)</span>, lo que garantiza que a cada elemento de <span class="math inline">\(A\)</span> le corresponde un único elemento de <span class="math inline">\(B\)</span>.</p>
 </section>
@@ -377,7 +377,7 @@ dibujarSVG();
 </section>
 <section id="notación-para-las-funciones" class="level4">
 <h4 class="anchored" data-anchor-id="notación-para-las-funciones">Notación para las funciones</h4>
-<p>De ahora en adelante, denotaremos a una función <span class="math inline">\(F \subseteq A \times B\)</span> como <span class="math inline">\(f: A \rightarrow B\)</span> y para cada <span class="math inline">\(a \in A\)</span> denotaremos por <span class="math inline">\(f(a)\)</span> al único elemento del conjunto <span class="math inline">\(B\)</span> tal que <span class="math inline">\((a,f(a)) \in F\)</span>. El conjunto <span class="math inline">\(A\)</span> recibe el nombre de conjunto de salida o dominio de la función <span class="math inline">\(f\)</span>, y el conjunto <span class="math inline">\(B\)</span> recibe el nombre de conjunto de llegada o codominio de la función <span class="math inline">\(f\)</span>.</p>
+<p>De ahora en adelante, denotaremos a una función <span class="math inline">\(F \subseteq A \times B\)</span> como <span class="math inline">\(f: A \rightarrow B\)</span> donde para cada <span class="math inline">\(a \in A\)</span> denotaremos por <span class="math inline">\(f(a)\)</span> al único elemento del conjunto <span class="math inline">\(B\)</span> tal que <span class="math inline">\((a,f(a)) \in F\)</span>. El conjunto <span class="math inline">\(A\)</span> recibe el nombre de conjunto de salida o dominio de la función <span class="math inline">\(f\)</span>, y el conjunto <span class="math inline">\(B\)</span> recibe el nombre de conjunto de llegada o codominio de la función <span class="math inline">\(f\)</span>.</p>
 </section>
 <section id="otros-ejemplos-de-funciones" class="level4">
 <h4 class="anchored" data-anchor-id="otros-ejemplos-de-funciones">Otros ejemplos de funciones</h4>
@@ -444,6 +444,18 @@ dibujarSVG();
 <section id="pregunta" class="level4">
 <h4 class="anchored" data-anchor-id="pregunta">Pregunta</h4>
 <p>En <a href="#interactivo-funcion">ejemplo interactivo de función</a>, ¿cuántas funciones distintas se pueden construir?</p>
+</section>
+<section id="funciones-sobreyectivas-e-inyectivas" class="level4">
+<h4 class="anchored" data-anchor-id="funciones-sobreyectivas-e-inyectivas">Funciones sobreyectivas e inyectivas</h4>
+<p>Observe que en la definición de función <span class="math inline">\(f:A \rightarrow B\)</span>, se permite que elementos del conjunto <span class="math inline">\(B\)</span> no estén relacionados con ningún elemento del conjunto <span class="math inline">\(A\)</span>, es decir, puede existir un elemento <span class="math inline">\(b \in B\)</span> para el cual no existe ningún <span class="math inline">\(a \in A\)</span> tal que <span class="math inline">\(b=f(a)\)</span>, o de manera equivalente, tal que <span class="math inline">\((a,b) \notin F \subseteq A \times B\)</span>.</p>
+<p>Por ejemplo, en la función</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ejemplo_funcion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 5.</figcaption>
+</figure>
+</div>
+<p>los elementos <span class="math inline">\(x,y,w \in B\)</span> no están relacionados con ningún elemento del conjunto <span class="math inline">\(A\)</span>, es decir, no existen elementos <span class="math inline">\(a \in A\)</span> tales que <span class="math inline">\(f(a)=x\)</span>, <span class="math inline">\(f(a)=y\)</span> o <span class="math inline">\(f(a)=w\)</span>.</p>
 
 
 </section>
