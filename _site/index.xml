@@ -297,7 +297,7 @@ dibujarSVG();
 <div id="interactivo-principio-del-palomar">
 <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 650px; margin: 20px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
 
-  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="pregunta-1">Intente introducir las letras x,y,z,w en las cajas sin colocar mas de una letra en cada caja</h3>
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="pregunta-1">Intente introducir las letras x,y,z,w en las cajas, sin colocar mas de una letra en cada caja</h3>
   <p style="text-align: center; color: #64748b; font-size: 14px; margin-bottom: 20px;">
     <b>Arrastra</b> cada letra a una caja. Cada letra solo puede usarse <b>una sola vez</b> (se deshabilita al ser asignada, pero reaparece si la borras).
   </p>
@@ -503,7 +503,69 @@ render();
 </script>
 <p>Principio del palomar</p>
 </div>
-<p>El problema anterior es un ejemplo del <strong>Principio del Palomar</strong>, que establece que si hay más palomas que palomares y se quieren guardar todas las palomas en los palomares, obligatoriamente en algún palomar se tendrá que ubicar por lo menos dos palomas.</p>
+<p>El problema anterior es un ejemplo del <strong>Principio del Palomar</strong>, que establece que si hay más palomas que palomares y se quieren guardar todas las palomas en los palomares, obligatoriamente en algún palomar se tendrán que ubicar por lo menos dos palomas.</p>
+</section>
+<section id="ejemplos-de-funciones-sobreyectivas" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-sobreyectivas">Ejemplos de funciones sobreyectivas</h4>
+<ol type="1">
+<li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> es un conjunto, definimos la función identidad <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D:%20A%20%5Crightarrow%20A"> que a cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> le asigna el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, es decir, <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D(a)=a">. Esta función como subconjunto de <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20A"> corresponde a <img src="https://latex.codecogs.com/png.latex?F=%5C%7B(a,a)~%20:~%20a%20%5Cin%20A%5C%7D">. Esta función es claramente sobreyectiva, ya que todo elemento del conjunto de llegada <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> está relacionado con el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> del conjunto de salida.</p></li>
+<li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B"> son conjuntos, las funciones proyecciones <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20A"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20B"> definidas como <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D(a,b)=a"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D(a,b)=b"> para todo <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20A%20%5Ctimes%20B">, son sobreyectivas.</p></li>
+</ol>
+<p>:::</p>
+<div style="text-align: center; margin: 20px 0;">
+  <svg width="480" height="380" viewbox="0 0 480 380" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px;">
+    <defs>
+      <marker id="flecha-proj" viewbox="0 0 10 10" refx="6" refy="5" markerwidth="5" markerheight="5" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#e53e3e"></path>
+      </marker>
+    </defs>
+
+    <!-- Ejes principales -->
+    <line x1="60" y1="320" x2="440" y2="320" stroke="#cbd5e0" stroke-width="2"></line>
+    <line x1="60" y1="320" x2="60" y2="40" stroke="#cbd5e0" stroke-width="2"></line>
+
+    <!-- Segmento del Conjunto A y su etiqueta -->
+    <line x1="130" y1="320" x2="370" y2="320" stroke="#3182ce" stroke-width="5"></line>
+    <text x="250" y="365" font-weight="bold" font-family="serif" font-size="20" fill="#3182ce" text-anchor="middle">A</text>
+
+    <!-- Segmento del Conjunto B y su etiqueta -->
+    <line x1="60" y1="260" x2="60" y2="100" stroke="#dd6b20" stroke-width="5"></line>
+    <text x="25" y="185" font-weight="bold" font-family="serif" font-size="20" fill="#dd6b20" text-anchor="middle">B</text>
+
+    <!-- Rectángulo A x B -->
+    <rect x="130" y="100" width="240" height="160" fill="#ebf8ff" fill-opacity="0.6" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 4"></rect>
+    <text x="340" y="125" font-family="serif" font-style="italic" font-size="16" fill="#2b6cb0">A × B</text>
+
+    <!-- LÍNEA VERTICAL ROJA CONTINUA (Restringida al recuadro A x B) -->
+    <line x1="240" y1="100" x2="240" y2="260" stroke="#e53e3e" stroke-width="2"></line>
+
+    <!-- LÍNEA HORIZONTAL AZUL CONTINUA (Restringida al recuadro A x B) -->
+    <line x1="130" y1="180" x2="370" y2="180" stroke="#2b6cb0" stroke-width="2"></line>
+
+    <!-- Líneas punteadas de proyección desde A x B hacia los ejes -->
+    <line x1="240" y1="260" x2="240" y2="320" stroke="#e53e3e" stroke-width="1.5" stroke-dasharray="4 3"></line>
+    <line x1="130" y1="180" x2="60" y2="180" stroke="#2b6cb0" stroke-width="1.5" stroke-dasharray="4 3"></line>
+
+    <!-- Indicadores de Proyección -->
+    <path d="M 240 270 L 240 285" stroke="#e53e3e" stroke-width="2" marker-end="url(#flecha-proj)"></path>
+    <text x="250" y="285" font-family="serif" font-size="16" fill="#e53e3e" font-weight="bold">π₁</text>
+
+    <text x="95" y="170" font-family="serif" font-size="16" fill="#2b6cb0" font-weight="bold">π₂</text>
+
+    <!-- Punto (a,b) -->
+    <circle cx="240" cy="180" r="6" fill="#2d3748"></circle>
+    <text x="250" y="170" font-family="serif" font-size="16" font-weight="bold" fill="#2d3748">(a, b)</text>
+
+    <!-- Punto proyectado a en el eje X -->
+    <circle cx="240" cy="320" r="5" fill="#e53e3e"></circle>
+    <text x="240" y="340" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#e53e3e" text-anchor="middle">a</text>
+
+    <!-- Punto proyectado b en el eje Y -->
+    <circle cx="60" cy="180" r="5" fill="#2b6cb0"></circle>
+    <text x="48" y="185" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#2b6cb0" text-anchor="end">b</text>
+  </svg>
+</div>
+<p>:::</p>
 
 
 </section>

@@ -531,18 +531,21 @@ Esta función es claramente sobreyectiva, ya que todo elemento del conjunto de l
     <rect x="130" y="100" width="240" height="160" fill="#ebf8ff" fill-opacity="0.6" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 4"/>
     <text x="340" y="125" font-family="serif" font-style="italic" font-size="16" fill="#2b6cb0">A × B</text>
 
-    <!-- LÍNEA VERTICAL EN ROJO PASANDO POR (a,b) -->
-    <line x1="240" y1="40" x2="240" y2="320" stroke="#e53e3e" stroke-width="2" stroke-dasharray="5 3"/>
+    <!-- LÍNEA VERTICAL ROJA CONTINUA (Restringida al recuadro A x B) -->
+    <line x1="240" y1="100" x2="240" y2="260" stroke="#e53e3e" stroke-width="2"/>
 
-    <!-- LÍNEA HORIZONTAL EN AZUL PASANDO POR (a,b) -->
-    <line x1="60" y1="180" x2="440" y2="180" stroke="#2b6cb0" stroke-width="2" stroke-dasharray="5 3"/>
+    <!-- LÍNEA HORIZONTAL AZUL CONTINUA (Restringida al recuadro A x B) -->
+    <line x1="130" y1="180" x2="370" y2="180" stroke="#2b6cb0" stroke-width="2"/>
+
+    <!-- Líneas punteadas de proyección desde A x B hacia los ejes -->
+    <line x1="240" y1="260" x2="240" y2="320" stroke="#e53e3e" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <line x1="130" y1="180" x2="60" y2="180" stroke="#2b6cb0" stroke-width="1.5" stroke-dasharray="4 3"/>
 
     <!-- Indicadores de Proyección -->
-    <path d="M 240 220 L 240 235" stroke="#e53e3e" stroke-width="2" marker-end="url(#flecha-proj)"/>
-    <text x="250" y="235" font-family="serif" font-size="16" fill="#e53e3e" font-weight="bold">π₁</text>
+    <path d="M 240 270 L 240 285" stroke="#e53e3e" stroke-width="2" marker-end="url(#flecha-proj)"/>
+    <text x="250" y="285" font-family="serif" font-size="16" fill="#e53e3e" font-weight="bold">π₁</text>
 
-    <path d="M 160 180 L 145 180" stroke="#2b6cb0" stroke-width="2"/>
-    <text x="150" y="170" font-family="serif" font-size="16" fill="#2b6cb0" font-weight="bold">π₂</text>
+    <text x="95" y="170" font-family="serif" font-size="16" fill="#2b6cb0" font-weight="bold">π₂</text>
 
     <!-- Punto (a,b) -->
     <circle cx="240" cy="180" r="6" fill="#2d3748"/>
