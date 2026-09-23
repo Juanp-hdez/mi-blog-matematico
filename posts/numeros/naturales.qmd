@@ -586,11 +586,11 @@ Del gráfico [Sobreyectividad de las funciones proyecciones](#sobreyectividad-pr
 
 #### Ejemplo interactivo de función sobreyectiva
 
-
+:::{#construyendo-funcion-sobreyectiva}
 ```{=html}
 <div id="app-sobreyectiva-v3" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
   <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
-    Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para trazar la flecha.
+    Haz clic en un elemento del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para asignar la función, de tal manera que quede sobreyectiva.
   </p>
   
   <div style="text-align: center; margin-bottom: 15px;">
@@ -749,3 +749,9 @@ Del gráfico [Sobreyectividad de las funciones proyecciones](#sobreyectividad-pr
 })();
 </script>
 ```
+Construyendo una función sobreyectiva
+:::
+
+#### Pregunta
+
+¿Cuántas funciones sobreyectivas distintas se pueden construir en [Construyendo una función sobreyectiva](#construyendo-funcion-sobreyectiva) ?

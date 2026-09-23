@@ -589,24 +589,24 @@ render();
 </section>
 <section id="ejemplo-interactivo-de-función-sobreyectiva" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-sobreyectiva">Ejemplo interactivo de función sobreyectiva</h4>
-<div id="app-sobreyectiva" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+<div id="app-sobreyectiva-v3" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
   <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
     Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para trazar la flecha.
   </p>
   
   <div style="text-align: center; margin-bottom: 15px;">
-    <button id="btn-reiniciar-sob" style="padding: 6px 16px; cursor: pointer; border: 1px solid #cbd5e0; background: #edf2f7; border-radius: 6px; font-weight: bold; color: #4a5568;">↻ Borrar flechas</button>
+    <button id="btn-reiniciar-sob3" style="padding: 6px 16px; cursor: pointer; border: 1px solid #cbd5e0; background: #edf2f7; border-radius: 6px; font-weight: bold; color: #4a5568;">↻ Borrar flechas</button>
   </div>
 
   <div style="width: 100%; min-height: 340px; position: relative;">
-    <svg id="lienzo-sobreyectiva-v2" width="100%" height="340" viewbox="0 0 400 340" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7; display: block; touch-action: manipulation;"></svg>
+    <svg id="lienzo-sobreyectiva-v3" width="100%" height="340" viewbox="0 0 400 340" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7; display: block; touch-action: manipulation;"></svg>
   </div>
 
-  <div id="texto-conjunto-v2" style="text-align: center; font-size: 16px; font-family: 'Courier New', monospace; font-weight: bold; margin-top: 15px; padding: 10px; background: #edf2f7; border-radius: 6px; color: #2d3748;">
+  <div id="texto-conjunto-v3" style="text-align: center; font-size: 16px; font-family: 'Courier New', monospace; font-weight: bold; margin-top: 15px; padding: 10px; background: #edf2f7; border-radius: 6px; color: #2d3748;">
     f = { }
   </div>
 
-  <div id="panel-sobreyectiva-v2" style="margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a;">
+  <div id="panel-sobreyectiva-v3" style="margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a;">
     Asigna flechas desde los 4 elementos del Conjunto A.
   </div>
 </div>
@@ -614,20 +614,20 @@ render();
 <script>
 (function() {
   function iniciarModulo() {
-    const root = document.getElementById('app-sobreyectiva');
+    const root = document.getElementById('app-sobreyectiva-v3');
     if (!root) return;
 
-    const svg = root.querySelector('#lienzo-sobreyectiva-v2');
-    const txtConjunto = root.querySelector('#texto-conjunto-v2');
-    const panelSob = root.querySelector('#panel-sobreyectiva-v2');
-    const btnReiniciar = root.querySelector('#btn-reiniciar-sob');
+    const svg = root.querySelector('#lienzo-sobreyectiva-v3');
+    const txtConjunto = root.querySelector('#texto-conjunto-v3');
+    const panelSob = root.querySelector('#panel-sobreyectiva-v3');
+    const btnReiniciar = root.querySelector('#btn-reiniciar-sob3');
 
     if (!svg) return;
 
     const elemA = ['a', 'b', 'c', 'd'];
-    const elemB = ['x', 'y', 'z', 'w'];
+    const elemB = ['x', 'y', 'z'];
     const yA = { a: 70, b: 135, c: 200, d: 265 };
-    const yB = { x: 70, y: 135, z: 200, w: 265 };
+    const yB = { x: 95, y: 167, z: 239 };
 
     let selA = null;
     let selB = null;
@@ -636,24 +636,24 @@ render();
     function render() {
       let html = `
         <defs>
-          <marker id="punta-flecha-v2" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <marker id="punta-flecha-v3" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
           </marker>
         </defs>
 
-        <!-- Conjunto A -->
+        <!-- Conjunto A (4 elementos) -->
         <ellipse cx="100" cy="167" rx="55" ry="125" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="5 4"/>
         <text x="100" y="25" text-anchor="middle" font-weight="bold" font-size="16" fill="#2b6cb0">Conjunto A</text>
 
-        <!-- Conjunto B -->
-        <ellipse cx="300" cy="167" rx="55" ry="125" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="5 4"/>
+        <!-- Conjunto B (3 elementos) -->
+        <ellipse cx="300" cy="167" rx="55" ry="110" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="5 4"/>
         <text x="300" y="25" text-anchor="middle" font-weight="bold" font-size="16" fill="#c05621">Conjunto B</text>
       `;
 
-      // Flechas
+      // Trazado de flechas
       for (const [a, b] of Object.entries(funcion)) {
         if (b) {
-          html += `<line x1="100" y1="${yA[a]}" x2="300" y2="${yB[b]}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#punta-flecha-v2)"/>`;
+          html += `<line x1="100" y1="${yA[a]}" x2="300" y2="${yB[b]}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#punta-flecha-v3)"/>`;
         }
       }
 
@@ -709,7 +709,7 @@ render();
       }
     }
 
-    // Delegación limpia de eventos (sin dependencias globales)
+    // Delegación de eventos
     svg.addEventListener('click', (e) => {
       const targetGroup = e.target.closest('[data-grupo]');
       if (!targetGroup) return;
@@ -742,7 +742,6 @@ render();
     render();
   }
 
-  // Ejecución segura tolerante a Live Reload de Quarto
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
     setTimeout(iniciarModulo, 10);
   } else {
