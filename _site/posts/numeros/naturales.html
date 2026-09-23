@@ -472,72 +472,63 @@ dibujarSVG();
 <p>:::</p>
 <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 650px; margin: 20px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
 
-  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 8px;" class="anchored" data-anchor-id="pregunta-1">Cajas de Asignación Multielemento</h3>
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="pregunta-1">Asignación con Drag &amp; Drop</h3>
   <p style="text-align: center; color: #64748b; font-size: 14px; margin-bottom: 20px;">
-    Inserta letras (<b>x, y, z, w</b>) dentro de las cajas (<b>a, b, c</b>). Puedes agregar varias por caja o borrarlas para reiniciar.
+    <b>Arrastra</b> las letras desde la paleta y <b>suéltalas</b> dentro de la caja deseada.
   </p>
+
+  <!-- Paleta de Letras Arrastrables -->
+  <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 10px; padding: 15px; text-align: center; margin-bottom: 20px;">
+    <span style="font-size: 13px; font-weight: bold; color: #475569; display: block; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">
+      ✋ Paleta de Letras (Arrastra con el ratón)
+    </span>
+    
+    <div style="display: flex; justify-content: center; gap: 12px;">
+      <div draggable="true" ondragstart="drag(event, 'x')" style="width: 42px; height: 42px; line-height: 42px; background: #0284c7; color: white; border-radius: 8px; font-weight: bold; font-size: 20px; cursor: grab; user-select: none; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">x</div>
+      <div draggable="true" ondragstart="drag(event, 'y')" style="width: 42px; height: 42px; line-height: 42px; background: #0284c7; color: white; border-radius: 8px; font-weight: bold; font-size: 20px; cursor: grab; user-select: none; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">y</div>
+      <div draggable="true" ondragstart="drag(event, 'z')" style="width: 42px; height: 42px; line-height: 42px; background: #0284c7; color: white; border-radius: 8px; font-weight: bold; font-size: 20px; cursor: grab; user-select: none; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">z</div>
+      <div draggable="true" ondragstart="drag(event, 'w')" style="width: 42px; height: 42px; line-height: 42px; background: #0284c7; color: white; border-radius: 8px; font-weight: bold; font-size: 20px; cursor: grab; user-select: none; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">w</div>
+    </div>
+  </div>
 
   <!-- Botón de vaciado global -->
   <div style="text-align: center; margin-bottom: 20px;">
-    <button onclick="vaciarTodo()" style="padding: 6px 14px; background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 6px; color: #475569; font-weight: bold; cursor: pointer;">
+    <button onclick="vaciarTodo()" style="padding: 6px 14px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; color: #475569; font-weight: bold; cursor: pointer; font-size: 13px;">
       🗑️ Vaciar todas las cajas
     </button>
   </div>
 
-  <!-- Grilla de las 3 Cajas -->
+  <!-- Grilla de las 3 Cajas como Zonas de Soltado (Drop Targets) -->
   <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 25px;">
     
     <!-- Caja a -->
-    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
-      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 8px;">CAJA a</div>
+    <div ondragover="allowDrop(event)" ondragenter="dragHighlight(this)" ondragleave="dragUnhighlight(this)" ondrop="drop(event, 'a', this)" style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; transition: 0.2s;">
+      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 8px; pointer-events: none;">CAJA a</div>
       
-      <!-- Contenedor visual de las letras agregadas -->
-      <div id="box-a" style="min-height: 60px; padding: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; margin-bottom: 10px;">
-        <span style="color: #94a3b8; font-size: 13px; font-style: italic;">(Vacía)</span>
-      </div>
-
-      <!-- Botones para agregar letras -->
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-bottom: 8px;">
-        <button onclick="agregar('a', 'x')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ x</button>
-        <button onclick="agregar('a', 'y')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ y</button>
-        <button onclick="agregar('a', 'z')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ z</button>
-        <button onclick="agregar('a', 'w')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ w</button>
+      <div id="box-a" style="min-height: 70px; padding: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; margin-bottom: 10px; pointer-events: none;">
+        <span style="color: #94a3b8; font-size: 13px; font-style: italic;">Soltar aquí</span>
       </div>
 
       <button onclick="vaciarCaja('a')" style="padding: 4px; background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; border-radius: 4px; font-size: 12px; font-weight: bold; cursor: pointer;">Borrar a</button>
     </div>
 
     <!-- Caja b -->
-    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
-      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 8px;">CAJA b</div>
+    <div ondragover="allowDrop(event)" ondragenter="dragHighlight(this)" ondragleave="dragUnhighlight(this)" ondrop="drop(event, 'b', this)" style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; transition: 0.2s;">
+      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 8px; pointer-events: none;">CAJA b</div>
       
-      <div id="box-b" style="min-height: 60px; padding: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; margin-bottom: 10px;">
-        <span style="color: #94a3b8; font-size: 13px; font-style: italic;">(Vacía)</span>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-bottom: 8px;">
-        <button onclick="agregar('b', 'x')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ x</button>
-        <button onclick="agregar('b', 'y')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ y</button>
-        <button onclick="agregar('b', 'z')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ z</button>
-        <button onclick="agregar('b', 'w')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ w</button>
+      <div id="box-b" style="min-height: 70px; padding: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; margin-bottom: 10px; pointer-events: none;">
+        <span style="color: #94a3b8; font-size: 13px; font-style: italic;">Soltar aquí</span>
       </div>
 
       <button onclick="vaciarCaja('b')" style="padding: 4px; background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; border-radius: 4px; font-size: 12px; font-weight: bold; cursor: pointer;">Borrar b</button>
     </div>
 
     <!-- Caja c -->
-    <div style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
-      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 8px;">CAJA c</div>
+    <div ondragover="allowDrop(event)" ondragenter="dragHighlight(this)" ondragleave="dragUnhighlight(this)" ondrop="drop(event, 'c', this)" style="border: 2px dashed #3b82f6; border-radius: 10px; background: #eff6ff; padding: 12px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; transition: 0.2s;">
+      <div style="font-weight: 800; font-size: 18px; color: #1d4ed8; margin-bottom: 8px; pointer-events: none;">CAJA c</div>
       
-      <div id="box-c" style="min-height: 60px; padding: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; margin-bottom: 10px;">
-        <span style="color: #94a3b8; font-size: 13px; font-style: italic;">(Vacía)</span>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-bottom: 8px;">
-        <button onclick="agregar('c', 'x')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ x</button>
-        <button onclick="agregar('c', 'y')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ y</button>
-        <button onclick="agregar('c', 'z')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ z</button>
-        <button onclick="agregar('c', 'w')" style="padding: 4px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">+ w</button>
+      <div id="box-c" style="min-height: 70px; padding: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; margin-bottom: 10px; pointer-events: none;">
+        <span style="color: #94a3b8; font-size: 13px; font-style: italic;">Soltar aquí</span>
       </div>
 
       <button onclick="vaciarCaja('c')" style="padding: 4px; background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; border-radius: 4px; font-size: 12px; font-weight: bold; cursor: pointer;">Borrar c</button>
@@ -547,7 +538,7 @@ dibujarSVG();
 
   <!-- Estado / Notación Matemática -->
   <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; text-align: center;">
-    <div style="font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 6px;">Representación en Notación de Conjuntos</div>
+    <div style="font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 6px;">Representación Matemática del Contenido</div>
     <div id="resumen-conjuntos" style="font-family: 'Courier New', monospace; font-size: 16px; font-weight: bold; color: #0f172a;">
       a ↦ ∅, &nbsp; b ↦ ∅, &nbsp; c ↦ ∅
     </div>
@@ -556,15 +547,40 @@ dibujarSVG();
 </div>
 
 <script>
-// Estado de contenidos
-const estadoCajas = {
-  a: [],
-  b: [],
-  c: []
-};
+const estadoCajas = { a: [], b: [], c: [] };
 
-function agregar(caja, letra) {
-  estadoCajas[caja].push(letra);
+// Eventos Drag and Drop
+function drag(ev, letra) {
+  ev.dataTransfer.setData("text/plain", letra);
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function dragHighlight(elem) {
+  elem.style.background = "#dbeafe";
+  elem.style.borderColor = "#2563eb";
+}
+
+function dragUnhighlight(elem) {
+  elem.style.background = "#eff6ff";
+  elem.style.borderColor = "#3b82f6";
+}
+
+function drop(ev, caja, elem) {
+  ev.preventDefault();
+  dragUnhighlight(elem);
+  const letra = ev.dataTransfer.getData("text/plain");
+  if (letra) {
+    estadoCajas[caja].push(letra);
+    render();
+  }
+}
+
+// Control de borrado
+function eliminarElemento(caja, index) {
+  estadoCajas[caja].splice(index, 1);
   render();
 }
 
@@ -580,11 +596,7 @@ function vaciarTodo() {
   render();
 }
 
-function eliminarElemento(caja, index) {
-  estadoCajas[caja].splice(index, 1);
-  render();
-}
-
+// Actualización visual
 function render() {
   const cajas = ['a', 'b', 'c'];
   
@@ -595,14 +607,14 @@ function render() {
     const items = estadoCajas[caja];
     
     if (items.length === 0) {
-      container.innerHTML = `<span style="color: #94a3b8; font-size: 13px; font-style: italic;">(Vacía)</span>`;
+      container.innerHTML = `<span style="color: #94a3b8; font-size: 13px; font-style: italic;">Soltar aquí</span>`;
     } else {
       let html = '';
       items.forEach((item, idx) => {
         html += `
           <span onclick="eliminarElemento('${caja}', ${idx})" 
                 title="Haz clic para borrar este elemento"
-                style="background: #0284c7; color: white; padding: 2px 8px; border-radius: 12px; font-weight: bold; font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+                style="background: #0284c7; color: white; padding: 3px 8px; border-radius: 12px; font-weight: bold; font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; pointer-events: auto;">
             ${item} <small style="font-size: 10px; opacity: 0.8;">✕</small>
           </span>`;
       });
@@ -610,7 +622,7 @@ function render() {
     }
   });
 
-  // Notación matemática dinámica
+  // Notación matemática de conjuntos
   const resumenElem = document.getElementById('resumen-conjuntos');
   if (resumenElem) {
     const texto = cajas.map(c => {
