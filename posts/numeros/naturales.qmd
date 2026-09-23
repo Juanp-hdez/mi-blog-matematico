@@ -285,7 +285,7 @@ Esta pregunta es equivalente al siguiente problema:
 ```{=html}
 <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 650px; margin: 20px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
 
-  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Intente introducir las letras x,y,z,w en las cajas sin colocar mas de una letra en cada caja</h3>
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Intente introducir las letras x,y,z,w en las cajas, sin colocar mas de una letra en cada caja</h3>
   <p style="text-align: center; color: #64748b; font-size: 14px; margin-bottom: 20px;">
     <b>Arrastra</b> cada letra a una caja. Cada letra solo puede usarse <b>una sola vez</b> (se deshabilita al ser asignada, pero reaparece si la borras).
   </p>
@@ -496,4 +496,66 @@ render();
 Principio del palomar
 :::
 
-El problema anterior es un ejemplo del **Principio del Palomar**, que establece que si hay más palomas que palomares y se quieren guardar todas las palomas en los palomares, obligatoriamente en algún palomar se tendrá que ubicar por lo menos dos palomas.
+El problema anterior es un ejemplo del **Principio del Palomar**, que establece que si hay más palomas que palomares y se quieren guardar todas las palomas en los palomares, obligatoriamente en algún palomar se tendrán que ubicar por lo menos dos palomas.
+
+#### Ejemplos de funciones sobreyectivas
+
+1) Si $A$ es un conjunto, definimos la función identidad $\textrm{id}_{A}: A \rightarrow A$ que a cada elemento $a \in A$ le asigna el mismo elemento $a \in A$, es decir, $\textrm{id}_{A}(a)=a$. Esta función como subconjunto de $A \times A$ corresponde a $F=\{(a,a)~ :~ a \in A\}$.
+Esta función es claramente sobreyectiva, ya que todo elemento del conjunto de llegada $a \in A$ está relacionado con el mismo elemento $a \in A$ del conjunto de salida.
+
+2) Si $A$ y $B$ son conjuntos, las funciones proyecciones $\pi_{1}: A \times B \rightarrow A$ y $\pi_{2}: A \times B \rightarrow B$ definidas como $\pi_{1}(a,b)=a$ y $\pi_{2}(a,b)=b$ para todo $(a,b) \in A \times B$, son sobreyectivas.
+
+:::
+```{=html}
+<div style="text-align: center; margin: 20px 0;">
+  <svg width="480" height="380" viewBox="0 0 480 380" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px;">
+    <defs>
+      <marker id="flecha-proj" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#e53e3e"/>
+      </marker>
+    </defs>
+
+    <!-- Ejes principales -->
+    <line x1="60" y1="320" x2="440" y2="320" stroke="#cbd5e0" stroke-width="2"/>
+    <line x1="60" y1="320" x2="60" y2="40" stroke="#cbd5e0" stroke-width="2"/>
+
+    <!-- Segmento del Conjunto A y su etiqueta -->
+    <line x1="130" y1="320" x2="370" y2="320" stroke="#3182ce" stroke-width="5"/>
+    <text x="250" y="365" font-weight="bold" font-family="serif" font-size="20" fill="#3182ce" text-anchor="middle">A</text>
+
+    <!-- Segmento del Conjunto B y su etiqueta -->
+    <line x1="60" y1="260" x2="60" y2="100" stroke="#dd6b20" stroke-width="5"/>
+    <text x="25" y="185" font-weight="bold" font-family="serif" font-size="20" fill="#dd6b20" text-anchor="middle">B</text>
+
+    <!-- Rectángulo A x B -->
+    <rect x="130" y="100" width="240" height="160" fill="#ebf8ff" fill-opacity="0.6" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 4"/>
+    <text x="340" y="125" font-family="serif" font-style="italic" font-size="16" fill="#2b6cb0">A × B</text>
+
+    <!-- LÍNEA VERTICAL EN ROJO PASANDO POR (a,b) -->
+    <line x1="240" y1="40" x2="240" y2="320" stroke="#e53e3e" stroke-width="2" stroke-dasharray="5 3"/>
+
+    <!-- LÍNEA HORIZONTAL EN AZUL PASANDO POR (a,b) -->
+    <line x1="60" y1="180" x2="440" y2="180" stroke="#2b6cb0" stroke-width="2" stroke-dasharray="5 3"/>
+
+    <!-- Indicadores de Proyección -->
+    <path d="M 240 220 L 240 235" stroke="#e53e3e" stroke-width="2" marker-end="url(#flecha-proj)"/>
+    <text x="250" y="235" font-family="serif" font-size="16" fill="#e53e3e" font-weight="bold">π₁</text>
+
+    <path d="M 160 180 L 145 180" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="150" y="170" font-family="serif" font-size="16" fill="#2b6cb0" font-weight="bold">π₂</text>
+
+    <!-- Punto (a,b) -->
+    <circle cx="240" cy="180" r="6" fill="#2d3748"/>
+    <text x="250" y="170" font-family="serif" font-size="16" font-weight="bold" fill="#2d3748">(a, b)</text>
+
+    <!-- Punto proyectado a en el eje X -->
+    <circle cx="240" cy="320" r="5" fill="#e53e3e"/>
+    <text x="240" y="340" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#e53e3e" text-anchor="middle">a</text>
+
+    <!-- Punto proyectado b en el eje Y -->
+    <circle cx="60" cy="180" r="5" fill="#2b6cb0"/>
+    <text x="48" y="185" font-family="serif" font-size="16" font-style="italic" font-weight="bold" fill="#2b6cb0" text-anchor="end">b</text>
+  </svg>
+</div>
+```
+:::
