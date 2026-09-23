@@ -762,22 +762,27 @@ render();
 <h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-inyectiva">Ejemplo interactivo de función inyectiva</h4>
 <div id="construyendo-funcion-inyectiva">
 <div id="app-inyectiva-v1" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-<p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
-Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para trazar la flecha.
-</p>
-<div style="text-align: center; margin-bottom: 15px;">
-<pre><code>&lt;button id="btn-reiniciar-iny1" style="padding: 6px 16px; cursor: pointer; border: 1px solid #cbd5e0; background: #edf2f7; border-radius: 6px; font-weight: bold; color: #4a5568;"&gt;↻ Borrar flechas&lt;/button&gt;</code></pre>
+  <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
+    Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para trazar la flecha.
+  </p>
+  
+  <div style="text-align: center; margin-bottom: 15px;">
+    <button id="btn-reiniciar-iny1" style="padding: 6px 16px; cursor: pointer; border: 1px solid #cbd5e0; background: #edf2f7; border-radius: 6px; font-weight: bold; color: #4a5568;">↻ Borrar flechas</button>
+  </div>
+
+  <div style="width: 100%; min-height: 340px; position: relative;">
+    <svg id="lienzo-inyectiva-v1" width="100%" height="340" viewbox="0 0 400 340" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7; display: block; touch-action: manipulation;"></svg>
+  </div>
+
+  <div id="texto-conjunto-iny1" style="text-align: center; font-size: 16px; font-family: 'Courier New', monospace; font-weight: bold; margin-top: 15px; padding: 10px; background: #edf2f7; border-radius: 6px; color: #2d3748;">
+    f = { }
+  </div>
+
+  <div id="panel-inyectiva-v1" style="margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a;">
+    Asigna flechas desde los 3 elementos del Conjunto A.
+  </div>
 </div>
-<div style="width: 100%; min-height: 340px; position: relative;">
-<pre><code>&lt;svg id="lienzo-inyectiva-v1" width="100%" height="340" viewBox="0 0 400 340" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7; display: block; touch-action: manipulation;"&gt;&lt;/svg&gt;</code></pre>
-</div>
-<div id="texto-conjunto-iny1" style="text-align: center; font-size: 16px; font-family: 'Courier New', monospace; font-weight: bold; margin-top: 15px; padding: 10px; background: #edf2f7; border-radius: 6px; color: #2d3748;">
-<pre><code>f = { }</code></pre>
-</div>
-<div id="panel-inyectiva-v1" style="margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a;">
-<pre><code>Asigna flechas desde los 3 elementos del Conjunto A.</code></pre>
-</div>
-</div>
+
 <script>
 (function() {
   function iniciarModulo() {
@@ -921,7 +926,7 @@ Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</
   }
 })();
 </script>
-<p>```` Construyendo una función inyectiva</p>
+<p>Construyendo una función inyectiva</p>
 </div>
 
 
