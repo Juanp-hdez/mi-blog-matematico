@@ -285,33 +285,33 @@ Esta pregunta es equivalente al siguiente problema:
 ```{=html}
 <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 650px; margin: 20px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
 
-  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Intente llenar las cajas con las letras x,y,z,w sin colocar más de una letra en cada caja</h3>
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Asignación con Elementos de Uso Único</h3>
   <p style="text-align: center; color: #64748b; font-size: 14px; margin-bottom: 20px;">
-    <b>Arrastra</b> las letras desde la paleta y <b>suéltalas</b> dentro de la caja deseada.
+    <b>Arrastra</b> cada letra a una caja. Cada letra solo puede usarse <b>una sola vez</b> (se deshabilita al ser asignada, pero reaparece si la borras).
   </p>
 
-  <!-- Paleta de Letras Arrastrables -->
+  <!-- Paleta de Letras -->
   <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 10px; padding: 15px; text-align: center; margin-bottom: 20px;">
     <span style="font-size: 13px; font-weight: bold; color: #475569; display: block; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">
-      ✋ Paleta de Letras (Arrastra con el ratón)
+      Paleta de Letras Disponibles
     </span>
     
-    <div style="display: flex; justify-content: center; gap: 12px;">
-      <div draggable="true" ondragstart="drag(event, 'x')" style="width: 42px; height: 42px; line-height: 42px; background: #0284c7; color: white; border-radius: 8px; font-weight: bold; font-size: 20px; cursor: grab; user-select: none; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">x</div>
-      <div draggable="true" ondragstart="drag(event, 'y')" style="width: 42px; height: 42px; line-height: 42px; background: #0284c7; color: white; border-radius: 8px; font-weight: bold; font-size: 20px; cursor: grab; user-select: none; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">y</div>
-      <div draggable="true" ondragstart="drag(event, 'z')" style="width: 42px; height: 42px; line-height: 42px; background: #0284c7; color: white; border-radius: 8px; font-weight: bold; font-size: 20px; cursor: grab; user-select: none; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">z</div>
-      <div draggable="true" ondragstart="drag(event, 'w')" style="width: 42px; height: 42px; line-height: 42px; background: #0284c7; color: white; border-radius: 8px; font-weight: bold; font-size: 20px; cursor: grab; user-select: none; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">w</div>
+    <div style="display: flex; justify-content: center; gap: 15px;">
+      <div id="paleta-x" draggable="true" ondragstart="drag(event, 'x')" style="width: 44px; height: 44px; line-height: 44px; background: #0284c7; color: white; border-radius: 8px; font-weight: bold; font-size: 20px; cursor: grab; user-select: none; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">x</div>
+      <div id="paleta-y" draggable="true" ondragstart="drag(event, 'y')" style="width: 44px; height: 44px; line-height: 44px; background: #0284c7; color: white; border-radius: 8px; font-weight: bold; font-size: 20px; cursor: grab; user-select: none; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">y</div>
+      <div id="paleta-z" draggable="true" ondragstart="drag(event, 'z')" style="width: 44px; height: 44px; line-height: 44px; background: #0284c7; color: white; border-radius: 8px; font-weight: bold; font-size: 20px; cursor: grab; user-select: none; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">z</div>
+      <div id="paleta-w" draggable="true" ondragstart="drag(event, 'w')" style="width: 44px; height: 44px; line-height: 44px; background: #0284c7; color: white; border-radius: 8px; font-weight: bold; font-size: 20px; cursor: grab; user-select: none; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">w</div>
     </div>
   </div>
 
   <!-- Botón de vaciado global -->
   <div style="text-align: center; margin-bottom: 20px;">
     <button onclick="vaciarTodo()" style="padding: 6px 14px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; color: #475569; font-weight: bold; cursor: pointer; font-size: 13px;">
-      🗑️ Vaciar todas las cajas
+      ↻ Restablecer todas las letras
     </button>
   </div>
 
-  <!-- Grilla de las 3 Cajas como Zonas de Soltado (Drop Targets) -->
+  <!-- Cajas Receptoras -->
   <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 25px;">
     
     <!-- Caja a -->
@@ -354,7 +354,7 @@ Esta pregunta es equivalente al siguiente problema:
 
   <!-- Estado / Notación Matemática -->
   <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; text-align: center;">
-    <div style="font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 6px;">Representación Matemática del Contenido</div>
+    <div style="font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 6px;">Representación del Contenido</div>
     <div id="resumen-conjuntos" style="font-family: 'Courier New', monospace; font-size: 16px; font-weight: bold; color: #0f172a;">
       a ↦ ∅, &nbsp; b ↦ ∅, &nbsp; c ↦ ∅
     </div>
@@ -364,9 +364,22 @@ Esta pregunta es equivalente al siguiente problema:
 
 <script>
 const estadoCajas = { a: [], b: [], c: [] };
+const todasLasLetras = ['x', 'y', 'z', 'w'];
 
-// Eventos Drag and Drop
+// Determina qué letras ya han sido usadas en alguna caja
+function obtenerUsadas() {
+  const usadas = new Set();
+  Object.values(estadoCajas).forEach(lista => lista.forEach(item => usadas.add(item)));
+  return usadas;
+}
+
+// Eventos de arrastre
 function drag(ev, letra) {
+  const usadas = obtenerUsadas();
+  if (usadas.has(letra)) {
+    ev.preventDefault();
+    return;
+  }
   ev.dataTransfer.setData("text/plain", letra);
 }
 
@@ -388,13 +401,16 @@ function drop(ev, caja, elem) {
   ev.preventDefault();
   dragUnhighlight(elem);
   const letra = ev.dataTransfer.getData("text/plain");
-  if (letra) {
+  const usadas = obtenerUsadas();
+
+  // Permite insertar la letra solo si existe y aún no se ha usado
+  if (letra && !usadas.has(letra)) {
     estadoCajas[caja].push(letra);
     render();
   }
 }
 
-// Control de borrado
+// Eliminación y vaciado
 function eliminarElemento(caja, index) {
   estadoCajas[caja].splice(index, 1);
   render();
@@ -412,11 +428,34 @@ function vaciarTodo() {
   render();
 }
 
-// Actualización visual
+// Renderizado de interfaz
 function render() {
-  const cajas = ['a', 'b', 'c'];
-  
-  cajas.forEach(caja => {
+  const usadas = obtenerUsadas();
+
+  // 1. Actualiza el estado visual de la paleta
+  todasLasLetras.forEach(letra => {
+    const elemPaleta = document.getElementById(`paleta-${letra}`);
+    if (elemPaleta) {
+      if (usadas.has(letra)) {
+        elemPaleta.setAttribute("draggable", "false");
+        elemPaleta.style.opacity = "0.25";
+        elemPaleta.style.cursor = "not-allowed";
+        elemPaleta.style.filter = "grayscale(100%)";
+        elemPaleta.style.boxShadow = "none";
+        elemPaleta.title = "Esta letra ya fue asignada";
+      } else {
+        elemPaleta.setAttribute("draggable", "true");
+        elemPaleta.style.opacity = "1";
+        elemPaleta.style.cursor = "grab";
+        elemPaleta.style.filter = "none";
+        elemPaleta.style.boxShadow = "0 2px 4px rgba(0,0,0,0.15)";
+        elemPaleta.title = "Arrastra esta letra a una caja";
+      }
+    }
+  });
+
+  // 2. Actualiza el contenido visual de las cajas
+  ['a', 'b', 'c'].forEach(caja => {
     const container = document.getElementById(`box-${caja}`);
     if (!container) return;
     
@@ -429,7 +468,7 @@ function render() {
       items.forEach((item, idx) => {
         html += `
           <span onclick="eliminarElemento('${caja}', ${idx})" 
-                title="Haz clic para borrar este elemento"
+                title="Haz clic para quitar y devolver a la paleta"
                 style="background: #0284c7; color: white; padding: 3px 8px; border-radius: 12px; font-weight: bold; font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; pointer-events: auto;">
             ${item} <small style="font-size: 10px; opacity: 0.8;">✕</small>
           </span>`;
@@ -438,10 +477,10 @@ function render() {
     }
   });
 
-  // Notación matemática de conjuntos
+  // 3. Notación matemática en tiempo real
   const resumenElem = document.getElementById('resumen-conjuntos');
   if (resumenElem) {
-    const texto = cajas.map(c => {
+    const texto = ['a', 'b', 'c'].map(c => {
       const elems = estadoCajas[c];
       const strContent = elems.length > 0 ? `{ ${elems.join(', ')} }` : '∅';
       return `${c} ↦ ${strContent}`;
