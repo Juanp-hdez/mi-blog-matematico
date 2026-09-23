@@ -588,166 +588,165 @@ Del gráfico [Sobreyectividad de las funciones proyecciones](#sobreyectividad-pr
 
 
 ```{=html}
-<div style="font-family: sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+<div id="app-sobreyectiva" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
   <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
     Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para trazar la flecha.
   </p>
   
   <div style="text-align: center; margin-bottom: 15px;">
-    <button onclick="window.reiniciar()" style="padding: 6px 16px; cursor: pointer; border: 1px solid #cbd5e0; background: #edf2f7; border-radius: 6px; font-weight: bold; color: #4a5568;">↻ Borrar flechas</button>
+    <button id="btn-reiniciar-sob" style="padding: 6px 16px; cursor: pointer; border: 1px solid #cbd5e0; background: #edf2f7; border-radius: 6px; font-weight: bold; color: #4a5568;">↻ Borrar flechas</button>
   </div>
 
-  <!-- Contenedor SVG con dimensiones estrictas para prevenir colapsos en preview -->
   <div style="width: 100%; min-height: 340px; position: relative;">
-    <svg id="lienzo-funcion" width="100%" height="340" viewBox="0 0 400 340" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7; display: block;"></svg>
+    <svg id="lienzo-sobreyectiva-v2" width="100%" height="340" viewBox="0 0 400 340" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7; display: block; touch-action: manipulation;"></svg>
   </div>
 
-  <!-- Muestra de la función en pares ordenados -->
-  <div id="texto-conjunto" style="text-align: center; font-size: 16px; font-family: 'Courier New', monospace; font-weight: bold; margin-top: 15px; padding: 10px; background: #edf2f7; border-radius: 6px; color: #2d3748;">
+  <div id="texto-conjunto-v2" style="text-align: center; font-size: 16px; font-family: 'Courier New', monospace; font-weight: bold; margin-top: 15px; padding: 10px; background: #edf2f7; border-radius: 6px; color: #2d3748;">
     f = { }
   </div>
 
-  <!-- Panel de Diagnóstico de Sobreyectividad -->
-  <div id="panel-sobreyectiva" style="margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a;">
+  <div id="panel-sobreyectiva-v2" style="margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a;">
     Asigna flechas desde los 4 elementos del Conjunto A.
   </div>
 </div>
 
 <script>
 (function() {
-  const elementosA = ['a', 'b', 'c', 'd'];
-  const elementosB = ['x', 'y', 'z', 'w'];
-  const yA = { a: 70, b: 135, c: 200, d: 265 };
-  const yB = { x: 70, y: 135, z: 200, w: 265 };
+  function iniciarModulo() {
+    const root = document.getElementById('app-sobreyectiva');
+    if (!root) return;
 
-  let selA = null;
-  let selB = null;
-  let funcion = {};
+    const svg = root.querySelector('#lienzo-sobreyectiva-v2');
+    const txtConjunto = root.querySelector('#texto-conjunto-v2');
+    const panelSob = root.querySelector('#panel-sobreyectiva-v2');
+    const btnReiniciar = root.querySelector('#btn-reiniciar-sob');
 
-  function dibujarSVG() {
-    const svg = document.getElementById('lienzo-funcion');
     if (!svg) return;
 
-    let html = `
-      <defs>
-        <marker id="punta-flecha" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-          <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
-        </marker>
-      </defs>
+    const elemA = ['a', 'b', 'c', 'd'];
+    const elemB = ['x', 'y', 'z', 'w'];
+    const yA = { a: 70, b: 135, c: 200, d: 265 };
+    const yB = { x: 70, y: 135, z: 200, w: 265 };
 
-      <!-- Óvalo del Conjunto A -->
-      <ellipse cx="100" cy="167" rx="55" ry="125" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="5 4"/>
-      <text x="100" y="25" text-anchor="middle" font-weight="bold" font-size="16" fill="#2b6cb0">Conjunto A</text>
+    let selA = null;
+    let selB = null;
+    let funcion = {};
 
-      <!-- Óvalo del Conjunto B -->
-      <ellipse cx="300" cy="167" rx="55" ry="125" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="5 4"/>
-      <text x="300" y="25" text-anchor="middle" font-weight="bold" font-size="16" fill="#c05621">Conjunto B</text>
-    `;
+    function render() {
+      let html = `
+        <defs>
+          <marker id="punta-flecha-v2" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
+          </marker>
+        </defs>
 
-    // Trazar flechas asignadas
-    for (const [a, b] of Object.entries(funcion)) {
-      if (b) {
-        html += `<line x1="100" y1="${yA[a]}" x2="300" y2="${yB[b]}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#punta-flecha)"/>`;
+        <!-- Conjunto A -->
+        <ellipse cx="100" cy="167" rx="55" ry="125" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="100" y="25" text-anchor="middle" font-weight="bold" font-size="16" fill="#2b6cb0">Conjunto A</text>
+
+        <!-- Conjunto B -->
+        <ellipse cx="300" cy="167" rx="55" ry="125" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="300" y="25" text-anchor="middle" font-weight="bold" font-size="16" fill="#c05621">Conjunto B</text>
+      `;
+
+      // Flechas
+      for (const [a, b] of Object.entries(funcion)) {
+        if (b) {
+          html += `<line x1="100" y1="${yA[a]}" x2="300" y2="${yB[b]}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#punta-flecha-v2)"/>`;
+        }
+      }
+
+      // Nodos A
+      elemA.forEach(nodo => {
+        const esSel = (selA === nodo);
+        const fill = esSel ? "#bee3f8" : "#ffffff";
+        const strokeW = esSel ? "3" : "2";
+        html += `<g data-grupo="A" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="100" cy="${yA[nodo]}" r="18" fill="${fill}" stroke="#3182ce" stroke-width="${strokeW}"/>
+          <text x="100" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      // Nodos B
+      elemB.forEach(nodo => {
+        const esSel = (selB === nodo);
+        const fill = esSel ? "#fbd38d" : "#ffffff";
+        const strokeW = esSel ? "3" : "2";
+        html += `<g data-grupo="B" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="300" cy="${yB[nodo]}" r="18" fill="${fill}" stroke="#dd6b20" stroke-width="${strokeW}"/>
+          <text x="300" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#c05621" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      svg.innerHTML = html;
+      actualizarEstado();
+    }
+
+    function actualizarEstado() {
+      const parejas = [];
+      elemA.forEach(a => {
+        if (funcion[a]) parejas.push(`(${a}, ${funcion[a]})`);
+      });
+
+      txtConjunto.innerHTML = parejas.length ? `f = { ${parejas.join(', ')} }` : 'f = { }';
+
+      const asignados = Object.keys(funcion).length;
+      if (asignados < elemA.length) {
+        panelSob.style.cssText = "margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a;";
+        panelSob.innerHTML = `⚠️ Función incompleta: asigna los ${elemA.length - asignados} elemento(s) faltantes de A.`;
+        return;
+      }
+
+      const imagenes = new Set(Object.values(funcion));
+      if (imagenes.size === elemB.length) {
+        panelSob.style.cssText = "margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #dcfce7; color: #166534; border: 1px solid #86efac;";
+        panelSob.innerHTML = "✅ ES SOBREYECTIVA: Todo elemento del Conjunto B posee al menos una preimagen (Im(f) = B).";
+      } else {
+        const noAlcanzados = elemB.filter(b => !imagenes.has(b));
+        panelSob.style.cssText = "margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5;";
+        panelSob.innerHTML = `❌ NO ES SOBREYECTIVA: Quedaron sin recibir flecha: { ${noAlcanzados.join(', ')} }.`;
       }
     }
 
-    // Círculos del Conjunto A
-    elementosA.forEach(nodo => {
-      const seleccionado = (selA === nodo);
-      const relleno = seleccionado ? "#bee3f8" : "#ffffff";
-      const grosor = seleccionado ? "3" : "2";
-      html += `<circle cx="100" cy="${yA[nodo]}" r="18" fill="${relleno}" stroke="#3182ce" stroke-width="${grosor}" style="cursor: pointer; transition: 0.2s;" onclick="window.clicEnA('${nodo}')"/>`;
-      html += `<text x="100" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0" style="pointer-events: none;">${nodo}</text>`;
-    });
+    // Delegación limpia de eventos (sin dependencias globales)
+    svg.addEventListener('click', (e) => {
+      const targetGroup = e.target.closest('[data-grupo]');
+      if (!targetGroup) return;
 
-    // Círculos del Conjunto B
-    elementosB.forEach(nodo => {
-      const seleccionado = (selB === nodo);
-      const relleno = seleccionado ? "#fbd38d" : "#ffffff";
-      const grosor = seleccionado ? "3" : "2";
-      html += `<circle cx="300" cy="${yB[nodo]}" r="18" fill="${relleno}" stroke="#dd6b20" stroke-width="${grosor}" style="cursor: pointer; transition: 0.2s;" onclick="window.clicEnB('${nodo}')"/>`;
-      html += `<text x="300" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#c05621" style="pointer-events: none;">${nodo}</text>`;
-    });
+      const grupo = targetGroup.getAttribute('data-grupo');
+      const nodo = targetGroup.getAttribute('data-nodo');
 
-    svg.innerHTML = html;
-    actualizarEstado();
-  }
-
-  function actualizarEstado() {
-    const contenedorTxt = document.getElementById('texto-conjunto');
-    const panelSob = document.getElementById('panel-sobreyectiva');
-    if (!contenedorTxt || !panelSob) return;
-
-    const parejas = [];
-    elementosA.forEach(a => {
-      if (funcion[a]) {
-        parejas.push(`(${a}, ${funcion[a]})`);
+      if (grupo === 'A') {
+        selA = (selA === nodo) ? null : nodo;
+      } else if (grupo === 'B') {
+        selB = (selB === nodo) ? null : nodo;
       }
+
+      if (selA && selB) {
+        funcion[selA] = selB;
+        selA = null;
+        selB = null;
+      }
+
+      render();
     });
 
-    if (parejas.length === 0) {
-      contenedorTxt.innerHTML = 'f = { }';
-    } else {
-      contenedorTxt.innerHTML = `f = { ${parejas.join(', ')} }`;
-    }
-
-    const cantidadAsignada = Object.keys(funcion).length;
-
-    if (cantidadAsignada < elementosA.length) {
-      const faltantes = elementosA.length - cantidadAsignada;
-      panelSob.style.cssText = "margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a;";
-      panelSob.innerHTML = `⚠️ Función incompleta: asigna los ${faltantes} elemento(s) faltantes de A.`;
-      return;
-    }
-
-    const imagenes = new Set(Object.values(funcion));
-    const noAlcanzados = elementosB.filter(b => !imagenes.has(b));
-
-    if (imagenes.size === elementosB.length) {
-      panelSob.style.cssText = "margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #dcfce7; color: #166534; border: 1px solid #86efac;";
-      panelSob.innerHTML = "✅ ES SOBREYECTIVA: Todo elemento del Conjunto B posee al menos una preimagen (Im(f) = B).";
-    } else {
-      panelSob.style.cssText = "margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5;";
-      panelSob.innerHTML = `❌ NO ES SOBREYECTIVA: Quedaron sin recibir flecha: { ${noAlcanzados.join(', ')} }.`;
-    }
-  }
-
-  window.clicEnA = function(nodo) {
-    selA = (selA === nodo) ? null : nodo;
-    comprobarEmparejamiento();
-    dibujarSVG();
-  };
-
-  window.clicEnB = function(nodo) {
-    selB = (selB === nodo) ? null : nodo;
-    comprobarEmparejamiento();
-    dibujarSVG();
-  };
-
-  function comprobarEmparejamiento() {
-    if (selA !== null && selB !== null) {
-      funcion[selA] = selB;
+    btnReiniciar.addEventListener('click', () => {
+      funcion = {};
       selA = null;
       selB = null;
-    }
+      render();
+    });
+
+    render();
   }
 
-  window.reiniciar = function() {
-    funcion = {};
-    selA = null;
-    selB = null;
-    dibujarSVG();
-  };
-
-  // Inicialización directa y resistente al Live Reload de Quarto Preview
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", dibujarSVG);
+  // Ejecución segura tolerante a Live Reload de Quarto
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(iniciarModulo, 10);
   } else {
-    dibujarSVG();
+    document.addEventListener('DOMContentLoaded', iniciarModulo);
   }
-  
-  // Respaldo de renderizado diferido por si la animación de Quarto reestructura el DOM
-  setTimeout(dibujarSVG, 50);
 })();
 </script>
 ```
