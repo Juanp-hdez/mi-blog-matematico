@@ -279,8 +279,9 @@ es sobreyectiva, ya que todos los elementos del conjunto $B$ están relacionados
 
 ¿Es posible construir una función sobreyectiva $f: \{a,b,c\} \rightarrow \{x,y,z,w\}$?
 
+Esta pregunta es equivalente al siguiente problema: 
 
-:::
+::: {#interactivo-principio-del-palomar}
 ```{=html}
 <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 650px; margin: 20px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
 
@@ -453,4 +454,7 @@ document.addEventListener("DOMContentLoaded", render);
 render();
 </script>
 ```
+Principio del palomar
 :::
+
+El problema anterior es un ejemplo del **Principio del Palomar**, que establece que si hay más palomas que palomares y se quieren guardar todas las palomas en los palomares, obligatoriamente en algún palomar se tendrá que ubicar por lo menos dos palomas.
