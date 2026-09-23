@@ -586,7 +586,7 @@ Del gráfico [Sobreyectividad de las funciones proyecciones](#sobreyectividad-pr
 
 #### Ejemplo interactivo de función sobreyectiva
 
-
+:::
 ```{=html}
 <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 580px; margin: 20px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.08);">
 
@@ -734,3 +734,4 @@ document.addEventListener("DOMContentLoaded", dibujar);
 dibujar();
 </script>
 ```
+:::
