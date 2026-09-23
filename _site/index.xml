@@ -281,6 +281,14 @@ dibujarSVG();
 </div>
 <p>los elementos <img src="https://latex.codecogs.com/png.latex?x,y,w%20%5Cin%20B"> no están relacionados con ningún elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A">, es decir, no existen elementos en <img src="https://latex.codecogs.com/png.latex?A"> que se relacionen con <img src="https://latex.codecogs.com/png.latex?x">, <img src="https://latex.codecogs.com/png.latex?y"> o <img src="https://latex.codecogs.com/png.latex?w">.</p>
 <p><strong>Función sobreyectiva:</strong> Una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es sobreyectiva si todos los elementos de <img src="https://latex.codecogs.com/png.latex?B"> quedan relacionados con elementos de <img src="https://latex.codecogs.com/png.latex?A">, es decir, si para cada <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> existe un <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> tal que <img src="https://latex.codecogs.com/png.latex?f(a)%20=%20b">.</p>
+<p>Por ejemplo, la función</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/funcion_sobre.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 7.</figcaption>
+</figure>
+</div>
+<p>es sobreyectiva, ya que todos los elementos del conjunto <img src="https://latex.codecogs.com/png.latex?B"> están relacionados con algún elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A">.</p>
 
 
 </section>
