@@ -1110,6 +1110,6 @@ Por ejemplo la función identidad $\textrm{id}_{A}: A \rightarrow A$ es biyectiv
   }
 })();
 </script>
-````
+```
 Construyendo una función biyectiva
 :::

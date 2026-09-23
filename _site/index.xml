@@ -928,6 +928,181 @@ render();
 </script>
 <p>Construyendo una función inyectiva</p>
 </div>
+</section>
+<section id="pregunta-3" class="level4">
+<h4 class="anchored" data-anchor-id="pregunta-3">Pregunta</h4>
+<p>¿Cuántas funciones inyectivas distintas se pueden construir en Construyendo una función inyectiva?</p>
+</section>
+<section id="funciones-biyectivas" class="level4">
+<h4 class="anchored" data-anchor-id="funciones-biyectivas">Funciones biyectivas</h4>
+<p>Una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es <strong>biyectiva</strong> si es inyectiva y sobreyectiva.</p>
+<p>Por ejemplo la función identidad <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D:%20A%20%5Crightarrow%20A"> es biyectiva, ya que es inyectiva y sobreyectiva.</p>
+</section>
+<section id="pregunta-4" class="level4">
+<h4 class="anchored" data-anchor-id="pregunta-4">Pregunta</h4>
+<p>¿Es posible construir una función biyectiva en Construyendo una función sobreyectiva o en Construyendo una función inyectiva?</p>
+</section>
+<section id="ejemplo-interactivo-de-función-biyectiva" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-biyectiva">Ejemplo interactivo de función biyectiva</h4>
+<div id="construyendo-funcion-biyectiva">
+<div id="app-biyectiva-v1" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+<p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
+Haz clic en un círculo del <b>Conjunto A</b> y luego en uno del <b>Conjunto B</b> para trazar la flecha.
+</p>
+<div style="text-align: center; margin-bottom: 15px;">
+<pre><code>&lt;button id="btn-reiniciar-biy1" style="padding: 6px 16px; cursor: pointer; border: 1px solid #cbd5e0; background: #edf2f7; border-radius: 6px; font-weight: bold; color: #4a5568;"&gt;↻ Borrar flechas&lt;/button&gt;</code></pre>
+</div>
+<div style="width: 100%; min-height: 340px; position: relative;">
+<pre><code>&lt;svg id="lienzo-biyectiva-v1" width="100%" height="340" viewBox="0 0 400 340" style="background: #f8fafc; border-radius: 6px; border: 1px solid #edf2f7; display: block; touch-action: manipulation;"&gt;&lt;/svg&gt;</code></pre>
+</div>
+<div id="texto-conjunto-biy1" style="text-align: center; font-size: 16px; font-family: 'Courier New', monospace; font-weight: bold; margin-top: 15px; padding: 10px; background: #edf2f7; border-radius: 6px; color: #2d3748;">
+<pre><code>f = { }</code></pre>
+</div>
+<div id="panel-biyectiva-v1" style="margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a;">
+<pre><code>Asigna flechas desde los 4 elementos del Conjunto A.</code></pre>
+</div>
+</div>
+<script>
+(function() {
+  function iniciarModulo() {
+    const root = document.getElementById('app-biyectiva-v1');
+    if (!root) return;
+
+    const svg = root.querySelector('#lienzo-biyectiva-v1');
+    const txtConjunto = root.querySelector('#texto-conjunto-biy1');
+    const panelBiy = root.querySelector('#panel-biyectiva-v1');
+    const btnReiniciar = root.querySelector('#btn-reiniciar-biy1');
+
+    if (!svg) return;
+
+    const elemA = ['a', 'b', 'c', 'd'];
+    const elemB = ['x', 'y', 'z', 'w'];
+    const yA = { a: 70, b: 135, c: 200, d: 265 };
+    const yB = { x: 70, y: 135, z: 200, w: 265 };
+
+    let selA = null;
+    let selB = null;
+    let funcion = {};
+
+    function render() {
+      let html = `
+        <defs>
+          <marker id="punta-flecha-biy1" viewBox="0 0 10 10" refX="28" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
+          </marker>
+        </defs>
+
+        <!-- Conjunto A (4 elementos) -->
+        <ellipse cx="100" cy="167" rx="55" ry="125" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="100" y="25" text-anchor="middle" font-weight="bold" font-size="16" fill="#2b6cb0">Conjunto A</text>
+
+        <!-- Conjunto B (4 elementos) -->
+        <ellipse cx="300" cy="167" rx="55" ry="125" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="300" y="25" text-anchor="middle" font-weight="bold" font-size="16" fill="#c05621">Conjunto B</text>
+      `;
+
+      // Trazado de flechas
+      for (const [a, b] of Object.entries(funcion)) {
+        if (b) {
+          html += `<line x1="100" y1="${yA[a]}" x2="300" y2="${yB[b]}" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#punta-flecha-biy1)"/>`;
+        }
+      }
+
+      // Nodos A
+      elemA.forEach(nodo => {
+        const esSel = (selA === nodo);
+        const fill = esSel ? "#bee3f8" : "#ffffff";
+        const strokeW = esSel ? "3" : "2";
+        html += `<g data-grupo="A" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="100" cy="${yA[nodo]}" r="18" fill="${fill}" stroke="#3182ce" stroke-width="${strokeW}"/>
+          <text x="100" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#2b6cb0" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      // Nodos B
+      elemB.forEach(nodo => {
+        const esSel = (selB === nodo);
+        const fill = esSel ? "#fbd38d" : "#ffffff";
+        const strokeW = esSel ? "3" : "2";
+        html += `<g data-grupo="B" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="300" cy="${yB[nodo]}" r="18" fill="${fill}" stroke="#dd6b20" stroke-width="${strokeW}"/>
+          <text x="300" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" fill="#c05621" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      svg.innerHTML = html;
+      actualizarEstado();
+    }
+
+    function actualizarEstado() {
+      const parejas = [];
+      elemA.forEach(a => {
+        if (funcion[a]) parejas.push(`(${a}, ${funcion[a]})`);
+      });
+
+      txtConjunto.innerHTML = parejas.length ? `f = { ${parejas.join(', ')} }` : 'f = { }';
+
+      const asignados = Object.keys(funcion).length;
+      if (asignados < elemA.length) {
+        panelBiy.style.cssText = "margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a;";
+        panelBiy.innerHTML = `⚠️ Función incompleta: asigna los ${elemA.length - asignados} elemento(s) faltantes de A.`;
+        return;
+      }
+
+      const imagenes = new Set(Object.values(funcion));
+
+      if (imagenes.size === elemB.length) {
+        panelBiy.style.cssText = "margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #dcfce7; color: #166534; border: 1px solid #86efac;";
+        panelBiy.innerHTML = "✅ ES BIYECTIVA: Es inyectiva y sobreyectiva a la vez (correspondencia uno a uno perfecta).";
+      } else {
+        const noAlcanzados = elemB.filter(b => !imagenes.has(b));
+        panelBiy.style.cssText = "margin-top: 10px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px; background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5;";
+        panelBiy.innerHTML = `❌ NO ES BIYECTIVA: Hay elementos de B repetidos o sin cubrir (faltaron: { ${noAlcanzados.join(', ')} }).`;
+      }
+    }
+
+    // Delegación de eventos
+    svg.addEventListener('click', (e) => {
+      const targetGroup = e.target.closest('[data-grupo]');
+      if (!targetGroup) return;
+
+      const grupo = targetGroup.getAttribute('data-grupo');
+      const nodo = targetGroup.getAttribute('data-nodo');
+
+      if (grupo === 'A') {
+        selA = (selA === nodo) ? null : nodo;
+      } else if (grupo === 'B') {
+        selB = (selB === nodo) ? null : nodo;
+      }
+
+      if (selA && selB) {
+        funcion[selA] = selB;
+        selA = null;
+        selB = null;
+      }
+
+      render();
+    });
+
+    btnReiniciar.addEventListener('click', () => {
+      funcion = {};
+      selA = null;
+      selB = null;
+      render();
+    });
+
+    render();
+  }
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(iniciarModulo, 10);
+  } else {
+    document.addEventListener('DOMContentLoaded', iniciarModulo);
+  }
+})();
+</script>
+<p>```` Construyendo una función biyectiva</p>
+</div>
 
 
 </section>
