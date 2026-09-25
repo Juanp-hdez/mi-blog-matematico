@@ -1270,15 +1270,15 @@ render();
 
         <!-- Óvalo A -->
         <ellipse cx="90" cy="175" rx="48" ry="95" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="5 4"/>
-        <text x="90" y="66" text-anchor="middle" font-weight="bold" font-size="15" fill="#2b6cb0">Conjunto A</text>
+        <text x="90" y="66" text-anchor="middle" font-weight="bold" font-size="15" fill="#2b6cb0">A</text>
 
         <!-- Óvalo B -->
         <ellipse cx="310" cy="175" rx="48" ry="110" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="5 4"/>
-        <text x="310" y="52" text-anchor="middle" font-weight="bold" font-size="15" fill="#c05621">Conjunto B</text>
+        <text x="310" y="52" text-anchor="middle" font-weight="bold" font-size="15" fill="#c05621">B</text>
 
         <!-- Óvalo C -->
         <ellipse cx="530" cy="175" rx="48" ry="95" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4"/>
-        <text x="530" y="66" text-anchor="middle" font-weight="bold" font-size="15" fill="#15803d">Conjunto C</text>
+        <text x="530" y="66" text-anchor="middle" font-weight="bold" font-size="15" fill="#15803d">C</text>
       `;
 
       // Flechas f: A -> B
@@ -1473,8 +1473,8 @@ render();
   
   <h4 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored">Función Inyectiva e Inversión de Flechas</h4>
   <p style="text-align: center; font-size: 14px; color: #64748b; margin-bottom: 15px;">
-    <b>Paso 1:</b> Haz clic en un elemento del <b>Conjunto A</b>. <br>
-    <b>Paso 2:</b> Haz clic en un elemento del <b>Conjunto B</b> para asignarle su imagen.
+    <b>Paso 1:</b> Haz clic en un elemento del <b>A</b>. <br>
+    <b>Paso 2:</b> Haz clic en un elemento del <b>B</b> para asignarle su imagen.
   </p>
 
   <!-- Botones de Control -->
