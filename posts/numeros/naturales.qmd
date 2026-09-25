@@ -1130,7 +1130,7 @@ En algunos casos, bajo ciertas condiciones, es posible construir una función a 
 
 Por ejemplo, en el gráfico 
 
-¡[figura 8.](compuesta-funcion.png) 
+![figura 8.](compuesta-funcion.png) 
 
 se muestran las funciones $f$ y $g$. Al hacer la composición de $g$ con $f$ obtenemos la función $g \circ f$, que para determinar a donde envía cada elemento de $A$, basta seguir el camino de las flechas, es decir, $g \circ f$ envía $a \mapsto t$, $b \mapsto v$ y $c \mapsto u$.
 
