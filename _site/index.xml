@@ -1132,9 +1132,9 @@ render();
 <h4 class="anchored">Ejemplo interactivo de composición de funciones</h4>
 <div id="app-composicion-aleatoria-v2" style="font-family: system-ui, -apple-system, sans-serif; max-width: 880px; margin: 15px auto; padding: 22px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
 
-  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="ejemplo-interactivo-de-composición-de-funciones">Composición de Funciones Aleatorias: $g \circ f$</h3>
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="ejemplo-interactivo-de-composición-de-funciones">Composición de Funciones</h3>
   <p style="text-align: center; font-size: 14px; color: #64748b; margin-bottom: 18px;">
-    Dadas las funciones aleatorias $f: A \to B$ y $g: B \to C$, determina cómo queda definida la función compuesta $(g \circ f)(x) = g(f(x))$.
+    Dadas las funciones $f$ y $g$, determine cómo queda definida la función $g$ compuesta $f$..
   </p>
 
   <!-- Botón Generador -->
@@ -1147,7 +1147,7 @@ render();
   <!-- DIAGRAMA DE LAS FUNCIONES GENERADAS f y g CON FLECHAS SUPERIORES -->
   <div style="background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 15px; margin-bottom: 25px; text-align: center;">
     <div style="font-weight: bold; color: #334155; margin-bottom: 10px; font-size: 15px;">
-      1. Funciones Dadas: $f: A \to B$ y $g: B \to C$
+      1. Funciones Dadas: $f$ y $g$
     </div>
     
     <div style="position: relative; width: 100%; min-height: 300px; overflow-x: auto;">
@@ -1168,15 +1168,12 @@ render();
   <!-- DIAGRAMA INTERACTIVO PARA LA COMPUESTA g o f -->
   <div style="background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 18px; text-align: center;">
     <div style="font-weight: bold; color: #6b21a8; margin-bottom: 6px; font-size: 16px;">
-      2. Construye la Función Compuesta $g \circ f: A \to C$
-    </div>
-    <p style="font-size: 13px; color: #64748b; margin-top: 0; margin-bottom: 12px;">
-      <b>Paso 1:</b> Clic en un elemento de <b>A</b> &nbsp;|&nbsp; <b>Paso 2:</b> Clic en su imagen final en <b>C</b>.
-    </p>
+      2. Construye la compuesta de $g$ con $f$ 
+    
 
     <!-- Indicador de acción -->
     <div id="guia-usuario-v2" style="font-size: 13px; font-weight: bold; padding: 6px 12px; border-radius: 6px; background: #f1f5f9; color: #475569; margin: 0 auto 15px auto; max-width: 450px;">
-      Selecciona un elemento del Conjunto A (a, b o c).
+      Selecciona un elemento del Conjunto A y luego uno del conjunto C para definir su imagen.
     </div>
 
     <div style="position: relative; width: 100%; min-height: 290px;">
@@ -1342,11 +1339,11 @@ render();
 
         <!-- Óvalo A -->
         <ellipse cx="100" cy="175" rx="55" ry="95" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="5 4"/>
-        <text x="100" y="66" text-anchor="middle" font-weight="bold" font-size="15" fill="#2b6cb0">Conjunto A</text>
+        <text x="100" y="66" text-anchor="middle" font-weight="bold" font-size="15" fill="#2b6cb0">A</text>
 
         <!-- Óvalo C -->
         <ellipse cx="320" cy="175" rx="55" ry="95" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4"/>
-        <text x="320" y="66" text-anchor="middle" font-weight="bold" font-size="15" fill="#15803d">Conjunto C</text>
+        <text x="320" y="66" text-anchor="middle" font-weight="bold" font-size="15" fill="#15803d">C</text>
       `;
 
       // Flechas g o f (Usuario)
@@ -1775,7 +1772,7 @@ render();
 </script>
 
 
-</section>
+</div></section>
 </section>
 </section>
 

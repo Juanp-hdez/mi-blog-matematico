@@ -1143,7 +1143,7 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}$
 
   <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Composición de Funciones</h3>
   <p style="text-align: center; font-size: 14px; color: #64748b; margin-bottom: 18px;">
-    Dadas las funciones $f$ y $g$, determine cómo queda definida la función $g$ compuesta $f$..
+    Dadas las funciones f y g, determine cómo queda definida la función compuesta g ∘ f.
   </p>
 
   <!-- Botón Generador -->
@@ -1156,7 +1156,7 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}$
   <!-- DIAGRAMA DE LAS FUNCIONES GENERADAS f y g CON FLECHAS SUPERIORES -->
   <div style="background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 15px; margin-bottom: 25px; text-align: center;">
     <div style="font-weight: bold; color: #334155; margin-bottom: 10px; font-size: 15px;">
-      1. Funciones Dadas: $f$ y $g$
+      1. Funciones Dadas: f y g
     </div>
     
     <div style="position: relative; width: 100%; min-height: 300px; overflow-x: auto;">
@@ -1177,7 +1177,7 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}$
   <!-- DIAGRAMA INTERACTIVO PARA LA COMPUESTA g o f -->
   <div style="background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 18px; text-align: center;">
     <div style="font-weight: bold; color: #6b21a8; margin-bottom: 6px; font-size: 16px;">
-      2. Construye la compuesta de $g$ con $f$ 
+      2. Construye la compuesta de g con f 
     
 
     <!-- Indicador de acción -->
@@ -1397,7 +1397,7 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}$
       } else {
         guiaUser.style.background = "#f1f5f9";
         guiaUser.style.color = "#475569";
-        guiaUser.innerHTML = `Haz clic en un elemento del Conjunto A (a, b o c) para asignar o cambiar su imagen.`;
+        guiaUser.innerHTML = `Haz clic en un elemento del Conjunto A para luego asignar su imagen.`;
       }
 
       const parejas = [];
@@ -1501,7 +1501,7 @@ Una propiedad importante de las funciones inyectivas, es que si $f: A \rightarro
 
   <!-- Indicador visual del paso actual -->
   <div id="guia-pasos" style="text-align: center; font-size: 13px; font-weight: bold; padding: 8px; border-radius: 6px; background: #f1f5f9; color: #334155; margin-bottom: 15px;">
-    Haz clic en un elemento del Conjunto A ($a, b, c$) para comenzar.
+    Haz clic en un elemento del Conjunto A para comenzar.
   </div>
 
   <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
