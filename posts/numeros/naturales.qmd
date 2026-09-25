@@ -758,6 +758,10 @@ Construyendo una función sobreyectiva
 
 **Ayuda:** Encuentre cuántas funciones que no sean sobreyectivas se pueden construir y réstelas del total de funciones posibles.
 
+**Imagen de una función:** Dada una función $f:A \rightarrow B$ definimos su imagen que denotaremos $\textrm{im}(f) \subseteq B$ como el conjunto de todos los elementos de $B$ que están relacionados con algún elemento de $A$, es decir, $\textrm{im}(f)=\{b \in B~ :~ \textrm{existe}~ a \in A~ \textrm{con}~ f(a)=b\}$.
+
+Una función $f: A \rightarrow B$ es sobreyectiva si y solo si $\textrm{im}(f)=B$.
+
 #### Ejemplo interactivo de función inyectiva
 
 :::{#construyendo-funcion-inyectiva}
@@ -1117,6 +1121,23 @@ Construyendo una función biyectiva
 #### Pregunta
 
 ¿Cuántas funciones biyectivas distintas se pueden construir en [Construyendo una función biyectiva](#construyendo-funcion-biyectiva)?
+
+#### Composición de funciones
+
+En algunos casos, bajo ciertas condiciones, es posible construir una función a partir de dos funciones dadas. Si tenemos por ejemplo una función $f: A \rightarrow B$ y $g: B \rightarrow C$, a un elemento $a \in A$ le corresponde un único elemento $f(a) \in B$ por ser $f$ una función, pero como $g$ también es función, a este elemento $f(a) \in B$ le corresponde un único elemento $g(f(a)) \in C$. Lo anterior nos permite asignarle a cada elemento $a \in A$ un único elemento $g(f(a)) \in C$. Lo anterior es la definción de la compuesta o composición de dos funciones.
+
+**Composición de funciones:** Dadas dos funciones $f:A \rightarrow B$ y $g:B \rightarrow C$, definimos la compuesta de $g$ con $f$ que denotaremos por $g \circ f: A \rightarrow C$, como $g \circ f(a)=g(f(a))$.
+
+Por ejemplo, en el gráfico 
+
+¡[figura 8.](compuesta-funcion.png) 
+
+se muestran las funciones $f$ y $g$. Al hacer la composición de $g$ con $f$ obtenemos la función $g \circ f$, que para determinar a donde envía cada elemento de $A$, basta seguir el camino de las flechas, es decir, $g \circ f$ envía $a \mapsto t$, $b \mapsto v$ y $c \mapsto u$.
+
+
+
+Una propiedad importante de las funciones inyectivas, es que si $f: A \rightarrow B$ es inyectiva, al reversar las flechas se obtiene una función $f^{-1}: \textrm{im}(f) \rightarrow A$.
+
 
 
 ```{=html}
