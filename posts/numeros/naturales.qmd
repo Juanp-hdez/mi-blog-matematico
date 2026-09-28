@@ -1483,75 +1483,75 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
 #### Ejemplo interactivo de compuesta de funciones
 
 ```{=html}
-<div id="app-composicion-cuatro-conjuntos" style="font-family: system-ui, -apple-system, sans-serif; max-width: 920px; margin: 15px auto; padding: 22px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+<div id="app-composicion-horizontal" style="font-family: system-ui, -apple-system, sans-serif; max-width: 960px; margin: 15px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); box-sizing: border-box;">
 
-  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Definición Paralela de Funciones y Mapeos Compuestos Directos</h3>
-  <p style="text-align: center; font-size: 14px; color: #64748b; margin-bottom: 18px;">
-    Define la función <b>f: A → B</b> a la izquierda y la función <b>g: B → A</b> a la derecha.<br>
-    Abajo se proyectarán los diagramas directos de <b>(g ∘ f): A → A</b> y <b>(f ∘ g): B → B</b>.
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Definición Paralela y Compuestas Lado a Lado</h3>
+  <p style="text-align: center; font-size: 14px; color: #64748b; margin-bottom: 16px;">
+    Define la función <b>f: A → B</b> (izquierda) y la función <b>g: B → A</b> (derecha).<br>
+    Abajo se generarán en paralelo los diagramas directos de <b>(g ∘ f): A → A</b> y <b>(f ∘ g): B → B</b>.
   </p>
 
   <!-- Botón de Borrado -->
-  <div style="text-align: center; margin-bottom: 18px;">
-    <button id="btn-borrar-definiciones-v4" style="padding: 8px 18px; cursor: pointer; border: 1px solid #fca5a5; background: #fee2e2; color: #dc2626; border-radius: 6px; font-weight: bold; font-size: 13px; transition: 0.2s;">
+  <div style="text-align: center; margin-bottom: 16px;">
+    <button id="btn-borrar-horiz" style="padding: 8px 18px; cursor: pointer; border: 1px solid #fca5a5; background: #fee2e2; color: #dc2626; border-radius: 6px; font-weight: bold; font-size: 13px; transition: 0.2s;">
       🗑️ Borrar definición de f y g
     </button>
   </div>
 
-  <!-- SECCIÓN 1: DEFINICIÓN PARALELA (CON B REPETIDO) -->
-  <div style="background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 15px; margin-bottom: 25px;">
+  <!-- SECCIÓN 1: DEFINICIÓN PARALELA (f: A -> B y g: B -> A) -->
+  <div style="background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 14px; margin-bottom: 20px;">
     
-    <div id="guia-cuatro" style="font-size: 13px; font-weight: bold; text-align: center; color: #334155; background: #f1f5f9; padding: 8px; border-radius: 6px; margin-bottom: 12px;">
+    <div id="guia-horiz" style="font-size: 13px; font-weight: bold; text-align: center; color: #334155; background: #f1f5f9; padding: 8px; border-radius: 6px; margin-bottom: 12px;">
       <b>Para f:</b> clic en A (izq) y B (centro-izq) &nbsp;|&nbsp; <b>Para g:</b> clic en B (centro-der) y A (der).
     </div>
 
-    <div style="position: relative; width: 100%; min-height: 270px; overflow-x: auto;">
-      <svg id="svg-def-cuatro" width="100%" height="270" viewBox="0 0 760 270" style="display: block; margin: 0 auto; touch-action: manipulation;"></svg>
+    <div style="position: relative; width: 100%; min-height: 250px; overflow-x: auto;">
+      <svg id="svg-def-horiz" width="100%" height="250" viewBox="0 0 760 250" style="display: block; margin: 0 auto; touch-action: manipulation;"></svg>
     </div>
 
     <!-- Muestra matemática de las definiciones -->
     <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
-      <div id="txt-def-f-v4" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; padding: 6px 14px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; color: #1e40af;">
+      <div id="txt-def-f-horiz" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; padding: 6px 14px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; color: #1e40af;">
         f = { }
       </div>
-      <div id="txt-def-g-v4" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; padding: 6px 14px; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 6px; color: #9a3412;">
+      <div id="txt-def-g-horiz" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; padding: 6px 14px; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 6px; color: #9a3412;">
         g = { }
       </div>
     </div>
 
   </div>
 
-  <!-- SECCIÓN 2: FUNCIONES COMPUESTAS RESULTANTES -->
-  <h4 style="text-align: center; color: #334155; margin-top: 10px; margin-bottom: 15px; border-top: 1px solid #e2e8f0; padding-top: 18px;">
-    Diagramas Directos de las Funciones Compuestas
+  <!-- SECCIÓN 2: DIAGRAMAS COMPUESTOS LADO A LADO EN FILA ÚNICA -->
+  <h4 style="text-align: center; color: #334155; margin-top: 10px; margin-bottom: 15px; border-top: 1px solid #e2e8f0; padding-top: 16px;">
+    Funciones Compuestas Resultantes
   </h4>
 
-  <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+  <div style="display: flex; flex-direction: row; gap: 12px; width: 100%; box-sizing: border-box;">
     
-    <!-- Diagrama directo (g o f): A -> A -->
-    <div style="flex: 1; min-width: 380px; max-width: 420px; background: #faf5ff; border: 1px solid #f3e8ff; border-radius: 10px; padding: 12px; text-align: center;">
-      <div style="font-weight: bold; color: #7e22ce; margin-bottom: 4px; font-size: 15px;">Compuesta (g ∘ f): A → A</div>
-      <div style="font-size: 12px; color: #6b21a8; margin-bottom: 8px;">Mapeo directo desde el Dominio A hasta el Codominio A</div>
+    <!-- LADO IZQUIERDO: Compuesta (g o f): A -> A -->
+    <div style="flex: 1; min-width: 0; background: #faf5ff; border: 1px solid #f3e8ff; border-radius: 10px; padding: 12px; text-align: center; box-sizing: border-box;">
+      <div style="font-weight: bold; color: #7e22ce; margin-bottom: 4px; font-size: 14px;">Compuesta (g ∘ f): A → A</div>
+      <div style="font-size: 11px; color: #6b21a8; margin-bottom: 8px;">Mapeo directo desde Dominio A a Codominio A</div>
       
-      <div style="position: relative; width: 100%; min-height: 240px;">
-        <svg id="svg-direct-gof-v4" width="100%" height="240" viewBox="0 0 380 240" style="display: block; margin: 0 auto;"></svg>
+      <div style="position: relative; width: 100%; min-height: 220px;">
+        <svg id="svg-gof-horiz" width="100%" height="220" viewBox="0 0 340 220" style="display: block; margin: 0 auto;"></svg>
       </div>
 
-      <div id="txt-direct-gof-v4" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; margin-top: 8px; padding: 6px; background: #ffffff; border: 1px solid #d8b4fe; border-radius: 6px; color: #581c87;">
+      <div id="txt-gof-horiz" style="font-family: 'Courier New', monospace; font-size: 12px; font-weight: bold; margin-top: 8px; padding: 6px; background: #ffffff; border: 1px solid #d8b4fe; border-radius: 6px; color: #581c87; word-break: break-word;">
         g ∘ f = { }
       </div>
     </div>
 
-    <!-- Diagrama directo (f o g): B -> B -->
-    <div style="flex: 1; min-width: 380px; max-width: 420px; background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 10px; padding: 12px; text-align: center;">
-      <div style="font-weight: bold; color: #15803d; margin-bottom: 4px; font-size: 15px;">Compuesta (f ∘ g): B → B</div>
-      <div style="font-size: 12px; color: #166534; margin-bottom: 8px;">Mapeo directo desde el Dominio B hasta el Codominio B</div>
+    <!-- LADO DERECHO: Compuesta (f o g): B -> B -->
+    <div style="flex: 1; min-width: 0; background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 10px; padding: 12px; text-align: center; box-sizing: border-box;">
+      <div style="font-weight: bold; color: #15803d; margin-bottom: 4px; font-size: 14px;">Compuesta (f ∘ g): B → B</div>
+      <div style="font-size: 11px; color: #166534; margin-bottom: 8px;">Mapeo directo desde Dominio B a Codominio B</div>
       
-      <div style="position: relative; width: 100%; min-height: 240px;">
-        <svg id="svg-direct-fog-v4" width="100%" height="240" viewBox="0 0 380 240" style="display: block; margin: 0 auto;"></svg>
+      <div style="position: relative; width: 100%; min-height: 220px;">
+        <svg id="svg-fog-horiz" width="100%" height="220" viewBox="0 0 340 220" style="display: block; margin: 0 auto;"></svg>
       </div>
 
-      <div id="txt-direct-fog-v4" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; margin-top: 8px; padding: 6px; background: #ffffff; border: 1px solid #86efac; border-radius: 6px; color: #14532d;">
+      <div id="txt-fog-horiz" style="font-family: 'Courier New', monospace; font-size: 12px; font-weight: bold; margin-top: 8px; padding: 6px; background: #ffffff; border: 1px solid #86efac; border-radius: 6px; color: #14532d; word-break: break-word;">
         f ∘ g = { }
       </div>
     </div>
@@ -1562,95 +1562,93 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
 
 <script>
 (function() {
-  function iniciarModuloCuatro() {
-    const root = document.getElementById('app-composicion-cuatro-conjuntos');
+  function iniciarModuloHorizontal() {
+    const root = document.getElementById('app-composicion-horizontal');
     if (!root) return;
 
-    const svgDef = root.querySelector('#svg-def-cuatro');
-    const svgGof = root.querySelector('#svg-direct-gof-v4');
-    const svgFog = root.querySelector('#svg-direct-fog-v4');
+    const svgDef = root.querySelector('#svg-def-horiz');
+    const svgGof = root.querySelector('#svg-gof-horiz');
+    const svgFog = root.querySelector('#svg-fog-horiz');
 
-    const txtF = root.querySelector('#txt-def-f-v4');
-    const txtG = root.querySelector('#txt-def-g-v4');
-    const txtGof = root.querySelector('#txt-direct-gof-v4');
-    const txtFog = root.querySelector('#txt-direct-fog-v4');
+    const txtF = root.querySelector('#txt-def-f-horiz');
+    const txtG = root.querySelector('#txt-def-g-horiz');
+    const txtGof = root.querySelector('#txt-gof-horiz');
+    const txtFog = root.querySelector('#txt-fog-horiz');
 
-    const guia = root.querySelector('#guia-cuatro');
-    const btnBorrar = root.querySelector('#btn-borrar-definiciones-v4');
+    const guia = root.querySelector('#guia-horiz');
+    const btnBorrar = root.querySelector('#btn-borrar-horiz');
 
     if (!svgDef || !svgGof || !svgFog) return;
 
     const elemA = ['a', 'b', 'c'];
     const elemB = ['x', 'y', 'z', 'w'];
 
-    // Coordenadas Y
-    const yA = { a: 90, b: 150, c: 210 };
-    const yB = { x: 75, y: 125, z: 175, w: 225 };
+    // Coordenadas Y para diagrama superior
+    const yA = { a: 85, b: 145, c: 205 };
+    const yB = { x: 70, y: 120, z: 170, w: 220 };
 
-    // Funciones
+    // Coordenadas Y optimizadas para diagramas compuestas de 220px
+    const yA_comp = { a: 65, b: 115, c: 165 };
+    const yB_comp = { x: 50, y: 95, z: 140, w: 185 };
+
+    // Estado inicial de las funciones
     let f = { a: 'x', b: 'y', c: 'z' };
     let g = { x: 'a', y: 'b', z: 'c', w: 'a' };
 
     let selA1 = null;
     let selB2 = null;
 
-    // --- 1. DIBUJAR LAS 4 ELIPSES LADO A LADO: A1 -> B1  |  B2 -> A2 ---
-    function renderDefCuatro() {
+    // --- 1. RENDER DIAGRAMAS DE DEFINICIÓN (A -> B  y  B -> A) ---
+    function renderDefiniciones() {
       let html = `
         <defs>
-          <marker id="marker-f-v4" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <marker id="m-f-h" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
           </marker>
-          <marker id="marker-g-v4" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <marker id="m-g-h" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c"/>
           </marker>
-          <marker id="arrow-top-f-v4" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <marker id="arrow-top-f-h" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
           </marker>
-          <marker id="arrow-top-g-v4" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <marker id="arrow-top-g-h" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c"/>
           </marker>
         </defs>
 
-        <!-- Flechas superiores f y g -->
-        <path d="M 100,42 Q 185,12 270,42" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow-top-f-v4)"/>
-        <text x="185" y="20" text-anchor="middle" font-weight="bold" font-size="17" fill="#2563eb">f: A → B</text>
+        <path d="M 100,38 Q 185,10 270,38" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow-top-f-h)"/>
+        <text x="185" y="18" text-anchor="middle" font-weight="bold" font-size="16" fill="#2563eb">f: A → B</text>
 
-        <path d="M 490,42 Q 575,12 660,42" fill="none" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arrow-top-g-v4)"/>
-        <text x="575" y="20" text-anchor="middle" font-weight="bold" font-size="17" fill="#ea580c">g: B → A</text>
+        <path d="M 490,38 Q 575,10 660,38" fill="none" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arrow-top-g-h)"/>
+        <text x="575" y="18" text-anchor="middle" font-weight="bold" font-size="16" fill="#ea580c">g: B → A</text>
 
-        <!-- Línea divisoria central sutil -->
-        <line x1="380" y1="35" x2="380" y2="255" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <line x1="380" y1="30" x2="380" y2="240" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4"/>
 
-        <!-- ELIPSES -->
-        <!-- Conjunto A1 (Dominio f) -->
-        <ellipse cx="90" cy="150" rx="46" ry="90" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="90" y="52" text-anchor="middle" font-weight="bold" font-size="15" fill="#2b6cb0">Conjunto A</text>
+        <!-- Conjuntos A1, B1, B2, A2 -->
+        <ellipse cx="90" cy="145" rx="46" ry="85" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="90" y="48" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">Conjunto A</text>
 
-        <!-- Conjunto B1 (Codominio f) -->
-        <ellipse cx="280" cy="150" rx="46" ry="105" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="280" y="38" text-anchor="middle" font-weight="bold" font-size="15" fill="#c05621">Conjunto B</text>
+        <ellipse cx="280" cy="145" rx="46" ry="100" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="280" y="34" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">Conjunto B</text>
 
-        <!-- Conjunto B2 (Dominio g) -->
-        <ellipse cx="480" cy="150" rx="46" ry="105" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="480" y="38" text-anchor="middle" font-weight="bold" font-size="15" fill="#c05621">Conjunto B</text>
+        <ellipse cx="480" cy="145" rx="46" ry="100" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="480" y="34" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">Conjunto B</text>
 
-        <!-- Conjunto A2 (Codominio g) -->
-        <ellipse cx="670" cy="150" rx="46" ry="90" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="670" y="52" text-anchor="middle" font-weight="bold" font-size="15" fill="#2b6cb0">Conjunto A</text>
+        <ellipse cx="670" cy="145" rx="46" ry="85" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="670" y="48" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">Conjunto A</text>
       `;
 
       // Flechas f: A1 -> B1
       for (const [a, b] of Object.entries(f)) {
         if (b) {
-          html += `<line x1="90" y1="${yA[a]}" x2="280" y2="${yB[b]}" stroke="#2563eb" stroke-width="2" marker-end="url(#marker-f-v4)"/>`;
+          html += `<line x1="90" y1="${yA[a]}" x2="280" y2="${yB[b]}" stroke="#2563eb" stroke-width="2" marker-end="url(#m-f-h)"/>`;
         }
       }
 
       // Flechas g: B2 -> A2
       for (const [b, a] of Object.entries(g)) {
         if (a) {
-          html += `<line x1="480" y1="${yB[b]}" x2="670" y2="${yA[a]}" stroke="#ea580c" stroke-width="2" marker-end="url(#marker-g-v4)"/>`;
+          html += `<line x1="480" y1="${yB[b]}" x2="670" y2="${yA[a]}" stroke="#ea580c" stroke-width="2" marker-end="url(#m-g-h)"/>`;
         }
       }
 
@@ -1696,7 +1694,6 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
 
       svgDef.innerHTML = html;
 
-      // Actualizar mensajes guía
       if (selA1) {
         guia.style.background = "#dbeafe";
         guia.style.color = "#1e40af";
@@ -1718,20 +1715,20 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
       txtG.innerHTML = strG ? `g = { ${strG} }` : `g = { }`;
     }
 
-    // --- 2. DIBUJAR COMPUESTA DIRECTA (g o f): A -> A ---
+    // --- 2. RENDER COMPUESTA (g o f): A -> A ---
     function renderGofDirecta() {
       let html = `
         <defs>
-          <marker id="marker-gof-direct-v4" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <marker id="m-gof-dir-h" viewBox="0 0 10 10" refX="24" refY="5" markerWidth="5" markerHeight="5" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#7e22ce"/>
           </marker>
         </defs>
 
-        <ellipse cx="80" cy="120" rx="45" ry="85" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="80" y="24" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">Dominio A</text>
+        <ellipse cx="65" cy="115" rx="42" ry="75" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="65" y="22" text-anchor="middle" font-weight="bold" font-size="13" fill="#2b6cb0">Dominio A</text>
 
-        <ellipse cx="300" cy="120" rx="45" ry="85" fill="#faf5ff" stroke="#9333ea" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="300" y="24" text-anchor="middle" font-weight="bold" font-size="14" fill="#6b21a8">Codominio A</text>
+        <ellipse cx="275" cy="115" rx="42" ry="75" fill="#faf5ff" stroke="#9333ea" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="275" y="22" text-anchor="middle" font-weight="bold" font-size="13" fill="#6b21a8">Codominio A</text>
       `;
 
       const parejas = [];
@@ -1741,40 +1738,40 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
         if (destB) {
           const destA = g[destB];
           if (destA) {
-            html += `<line x1="80" y1="${yA[a]-30}" x2="300" y2="${yA[destA]-30}" stroke="#7e22ce" stroke-width="2.2" marker-end="url(#marker-gof-direct-v4)"/>`;
+            html += `<line x1="65" y1="${yA_comp[a]}" x2="275" y2="${yA_comp[destA]}" stroke="#7e22ce" stroke-width="2.2" marker-end="url(#m-gof-dir-h)"/>`;
             parejas.push(`(${a}, ${destA})`);
           }
         }
       });
 
       elemA.forEach(nodo => {
-        html += `<circle cx="80" cy="${yA[nodo]-30}" r="16" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
-                 <text x="80" y="${yA[nodo]-25}" text-anchor="middle" font-weight="bold" font-size="14" fill="#1e40af">${nodo}</text>`;
+        html += `<circle cx="65" cy="${yA_comp[nodo]}" r="15" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+                 <text x="65" y="${yA_comp[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="13" fill="#1e40af">${nodo}</text>`;
       });
 
       elemA.forEach(nodo => {
-        html += `<circle cx="300" cy="${yA[nodo]-30}" r="16" fill="#ffffff" stroke="#9333ea" stroke-width="2"/>
-                 <text x="300" y="${yA[nodo]-25}" text-anchor="middle" font-weight="bold" font-size="14" fill="#6b21a8">${nodo}</text>`;
+        html += `<circle cx="275" cy="${yA_comp[nodo]}" r="15" fill="#ffffff" stroke="#9333ea" stroke-width="2"/>
+                 <text x="275" y="${yA_comp[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="13" fill="#6b21a8">${nodo}</text>`;
       });
 
       svgGof.innerHTML = html;
       txtGof.innerHTML = parejas.length ? `g ∘ f = { ${parejas.join(', ')} }` : 'g ∘ f = { }';
     }
 
-    // --- 3. DIBUJAR COMPUESTA DIRECTA (f o g): B -> B ---
+    // --- 3. RENDER COMPUESTA (f o g): B -> B ---
     function renderFogDirecta() {
       let html = `
         <defs>
-          <marker id="marker-fog-direct-v4" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <marker id="m-fog-dir-h" viewBox="0 0 10 10" refX="24" refY="5" markerWidth="5" markerHeight="5" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#15803d"/>
           </marker>
         </defs>
 
-        <ellipse cx="80" cy="120" rx="45" ry="95" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="80" y="18" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">Dominio B</text>
+        <ellipse cx="65" cy="115" rx="42" ry="85" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="65" y="16" text-anchor="middle" font-weight="bold" font-size="13" fill="#c05621">Dominio B</text>
 
-        <ellipse cx="300" cy="120" rx="45" ry="95" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="300" y="18" text-anchor="middle" font-weight="bold" font-size="14" fill="#15803d">Codominio B</text>
+        <ellipse cx="275" cy="115" rx="42" ry="85" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="275" y="16" text-anchor="middle" font-weight="bold" font-size="13" fill="#15803d">Codominio B</text>
       `;
 
       const parejas = [];
@@ -1784,20 +1781,20 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
         if (destA) {
           const destB = f[destA];
           if (destB) {
-            html += `<line x1="80" y1="${yB[b]-30}" x2="300" y2="${yB[destB]-30}" stroke="#15803d" stroke-width="2.2" marker-end="url(#marker-fog-direct-v4)"/>`;
+            html += `<line x1="65" y1="${yB_comp[b]}" x2="275" y2="${yB_comp[destB]}" stroke="#15803d" stroke-width="2.2" marker-end="url(#m-fog-dir-h)"/>`;
             parejas.push(`(${b}, ${destB})`);
           }
         }
       });
 
       elemB.forEach(nodo => {
-        html += `<circle cx="80" cy="${yB[nodo]-30}" r="16" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
-                 <text x="80" y="${yB[nodo]-25}" text-anchor="middle" font-weight="bold" font-size="14" fill="#9a3412">${nodo}</text>`;
+        html += `<circle cx="65" cy="${yB_comp[nodo]}" r="15" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+                 <text x="65" y="${yB_comp[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="13" fill="#9a3412">${nodo}</text>`;
       });
 
       elemB.forEach(nodo => {
-        html += `<circle cx="300" cy="${yB[nodo]-30}" r="16" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
-                 <text x="300" y="${yB[nodo]-25}" text-anchor="middle" font-weight="bold" font-size="14" fill="#15803d">${nodo}</text>`;
+        html += `<circle cx="275" cy="${yB_comp[nodo]}" r="15" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+                 <text x="275" y="${yB_comp[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="13" fill="#15803d">${nodo}</text>`;
       });
 
       svgFog.innerHTML = html;
@@ -1805,12 +1802,12 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
     }
 
     function actualizarTodo() {
-      renderDefCuatro();
+      renderDefiniciones();
       renderGofDirecta();
       renderFogDirecta();
     }
 
-    // Eventos del lienzo SVG
+    // Eventos
     svgDef.addEventListener('click', (e) => {
       const gElem = e.target.closest('[data-target]');
       if (!gElem) return;
@@ -1835,7 +1832,6 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
       actualizarTodo();
     });
 
-    // Acción del botón de borrado
     btnBorrar.addEventListener('click', () => {
       f = {};
       g = {};
@@ -1848,9 +1844,9 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
   }
 
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    setTimeout(iniciarModuloCuatro, 50);
+    setTimeout(iniciarModuloHorizontal, 50);
   } else {
-    document.addEventListener('DOMContentLoaded', iniciarModuloCuatro);
+    document.addEventListener('DOMContentLoaded', iniciarModuloHorizontal);
   }
 })();
 </script>
