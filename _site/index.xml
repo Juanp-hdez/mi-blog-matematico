@@ -1469,45 +1469,47 @@ render();
 </div></section>
 <section id="ejemplo-interactivo-de-compuesta-de-funciones" class="level4">
 <h4 class="anchored">Ejemplo interactivo de compuesta de funciones</h4>
-<div id="app-cadena-composicion" style="font-family: system-ui, -apple-system, sans-serif; max-width: 900px; margin: 15px auto; padding: 22px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+<div id="app-composicion-cuatro-conjuntos" style="font-family: system-ui, -apple-system, sans-serif; max-width: 920px; margin: 15px auto; padding: 22px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
 
-  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="ejemplo-interactivo-de-compuesta-de-funciones">Definición Unificada y Compuestas Directas</h3>
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="ejemplo-interactivo-de-compuesta-de-funciones">Definición Paralela de Funciones y Mapeos Compuestos Directos</h3>
   <p style="text-align: center; font-size: 14px; color: #64748b; margin-bottom: 18px;">
-    <b>Para definir f:</b> Clic en <b>A (izquierda)</b> y luego clic en <b>B (centro)</b>.<br>
-    <b>Para definir g:</b> Clic en <b>B (centro)</b> y luego clic en <b>A (derecha)</b>.
+    Define la función <b>f: A → B</b> a la izquierda y la función <b>g: B → A</b> a la derecha.<br>
+    Abajo se proyectarán los diagramas directos de <b>(g ∘ f): A → A</b> y <b>(f ∘ g): B → B</b>.
   </p>
 
-  <!-- Botón de borrado general -->
+  <!-- Botón de Borrado -->
   <div style="text-align: center; margin-bottom: 18px;">
-    <button id="btn-borrar-cadena" style="padding: 8px 18px; cursor: pointer; border: 1px solid #fca5a5; background: #fee2e2; color: #dc2626; border-radius: 6px; font-weight: bold; font-size: 13px; transition: 0.2s;">
-      🗑️ Borrar definiciones de f y g
+    <button id="btn-borrar-definiciones-v4" style="padding: 8px 18px; cursor: pointer; border: 1px solid #fca5a5; background: #fee2e2; color: #dc2626; border-radius: 6px; font-weight: bold; font-size: 13px; transition: 0.2s;">
+      🗑️ Borrar definición de f y g
     </button>
   </div>
 
-  <!-- SECCIÓN 1: DIAGRAMA CONTINUO LADO A LADO A -> B -> A -->
+  <!-- SECCIÓN 1: DEFINICIÓN PARALELA (CON B REPETIDO) -->
   <div style="background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 15px; margin-bottom: 25px;">
-    <div id="guia-cadena" style="font-size: 13px; font-weight: bold; text-align: center; color: #334155; background: #f1f5f9; padding: 8px; border-radius: 6px; margin-bottom: 12px;">
-      Haz clic en un elemento de A (izquierda) o de B (centro) para comenzar a asignar.
+    
+    <div id="guia-cuatro" style="font-size: 13px; font-weight: bold; text-align: center; color: #334155; background: #f1f5f9; padding: 8px; border-radius: 6px; margin-bottom: 12px;">
+      <b>Para f:</b> clic en A (izq) y B (centro-izq) &nbsp;|&nbsp; <b>Para g:</b> clic en B (centro-der) y A (der).
     </div>
 
     <div style="position: relative; width: 100%; min-height: 270px; overflow-x: auto;">
-      <svg id="svg-cadena-def" width="100%" height="270" viewbox="0 0 620 270" style="display: block; margin: 0 auto; touch-action: manipulation;"></svg>
+      <svg id="svg-def-cuatro" width="100%" height="270" viewbox="0 0 760 270" style="display: block; margin: 0 auto; touch-action: manipulation;"></svg>
     </div>
 
-    <!-- Notación de las funciones f y g -->
-    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
-      <div id="txt-cadena-f" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; padding: 6px 12px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; color: #1e40af;">
+    <!-- Muestra matemática de las definiciones -->
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+      <div id="txt-def-f-v4" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; padding: 6px 14px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; color: #1e40af;">
         f = { }
       </div>
-      <div id="txt-cadena-g" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; padding: 6px 12px; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 6px; color: #9a3412;">
+      <div id="txt-def-g-v4" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; padding: 6px 14px; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 6px; color: #9a3412;">
         g = { }
       </div>
     </div>
+
   </div>
 
-  <!-- SECCIÓN 2: COMPUESTAS DIRECTAS (g o f) Y (f o g) -->
+  <!-- SECCIÓN 2: FUNCIONES COMPUESTAS RESULTANTES -->
   <h4 style="text-align: center; color: #334155; margin-top: 10px; margin-bottom: 15px; border-top: 1px solid #e2e8f0; padding-top: 18px;" class="anchored">
-    Funciones Compuestas Representadas de Forma Directa
+    Diagramas Directos de las Funciones Compuestas
   </h4>
 
   <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
@@ -1515,13 +1517,13 @@ render();
     <!-- Diagrama directo (g o f): A -> A -->
     <div style="flex: 1; min-width: 380px; max-width: 420px; background: #faf5ff; border: 1px solid #f3e8ff; border-radius: 10px; padding: 12px; text-align: center;">
       <div style="font-weight: bold; color: #7e22ce; margin-bottom: 4px; font-size: 15px;">Compuesta (g ∘ f): A → A</div>
-      <div style="font-size: 12px; color: #6b21a8; margin-bottom: 8px;">Mapeo directo desde A hasta A</div>
+      <div style="font-size: 12px; color: #6b21a8; margin-bottom: 8px;">Mapeo directo desde el Dominio A hasta el Codominio A</div>
       
       <div style="position: relative; width: 100%; min-height: 240px;">
-        <svg id="svg-direct-gof" width="100%" height="240" viewbox="0 0 380 240" style="display: block; margin: 0 auto;"></svg>
+        <svg id="svg-direct-gof-v4" width="100%" height="240" viewbox="0 0 380 240" style="display: block; margin: 0 auto;"></svg>
       </div>
 
-      <div id="txt-direct-gof" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; margin-top: 8px; padding: 6px; background: #ffffff; border: 1px solid #d8b4fe; border-radius: 6px; color: #581c87;">
+      <div id="txt-direct-gof-v4" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; margin-top: 8px; padding: 6px; background: #ffffff; border: 1px solid #d8b4fe; border-radius: 6px; color: #581c87;">
         g ∘ f = { }
       </div>
     </div>
@@ -1529,13 +1531,13 @@ render();
     <!-- Diagrama directo (f o g): B -> B -->
     <div style="flex: 1; min-width: 380px; max-width: 420px; background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 10px; padding: 12px; text-align: center;">
       <div style="font-weight: bold; color: #15803d; margin-bottom: 4px; font-size: 15px;">Compuesta (f ∘ g): B → B</div>
-      <div style="font-size: 12px; color: #166534; margin-bottom: 8px;">Mapeo directo desde B hasta B</div>
+      <div style="font-size: 12px; color: #166534; margin-bottom: 8px;">Mapeo directo desde el Dominio B hasta el Codominio B</div>
       
       <div style="position: relative; width: 100%; min-height: 240px;">
-        <svg id="svg-direct-fog" width="100%" height="240" viewbox="0 0 380 240" style="display: block; margin: 0 auto;"></svg>
+        <svg id="svg-direct-fog-v4" width="100%" height="240" viewbox="0 0 380 240" style="display: block; margin: 0 auto;"></svg>
       </div>
 
-      <div id="txt-direct-fog" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; margin-top: 8px; padding: 6px; background: #ffffff; border: 1px solid #86efac; border-radius: 6px; color: #14532d;">
+      <div id="txt-direct-fog-v4" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; margin-top: 8px; padding: 6px; background: #ffffff; border: 1px solid #86efac; border-radius: 6px; color: #14532d;">
         f ∘ g = { }
       </div>
     </div>
@@ -1546,23 +1548,23 @@ render();
 
 <script>
 (function() {
-  function iniciarModuloCadena() {
-    const root = document.getElementById('app-cadena-composicion');
+  function iniciarModuloCuatro() {
+    const root = document.getElementById('app-composicion-cuatro-conjuntos');
     if (!root) return;
 
-    const svgCadena = root.querySelector('#svg-cadena-def');
-    const svgGof = root.querySelector('#svg-direct-gof');
-    const svgFog = root.querySelector('#svg-direct-fog');
+    const svgDef = root.querySelector('#svg-def-cuatro');
+    const svgGof = root.querySelector('#svg-direct-gof-v4');
+    const svgFog = root.querySelector('#svg-direct-fog-v4');
 
-    const txtF = root.querySelector('#txt-cadena-f');
-    const txtG = root.querySelector('#txt-cadena-g');
-    const txtGof = root.querySelector('#txt-direct-gof');
-    const txtFog = root.querySelector('#txt-direct-fog');
+    const txtF = root.querySelector('#txt-def-f-v4');
+    const txtG = root.querySelector('#txt-def-g-v4');
+    const txtGof = root.querySelector('#txt-direct-gof-v4');
+    const txtFog = root.querySelector('#txt-direct-fog-v4');
 
-    const guia = root.querySelector('#guia-cadena');
-    const btnBorrar = root.querySelector('#btn-borrar-cadena');
+    const guia = root.querySelector('#guia-cuatro');
+    const btnBorrar = root.querySelector('#btn-borrar-definiciones-v4');
 
-    if (!svgCadena || !svgGof || !svgFog) return;
+    if (!svgDef || !svgGof || !svgFog) return;
 
     const elemA = ['a', 'b', 'c'];
     const elemB = ['x', 'y', 'z', 'w'];
@@ -1571,64 +1573,74 @@ render();
     const yA = { a: 90, b: 150, c: 210 };
     const yB = { x: 75, y: 125, z: 175, w: 225 };
 
-    // Funciones por defecto
+    // Funciones
     let f = { a: 'x', b: 'y', c: 'z' };
     let g = { x: 'a', y: 'b', z: 'c', w: 'a' };
 
     let selA1 = null;
-    let selB = null;
+    let selB2 = null;
 
-    // --- 1. DIBUJAR CADENA UNIFICADA A -> B -> A ---
-    function renderCadena() {
+    // --- 1. DIBUJAR LAS 4 ELIPSES LADO A LADO: A1 -> B1  |  B2 -> A2 ---
+    function renderDefCuatro() {
       let html = `
         <defs>
-          <marker id="marker-f-cad" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <marker id="marker-f-v4" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
           </marker>
-          <marker id="marker-g-cad" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <marker id="marker-g-v4" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c"/>
           </marker>
-          <marker id="arrow-top-f" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <marker id="arrow-top-f-v4" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
           </marker>
-          <marker id="arrow-top-g" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <marker id="arrow-top-g-v4" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c"/>
           </marker>
         </defs>
 
-        <!-- Flechas superiores de la función f y g -->
-        <path d="M 110,42 Q 200,12 290,42" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow-top-f)"/>
-        <text x="200" y="20" text-anchor="middle" font-weight="bold" font-size="17" fill="#2563eb">f</text>
+        <!-- Flechas superiores f y g -->
+        <path d="M 100,42 Q 185,12 270,42" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow-top-f-v4)"/>
+        <text x="185" y="20" text-anchor="middle" font-weight="bold" font-size="17" fill="#2563eb">f: A → B</text>
 
-        <path d="M 330,42 Q 420,12 510,42" fill="none" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arrow-top-g)"/>
-        <text x="420" y="20" text-anchor="middle" font-weight="bold" font-size="17" fill="#ea580c">g</text>
+        <path d="M 490,42 Q 575,12 660,42" fill="none" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arrow-top-g-v4)"/>
+        <text x="575" y="20" text-anchor="middle" font-weight="bold" font-size="17" fill="#ea580c">g: B → A</text>
 
-        <!-- Óvalos A (izq), B (centro), A (der) -->
-        <ellipse cx="90" cy="150" rx="48" ry="90" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
+        <!-- Línea divisoria central sutil -->
+        <line x1="380" y1="35" x2="380" y2="255" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+        <!-- ELIPSES -->
+        <!-- Conjunto A1 (Dominio f) -->
+        <ellipse cx="90" cy="150" rx="46" ry="90" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
         <text x="90" y="52" text-anchor="middle" font-weight="bold" font-size="15" fill="#2b6cb0">Conjunto A</text>
 
-        <ellipse cx="310" cy="150" rx="48" ry="105" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="310" y="38" text-anchor="middle" font-weight="bold" font-size="15" fill="#c05621">Conjunto B</text>
+        <!-- Conjunto B1 (Codominio f) -->
+        <ellipse cx="280" cy="150" rx="46" ry="105" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="280" y="38" text-anchor="middle" font-weight="bold" font-size="15" fill="#c05621">Conjunto B</text>
 
-        <ellipse cx="530" cy="150" rx="48" ry="90" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="530" y="52" text-anchor="middle" font-weight="bold" font-size="15" fill="#2b6cb0">Conjunto A</text>
+        <!-- Conjunto B2 (Dominio g) -->
+        <ellipse cx="480" cy="150" rx="46" ry="105" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="480" y="38" text-anchor="middle" font-weight="bold" font-size="15" fill="#c05621">Conjunto B</text>
+
+        <!-- Conjunto A2 (Codominio g) -->
+        <ellipse cx="670" cy="150" rx="46" ry="90" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="670" y="52" text-anchor="middle" font-weight="bold" font-size="15" fill="#2b6cb0">Conjunto A</text>
       `;
 
-      // Flechas f: A1 -> B
+      // Flechas f: A1 -> B1
       for (const [a, b] of Object.entries(f)) {
         if (b) {
-          html += `<line x1="90" y1="${yA[a]}" x2="310" y2="${yB[b]}" stroke="#2563eb" stroke-width="2" marker-end="url(#marker-f-cad)"/>`;
+          html += `<line x1="90" y1="${yA[a]}" x2="280" y2="${yB[b]}" stroke="#2563eb" stroke-width="2" marker-end="url(#marker-f-v4)"/>`;
         }
       }
 
-      // Flechas g: B -> A2
+      // Flechas g: B2 -> A2
       for (const [b, a] of Object.entries(g)) {
         if (a) {
-          html += `<line x1="310" y1="${yB[b]}" x2="530" y2="${yA[a]}" stroke="#ea580c" stroke-width="2" marker-end="url(#marker-g-cad)"/>`;
+          html += `<line x1="480" y1="${yB[b]}" x2="670" y2="${yA[a]}" stroke="#ea580c" stroke-width="2" marker-end="url(#marker-g-v4)"/>`;
         }
       }
 
-      // Nodos A (izquierda)
+      // Nodos A1
       elemA.forEach(nodo => {
         const esSel = (selA1 === nodo);
         const fill = esSel ? "#93c5fd" : (f[nodo] ? "#dbeafe" : "#ffffff");
@@ -1639,41 +1651,50 @@ render();
         </g>`;
       });
 
-      // Nodos B (centro)
+      // Nodos B1
       elemB.forEach(nodo => {
-        const esSel = (selB === nodo);
-        const fill = esSel ? "#fed7aa" : (g[nodo] ? "#ffedd5" : "#ffffff");
-        html += `<g data-target="B" data-nodo="${nodo}" style="cursor: pointer;">
-          <circle cx="310" cy="${yB[nodo]}" r="24" fill="transparent"/>
-          <circle cx="310" cy="${yB[nodo]}" r="16" fill="${fill}" stroke="#ea580c" stroke-width="${esSel ? '3.5' : '2'}"/>
-          <text x="310" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" font-size="14" fill="#9a3412" style="pointer-events: none;">${nodo}</text>
+        html += `<g data-target="B1" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="280" cy="${yB[nodo]}" r="24" fill="transparent"/>
+          <circle cx="280" cy="${yB[nodo]}" r="16" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+          <text x="280" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" font-size="14" fill="#9a3412" style="pointer-events: none;">${nodo}</text>
         </g>`;
       });
 
-      // Nodos A (derecha)
+      // Nodos B2
+      elemB.forEach(nodo => {
+        const esSel = (selB2 === nodo);
+        const fill = esSel ? "#fed7aa" : (g[nodo] ? "#ffedd5" : "#ffffff");
+        html += `<g data-target="B2" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="480" cy="${yB[nodo]}" r="24" fill="transparent"/>
+          <circle cx="480" cy="${yB[nodo]}" r="16" fill="${fill}" stroke="#ea580c" stroke-width="${esSel ? '3.5' : '2'}"/>
+          <text x="480" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" font-size="14" fill="#9a3412" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      // Nodos A2
       elemA.forEach(nodo => {
         html += `<g data-target="A2" data-nodo="${nodo}" style="cursor: pointer;">
-          <circle cx="530" cy="${yA[nodo]}" r="24" fill="transparent"/>
-          <circle cx="530" cy="${yA[nodo]}" r="16" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
-          <text x="530" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" font-size="14" fill="#1e40af" style="pointer-events: none;">${nodo}</text>
+          <circle cx="670" cy="${yA[nodo]}" r="24" fill="transparent"/>
+          <circle cx="670" cy="${yA[nodo]}" r="16" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+          <text x="670" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" font-size="14" fill="#1e40af" style="pointer-events: none;">${nodo}</text>
         </g>`;
       });
 
-      svgCadena.innerHTML = html;
+      svgDef.innerHTML = html;
 
-      // Mensaje del estado de interacción
+      // Actualizar mensajes guía
       if (selA1) {
         guia.style.background = "#dbeafe";
         guia.style.color = "#1e40af";
-        guia.innerHTML = `Asignando <b>f('${selA1}')</b>: haz clic en una letra de B (centro).`;
-      } else if (selB) {
+        guia.innerHTML = `Asignando <b>f('${selA1}')</b>: haz clic en un elemento de B (Codominio f).`;
+      } else if (selB2) {
         guia.style.background = "#ffedd5";
         guia.style.color = "#9a3412";
-        guia.innerHTML = `Asignando <b>g('${selB}')</b>: haz clic en una letra de A (derecha).`;
+        guia.innerHTML = `Asignando <b>g('${selB2}')</b>: haz clic en un elemento de A (Codominio g).`;
       } else {
         guia.style.background = "#f1f5f9";
         guia.style.color = "#334155";
-        guia.innerHTML = `Haz clic en A (izquierda) para definir <b>f</b>, o en B (centro) para definir <b>g</b>.`;
+        guia.innerHTML = `<b>Para f:</b> clic en A (izq) y B (centro-izq) &nbsp;|&nbsp; <b>Para g:</b> clic en B (centro-der) y A (der).`;
       }
 
       const strF = elemA.filter(a => f[a]).map(a => `(${a}, ${f[a]})`).join(', ');
@@ -1687,15 +1708,15 @@ render();
     function renderGofDirecta() {
       let html = `
         <defs>
-          <marker id="marker-gof-direct" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <marker id="marker-gof-direct-v4" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#7e22ce"/>
           </marker>
         </defs>
 
-        <ellipse cx="80" cy="130" rx="45" ry="85" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
+        <ellipse cx="80" cy="120" rx="45" ry="85" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
         <text x="80" y="24" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">Dominio A</text>
 
-        <ellipse cx="300" cy="130" rx="45" ry="85" fill="#faf5ff" stroke="#9333ea" stroke-width="2" stroke-dasharray="4 3"/>
+        <ellipse cx="300" cy="120" rx="45" ry="85" fill="#faf5ff" stroke="#9333ea" stroke-width="2" stroke-dasharray="4 3"/>
         <text x="300" y="24" text-anchor="middle" font-weight="bold" font-size="14" fill="#6b21a8">Codominio A</text>
       `;
 
@@ -1706,20 +1727,20 @@ render();
         if (destB) {
           const destA = g[destB];
           if (destA) {
-            html += `<line x1="80" y1="${yA[a]-20}" x2="300" y2="${yA[destA]-20}" stroke="#7e22ce" stroke-width="2.2" marker-end="url(#marker-gof-direct)"/>`;
+            html += `<line x1="80" y1="${yA[a]-30}" x2="300" y2="${yA[destA]-30}" stroke="#7e22ce" stroke-width="2.2" marker-end="url(#marker-gof-direct-v4)"/>`;
             parejas.push(`(${a}, ${destA})`);
           }
         }
       });
 
       elemA.forEach(nodo => {
-        html += `<circle cx="80" cy="${yA[nodo]-20}" r="16" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
-                 <text x="80" y="${yA[nodo]-15}" text-anchor="middle" font-weight="bold" font-size="14" fill="#1e40af">${nodo}</text>`;
+        html += `<circle cx="80" cy="${yA[nodo]-30}" r="16" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+                 <text x="80" y="${yA[nodo]-25}" text-anchor="middle" font-weight="bold" font-size="14" fill="#1e40af">${nodo}</text>`;
       });
 
       elemA.forEach(nodo => {
-        html += `<circle cx="300" cy="${yA[nodo]-20}" r="16" fill="#ffffff" stroke="#9333ea" stroke-width="2"/>
-                 <text x="300" y="${yA[nodo]-15}" text-anchor="middle" font-weight="bold" font-size="14" fill="#6b21a8">${nodo}</text>`;
+        html += `<circle cx="300" cy="${yA[nodo]-30}" r="16" fill="#ffffff" stroke="#9333ea" stroke-width="2"/>
+                 <text x="300" y="${yA[nodo]-25}" text-anchor="middle" font-weight="bold" font-size="14" fill="#6b21a8">${nodo}</text>`;
       });
 
       svgGof.innerHTML = html;
@@ -1730,16 +1751,16 @@ render();
     function renderFogDirecta() {
       let html = `
         <defs>
-          <marker id="marker-fog-direct" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <marker id="marker-fog-direct-v4" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#15803d"/>
           </marker>
         </defs>
 
-        <ellipse cx="80" cy="130" rx="45" ry="95" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="80" y="20" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">Dominio B</text>
+        <ellipse cx="80" cy="120" rx="45" ry="95" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="80" y="18" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">Dominio B</text>
 
-        <ellipse cx="300" cy="130" rx="45" ry="95" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="300" y="20" text-anchor="middle" font-weight="bold" font-size="14" fill="#15803d">Codominio B</text>
+        <ellipse cx="300" cy="120" rx="45" ry="95" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="300" y="18" text-anchor="middle" font-weight="bold" font-size="14" fill="#15803d">Codominio B</text>
       `;
 
       const parejas = [];
@@ -1749,20 +1770,20 @@ render();
         if (destA) {
           const destB = f[destA];
           if (destB) {
-            html += `<line x1="80" y1="${yB[b]-20}" x2="300" y2="${yB[destB]-20}" stroke="#15803d" stroke-width="2.2" marker-end="url(#marker-fog-direct)"/>`;
+            html += `<line x1="80" y1="${yB[b]-30}" x2="300" y2="${yB[destB]-30}" stroke="#15803d" stroke-width="2.2" marker-end="url(#marker-fog-direct-v4)"/>`;
             parejas.push(`(${b}, ${destB})`);
           }
         }
       });
 
       elemB.forEach(nodo => {
-        html += `<circle cx="80" cy="${yB[nodo]-20}" r="16" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
-                 <text x="80" y="${yB[nodo]-15}" text-anchor="middle" font-weight="bold" font-size="14" fill="#9a3412">${nodo}</text>`;
+        html += `<circle cx="80" cy="${yB[nodo]-30}" r="16" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+                 <text x="80" y="${yB[nodo]-25}" text-anchor="middle" font-weight="bold" font-size="14" fill="#9a3412">${nodo}</text>`;
       });
 
       elemB.forEach(nodo => {
-        html += `<circle cx="300" cy="${yB[nodo]-20}" r="16" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
-                 <text x="300" y="${yB[nodo]-15}" text-anchor="middle" font-weight="bold" font-size="14" fill="#15803d">${nodo}</text>`;
+        html += `<circle cx="300" cy="${yB[nodo]-30}" r="16" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+                 <text x="300" y="${yB[nodo]-25}" text-anchor="middle" font-weight="bold" font-size="14" fill="#15803d">${nodo}</text>`;
       });
 
       svgFog.innerHTML = html;
@@ -1770,13 +1791,13 @@ render();
     }
 
     function actualizarTodo() {
-      renderCadena();
+      renderDefCuatro();
       renderGofDirecta();
       renderFogDirecta();
     }
 
-    // Eventos del lienzo unificado de cadena
-    svgCadena.addEventListener('click', (e) => {
+    // Eventos del lienzo SVG
+    svgDef.addEventListener('click', (e) => {
       const gElem = e.target.closest('[data-target]');
       if (!gElem) return;
 
@@ -1785,19 +1806,16 @@ render();
 
       if (target === 'A1') {
         selA1 = (selA1 === nodo) ? null : nodo;
-        selB = null;
-      } else if (target === 'B') {
-        if (selA1) {
-          f[selA1] = nodo;
-          selA1 = null;
-        } else {
-          selB = (selB === nodo) ? null : nodo;
-        }
-      } else if (target === 'A2') {
-        if (selB) {
-          g[selB] = nodo;
-          selB = null;
-        }
+        selB2 = null;
+      } else if (target === 'B1' && selA1) {
+        f[selA1] = nodo;
+        selA1 = null;
+      } else if (target === 'B2') {
+        selB2 = (selB2 === nodo) ? null : nodo;
+        selA1 = null;
+      } else if (target === 'A2' && selB2) {
+        g[selB2] = nodo;
+        selB2 = null;
       }
 
       actualizarTodo();
@@ -1808,7 +1826,7 @@ render();
       f = {};
       g = {};
       selA1 = null;
-      selB = null;
+      selB2 = null;
       actualizarTodo();
     });
 
@@ -1816,9 +1834,9 @@ render();
   }
 
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    setTimeout(iniciarModuloCadena, 50);
+    setTimeout(iniciarModuloCuatro, 50);
   } else {
-    document.addEventListener('DOMContentLoaded', iniciarModuloCadena);
+    document.addEventListener('DOMContentLoaded', iniciarModuloCuatro);
   }
 })();
 </script>
