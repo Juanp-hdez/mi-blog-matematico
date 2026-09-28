@@ -1476,7 +1476,8 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}$
 </script>
 ```
 
-**Observación:** Al tener dos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, lo que hace que tenga sentido la definición de $g \circ f$, es que el codominio de $f$ coincide con el dominio de $g$.
+#### Observación: 
+Al tener dos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, lo que hace que tenga sentido la definición de $g \circ f$, es que el codominio de $f$ coincide con el dominio de $g$.
 Tenga en cuenta que la notación $g \circ f$ quiere decir que primero se aplica la función $f$ y luego la función $g$, es decir, se lee de derecha a izquierda.
 Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonces la nueva función $g \circ f: A \rightarrow C$. Sin embargo, para que $f \circ g$ tenga sentido es necesario que $A=C$. Por lo tanto, si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow A$, con la composición de funciones obtenemos las funciones $g \circ f: A \rightarrow A$ y $f \circ g: B \rightarrow B$.
 

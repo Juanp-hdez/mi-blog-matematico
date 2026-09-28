@@ -1694,7 +1694,7 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
     
     <!-- LADO IZQUIERDO: Compuesta (g o f): A -> A -->
     <div style="flex: 1; min-width: 0; background: #faf5ff; border: 1px solid #f3e8ff; border-radius: 10px; padding: 12px; text-align: center; box-sizing: border-box;">
-      <div style="font-weight: bold; color: #7e22ce; margin-bottom: 4px; font-size: 14px;">Compuesta g ∘ f: A → A</div>
+      <div style="font-weight: bold; color: #7e22ce; margin-bottom: 4px; font-size: 14px;">g ∘ f: A → A</div>
       <div style="font-size: 11px; color: #6b21a8; margin-bottom: 8px;"></div>
       
       <div style="position: relative; width: 100%; min-height: 220px;">
@@ -1708,7 +1708,7 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
 
     <!-- LADO DERECHO: Compuesta (f o g): B -> B -->
     <div style="flex: 1; min-width: 0; background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 10px; padding: 12px; text-align: center; box-sizing: border-box;">
-      <div style="font-weight: bold; color: #15803d; margin-bottom: 4px; font-size: 14px;">Compuesta f ∘ g: B → B</div>
+      <div style="font-weight: bold; color: #15803d; margin-bottom: 4px; font-size: 14px;">f ∘ g: B → B</div>
       <div style="font-size: 11px; color: #166534; margin-bottom: 8px;"></div>
       
       <div style="position: relative; width: 100%; min-height: 220px;">
@@ -1869,7 +1869,7 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
       } else {
         guia.style.background = "#f1f5f9";
         guia.style.color = "#334155";
-        guia.innerHTML = `<b>Para f:</b> clic en A (izq) y B (centro-izq) &nbsp;|&nbsp; <b>Para g:</b> clic en B (centro-der) y A (der).`;
+        guia.innerHTML = `<b> &nbsp;|&nbsp; <b>`;
       }
 
       const strF = elemA.filter(a => f[a]).map(a => `(${a}, ${f[a]})`).join(', ');
