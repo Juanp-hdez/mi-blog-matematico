@@ -1476,6 +1476,417 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}$
 </script>
 ```
 
+**Observación:** Al tener dos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, lo que hace que tenga sentido la definición de $g \circ f$, es que el codominio de $f$ coincide con el dominio de $g$.
+Tenga en cuenta que la notación $g \circ f$ quiere decir que primero se aplica la función $f$ y luego la función $g$, es decir, se lee de derecha a izquierda.
+Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonces la nueva función $g \circ f: A \rightarrow C$. Sin embargo, para que $f \circ g$ tenga sentido es necesario que $A=C$. Por lo tanto, si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow A$, con la composición de funciones obtenemos las funciones $g \circ f: A \rightarrow A$ y $f \circ g: B \rightarrow B$.
+
+#### Ejemplo interactivo de compuesta de funciones
+
+```{=html}
+<div id="app-doble-composicion" style="font-family: system-ui, -apple-system, sans-serif; max-width: 900px; margin: 15px auto; padding: 22px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Definición y Composición Doble: $(g \circ f)$ y $(f \circ g)$</h3>
+  <p style="text-align: center; font-size: 14px; color: #64748b; margin-bottom: 20px;">
+    Define las funciones <b>f: A → B</b> y <b>g: B → A</b>. El programa calculará y graficará automáticamente ambas compuestas.
+  </p>
+
+  <!-- SECCIÓN 1: DEFINICIÓN DE f Y g -->
+  <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-bottom: 25px;">
+    
+    <!-- Definición de f: A -> B -->
+    <div style="flex: 1; min-width: 380px; max-width: 420px; background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 12px; text-anchor: middle;">
+      <div style="font-weight: bold; color: #2563eb; text-align: center; margin-bottom: 6px; font-size: 15px;">1. Definir f: A → B</div>
+      <div id="guia-f" style="font-size: 12px; font-weight: bold; text-align: center; color: #475569; background: #eff6ff; padding: 4px; border-radius: 4px; margin-bottom: 8px;">
+        Clic en A y luego clic en B
+      </div>
+      <div style="position: relative; width: 100%; min-height: 250px;">
+        <svg id="svg-def-f" width="100%" height="250" viewBox="0 0 380 250" style="display: block; touch-action: manipulation;"></svg>
+      </div>
+      <div id="txt-def-f" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; text-align: center; margin-top: 8px; padding: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; color: #1e40af;">
+        f = { }
+      </div>
+    </div>
+
+    <!-- Definición de g: B -> A -->
+    <div style="flex: 1; min-width: 380px; max-width: 420px; background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 12px;">
+      <div style="font-weight: bold; color: #ea580c; text-align: center; margin-bottom: 6px; font-size: 15px;">2. Definir g: B → A</div>
+      <div id="guia-g" style="font-size: 12px; font-weight: bold; text-align: center; color: #475569; background: #fff7ed; padding: 4px; border-radius: 4px; margin-bottom: 8px;">
+        Clic en B y luego clic en A
+      </div>
+      <div style="position: relative; width: 100%; min-height: 250px;">
+        <svg id="svg-def-g" width="100%" height="250" viewBox="0 0 380 250" style="display: block; touch-action: manipulation;"></svg>
+      </div>
+      <div id="txt-def-g" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; text-align: center; margin-top: 8px; padding: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; color: #9a3412;">
+        g = { }
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SECCIÓN 2: RESULTADO DE LAS COMPOSICIONES -->
+  <h4 style="text-align: center; color: #334155; margin-top: 10px; margin-bottom: 15px; border-top: 1px solid #e2e8f0; padding-top: 15px;">
+    Diagramas de Venn de las Funciones Compuestas
+  </h4>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+    
+    <!-- Diagrama Compuesta g o f: A -> B -> A -->
+    <div style="flex: 1; min-width: 380px; max-width: 420px; background: #faf5ff; border: 1px solid #f3e8ff; border-radius: 10px; padding: 12px; text-align: center;">
+      <div style="font-weight: bold; color: #7e22ce; margin-bottom: 6px; font-size: 15px;">Compuesta (g ∘ f): A → A</div>
+      <div style="font-size: 12px; color: #6b21a8; margin-bottom: 8px;">Trayectoria: A ⎯f⎯→ B ⎯g⎯→ A</div>
+      
+      <div style="position: relative; width: 100%; min-height: 260px;">
+        <svg id="svg-comp-gof" width="100%" height="260" viewBox="0 0 400 260" style="display: block; margin: 0 auto;"></svg>
+      </div>
+
+      <div id="txt-comp-gof" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; margin-top: 8px; padding: 6px; background: #ffffff; border: 1px solid #d8b4fe; border-radius: 6px; color: #581c87;">
+        g ∘ f = { }
+      </div>
+    </div>
+
+    <!-- Diagrama Compuesta f o g: B -> A -> B -->
+    <div style="flex: 1; min-width: 380px; max-width: 420px; background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 10px; padding: 12px; text-align: center;">
+      <div style="font-weight: bold; color: #15803d; margin-bottom: 6px; font-size: 15px;">Compuesta (f ∘ g): B → B</div>
+      <div style="font-size: 12px; color: #166534; margin-bottom: 8px;">Trayectoria: B ⎯g⎯→ A ⎯f⎯→ B</div>
+      
+      <div style="position: relative; width: 100%; min-height: 260px;">
+        <svg id="svg-comp-fog" width="100%" height="260" viewBox="0 0 400 260" style="display: block; margin: 0 auto;"></svg>
+      </div>
+
+      <div id="txt-comp-fog" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; margin-top: 8px; padding: 6px; background: #ffffff; border: 1px solid #86efac; border-radius: 6px; color: #14532d;">
+        f ∘ g = { }
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+(function() {
+  function iniciarModuloDobleComposicion() {
+    const root = document.getElementById('app-doble-composicion');
+    if (!root) return;
+
+    const svgDefF = root.querySelector('#svg-def-f');
+    const svgDefG = root.querySelector('#svg-def-g');
+    const svgGof = root.querySelector('#svg-comp-gof');
+    const svgFog = root.querySelector('#svg-comp-fog');
+
+    const txtF = root.querySelector('#txt-def-f');
+    const txtG = root.querySelector('#txt-def-g');
+    const txtGof = root.querySelector('#txt-comp-gof');
+    const txtFog = root.querySelector('#txt-comp-fog');
+
+    const guiaF = root.querySelector('#guia-f');
+    const guiaG = root.querySelector('#guia-g');
+
+    if (!svgDefF || !svgDefG || !svgGof || !svgFog) return;
+
+    const elemA = ['a', 'b', 'c'];
+    const elemB = ['x', 'y', 'z', 'w'];
+
+    // Coordenadas verticales Y
+    const yA = { a: 65, b: 125, c: 185 };
+    const yB = { x: 50, y: 100, z: 150, w: 200 };
+
+    // Funciones por defecto
+    let f = { a: 'x', b: 'y', c: 'z' };
+    let g = { x: 'a', y: 'b', z: 'c', w: 'a' };
+
+    let selF_A = null;
+    let selG_B = null;
+
+    // --- RENDER 1: DEFINICIÓN f: A -> B ---
+    function renderDefF() {
+      let html = `
+        <defs>
+          <marker id="arrow-f-def" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+          </marker>
+        </defs>
+
+        <ellipse cx="80" cy="125" rx="45" ry="90" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="80" y="24" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">A</text>
+
+        <ellipse cx="300" cy="125" rx="45" ry="105" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="300" y="20" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">B</text>
+      `;
+
+      for (const [a, b] of Object.entries(f)) {
+        if (b) {
+          html += `<line x1="80" y1="${yA[a]}" x2="300" y2="${yB[b]}" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-f-def)"/>`;
+        }
+      }
+
+      elemA.forEach(nodo => {
+        const esSel = (selF_A === nodo);
+        const fill = esSel ? "#93c5fd" : (f[nodo] ? "#dbeafe" : "#ffffff");
+        html += `<g data-target="defF-A" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="80" cy="${yA[nodo]}" r="22" fill="transparent"/>
+          <circle cx="80" cy="${yA[nodo]}" r="16" fill="${fill}" stroke="#2563eb" stroke-width="${esSel ? '3' : '2'}"/>
+          <text x="80" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" font-size="14" fill="#1e40af" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      elemB.forEach(nodo => {
+        html += `<g data-target="defF-B" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="300" cy="${yB[nodo]}" r="22" fill="transparent"/>
+          <circle cx="300" cy="${yB[nodo]}" r="16" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+          <text x="300" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" font-size="14" fill="#9a3412" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      svgDefF.innerHTML = html;
+
+      if (selF_A) {
+        guiaF.style.background = "#dbeafe";
+        guiaF.style.color = "#1e40af";
+        guiaF.innerHTML = `Asignando <b>'${selF_A}'</b>: haz clic en una letra de B`;
+      } else {
+        guiaF.style.background = "#eff6ff";
+        guiaF.style.color = "#475569";
+        guiaF.innerHTML = `Clic en A y luego clic en B`;
+      }
+
+      const strF = elemA.filter(a => f[a]).map(a => `(${a}, ${f[a]})`).join(', ');
+      txtF.innerHTML = `f = { ${strF} }`;
+    }
+
+    // --- RENDER 2: DEFINICIÓN g: B -> A ---
+    function renderDefG() {
+      let html = `
+        <defs>
+          <marker id="arrow-g-def" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c"/>
+          </marker>
+        </defs>
+
+        <ellipse cx="80" cy="125" rx="45" ry="105" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="80" y="20" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">B</text>
+
+        <ellipse cx="300" cy="125" rx="45" ry="90" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="300" y="24" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">A</text>
+      `;
+
+      for (const [b, a] of Object.entries(g)) {
+        if (a) {
+          html += `<line x1="80" y1="${yB[b]}" x2="300" y2="${yA[a]}" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow-g-def)"/>`;
+        }
+      }
+
+      elemB.forEach(nodo => {
+        const esSel = (selG_B === nodo);
+        const fill = esSel ? "#fed7aa" : (g[nodo] ? "#ffedd5" : "#ffffff");
+        html += `<g data-target="defG-B" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="80" cy="${yB[nodo]}" r="22" fill="transparent"/>
+          <circle cx="80" cy="${yB[nodo]}" r="16" fill="${fill}" stroke="#ea580c" stroke-width="${esSel ? '3' : '2'}"/>
+          <text x="80" y="${yB[nodo]+5}" text-anchor="middle" font-weight="bold" font-size="14" fill="#9a3412" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      elemA.forEach(nodo => {
+        html += `<g data-target="defG-A" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="300" cy="${yA[nodo]}" r="22" fill="transparent"/>
+          <circle cx="300" cy="${yA[nodo]}" r="16" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+          <text x="300" y="${yA[nodo]+5}" text-anchor="middle" font-weight="bold" font-size="14" fill="#1e40af" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      svgDefG.innerHTML = html;
+
+      if (selG_B) {
+        guiaG.style.background = "#ffedd5";
+        guiaG.style.color = "#9a3412";
+        guiaG.innerHTML = `Asignando <b>'${selG_B}'</b>: haz clic en una letra de A`;
+      } else {
+        guiaG.style.background = "#fff7ed";
+        guiaG.style.color = "#475569";
+        guiaG.innerHTML = `Clic en B y luego clic en A`;
+      }
+
+      const strG = elemB.filter(b => g[b]).map(b => `(${b}, ${g[b]})`).join(', ');
+      txtG.innerHTML = `g = { ${strG} }`;
+    }
+
+    // --- RENDER 3: COMPUESTA (g o f): A -> B -> A ---
+    function renderGof() {
+      let html = `
+        <defs>
+          <marker id="arrow-gof-direct" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#7e22ce"/>
+          </marker>
+          <marker id="arrow-gof-step" viewBox="0 0 10 10" refX="24" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#a855f7"/>
+          </marker>
+        </defs>
+
+        <!-- Flecha superior directa g o f -->
+        <path d="M 80,48 Q 200,10 320,48" fill="none" stroke="#7e22ce" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#arrow-gof-direct)"/>
+        <text x="200" y="22" text-anchor="middle" font-weight="bold" font-size="15" fill="#7e22ce">g ∘ f</text>
+
+        <!-- Óvalos A1, B, A2 -->
+        <ellipse cx="65" cy="135" rx="40" ry="85" fill="#ebf8ff" stroke="#3182ce" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="65" y="42" text-anchor="middle" font-weight="bold" font-size="13" fill="#2b6cb0">A</text>
+
+        <ellipse cx="200" cy="135" rx="40" ry="100" fill="#fffaf0" stroke="#dd6b20" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="200" y="32" text-anchor="middle" font-weight="bold" font-size="13" fill="#c05621">B</text>
+
+        <ellipse cx="335" cy="135" rx="40" ry="85" fill="#ebf8ff" stroke="#3182ce" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="335" y="42" text-anchor="middle" font-weight="bold" font-size="13" fill="#2b6cb0">A</text>
+      `;
+
+      const parejas = [];
+
+      elemA.forEach(a => {
+        const destB = f[a];
+        if (destB) {
+          html += `<line x1="65" y1="${yA[a]}" x2="200" y2="${yB[destB]}" stroke="#cbd5e1" stroke-width="1.2" marker-end="url(#arrow-gof-step)"/>`;
+          const destA = g[destB];
+          if (destA) {
+            html += `<line x1="200" y1="${yB[destB]}" x2="335" y2="${yA[destA]}" stroke="#a855f7" stroke-width="1.8" marker-end="url(#arrow-gof-step)"/>`;
+            parejas.push(`(${a}, ${destA})`);
+          }
+        }
+      });
+
+      // Nodos A1
+      elemA.forEach(nodo => {
+        html += `<circle cx="65" cy="${yA[nodo]}" r="14" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+                 <text x="65" y="${yA[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="12" fill="#1e40af">${nodo}</text>`;
+      });
+
+      // Nodos B
+      elemB.forEach(nodo => {
+        html += `<circle cx="200" cy="${yB[nodo]}" r="14" fill="#ffffff" stroke="#ea580c" stroke-width="1.5"/>
+                 <text x="200" y="${yB[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="12" fill="#9a3412">${nodo}</text>`;
+      });
+
+      // Nodos A2
+      elemA.forEach(nodo => {
+        html += `<circle cx="335" cy="${yA[nodo]}" r="14" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+                 <text x="335" y="${yA[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="12" fill="#1e40af">${nodo}</text>`;
+      });
+
+      svgGof.innerHTML = html;
+      txtGof.innerHTML = parejas.length ? `g ∘ f = { ${parejas.join(', ')} }` : 'g ∘ f = { }';
+    }
+
+    // --- RENDER 4: COMPUESTA (f o g): B -> A -> B ---
+    function renderFog() {
+      let html = `
+        <defs>
+          <marker id="arrow-fog-direct" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#15803d"/>
+          </marker>
+          <marker id="arrow-fog-step" viewBox="0 0 10 10" refX="24" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#22c55e"/>
+          </marker>
+        </defs>
+
+        <!-- Flecha superior directa f o g -->
+        <path d="M 65,38 Q 200,5 335,38" fill="none" stroke="#15803d" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#arrow-fog-direct)"/>
+        <text x="200" y="18" text-anchor="middle" font-weight="bold" font-size="15" fill="#15803d">f ∘ g</text>
+
+        <!-- Óvalos B1, A, B2 -->
+        <ellipse cx="65" cy="135" rx="40" ry="100" fill="#fffaf0" stroke="#dd6b20" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="65" y="30" text-anchor="middle" font-weight="bold" font-size="13" fill="#c05621">B</text>
+
+        <ellipse cx="200" cy="135" rx="40" ry="85" fill="#ebf8ff" stroke="#3182ce" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="200" y="42" text-anchor="middle" font-weight="bold" font-size="13" fill="#2b6cb0">A</text>
+
+        <ellipse cx="335" cy="135" rx="40" ry="100" fill="#fffaf0" stroke="#dd6b20" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="335" y="30" text-anchor="middle" font-weight="bold" font-size="13" fill="#c05621">B</text>
+      `;
+
+      const parejas = [];
+
+      elemB.forEach(b => {
+        const destA = g[b];
+        if (destA) {
+          html += `<line x1="65" y1="${yB[b]}" x2="200" y2="${yA[destA]}" stroke="#cbd5e1" stroke-width="1.2" marker-end="url(#arrow-fog-step)"/>`;
+          const destB = f[destA];
+          if (destB) {
+            html += `<line x1="200" y1="${yA[destA]}" x2="335" y2="${yB[destB]}" stroke="#22c55e" stroke-width="1.8" marker-end="url(#arrow-fog-step)"/>`;
+            parejas.push(`(${b}, ${destB})`);
+          }
+        }
+      });
+
+      // Nodos B1
+      elemB.forEach(nodo => {
+        html += `<circle cx="65" cy="${yB[nodo]}" r="14" fill="#ffffff" stroke="#ea580c" stroke-width="1.5"/>
+                 <text x="65" y="${yB[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="12" fill="#9a3412">${nodo}</text>`;
+      });
+
+      // Nodos A
+      elemA.forEach(nodo => {
+        html += `<circle cx="200" cy="${yA[nodo]}" r="14" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+                 <text x="200" y="${yA[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="12" fill="#1e40af">${nodo}</text>`;
+      });
+
+      // Nodos B2
+      elemB.forEach(nodo => {
+        html += `<circle cx="335" cy="${yB[nodo]}" r="14" fill="#ffffff" stroke="#ea580c" stroke-width="1.5"/>
+                 <text x="335" y="${yB[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="12" fill="#9a3412">${nodo}</text>`;
+      });
+
+      svgFog.innerHTML = html;
+      txtFog.innerHTML = parejas.length ? `f ∘ g = { ${parejas.join(', ')} }` : 'f ∘ g = { }';
+    }
+
+    function actualizarTodo() {
+      renderDefF();
+      renderDefG();
+      renderGof();
+      renderFog();
+    }
+
+    // Eventos delegados
+    svgDefF.addEventListener('click', (e) => {
+      const gElem = e.target.closest('[data-target]');
+      if (!gElem) return;
+
+      const target = gElem.getAttribute('data-target');
+      const nodo = gElem.getAttribute('data-nodo');
+
+      if (target === 'defF-A') {
+        selF_A = (selF_A === nodo) ? null : nodo;
+      } else if (target === 'defF-B' && selF_A) {
+        f[selF_A] = nodo;
+        selF_A = null;
+      }
+      actualizarTodo();
+    });
+
+    svgDefG.addEventListener('click', (e) => {
+      const gElem = e.target.closest('[data-target]');
+      if (!gElem) return;
+
+      const target = gElem.getAttribute('data-target');
+      const nodo = gElem.getAttribute('data-nodo');
+
+      if (target === 'defG-B') {
+        selG_B = (selG_B === nodo) ? null : nodo;
+      } else if (target === 'defG-A' && selG_B) {
+        g[selG_B] = nodo;
+        selG_B = null;
+      }
+      actualizarTodo();
+    });
+
+    actualizarTodo();
+  }
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(iniciarModuloDobleComposicion, 50);
+  } else {
+    document.addEventListener('DOMContentLoaded', iniciarModuloDobleComposicion);
+  }
+})();
+</script>
+```
+
 Una propiedad importante de las funciones inyectivas, es que si $f: A \rightarrow B$ es inyectiva, al reversar las flechas se obtiene una función $f^{-1}: \textrm{im}(f) \rightarrow A$.
 
 
