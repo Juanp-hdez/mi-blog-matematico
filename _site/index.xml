@@ -1612,16 +1612,16 @@ render();
 
         <!-- Conjuntos A1, B1, B2, A2 -->
         <ellipse cx="90" cy="145" rx="46" ry="85" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="90" y="48" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">Conjunto A</text>
+        <text x="90" y="48" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">A</text>
 
         <ellipse cx="280" cy="145" rx="46" ry="100" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="280" y="34" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">Conjunto B</text>
+        <text x="280" y="34" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">B</text>
 
         <ellipse cx="480" cy="145" rx="46" ry="100" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="480" y="34" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">Conjunto B</text>
+        <text x="480" y="34" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">B</text>
 
         <ellipse cx="670" cy="145" rx="46" ry="85" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="670" y="48" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">Conjunto A</text>
+        <text x="670" y="48" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">A</text>
       `;
 
       // Flechas f: A1 -> B1
