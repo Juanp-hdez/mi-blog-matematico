@@ -1530,7 +1530,7 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
     
     <!-- LADO IZQUIERDO: Compuesta (g o f): A -> A -->
     <div style="flex: 1; min-width: 0; background: #faf5ff; border: 1px solid #f3e8ff; border-radius: 10px; padding: 12px; text-align: center; box-sizing: border-box;">
-      <div style="font-weight: bold; color: #7e22ce; margin-bottom: 4px; font-size: 14px;">Compuesta (g ∘ f): A → A</div>
+      <div style="font-weight: bold; color: #7e22ce; margin-bottom: 4px; font-size: 14px;">Compuesta g ∘ f: A → A</div>
       <div style="font-size: 11px; color: #6b21a8; margin-bottom: 8px;"></div>
       
       <div style="position: relative; width: 100%; min-height: 220px;">
@@ -1544,7 +1544,7 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
 
     <!-- LADO DERECHO: Compuesta (f o g): B -> B -->
     <div style="flex: 1; min-width: 0; background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 10px; padding: 12px; text-align: center; box-sizing: border-box;">
-      <div style="font-weight: bold; color: #15803d; margin-bottom: 4px; font-size: 14px;">Compuesta (f ∘ g): B → B</div>
+      <div style="font-weight: bold; color: #15803d; margin-bottom: 4px; font-size: 14px;">Compuesta f ∘ g: B → B</div>
       <div style="font-size: 11px; color: #166534; margin-bottom: 8px;"></div>
       
       <div style="position: relative; width: 100%; min-height: 220px;">
@@ -1725,10 +1725,10 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
         </defs>
 
         <ellipse cx="65" cy="115" rx="42" ry="75" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="65" y="22" text-anchor="middle" font-weight="bold" font-size="13" fill="#2b6cb0">Dominio A</text>
+        <text x="65" y="22" text-anchor="middle" font-weight="bold" font-size="13" fill="#2b6cb0">A</text>
 
         <ellipse cx="275" cy="115" rx="42" ry="75" fill="#faf5ff" stroke="#9333ea" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="275" y="22" text-anchor="middle" font-weight="bold" font-size="13" fill="#6b21a8">Codominio A</text>
+        <text x="275" y="22" text-anchor="middle" font-weight="bold" font-size="13" fill="#6b21a8">A</text>
       `;
 
       const parejas = [];
@@ -1768,10 +1768,10 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
         </defs>
 
         <ellipse cx="65" cy="115" rx="42" ry="85" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="65" y="16" text-anchor="middle" font-weight="bold" font-size="13" fill="#c05621">Dominio B</text>
+        <text x="65" y="16" text-anchor="middle" font-weight="bold" font-size="13" fill="#c05621">B</text>
 
         <ellipse cx="275" cy="115" rx="42" ry="85" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="275" y="16" text-anchor="middle" font-weight="bold" font-size="13" fill="#15803d">Codominio B</text>
+        <text x="275" y="16" text-anchor="middle" font-weight="bold" font-size="13" fill="#15803d">B</text>
       `;
 
       const parejas = [];
