@@ -1856,8 +1856,6 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
 
 #### Restricción de una función
 
-Supongamos que tenemos una función $f: A \rightarrow B$ y que $C \subseteq A$ es un subconjunto. La función $f$ induce una función $f|_{C}: C \rightarrow B$ que llamaremos la restricción de $f$ al subconjunto $C$, definida como $f|_{C}(x)=f(x)$ si $x \in C$.
-
-Si $F \subseteq A \times B$ es el conjunto que define a la función $f$, el conjunto que define a $f|_{C}$ es $\{(x,y) \in F ~ :~ x \in C\}$.
+Supongamos  
 
 ![Figura 9.](funcion-restriccion.png)
