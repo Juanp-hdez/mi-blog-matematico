@@ -1889,3 +1889,309 @@ Cuando $f: A \rightarrow B$ es un función biyectiva, la sobreyectivida implica 
 Tiene sentido entonces hablar de las composiciones $f \circ f^{-1}: B \rightarrow B$ y $f^{-1} \circ f: A \rightarrow A$.  Por definición, $f \circ f^{-1}(b)=f(f^{-1}(b))=f(a)$ donde $f(a)=b$, es decir, $f \circ f^{-1}=\textrm{id}_B$, y $f^{-1} \circ f(a)=f^{-1}(f(a))$ pero $f^{-1}(f(a))=x$ si $f(x)=f(a)$ que por inyectividad se tiene solo cuando $x=a$, es decir, $f^{-1}(f(a))=a$, por lo tanto $f^{-1} \circ f=\textrm{id}_A$. 
 
 En resumen, si $f: A \rightarrow B$ es biyectiva la función $f^{-1}: B \rightarrow A$ es tal que  $f \circ f^{-1}=\textrm{id}_B$ y $f^{-1} \circ f=\textrm{id}_A$.  
+
+#### Ejemplo interactivo de la inversa de una función
+
+```{=html}
+<div id="app-biyectiva-inversa" style="font-family: system-ui, -apple-system, sans-serif; max-width: 900px; margin: 15px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); box-sizing: border-box;">
+
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Función Biyectiva y su Inversa</h3>
+  <p style="text-align: center; font-size: 14px; color: #64748b; margin-bottom: 16px;">
+    Define la función <b>f: A → B</b> haciendo clic en un elemento de <b>A</b> y luego en uno de <b>B</b>.<br>
+    Si la función resulta ser inyectiva (y por tanto biyectiva), se mostrará su inversa y las composiciones.
+  </p>
+
+  <!-- Panel de Estado y Controles -->
+  <div style="text-align: center; margin-bottom: 16px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+    <div id="estado-mensaje" style="padding: 8px 16px; border-radius: 6px; font-size: 14px; font-weight: bold; background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1;">
+      Esperando definición... Haz clic en un elemento de A.
+    </div>
+    <button id="btn-borrar-f" style="padding: 8px 18px; cursor: pointer; border: 1px solid #fca5a5; background: #fee2e2; color: #dc2626; border-radius: 6px; font-weight: bold; font-size: 13px; transition: 0.2s;">
+      🗑️ Reiniciar Función
+    </button>
+  </div>
+
+  <!-- FILA 1: Función f y su Inversa f^-1 -->
+  <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-bottom: 20px;">
+    
+    <!-- Gráfico f -->
+    <div style="flex: 1; min-width: 300px; max-width: 420px; background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 10px; text-align: center;">
+      <div style="font-weight: bold; color: #1d4ed8; margin-bottom: 8px;">f: A → B</div>
+      <div style="position: relative; width: 100%; height: 260px;">
+        <svg id="svg-f-main" width="100%" height="260" viewBox="0 0 340 260" style="display: block; margin: 0 auto; touch-action: manipulation;"></svg>
+      </div>
+      <div id="txt-def-f" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; margin-top: 10px; color: #1e40af;">f = { }</div>
+    </div>
+
+    <!-- Gráfico f^-1 (Oculto inicialmente) -->
+    <div id="panel-inversa" style="flex: 1; min-width: 300px; max-width: 420px; background: #fff7ed; border: 1px solid #ffedd5; border-radius: 10px; padding: 10px; text-align: center; opacity: 0.3; pointer-events: none; transition: 0.3s;">
+      <div style="font-weight: bold; color: #c2410c; margin-bottom: 8px;">f⁻¹: B → A</div>
+      <div style="position: relative; width: 100%; height: 260px;">
+        <svg id="svg-f-inv" width="100%" height="260" viewBox="0 0 340 260" style="display: block; margin: 0 auto;"></svg>
+      </div>
+      <div id="txt-def-inv" style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; margin-top: 10px; color: #9a3412;">f⁻¹ = { }</div>
+    </div>
+
+  </div>
+
+  <!-- FILA 2: Composiciones (Ocultas inicialmente) -->
+  <div id="panel-composiciones" style="display: none; border-top: 2px dashed #cbd5e1; padding-top: 20px;">
+    <h4 style="text-align: center; color: #334155; margin-top: 0; margin-bottom: 15px;">Composiciones (Identidad)</h4>
+    <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+      
+      <!-- f^-1 o f : A -> A -->
+      <div style="flex: 1; min-width: 300px; max-width: 420px; background: #faf5ff; border: 1px solid #f3e8ff; border-radius: 10px; padding: 10px; text-align: center;">
+        <div style="font-weight: bold; color: #7e22ce; margin-bottom: 8px;">f⁻¹ ∘ f: A → A &nbsp; (I<sub>A</sub>)</div>
+        <svg id="svg-comp-a" width="100%" height="260" viewBox="0 0 340 260" style="display: block; margin: 0 auto;"></svg>
+      </div>
+
+      <!-- f o f^-1 : B -> B -->
+      <div style="flex: 1; min-width: 300px; max-width: 420px; background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 10px; padding: 10px; text-align: center;">
+        <div style="font-weight: bold; color: #15803d; margin-bottom: 8px;">f ∘ f⁻¹: B → B &nbsp; (I<sub>B</sub>)</div>
+        <svg id="svg-comp-b" width="100%" height="260" viewBox="0 0 340 260" style="display: block; margin: 0 auto;"></svg>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  function iniciarModuloBiyectivo() {
+    const root = document.getElementById('app-biyectiva-inversa');
+    if (!root) return;
+
+    const svgF = root.querySelector('#svg-f-main');
+    const svgInv = root.querySelector('#svg-f-inv');
+    const svgCompA = root.querySelector('#svg-comp-a');
+    const svgCompB = root.querySelector('#svg-comp-b');
+
+    const txtF = root.querySelector('#txt-def-f');
+    const txtInv = root.querySelector('#txt-def-inv');
+    const msgEstado = root.querySelector('#estado-mensaje');
+    
+    const panelInversa = root.querySelector('#panel-inversa');
+    const panelComps = root.querySelector('#panel-composiciones');
+    const btnBorrar = root.querySelector('#btn-borrar-f');
+
+    const elemA = ['a', 'b', 'c', 'd'];
+    const elemB = ['x', 'y', 'z', 'w'];
+    const yPos = { a: 45, b: 100, c: 155, d: 210, x: 45, y: 100, z: 155, w: 210 };
+
+    let f = {};
+    let selA = null;
+
+    function evaluarFuncion() {
+      const asignados = Object.keys(f).length;
+      const imagenes = Object.values(f);
+      const esInyectiva = new Set(imagenes).size === imagenes.length;
+
+      if (asignados === 0) {
+        msgEstado.innerHTML = "Haz clic en un elemento de <b>A</b> para iniciar.";
+        msgEstado.style.background = "#f1f5f9"; msgEstado.style.color = "#334155";
+        return { completa: false, biyectiva: false };
+      }
+
+      if (selA) {
+        msgEstado.innerHTML = `Asignando imagen para <b>f('${selA}')</b>... haz clic en <b>B</b>.`;
+        msgEstado.style.background = "#dbeafe"; msgEstado.style.color = "#1e40af";
+        return { completa: false, biyectiva: false };
+      }
+
+      if (asignados < 4) {
+        msgEstado.innerHTML = `Faltan elementos por asignar. Continúa...`;
+        msgEstado.style.background = "#fef9c3"; msgEstado.style.color = "#854d0e";
+        return { completa: false, biyectiva: false };
+      }
+
+      if (!esInyectiva) {
+        msgEstado.innerHTML = "La función <b>NO es inyectiva</b>. Varios elementos van al mismo destino. No hay inversa.";
+        msgEstado.style.background = "#fee2e2"; msgEstado.style.color = "#991b1b";
+        return { completa: true, biyectiva: false };
+      }
+
+      msgEstado.innerHTML = "¡Excelente! La función es <b>Biyectiva</b>. Inversa y composiciones generadas.";
+      msgEstado.style.background = "#dcfce7"; msgEstado.style.color = "#166534";
+      return { completa: true, biyectiva: true };
+    }
+
+    function renderF() {
+      let html = `
+        <defs>
+          <marker id="arr-f" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+          </marker>
+        </defs>
+        <ellipse cx="80" cy="127" rx="45" ry="115" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="80" y="240" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">A</text>
+
+        <ellipse cx="260" cy="127" rx="45" ry="115" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="260" y="240" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">B</text>
+      `;
+
+      elemA.forEach(a => {
+        if (f[a]) {
+          html += `<line x1="80" y1="${yPos[a]}" x2="260" y2="${yPos[f[a]]}" stroke="#2563eb" stroke-width="2" marker-end="url(#arr-f)"/>`;
+        }
+      });
+
+      elemA.forEach(nodo => {
+        const esSel = (selA === nodo);
+        const fill = esSel ? "#93c5fd" : (f[nodo] ? "#dbeafe" : "#ffffff");
+        html += `<g data-target="A" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="80" cy="${yPos[nodo]}" r="20" fill="transparent"/>
+          <circle cx="80" cy="${yPos[nodo]}" r="14" fill="${fill}" stroke="#2563eb" stroke-width="${esSel ? '3' : '2'}"/>
+          <text x="80" y="${yPos[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="13" fill="#1e40af" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      elemB.forEach(nodo => {
+        const esDestino = Object.values(f).includes(nodo);
+        html += `<g data-target="B" data-nodo="${nodo}" style="cursor: pointer;">
+          <circle cx="260" cy="${yPos[nodo]}" r="20" fill="transparent"/>
+          <circle cx="260" cy="${yPos[nodo]}" r="14" fill="${esDestino ? '#ffedd5' : '#ffffff'}" stroke="#ea580c" stroke-width="2"/>
+          <text x="260" y="${yPos[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="13" fill="#9a3412" style="pointer-events: none;">${nodo}</text>
+        </g>`;
+      });
+
+      svgF.innerHTML = html;
+      const strF = elemA.filter(a => f[a]).map(a => `(${a}, ${f[a]})`).join(', ');
+      txtF.innerHTML = strF ? `f = { ${strF} }` : `f = { }`;
+    }
+
+    function renderInversa() {
+      let html = `
+        <defs>
+          <marker id="arr-inv" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c"/>
+          </marker>
+        </defs>
+        <ellipse cx="80" cy="127" rx="45" ry="115" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="80" y="240" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">B</text>
+
+        <ellipse cx="260" cy="127" rx="45" ry="115" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="260" y="240" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">A</text>
+      `;
+
+      const parejas = [];
+      elemA.forEach(a => {
+        if (f[a]) {
+          html += `<line x1="80" y1="${yPos[f[a]]}" x2="260" y2="${yPos[a]}" stroke="#ea580c" stroke-width="2" marker-end="url(#arr-inv)"/>`;
+          parejas.push(`(${f[a]}, ${a})`);
+        }
+      });
+
+      elemB.forEach(nodo => {
+        html += `<circle cx="80" cy="${yPos[nodo]}" r="14" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+                 <text x="80" y="${yPos[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="13" fill="#9a3412">${nodo}</text>`;
+      });
+      elemA.forEach(nodo => {
+        html += `<circle cx="260" cy="${yPos[nodo]}" r="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+                 <text x="260" y="${yPos[nodo]+4}" text-anchor="middle" font-weight="bold" font-size="13" fill="#1e40af">${nodo}</text>`;
+      });
+
+      svgInv.innerHTML = html;
+      txtInv.innerHTML = `f⁻¹ = { ${parejas.join(', ')} }`;
+    }
+
+    function renderComposicionA() {
+      let html = `
+        <defs>
+          <marker id="arr-c1" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#7e22ce"/>
+          </marker>
+        </defs>
+        <ellipse cx="80" cy="127" rx="45" ry="115" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="80" y="240" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">A</text>
+        <ellipse cx="260" cy="127" rx="45" ry="115" fill="#faf5ff" stroke="#9333ea" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="260" y="240" text-anchor="middle" font-weight="bold" font-size="14" fill="#6b21a8">A</text>
+      `;
+
+      elemA.forEach(a => {
+        html += `<line x1="80" y1="${yPos[a]}" x2="260" y2="${yPos[a]}" stroke="#7e22ce" stroke-width="2" marker-end="url(#arr-c1)"/>`;
+        html += `<circle cx="80" cy="${yPos[a]}" r="14" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+                 <text x="80" y="${yPos[a]+4}" text-anchor="middle" font-weight="bold" font-size="13" fill="#1e40af">${a}</text>`;
+        html += `<circle cx="260" cy="${yPos[a]}" r="14" fill="#ffffff" stroke="#9333ea" stroke-width="2"/>
+                 <text x="260" y="${yPos[a]+4}" text-anchor="middle" font-weight="bold" font-size="13" fill="#6b21a8">${a}</text>`;
+      });
+      svgCompA.innerHTML = html;
+    }
+
+    function renderComposicionB() {
+      let html = `
+        <defs>
+          <marker id="arr-c2" viewBox="0 0 10 10" refX="26" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#15803d"/>
+          </marker>
+        </defs>
+        <ellipse cx="80" cy="127" rx="45" ry="115" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="80" y="240" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">B</text>
+        <ellipse cx="260" cy="127" rx="45" ry="115" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="260" y="240" text-anchor="middle" font-weight="bold" font-size="14" fill="#15803d">B</text>
+      `;
+
+      elemB.forEach(b => {
+        html += `<line x1="80" y1="${yPos[b]}" x2="260" y2="${yPos[b]}" stroke="#15803d" stroke-width="2" marker-end="url(#arr-c2)"/>`;
+        html += `<circle cx="80" cy="${yPos[b]}" r="14" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+                 <text x="80" y="${yPos[b]+4}" text-anchor="middle" font-weight="bold" font-size="13" fill="#9a3412">${b}</text>`;
+        html += `<circle cx="260" cy="${yPos[b]}" r="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+                 <text x="260" y="${yPos[b]+4}" text-anchor="middle" font-weight="bold" font-size="13" fill="#15803d">${b}</text>`;
+      });
+      svgCompB.innerHTML = html;
+    }
+
+    function actualizarVistas() {
+      renderF();
+      const estado = evaluarFuncion();
+
+      if (estado.biyectiva) {
+        panelInversa.style.opacity = '1';
+        panelComps.style.display = 'block';
+        renderInversa();
+        renderComposicionA();
+        renderComposicionB();
+      } else {
+        panelInversa.style.opacity = '0.3';
+        panelComps.style.display = 'none';
+        svgInv.innerHTML = '';
+        txtInv.innerHTML = 'f⁻¹ = { }';
+      }
+    }
+
+    // Interacción
+    svgF.addEventListener('click', (e) => {
+      const gElem = e.target.closest('[data-target]');
+      if (!gElem) return;
+
+      const target = gElem.getAttribute('data-target');
+      const nodo = gElem.getAttribute('data-nodo');
+
+      if (target === 'A') {
+        selA = (selA === nodo) ? null : nodo;
+      } else if (target === 'B' && selA) {
+        f[selA] = nodo;
+        selA = null;
+      }
+      actualizarVistas();
+    });
+
+    btnBorrar.addEventListener('click', () => {
+      f = {};
+      selA = null;
+      actualizarVistas();
+    });
+
+    // Inicio
+    actualizarVistas();
+  }
+
+  // Ejecución segura para Quarto/HTML
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(iniciarModuloBiyectivo, 50);
+  } else {
+    document.addEventListener('DOMContentLoaded', iniciarModuloBiyectivo);
+  }
+})();
+</script>
+´´´

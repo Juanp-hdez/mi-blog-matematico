@@ -2050,7 +2050,9 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
 <figcaption>Figura 11.</figcaption>
 </figure>
 </div>
-<p>Cuando <span class="math inline">\(f: A \rightarrow B\)</span> es un función biyectiva, la sobreyectivida implica que <span class="math inline">\(\textrm{im}(f)=B\)</span> y la inyectividad garantiza la existencia de la función <span class="math inline">\(f^{-1}: B \rightarrow A\)</span> que se obtiene reversando las flechas.</p>
+<p>Cuando <span class="math inline">\(f: A \rightarrow B\)</span> es un función biyectiva, la sobreyectivida implica que <span class="math inline">\(\textrm{im}(f)=B\)</span> y la inyectividad garantiza la existencia de la función <span class="math inline">\(f^{-1}: B \rightarrow A\)</span> que se obtiene reversando las flechas, o de manera explícita, <span class="math inline">\(f^{-1}(b)=a\)</span> donde <span class="math inline">\(f(a)=b\)</span>.</p>
+<p>Tiene sentido entonces hablar de las composiciones <span class="math inline">\(f \circ f^{-1}: B \rightarrow B\)</span> y <span class="math inline">\(f^{-1} \circ f: A \rightarrow A\)</span>. Por definición, <span class="math inline">\(f \circ f^{-1}(b)=f(f^{-1}(b))=f(a)\)</span> donde <span class="math inline">\(f(a)=b\)</span>, es decir, <span class="math inline">\(f \circ f^{-1}=\textrm{id}_B\)</span>, y <span class="math inline">\(f^{-1} \circ f(a)=f^{-1}(f(a))\)</span> pero <span class="math inline">\(f^{-1}(f(a))=x\)</span> si <span class="math inline">\(f(x)=f(a)\)</span> que por inyectividad se tiene solo cuando <span class="math inline">\(x=a\)</span>, es decir, <span class="math inline">\(f^{-1}(f(a))=a\)</span>, por lo tanto <span class="math inline">\(f^{-1} \circ f=\textrm{id}_A\)</span>.</p>
+<p>En resumen, si <span class="math inline">\(f: A \rightarrow B\)</span> es biyectiva la función <span class="math inline">\(f^{-1}: B \rightarrow A\)</span> es tal que <span class="math inline">\(f \circ f^{-1}=\textrm{id}_B\)</span> y <span class="math inline">\(f^{-1} \circ f=\textrm{id}_A\)</span>.</p>
 
 
 </section>
