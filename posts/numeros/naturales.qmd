@@ -1873,8 +1873,15 @@ En la siguiente figura se muestra una función inyectiva junto con el gráfico q
 
 Observe que en la figura anterior, el gráfico de la derecha produce una función cuando se restringe a la imagen de $f$, es decir, al conjunto $\textrm{im}(f)=\{x,z,w\}$. Esta función será denotada como $f^{-1}: \textrm{im}(f) \rightarrow A$.
 
-Si una función no es inyectiva entonces al invertir el sentido de las flechas (mirar el gráfico de derecha a izquierda) no es función.
+**Definición formal de inversa:**
+Si $f: A \rightarrow B$ es una función inyectiva, definimos la función $f^{-1}: \textrm{im}(f) \rightarrow A$ como $f^{-1}(b)=a$ si $f(a)=b$, es decir, para cada $b \in \textrm{im}(f)$ se tiene que $b=f(a)$ para algún $a \in A$, lo que nos permite definir $b \mapsto a$ (invertir la flecha), y por la inyectividad de $f$ este $a$ es único, lo que garantiza que $f^{-1}$ es una función.
+
+Observe que $f^{-1}$ corresponde al subconjunto $\{(b,a) \in \textrm{im}(f) \times A ~ : ~ f(a)=b\}$ o de manera equivalente, si $F \subseteq A \times B$ es el conjunto que define a la función $f$, el conjunto que define a $f^{-1}$ es $\{(b,a) \in B \times A ~ :~ (a,b) \in F\}$.
+
+Si una función $f$ no es inyectiva entonces al invertir el sentido de las flechas (mirar el gráfico de derecha a izquierda) no es función, o de manera equivalente, como $f$ no es inyectiva entonces existen $a_1, a_2 \in A$ con $a_1 \neq a_2$ tales que $f(a_1)=b=f(a_2)$, lo que implica que al invertir las flechas $b \mapsto a_{1}$ y $b \mapsto a_{2}$ y por lo tanto $f^{-1}$ no es función.
 
 Por ejemplo, en la siguiente figura se muestra una función $f$ que no es inyectiva, y en el gráfico de la derecha se puede observar que si se mira de derecha a izquierda hay dos flechas que salen de un mismo punto, lo que implica que no define una función.
 
 ![ Figura 11.](no-inversa.png)
+
+Cuando $f: A \rightarrow B$ es un función biyectiva, la sobreyectivida implica que $\textrm{im}(f)=B$ y la inyectividad garantiza la existencia de la función $f^{-1}: B \rightarrow A$ que se obtiene reversando las flechas. 
