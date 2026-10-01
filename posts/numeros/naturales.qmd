@@ -1890,6 +1890,13 @@ Tiene sentido entonces hablar de las composiciones $f \circ f^{-1}: B \rightarro
 
 En resumen, si $f: A \rightarrow B$ es biyectiva la función $f^{-1}: B \rightarrow A$ es tal que  $f \circ f^{-1}=\textrm{id}_B$ y $f^{-1} \circ f=\textrm{id}_A$.  
 
+#### Pregunta
+
+Si $f: A \rightarrow B$ es una función biyectiva, ¿Existe una función $g: B \rightarrow A$ diferente de la función $f^{-1}$ tal que $f \circ g=\textrm{id}_B$ y $g \circ f=\textrm{id}_A$?.
+
+**Ayuda:**
+Use que la composición de funciones es asociativa, es decir, si $f: A \rightarrow B$, $g: B \rightarrow C$ y $h: C \rightarrow D$ son funciones, entonces $h \circ (g \circ f)=(h \circ g) \circ f$.
+
 #### Ejemplo interactivo de la inversa de una función
 
 ```{=html}
