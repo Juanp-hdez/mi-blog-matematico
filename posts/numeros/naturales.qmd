@@ -1884,4 +1884,8 @@ Por ejemplo, en la siguiente figura se muestra una función $f$ que no es inyect
 
 ![ Figura 11.](no-inversa.png)
 
-Cuando $f: A \rightarrow B$ es un función biyectiva, la sobreyectivida implica que $\textrm{im}(f)=B$ y la inyectividad garantiza la existencia de la función $f^{-1}: B \rightarrow A$ que se obtiene reversando las flechas. 
+Cuando $f: A \rightarrow B$ es un función biyectiva, la sobreyectivida implica que $\textrm{im}(f)=B$ y la inyectividad garantiza la existencia de la función $f^{-1}: B \rightarrow A$ que se obtiene reversando las flechas, o de manera explícita, $f^{-1}(b)=a$ donde $f(a)=b$.
+
+Tiene sentido entonces hablar de las composiciones $f \circ f^{-1}: B \rightarrow B$ y $f^{-1} \circ f: A \rightarrow A$.  Por definición, $f \circ f^{-1}(b)=f(f^{-1}(b))=f(a)$ donde $f(a)=b$, es decir, $f \circ f^{-1}=\textrm{id}_B$, y $f^{-1} \circ f(a)=f^{-1}(f(a))$ pero $f^{-1}(f(a))=x$ si $f(x)=f(a)$ que por inyectividad se tiene solo cuando $x=a$, es decir, $f^{-1}(f(a))=a$, por lo tanto $f^{-1} \circ f=\textrm{id}_A$. 
+
+En resumen, si $f: A \rightarrow B$ es biyectiva la función $f^{-1}: B \rightarrow A$ es tal que  $f \circ f^{-1}=\textrm{id}_B$ y $f^{-1} \circ f=\textrm{id}_A$.  

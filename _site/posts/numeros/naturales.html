@@ -2040,7 +2040,9 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
 </figure>
 </div>
 <p>Observe que en la figura anterior, el gráfico de la derecha produce una función cuando se restringe a la imagen de <span class="math inline">\(f\)</span>, es decir, al conjunto <span class="math inline">\(\textrm{im}(f)=\{x,z,w\}\)</span>. Esta función será denotada como <span class="math inline">\(f^{-1}: \textrm{im}(f) \rightarrow A\)</span>.</p>
-<p>Si una función no es inyectiva entonces al invertir el sentido de las flechas (mirar el gráfico de derecha a izquierda) no es función.</p>
+<p><strong>Definición formal de inversa:</strong> Si <span class="math inline">\(f: A \rightarrow B\)</span> es una función inyectiva, definimos la función <span class="math inline">\(f^{-1}: \textrm{im}(f) \rightarrow A\)</span> como <span class="math inline">\(f^{-1}(b)=a\)</span> si <span class="math inline">\(f(a)=b\)</span>, es decir, para cada <span class="math inline">\(b \in \textrm{im}(f)\)</span> se tiene que <span class="math inline">\(b=f(a)\)</span> para algún <span class="math inline">\(a \in A\)</span>, lo que nos permite definir <span class="math inline">\(b \mapsto a\)</span> (invertir la flecha), y por la inyectividad de <span class="math inline">\(f\)</span> este <span class="math inline">\(a\)</span> es único, lo que garantiza que <span class="math inline">\(f^{-1}\)</span> es una función.</p>
+<p>Observe que <span class="math inline">\(f^{-1}\)</span> corresponde al subconjunto <span class="math inline">\(\{(b,a) \in \textrm{im}(f) \times A ~ : ~ f(a)=b\}\)</span> o de manera equivalente, si <span class="math inline">\(F \subseteq A \times B\)</span> es el conjunto que define a la función <span class="math inline">\(f\)</span>, el conjunto que define a <span class="math inline">\(f^{-1}\)</span> es <span class="math inline">\(\{(b,a) \in B \times A ~ :~ (a,b) \in F\}\)</span>.</p>
+<p>Si una función <span class="math inline">\(f\)</span> no es inyectiva entonces al invertir el sentido de las flechas (mirar el gráfico de derecha a izquierda) no es función, o de manera equivalente, como <span class="math inline">\(f\)</span> no es inyectiva entonces existen <span class="math inline">\(a_1, a_2 \in A\)</span> con <span class="math inline">\(a_1 \neq a_2\)</span> tales que <span class="math inline">\(f(a_1)=b=f(a_2)\)</span>, lo que implica que al invertir las flechas <span class="math inline">\(b \mapsto a_{1}\)</span> y <span class="math inline">\(b \mapsto a_{2}\)</span> y por lo tanto <span class="math inline">\(f^{-1}\)</span> no es función.</p>
 <p>Por ejemplo, en la siguiente figura se muestra una función <span class="math inline">\(f\)</span> que no es inyectiva, y en el gráfico de la derecha se puede observar que si se mira de derecha a izquierda hay dos flechas que salen de un mismo punto, lo que implica que no define una función.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2048,6 +2050,7 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
 <figcaption>Figura 11.</figcaption>
 </figure>
 </div>
+<p>Cuando <span class="math inline">\(f: A \rightarrow B\)</span> es un función biyectiva, la sobreyectivida implica que <span class="math inline">\(\textrm{im}(f)=B\)</span> y la inyectividad garantiza la existencia de la función <span class="math inline">\(f^{-1}: B \rightarrow A\)</span> que se obtiene reversando las flechas.</p>
 
 
 </section>
