@@ -285,7 +285,7 @@ Esta pregunta es equivalente al siguiente problema:
 ```{=html}
 <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 650px; margin: 20px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
 
-  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Intente introducir las letras x,y,z,w en las cajas, sin colocar mas de una letra en cada caja</h3>
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Intente introducir las letras x,y,z,w en las cajas, sin colocar más de una letra en cada caja</h3>
   <p style="text-align: center; color: #64748b; font-size: 14px; margin-bottom: 20px;">
     <b>Arrastra</b> cada letra a una caja. Cada letra solo puede usarse <b>una sola vez</b> (se deshabilita al ser asignada, pero reaparece si la borras).
   </p>
@@ -496,7 +496,7 @@ render();
 Principio del palomar
 :::
 
-El problema anterior es un ejemplo del **Principio del Palomar**, que establece que si hay más palomas que palomares y se quieren guardar todas las palomas en los palomares, obligatoriamente en algún palomar se tendrán que ubicar por lo menos dos palomas.
+El problema anterior es un ejemplo del **Principio del Palomar**, que establece que si hay más palomas que huecos en el palomar y se quieren guardar todas las palomas en los huecos, obligatoriamente en alguno de los huecos del palomar se tendrán que ubicar por lo menos dos palomas.
 
 #### Ejemplos de funciones sobreyectivas
 
@@ -561,28 +561,6 @@ Como se puede ver en el siguiente gráfico, un elemento $a \in A$ está relacion
 ```
 Sobreyectividad de las funciones proyecciones
 :::
-
-#### Funciones inyectivas
-
-En la definición de función $f:A \rightarrow B$, sabemos que cada elemento de $A$ tiene que estar conectado con un único elemento de $B$, pero en la definición de función se permite que dos elementos distintos del conjunto $A$ estén relacionados con el mismo elemento del conjunto $B$, es decir, puede existir un elemento $b \in B$ para el cual existen dos elementos distintos $a_{1}, a_{2} \in A$ tal que $b=f(a_{1})=f(a_{2})$, o de manera equivalente, tal que $(a_{1},b), (a_{2},b) \in F \subseteq A \times B$.
-
-Por ejemplo, en la función del siguiente gráfico, 
-
-![figura 7.](no_inyectiva.png)
-
-los elementos $b$ y $c$ se relacionan con el mismo elemento $z \in B$, es decir, $f(b)=z=f(c)$.
-
-Uno función es **inyectiva** si no ocurre lo anterior, es decir:
-
-**Función inyectiva:** Decimos que una función $f: A \rightarrow B$ es inyectiva si para cada elemento $b \in B$ existe a lo sumo un elemento $a \in A$ tal que $f(a) = b$, es decir, no existen dos elementos distintos de $A$ que se relacionen con el mismo elemento de $B$. De manera equivalente, $f(a_1) = f(a_2)$ implica $a_1 = a_2$ (la única forma que de hayan dos flechas llegando un mismo elemento, es que sean la misma flecha). 
-
-Del gráfico [Sobreyectividad de las funciones proyecciones](#sobreyectividad-proyecciones), podemos ver que las funciones $\pi_{1}: A \times B \rightarrow A$ y $\pi_{2}: A \times B \rightarrow B$ no son inyectivas, ya que dado $a \in A$ todos los elementos de la línea roja vertical continua se relacionan con el mismo elemento $a \in A$, y dado $b \in B$ todos los elementos de la línea azul horizontal continua se relacionan con el mismo elemento $b \in B$.
-
-#### Ejemplos de funciones inyectivas
-
-1) Si $A$ es un conjunto, la función identidad id$\textrm{id}_{A}: A \rightarrow A$ que a cada elemento $a \in A$ le asigna el mismo elemento $a \in A$, es decir, $\textrm{id}_{A}(a)=a$, es una función inyectiva.
-
-2) Si $A$ y $B$ son conjunto y fijamos un elemento $b_{0} \in B$, entonces la función constante $f: A \rightarrow A \times B$ definida como $f(a)=(a,b_{0})$ para todo $a \in A$, es inyectiva, ya que si $f(a_1)=f(a_2)$, entonces $(a_1,b_{0})=(a_2,b_{0})$, lo que implica $a_1=a_2$.
 
 #### Ejemplo interactivo de función sobreyectiva
 
@@ -761,6 +739,29 @@ Construyendo una función sobreyectiva
 **Imagen de una función:** Dada una función $f:A \rightarrow B$ definimos su imagen que denotaremos $\textrm{im}(f) \subseteq B$ como el conjunto de todos los elementos de $B$ que están relacionados con algún elemento de $A$, es decir, $\textrm{im}(f)=\{b \in B~ :~ \textrm{existe}~ a \in A~ \textrm{con}~ f(a)=b\}$.
 
 Una función $f: A \rightarrow B$ es sobreyectiva si y solo si $\textrm{im}(f)=B$.
+
+#### Funciones inyectivas
+
+En la definición de función $f:A \rightarrow B$, sabemos que cada elemento de $A$ tiene que estar conectado con un único elemento de $B$, pero en la definición de función se permite que dos elementos distintos del conjunto $A$ estén relacionados con el mismo elemento del conjunto $B$, es decir, puede existir un elemento $b \in B$ para el cual existen dos elementos distintos $a_{1}, a_{2} \in A$ tal que $b=f(a_{1})=f(a_{2})$, o de manera equivalente, tal que $(a_{1},b), (a_{2},b) \in F \subseteq A \times B$.
+
+Por ejemplo, en la función del siguiente gráfico, 
+
+![figura 7.](no_inyectiva.png)
+
+los elementos $b$ y $c$ se relacionan con el mismo elemento $z \in B$, es decir, $f(b)=z=f(c)$.
+
+Uno función es **inyectiva** si no ocurre lo anterior, es decir:
+
+**Función inyectiva:** Decimos que una función $f: A \rightarrow B$ es inyectiva si para cada elemento $b \in B$ existe a lo sumo un elemento $a \in A$ tal que $f(a) = b$, es decir, no existen dos elementos distintos de $A$ que se relacionen con el mismo elemento de $B$. De manera equivalente, $f(a_1) = f(a_2)$ implica $a_1 = a_2$ (la única forma que de hayan dos flechas llegando un mismo elemento, es que sean la misma flecha). 
+
+Del gráfico [Sobreyectividad de las funciones proyecciones](#sobreyectividad-proyecciones), podemos ver que las funciones $\pi_{1}: A \times B \rightarrow A$ y $\pi_{2}: A \times B \rightarrow B$ no son inyectivas, ya que dado $a \in A$ todos los elementos de la línea roja vertical continua se relacionan con el mismo elemento $a \in A$, y dado $b \in B$ todos los elementos de la línea azul horizontal continua se relacionan con el mismo elemento $b \in B$.
+
+#### Ejemplos de funciones inyectivas
+
+1) Si $A$ es un conjunto, la función identidad $\textrm{id}_{A}: A \rightarrow A$ que a cada elemento $a \in A$ le asigna el mismo elemento $a \in A$, es decir, $\textrm{id}_{A}(a)=a$ para todo $a \in A$, es una función inyectiva.
+
+2) Si $A$ y $B$ son conjunto y fijamos un elemento $b_{0} \in B$, entonces la función $f: A \rightarrow A \times B$ definida como $f(a)=(a,b_{0})$ para todo $a \in A$, es inyectiva, ya que si $f(a_1)=f(a_2)$, entonces $(a_1,b_{0})=(a_2,b_{0})$, lo que implica $a_1=a_2$.
+
 
 #### Ejemplo interactivo de función inyectiva
 
@@ -1855,7 +1856,7 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
 
 #### Restricción de una función
 
-Supongamos que tenemos una función $f: A \rightarrow B$ y que $C \subseteq A$ es un subconjunto. La función $f$ induce una función $f|_{C}: C \rightarrow B$ que llamaremos **la restricción de $f$ al subconjunto $C$**, definida como $f|_{C}(x)=f(x)$ si $x \in C$.
+Supongamos que tenemos una función $f: A \rightarrow B$ y que $C \subseteq A$ es un subconjunto. La función $f$ induce una función $f|_{C}: C \rightarrow B$ que llamaremos la restricción de $f$ al subconjunto $C$, definida como $f|_{C}(x)=f(x)$ si $x \in C$.
 Si $F \subseteq A \times B$ es el conjunto que define a la función $f$, el conjunto que define a $f|_{C}$ es $\{(x,y) \in F ~ :~ x \in C\}$.
 
 ![Figura 9.](funcion-restriccion.png)
