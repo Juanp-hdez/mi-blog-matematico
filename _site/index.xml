@@ -1839,9 +1839,19 @@ render();
   }
 })();
 </script>
-
-
 </b></b></section><b><b>
+<section id="restricción-de-una-función" class="level4">
+<h4 class="anchored" data-anchor-id="restricción-de-una-función">Restricción de una función</h4>
+<p>Supongamos que tenemos una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y que <img src="https://latex.codecogs.com/png.latex?C%20%5Csubseteq%20A"> es un subconjunto. La función <img src="https://latex.codecogs.com/png.latex?f"> induce una función <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D:%20C%20%5Crightarrow%20B"> que llamaremos <strong>la restricción de <img src="https://latex.codecogs.com/png.latex?f"> al subconjunto <img src="https://latex.codecogs.com/png.latex?C"></strong>, definida como <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D(x)=f(x)"> si <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20C">. Si <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> es el conjunto que define a la función <img src="https://latex.codecogs.com/png.latex?f">, el conjunto que define a <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D"> es <img src="https://latex.codecogs.com/png.latex?%5C%7B(x,y)%20%5Cin%20F%20~%20:~%20x%20%5Cin%20C%5C%7D">.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/funcion-restriccion.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 9.</figcaption>
+</figure>
+</div>
+
+
+</section>
 </b></b></section><b><b>
 </b></b></section><b><b>
 
