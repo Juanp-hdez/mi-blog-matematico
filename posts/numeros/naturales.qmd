@@ -1504,7 +1504,7 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
   <div style="background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 14px; margin-bottom: 20px;">
     
     <div id="guia-horiz" style="font-size: 13px; font-weight: bold; text-align: center; color: #334155; background: #f1f5f9; padding: 8px; border-radius: 6px; margin-bottom: 12px;">
-      <b>Defina la función f &nbsp;|&nbsp; <b>Defina la función g.
+      <b>Defina la función f &nbsp;|&nbsp; <b>Defina la función g.</b>
     </div>
 
     <div style="position: relative; width: 100%; min-height: 250px; overflow-x: auto;">

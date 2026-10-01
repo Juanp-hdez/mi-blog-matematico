@@ -1853,7 +1853,8 @@ render();
 </section>
 <section id="inversa-de-una-función-con-respecto-a-la-composición" class="level4">
 <h4 class="anchored" data-anchor-id="inversa-de-una-función-con-respecto-a-la-composición">Inversa de una función con respecto a la composición</h4>
-<p>Una propiedad importante de las funciones inyectivas, es que al invertir la dirección de las flechas, se obtiene una función. Si <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es una función inyectiva, al reversar las flechas se obtiene una función <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D:%20%5Ctextrm%7Bim%7D(f)%20%5Crightarrow%20A">. En la siguiente figura se muestra una función inyectiva junto con el gráfico que se obtiene al reversar las flechas.</p>
+<p>Una propiedad importante de las funciones inyectivas, es que al invertir la dirección de las flechas, se obtiene una función. Si <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es una función inyectiva, al reversar las flechas se obtiene una función <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D:%20%5Ctextrm%7Bim%7D(f)%20%5Crightarrow%20A">.</p>
+<p>En la siguiente figura se muestra una función inyectiva junto con el gráfico que se obtiene al reversar las flechas.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://your-website-url.example.com/posts/numeros/inversa-inyectiva.png" class="img-fluid figure-img"></p>
@@ -1861,6 +1862,14 @@ render();
 </figure>
 </div>
 <p>Observe que en la figura anterior, el gráfico de la derecha produce una función cuando se restringe a la imagen de <img src="https://latex.codecogs.com/png.latex?f">, es decir, al conjunto <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(f)=%5C%7Bx,z,w%5C%7D">. Esta función será denotada como <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D:%20%5Ctextrm%7Bim%7D(f)%20%5Crightarrow%20A">.</p>
+<p>Si una función no es inyectiva entonces al invertir el sentido de las flechas (mirar el gráfico de derecha a izquierda) no es función.</p>
+<p>Por ejemplo, en la siguiente figura se muestra una función <img src="https://latex.codecogs.com/png.latex?f"> que no es inyectiva, y en el gráfico de la derecha se puede observar que si se mira de derecha a izquierda hay dos flechas que salen de un mismo punto, lo que implica que no define una función.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/no-inversa.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 11.</figcaption>
+</figure>
+</div>
 
 
 </section>
