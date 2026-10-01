@@ -1491,8 +1491,8 @@ render();
   <div style="background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 14px; margin-bottom: 20px;">
     
     <div id="guia-horiz" style="font-size: 13px; font-weight: bold; text-align: center; color: #334155; background: #f1f5f9; padding: 8px; border-radius: 6px; margin-bottom: 12px;">
-      <b>Defina la función f &nbsp;|&nbsp; <b>Defina la función g.
-    </b></b></div><b><b>
+      <b>Defina la función f &nbsp;|&nbsp; <b>Defina la función g.</b>
+    </b></div><b>
 
     <div style="position: relative; width: 100%; min-height: 250px; overflow-x: auto;">
       <svg id="svg-def-horiz" width="100%" height="250" viewbox="0 0 760 250" style="display: block; margin: 0 auto; touch-action: manipulation;"></svg>
@@ -1508,7 +1508,7 @@ render();
       </div>
     </div>
 
-  </b></b></div><b><b>
+  </b></div><b>
 
   <!-- SECCIÓN 2: DIAGRAMAS COMPUESTOS LADO A LADO EN FILA ÚNICA -->
   <h4 style="text-align: center; color: #334155; margin-top: 10px; margin-bottom: 15px; border-top: 1px solid #e2e8f0; padding-top: 16px;" class="anchored">
@@ -1547,7 +1547,7 @@ render();
 
   </div>
 
-</b></b></div><b><b>
+</b></div><b>
 
 <script>
 (function() {
@@ -1839,7 +1839,7 @@ render();
   }
 })();
 </script>
-</b></b></section><b><b>
+</b></section><b>
 <section id="restricción-de-una-función" class="level4">
 <h4 class="anchored" data-anchor-id="restricción-de-una-función">Restricción de una función</h4>
 <p>Supongamos que tenemos una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y que <img src="https://latex.codecogs.com/png.latex?C%20%5Csubseteq%20A"> es un subconjunto. La función <img src="https://latex.codecogs.com/png.latex?f"> induce una función <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D:%20C%20%5Crightarrow%20B"> que llamaremos la restricción de <img src="https://latex.codecogs.com/png.latex?f"> al subconjunto <img src="https://latex.codecogs.com/png.latex?C">, definida como <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D(x)=f(x)"> si <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20C">.</p>
@@ -1873,10 +1873,10 @@ render();
 
 
 </section>
-</b></b></section><b><b>
-</b></b></section><b><b>
+</b></section><b>
+</b></section><b>
 
-</b></b> ]]></description>
+</b> ]]></description>
   <category>Cálculo</category>
   <category>Interactivo</category>
   <guid>https://your-website-url.example.com/posts/numeros/naturales.html</guid>
