@@ -297,7 +297,7 @@ dibujarSVG();
 <div id="interactivo-principio-del-palomar">
 <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 650px; margin: 20px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
 
-  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="pregunta-1">Intente introducir las letras x,y,z,w en las cajas, sin colocar mas de una letra en cada caja</h3>
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="pregunta-1">Intente introducir las letras x,y,z,w en las cajas, sin colocar más de una letra en cada caja</h3>
   <p style="text-align: center; color: #64748b; font-size: 14px; margin-bottom: 20px;">
     <b>Arrastra</b> cada letra a una caja. Cada letra solo puede usarse <b>una sola vez</b> (se deshabilita al ser asignada, pero reaparece si la borras).
   </p>
@@ -503,7 +503,7 @@ render();
 </script>
 <p>Principio del palomar</p>
 </div>
-<p>El problema anterior es un ejemplo del <strong>Principio del Palomar</strong>, que establece que si hay más palomas que palomares y se quieren guardar todas las palomas en los palomares, obligatoriamente en algún palomar se tendrán que ubicar por lo menos dos palomas.</p>
+<p>El problema anterior es un ejemplo del <strong>Principio del Palomar</strong>, que establece que si hay más palomas que huecos en el palomar y se quieren guardar todas las palomas en los huecos, obligatoriamente en alguno de los huecos del palomar se tendrán que ubicar por lo menos dos palomas.</p>
 </section>
 <section id="ejemplos-de-funciones-sobreyectivas" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplos-de-funciones-sobreyectivas">Ejemplos de funciones sobreyectivas</h4>
@@ -564,28 +564,6 @@ render();
 </div>
 <p>Sobreyectividad de las funciones proyecciones</p>
 </div>
-</section>
-<section id="funciones-inyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="funciones-inyectivas">Funciones inyectivas</h4>
-<p>En la definición de función <img src="https://latex.codecogs.com/png.latex?f:A%20%5Crightarrow%20B">, sabemos que cada elemento de <img src="https://latex.codecogs.com/png.latex?A"> tiene que estar conectado con un único elemento de <img src="https://latex.codecogs.com/png.latex?B">, pero en la definición de función se permite que dos elementos distintos del conjunto <img src="https://latex.codecogs.com/png.latex?A"> estén relacionados con el mismo elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">, es decir, puede existir un elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> para el cual existen dos elementos distintos <img src="https://latex.codecogs.com/png.latex?a_%7B1%7D,%20a_%7B2%7D%20%5Cin%20A"> tal que <img src="https://latex.codecogs.com/png.latex?b=f(a_%7B1%7D)=f(a_%7B2%7D)">, o de manera equivalente, tal que <img src="https://latex.codecogs.com/png.latex?(a_%7B1%7D,b),%20(a_%7B2%7D,b)%20%5Cin%20F%20%5Csubseteq%20A%20%5Ctimes%20B">.</p>
-<p>Por ejemplo, en la función del siguiente gráfico,</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/numeros/no_inyectiva.png" class="img-fluid figure-img"></p>
-<figcaption>figura 7.</figcaption>
-</figure>
-</div>
-<p>los elementos <img src="https://latex.codecogs.com/png.latex?b"> y <img src="https://latex.codecogs.com/png.latex?c"> se relacionan con el mismo elemento <img src="https://latex.codecogs.com/png.latex?z%20%5Cin%20B">, es decir, <img src="https://latex.codecogs.com/png.latex?f(b)=z=f(c)">.</p>
-<p>Uno función es <strong>inyectiva</strong> si no ocurre lo anterior, es decir:</p>
-<p><strong>Función inyectiva:</strong> Decimos que una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es inyectiva si para cada elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> existe a lo sumo un elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> tal que <img src="https://latex.codecogs.com/png.latex?f(a)%20=%20b">, es decir, no existen dos elementos distintos de <img src="https://latex.codecogs.com/png.latex?A"> que se relacionen con el mismo elemento de <img src="https://latex.codecogs.com/png.latex?B">. De manera equivalente, <img src="https://latex.codecogs.com/png.latex?f(a_1)%20=%20f(a_2)"> implica <img src="https://latex.codecogs.com/png.latex?a_1%20=%20a_2"> (la única forma que de hayan dos flechas llegando un mismo elemento, es que sean la misma flecha).</p>
-<p>Del gráfico Sobreyectividad de las funciones proyecciones, podemos ver que las funciones <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20A"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20B"> no son inyectivas, ya que dado <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> todos los elementos de la línea roja vertical continua se relacionan con el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, y dado <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> todos los elementos de la línea azul horizontal continua se relacionan con el mismo elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B">.</p>
-</section>
-<section id="ejemplos-de-funciones-inyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-inyectivas">Ejemplos de funciones inyectivas</h4>
-<ol type="1">
-<li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> es un conjunto, la función identidad id<img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D:%20A%20%5Crightarrow%20A"> que a cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> le asigna el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, es decir, <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D(a)=a">, es una función inyectiva.</p></li>
-<li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B"> son conjunto y fijamos un elemento <img src="https://latex.codecogs.com/png.latex?b_%7B0%7D%20%5Cin%20B">, entonces la función constante <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20A%20%5Ctimes%20B"> definida como <img src="https://latex.codecogs.com/png.latex?f(a)=(a,b_%7B0%7D)"> para todo <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, es inyectiva, ya que si <img src="https://latex.codecogs.com/png.latex?f(a_1)=f(a_2)">, entonces <img src="https://latex.codecogs.com/png.latex?(a_1,b_%7B0%7D)=(a_2,b_%7B0%7D)">, lo que implica <img src="https://latex.codecogs.com/png.latex?a_1=a_2">.</p></li>
-</ol>
 </section>
 <section id="ejemplo-interactivo-de-función-sobreyectiva" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-sobreyectiva">Ejemplo interactivo de función sobreyectiva</h4>
@@ -759,6 +737,28 @@ render();
 <p><strong>Ayuda:</strong> Encuentre cuántas funciones que no sean sobreyectivas se pueden construir y réstelas del total de funciones posibles.</p>
 <p><strong>Imagen de una función:</strong> Dada una función <img src="https://latex.codecogs.com/png.latex?f:A%20%5Crightarrow%20B"> definimos su imagen que denotaremos <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(f)%20%5Csubseteq%20B"> como el conjunto de todos los elementos de <img src="https://latex.codecogs.com/png.latex?B"> que están relacionados con algún elemento de <img src="https://latex.codecogs.com/png.latex?A">, es decir, <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(f)=%5C%7Bb%20%5Cin%20B~%20:~%20%5Ctextrm%7Bexiste%7D~%20a%20%5Cin%20A~%20%5Ctextrm%7Bcon%7D~%20f(a)=b%5C%7D">.</p>
 <p>Una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es sobreyectiva si y solo si <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(f)=B">.</p>
+</section>
+<section id="funciones-inyectivas" class="level4">
+<h4 class="anchored" data-anchor-id="funciones-inyectivas">Funciones inyectivas</h4>
+<p>En la definición de función <img src="https://latex.codecogs.com/png.latex?f:A%20%5Crightarrow%20B">, sabemos que cada elemento de <img src="https://latex.codecogs.com/png.latex?A"> tiene que estar conectado con un único elemento de <img src="https://latex.codecogs.com/png.latex?B">, pero en la definición de función se permite que dos elementos distintos del conjunto <img src="https://latex.codecogs.com/png.latex?A"> estén relacionados con el mismo elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">, es decir, puede existir un elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> para el cual existen dos elementos distintos <img src="https://latex.codecogs.com/png.latex?a_%7B1%7D,%20a_%7B2%7D%20%5Cin%20A"> tal que <img src="https://latex.codecogs.com/png.latex?b=f(a_%7B1%7D)=f(a_%7B2%7D)">, o de manera equivalente, tal que <img src="https://latex.codecogs.com/png.latex?(a_%7B1%7D,b),%20(a_%7B2%7D,b)%20%5Cin%20F%20%5Csubseteq%20A%20%5Ctimes%20B">.</p>
+<p>Por ejemplo, en la función del siguiente gráfico,</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/numeros/no_inyectiva.png" class="img-fluid figure-img"></p>
+<figcaption>figura 7.</figcaption>
+</figure>
+</div>
+<p>los elementos <img src="https://latex.codecogs.com/png.latex?b"> y <img src="https://latex.codecogs.com/png.latex?c"> se relacionan con el mismo elemento <img src="https://latex.codecogs.com/png.latex?z%20%5Cin%20B">, es decir, <img src="https://latex.codecogs.com/png.latex?f(b)=z=f(c)">.</p>
+<p>Uno función es <strong>inyectiva</strong> si no ocurre lo anterior, es decir:</p>
+<p><strong>Función inyectiva:</strong> Decimos que una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es inyectiva si para cada elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> existe a lo sumo un elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> tal que <img src="https://latex.codecogs.com/png.latex?f(a)%20=%20b">, es decir, no existen dos elementos distintos de <img src="https://latex.codecogs.com/png.latex?A"> que se relacionen con el mismo elemento de <img src="https://latex.codecogs.com/png.latex?B">. De manera equivalente, <img src="https://latex.codecogs.com/png.latex?f(a_1)%20=%20f(a_2)"> implica <img src="https://latex.codecogs.com/png.latex?a_1%20=%20a_2"> (la única forma que de hayan dos flechas llegando un mismo elemento, es que sean la misma flecha).</p>
+<p>Del gráfico Sobreyectividad de las funciones proyecciones, podemos ver que las funciones <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20A"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20B"> no son inyectivas, ya que dado <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> todos los elementos de la línea roja vertical continua se relacionan con el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, y dado <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> todos los elementos de la línea azul horizontal continua se relacionan con el mismo elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B">.</p>
+</section>
+<section id="ejemplos-de-funciones-inyectivas" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-inyectivas">Ejemplos de funciones inyectivas</h4>
+<ol type="1">
+<li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> es un conjunto, la función identidad <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D:%20A%20%5Crightarrow%20A"> que a cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> le asigna el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, es decir, <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D(a)=a"> para todo <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, es una función inyectiva.</p></li>
+<li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B"> son conjunto y fijamos un elemento <img src="https://latex.codecogs.com/png.latex?b_%7B0%7D%20%5Cin%20B">, entonces la función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20A%20%5Ctimes%20B"> definida como <img src="https://latex.codecogs.com/png.latex?f(a)=(a,b_%7B0%7D)"> para todo <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, es inyectiva, ya que si <img src="https://latex.codecogs.com/png.latex?f(a_1)=f(a_2)">, entonces <img src="https://latex.codecogs.com/png.latex?(a_1,b_%7B0%7D)=(a_2,b_%7B0%7D)">, lo que implica <img src="https://latex.codecogs.com/png.latex?a_1=a_2">.</p></li>
+</ol>
 </section>
 <section id="ejemplo-interactivo-de-función-inyectiva" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-inyectiva">Ejemplo interactivo de función inyectiva</h4>
@@ -1842,7 +1842,7 @@ render();
 </b></b></section><b><b>
 <section id="restricción-de-una-función" class="level4">
 <h4 class="anchored" data-anchor-id="restricción-de-una-función">Restricción de una función</h4>
-<p>Supongamos que tenemos una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y que <img src="https://latex.codecogs.com/png.latex?C%20%5Csubseteq%20A"> es un subconjunto. La función <img src="https://latex.codecogs.com/png.latex?f"> induce una función <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D:%20C%20%5Crightarrow%20B"> que llamaremos <strong>la restricción de <img src="https://latex.codecogs.com/png.latex?f"> al subconjunto <img src="https://latex.codecogs.com/png.latex?C"></strong>, definida como <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D(x)=f(x)"> si <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20C">. Si <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> es el conjunto que define a la función <img src="https://latex.codecogs.com/png.latex?f">, el conjunto que define a <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D"> es <img src="https://latex.codecogs.com/png.latex?%5C%7B(x,y)%20%5Cin%20F%20~%20:~%20x%20%5Cin%20C%5C%7D">.</p>
+<p>Supongamos que tenemos una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y que <img src="https://latex.codecogs.com/png.latex?C%20%5Csubseteq%20A"> es un subconjunto. La función <img src="https://latex.codecogs.com/png.latex?f"> induce una función <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D:%20C%20%5Crightarrow%20B"> que llamaremos la restricción de <img src="https://latex.codecogs.com/png.latex?f"> al subconjunto <img src="https://latex.codecogs.com/png.latex?C">, definida como <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D(x)=f(x)"> si <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20C">. Si <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> es el conjunto que define a la función <img src="https://latex.codecogs.com/png.latex?f">, el conjunto que define a <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D"> es <img src="https://latex.codecogs.com/png.latex?%5C%7B(x,y)%20%5Cin%20F%20~%20:~%20x%20%5Cin%20C%5C%7D">.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://your-website-url.example.com/posts/numeros/funcion-restriccion.png" class="img-fluid figure-img"></p>

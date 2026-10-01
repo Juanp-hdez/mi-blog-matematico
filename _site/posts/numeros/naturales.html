@@ -473,7 +473,7 @@ dibujarSVG();
 <div id="interactivo-principio-del-palomar">
 <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 650px; margin: 20px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
 
-  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="pregunta-1">Intente introducir las letras x,y,z,w en las cajas, sin colocar mas de una letra en cada caja</h3>
+  <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="pregunta-1">Intente introducir las letras x,y,z,w en las cajas, sin colocar más de una letra en cada caja</h3>
   <p style="text-align: center; color: #64748b; font-size: 14px; margin-bottom: 20px;">
     <b>Arrastra</b> cada letra a una caja. Cada letra solo puede usarse <b>una sola vez</b> (se deshabilita al ser asignada, pero reaparece si la borras).
   </p>
@@ -679,7 +679,7 @@ render();
 </script>
 <p>Principio del palomar</p>
 </div>
-<p>El problema anterior es un ejemplo del <strong>Principio del Palomar</strong>, que establece que si hay más palomas que palomares y se quieren guardar todas las palomas en los palomares, obligatoriamente en algún palomar se tendrán que ubicar por lo menos dos palomas.</p>
+<p>El problema anterior es un ejemplo del <strong>Principio del Palomar</strong>, que establece que si hay más palomas que huecos en el palomar y se quieren guardar todas las palomas en los huecos, obligatoriamente en alguno de los huecos del palomar se tendrán que ubicar por lo menos dos palomas.</p>
 </section>
 <section id="ejemplos-de-funciones-sobreyectivas" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplos-de-funciones-sobreyectivas">Ejemplos de funciones sobreyectivas</h4>
@@ -740,28 +740,6 @@ render();
 </div>
 <p>Sobreyectividad de las funciones proyecciones</p>
 </div>
-</section>
-<section id="funciones-inyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="funciones-inyectivas">Funciones inyectivas</h4>
-<p>En la definición de función <span class="math inline">\(f:A \rightarrow B\)</span>, sabemos que cada elemento de <span class="math inline">\(A\)</span> tiene que estar conectado con un único elemento de <span class="math inline">\(B\)</span>, pero en la definición de función se permite que dos elementos distintos del conjunto <span class="math inline">\(A\)</span> estén relacionados con el mismo elemento del conjunto <span class="math inline">\(B\)</span>, es decir, puede existir un elemento <span class="math inline">\(b \in B\)</span> para el cual existen dos elementos distintos <span class="math inline">\(a_{1}, a_{2} \in A\)</span> tal que <span class="math inline">\(b=f(a_{1})=f(a_{2})\)</span>, o de manera equivalente, tal que <span class="math inline">\((a_{1},b), (a_{2},b) \in F \subseteq A \times B\)</span>.</p>
-<p>Por ejemplo, en la función del siguiente gráfico,</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="no_inyectiva.png" class="img-fluid figure-img"></p>
-<figcaption>figura 7.</figcaption>
-</figure>
-</div>
-<p>los elementos <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> se relacionan con el mismo elemento <span class="math inline">\(z \in B\)</span>, es decir, <span class="math inline">\(f(b)=z=f(c)\)</span>.</p>
-<p>Uno función es <strong>inyectiva</strong> si no ocurre lo anterior, es decir:</p>
-<p><strong>Función inyectiva:</strong> Decimos que una función <span class="math inline">\(f: A \rightarrow B\)</span> es inyectiva si para cada elemento <span class="math inline">\(b \in B\)</span> existe a lo sumo un elemento <span class="math inline">\(a \in A\)</span> tal que <span class="math inline">\(f(a) = b\)</span>, es decir, no existen dos elementos distintos de <span class="math inline">\(A\)</span> que se relacionen con el mismo elemento de <span class="math inline">\(B\)</span>. De manera equivalente, <span class="math inline">\(f(a_1) = f(a_2)\)</span> implica <span class="math inline">\(a_1 = a_2\)</span> (la única forma que de hayan dos flechas llegando un mismo elemento, es que sean la misma flecha).</p>
-<p>Del gráfico <a href="#sobreyectividad-proyecciones">Sobreyectividad de las funciones proyecciones</a>, podemos ver que las funciones <span class="math inline">\(\pi_{1}: A \times B \rightarrow A\)</span> y <span class="math inline">\(\pi_{2}: A \times B \rightarrow B\)</span> no son inyectivas, ya que dado <span class="math inline">\(a \in A\)</span> todos los elementos de la línea roja vertical continua se relacionan con el mismo elemento <span class="math inline">\(a \in A\)</span>, y dado <span class="math inline">\(b \in B\)</span> todos los elementos de la línea azul horizontal continua se relacionan con el mismo elemento <span class="math inline">\(b \in B\)</span>.</p>
-</section>
-<section id="ejemplos-de-funciones-inyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-inyectivas">Ejemplos de funciones inyectivas</h4>
-<ol type="1">
-<li><p>Si <span class="math inline">\(A\)</span> es un conjunto, la función identidad id<span class="math inline">\(\textrm{id}_{A}: A \rightarrow A\)</span> que a cada elemento <span class="math inline">\(a \in A\)</span> le asigna el mismo elemento <span class="math inline">\(a \in A\)</span>, es decir, <span class="math inline">\(\textrm{id}_{A}(a)=a\)</span>, es una función inyectiva.</p></li>
-<li><p>Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son conjunto y fijamos un elemento <span class="math inline">\(b_{0} \in B\)</span>, entonces la función constante <span class="math inline">\(f: A \rightarrow A \times B\)</span> definida como <span class="math inline">\(f(a)=(a,b_{0})\)</span> para todo <span class="math inline">\(a \in A\)</span>, es inyectiva, ya que si <span class="math inline">\(f(a_1)=f(a_2)\)</span>, entonces <span class="math inline">\((a_1,b_{0})=(a_2,b_{0})\)</span>, lo que implica <span class="math inline">\(a_1=a_2\)</span>.</p></li>
-</ol>
 </section>
 <section id="ejemplo-interactivo-de-función-sobreyectiva" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-sobreyectiva">Ejemplo interactivo de función sobreyectiva</h4>
@@ -935,6 +913,28 @@ render();
 <p><strong>Ayuda:</strong> Encuentre cuántas funciones que no sean sobreyectivas se pueden construir y réstelas del total de funciones posibles.</p>
 <p><strong>Imagen de una función:</strong> Dada una función <span class="math inline">\(f:A \rightarrow B\)</span> definimos su imagen que denotaremos <span class="math inline">\(\textrm{im}(f) \subseteq B\)</span> como el conjunto de todos los elementos de <span class="math inline">\(B\)</span> que están relacionados con algún elemento de <span class="math inline">\(A\)</span>, es decir, <span class="math inline">\(\textrm{im}(f)=\{b \in B~ :~ \textrm{existe}~ a \in A~ \textrm{con}~ f(a)=b\}\)</span>.</p>
 <p>Una función <span class="math inline">\(f: A \rightarrow B\)</span> es sobreyectiva si y solo si <span class="math inline">\(\textrm{im}(f)=B\)</span>.</p>
+</section>
+<section id="funciones-inyectivas" class="level4">
+<h4 class="anchored" data-anchor-id="funciones-inyectivas">Funciones inyectivas</h4>
+<p>En la definición de función <span class="math inline">\(f:A \rightarrow B\)</span>, sabemos que cada elemento de <span class="math inline">\(A\)</span> tiene que estar conectado con un único elemento de <span class="math inline">\(B\)</span>, pero en la definición de función se permite que dos elementos distintos del conjunto <span class="math inline">\(A\)</span> estén relacionados con el mismo elemento del conjunto <span class="math inline">\(B\)</span>, es decir, puede existir un elemento <span class="math inline">\(b \in B\)</span> para el cual existen dos elementos distintos <span class="math inline">\(a_{1}, a_{2} \in A\)</span> tal que <span class="math inline">\(b=f(a_{1})=f(a_{2})\)</span>, o de manera equivalente, tal que <span class="math inline">\((a_{1},b), (a_{2},b) \in F \subseteq A \times B\)</span>.</p>
+<p>Por ejemplo, en la función del siguiente gráfico,</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="no_inyectiva.png" class="img-fluid figure-img"></p>
+<figcaption>figura 7.</figcaption>
+</figure>
+</div>
+<p>los elementos <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> se relacionan con el mismo elemento <span class="math inline">\(z \in B\)</span>, es decir, <span class="math inline">\(f(b)=z=f(c)\)</span>.</p>
+<p>Uno función es <strong>inyectiva</strong> si no ocurre lo anterior, es decir:</p>
+<p><strong>Función inyectiva:</strong> Decimos que una función <span class="math inline">\(f: A \rightarrow B\)</span> es inyectiva si para cada elemento <span class="math inline">\(b \in B\)</span> existe a lo sumo un elemento <span class="math inline">\(a \in A\)</span> tal que <span class="math inline">\(f(a) = b\)</span>, es decir, no existen dos elementos distintos de <span class="math inline">\(A\)</span> que se relacionen con el mismo elemento de <span class="math inline">\(B\)</span>. De manera equivalente, <span class="math inline">\(f(a_1) = f(a_2)\)</span> implica <span class="math inline">\(a_1 = a_2\)</span> (la única forma que de hayan dos flechas llegando un mismo elemento, es que sean la misma flecha).</p>
+<p>Del gráfico <a href="#sobreyectividad-proyecciones">Sobreyectividad de las funciones proyecciones</a>, podemos ver que las funciones <span class="math inline">\(\pi_{1}: A \times B \rightarrow A\)</span> y <span class="math inline">\(\pi_{2}: A \times B \rightarrow B\)</span> no son inyectivas, ya que dado <span class="math inline">\(a \in A\)</span> todos los elementos de la línea roja vertical continua se relacionan con el mismo elemento <span class="math inline">\(a \in A\)</span>, y dado <span class="math inline">\(b \in B\)</span> todos los elementos de la línea azul horizontal continua se relacionan con el mismo elemento <span class="math inline">\(b \in B\)</span>.</p>
+</section>
+<section id="ejemplos-de-funciones-inyectivas" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-inyectivas">Ejemplos de funciones inyectivas</h4>
+<ol type="1">
+<li><p>Si <span class="math inline">\(A\)</span> es un conjunto, la función identidad <span class="math inline">\(\textrm{id}_{A}: A \rightarrow A\)</span> que a cada elemento <span class="math inline">\(a \in A\)</span> le asigna el mismo elemento <span class="math inline">\(a \in A\)</span>, es decir, <span class="math inline">\(\textrm{id}_{A}(a)=a\)</span> para todo <span class="math inline">\(a \in A\)</span>, es una función inyectiva.</p></li>
+<li><p>Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son conjunto y fijamos un elemento <span class="math inline">\(b_{0} \in B\)</span>, entonces la función <span class="math inline">\(f: A \rightarrow A \times B\)</span> definida como <span class="math inline">\(f(a)=(a,b_{0})\)</span> para todo <span class="math inline">\(a \in A\)</span>, es inyectiva, ya que si <span class="math inline">\(f(a_1)=f(a_2)\)</span>, entonces <span class="math inline">\((a_1,b_{0})=(a_2,b_{0})\)</span>, lo que implica <span class="math inline">\(a_1=a_2\)</span>.</p></li>
+</ol>
 </section>
 <section id="ejemplo-interactivo-de-función-inyectiva" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-inyectiva">Ejemplo interactivo de función inyectiva</h4>
@@ -2020,7 +2020,7 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
 </b></b></section><b><b>
 <section id="restricción-de-una-función" class="level4">
 <h4 class="anchored" data-anchor-id="restricción-de-una-función">Restricción de una función</h4>
-<p>Supongamos que tenemos una función <span class="math inline">\(f: A \rightarrow B\)</span> y que <span class="math inline">\(C \subseteq A\)</span> es un subconjunto. La función <span class="math inline">\(f\)</span> induce una función <span class="math inline">\(f|_{C}: C \rightarrow B\)</span> que llamaremos <strong>la restricción de <span class="math inline">\(f\)</span> al subconjunto <span class="math inline">\(C\)</span></strong>, definida como <span class="math inline">\(f|_{C}(x)=f(x)\)</span> si <span class="math inline">\(x \in C\)</span>. Si <span class="math inline">\(F \subseteq A \times B\)</span> es el conjunto que define a la función <span class="math inline">\(f\)</span>, el conjunto que define a <span class="math inline">\(f|_{C}\)</span> es <span class="math inline">\(\{(x,y) \in F ~ :~ x \in C\}\)</span>.</p>
+<p>Supongamos que tenemos una función <span class="math inline">\(f: A \rightarrow B\)</span> y que <span class="math inline">\(C \subseteq A\)</span> es un subconjunto. La función <span class="math inline">\(f\)</span> induce una función <span class="math inline">\(f|_{C}: C \rightarrow B\)</span> que llamaremos la restricción de <span class="math inline">\(f\)</span> al subconjunto <span class="math inline">\(C\)</span>, definida como <span class="math inline">\(f|_{C}(x)=f(x)\)</span> si <span class="math inline">\(x \in C\)</span>. Si <span class="math inline">\(F \subseteq A \times B\)</span> es el conjunto que define a la función <span class="math inline">\(f\)</span>, el conjunto que define a <span class="math inline">\(f|_{C}\)</span> es <span class="math inline">\(\{(x,y) \in F ~ :~ x \in C\}\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="funcion-restriccion.png" class="img-fluid figure-img"></p>
