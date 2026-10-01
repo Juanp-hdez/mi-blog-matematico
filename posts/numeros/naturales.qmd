@@ -1856,6 +1856,12 @@ Si tenemos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, tenemos entonc
 
 #### Restricción de una función
 
-Supongamos   
+Supongamos que tenemos una función $f: A \rightarrow B$ y que $C \subseteq A$ es un subconjunto. La función $f$ induce una función $f|_{C}: C \rightarrow B$ que llamaremos la restricción de $f$ al subconjunto $C$, definida como $f|_{C}(x)=f(x)$ si $x \in C$.
+
+Si $F \subseteq A \times B$ es el conjunto que define a la función $f$, el conjunto que define a $f|_{C}$ es $\{(x,y) \in F ~ :~ x \in C\}$. 
 
 ![Figura 9.](funcion-restriccion.png)
+
+#### Inversa de una función con respecto a la composición
+
+Una propiedad importante de las funciones inyectivas, es que al invertir la dirección de las flechas, se obtiene una función. Si $f: A \rightarrow B$ es una función inyectiva, al reversar las flechas se obtiene una función $f^{-1}: \textrm{im}(f) \rightarrow A$.
