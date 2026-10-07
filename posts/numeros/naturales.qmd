@@ -2180,3 +2180,6 @@ Use que la composición de funciones es asociativa, es decir, si $f: A \rightarr
 })();
 </script>
 ```
+## Construcción de los números naturales
+
+### Axiomas de Peano 
