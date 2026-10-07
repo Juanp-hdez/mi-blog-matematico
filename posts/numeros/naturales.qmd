@@ -2188,6 +2188,7 @@ Como dijimos anteriormente, hay distintas formas de construir los números natur
 
 El conjunto de los números naturales que denotaremos por $\mathbb{N}$, se define como un conjunto que satisface los siguientes axiomas:
 
+::: {.content-visible when-format="html"}
 ```{=tex}
 \begin{itemize}
   \item Existe un elemento $0 \in$ $\mathbb{N}$.
