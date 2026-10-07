@@ -2167,8 +2167,15 @@ render();
 </section>
 <section id="construcción-de-los-números-naturales" class="level2">
 <h2 class="anchored" data-anchor-id="construcción-de-los-números-naturales">Construcción de los números naturales</h2>
+<p>Como dijimos anteriormente, hay distintas formas de construir los números naturales, y una de ellas es a partir de los axiomas de Peano. Vamos a discutir la construcción del conjunto <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> a partir de los axiomas de Peano.</p>
 <section id="axiomas-de-peano" class="level3">
 <h3 class="anchored" data-anchor-id="axiomas-de-peano">Axiomas de Peano</h3>
+<p>El conjunto de los números naturales que denotaremos por <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">, se define como un conjunto que satisface los siguientes axiomas:</p>
+<img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bitemize%7D">
+Existe un elemento <img src="https://latex.codecogs.com/png.latex?0%20%5Cin"> <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">.
+Existe una función inyectiva <img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D">, que llamaremos función sucesor.
+El elemento <img src="https://latex.codecogs.com/png.latex?0"> no pertenece a la imagen de la función <img src="https://latex.codecogs.com/png.latex?S">, es decir, <img src="https://latex.codecogs.com/png.latex?0%20%5Cnotin%20%5Ctextrm%7Bim%7D(S)">. Esto equivale a decir que <img src="https://latex.codecogs.com/png.latex?0"> no es sucesor de ningún número natural, ya que no existe <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> tal que <img src="https://latex.codecogs.com/png.latex?0=S(n)">.
+<p> Si <img src="https://latex.codecogs.com/png.latex?A%20%5Csubseteq%20%5Cmathbb%7BN%7D"> es un subconjunto tal que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A"> y si para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A"> implica que <img src="https://latex.codecogs.com/png.latex?S(n)%20%5Cin%20A">, entonces <img src="https://latex.codecogs.com/png.latex?A%20=%20%5Cmathbb%7BN%7D">. \end{itemize}$</p>
 
 
 </section>
