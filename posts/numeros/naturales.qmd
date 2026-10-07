@@ -2188,9 +2188,11 @@ Como dijimos anteriormente, hay distintas formas de construir los números natur
 
 El conjunto de los números naturales que denotaremos por $\mathbb{N}$, se define como un conjunto que satisface los siguientes axiomas:
 
-$\begin{enumerate$
+```{=tex}
+\begin{enumerate}
   \item Existe un elemento $0 \in$ $\mathbb{N}$.
   \item Existe una función inyectiva $S: \mathbb{N} \rightarrow \mathbb{N}$, que llamaremos función sucesor.
   \item El elemento $0$ no pertenece a la imagen de la función $S$, es decir, $0 \notin \textrm{im}(S)$. Esto equivale a decir que $0$ no es sucesor de ningún número natural, ya que no existe $n \in \mathbb{N}$ tal que $0=S(n)$.
   \item \textbf{Principio de inducción:} Si $A \subseteq \mathbb{N}$ es un subconjunto tal que $0 \in A$ y si para todo $n \in \mathbb{N}$ se tiene que $n \in A$ implica que $S(n) \in A$, entonces $A = \mathbb{N}$.
-\end{enumerate}$
+\end{enumerate}
+```
