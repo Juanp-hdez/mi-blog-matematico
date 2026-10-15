@@ -1866,7 +1866,7 @@ Si $F \subseteq A \times B$ es el conjunto que define a la función $f$, el conj
 #### Pregunta 
 ¿Qué puede decir sobre la restricción del codominio?, es decir, si $f: A \rightarrow B$ y $C \subset B$, ¿es $f: A \rightarrow C$ una función? 
 
-Demuestre que si $f: A \rightarrow B$ es una funcióny $C \subset B$, entonces $f: A \rightarrow C$ es una función si y solo si $\textrm{im}(f) \subseteq C$.
+Demuestre que si $f: A \rightarrow B$ es una función y $C \subset B$, entonces $f: A \rightarrow C$ es una función si y solo si $\textrm{im}(f) \subseteq C$.
 
 #### Inversa de una función con respecto a la composición
 
@@ -2196,14 +2196,26 @@ El conjunto de los números naturales que denotaremos por $\mathbb{N}$, se defin
 * Existe un elemento $0 \in$ $\mathbb{N}$.
 * Existe una función inyectiva $S: \mathbb{N} \rightarrow \mathbb{N}$, que llamaremos función sucesor. Para cada $n \in \mathbb{N}$, al elemento $S(n)$ se le llamará el sucesor de $n$.
 * El elemento $0$ no pertenece a la imagen de la función $S$, es decir, $0 \notin \textrm{im}(S)$. Esto equivale a decir que $0$ no es sucesor de ningún número natural, ya que no existe $n \in \mathbb{N}$ tal que $0=S(n)$. 
-* \textbf{Principio de inducción:} Si $A$ es un conjunto que satisface:
+* $\textbf{Principio de inducción:}$ Si $A$ es un conjunto que satisface:
 **i)** $0 \in A$,   **ii)** $n \in \mathbb{N}$ y $n \in A$ implica que $S(n) \in A$,  
 entonces $\mathbb{N} \subseteq A$. Es decir, todo conjunto que contenga al $0$ y contenga el sucesor de cada uno de los elementos naturales dentro de $A$, debe contener a todos los números naturales.
 
-Del principio de inducción se deduce que $\textrm{im}(S) \cup \{0\}=\mathbb{N}$, puesto que $\textrm{im}(S) \cup \{0\} \subseteq \mathbb{N}$, $0 \in \textrm{im}(S) \cup \{0\}$, y si $n \in \mathbb{N}$ es tal que $n \in \textrm{im}(S) \cup \{0\}$ entonces $S(n) \in \textrm{im}(S) \subset \textrm{im}(S) \cup \{0\}$.
-Como $0 \notin \textrm{im}(S)$, se tiene que $\textrm{im}(S)=\mathbb{N} \setminus \{0\}$. Esto equivale a decir que la función $S: \mathbb{N} \rightarrow \mathbb{N} \setminus \{0\}$ es sobreyectiva.
+Del principio de inducción se deduce que $\textrm{im}(S) \cup \{0\}=\mathbb{N}$, ya que $0 \in \textrm{im}(S) \cup \{0\}$, y si $n \in \mathbb{N}$ es tal que $n \in \textrm{im}(S) \cup \{0\}$ entonces $S(n) \in \textrm{im}(S) \subset \textrm{im}(S) \cup \{0\}$. Por lo tanto $\mathbb{N} \subseteq \textrm{im}(S) \cup \{0\}$, y como claramente $\textrm{im}(S) \cup \{0\} \subseteq \mathbb{N}$, se tiene que $\textrm{im}(S) \cup \{0\}=\mathbb{N}$. Como $0 \notin \textrm{im}(S)$, se tiene que $\textrm{im}(S)=\mathbb{N} \setminus \{0\}$. Esto equivale a decir que la función $S: \mathbb{N} \rightarrow \mathbb{N} \setminus \{0\}$ es sobreyectiva.
 
 Observe que como $S: \mathbb{N} \rightarrow \mathbb{N}$ es inyectiva, entonces la función $S: \mathbb{N} \rightarrow \mathbb{N} \setminus \{0\}$ también es inyectiva, y al ser sobreyectiva tenemos entonces que $S: \mathbb{N} \rightarrow \mathbb{N} \setminus \{0\}$ es biyectiva.
+
+#### Notación
+
+Vamos a usar los símbolos $1, 2, 3, 4, 5, 6, 7, 8, 9$ (que estamos acostumbrados a utilizar día a día) para denotar los primeros nueve términos que se obtienen al iterar $S$ con ella misma y evaluar en el elemento $0$. Es decir, 
+* 1=S(0)
+* 2=S(S(0))=S(1)
+* 3=S(S(S(0)))=S(2)
+* 4=S(S(S(S(0))))=S(3)
+* 5=S(S(S(S(S(0)))))=S(4)
+* 6=S(S(S(S(S(S(0))))))=S(5)
+* 7=S(S(S(S(S(S(S(0)))))))=S(6)
+* 8=S(S(S(S(S(S(S(S(0))))))))=S(7)
+* 9=S(S(S(S(S(S(S(S(S(0)))))))))=S(8).
 
 
 
