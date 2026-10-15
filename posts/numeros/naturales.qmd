@@ -1863,6 +1863,11 @@ Si $F \subseteq A \times B$ es el conjunto que define a la función $f$, el conj
 
 ![Figura 9.](funcion-restriccion.png)
 
+#### Pregunta 
+¿Qué puede decir sobre la restricción del codominio?, es decir, si $f: A \rightarrow B$ y $C \subset B$, ¿es $f: A \rightarrow C$ una función? 
+
+Demuestre que si $f: A \rightarrow B$ es una funcióny $C \subset B$, entonces $f: A \rightarrow C$ es una función si y solo si $\textrm{im}(f) \subseteq C$.
+
 #### Inversa de una función con respecto a la composición
 
 Una propiedad importante de las funciones inyectivas, es que al invertir la dirección de las flechas, se obtiene una función. Si $f: A \rightarrow B$ es una función inyectiva, al reversar las flechas se obtiene una función $f^{-1}: \textrm{im}(f) \rightarrow A$.
