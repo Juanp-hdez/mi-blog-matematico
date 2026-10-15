@@ -2194,5 +2194,6 @@ El conjunto de los números naturales que denotaremos por $\mathbb{N}$, se defin
 * \textbf{Principio de inducción:} Si $A \subseteq \mathbb{N}$ es un subconjunto tal que $0 \in A$ y si para todo $n \in \mathbb{N}$ se tiene que $n \in A$ implica que $S(n) \in A$, entonces $A = \mathbb{N}$.
 
 Del principio de inducción se deduce que $\textrm{im}(S) \cup \{0\}=\mathbb{N}$, puesto que $\textrm{im}(S) \cup \{0\} \subseteq \mathbb{N}$, $0 \in \textrm{im}(S) \cup \{0\}$, y si $n \in \mathbb{N}$ es tal que $n \in \textrm{im}(S) \cup \{0\}$ entonces $S(n) \in \textrm{im}(S) \subset \textrm{im}(S) \cup \{0\}$.
+Como $0 \notin \textrm{im}(S)$, se tiene que $\textrm{im}(S)=\mathbb{N} \setminus \{0\}$. Esto equivale a decir que la función $S: \mathbb{N} \rightarrow \mathbb{N} \setminus \{0\}$ es sobreyectiva.
 
-Como $0 \notin \textrm{im}(S)$, se tiene que $\textrm{im}(S)=\mathbb{N} \setminus \{0\}$.
+sdasdfsafs
