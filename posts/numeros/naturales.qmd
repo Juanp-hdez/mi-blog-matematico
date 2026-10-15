@@ -2207,15 +2207,16 @@ Observe que como $S: \mathbb{N} \rightarrow \mathbb{N}$ es inyectiva, entonces l
 #### Notación
 
 Vamos a usar los símbolos $1, 2, 3, 4, 5, 6, 7, 8, 9$ (que estamos acostumbrados a utilizar día a día) para denotar los primeros nueve términos que se obtienen al iterar $S$ con ella misma y evaluar en el elemento $0$. Es decir, 
-* 1=S(0)
-* 2=S(S(0))=S(1)
-* 3=S(S(S(0)))=S(2)
-* 4=S(S(S(S(0))))=S(3)
-* 5=S(S(S(S(S(0)))))=S(4)
-* 6=S(S(S(S(S(S(0))))))=S(5)
-* 7=S(S(S(S(S(S(S(0)))))))=S(6)
-* 8=S(S(S(S(S(S(S(S(0))))))))=S(7)
-* 9=S(S(S(S(S(S(S(S(S(0)))))))))=S(8).
+
+* $1=S(0)$
+* $2=S(S(0))=S(1)$
+* $3=S(S(S(0)))=S(2)$
+* $4=S(S(S(S(0))))=S(3)$
+* $5=S(S(S(S(S(0)))))=S(4)$
+* $6=S(S(S(S(S(S(0))))))=S(5)$    
+* $7=S(S(S(S(S(S(S(0)))))))=S(6)$
+* $8=S(S(S(S(S(S(S(S(0))))))))=S(7)$
+* $9=S(S(S(S(S(S(S(S(S(0)))))))))=S(8)$.
 
 
 
