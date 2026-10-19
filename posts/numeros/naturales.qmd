@@ -2206,7 +2206,7 @@ Observe que como $S: \mathbb{N} \rightarrow \mathbb{N}$ es inyectiva, entonces l
 
 #### Notación
 
-Vamos a usar los símbolos $1, 2, 3, 4, 5, 6, 7, 8, 9$ (que estamos acostumbrados a utilizar día a día) para denotar los primeros nueve términos que se obtienen al iterar $S$ con ella misma y evaluar en el elemento $0$. Es decir, 
+Vamos a usar los símbolos $1, 2, 3, 4, 5, 6, 7, 8, 9$ (que estamos acostumbrados a utilizar día a día) para denotar los primeros siguientes términos que se obtienen al iterar $S$ con ella misma y evaluar en el elemento $0$. 
 
 * $1=S(0)$
 * $2=S(S(0))=S(1)$
@@ -2218,5 +2218,20 @@ Vamos a usar los símbolos $1, 2, 3, 4, 5, 6, 7, 8, 9$ (que estamos acostumbrado
 * $8=S(S(S(S(S(S(S(S(0))))))))=S(7)$
 * $9=S(S(S(S(S(S(S(S(S(0)))))))))=S(8)$.
 
+Gracias a la aritmética de los números naturales, vamos a poder expresar todos los elementos del conjunto $\mathbb{N}$ usando los símbolos anteriores.
 
+### Artitmética de los números naturales
 
+De manera general, una operación binaria en un conjunto $A$, es una función $f: A \times A \rightarrow A$. Veamos que en el conjunto de los números naturales, hay una operación binaria que llamaremos suma, que permite obtener todos los elementos de $\mathbb{N}$ a partir del $0$ y de la función sucesor $S$.
+
+#### Suma de números naturales
+
+Definamos la operación binaria suma en el conjunto $\mathbb{N}$, que denotaremos por $+ : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}$, de la siguiente manera:
+* Para todo $n \in \mathbb{N}$, se tiene que $+(n,0)=n$.
+* Para todo $n, m \in \mathbb{N}$, se tiene que $+(n + S(m)) = S(n + m)$.
+
+De ahora en adelante, denotaremos $+(n,m)=n+m$.
+
+La primera propiedad anterior nos dice que cualquier natural $n \in \mathbb{N}$ sumado con el elemento $0$ produce el mismo elemento $n$. La segunda propiedad es más difícil de explicar, pero vamos a ir deduciendo lo que se desea con ella.
+
+Observe por ejemplo que usando las dos propiedades anteriores tenemos que $n+1=n+S(0)=S(n+0)=S(n)$, es decir, una manera de obtener el sucesor de un número natural $n$ es sumándole $1$.  

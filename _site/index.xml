@@ -2187,7 +2187,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <p>Observe que como <img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D"> es inyectiva, entonces la función <img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D"> también es inyectiva, y al ser sobreyectiva tenemos entonces que <img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D"> es biyectiva.</p>
 <section id="notación" class="level4">
 <h4 class="anchored" data-anchor-id="notación">Notación</h4>
-<p>Vamos a usar los símbolos <img src="https://latex.codecogs.com/png.latex?1,%202,%203,%204,%205,%206,%207,%208,%209"> (que estamos acostumbrados a utilizar día a día) para denotar los primeros nueve términos que se obtienen al iterar <img src="https://latex.codecogs.com/png.latex?S"> con ella misma y evaluar en el elemento <img src="https://latex.codecogs.com/png.latex?0">. Es decir,</p>
+<p>Vamos a usar los símbolos <img src="https://latex.codecogs.com/png.latex?1,%202,%203,%204,%205,%206,%207,%208,%209"> (que estamos acostumbrados a utilizar día a día) para denotar los primeros siguientes términos que se obtienen al iterar <img src="https://latex.codecogs.com/png.latex?S"> con ella misma y evaluar en el elemento <img src="https://latex.codecogs.com/png.latex?0">.</p>
 <ul>
 <li><img src="https://latex.codecogs.com/png.latex?1=S(0)"></li>
 <li><img src="https://latex.codecogs.com/png.latex?2=S(S(0))=S(1)"></li>
@@ -2200,6 +2200,18 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <li><img src="https://latex.codecogs.com/png.latex?8=S(S(S(S(S(S(S(S(0))))))))=S(7)"></li>
 <li><img src="https://latex.codecogs.com/png.latex?9=S(S(S(S(S(S(S(S(S(0)))))))))=S(8)">.</li>
 </ul>
+<p>Gracias a la aritmética de los números naturales, vamos a poder expresar todos los elementos del conjunto <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> usando los símbolos anteriores.</p>
+</section>
+</section>
+<section id="artitmética-de-los-números-naturales" class="level3">
+<h3 class="anchored" data-anchor-id="artitmética-de-los-números-naturales">Artitmética de los números naturales</h3>
+<p>De manera general, una operación binaria en un conjunto <img src="https://latex.codecogs.com/png.latex?A">, es una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Ctimes%20A%20%5Crightarrow%20A">. Veamos que en el conjunto de los números naturales, hay una operación binaria que llamaremos suma, que permite obtener todos los elementos de <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> a partir del <img src="https://latex.codecogs.com/png.latex?0"> y de la función sucesor <img src="https://latex.codecogs.com/png.latex?S">.</p>
+<section id="suma-de-números-naturales" class="level4">
+<h4 class="anchored" data-anchor-id="suma-de-números-naturales">Suma de números naturales</h4>
+<p>Definamos la operación binaria suma en el conjunto <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">, que denotaremos por <img src="https://latex.codecogs.com/png.latex?+%20:%20%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D">, de la siguiente manera: * Para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, se tiene que <img src="https://latex.codecogs.com/png.latex?+(n,0)=n">. * Para todo <img src="https://latex.codecogs.com/png.latex?n,%20m%20%5Cin%20%5Cmathbb%7BN%7D">, se tiene que <img src="https://latex.codecogs.com/png.latex?+(n%20+%20S(m))%20=%20S(n%20+%20m)">.</p>
+<p>De ahora en adelante, denotaremos <img src="https://latex.codecogs.com/png.latex?+(n,m)=n+m">.</p>
+<p>La primera propiedad anterior nos dice que cualquier natural <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> sumado con el elemento <img src="https://latex.codecogs.com/png.latex?0"> produce el mismo elemento <img src="https://latex.codecogs.com/png.latex?n">. La segunda propiedad es más difícil de explicar, pero vamos a ir deduciendo lo que se desea con ella.</p>
+<p>Observe por ejemplo que usando las dos propiedades anteriores tenemos que <img src="https://latex.codecogs.com/png.latex?n+1=n+S(0)=S(n+0)=S(n)">, es decir, una manera de obtener el sucesor de un número natural <img src="https://latex.codecogs.com/png.latex?n"> es sumándole <img src="https://latex.codecogs.com/png.latex?1">.</p>
 
 
 </section>
