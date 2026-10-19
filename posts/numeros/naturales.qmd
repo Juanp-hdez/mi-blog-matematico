@@ -2227,6 +2227,7 @@ De manera general, una operación binaria en un conjunto $A$, es una función $f
 #### Suma de números naturales
 
 Definamos la operación binaria suma en el conjunto $\mathbb{N}$, que denotaremos por $+ : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}$, de la siguiente manera:
+
 * Para todo $n \in \mathbb{N}$, se tiene que $+(n,0)=n$.
 * Para todo $n, m \in \mathbb{N}$, se tiene que $+(n + S(m)) = S(n + m)$.
 
