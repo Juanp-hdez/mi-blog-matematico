@@ -2388,12 +2388,26 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="suma-de-números-naturales">Suma de números naturales</h4>
 <p>Definamos la operación binaria suma en el conjunto <span class="math inline">\(\mathbb{N}\)</span>, que denotaremos por <span class="math inline">\(+ : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}\)</span>, de la siguiente manera:</p>
 <ul>
-<li>Para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, se tiene que <span class="math inline">\(+(n,0)=n\)</span>.</li>
-<li>Para todo <span class="math inline">\(n, m \in \mathbb{N}\)</span>, se tiene que <span class="math inline">\(+(n + S(m)) = S(n + m)\)</span>.</li>
+<li>Para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, definimos <span class="math inline">\(+(n,0)=n\)</span>.</li>
+<li>Para todo <span class="math inline">\(n, m \in \mathbb{N}\)</span>, definimos <span class="math inline">\(+(n, S(m)) = S(+(n, m))\)</span>.</li>
 </ul>
-<p>De ahora en adelante, denotaremos <span class="math inline">\(+(n,m)=n+m\)</span>.</p>
-<p>La primera propiedad anterior nos dice que cualquier natural <span class="math inline">\(n \in \mathbb{N}\)</span> sumado con el elemento <span class="math inline">\(0\)</span> produce el mismo elemento <span class="math inline">\(n\)</span>. La segunda propiedad es más difícil de explicar, pero vamos a ir deduciendo lo que se desea con ella.</p>
+<p>De ahora en adelante, denotaremos <span class="math inline">\(+(n,m)=n+m\)</span>. Con esta notación las dos propiedades anteriores se escriben como:</p>
+<ul>
+<li>Para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(n+0=n\)</span>.</li>
+<li>Para todo <span class="math inline">\(n, m \in \mathbb{N}\)</span>, <span class="math inline">\(n+S(m)=S(n+m)\)</span>.</li>
+</ul>
+<p>La primera propiedad nos dice que cualquier natural <span class="math inline">\(n \in \mathbb{N}\)</span> sumado con el elemento <span class="math inline">\(0\)</span> produce el mismo elemento <span class="math inline">\(n\)</span>. La segunda propiedad es más difícil de explicar, pero vamos a ir deduciendo lo que se desea con ella.</p>
 <p>Observe por ejemplo que usando las dos propiedades anteriores tenemos que <span class="math inline">\(n+1=n+S(0)=S(n+0)=S(n)\)</span>, es decir, una manera de obtener el sucesor de un número natural <span class="math inline">\(n\)</span> es sumándole <span class="math inline">\(1\)</span>.</p>
+<p>Antes de comenzar a deducir propiedades de la suma, veamos que en efecto la operación <span class="math inline">\(+: \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}\)</span> si es una función.</p>
+<p>Comencemos observando que para todo <span class="math inline">\(n,m \in \mathbb{N}\)</span>, la expresión <span class="math inline">\(n+m\)</span> está definida, es decir, <span class="math inline">\(+(n,m)=n+m \in \mathbb{N}\)</span>. Esto lo podemos probar usando el axioma de inducción (principio de inducción). Fijemos un elemento arbitrario <span class="math inline">\(n \in \mathbb{N}\)</span> y consideremos el conjunto <span class="math inline">\(A_{n}=\{m \in \mathbb{N} ~ : ~ n+m~ \textrm{está definido}\}\)</span>. Notemos que <span class="math inline">\(0 \in A_{n}\)</span>, ya que <span class="math inline">\(n+0=n \in \mathbb{N}\)</span>. Ahora supongamos que <span class="math inline">\(m \in A_{n}\)</span>, es decir, <span class="math inline">\(n+m\)</span> está definido. Por definición <span class="math inline">\(n+S(m)=S(n+m)\)</span>, y como <span class="math inline">\(n+m \in \mathbb{N}\)</span>, se tiene que <span class="math inline">\(S(n+m) \in \mathbb{N}\)</span>, es decir, <span class="math inline">\(n+S(m)\)</span> está definido. Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_{n}=\mathbb{N}\)</span>, es decir, para todo <span class="math inline">\(m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n+m\)</span> está definido. Lo anterior muestra que para cada <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que para todo <span class="math inline">\(m \in \mathbb{N}\)</span>, $n+m , y por lo tanto, a todo elemento <span class="math inline">\((n,m) \in \mathbb{N} \times \mathbb{N}\)</span>, le corresponde un únicoelemento <span class="math inline">\(n+m \in \mathbb{N}\)</span>.</p>
+</section>
+<section id="propiedades-de-la-suma" class="level4">
+<h4 class="anchored" data-anchor-id="propiedades-de-la-suma">Propiedades de la suma</h4>
+<ul>
+<li>La suma es conmutativa, es decir, para todo <span class="math inline">\(n,m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n+m=m+n\)</span>.</li>
+</ul>
+<p>Comencemos observando que <span class="math inline">\(0+n=0\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>. Para esto consideremos el conjunto <span class="math inline">\(A=\{n \in \mathbb{N} ~ : ~ 0+n=n\}\)</span>. Notemos que <span class="math inline">\(0 \in A\)</span>, ya que <span class="math inline">\(0+0=0\)</span>, y si <span class="math inline">\(n \in A\)</span> entonces <span class="math inline">\(S(n) \in A\)</span> ya que <span class="math inline">\(0+S(n)=S(0+n)=S(n)\)</span>. Por el principio de inducción, se tiene que <span class="math inline">\(A=\mathbb{N}\)</span>, y por lo tanto, <span class="math inline">\(0+n=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<p>Veamos ahora que para todo <span class="math inline">\(n,m \in \mathbb{N}\)</span>, <span class="math inline">\(n+m=m+n\)</span>. Fijemos un elemento arbitrario <span class="math inline">\(n \in \mathbb{N}\)</span> y consideremos el conjunto <span class="math inline">\(A_n=\{m \in \mathbb{N} ~ : ~ n+m=m+n\}\)</span>. Notemos que <span class="math inline">\(0 \in A_n\)</span>, ya que de lo anterior <span class="math inline">\(0+n=n=n+0\)</span>, y si <span class="math inline">\(m \in A_n\)</span> entonces <span class="math inline">\(S(m) \in A_n\)</span> ya que</p>
 
 
 </section>
