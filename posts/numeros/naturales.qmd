@@ -2249,9 +2249,14 @@ Lo anterior muestra que para cada $n \in \mathbb{N}$ se tiene que para todo $m \
 
 * La suma es asociativa, es decir, para todo $n,m,k \in \mathbb{N}$ se tiene que $(n+m)+k=n+(m+k)$.
 
-Fijemos una pareja $(n,m) \in \mathbb{N} \times \mathbb{N}$ y consideremos el conjunto $$A_{n,m}=\{k \in \mathbb{N} ~ : ~ (n+m)+k=n+(m+k)\}.$$ Notemos que $0 \in A_{n,m}$, ya que $(n+m)+0=n+m=n+(m+0)$. Ahora supongamos que $k \in A_{n,m}$, es decir, $(n+m)+k=n+(m+k)$. Por definición de la suma, se tiene que $(n+m)+S(k)=S((n+m)+k)=S(n+(m+k))=n+S(m+k)=n+(m+S(k))$, es decir, $S(k) \in A_{n,m}$. Por lo tanto, por el principio de inducción, se tiene que $A_{n,m}=\mathbb{N}$, y por lo tanto, $(n+m)+k=n+(m+k)$ para todo $k \in \mathbb{N}$.
+Fijemos una pareja $(n,m) \in \mathbb{N} \times \mathbb{N}$ y consideremos el conjunto $$A_{n,m}=\{k \in \mathbb{N} ~ : ~ (n+m)+k=n+(m+k)\}.$$ Notemos que $0 \in A_{n,m}$, ya que $(n+m)+0=n+m=n+(m+0)$. Ahora supongamos que $k \in A_{n,m}$, es decir, $(n+m)+k=n+(m+k)$. Por definición de la suma, se tiene que $$(n+m)+S(k)=S((n+m)+k)=S(n+(m+k))=n+S(m+k)=n+(m+S(k)),$$ es decir, $S(k) \in A_{n,m}$. Por lo tanto, por el principio de inducción, se tiene que $A_{n,m}=\mathbb{N}$, y por lo tanto, $(n+m)+k=n+(m+k)$ para todo $k \in \mathbb{N}$.
+
 * La suma es conmutativa, es decir, para todo $n,m \in \mathbb{N}$ se tiene que $n+m=m+n$.
 
 Comencemos observando que $0+n=0$ para todo $n \in \mathbb{N}$. Para esto consideremos el conjunto $A=\{n \in \mathbb{N} ~ : ~ 0+n=n\}$. Notemos que $0 \in A$, ya que $0+0=0$, y si $n \in A$ entonces $S(n) \in A$ ya que $0+S(n)=S(0+n)=S(n)$. Por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, $0+n=n$ para todo $n \in \mathbb{N}$.
 
-Veamos ahora que para todo $n,m \in \mathbb{N}$, $n+m=m+n$. Fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $A_n=\{m \in \mathbb{N} ~ : ~ n+m=m+n\}$. Notemos que $0 \in A_n$, ya que de lo anterior $0+n=n=n+0$, y si $m \in A_n$ entonces $S(m) \in A_n$ ya que 
+Veamos ahora que $n+S(0)=S(n)=S(0)+n$ para todo $n \in \mathbb{N}$. Para esto consideremos el conjunto $$A=\{n \in \mathbb{N} ~ : ~ n+S(0)=S(n)=S(0)+n\}.$$ Notemos que $0 \in A$, ya que $0+S(0)=S(0)=S(0)+0$, y si $n \in A$ entonces $S(n) \in A$ ya que $$S(0)+S(n)=S(S(0)+n)=S(n+S(0))=n+S(S(0))=(m+S(0))+S(0)=S(m)+S(0).$$ Por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, $n+S(0)=S(n)=S(0)+n$ para todo $n \in \mathbb{N}$.
+
+De lo anterior observemos que $n+S(m)=S(n)+m$ para todo $n,m \in \mathbb{N}$.
+
+Ahora, fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A_n=\{m \in \mathbb{N} ~ : ~ n+m=m+n\}.$$ Notemos que $0 \in A_n$, ya que de lo anterior $0+n=n=n+0$, y si $m \in A_n$ entonces $S(m) \in A_n$ ya que $$n+s(m)=n+(m+S(0))=(n+m)+S(0)=(m+n)+S(0)=m+(n+S(0))=m+S(n)=S(m)+n$$. Por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, $n+m=m+n$ para todo $m \in \mathbb{N}$.
