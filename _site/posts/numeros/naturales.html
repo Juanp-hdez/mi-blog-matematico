@@ -2456,6 +2456,34 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <li><strong>Transitividad</strong>: Supongamos que <span class="math inline">\(n,m,k \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n \leq m\)</span> y <span class="math inline">\(m \leq k\)</span>. Entonces existen <span class="math inline">\(t, s \in \mathbb{N}\)</span> tales que <span class="math inline">\(n+t=m\)</span> y <span class="math inline">\(m+s=k\)</span>. Sustituyendo en la segunda ecuación <span class="math inline">\(m\)</span> por <span class="math inline">\(n+t\)</span>, obtenemos que <span class="math inline">\((n+t)+s=k\)</span>, y por la asociatividad de la suma tenemos que <span class="math inline">\(n+(t+s)=k\)</span>, y como <span class="math inline">\(t+s \in \mathbb{N}\)</span>, se sigue que <span class="math inline">\(n \leq k\)</span>.</li>
 <li><strong>Totalidad</strong>: Dado <span class="math inline">\(m \in \mathbb{N}\)</span> consideremos el conjunto <span class="math display">\[A_{m}=\{n \in \mathbb{N} : n \leq m~ \vee ~ m \leq n\}.\]</span> Note que <span class="math inline">\(0 \in A_{m}\)</span>, ya que <span class="math inline">\(0 \leq m\)</span> para todo <span class="math inline">\(m \in \mathbb{N}\)</span>. Ahora, si <span class="math inline">\(n \in A_{m}\)</span> entonces <span class="math inline">\(S(n) \in A_{m}\)</span>. Para probar esto necesitamos analizar dos casos: cuando <span class="math inline">\(n \leq m\)</span> y cuando <span class="math inline">\(m \leq n\)</span>. Veamos solamente el primer caso ya que el otro caso es análogo. Supongamos entonces que <span class="math inline">\(n \leq m\)</span>, luego <span class="math inline">\(m=n+t\)</span> para cierto <span class="math inline">\(t \in \mathbb{N}\)</span>. Si <span class="math inline">\(t=0\)</span> entonces <span class="math inline">\(m=n\)</span> y por lo tanto <span class="math inline">\(m \leq S(m)=S(n)\)</span>, luego <span class="math inline">\(S(n) \in A_{m}\)</span>. Ahora, si <span class="math inline">\(t \neq 0\)</span> entonces <span class="math inline">\(t=S(k)\)</span> para cierto <span class="math inline">\(k \in \mathbb{N}\)</span>, luego <span class="math inline">\(m=n+S(k)=S(n)+k\)</span> y por lo tanto <span class="math inline">\(S(n) \leq m\)</span>, así <span class="math inline">\(S(n) \in A_{m}\)</span>. Del principio de inducción se sigue que <span class="math inline">\(A_{m}=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n \leq m\)</span> o <span class="math inline">\(m \leq n\)</span>. Como <span class="math inline">\(m\)</span> era arbitrario, se sigue que para todo <span class="math inline">\(n,m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n \leq m\)</span> o <span class="math inline">\(m \leq n\)</span>.</li>
 </ul>
+<p><strong>Observación:</strong> Al tener la relación de orden total <span class="math inline">\(\leq\)</span> en el conjunto de los números naturales, podemos definir la relación <span class="math inline">\(&lt;\)</span> de la siguiente manera: diremos que <span class="math inline">\(n &lt; m\)</span> si <span class="math inline">\(n \leq m\)</span> y <span class="math inline">\(n \neq m\)</span>. Observe que <span class="math inline">\(n&lt;m\)</span> si y solo si existe un número natural <span class="math inline">\(k \in \mathbb{N} \setminus \{0\}\)</span> tal que <span class="math inline">\(n+k=m\)</span>.</p>
+<p>Con esta definción anterior, observemos que para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, se tiene que <span class="math inline">\(n &lt; S(n)\)</span>. Esto se debe a que <span class="math inline">\(n \leq S(n)\)</span> y a que <span class="math inline">\(S(n) \neq n\)</span>.</p>
+<p><strong>¿Por qué <span class="math inline">\(n \neq S(n)\)</span>?</strong></p>
+<p>Esto se puede probar usando el principio de inducción. Consideremos el conjunto <span class="math display">\[A=\{n \in \mathbb{N} : n \neq S(n)\}.\]</span> Note que <span class="math inline">\(0 \in A\)</span>, ya que <span class="math inline">\(0 \neq S(0)\)</span> (<span class="math inline">\(0\)</span> no es sucesor de nadie). Ahora, si <span class="math inline">\(n \in A\)</span> entonces <span class="math inline">\(S(n) \in A\)</span> ya que si <span class="math inline">\(S(n)=S(S(n))\)</span> entonces por la inyectividad de la función <span class="math inline">\(S\)</span> se sigue que <span class="math inline">\(n=S(n)\)</span>, lo cual es absurdo ya que <span class="math inline">\(n \in A\)</span>. Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n \neq S(n)\)</span>.</p>
+<p>De lo anterior tenemos que <span class="math inline">\(0&lt;S(0)=1 &lt; S(1)=2 &lt; S(2)=3 &lt; S(3)=4 &lt; S(4)=5 &lt; S(5)=6 &lt; S(6)=7 &lt; S(7)=8 &lt; S(8)=9\)</span>.</p>
+</section>
+<section id="representación-gráfica-de-los-números-naturales" class="level4">
+<h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
+<p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
+<div id="a44070dc" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="naturales_files/figure-html/cell-2-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="689" height="167"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
+<div id="58d4997c" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="naturales_files/figure-html/cell-3-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="614" height="167"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>

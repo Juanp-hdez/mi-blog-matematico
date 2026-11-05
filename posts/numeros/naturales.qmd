@@ -2346,3 +2346,42 @@ ax.axis('off')
 
 plt.show()
 ```
+
+En general, dados $n,m \in \mathbb{N}$ con $n <m$, gráficamente los representaremos con $m$ a la derecha de $n$, como muestra la siguiente figura:
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import matplotlib.pyplot as plt
+
+# Crear figura
+fig, ax = plt.subplots(figsize=(8, 2))
+
+# Coordenadas relativas de los puntos (0 < n < m)
+puntos = {
+    '0': 0,
+    'n': 3,
+    'm': 6
+}
+
+# Dibujar la recta horizontal con flechas en ambos extremos
+ax.annotate('', xy=(7.5, 0), xytext=(-1.5, 0),
+            arrowprops=dict(arrowstyle="<->", color='black', lw=1.5))
+
+# Dibujar marcas, puntos y etiquetas matemáticas
+for etiqueta, x in puntos.items():
+    # Marca vertical
+    ax.plot([x, x], [-0.15, 0.15], color='black', lw=1.2)
+    # Punto destacado sobre la recta
+    ax.plot(x, 0, marker='o', color='black', markersize=5)
+    # Etiqueta en formato matemático
+    ax.text(x, -0.4, f"${etiqueta}$", ha='center', va='top', fontsize=14)
+
+# Ajustes de encuadre y limpieza de ejes
+ax.set_xlim(-2, 8)
+ax.set_ylim(-1, 1)
+ax.axis('off')
+
+plt.show()
+```
