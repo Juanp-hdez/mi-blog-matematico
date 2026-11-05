@@ -2304,3 +2304,45 @@ Veamos que en efecto esta es una relación de orden total en $\mathbb{N}$.
 * **Transitividad**: Supongamos que $n,m,k \in \mathbb{N}$ son tales que $n \leq m$ y $m \leq k$. Entonces existen $t, s \in \mathbb{N}$ tales que $n+t=m$ y $m+s=k$. Sustituyendo en la segunda ecuación $m$ por $n+t$, obtenemos que $(n+t)+s=k$, y por la asociatividad de la suma tenemos que $n+(t+s)=k$, y como $t+s \in \mathbb{N}$, se sigue que $n \leq k$.
 * **Totalidad**: Dado $m \in \mathbb{N}$ consideremos el conjunto $$A_{m}=\{n \in \mathbb{N} : n \leq m~ \vee ~ m \leq n\}.$$ Note que $0 \in A_{m}$, ya que $0 \leq m$ para todo $m \in \mathbb{N}$. Ahora, si $n \in A_{m}$ entonces $S(n) \in A_{m}$. Para probar esto necesitamos analizar dos casos: cuando $n \leq m$ y cuando $m \leq n$. Veamos solamente el primer caso ya que el otro caso es análogo. Supongamos entonces que $n \leq m$, luego $m=n+t$ para cierto $t \in \mathbb{N}$. Si $t=0$ entonces $m=n$ y por lo tanto $m \leq S(m)=S(n)$, luego $S(n) \in A_{m}$. Ahora, si $t \neq 0$ entonces $t=S(k)$ para cierto $k \in \mathbb{N}$, luego $m=n+S(k)=S(n)+k$ y por lo tanto $S(n) \leq m$, así $S(n) \in A_{m}$. Del principio de inducción se sigue que $A_{m}=\mathbb{N}$, y por lo tanto, para todo $n \in \mathbb{N}$ se tiene que $n \leq m$ o $m \leq n$.
 Como $m$ era arbitrario, se sigue que para todo $n,m \in \mathbb{N}$ se tiene que $n \leq m$ o $m \leq n$.
+
+**Observación:** Al tener la relación de orden total $\leq$ en el conjunto de los números naturales, podemos definir la relación $<$ de la siguiente manera: diremos que $n < m$ si $n \leq m$ y $n \neq m$. Observe que $n<m$ si y solo si existe un número natural $k \in \mathbb{N} \setminus \{0\}$ tal que $n+k=m$.
+
+Con esta definción anterior, observemos que para todo $n \in \mathbb{N}$, se tiene que $n < S(n)$. Esto se debe a que $n \leq S(n)$ y a que $S(n) \neq n$. 
+
+**¿Por qué $n \neq S(n)$?**
+
+Esto se puede probar usando el principio de inducción. Consideremos el conjunto $$A=\{n \in \mathbb{N} : n \neq S(n)\}.$$ Note que $0 \in A$, ya que $0 \neq S(0)$ ($0$ no es sucesor de nadie). Ahora, si $n \in A$ entonces $S(n) \in A$ ya que si $S(n)=S(S(n))$ entonces por la inyectividad de la función $S$ se sigue que $n=S(n)$, lo cual es absurdo ya que $n \in A$. Por lo tanto, por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, para todo $n \in \mathbb{N}$ se tiene que $n \neq S(n)$.
+
+De lo anterior tenemos que $0<S(0)=1 < S(1)=2 < S(2)=3 < S(3)=4 < S(4)=5 < S(5)=6 < S(6)=7 < S(7)=8 < S(8)=9$.
+
+#### Representación gráfica de los números naturales
+
+Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el $0$ y continuando con sus sucesores, como muestra la siguiente figura:
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import matplotlib.pyplot as plt
+
+# Configurar dimensiones de la figura
+fig, ax = plt.subplots(figsize=(9, 2))
+
+# Dibujar la línea principal con flechas en los extremos
+ax.annotate('', xy=(9.7, 0), xytext=(-0.7, 0),
+            arrowprops=dict(arrowstyle="<->", color='black', lw=1.5))
+
+# Marcas y números del 0 al 9
+for i in range(10):
+    # Marcas verticales (ticks)
+    ax.plot([i, i], [-0.15, 0.15], color='black', lw=1.2)
+    # Etiquetas numéricas
+    ax.text(i, -0.4, str(i), ha='center', va='top', fontsize=12)
+
+# Ajustes de límites y eliminación de ejes predeterminados
+ax.set_xlim(-1, 10.2)
+ax.set_ylim(-1, 1)
+ax.axis('off')
+
+plt.show()
+```
