@@ -2293,9 +2293,14 @@ Las relaciones de orden total se suelen denotar con el símbolo $\leq$, y se sue
 
 En el conjunto de los números naturales $\mathbb{N}$, hay una relación de orden total que denotaremos por $\leq$, y que se define de la siguiente manera:
 
-Diremos que dos números naturales $n,m \in \mathbb{N}$ satisfacen la relación $n \leq m$ si existe un número natural $k \in \mathbb{N}$ tal que $n+k=m$.   
+Diremos que dos números naturales $n,m \in \mathbb{N}$ satisfacen la relación $n \leq m$ si existe un número natural $k \in \mathbb{N}$ tal que $n+k=m$.  
+
+Observe que para todo $n \in \mathbb{N}$, se tiene que $0 \leq n$, ya que $n=0+n$. Note también que para todo $n \in \mathbb{N}$, se tiene que $n \leq S(n)$, ya que $S(n)=n+S(0)$. 
 
 Veamos que en efecto esta es una relación de orden total en $\mathbb{N}$. 
 
-* **Reflexividad**: Para todo $n \in \mathbb{N}$, se tiene que $n+0=n$, y como $0 \in \mathbb{N}$, se tiene que $n \leq n$.
-* **Antisimetría**: Supongamos que $n,m \in \mathbb{N}$ son tales que $n \leq m$ y $m \leq n$. Entonces existen $k, s \in \mathbb{N}$ tales que $n+k=m$ y $m+s=n$. Sustituyendo en la segunda $m$ por $n+k$ obtenemos que $(n+k)+s=n$, y por la asociatividad de la suma tenemos que $n+(k+s)=n$. Por lo tanto, $k_1+k_2=0$, y como $k_1,k_2 \in \mathbb{N}$, se tiene que $k_1=k_2=0$, y por lo tanto, $n=m$.
+* **Reflexividad**: Para todo $n \in \mathbb{N}$, se tiene que $n+0=n$, y como $0 \in \mathbb{N}$ entonces $n \leq n$.
+* **Antisimetría**: Supongamos que $n,m \in \mathbb{N}$ son tales que $n \leq m$ y $m \leq n$. Entonces existen $k, s \in \mathbb{N}$ tales que $n+k=m$ y $m+s=n$. Sustituyendo en la segunda ecuación $m$ por $n+k$, obtenemos que $(n+k)+s=n$, y por la asociatividad de la suma tenemos que $n+(k+s)=n$ lo que implica que $k+s=0$. Pero $k+s=0$ implica que $k=0$ y $s=0$, luego $n=m$.
+* **Transitividad**: Supongamos que $n,m,k \in \mathbb{N}$ son tales que $n \leq m$ y $m \leq k$. Entonces existen $t, s \in \mathbb{N}$ tales que $n+t=m$ y $m+s=k$. Sustituyendo en la segunda ecuación $m$ por $n+t$, obtenemos que $(n+t)+s=k$, y por la asociatividad de la suma tenemos que $n+(t+s)=k$, y como $t+s \in \mathbb{N}$, se sigue que $n \leq k$.
+* **Totalidad**: Dado $m \in \mathbb{N}$ consideremos el conjunto $$A_{m}=\{n \in \mathbb{N} : n \leq m~ \vee ~ m \leq n\}.$$ Note que $0 \in A_{m}$, ya que $0 \leq m$ para todo $m \in \mathbb{N}$. Ahora, si $n \in A_{m}$ entonces $S(n) \in A_{m}$. Para probar esto necesitamos analizar dos casos: cuando $n \leq m$ y cuando $m \leq n$. Veamos solamente el primer caso ya que el otro caso es análogo. Supongamos entonces que $n \leq m$, luego $m=n+t$ para cierto $t \in \mathbb{N}$. Si $t=0$ entonces $m=n$ y por lo tanto $m \leq S(m)=S(n)$, luego $S(n) \in A_{m}$. Ahora, si $t \neq 0$ entonces $t=S(k)$ para cierto $k \in \mathbb{N}$, luego $m=n+S(k)=S(n)+k$ y por lo tanto $S(n) \leq m$, así $S(n) \in A_{m}$. Del principio de inducción se sigue que $A_{m}=\mathbb{N}$, y por lo tanto, para todo $n \in \mathbb{N}$ se tiene que $n \leq m$ o $m \leq n$.
+Como $m$ era arbitrario, se sigue que para todo $n,m \in \mathbb{N}$ se tiene que $n \leq m$ o $m \leq n$.
