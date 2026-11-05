@@ -2259,4 +2259,41 @@ Veamos ahora que $n+S(0)=S(n)=S(0)+n$ para todo $n \in \mathbb{N}$. Para esto co
 
 De lo anterior observemos que $n+S(m)=S(n)+m$ para todo $n,m \in \mathbb{N}$. En efecto, para todo $n \in \mathbb{N}$ consideremos el conjunto $$A_n=\{m \in \mathbb{N} ~ : ~ n+S(m)=S(n)+m\}.$$ Notemos que $0 \in A_n$, ya que $n+S(0)=S(n)=S(n)+0$, y si $m \in A_n$ entonces $S(m) \in A_n$ ya que $$n+S(S(m))=S(n+S(m))=S(S(n)+m)=S(n)+S(m).$$ Por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, $n+S(m)=S(n)+m$ para todo $m \in \mathbb{N}$.
 
-Ahora, fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A_n=\{m \in \mathbb{N} ~ : ~ n+m=m+n\}.$$ Notemos que $0 \in A_n$, ya que de lo anterior $0+m=m=m+0$, y si $m \in A_n$ entonces $S(m) \in A_n$ ya que $$n+s(m)=n+(m+S(0))=(n+m)+S(0)=(m+n)+S(0))=m+(n+S(0))=m+S(n)=S(m)+n$$. Por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, $n+m=m+n$ para todo $m \in \mathbb{N}$.
+Ahora, fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A_n=\{m \in \mathbb{N} ~ : ~ n+m=m+n\}.$$ Notemos que $0 \in A_n$, ya que de lo anterior $0+m=m=m+0$, y si $m \in A_n$ entonces $S(m) \in A_n$ ya que $$n+s(m)=n+(m+S(0))=(n+m)+S(0)=(m+n)+S(0))=m+(n+S(0))=m+S(n)=S(m)+n.$$ Por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, $n+m=m+n$ para todo $m \in \mathbb{N}$.
+
+* El elemento $0$ es llamado el neutro de la suma, ya que al sumarlo con otro elemento no lo cambia, es decir, para todo $n \in \mathbb{N}$ se tiene que $n+0=n=0+n$. Además, $0$ es el único elemento con esta propiedad. En efecto, supongamos que $n \in \mathbb{N}$ es tal que $n+m=m$ para todo $m \in \mathbb{N}$ ($n$ es otro neutro). En particular, $n+0=0$, y como $n+0=n$, se tiene que $n=0$.
+
+#### Otras propiedades artitméticas de los números naturales
+
+* Si $n,m \in \mathbb{N}$ y $n+m=n$, entonces $m=0$. 
+
+En efecto, consideremos el conjunto $$A=\{n \in \mathbb{N} ~ : ~ \textrm{no existe}~ t \in \mathbb{N} \setminus \{0\} ~ : ~ \textrm{con}~ n+t=n\}.$$ Note que $0 \in A$ ya que $0+t=0$ implica $t=0$. Ahora, si $n \in A$ entonces $S(n) \in A$ ya que si $S(n)+t=S(n)$ para cierto $t \in \mathbb{N} \setminus \{0\}$, se tiene que $s(n)=S(n+t)$ con $t \neq 0$, y de la inyectividad de la función $S$ se sigue que $n+t=n$ con $t \neq 0$, lo cual es absurdo ya que $n \in A$. Por lo tanto, por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, si $n+m=n$ entonces $m=0$.
+
+* Si $n,m \in \mathbb{N}$ y $n+m=0$, entonces $n=m=0$.
+
+En efecto, si suponemos que existe $n \in \mathbb{N} \setminus \{0\}$ tal que $n+m=0$, entonces como la función $S: \mathbb{N} \to \mathbb{N} \setminus \{0\}$ es sobreyectiva, tenemos que $n=S(k)$ para cierto $k \in \mathbb{N}$. Luego $s(k)+t=0$ lo que implica que $0=S(k+t)$, lo que es absurso ya que $0$ no es el sucesor de nadie.
+
+#### Relación de orden total en los números naturales
+
+De manera general, una relación de orden en un conjunto $A$ es un subconjunto $R \subseteq A \times A$ que satisface las siguientes propiedades: 
+
+* **Reflexividad**: Para todo $a \in A$, se tiene que $(a,a) \in R$.
+* **Antisimetría**: Para todo $a,b \in A$, si $(a,b) \in R$ y $(b,a) \in R$, entonces $a=b$.
+* **Transitividad**: Para todo $a,b,c \in A$, si $(a,b) \in R$ y $(b,c) \in R$, entonces $(a,c) \in R$.
+* **Totalidad**: Para todo $a,b \in A$, se tiene que $(a,b) \in R$ o $(b,a) \in R$.
+
+Las relaciones de orden total se suelen denotar con el símbolo $\leq$, y se suele decir que $a \leq b$ si $(a,b) \in R$. Con esta notación el subconjunto $R$ se suele cambiar por el símbolo $\leq$, y así las porpiedades anteriores se convierten en:
+
+* **Reflexividad**: Para todo $a \in A$, se tiene que $a \leq a$.
+* **Antisimetría**: Para todo $a,b \in A$, si $a \leq b$ y $b \leq a$, entonces $a=b$.
+* **Transitividad**: Para todo $a,b,c \in A$, si $a \leq b$ y $b \leq c$, entonces $a \leq c$.
+* **Totalidad**: Para todo $a,b \in A$, se tiene que $a \leq b$ o $b \leq a$.  
+
+En el conjunto de los números naturales $\mathbb{N}$, hay una relación de orden total que denotaremos por $\leq$, y que se define de la siguiente manera:
+
+Diremos que dos números naturales $n,m \in \mathbb{N}$ satisfacen la relación $n \leq m$ si existe un número natural $k \in \mathbb{N}$ tal que $n+k=m$.   
+
+Veamos que en efecto esta es una relación de orden total en $\mathbb{N}$. 
+
+* **Reflexividad**: Para todo $n \in \mathbb{N}$, se tiene que $n+0=n$, y como $0 \in \mathbb{N}$, se tiene que $n \leq n$.
+* **Antisimetría**: Supongamos que $n,m \in \mathbb{N}$ son tales que $n \leq m$ y $m \leq n$. Entonces existen $k, s \in \mathbb{N}$ tales que $n+k=m$ y $m+s=n$. Sustituyendo en la segunda $m$ por $n+k$ obtenemos que $(n+k)+s=n$, y por la asociatividad de la suma tenemos que $n+(k+s)=n$. Por lo tanto, $k_1+k_2=0$, y como $k_1,k_2 \in \mathbb{N}$, se tiene que $k_1=k_2=0$, y por lo tanto, $n=m$.
