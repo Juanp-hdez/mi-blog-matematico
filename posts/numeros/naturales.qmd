@@ -2236,7 +2236,7 @@ De ahora en adelante, denotaremos $+(n,m)=n+m$. Con esta notación las dos propi
 * Para todo $n \in \mathbb{N}$, $n+0=n$.
 * Para todo $n, m \in \mathbb{N}$, $n+S(m)=S(n+m)$.
 
-La primera propiedad nos dice que cualquier natural $n \in \mathbb{N}$ sumado con el elemento $0$ produce el mismo elemento $n$. La segunda propiedad es más difícil de explicar, pero vamos a ir deduciendo lo que se desea con ella.
+La primera propiedad nos dice que cualquier natural $n \in \mathbb{N}$ sumado con el elemento $0$ produce el mismo elemento $n$. La segunda propiedad nos dice que si sabemos sumar  $n$ y $m$ entonces sabemos sumar $n$ y $S(m)$.
 
 Observe por ejemplo que usando las dos propiedades anteriores tenemos que $n+1=n+S(0)=S(n+0)=S(n)$, es decir, una manera de obtener el sucesor de un número natural $n$ es sumándole $1$.  
 
@@ -2253,10 +2253,10 @@ Fijemos una pareja $(n,m) \in \mathbb{N} \times \mathbb{N}$ y consideremos el co
 
 * La suma es conmutativa, es decir, para todo $n,m \in \mathbb{N}$ se tiene que $n+m=m+n$.
 
-Comencemos observando que $0+n=0$ para todo $n \in \mathbb{N}$. Para esto consideremos el conjunto $A=\{n \in \mathbb{N} ~ : ~ 0+n=n\}$. Notemos que $0 \in A$, ya que $0+0=0$, y si $n \in A$ entonces $S(n) \in A$ ya que $0+S(n)=S(0+n)=S(n)$. Por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, $0+n=n$ para todo $n \in \mathbb{N}$.
+Comencemos observando que $0+n=n$ para todo $n \in \mathbb{N}$. Para esto consideremos el conjunto $A=\{n \in \mathbb{N} ~ : ~ 0+n=n\}$. Notemos que $0 \in A$, ya que $0+0=0$, y si $n \in A$ entonces $S(n) \in A$ ya que $0+S(n)=S(0+n)=S(n)$. Por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, $0+n=n$ para todo $n \in \mathbb{N}$.
 
 Veamos ahora que $n+S(0)=S(n)=S(0)+n$ para todo $n \in \mathbb{N}$. Para esto consideremos el conjunto $$A=\{n \in \mathbb{N} ~ : ~ n+S(0)=S(n)=S(0)+n\}.$$ Notemos que $0 \in A$, ya que $0+S(0)=S(0)=S(0)+0$, y si $n \in A$ entonces $S(n) \in A$ ya que $$S(0)+S(n)=S(S(0)+n)=S(n+S(0))=n+S(S(0))=(m+S(0))+S(0)=S(m)+S(0).$$ Por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, $n+S(0)=S(n)=S(0)+n$ para todo $n \in \mathbb{N}$.
 
-De lo anterior observemos que $n+S(m)=S(n)+m$ para todo $n,m \in \mathbb{N}$.
+De lo anterior observemos que $n+S(m)=S(n)+m$ para todo $n,m \in \mathbb{N}$. En efecto, para todo $n \in \mathbb{N}$ consideremos el conjunto $$A_n=\{m \in \mathbb{N} ~ : ~ n+S(m)=S(n)+m\}.$$ Notemos que $0 \in A_n$, ya que $n+S(0)=S(n)=S(n)+0$, y si $m \in A_n$ entonces $S(m) \in A_n$ ya que $$n+S(S(m))=S(n+S(m))=S(S(n)+m)=S(n)+S(m).$$ Por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, $n+S(m)=S(n)+m$ para todo $m \in \mathbb{N}$.
 
-Ahora, fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A_n=\{m \in \mathbb{N} ~ : ~ n+m=m+n\}.$$ Notemos que $0 \in A_n$, ya que de lo anterior $0+n=n=n+0$, y si $m \in A_n$ entonces $S(m) \in A_n$ ya que $$n+s(m)=n+(m+S(0))=(n+m)+S(0)=(m+n)+S(0)=m+(n+S(0))=m+S(n)=S(m)+n$$. Por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, $n+m=m+n$ para todo $m \in \mathbb{N}$.
+Ahora, fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A_n=\{m \in \mathbb{N} ~ : ~ n+m=m+n\}.$$ Notemos que $0 \in A_n$, ya que de lo anterior $0+m=m=m+0$, y si $m \in A_n$ entonces $S(m) \in A_n$ ya que $$n+s(m)=n+(m+S(0))=(n+m)+S(0)=(m+n)+S(0))=m+(n+S(0))=m+S(n)=S(m)+n$$. Por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, $n+m=m+n$ para todo $m \in \mathbb{N}$.
