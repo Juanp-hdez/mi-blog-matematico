@@ -2271,7 +2271,9 @@ En efecto, consideremos el conjunto $$A=\{n \in \mathbb{N} ~ : ~ \textrm{no exis
 
 * Si $n,m \in \mathbb{N}$ y $n+m=0$, entonces $n=m=0$.
 
-En efecto, si suponemos que existe $n \in \mathbb{N} \setminus \{0\}$ tal que $n+m=0$, entonces como la función $S: \mathbb{N} \to \mathbb{N} \setminus \{0\}$ es sobreyectiva, tenemos que $n=S(k)$ para cierto $k \in \mathbb{N}$. Luego $s(k)+t=0$ lo que implica que $0=S(k+t)$, lo que es absurso ya que $0$ no es el sucesor de nadie.
+En efecto, si suponemos que existe $n \in \mathbb{N} \setminus \{0\}$ tal que $n+m=0$, entonces como la función 
+
+$S: \mathbb{N} \to \mathbb{N} \setminus \{0\}$ es sobreyectiva, tenemos que $n=S(k)$ para cierto $k \in \mathbb{N}$. Luego $s(k)+t=0$ lo que implica que $0=S(k+t)$, lo que es absurso ya que $0$ no es el sucesor de nadie.
 
 #### Relación de orden total en los números naturales
 
