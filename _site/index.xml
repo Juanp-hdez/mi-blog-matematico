@@ -2291,7 +2291,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="bf6e82ac" class="cell" data-execution_count="1">
+<div id="50c7c95c" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2301,7 +2301,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="f3bd3824" class="cell" data-execution_count="2">
+<div id="fa8b3c0c" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
