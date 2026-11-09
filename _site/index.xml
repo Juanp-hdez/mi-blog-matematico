@@ -2240,8 +2240,12 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <li>El elemento <img src="https://latex.codecogs.com/png.latex?0"> es llamado el neutro de la suma, ya que al sumarlo con otro elemento no lo cambia, es decir, para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?n+0=n=0+n">. Además, <img src="https://latex.codecogs.com/png.latex?0"> es el único elemento con esta propiedad. En efecto, supongamos que <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> es tal que <img src="https://latex.codecogs.com/png.latex?n+m=m"> para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> (<img src="https://latex.codecogs.com/png.latex?n"> es otro neutro). En particular, <img src="https://latex.codecogs.com/png.latex?n+0=0">, y como <img src="https://latex.codecogs.com/png.latex?n+0=n">, se tiene que <img src="https://latex.codecogs.com/png.latex?n=0">.</li>
 </ul>
 </section>
-<section id="otras-propiedades-artitméticas-de-los-números-naturales" class="level4">
-<h4 class="anchored" data-anchor-id="otras-propiedades-artitméticas-de-los-números-naturales">Otras propiedades artitméticas de los números naturales</h4>
+<section id="otras-propiedades-de-la-suma" class="level4">
+<h4 class="anchored" data-anchor-id="otras-propiedades-de-la-suma">Otras propiedades de la suma</h4>
+<ul>
+<li>La suma es cancelativa, es decir, si <img src="https://latex.codecogs.com/png.latex?n,m,k%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n+m=n+k">, entonces <img src="https://latex.codecogs.com/png.latex?m=k">. o Para probar esto, consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A=%5C%7Bn%20%5Cin%20%5Cmathbb%7BN%7D%20~%20:%20~%20%5Ctextrm%7Bsi%7D~%20n+m=n+k,~%20%5Ctextrm%7Bentonces%7D~%20m=k%5C%7D."> Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A"> ya que si <img src="https://latex.codecogs.com/png.latex?0+m=0+k"> entonces <img src="https://latex.codecogs.com/png.latex?m=k">. Ahora, si <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A"> entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%5Cin%20A"> ya que si <img src="https://latex.codecogs.com/png.latex?S(n)+m=S(n)+k"> para ciertos <img src="https://latex.codecogs.com/png.latex?m,k%20%5Cin%20%5Cmathbb%7BN%7D">, se tiene que <img src="https://latex.codecogs.com/png.latex?S(n+m)=S(n+k)">, y por la inyectividad de la función <img src="https://latex.codecogs.com/png.latex?S"> se sigue que <img src="https://latex.codecogs.com/png.latex?n+m=n+k">, y como <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A">, se tiene que <img src="https://latex.codecogs.com/png.latex?m=k">. Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A=%5Cmathbb%7BN%7D">, y por lo tanto, si <img src="https://latex.codecogs.com/png.latex?n+m=n+k"> entonces <img src="https://latex.codecogs.com/png.latex?m=k">.</li>
+</ul>
+<p>Como un caso particular de la propiedad anterior, tenemos que:</p>
 <ul>
 <li>Si <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> y <img src="https://latex.codecogs.com/png.latex?n+m=n">, entonces <img src="https://latex.codecogs.com/png.latex?m=0">.</li>
 </ul>
@@ -2287,7 +2291,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="00b3c4fd" class="cell" data-execution_count="1">
+<div id="f3406245" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2297,11 +2301,35 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="278d53c5" class="cell" data-execution_count="2">
+<div id="5f2867e9" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://your-website-url.example.com/posts/numeros/naturales_files/figure-html/cell-3-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="614" height="167"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="otras-desigualdades-importantes" class="level4">
+<h4 class="anchored" data-anchor-id="otras-desigualdades-importantes">Otras desigualdades importantes</h4>
+<ul>
+<li>k &lt; S(n) implica que k ≤ n.&nbsp;</li>
+</ul>
+<p>En efecto, si <img src="https://latex.codecogs.com/png.latex?k%20%3C%20S(n)"> entonces <img src="https://latex.codecogs.com/png.latex?S(n)=k+t"> para algún <img src="https://latex.codecogs.com/png.latex?t%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">, luego <img src="https://latex.codecogs.com/png.latex?t=S(l)"> para cierto <img src="https://latex.codecogs.com/png.latex?l%20%5Cin%20%5Cmathbb%7BN%7D">, y por lo tanto <img src="https://latex.codecogs.com/png.latex?S(n)=S(k+l)">, de donde <img src="https://latex.codecogs.com/png.latex?n=k+l"> y así <img src="https://latex.codecogs.com/png.latex?k%20%5Cleq%20n">.</p>
+<ul>
+<li>Para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, el conjunto <img src="https://latex.codecogs.com/png.latex?A=%5C%7Bk%20%5Cin%20%5Cmathbb%7BN%7D%20:%20n%20%3C%20k%20%3C%20S(n)%5C%7D=%5Cemptyset">, es decir, no existe ningún número natural que esté estrictamente entre <img src="https://latex.codecogs.com/png.latex?n"> y su sucesor <img src="https://latex.codecogs.com/png.latex?S(n)">.</li>
+</ul>
+<div id="cell-fig-sucesor-py" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div id="fig-sucesor-py" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sucesor-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://your-website-url.example.com/posts/numeros/naturales_files/figure-html/fig-sucesor-py-output-1.png" width="1124" height="348" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sucesor-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Ausencia de naturales entre <img src="https://latex.codecogs.com/png.latex?n"> y <img src="https://latex.codecogs.com/png.latex?S(n)">.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -2324,6 +2352,17 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <li>Asociativa: Para todo <img src="https://latex.codecogs.com/png.latex?n,m,k%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?(n%20%5Ccdot%20m)%20%5Ccdot%20k=n%20%5Ccdot%20(m%20%5Ccdot%20k)">.</li>
 </ul>
 <p>Fijemos <img src="https://latex.codecogs.com/png.latex?(n,m)%20%5Cin%20%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D"> y consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A_%7Bn,m%7D=%5C%7Bk%20%5Cin%20%5Cmathbb%7BN%7D%20:%20(n%20%5Ccdot%20m)%20%5Ccdot%20k=n%20%5Ccdot%20(m%20%5Ccdot%20k)%5C%7D."> Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A_%7Bn,m%7D">, ya que <img src="https://latex.codecogs.com/png.latex?(n%20%5Ccdot%20m)%20%5Ccdot%200=0=n%20%5Ccdot%20(m%20%5Ccdot%200)">. Ahora, si <img src="https://latex.codecogs.com/png.latex?k%20%5Cin%20A_%7Bn,m%7D"> entonces <img src="https://latex.codecogs.com/png.latex?S(k)%20%5Cin%20A_%7Bn,m%7D"> ya que <img src="https://latex.codecogs.com/png.latex?(n%20%5Ccdot%20m)%20%5Ccdot%20S(k)=n%20%5Ccdots%20m+(n%20%5Ccdot%20m)%20%5Ccdot%20k=n%20%5Ccdot%20m%20+%20n%20%5Ccdot%20(m%20%5Ccdot%20k)=n%20%5Ccdot%20(m+m%20%5Ccdot%20k)=n%20%5Ccdot%20(m%20%5Ccdot%20S(k)).%20"> Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A_%7Bn,m%7D=%5Cmathbb%7BN%7D">, y por lo tanto, <img src="https://latex.codecogs.com/png.latex?(n%20%5Ccdot%20m)%20%5Ccdot%20k=n%20%5Ccdot%20(m%20%5Ccdot%20k)"> para todo <img src="https://latex.codecogs.com/png.latex?k%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
+<ul>
+<li>Neutro: Para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?S(0)%20%5Ccdot%20n=n=%20n%20%5Ccdot%20S(0)">.</li>
+</ul>
+<p>De la definición se sigue que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20S(0)=n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
+<p>Para ver que <img src="https://latex.codecogs.com/png.latex?S(0)%20%5Ccdot%20n=n"> primero veamos lo siguiente.</p>
+<p>Para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, <img src="https://latex.codecogs.com/png.latex?0%20%5Ccdot%20n=n%20%5Ccdot%200">. Esto lo podemos ver usando el principio de inducción. Consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A=%5C%7Bn%20%5Cin%20%5Cmathbb%7BN%7D%20:%200%20%5Ccdot%20n=0%5C%7D."> Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A">, ya que <img src="https://latex.codecogs.com/png.latex?0%20%5Ccdot%200=0">. Ahora, si <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A"> entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%5Cin%20A"> ya que <img src="https://latex.codecogs.com/png.latex?0%20%5Ccdot%20S(n)=0+(0%20%5Ccdot%20n)=0."> Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A=%5Cmathbb%7BN%7D">, y por lo tanto, <img src="https://latex.codecogs.com/png.latex?0%20%5Ccdot%20n=0"> para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
+<p>Ahora consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A=%5C%7Bn%20%5Cin%20%5Cmathbb%7BN%7D%20:%20S(0)%20%5Ccdot%20n=n%5C%7D."> Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A">, ya que <img src="https://latex.codecogs.com/png.latex?S(0)%20%5Ccdot%200=0">. Si <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A"> entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%5Cin%20A"> ya que <img src="https://latex.codecogs.com/png.latex?S(0)%20%5Ccdot%20S(n)=S(0)+(S(0)%20%5Ccdot%20n)=S(0)+n=S(n)."> Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A=%5Cmathbb%7BN%7D">, y por lo tanto, <img src="https://latex.codecogs.com/png.latex?S(0)%20%5Ccdot%20n=n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
+<ul>
+<li>Conmutativa: Para todo <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m=m%20%5Ccdot%20n">.</li>
+</ul>
+<p>Fijemos un elemento arbitrario <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> y consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A_n=%5C%7Bm%20%5Cin%20%5Cmathbb%7BN%7D%20:%20n%20%5Ccdot%20m=m%20%5Ccdot%20n%5C%7D."> Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A_n">, ya que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%200=0=0%20%5Ccdot%20n">. Ahora, si <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20A_n"> entonces <img src="https://latex.codecogs.com/png.latex?S(m)%20%5Cin%20A_n"> ya que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20S(m)=n+(n%20%5Ccdot%20m)=n+(m%20%5Ccdot%20n)=m+n%5Ccdot%20n=m%5Ccdot%20S(n)."> Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A_n=%5Cmathbb%7BN%7D">, y por lo tanto, <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m=m%20%5Ccdot%20n"> para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
 
 
 </section>

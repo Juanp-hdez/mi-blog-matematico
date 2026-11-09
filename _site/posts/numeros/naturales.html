@@ -2418,8 +2418,12 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <li>El elemento <span class="math inline">\(0\)</span> es llamado el neutro de la suma, ya que al sumarlo con otro elemento no lo cambia, es decir, para todo <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n+0=n=0+n\)</span>. Además, <span class="math inline">\(0\)</span> es el único elemento con esta propiedad. En efecto, supongamos que <span class="math inline">\(n \in \mathbb{N}\)</span> es tal que <span class="math inline">\(n+m=m\)</span> para todo <span class="math inline">\(m \in \mathbb{N}\)</span> (<span class="math inline">\(n\)</span> es otro neutro). En particular, <span class="math inline">\(n+0=0\)</span>, y como <span class="math inline">\(n+0=n\)</span>, se tiene que <span class="math inline">\(n=0\)</span>.</li>
 </ul>
 </section>
-<section id="otras-propiedades-artitméticas-de-los-números-naturales" class="level4">
-<h4 class="anchored" data-anchor-id="otras-propiedades-artitméticas-de-los-números-naturales">Otras propiedades artitméticas de los números naturales</h4>
+<section id="otras-propiedades-de-la-suma" class="level4">
+<h4 class="anchored" data-anchor-id="otras-propiedades-de-la-suma">Otras propiedades de la suma</h4>
+<ul>
+<li>La suma es cancelativa, es decir, si <span class="math inline">\(n,m,k \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n+m=n+k\)</span>, entonces <span class="math inline">\(m=k\)</span>. o Para probar esto, consideremos el conjunto <span class="math display">\[A=\{n \in \mathbb{N} ~ : ~ \textrm{si}~ n+m=n+k,~ \textrm{entonces}~ m=k\}.\]</span> Note que <span class="math inline">\(0 \in A\)</span> ya que si <span class="math inline">\(0+m=0+k\)</span> entonces <span class="math inline">\(m=k\)</span>. Ahora, si <span class="math inline">\(n \in A\)</span> entonces <span class="math inline">\(S(n) \in A\)</span> ya que si <span class="math inline">\(S(n)+m=S(n)+k\)</span> para ciertos <span class="math inline">\(m,k \in \mathbb{N}\)</span>, se tiene que <span class="math inline">\(S(n+m)=S(n+k)\)</span>, y por la inyectividad de la función <span class="math inline">\(S\)</span> se sigue que <span class="math inline">\(n+m=n+k\)</span>, y como <span class="math inline">\(n \in A\)</span>, se tiene que <span class="math inline">\(m=k\)</span>. Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A=\mathbb{N}\)</span>, y por lo tanto, si <span class="math inline">\(n+m=n+k\)</span> entonces <span class="math inline">\(m=k\)</span>.</li>
+</ul>
+<p>Como un caso particular de la propiedad anterior, tenemos que:</p>
 <ul>
 <li>Si <span class="math inline">\(n,m \in \mathbb{N}\)</span> y <span class="math inline">\(n+m=n\)</span>, entonces <span class="math inline">\(m=0\)</span>.</li>
 </ul>
@@ -2465,7 +2469,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="00b3c4fd" class="cell" data-execution_count="1">
+<div id="f3406245" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2475,11 +2479,35 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="278d53c5" class="cell" data-execution_count="2">
+<div id="5f2867e9" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="naturales_files/figure-html/cell-3-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="614" height="167"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="otras-desigualdades-importantes" class="level4">
+<h4 class="anchored" data-anchor-id="otras-desigualdades-importantes">Otras desigualdades importantes</h4>
+<ul>
+<li>k &lt; S(n) implica que k ≤ n.&nbsp;</li>
+</ul>
+<p>En efecto, si <span class="math inline">\(k &lt; S(n)\)</span> entonces <span class="math inline">\(S(n)=k+t\)</span> para algún <span class="math inline">\(t \in \mathbb{N} \setminus \{0\}\)</span>, luego <span class="math inline">\(t=S(l)\)</span> para cierto <span class="math inline">\(l \in \mathbb{N}\)</span>, y por lo tanto <span class="math inline">\(S(n)=S(k+l)\)</span>, de donde <span class="math inline">\(n=k+l\)</span> y así <span class="math inline">\(k \leq n\)</span>.</p>
+<ul>
+<li>Para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, el conjunto <span class="math display">\[A=\{k \in \mathbb{N} : n &lt; k &lt; S(n)\}=\emptyset\]</span>, es decir, no existe ningún número natural que esté estrictamente entre <span class="math inline">\(n\)</span> y su sucesor <span class="math inline">\(S(n)\)</span>.</li>
+</ul>
+<div id="cell-fig-sucesor-py" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div id="fig-sucesor-py" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sucesor-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="naturales_files/figure-html/fig-sucesor-py-output-1.png" width="1124" height="348" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sucesor-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Ausencia de naturales entre <span class="math inline">\(n\)</span> y <span class="math inline">\(S(n)\)</span>.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -2502,6 +2530,17 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <li>Asociativa: Para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span> se tiene que <span class="math inline">\((n \cdot m) \cdot k=n \cdot (m \cdot k)\)</span>.</li>
 </ul>
 <p>Fijemos <span class="math inline">\((n,m) \in \mathbb{N} \times \mathbb{N}\)</span> y consideremos el conjunto <span class="math display">\[A_{n,m}=\{k \in \mathbb{N} : (n \cdot m) \cdot k=n \cdot (m \cdot k)\}.\]</span> Note que <span class="math inline">\(0 \in A_{n,m}\)</span>, ya que <span class="math inline">\((n \cdot m) \cdot 0=0=n \cdot (m \cdot 0)\)</span>. Ahora, si <span class="math inline">\(k \in A_{n,m}\)</span> entonces <span class="math inline">\(S(k) \in A_{n,m}\)</span> ya que <span class="math display">\[(n \cdot m) \cdot S(k)=n \cdots m+(n \cdot m) \cdot k=n \cdot m + n \cdot (m \cdot k)=n \cdot (m+m \cdot k)=n \cdot (m \cdot S(k)). \]</span> Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_{n,m}=\mathbb{N}\)</span>, y por lo tanto, <span class="math inline">\((n \cdot m) \cdot k=n \cdot (m \cdot k)\)</span> para todo <span class="math inline">\(k \in \mathbb{N}\)</span>.</p>
+<ul>
+<li>Neutro: Para todo <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(S(0) \cdot n=n= n \cdot S(0)\)</span>.</li>
+</ul>
+<p>De la definición se sigue que <span class="math inline">\(n \cdot S(0)=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<p>Para ver que <span class="math inline">\(S(0) \cdot n=n\)</span> primero veamos lo siguiente.</p>
+<p>Para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(0 \cdot n=n \cdot 0\)</span>. Esto lo podemos ver usando el principio de inducción. Consideremos el conjunto <span class="math display">\[A=\{n \in \mathbb{N} : 0 \cdot n=0\}.\]</span> Note que <span class="math inline">\(0 \in A\)</span>, ya que <span class="math inline">\(0 \cdot 0=0\)</span>. Ahora, si <span class="math inline">\(n \in A\)</span> entonces <span class="math inline">\(S(n) \in A\)</span> ya que <span class="math display">\[0 \cdot S(n)=0+(0 \cdot n)=0.\]</span> Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A=\mathbb{N}\)</span>, y por lo tanto, <span class="math inline">\(0 \cdot n=0\)</span> para todo <span class="math inline">\(m \in \mathbb{N}\)</span>.</p>
+<p>Ahora consideremos el conjunto <span class="math display">\[A=\{n \in \mathbb{N} : S(0) \cdot n=n\}.\]</span> Note que <span class="math inline">\(0 \in A\)</span>, ya que <span class="math inline">\(S(0) \cdot 0=0\)</span>. Si <span class="math inline">\(n \in A\)</span> entonces <span class="math inline">\(S(n) \in A\)</span> ya que <span class="math display">\[S(0) \cdot S(n)=S(0)+(S(0) \cdot n)=S(0)+n=S(n).\]</span> Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A=\mathbb{N}\)</span>, y por lo tanto, <span class="math inline">\(S(0) \cdot n=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<ul>
+<li>Conmutativa: Para todo <span class="math inline">\(n,m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n \cdot m=m \cdot n\)</span>.</li>
+</ul>
+<p>Fijemos un elemento arbitrario <span class="math inline">\(n \in \mathbb{N}\)</span> y consideremos el conjunto <span class="math display">\[A_n=\{m \in \mathbb{N} : n \cdot m=m \cdot n\}.\]</span> Note que <span class="math inline">\(0 \in A_n\)</span>, ya que <span class="math inline">\(n \cdot 0=0=0 \cdot n\)</span>. Ahora, si <span class="math inline">\(m \in A_n\)</span> entonces <span class="math inline">\(S(m) \in A_n\)</span> ya que <span class="math display">\[n \cdot S(m)=n+(n \cdot m)=n+(m \cdot n)=m+n\cdot n=m\cdot S(n).\]</span> Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_n=\mathbb{N}\)</span>, y por lo tanto, <span class="math inline">\(n \cdot m=m \cdot n\)</span> para todo <span class="math inline">\(m \in \mathbb{N}\)</span>.</p>
 
 
 </section>

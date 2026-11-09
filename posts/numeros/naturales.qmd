@@ -2263,7 +2263,13 @@ Ahora, fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conju
 
 * El elemento $0$ es llamado el neutro de la suma, ya que al sumarlo con otro elemento no lo cambia, es decir, para todo $n \in \mathbb{N}$ se tiene que $n+0=n=0+n$. Además, $0$ es el único elemento con esta propiedad. En efecto, supongamos que $n \in \mathbb{N}$ es tal que $n+m=m$ para todo $m \in \mathbb{N}$ ($n$ es otro neutro). En particular, $n+0=0$, y como $n+0=n$, se tiene que $n=0$.
 
-#### Otras propiedades artitméticas de los números naturales
+#### Otras propiedades de la suma
+
+* La suma es cancelativa, es decir, si $n,m,k \in \mathbb{N}$ son tales que $n+m=n+k$, entonces $m=k$.
+o
+Para probar esto, consideremos el conjunto $$A=\{n \in \mathbb{N} ~ : ~ \textrm{si}~ n+m=n+k,~ \textrm{entonces}~ m=k\}.$$ Note que $0 \in A$ ya que si $0+m=0+k$ entonces $m=k$. Ahora, si $n \in A$ entonces $S(n) \in A$ ya que si $S(n)+m=S(n)+k$ para ciertos $m,k \in \mathbb{N}$, se tiene que $S(n+m)=S(n+k)$, y por la inyectividad de la función $S$ se sigue que $n+m=n+k$, y como $n \in A$, se tiene que $m=k$. Por lo tanto, por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, si $n+m=n+k$ entonces $m=k$.
+
+Como un caso particular de la propiedad anterior, tenemos que:
 
 * Si $n,m \in \mathbb{N}$ y $n+m=n$, entonces $m=0$. 
 
@@ -2386,6 +2392,49 @@ ax.axis('off')
 plt.show()
 ```
 
+#### Otras desigualdades importantes
+
+* k < S(n) implica que k ≤ n. 
+
+En efecto, si $k < S(n)$ entonces $S(n)=k+t$ para algún $t \in \mathbb{N} \setminus \{0\}$, luego $t=S(l)$ para cierto $l \in \mathbb{N}$, y por lo tanto $S(n)=S(k+l)$, de donde $n=k+l$ y así $k \leq n$.
+
+* Para todo $n \in \mathbb{N}$, el conjunto $$A=\{k \in \mathbb{N} : n < k < S(n)\}=\emptyset$$, es decir, no existe ningún número natural que esté estrictamente entre $n$ y su sucesor $S(n)$.
+
+```{python}
+#| label: fig-sucesor-py
+#| fig-cap: "Ausencia de naturales entre $n$ y $S(n)$."
+#| echo: false
+
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(7, 2), dpi=200)
+
+# Recta numérica
+ax.annotate('', xy=(5.5, 0), xytext=(-0.5, 0),
+            arrowprops=dict(arrowstyle="->", lw=1.5, color='black'))
+
+# Coordenadas
+pts = {'$n-1$': 0.8, '$n$': 2.0, '$S(n)$': 4.0, '$S(S(n))$': 5.0}
+
+for label, x in pts.items():
+    ax.scatter(x, 0, color='black', s=25, zorder=3)
+    ax.text(x, -0.15, label, ha='center', va='top', fontsize=11)
+
+# Resaltar segmento vacío
+ax.plot([2.0, 4.0], [0, 0], color='crimson', lw=3, zorder=2)
+
+# Flecha indicadora y texto explicativo
+ax.annotate(r'$(n, S(n)) \cap \mathbb{N} = \emptyset$' + '\n(sin naturales)',
+            xy=(3.0, 0), xytext=(3.0, 0.25),
+            ha='center', va='bottom', fontsize=10, color='crimson',
+            arrowprops=dict(arrowstyle="->", color='crimson', lw=1.2))
+
+ax.set_xlim(-0.6, 5.8)
+ax.set_ylim(-0.4, 0.5)
+ax.axis('off')
+plt.show()
+```
+
 #### Producto de números naturales
 
 Vamos a definir ahora otra operación binaria en el conjunto de los números naturales $\mathbb{N}$, que llamaremos producto y denotaremos por $\cdot : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}$, de la siguiente manera:
@@ -2404,3 +2453,18 @@ Para ver esto fijemos la pareja $(n,m) \in \mathbb{N} \times \mathbb{N}$ y consi
 * Asociativa: Para todo $n,m,k \in \mathbb{N}$ se tiene que $(n \cdot m) \cdot k=n \cdot (m \cdot k)$.
 
 Fijemos $(n,m) \in \mathbb{N} \times \mathbb{N}$ y consideremos el conjunto $$A_{n,m}=\{k \in \mathbb{N} : (n \cdot m) \cdot k=n \cdot (m \cdot k)\}.$$ Note que $0 \in A_{n,m}$, ya que $(n \cdot m) \cdot 0=0=n \cdot (m \cdot 0)$. Ahora, si $k \in A_{n,m}$ entonces $S(k) \in A_{n,m}$ ya que $$(n \cdot m) \cdot S(k)=n \cdots m+(n \cdot m) \cdot k=n \cdot m + n \cdot (m \cdot k)=n \cdot (m+m \cdot k)=n \cdot (m \cdot S(k)). $$ Por lo tanto, por el principio de inducción, se tiene que $A_{n,m}=\mathbb{N}$, y por lo tanto, $(n \cdot m) \cdot k=n \cdot (m \cdot k)$ para todo $k \in \mathbb{N}$.
+
+
+* Neutro: Para todo $n \in \mathbb{N}$ se tiene que $S(0) \cdot n=n= n \cdot S(0)$.
+
+De la definición se sigue que $n \cdot S(0)=n$ para todo $n \in \mathbb{N}$.
+
+Para ver que $S(0) \cdot n=n$ primero veamos lo siguiente.
+
+Para todo $n \in \mathbb{N}$, $0 \cdot n=n \cdot 0$. Esto lo podemos ver usando el principio de inducción. Consideremos el conjunto $$A=\{n \in \mathbb{N} : 0 \cdot n=0\}.$$ Note que $0 \in A$, ya que $0 \cdot 0=0$. Ahora, si $n \in A$ entonces $S(n) \in A$ ya que $$0 \cdot S(n)=0+(0 \cdot n)=0.$$ Por lo tanto, por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, $0 \cdot n=0$ para todo $m \in \mathbb{N}$.
+
+Ahora consideremos el conjunto $$A=\{n \in \mathbb{N} : S(0) \cdot n=n\}.$$ Note que $0 \in A$, ya que $S(0) \cdot 0=0$. Si $n \in A$ entonces $S(n) \in A$ ya que $$S(0) \cdot S(n)=S(0)+(S(0) \cdot n)=S(0)+n=S(n).$$ Por lo tanto, por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, $S(0) \cdot n=n$ para todo $n \in \mathbb{N}$.
+
+* Conmutativa: Para todo $n,m \in \mathbb{N}$ se tiene que $n \cdot m=m \cdot n$.
+
+Fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A_n=\{m \in \mathbb{N} : n \cdot m=m \cdot n\}.$$ Note que $0 \in A_n$, ya que $n \cdot 0=0=0 \cdot n$. Ahora, si $m \in A_n$ entonces $S(m) \in A_n$ ya que $$n \cdot S(m)=n+(n \cdot m)=n+(m \cdot n)=m+n\cdot n=m\cdot S(n).$$ Por lo tanto, por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, $n \cdot m=m \cdot n$ para todo $m \in \mathbb{N}$.
