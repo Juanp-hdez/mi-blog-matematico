@@ -2436,7 +2436,7 @@ ax.scatter([1.0, 6.2], [0, 0], color='black', s=25, zorder=3)
 
 # Anotación del hueco / interrupción
 mid_x = (x_n + x_sn) / 2
-ax.annotate(r'$(n, S(n)) \cap \mathbb{N} = \emptyset$' + '\n(tramo vacío en $\mathbb{N}$)',
+ax.annotate(r'\n(tramo vacío en $\mathbb{N}$)',
             xy=(mid_x, 0), xytext=(mid_x, 0.28),
             ha='center', va='bottom', fontsize=10, color='crimson',
             arrowprops=dict(arrowstyle="->", color='crimson', lw=1.2))
