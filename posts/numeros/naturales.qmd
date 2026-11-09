@@ -2432,8 +2432,7 @@ ax.text(x_sn, -0.16, '$S(n)$', ha='center', va='top', fontsize=12, weight='bold'
 
 # Puntos secundarios
 ax.scatter([1.0, 6.2], [0, 0], color='black', s=25, zorder=3)
-ax.text(1.0, -0.16, '$n-1$', ha='center', va='top', fontsize=10)
-ax.text(6.2, -0.16, '$S(S(n))$', ha='center', va='top', fontsize=10)
+
 
 # Anotación del hueco / interrupción
 mid_x = (x_n + x_sn) / 2
