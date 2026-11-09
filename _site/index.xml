@@ -2287,7 +2287,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="a44070dc" class="cell" data-execution_count="1">
+<div id="b4653df8" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2297,7 +2297,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="58d4997c" class="cell" data-execution_count="2">
+<div id="fafa3c21" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2306,6 +2306,20 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 </div>
+</section>
+<section id="producto-de-números-naturales" class="level4">
+<h4 class="anchored" data-anchor-id="producto-de-números-naturales">Producto de números naturales</h4>
+<p>Vamos a definir ahora otra operación binaria en el conjunto de los números naturales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">, que llamaremos producto y denotaremos por <img src="https://latex.codecogs.com/png.latex?%5Ccdot%20:%20%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D">, de la siguiente manera:</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%200%20=%200"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
+<li><img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20S(m)%20=%20n+(n%20%5Ccdot%20m)"> para todo <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
+</ul>
+<p>Veamos que esta operación binaria es una función. Fijemos un elemento arbitrario <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> y consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A_n=%5C%7Bm%20%5Cin%20%5Cmathbb%7BN%7D%20:%20n%20%5Ccdot%20m%20~%5Ctextrm%7Best%C3%A1%20definido%7D%5C%7D."> Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A_n">, ya que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%200=0">. Ahora, si <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20A_n"> entonces <img src="https://latex.codecogs.com/png.latex?S(m)%20%5Cin%20A_n"> ya que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20S(m)=n+(n%20%5Ccdot%20m)">, y como <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m"> está definido y la suma siempre está definida, se sigue que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20S(m)"> está definido. Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A_n=%5Cmathbb%7BN%7D">, y por lo tanto, para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m"> está definido. Esto muestra que para cada <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D">, <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m%20%5Cin%20%5Cmathbb%7BN%7D">, y por lo tanto, a todo elemento <img src="https://latex.codecogs.com/png.latex?(n,m)%20%5Cin%20%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D"> le corresponde un único elemento <img src="https://latex.codecogs.com/png.latex?n%5Ccdot%20m%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
+<p>Veamos que esta operación binaria satisface las siguientes propiedades:</p>
+<ul>
+<li>Distributiva: Para todo <img src="https://latex.codecogs.com/png.latex?n,m,k%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20(m+k)=n%20%5Ccdot%20m%20+%20n%20%5Ccdot%20k">.</li>
+</ul>
+<p>Para ver esto fijemos la pareja <img src="https://latex.codecogs.com/png.latex?(n,m)%20%5Cin%20%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D"> y consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A_%7Bn,m%7D=%5C%7Bk%20%5Cin%20%5Cmathbb%7BN%7D%20:%20n%20%5Ccdot%20(m+k)=n%20%5Ccdot%20m%20+%20n%20%5Ccdot%20k%5C%7D."> Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A_%7Bn,m%7D">, ya que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20(m+0)=n%20%5Ccdot%20m=n%20%5Ccdots%20m%20+%20n%20%5Ccdots%200">. Ahora, si <img src="https://latex.codecogs.com/png.latex?k%20%5Cin%20A_%7Bn,m%7D"> entonces <img src="https://latex.codecogs.com/png.latex?S(k)%20%5Cin%20A_%7Bn,m%7D"> ya que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20(m+S(k))=n%20%5Ccdot%20S(m+k)=n+(n%20%5Ccdot%20(m+k))=n+(n%20%5Ccdot%20m%20+%20n%20%5Ccdot%20k)=(n+n%5Ccdot%20k)+n%5Ccdot%20m=n%20%5Ccdots%20m%20+%20n%5Ccdot%20S(k)."> Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A_%7Bn,m%7D=%5Cmathbb%7BN%7D">, y por lo tanto, <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20(m+k)=n%20%5Ccdot%20m%20+%20n%20%5Ccdot%20k"> para todo <img src="https://latex.codecogs.com/png.latex?k%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
 
 
 </section>

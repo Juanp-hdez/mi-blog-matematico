@@ -2465,7 +2465,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="a44070dc" class="cell" data-execution_count="1">
+<div id="b4653df8" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2475,7 +2475,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="58d4997c" class="cell" data-execution_count="2">
+<div id="fafa3c21" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2484,6 +2484,20 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 </div>
+</section>
+<section id="producto-de-números-naturales" class="level4">
+<h4 class="anchored" data-anchor-id="producto-de-números-naturales">Producto de números naturales</h4>
+<p>Vamos a definir ahora otra operación binaria en el conjunto de los números naturales <span class="math inline">\(\mathbb{N}\)</span>, que llamaremos producto y denotaremos por <span class="math inline">\(\cdot : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}\)</span>, de la siguiente manera:</p>
+<ul>
+<li><span class="math inline">\(n \cdot 0 = 0\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
+<li><span class="math inline">\(n \cdot S(m) = n+(n \cdot m)\)</span> para todo <span class="math inline">\(n,m \in \mathbb{N}\)</span>.</li>
+</ul>
+<p>Veamos que esta operación binaria es una función. Fijemos un elemento arbitrario <span class="math inline">\(n \in \mathbb{N}\)</span> y consideremos el conjunto <span class="math display">\[A_n=\{m \in \mathbb{N} : n \cdot m ~\textrm{está definido}\}.\]</span> Note que <span class="math inline">\(0 \in A_n\)</span>, ya que <span class="math inline">\(n \cdot 0=0\)</span>. Ahora, si <span class="math inline">\(m \in A_n\)</span> entonces <span class="math inline">\(S(m) \in A_n\)</span> ya que <span class="math inline">\(n \cdot S(m)=n+(n \cdot m)\)</span>, y como <span class="math inline">\(n \cdot m\)</span> está definido y la suma siempre está definida, se sigue que <span class="math inline">\(n \cdot S(m)\)</span> está definido. Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_n=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n \cdot m\)</span> está definido. Esto muestra que para cada <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que para todo <span class="math inline">\(m \in \mathbb{N}\)</span>, <span class="math inline">\(n \cdot m \in \mathbb{N}\)</span>, y por lo tanto, a todo elemento <span class="math inline">\((n,m) \in \mathbb{N} \times \mathbb{N}\)</span> le corresponde un único elemento <span class="math inline">\(n\cdot m \in \mathbb{N}\)</span>.</p>
+<p>Veamos que esta operación binaria satisface las siguientes propiedades:</p>
+<ul>
+<li>Distributiva: Para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n \cdot (m+k)=n \cdot m + n \cdot k\)</span>.</li>
+</ul>
+<p>Para ver esto fijemos la pareja <span class="math inline">\((n,m) \in \mathbb{N} \times \mathbb{N}\)</span> y consideremos el conjunto <span class="math display">\[A_{n,m}=\{k \in \mathbb{N} : n \cdot (m+k)=n \cdot m + n \cdot k\}.\]</span> Note que <span class="math inline">\(0 \in A_{n,m}\)</span>, ya que <span class="math inline">\(n \cdot (m+0)=n \cdot m=n \cdots m + n \cdots 0\)</span>. Ahora, si <span class="math inline">\(k \in A_{n,m}\)</span> entonces <span class="math inline">\(S(k) \in A_{n,m}\)</span> ya que <span class="math display">\[n \cdot (m+S(k))=n \cdot S(m+k)=n+(n \cdot (m+k))=n+(n \cdot m + n \cdot k)=(n+n\cdot k)+n\cdot m=n \cdots m + n\cdot S(k).\]</span> Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_{n,m}=\mathbb{N}\)</span>, y por lo tanto, <span class="math inline">\(n \cdot (m+k)=n \cdot m + n \cdot k\)</span> para todo <span class="math inline">\(k \in \mathbb{N}\)</span>.</p>
 
 
 </section>
