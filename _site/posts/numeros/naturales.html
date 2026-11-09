@@ -2465,7 +2465,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="b4653df8" class="cell" data-execution_count="1">
+<div id="00b3c4fd" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2475,7 +2475,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="fafa3c21" class="cell" data-execution_count="2">
+<div id="278d53c5" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2497,7 +2497,11 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <ul>
 <li>Distributiva: Para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n \cdot (m+k)=n \cdot m + n \cdot k\)</span>.</li>
 </ul>
-<p>Para ver esto fijemos la pareja <span class="math inline">\((n,m) \in \mathbb{N} \times \mathbb{N}\)</span> y consideremos el conjunto <span class="math display">\[A_{n,m}=\{k \in \mathbb{N} : n \cdot (m+k)=n \cdot m + n \cdot k\}.\]</span> Note que <span class="math inline">\(0 \in A_{n,m}\)</span>, ya que <span class="math inline">\(n \cdot (m+0)=n \cdot m=n \cdots m + n \cdots 0\)</span>. Ahora, si <span class="math inline">\(k \in A_{n,m}\)</span> entonces <span class="math inline">\(S(k) \in A_{n,m}\)</span> ya que <span class="math display">\[n \cdot (m+S(k))=n \cdot S(m+k)=n+(n \cdot (m+k))=n+(n \cdot m + n \cdot k)=(n+n\cdot k)+n\cdot m=n \cdots m + n\cdot S(k).\]</span> Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_{n,m}=\mathbb{N}\)</span>, y por lo tanto, <span class="math inline">\(n \cdot (m+k)=n \cdot m + n \cdot k\)</span> para todo <span class="math inline">\(k \in \mathbb{N}\)</span>.</p>
+<p>Para ver esto fijemos la pareja <span class="math inline">\((n,m) \in \mathbb{N} \times \mathbb{N}\)</span> y consideremos el conjunto <span class="math display">\[A_{n,m}=\{k \in \mathbb{N} : n \cdot (m+k)=n \cdot m + n \cdot k\}.\]</span> Note que <span class="math inline">\(0 \in A_{n,m}\)</span>, ya que <span class="math inline">\(n \cdot (m+0)=n \cdot m=n \cdot m + n \cdot 0\)</span>. Ahora, si <span class="math inline">\(k \in A_{n,m}\)</span> entonces <span class="math inline">\(S(k) \in A_{n,m}\)</span> ya que <span class="math display">\[n \cdot (m+S(k))=n \cdot S(m+k)=n+(n \cdot (m+k))=n+(n \cdot m + n \cdot k)=(n+n\cdot k)+n\cdot m=n \cdot m + n\cdot S(k).\]</span> Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_{n,m}=\mathbb{N}\)</span>, y por lo tanto, <span class="math inline">\(n \cdot (m+k)=n \cdot m + n \cdot k\)</span> para todo <span class="math inline">\(k \in \mathbb{N}\)</span>.</p>
+<ul>
+<li>Asociativa: Para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span> se tiene que <span class="math inline">\((n \cdot m) \cdot k=n \cdot (m \cdot k)\)</span>.</li>
+</ul>
+<p>Fijemos <span class="math inline">\((n,m) \in \mathbb{N} \times \mathbb{N}\)</span> y consideremos el conjunto <span class="math display">\[A_{n,m}=\{k \in \mathbb{N} : (n \cdot m) \cdot k=n \cdot (m \cdot k)\}.\]</span> Note que <span class="math inline">\(0 \in A_{n,m}\)</span>, ya que <span class="math inline">\((n \cdot m) \cdot 0=0=n \cdot (m \cdot 0)\)</span>. Ahora, si <span class="math inline">\(k \in A_{n,m}\)</span> entonces <span class="math inline">\(S(k) \in A_{n,m}\)</span> ya que <span class="math display">\[(n \cdot m) \cdot S(k)=n \cdots m+(n \cdot m) \cdot k=n \cdot m + n \cdot (m \cdot k)=n \cdot (m+m \cdot k)=n \cdot (m \cdot S(k)). \]</span> Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_{n,m}=\mathbb{N}\)</span>, y por lo tanto, <span class="math inline">\((n \cdot m) \cdot k=n \cdot (m \cdot k)\)</span> para todo <span class="math inline">\(k \in \mathbb{N}\)</span>.</p>
 
 
 </section>
