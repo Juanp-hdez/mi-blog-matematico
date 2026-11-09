@@ -2401,36 +2401,51 @@ En efecto, si $k < S(n)$ entonces $S(n)=k+t$ para algún $t \in \mathbb{N} \setm
 * Para todo $n \in \mathbb{N}$, el conjunto $$A=\{k \in \mathbb{N} : n < k < S(n)\}=\emptyset$$, es decir, no existe ningún número natural que esté estrictamente entre $n$ y su sucesor $S(n)$.
 
 ```{python}
-#| label: fig-sucesor-py
-#| fig-cap: "Ausencia de naturales entre $n$ y $S(n)$."
+#| label: fig-sucesor-sombreado-py
+#| fig-cap: "Zonas con naturales sombreadas y el intervalo $(n, S(n))$ sin sombrear."
 #| echo: false
 
 import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(figsize=(7, 2), dpi=200)
-
-# Recta numérica
-ax.annotate('', xy=(5.5, 0), xytext=(-0.5, 0),
-            arrowprops=dict(arrowstyle="->", lw=1.5, color='black'))
+fig, ax = plt.subplots(figsize=(8, 2.3), dpi=200)
 
 # Coordenadas
-pts = {'$n-1$': 0.8, '$n$': 2.0, '$S(n)$': 4.0, '$S(S(n))$': 5.0}
+x_min, x_max = -0.5, 7.0
+x_n = 2.5
+x_sn = 4.8
 
-for label, x in pts.items():
-    ax.scatter(x, 0, color='black', s=25, zorder=3)
+# Sombrear (-inf, n] y [S(n), +inf)
+ax.axvspan(x_min, x_n, color='royalblue', alpha=0.18, label='Región $\le n$')
+ax.axvspan(x_sn, x_max, color='royalblue', alpha=0.18, label='Región $\ge S(n)$')
+
+# Recta numérica
+ax.annotate('', xy=(x_max + 0.3, 0), xytext=(x_min, 0),
+            arrowprops=dict(arrowstyle="-|>", lw=1.5, color='black'))
+
+# Puntos naturales
+points = {
+    '$n-1$': 1.0,
+    '$n$': x_n,
+    '$S(n)$': x_sn,
+    '$S(S(n))$': 6.2
+}
+
+for label, x in points.items():
+    ax.scatter(x, 0, color='black', s=35, zorder=4)
     ax.text(x, -0.15, label, ha='center', va='top', fontsize=11)
 
-# Resaltar segmento vacío
-ax.plot([2.0, 4.0], [0, 0], color='crimson', lw=3, zorder=2)
+# Fronteras discontinuas en n y S(n)
+ax.axvline(x_n, color='gray', linestyle='--', lw=1, ymin=0.2, ymax=0.8)
+ax.axvline(x_sn, color='gray', linestyle='--', lw=1, ymin=0.2, ymax=0.8)
 
-# Flecha indicadora y texto explicativo
-ax.annotate(r'$(n, S(n)) \cap \mathbb{N} = \emptyset$' + '\n(sin naturales)',
-            xy=(3.0, 0), xytext=(3.0, 0.25),
-            ha='center', va='bottom', fontsize=10, color='crimson',
-            arrowprops=dict(arrowstyle="->", color='crimson', lw=1.2))
+# Indicador en el intervalo vacío
+ax.annotate(r'$(n, S(n)) \cap \mathbb{N} = \emptyset$' + '\n(sin elementos de $\mathbb{N}$)',
+            xy=((x_n + x_sn) / 2, 0), xytext=((x_n + x_sn) / 2, 0.30),
+            ha='center', va='bottom', fontsize=10.5, color='crimson',
+            arrowprops=dict(arrowstyle="->", color='crimson', lw=1.3))
 
-ax.set_xlim(-0.6, 5.8)
-ax.set_ylim(-0.4, 0.5)
+ax.set_xlim(x_min, x_max + 0.5)
+ax.set_ylim(-0.35, 0.6)
 ax.axis('off')
 plt.show()
 ```

@@ -2291,7 +2291,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="f3406245" class="cell" data-execution_count="1">
+<div id="3a36d553" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2301,7 +2301,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="5f2867e9" class="cell" data-execution_count="2">
+<div id="d7b1952a" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2320,15 +2320,15 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <ul>
 <li>Para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, el conjunto <img src="https://latex.codecogs.com/png.latex?A=%5C%7Bk%20%5Cin%20%5Cmathbb%7BN%7D%20:%20n%20%3C%20k%20%3C%20S(n)%5C%7D=%5Cemptyset">, es decir, no existe ningún número natural que esté estrictamente entre <img src="https://latex.codecogs.com/png.latex?n"> y su sucesor <img src="https://latex.codecogs.com/png.latex?S(n)">.</li>
 </ul>
-<div id="cell-fig-sucesor-py" class="cell" data-execution_count="3">
+<div id="cell-fig-sucesor-sombreado-py" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
-<div id="fig-sucesor-py" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-sucesor-sombreado-py" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sucesor-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://your-website-url.example.com/posts/numeros/naturales_files/figure-html/fig-sucesor-py-output-1.png" width="1124" height="348" class="figure-img">
+<div aria-describedby="fig-sucesor-sombreado-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://your-website-url.example.com/posts/numeros/naturales_files/figure-html/fig-sucesor-sombreado-py-output-1.png" width="1280" height="394" class="figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sucesor-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Ausencia de naturales entre <img src="https://latex.codecogs.com/png.latex?n"> y <img src="https://latex.codecogs.com/png.latex?S(n)">.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sucesor-sombreado-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Zonas con naturales sombreadas y el intervalo <img src="https://latex.codecogs.com/png.latex?(n,%20S(n))"> sin sombrear.
 </figcaption>
 </figure>
 </div>
