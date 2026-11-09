@@ -2385,3 +2385,18 @@ ax.axis('off')
 
 plt.show()
 ```
+
+#### Producto de números naturales
+
+Vamos a definir ahora otra operación binaria en el conjunto de los números naturales $\mathbb{N}$, que llamaremos producto y denotaremos por $\cdot : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}$, de la siguiente manera:
+
+* $n \cdot 0 = 0$ para todo $n \in \mathbb{N}$.
+* $n \cdot S(m) = n+(n \cdot m)$ para todo $n,m \in \mathbb{N}$.
+
+Veamos que esta operación binaria es una función. Fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A_n=\{m \in \mathbb{N} : n \cdot m ~\textrm{está definido}\}.$$ Note que $0 \in A_n$, ya que $n \cdot 0=0$. Ahora, si $m \in A_n$ entonces $S(m) \in A_n$ ya que $n \cdot S(m)=n+(n \cdot m)$, y como $n \cdot m$ está definido y la suma siempre está definida, se sigue que $n \cdot S(m)$ está definido. Por lo tanto, por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, para todo $m \in \mathbb{N}$ se tiene que $n \cdot m$ está definido. Esto muestra que para cada $n \in \mathbb{N}$ se tiene que para todo $m \in \mathbb{N}$, $n \cdot m \in \mathbb{N}$, y por lo tanto, a todo elemento $(n,m) \in \mathbb{N} \times \mathbb{N}$ le corresponde un único elemento $n\cdot m \in \mathbb{N}$.
+
+Veamos que esta operación binaria satisface las siguientes propiedades:
+
+* Distributiva: Para todo $n,m,k \in \mathbb{N}$ se tiene que $n \cdot (m+k)=n \cdot m + n \cdot k$.
+
+Para ver esto fijemos la pareja $(n,m) \in \mathbb{N} \times \mathbb{N}$ y consideremos el conjunto $$A_{n,m}=\{k \in \mathbb{N} : n \cdot (m+k)=n \cdot m + n \cdot k\}.$$ Note que $0 \in A_{n,m}$, ya que $n \cdot (m+0)=n \cdot m=n \cdots m + n \cdots 0$. Ahora, si $k \in A_{n,m}$ entonces $S(k) \in A_{n,m}$ ya que $$n \cdot (m+S(k))=n \cdot S(m+k)=n+(n \cdot (m+k))=n+(n \cdot m + n \cdot k)=(n+n\cdot k)+n\cdot m=n \cdots m + n\cdot S(k).$$ Por lo tanto, por el principio de inducción, se tiene que $A_{n,m}=\mathbb{N}$, y por lo tanto, $n \cdot (m+k)=n \cdot m + n \cdot k$ para todo $k \in \mathbb{N}$.
