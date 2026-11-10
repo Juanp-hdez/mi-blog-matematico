@@ -2469,7 +2469,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="57968b35" class="cell" data-execution_count="1">
+<div id="6ffb68bb" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2479,7 +2479,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="0504ac08" class="cell" data-execution_count="2">
+<div id="21961e6e" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2541,6 +2541,13 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <li>Conmutativa: Para todo <span class="math inline">\(n,m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n \cdot m=m \cdot n\)</span>.</li>
 </ul>
 <p>Fijemos un elemento arbitrario <span class="math inline">\(n \in \mathbb{N}\)</span> y consideremos el conjunto <span class="math display">\[A_n=\{m \in \mathbb{N} : n \cdot m=m \cdot n\}.\]</span> Note que <span class="math inline">\(0 \in A_n\)</span>, ya que <span class="math inline">\(n \cdot 0=0=0 \cdot n\)</span>. Ahora, si <span class="math inline">\(m \in A_n\)</span> entonces <span class="math inline">\(S(m) \in A_n\)</span> ya que <span class="math display">\[n \cdot S(m)=n+(n \cdot m)=n+(m \cdot n)=m+n\cdot n=m\cdot S(n).\]</span> Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_n=\mathbb{N}\)</span>, y por lo tanto, <span class="math inline">\(n \cdot m=m \cdot n\)</span> para todo <span class="math inline">\(m \in \mathbb{N}\)</span>.</p>
+</section>
+<section id="propiedad-de-la-relación-de-orden-respecto-al-producto" class="level4">
+<h4 class="anchored" data-anchor-id="propiedad-de-la-relación-de-orden-respecto-al-producto">Propiedad de la relación de orden respecto al producto</h4>
+<p>Si tenemos <span class="math inline">\(n,m,k \in \mathbb{N}\)</span> con <span class="math inline">\(n \leq m\)</span>, entonces <span class="math inline">\(n \cdot k \leq m \cdot k\)</span>.</p>
+<p>Para probar esto, supongamos que <span class="math inline">\(n \leq m\)</span>, es decir, existe <span class="math inline">\(t \in \mathbb{N}\)</span> tal que <span class="math inline">\(m=n+t\)</span>. Entonces, multiplicando ambos lados por <span class="math inline">\(k\)</span>, tenemos que <span class="math inline">\(m \cdot k= (n+t) \cdot k = n \cdot k + t \cdot k\)</span>. Como <span class="math inline">\(t \cdot k \in \mathbb{N}\)</span>, se sigue que <span class="math inline">\(n \cdot k \leq m \cdot k\)</span>.</p>
+<p>Más aún, si <span class="math inline">\(k \neq 0\)</span> y <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(n \cdot k &lt; m \cdot k\)</span>.</p>
+<p>En efecto, si <span class="math inline">\(k \neq 0\)</span> entonces <span class="math inline">\(t \cdot k \neq 0\)</span> ya que <span class="math inline">\(t \neq 0\)</span>, y como <span class="math inline">\(n \cdot k + t \cdot k = m \cdot k\)</span>, se tiene que <span class="math inline">\(nk &lt; mk\)</span>.</p>
 
 
 </section>

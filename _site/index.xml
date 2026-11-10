@@ -2291,7 +2291,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="57968b35" class="cell" data-execution_count="1">
+<div id="6ffb68bb" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2301,7 +2301,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="0504ac08" class="cell" data-execution_count="2">
+<div id="21961e6e" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2363,6 +2363,13 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 <li>Conmutativa: Para todo <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m=m%20%5Ccdot%20n">.</li>
 </ul>
 <p>Fijemos un elemento arbitrario <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> y consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A_n=%5C%7Bm%20%5Cin%20%5Cmathbb%7BN%7D%20:%20n%20%5Ccdot%20m=m%20%5Ccdot%20n%5C%7D."> Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A_n">, ya que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%200=0=0%20%5Ccdot%20n">. Ahora, si <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20A_n"> entonces <img src="https://latex.codecogs.com/png.latex?S(m)%20%5Cin%20A_n"> ya que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20S(m)=n+(n%20%5Ccdot%20m)=n+(m%20%5Ccdot%20n)=m+n%5Ccdot%20n=m%5Ccdot%20S(n)."> Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A_n=%5Cmathbb%7BN%7D">, y por lo tanto, <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m=m%20%5Ccdot%20n"> para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
+</section>
+<section id="propiedad-de-la-relación-de-orden-respecto-al-producto" class="level4">
+<h4 class="anchored" data-anchor-id="propiedad-de-la-relación-de-orden-respecto-al-producto">Propiedad de la relación de orden respecto al producto</h4>
+<p>Si tenemos <img src="https://latex.codecogs.com/png.latex?n,m,k%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%5Cleq%20m">, entonces <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20k%20%5Cleq%20m%20%5Ccdot%20k">.</p>
+<p>Para probar esto, supongamos que <img src="https://latex.codecogs.com/png.latex?n%20%5Cleq%20m">, es decir, existe <img src="https://latex.codecogs.com/png.latex?t%20%5Cin%20%5Cmathbb%7BN%7D"> tal que <img src="https://latex.codecogs.com/png.latex?m=n+t">. Entonces, multiplicando ambos lados por <img src="https://latex.codecogs.com/png.latex?k">, tenemos que <img src="https://latex.codecogs.com/png.latex?m%20%5Ccdot%20k=%20(n+t)%20%5Ccdot%20k%20=%20n%20%5Ccdot%20k%20+%20t%20%5Ccdot%20k">. Como <img src="https://latex.codecogs.com/png.latex?t%20%5Ccdot%20k%20%5Cin%20%5Cmathbb%7BN%7D">, se sigue que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20k%20%5Cleq%20m%20%5Ccdot%20k">.</p>
+<p>Más aún, si <img src="https://latex.codecogs.com/png.latex?k%20%5Cneq%200"> y <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, entonces <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20k%20%3C%20m%20%5Ccdot%20k">.</p>
+<p>En efecto, si <img src="https://latex.codecogs.com/png.latex?k%20%5Cneq%200"> entonces <img src="https://latex.codecogs.com/png.latex?t%20%5Ccdot%20k%20%5Cneq%200"> ya que <img src="https://latex.codecogs.com/png.latex?t%20%5Cneq%200">, y como <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20k%20+%20t%20%5Ccdot%20k%20=%20m%20%5Ccdot%20k">, se tiene que <img src="https://latex.codecogs.com/png.latex?nk%20%3C%20mk">.</p>
 
 
 </section>
