@@ -2436,7 +2436,7 @@ ax.scatter([1.0, 6.2], [0, 0], color='black', s=25, zorder=3)
 
 # Anotación del hueco / interrupción
 mid_x = (x_n + x_sn) / 2
-ax.annotate(r'($\emptyset$)',
+ax.annotate(r'$\emptyset$',
             xy=(mid_x, 0), xytext=(mid_x, 0.28),
             ha='center', va='bottom', fontsize=10, color='crimson',
             arrowprops=dict(arrowstyle="->", color='crimson', lw=1.2))
@@ -2480,3 +2480,9 @@ Ahora consideremos el conjunto $$A=\{n \in \mathbb{N} : S(0) \cdot n=n\}.$$ Note
 * Conmutativa: Para todo $n,m \in \mathbb{N}$ se tiene que $n \cdot m=m \cdot n$.
 
 Fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A_n=\{m \in \mathbb{N} : n \cdot m=m \cdot n\}.$$ Note que $0 \in A_n$, ya que $n \cdot 0=0=0 \cdot n$. Ahora, si $m \in A_n$ entonces $S(m) \in A_n$ ya que $$n \cdot S(m)=n+(n \cdot m)=n+(m \cdot n)=m+n\cdot n=m\cdot S(n).$$ Por lo tanto, por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, $n \cdot m=m \cdot n$ para todo $m \in \mathbb{N}$.
+
+#### Propiedad de la relación de orden respecto al producto
+
+Si tenemos $n,m,k \in \mathbb{N}$ con $n \leq m$, entonces $n \cdot k \leq m \cdot k$.
+
+Para probar esto, supongamos que $n \leq m$, es decir, existe $t \in \mathbb{N}$ tal que $m=n+t$. Entonces, multiplicando ambos lados por $k$, tenemos que $m \cdot k= (n+t) \cdot k = n \cdot k + t \cdot k$. Como $t \cdot k \in \mathbb{N}$, se sigue que $n \cdot k \leq m \cdot k$.
