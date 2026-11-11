@@ -2301,7 +2301,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Observe que <img src="https://latex.codecogs.com/png.latex?0%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">, y que si <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%3C%20S(m)">.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="bb789628" class="cell" data-execution_count="1">
+<div id="5bbded73" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2311,7 +2311,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="a414523f" class="cell" data-execution_count="2">
+<div id="6f79ad81" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2418,15 +2418,16 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 <li><img src="https://latex.codecogs.com/png.latex?n%5E%7B0%7D=S(0)"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
 <li><img src="https://latex.codecogs.com/png.latex?n%5E%7BS(m)%7D=n%20%5Ccdot%20n%5E%7Bm%7D"> para todo <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
 </ul>
-<p>Comencemos observando que en efecto esta es una función. Para probar esto, fijemos un elemento arbitrario <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> y consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A_n=%5C%7Bm%20%5Cin%20%5Cmathbb%7BN%7D%20:%20n%5E%7Bm%7D~%5Ctextrm%7Best%C3%A1%20definido%7D%5C%7D."> Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A_n">, ya que <img src="https://latex.codecogs.com/png.latex?n%5E%7B0%7D=S(0)%20%5Cin%20%5Cmathbb%7BN%7D">. Ahora, si <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20A_n"> entonces <img src="https://latex.codecogs.com/png.latex?S(m)%20%5Cin%20A_n"> ya que <img src="https://latex.codecogs.com/png.latex?n%5E%7BS(m)%7D=n%20%5Ccdot%20n%5E%7Bm%7D">, y como <img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%7D"> está definido y el producto siempre está definido, se sigue que <img src="https://latex.codecogs.com/png.latex?n%5E%7BS(m)%7D"> está definido. Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A_n=%5Cmathbb%7BN%7D">, y por lo tanto, para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%7D"> está definido. Esto muestra que para cada <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D">, <img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%7D%20%5Cin%20%5Cmathbb%7BN%7D">, y por lo tanto, a todo elemento <img src="https://latex.codecogs.com/png.latex?(n,m)%20%5Cin%20%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D"> le corresponde un único elemento <img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%7D%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
+<p>Comencemos observando que en efecto esta es una función.</p>
+<p>Para probar esto, fijemos un elemento arbitrario <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> y consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A_n=%5C%7Bm%20%5Cin%20%5Cmathbb%7BN%7D%20:%20n%5E%7Bm%7D~%5Ctextrm%7Best%C3%A1%20definido%7D%5C%7D."> Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A_n">, ya que <img src="https://latex.codecogs.com/png.latex?n%5E%7B0%7D=S(0)%20%5Cin%20%5Cmathbb%7BN%7D">. Ahora, si <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20A_n"> entonces <img src="https://latex.codecogs.com/png.latex?S(m)%20%5Cin%20A_n"> ya que <img src="https://latex.codecogs.com/png.latex?n%5E%7BS(m)%7D=n%20%5Ccdot%20n%5E%7Bm%7D">, y como <img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%7D"> está definido y el producto siempre está definido, se sigue que <img src="https://latex.codecogs.com/png.latex?n%5E%7BS(m)%7D"> está definido. Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A_n=%5Cmathbb%7BN%7D">, y por lo tanto, para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%7D"> está definido. Esto muestra que para cada <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D">, <img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%7D%20%5Cin%20%5Cmathbb%7BN%7D">, y por lo tanto, a todo elemento <img src="https://latex.codecogs.com/png.latex?(n,m)%20%5Cin%20%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D"> le corresponde un único elemento <img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%7D%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
 </section>
 <section id="algunas-propiedades-de-la-potenciación" class="level4">
 <h4 class="anchored" data-anchor-id="algunas-propiedades-de-la-potenciación">Algunas propiedades de la potenciación</h4>
 <ul>
-<li>n^{S(0)}=n para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
-<li>0^{n}=0 para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">.</li>
-<li>n<sup>{m+k}=n</sup>{m} n^{k} para todo <img src="https://latex.codecogs.com/png.latex?n,m,k%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
-<li>n^{m k}=(n<sup>{m})</sup>{k} para todo <img src="https://latex.codecogs.com/png.latex?n,m,k%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
+<li><img src="https://latex.codecogs.com/png.latex?n%5E%7BS(0)%7D=n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
+<li><img src="https://latex.codecogs.com/png.latex?0%5E%7Bn%7D=0"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">.</li>
+<li><img src="https://latex.codecogs.com/png.latex?n%5E%7Bm+k%7D=n%5E%7Bm%7D%20%5Ccdot%20n%5E%7Bk%7D"> para todo <img src="https://latex.codecogs.com/png.latex?n,m,k%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
+<li><img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%20%5Ccdot%20k%7D=(n%5E%7Bm%7D)%5E%7Bk%7D"> para todo <img src="https://latex.codecogs.com/png.latex?n,m,k%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
 </ul>
 
 

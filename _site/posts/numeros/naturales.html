@@ -2479,7 +2479,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="bb789628" class="cell" data-execution_count="1">
+<div id="5bbded73" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2489,7 +2489,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="a414523f" class="cell" data-execution_count="2">
+<div id="6f79ad81" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2596,15 +2596,16 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <li><span class="math inline">\(n^{0}=S(0)\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
 <li><span class="math inline">\(n^{S(m)}=n \cdot n^{m}\)</span> para todo <span class="math inline">\(n,m \in \mathbb{N}\)</span>.</li>
 </ul>
-<p>Comencemos observando que en efecto esta es una función. Para probar esto, fijemos un elemento arbitrario <span class="math inline">\(n \in \mathbb{N}\)</span> y consideremos el conjunto <span class="math display">\[A_n=\{m \in \mathbb{N} : n^{m}~\textrm{está definido}\}.\]</span> Note que <span class="math inline">\(0 \in A_n\)</span>, ya que <span class="math inline">\(n^{0}=S(0) \in \mathbb{N}\)</span>. Ahora, si <span class="math inline">\(m \in A_n\)</span> entonces <span class="math inline">\(S(m) \in A_n\)</span> ya que <span class="math inline">\(n^{S(m)}=n \cdot n^{m}\)</span>, y como <span class="math inline">\(n^{m}\)</span> está definido y el producto siempre está definido, se sigue que <span class="math inline">\(n^{S(m)}\)</span> está definido. Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_n=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n^{m}\)</span> está definido. Esto muestra que para cada <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que para todo <span class="math inline">\(m \in \mathbb{N}\)</span>, <span class="math inline">\(n^{m} \in \mathbb{N}\)</span>, y por lo tanto, a todo elemento <span class="math inline">\((n,m) \in \mathbb{N} \times \mathbb{N}\)</span> le corresponde un único elemento <span class="math inline">\(n^{m} \in \mathbb{N}\)</span>.</p>
+<p>Comencemos observando que en efecto esta es una función.</p>
+<p>Para probar esto, fijemos un elemento arbitrario <span class="math inline">\(n \in \mathbb{N}\)</span> y consideremos el conjunto <span class="math display">\[A_n=\{m \in \mathbb{N} : n^{m}~\textrm{está definido}\}.\]</span> Note que <span class="math inline">\(0 \in A_n\)</span>, ya que <span class="math inline">\(n^{0}=S(0) \in \mathbb{N}\)</span>. Ahora, si <span class="math inline">\(m \in A_n\)</span> entonces <span class="math inline">\(S(m) \in A_n\)</span> ya que <span class="math inline">\(n^{S(m)}=n \cdot n^{m}\)</span>, y como <span class="math inline">\(n^{m}\)</span> está definido y el producto siempre está definido, se sigue que <span class="math inline">\(n^{S(m)}\)</span> está definido. Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_n=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n^{m}\)</span> está definido. Esto muestra que para cada <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que para todo <span class="math inline">\(m \in \mathbb{N}\)</span>, <span class="math inline">\(n^{m} \in \mathbb{N}\)</span>, y por lo tanto, a todo elemento <span class="math inline">\((n,m) \in \mathbb{N} \times \mathbb{N}\)</span> le corresponde un único elemento <span class="math inline">\(n^{m} \in \mathbb{N}\)</span>.</p>
 </section>
 <section id="algunas-propiedades-de-la-potenciación" class="level4">
 <h4 class="anchored" data-anchor-id="algunas-propiedades-de-la-potenciación">Algunas propiedades de la potenciación</h4>
 <ul>
-<li>n^{S(0)}=n para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
-<li>0^{n}=0 para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>.</li>
-<li>n<sup>{m+k}=n</sup>{m} n^{k} para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span>.</li>
-<li>n^{m k}=(n<sup>{m})</sup>{k} para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span>.</li>
+<li><span class="math inline">\(n^{S(0)}=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
+<li><span class="math inline">\(0^{n}=0\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>.</li>
+<li><span class="math inline">\(n^{m+k}=n^{m} \cdot n^{k}\)</span> para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span>.</li>
+<li><span class="math inline">\(n^{m \cdot k}=(n^{m})^{k}\)</span> para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span>.</li>
 </ul>
 
 

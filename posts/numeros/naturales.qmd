@@ -2544,11 +2544,13 @@ La operación potenciación en los números naturales es una función binaria $^
 * $n^{0}=S(0)$ para todo $n \in \mathbb{N}$.
 * $n^{S(m)}=n \cdot n^{m}$ para todo $n,m \in \mathbb{N}$.
 
-Comencemos observando que en efecto esta es una función. Para probar esto, fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A_n=\{m \in \mathbb{N} : n^{m}~\textrm{está definido}\}.$$ Note que $0 \in A_n$, ya que $n^{0}=S(0) \in \mathbb{N}$. Ahora, si $m \in A_n$ entonces $S(m) \in A_n$ ya que $n^{S(m)}=n \cdot n^{m}$, y como $n^{m}$ está definido y el producto siempre está definido, se sigue que $n^{S(m)}$ está definido. Por lo tanto, por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, para todo $m \in \mathbb{N}$ se tiene que $n^{m}$ está definido. Esto muestra que para cada $n \in \mathbb{N}$ se tiene que para todo $m \in \mathbb{N}$, $n^{m} \in \mathbb{N}$, y por lo tanto, a todo elemento $(n,m) \in \mathbb{N} \times \mathbb{N}$ le corresponde un único elemento $n^{m} \in \mathbb{N}$.
+Comencemos observando que en efecto esta es una función. 
+
+Para probar esto, fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A_n=\{m \in \mathbb{N} : n^{m}~\textrm{está definido}\}.$$ Note que $0 \in A_n$, ya que $n^{0}=S(0) \in \mathbb{N}$. Ahora, si $m \in A_n$ entonces $S(m) \in A_n$ ya que $n^{S(m)}=n \cdot n^{m}$, y como $n^{m}$ está definido y el producto siempre está definido, se sigue que $n^{S(m)}$ está definido. Por lo tanto, por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, para todo $m \in \mathbb{N}$ se tiene que $n^{m}$ está definido. Esto muestra que para cada $n \in \mathbb{N}$ se tiene que para todo $m \in \mathbb{N}$, $n^{m} \in \mathbb{N}$, y por lo tanto, a todo elemento $(n,m) \in \mathbb{N} \times \mathbb{N}$ le corresponde un único elemento $n^{m} \in \mathbb{N}$.
 
 #### Algunas propiedades de la potenciación
 
-* n^{S(0)}=n para todo $n \in \mathbb{N}$.
-* 0^{n}=0 para todo $n \in \mathbb{N} \setminus \{0\}$.
-* n^{m+k}=n^{m} \cdot n^{k} para todo $n,m,k \in \mathbb{N}$.
-* n^{m \cdot k}=(n^{m})^{k} para todo $n,m,k \in \mathbb{N}$.
+* $n^{S(0)}=n$ para todo $n \in \mathbb{N}$.
+* $0^{n}=0$ para todo $n \in \mathbb{N} \setminus \{0\}$.
+* $n^{m+k}=n^{m} \cdot n^{k}$ para todo $n,m,k \in \mathbb{N}$.
+* $n^{m \cdot k}=(n^{m})^{k}$ para todo $n,m,k \in \mathbb{N}$.
