@@ -2575,7 +2575,7 @@ Por el principio del buen orden, el conjunto $A$ tiene un elemento minimal, diga
 
 ```{python}
 #| label: fig-euclides-recta-roja-py
-#| fig-cap: "El conjunto $B = \\{m_t \\mid n < m_t\\}$ a la derecha de $m_l$, con $m_l = \\min B$ en rojo."
+#| fig-cap: "El conjunto $B = \\{mt \\mid n < mt\\}$ a la derecha de $ml$, con $ml = \\min B$ en rojo."
 #| echo: false
 
 import matplotlib.pyplot as plt
@@ -2606,10 +2606,10 @@ ax.text(x_n, -0.16, '$n$', ha='center', va='top', fontsize=12)
 ax.scatter(x_ml, 0, color='crimson', s=60, zorder=5)
 ax.text(x_ml, -0.16, '$ml,~~l=S(k)$', ha='center', va='top', fontsize=13, weight='bold', color='crimson')
 ax.text(x_ml, -0.36, '(elemento minimal de $B$)', ha='center', va='top', fontsize=9.5, color='crimson')
-ax.text(x_ml, 0.16, '$l = S(k)$', ha='center', va='bottom', fontsize=11, color='crimson', weight='bold')
+
 
 # 5. Etiqueta del conjunto B sobre el segmento rojo
-ax.text((x_ml + x_max)/2, 0.4, r'$B = \{m_t \mid n < m_t\}$', ha='center', va='bottom',
+ax.text((x_ml + x_max)/2, 0.4, r'$B = \{mt \mid n < mt\}$', ha='center', va='bottom',
         fontsize=12, color='crimson', weight='bold')
 
 # Soporte visual de llave/llaves
