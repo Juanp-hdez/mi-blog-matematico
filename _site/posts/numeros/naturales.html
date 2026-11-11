@@ -2474,12 +2474,13 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <p><strong>¿Por qué <span class="math inline">\(n \neq S(n)\)</span>?</strong></p>
 <p>Esto se puede probar usando el principio de inducción. Consideremos el conjunto <span class="math display">\[A=\{n \in \mathbb{N} : n \neq S(n)\}.\]</span> Note que <span class="math inline">\(0 \in A\)</span>, ya que <span class="math inline">\(0 \neq S(0)\)</span> (<span class="math inline">\(0\)</span> no es sucesor de nadie). Ahora, si <span class="math inline">\(n \in A\)</span> entonces <span class="math inline">\(S(n) \in A\)</span> ya que si <span class="math inline">\(S(n)=S(S(n))\)</span> entonces por la inyectividad de la función <span class="math inline">\(S\)</span> se sigue que <span class="math inline">\(n=S(n)\)</span>, lo cual es absurdo ya que <span class="math inline">\(n \in A\)</span>. Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n \neq S(n)\)</span>.</p>
 <p>De lo anterior tenemos que <span class="math inline">\(0&lt;S(0)=1 &lt; S(1)=2 &lt; S(2)=3 &lt; S(3)=4 &lt; S(4)=5 &lt; S(5)=6 &lt; S(6)=7 &lt; S(7)=8 &lt; S(8)=9\)</span>.</p>
+<p>También podemos deducir que el conjunto <span class="math inline">\(\mathbb{N}\)</span> no tiene un elemento maximal, es decir, dado un número natural <span class="math inline">\(n \in \mathbb{N}\)</span>, siempre existe un número natural <span class="math inline">\(m \in \mathbb{N}\)</span> tal que <span class="math inline">\(n &lt; m\)</span>, por ejemplo <span class="math inline">\(S(n)\)</span>, o dicho de manera equivalente, no existe un número natural que sea mayor o igual que todos los demás números naturales.</p>
 </section>
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="5bbded73" class="cell" data-execution_count="1">
+<div id="2b89a1c1" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2489,7 +2490,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="6f79ad81" class="cell" data-execution_count="2">
+<div id="8b6107ad" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2506,7 +2507,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </ul>
 <p>En efecto, si <span class="math inline">\(k &lt; S(n)\)</span> entonces <span class="math inline">\(S(n)=k+t\)</span> para algún <span class="math inline">\(t \in \mathbb{N} \setminus \{0\}\)</span>, luego <span class="math inline">\(t=S(l)\)</span> para cierto <span class="math inline">\(l \in \mathbb{N}\)</span>, y por lo tanto <span class="math inline">\(S(n)=S(k+l)\)</span>, de donde <span class="math inline">\(n=k+l\)</span> y así <span class="math inline">\(k \leq n\)</span>.</p>
 <ul>
-<li>Para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, el conjunto <span class="math display">\[A=\{k \in \mathbb{N} : n &lt; k &lt; S(n)\}=\emptyset\]</span>, es decir, no existe ningún número natural que esté estrictamente entre <span class="math inline">\(n\)</span> y su sucesor <span class="math inline">\(S(n)\)</span>.</li>
+<li>Para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, el conjunto <span class="math display">\[A=\{k \in \mathbb{N} : n &lt; k &lt; S(n)\}=\emptyset,\]</span> es decir, no existe ningún número natural que esté estrictamente entre <span class="math inline">\(n\)</span> y su sucesor <span class="math inline">\(S(n)\)</span>.</li>
 </ul>
 <div id="cell-fig-segmento-interrumpido-py" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
@@ -2529,7 +2530,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>El conjunto de los números naturales tiene una propiedad muy importante respecto a la relación de orden total <span class="math inline">\(\leq\)</span>, que se conoce como el principio del buen orden, y que dice lo siguiente:</p>
 <p><strong>Principio del buen orden:</strong> Todo subconjunto no vacío de <span class="math inline">\(\mathbb{N}\)</span> tiene un elemento minimal.</p>
 <p>Antes de demostrar este principio, observemos que el conjunto <span class="math inline">\(\mathbb{N}\)</span> tiene un elemento minimal que es el <span class="math inline">\(0\)</span>.</p>
-<p>Demostremos el principio del buen orden. Sea <span class="math inline">\(A \subseteq \mathbb{N}\)</span> un subconjunto no vacío. Como <span class="math inline">\(A\)</span> es no vacío, existe un elemento <span class="math inline">\(n \in A\)</span>. Consideremos el conjunto <span class="math display">\[B=\{m \in \mathbb{N} : m \leq n\}.\]</span> Note que <span class="math inline">\(0 \in B\)</span>, ya que <span class="math inline">\(0 \leq n\)</span>. Ahora, si <span class="math inline">\(m \in B\)</span> entonces <span class="math inline">\(S(m) \in B\)</span> si y solo si <span class="math inline">\(S(m) \leq n\)</span>. Si <span class="math inline">\(S(m) \leq n\)</span> entonces existe un número natural <span class="math inline">\(k \in \mathbb{N}\)</span> tal que <span class="math inline">\(S(m)+k=n\)</span>, y como la función sucesor es inyectiva, se sigue que <span class="math inline">\(m+k=P(n)\)</span>, y por lo tanto, <span class="math inline">\(m \leq P(n)\)</span>. Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(B=\{0,1,\ldots,n\}\)</span>.</p>
+<p>Demostremos el principio del buen orden. Supongamos por el absurdo que existe un subconjunto no vacío <span class="math inline">\(A \subseteq \mathbb{N}\)</span> que no tiene elemento minimal. Note que <span class="math inline">\(0 \notin A\)</span> ya que <span class="math inline">\(A\)</span> no tiene elemento minimal. Consideremos el conjunto <span class="math display">\[B=\{m \in \mathbb{N} : m &lt; n~ \textrm{para todo} ~n \in A\}\]</span>. Es claro que <span class="math inline">\(0 \in B\)</span>, y si <span class="math inline">\(n \in B\)</span> entonces <span class="math inline">\(S(n) \in B\)</span>, ya que como <span class="math inline">\(m &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span> entonces <span class="math inline">\(S(m) \leq n\)</span> para todo <span class="math inline">\(n \in A\)</span>, pero <span class="math inline">\(S(m) \notin A\)</span> puesto que <span class="math inline">\(A\)</span> no tiene elemento minimal, luego <span class="math inline">\(S(m) &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span>. Del principio de inducción se sigue que <span class="math inline">\(B=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(m &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span>, en particular, dado <span class="math inline">\(n \in A\)</span>, se tiene que <span class="math inline">\(n &lt; n\)</span>, lo cual es absurdo. Por lo tanto, todo subconjunto no vacío de <span class="math inline">\(\mathbb{N}\)</span> tiene un elemento minimal.</p>
 </section>
 <section id="producto-de-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="producto-de-números-naturales">Producto de números naturales</h4>
@@ -2581,7 +2582,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>De lo anterior se deduce que <span class="math inline">\(S(0)\)</span> es el único neutro, más aún, que si <span class="math inline">\(n \cdot m=n\)</span> para cierto <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, entonces <span class="math inline">\(m=S(0)\)</span>.</p>
 <ul>
 <li><p>Si <span class="math inline">\(n,m,k,s \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n \leq m\)</span> y <span class="math inline">\(k \leq s\)</span>, entonces <span class="math inline">\(n \cdot k \leq m \cdot s\)</span>.</p></li>
-<li><p>Si <span class="math inline">\(n,m,k,s \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span> y <span class="math inline">\(k &lt; s\)</span>, entonces <span class="math inline">\(n \cdot k  m \cdot s\)</span>.</p></li>
+<li><p>Si <span class="math inline">\(n,m,k,s \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span> y <span class="math inline">\(k &lt; s\)</span>, entonces <span class="math inline">\(n \cdot k &lt; m \cdot s\)</span>.</p></li>
 </ul>
 </section>
 <section id="no-hay-divisores-de-cero-en-los-números-naturales" class="level4">
@@ -2607,6 +2608,36 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <li><span class="math inline">\(n^{m+k}=n^{m} \cdot n^{k}\)</span> para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span>.</li>
 <li><span class="math inline">\(n^{m \cdot k}=(n^{m})^{k}\)</span> para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span>.</li>
 </ul>
+</section>
+</section>
+<section id="representación-de-los-números-naturales-en-base-diez" class="level3">
+<h3 class="anchored" data-anchor-id="representación-de-los-números-naturales-en-base-diez">Representación de los números naturales en base diez</h3>
+<p>Definamos el número natural <strong>diez</strong> como el sucesor del <span class="math inline">\(9\)</span>, que denotaremos con el símbolo <span class="math inline">\(10\)</span>.</p>
+<p>El primer algortimo de la historia es conocido con el nombre de “algoritmo de la división” y fue desarrollado por los matemáticos árabes. Este algoritmo permite representar cualquier número natural en base diez, es decir, como una suma de potencias de diez multiplicadas por dígitos del 0 al 9.</p>
+<section id="algoritmo-de-la-división" class="level4">
+<h4 class="anchored" data-anchor-id="algoritmo-de-la-división">Algoritmo de la división</h4>
+<p>Dados dos números naturales <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(m \neq 0\)</span>, existen únicos números naturales <span class="math inline">\(k,s \in \mathbb{N}\)</span> tales que <span class="math inline">\(n=m \cdot k + s\)</span> y <span class="math inline">\(0 \leq s &lt; m\)</span>.</p>
+<p><strong>Existencia:</strong></p>
+<p>Observemos que si <span class="math inline">\(n &lt; m\)</span> entonces <span class="math inline">\(n=m \cdots 0 + 0\)</span>.</p>
+<p>Supongamos entonces que <span class="math inline">\(m \leq n\)</span>. Consideremos el conjunto <span class="math display">\[A=\{m \cdot l \in \mathbb{N}~ :~ n &lt; m \cdot l \}.\]</span> Observemos que <span class="math inline">\(A\)</span> es un subconjunto no vacío de <span class="math inline">\(\mathbb{N}\)</span>, ya que de lo contrario se tendría que <span class="math inline">\(m \cdot l \leq n\)</span> para todo <span class="math inline">\(l \in \mathbb{N}\)</span>, lo que implica <span class="math inline">\(l \leq m \cdot l \leq n\)</span> para todo <span class="math inline">\(l \in \mathbb{N}\)</span> y por lo tanto <span class="math inline">\(n\)</span> sería un elemento maximal de <span class="math inline">\(\mathbb{N}\)</span>, lo cual es absurdo.</p>
+<p>Por el principio del buen orden, el conjunto <span class="math inline">\(A\)</span> tiene un elemento minimal, digamos que es <span class="math inline">\(m \cdot l\)</span>. Como <span class="math inline">\(l \neq 0\)</span>, se tiene que <span class="math inline">\(l=S(k)\)</span> para algún <span class="math inline">\(k \in \mathbb{N}\)</span>. Ahora, note que <span class="math inline">\(m \cdot k \notin A\)</span> ya que <span class="math inline">\(k &lt; S(k)=l\)</span> y por tanto <span class="math inline">\(m \cdot k &lt; m \cdot l\)</span>, luego <span class="math inline">\(m \cdot k \leq n\)</span>. Esto quiere decir que <span class="math inline">\(n=m \cdot k + s\)</span> para cierto <span class="math inline">\(s \in \mathbb{N}\)</span>.</p>
+<div id="cell-fig-euclides-recta-py" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div id="fig-euclides-recta-py" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-euclides-recta-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="naturales_files/figure-html/fig-euclides-recta-py-output-1.png" width="1434" height="440" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-euclides-recta-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Conjunto <span class="math inline">\(B = \{mt \mid n &lt; mt\}\)</span>, <span class="math inline">\(n\)</span> a la derecha de <span class="math inline">\(m\)</span>, <span class="math inline">\(mk &lt; n\)</span>, y <span class="math inline">\(ml = \min B\)</span> con <span class="math inline">\(l = S(k)\)</span>.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Veamos que <span class="math inline">\(s &lt; m\)</span>. Supongamos por el absurdo que <span class="math inline">\(m \leq s\)</span>, entonces <span class="math inline">\(s=m+t\)</span> para cierto <span class="math inline">\(t \in \mathbb{N}\)</span>. Sustituyendo en la ecuación anterior, obtenemos que <span class="math display">\[n=m+m \cdot k + t = m \cdot S(k) + t = m \cdot l + t,\]</span> lo que implica que <span class="math inline">\(m \cdot S(k) \leq n\)</span>, lo cual es absurdo, ya que <span class="math inline">\(S(k)=l\)</span> donde <span class="math inline">\(l\)</span> es el elemento minimal de <span class="math inline">\(A\)</span>, luego <span class="math inline">\(l \in A\)</span> y por lo tanto <span class="math inline">\(n &lt; m \cdot l\)</span>.</p>
+<p><strong>Unicidad:</strong></p>
+<p>Supongamos que tenemos <span class="math inline">\(n=m \cdot k +s\)</span> y <span class="math inline">\(n=m \cdot l + t\)</span> con <span class="math inline">\(0 \leq s &lt; m\)</span> y <span class="math inline">\(0 \leq t &lt; m\)</span>. Supongamos por el absurdo que <span class="math inline">\(k \neq l\)</span>. Sin pérdida de generalidad, supongamos que <span class="math inline">\(k &lt; l\)</span>, luego <span class="math inline">\(l=k+u\)</span> para cierto <span class="math inline">\(u \in \mathbb{N} \setminus \{0\}\)</span>. Sustituyendo en la segunda ecuación, obtenemos que <span class="math display">\[n=m \cdot k + s = m \cdot (k+u) + t = m \cdot k + m \cdot u + t,\]</span> lo que implica que <span class="math inline">\(s=m \cdot u + t\)</span>. Como <span class="math inline">\(u \neq 0\)</span>, se tiene que <span class="math inline">\(m \cdot u \neq 0\)</span>, y por lo tanto, <span class="math inline">\(s &gt; t\)</span>, lo cual es absurdo ya que <span class="math inline">\(s &lt; m\)</span> y <span class="math inline">\(t &lt; m\)</span>.</p>
 
 
 </section>

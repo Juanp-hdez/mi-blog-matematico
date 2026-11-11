@@ -2329,6 +2329,8 @@ Esto se puede probar usando el principio de inducción. Consideremos el conjunto
 
 De lo anterior tenemos que $0<S(0)=1 < S(1)=2 < S(2)=3 < S(3)=4 < S(4)=5 < S(5)=6 < S(6)=7 < S(7)=8 < S(8)=9$.
 
+También podemos deducir que el conjunto $\mathbb{N}$ no tiene un elemento maximal, es decir, dado un número natural $n \in \mathbb{N}$, siempre existe un número natural $m \in \mathbb{N}$ tal que $n < m$, por ejemplo $S(n)$, o dicho de manera equivalente, no existe un número natural que sea mayor o igual que todos los demás números naturales.  
+
 #### Representación gráfica de los números naturales
 
 Observe que $0 < n$ para todo $n \in \mathbb{N} \setminus \{0\}$, y que si $n,m \in \mathbb{N}$ son tales que $n < m$, entonces $S(n) < S(m)$.
@@ -2408,7 +2410,7 @@ plt.show()
 
 En efecto, si $k < S(n)$ entonces $S(n)=k+t$ para algún $t \in \mathbb{N} \setminus \{0\}$, luego $t=S(l)$ para cierto $l \in \mathbb{N}$, y por lo tanto $S(n)=S(k+l)$, de donde $n=k+l$ y así $k \leq n$.
 
-* Para todo $n \in \mathbb{N}$, el conjunto $$A=\{k \in \mathbb{N} : n < k < S(n)\}=\emptyset$$, es decir, no existe ningún número natural que esté estrictamente entre $n$ y su sucesor $S(n)$.
+* Para todo $n \in \mathbb{N}$, el conjunto $$A=\{k \in \mathbb{N} : n < k < S(n)\}=\emptyset,$$ es decir, no existe ningún número natural que esté estrictamente entre $n$ y su sucesor $S(n)$.
 
 ```{python}
 #| label: fig-segmento-interrumpido-py
@@ -2467,9 +2469,7 @@ El conjunto de los números naturales tiene una propiedad muy importante respect
 
 Antes de demostrar este principio, observemos que el conjunto $\mathbb{N}$ tiene un elemento minimal que es el $0$.
 
-Demostremos el principio del buen orden. Sea $A \subseteq \mathbb{N}$ un subconjunto no vacío. Como $A$ es no vacío, existe un elemento $n \in A$. Consideremos el conjunto $$B=\{m \in \mathbb{N} : m \leq n\}.$$ Note que $0 \in B$, ya que $0 \leq n$. Ahora, si $m \in B$ entonces $S(m) \in B$ si y solo si $S(m) \leq n$. Si $S(m) \leq n$ entonces existe un número natural $k \in \mathbb{N}$ tal que $S(m)+k=n$, y como la función sucesor es inyectiva, se sigue que $m+k=P(n)$, y por lo tanto, $m \leq P(n)$. Por lo tanto, por el principio de inducción, se tiene que $B=\{0,1,\ldots,n\}$.
-
-
+Demostremos el principio del buen orden. Supongamos por el absurdo que existe un subconjunto no vacío $A \subseteq \mathbb{N}$ que no tiene elemento minimal. Note que $0 \notin A$ ya que $A$ no tiene elemento minimal. Consideremos el conjunto $$B=\{m \in \mathbb{N} : m < n~ \textrm{para todo} ~n \in A\}$$. Es claro que $0 \in B$, y si $n \in B$ entonces $S(n) \in B$, ya que como $m < n$ para todo $n \in A$ entonces $S(m) \leq n$ para todo $n \in A$, pero $S(m) \notin A$ puesto que $A$ no tiene elemento minimal, luego $S(m) < n$ para todo $n \in A$. Del principio de inducción se sigue que $B=\mathbb{N}$, y por lo tanto, para todo $m \in \mathbb{N}$ se tiene que $m < n$ para todo $n \in A$, en particular, dado $n \in A$, se tiene que $n < n$, lo cual es absurdo. Por lo tanto, todo subconjunto no vacío de $\mathbb{N}$ tiene un elemento minimal.
 
 #### Producto de números naturales
 
@@ -2528,7 +2528,7 @@ De lo anterior se deduce que $S(0)$ es el único neutro, más aún, que si $n \c
 
 * Si $n,m,k,s \in \mathbb{N}$ son tales que $n \leq m$ y $k \leq s$, entonces $n \cdot k \leq m \cdot s$.
 
-* Si $n,m,k,s \in \mathbb{N}$ son tales que $n < m$ y $k < s$, entonces $n \cdot k  m \cdot s$.
+* Si $n,m,k,s \in \mathbb{N}$ son tales que $n < m$ y $k < s$, entonces $n \cdot k < m \cdot s$.
 
 #### No hay divisores de cero en los números naturales
 
@@ -2554,3 +2554,78 @@ Para probar esto, fijemos un elemento arbitrario $n \in \mathbb{N}$ y considerem
 * $0^{n}=0$ para todo $n \in \mathbb{N} \setminus \{0\}$.
 * $n^{m+k}=n^{m} \cdot n^{k}$ para todo $n,m,k \in \mathbb{N}$.
 * $n^{m \cdot k}=(n^{m})^{k}$ para todo $n,m,k \in \mathbb{N}$.
+
+### Representación de los números naturales en base diez
+
+Definamos el número natural **diez** como el sucesor del $9$, que denotaremos con el símbolo $10$.
+
+El primer algortimo de la historia es conocido con el nombre de "algoritmo de la división" y fue desarrollado por los matemáticos árabes. Este algoritmo permite representar cualquier número natural en base diez, es decir, como una suma de potencias de diez multiplicadas por dígitos del 0 al 9.
+
+#### Algoritmo de la división
+
+Dados dos números naturales $n,m \in \mathbb{N}$ con $m \neq 0$, existen únicos números naturales $k,s \in \mathbb{N}$ tales que $n=m \cdot k + s$ y $0 \leq s < m$.
+
+**Existencia:**
+
+Observemos que si $n < m$ entonces $n=m \cdots 0 + 0$.
+
+Supongamos entonces que $m \leq n$. Consideremos el conjunto $$A=\{m \cdot l \in \mathbb{N}~ :~ n < m \cdot l \}.$$ Observemos que $A$ es un subconjunto no vacío de $\mathbb{N}$, ya que de lo contrario se tendría que $m \cdot l \leq n$ para todo $l \in \mathbb{N}$, lo que implica $l \leq m \cdot l \leq n$ para todo $l \in \mathbb{N}$ y por lo tanto $n$ sería un elemento maximal de $\mathbb{N}$, lo cual es absurdo. 
+
+Por el principio del buen orden, el conjunto $A$ tiene un elemento minimal, digamos que es $m \cdot l$. Como $l \neq 0$, se tiene que $l=S(k)$ para algún $k \in \mathbb{N}$. Ahora, note que $m \cdot k \notin A$ ya que $k < S(k)=l$ y por tanto $m \cdot k < m \cdot l$, luego $m \cdot k \leq n$. Esto quiere decir que $n=m \cdot k + s$ para cierto $s \in \mathbb{N}$.   
+
+```{python}
+#| label: fig-euclides-recta-py
+#| fig-cap: "Conjunto $B = \\{mt \\mid n < mt\\}$, $n$ a la derecha de $m$, $mk < n$, y $ml = \\min B$ con $l = S(k)$."
+#| echo: false
+
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(9, 2.6), dpi=200)
+
+# Posiciones en la recta
+x_m = 1.5
+x_mk = 3.6
+x_n = 5.2
+x_ml = 7.0
+x_next = 8.5
+x_max = 9.8
+
+# 1. Sombrear el conjunto B a la derecha de n
+ax.axvspan(x_n, x_max, color='royalblue', alpha=0.15)
+
+# 2. Dibujar la recta numérica
+ax.annotate('', xy=(x_max, 0), xytext=(-0.5, 0),
+            arrowprops=dict(arrowstyle="-|>", lw=1.6, color='black'))
+
+# 3. Marcar puntos anteriores a n
+ax.scatter([x_m, x_mk], [0, 0], color='black', s=35, zorder=3)
+ax.text(x_m, -0.16, '$m$', ha='center', va='top', fontsize=12)
+ax.text(x_mk, -0.16, '$mk$', ha='center', va='top', fontsize=12)
+
+# 4. Marcar punto n
+ax.scatter(x_n, 0, color='crimson', s=45, zorder=4)
+ax.text(x_n, -0.16, '$n$', ha='center', va='top', fontsize=13, weight='bold', color='crimson')
+ax.axvline(x_n, color='crimson', linestyle='--', lw=1.2, ymin=0.25, ymax=0.75)
+
+# 5. Marcar elemento minimal ml y múltiplos en B
+ax.scatter([x_ml, x_next], [0, 0], color='navy', s=40, zorder=4)
+ax.text(x_ml, -0.16, '$ml$\n($\\min B$)', ha='center', va='top', fontsize=11, color='navy')
+ax.text(x_ml, 0.16, '$l = S(k)$', ha='center', va='bottom', fontsize=11, color='navy', weight='bold')
+
+ax.text(x_next, -0.16, '$m(l+1)$', ha='center', va='top', fontsize=10, color='gray')
+
+# 6. Etiqueta del conjunto B
+ax.text(7.5, 0.42, r'$B = \{mt \mid n < mt\}$', ha='center', va='bottom',
+        fontsize=11.5, color='royalblue', weight='bold')
+
+ax.set_xlim(-0.8, x_max + 0.3)
+ax.set_ylim(-0.45, 0.7)
+ax.axis('off')
+plt.show()
+```
+
+Veamos que $s < m$. Supongamos por el absurdo que $m \leq s$, entonces $s=m+t$ para cierto $t \in \mathbb{N}$. Sustituyendo en la ecuación anterior, obtenemos que $$n=m+m \cdot k + t = m \cdot S(k) + t = m \cdot l + t,$$ lo que implica que $m \cdot S(k) \leq n$, lo cual es absurdo, ya que $S(k)=l$ donde $l$ es el elemento minimal de $A$, luego $l \in A$ y por lo tanto $n < m \cdot l$.
+
+**Unicidad:**
+
+Supongamos que tenemos $n=m \cdot k +s$ y $n=m \cdot l + t$ con $0 \leq s < m$ y $0 \leq t < m$. Supongamos por el absurdo que $k \neq l$. Sin pérdida de generalidad, supongamos que $k < l$, luego $l=k+u$ para cierto $u \in \mathbb{N} \setminus \{0\}$. Sustituyendo en la segunda ecuación, obtenemos que $$n=m \cdot k + s = m \cdot (k+u) + t = m \cdot k + m \cdot u + t,$$ lo que implica que $s=m \cdot u + t$. Como $u \neq 0$, se tiene que $m \cdot u \neq 0$, y por lo tanto, $s > t$, lo cual es absurdo ya que $s < m$ y $t < m$. 
