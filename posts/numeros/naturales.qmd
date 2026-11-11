@@ -2220,6 +2220,10 @@ Vamos a usar los símbolos $1, 2, 3, 4, 5, 6, 7, 8, 9$ (que estamos acostumbrado
 
 Gracias a la aritmética de los números naturales, vamos a poder expresar todos los elementos del conjunto $\mathbb{N}$ usando los símbolos anteriores.
 
+#### Función predecesor
+
+Como la función $S: \mathbb{N} \rightarrow \mathbb{N} \setminus \{0\}$ es biyectiva, entonces existe una función inversa $S^{-1}: \mathbb{N} \setminus \{0\} \rightarrow \mathbb{N}$ que llamaremos función predecesor, y que denotaremos por $P$. Por definición, para todo $n \in \mathbb{N} \setminus \{0\}$ se tiene que $P(n)=S^{-1}(n)$, es decir, $P(n)=m$ si $S(m)=n$.
+
 ### Artitmética de los números naturales
 
 De manera general, una operación binaria en un conjunto $A$, es una función $f: A \times A \rightarrow A$. Veamos que en el conjunto de los números naturales, hay una operación binaria que llamaremos suma, que permite obtener todos los elementos de $\mathbb{N}$ a partir del $0$ y de la función sucesor $S$.
@@ -2266,7 +2270,7 @@ Ahora, fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conju
 #### Otras propiedades de la suma
 
 * La suma es cancelativa, es decir, si $n,m,k \in \mathbb{N}$ son tales que $n+m=n+k$, entonces $m=k$.
-o
+
 Para probar esto, consideremos el conjunto $$A=\{n \in \mathbb{N} ~ : ~ \textrm{si}~ n+m=n+k,~ \textrm{entonces}~ m=k\}.$$ Note que $0 \in A$ ya que si $0+m=0+k$ entonces $m=k$. Ahora, si $n \in A$ entonces $S(n) \in A$ ya que si $S(n)+m=S(n)+k$ para ciertos $m,k \in \mathbb{N}$, se tiene que $S(n+m)=S(n+k)$, y por la inyectividad de la función $S$ se sigue que $n+m=n+k$, y como $n \in A$, se tiene que $m=k$. Por lo tanto, por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, si $n+m=n+k$ entonces $m=k$.
 
 Como un caso particular de la propiedad anterior, tenemos que:
@@ -2311,7 +2315,11 @@ Veamos que en efecto esta es una relación de orden total en $\mathbb{N}$.
 * **Totalidad**: Dado $m \in \mathbb{N}$ consideremos el conjunto $$A_{m}=\{n \in \mathbb{N} : n \leq m~ \vee ~ m \leq n\}.$$ Note que $0 \in A_{m}$, ya que $0 \leq m$ para todo $m \in \mathbb{N}$. Ahora, si $n \in A_{m}$ entonces $S(n) \in A_{m}$. Para probar esto necesitamos analizar dos casos: cuando $n \leq m$ y cuando $m \leq n$. Veamos solamente el primer caso ya que el otro caso es análogo. Supongamos entonces que $n \leq m$, luego $m=n+t$ para cierto $t \in \mathbb{N}$. Si $t=0$ entonces $m=n$ y por lo tanto $m \leq S(m)=S(n)$, luego $S(n) \in A_{m}$. Ahora, si $t \neq 0$ entonces $t=S(k)$ para cierto $k \in \mathbb{N}$, luego $m=n+S(k)=S(n)+k$ y por lo tanto $S(n) \leq m$, así $S(n) \in A_{m}$. Del principio de inducción se sigue que $A_{m}=\mathbb{N}$, y por lo tanto, para todo $n \in \mathbb{N}$ se tiene que $n \leq m$ o $m \leq n$.
 Como $m$ era arbitrario, se sigue que para todo $n,m \in \mathbb{N}$ se tiene que $n \leq m$ o $m \leq n$.
 
-**Observación:** Al tener la relación de orden total $\leq$ en el conjunto de los números naturales, podemos definir la relación $<$ de la siguiente manera: diremos que $n < m$ si $n \leq m$ y $n \neq m$. Observe que $n<m$ si y solo si existe un número natural $k \in \mathbb{N} \setminus \{0\}$ tal que $n+k=m$.
+**Observaciones:** 
+
+* Al tener la relación de orden total $\leq$ en el conjunto de los números naturales, podemos definir la relación $<$ de la siguiente manera: diremos que $n < m$ si $n \leq m$ y $n \neq m$. Observe que $n<m$ si y solo si existe un número natural $k \in \mathbb{N} \setminus \{0\}$ tal que $n+k=m$.
+
+* De la propiedad cancelativa de la suma, se sigue que la relación $<$ no es reflexiva, es decir, para ningún $n \in \mathbb{N}$ se tiene que $n < n$, ya que $n < n$ implica $n=n+t$ para cierto $t \in \mathbb{N} \setminus \{0\}$, pero $n=n+0=n+t$ implica $t=0$, absurdo. 
 
 Con esta definción anterior, observemos que para todo $n \in \mathbb{N}$, se tiene que $n < S(n)$. Esto se debe a que $n \leq S(n)$ y a que $S(n) \neq n$. 
 
@@ -2322,6 +2330,8 @@ Esto se puede probar usando el principio de inducción. Consideremos el conjunto
 De lo anterior tenemos que $0<S(0)=1 < S(1)=2 < S(2)=3 < S(3)=4 < S(4)=5 < S(5)=6 < S(6)=7 < S(7)=8 < S(8)=9$.
 
 #### Representación gráfica de los números naturales
+
+Observe que $0 < n$ para todo $n \in \mathbb{N} \setminus \{0\}$, y que si $n,m \in \mathbb{N}$ son tales que $n < m$, entonces $S(n) < S(m)$.
 
 Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el $0$ y continuando con sus sucesores, como muestra la siguiente figura:
 
@@ -2447,6 +2457,20 @@ ax.axis('off')
 plt.show()
 ```
 
+#### Principio del buen orden
+
+Dado un conjunto totalmente ordenado $(A, \leq)$, decimos que $a \in A$ es un elemento minimal si $a \leq b$ para todo $b \in A$.
+
+El conjunto de los números naturales tiene una propiedad muy importante respecto a la relación de orden total $\leq$, que se conoce como el principio del buen orden, y que dice lo siguiente:
+
+**Principio del buen orden:** Todo subconjunto no vacío de $\mathbb{N}$ tiene un elemento minimal.
+
+Antes de demostrar este principio, observemos que el conjunto $\mathbb{N}$ tiene un elemento minimal que es el $0$.
+
+Demostremos el principio del buen orden. Sea $A \subseteq \mathbb{N}$ un subconjunto no vacío. Como $A$ es no vacío, existe un elemento $n \in A$. Consideremos el conjunto $$B=\{m \in \mathbb{N} : m \leq n\}.$$ Note que $0 \in B$, ya que $0 \leq n$. Ahora, si $m \in B$ entonces $S(m) \in B$ si y solo si $S(m) \leq n$. Si $S(m) \leq n$ entonces existe un número natural $k \in \mathbb{N}$ tal que $S(m)+k=n$, y como la función sucesor es inyectiva, se sigue que $m+k=P(n)$, y por lo tanto, $m \leq P(n)$. Por lo tanto, por el principio de inducción, se tiene que $B=\{0,1,\ldots,n\}$.
+
+
+
 #### Producto de números naturales
 
 Vamos a definir ahora otra operación binaria en el conjunto de los números naturales $\mathbb{N}$, que llamaremos producto y denotaremos por $\cdot : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}$, de la siguiente manera:
@@ -2473,7 +2497,7 @@ De la definición se sigue que $n \cdot S(0)=n$ para todo $n \in \mathbb{N}$.
 
 Para ver que $S(0) \cdot n=n$ primero veamos lo siguiente.
 
-Para todo $n \in \mathbb{N}$, $0 \cdot n=n \cdot 0$. Esto lo podemos ver usando el principio de inducción. Consideremos el conjunto $$A=\{n \in \mathbb{N} : 0 \cdot n=0\}.$$ Note que $0 \in A$, ya que $0 \cdot 0=0$. Ahora, si $n \in A$ entonces $S(n) \in A$ ya que $$0 \cdot S(n)=0+(0 \cdot n)=0.$$ Por lo tanto, por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, $0 \cdot n=0$ para todo $m \in \mathbb{N}$.
+Para todo $n \in \mathbb{N}$, $0 \cdot n=0=n \cdot 0$. Esto lo podemos ver usando el principio de inducción. Consideremos el conjunto $$A=\{n \in \mathbb{N} : 0 \cdot n=0\}.$$ Note que $0 \in A$, ya que $0 \cdot 0=0$. Ahora, si $n \in A$ entonces $S(n) \in A$ ya que $$0 \cdot S(n)=0+(0 \cdot n)=0.$$ Por lo tanto, por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, $0 \cdot n=0$ para todo $m \in \mathbb{N}$.
 
 Ahora consideremos el conjunto $$A=\{n \in \mathbb{N} : S(0) \cdot n=n\}.$$ Note que $0 \in A$, ya que $S(0) \cdot 0=0$. Si $n \in A$ entonces $S(n) \in A$ ya que $$S(0) \cdot S(n)=S(0)+(S(0) \cdot n)=S(0)+n=S(n).$$ Por lo tanto, por el principio de inducción, se tiene que $A=\mathbb{N}$, y por lo tanto, $S(0) \cdot n=n$ para todo $n \in \mathbb{N}$.
 
@@ -2482,12 +2506,49 @@ Ahora consideremos el conjunto $$A=\{n \in \mathbb{N} : S(0) \cdot n=n\}.$$ Note
 Fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A_n=\{m \in \mathbb{N} : n \cdot m=m \cdot n\}.$$ Note que $0 \in A_n$, ya que $n \cdot 0=0=0 \cdot n$. Ahora, si $m \in A_n$ entonces $S(m) \in A_n$ ya que $$n \cdot S(m)=n+(n \cdot m)=n+(m \cdot n)=m+n\cdot n=m\cdot S(n).$$ Por lo tanto, por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, $n \cdot m=m \cdot n$ para todo $m \in \mathbb{N}$.
 
 
+#### Ejercicio: Demnuestre que $S(0)$ es el único elemento de $\mathbb{N}$ que satisface $n \cdot S(0)=n$ para todo $n \in \mathbb{N}$, es decir, si $m \in \mathbb{N}$ es tal que $n \cdot m=n$ para todo $n \in \mathbb{N}$, entonces $m=S(0)$.
+
 #### Propiedad de la relación de orden respecto al producto
 
-Si tenemos $n,m,k \in \mathbb{N}$ con $n \leq m$, entonces $n \cdot k \leq m \cdot k$.
+* Si tenemos $n,m,k \in \mathbb{N}$ con $n \leq m$, entonces $n \cdot k \leq m \cdot k$.
 
-Para probar esto, supongamos que $n \leq m$, es decir, existe $t \in \mathbb{N}$ tal que $m=n+t$. Entonces, multiplicando ambos lados por $k$, tenemos que $m \cdot k= (n+t) \cdot k = n \cdot k + t \cdot k$. Como $t \cdot k \in \mathbb{N}$, se sigue que $n \cdot k \leq m \cdot k$.
+Para probar esto, supongamos que $n \leq m$, es decir, existe $t \in \mathbb{N}$ tal que $m=n+t$. Entonces, multiplicando ambos lados por $k$, tenemos que $m \cdot k= (n+t) \cdot k = n \cdot k + t \cdot k$. Como $t \cdot k \in \mathbb{N}$, se sigue que $$n \cdot k \leq m \cdot k.$$
 
-Más aún, si $k \neq 0$ y $n < m$, entonces $n \cdot k < m \cdot k$.
+* Más aún, si $k \neq 0$ y $n < m$, entonces $n \cdot k < m \cdot k$.
 
- En efecto, si $k \neq 0$ entonces $t \cdot k \neq 0$ ya que $t \neq 0$, y como $n \cdot k + t \cdot k = m \cdot k$, se tiene que $nk < mk$.
+En efecto, si $k \neq 0$ entonces $t \cdot k \neq 0$ ya que $t \neq 0$, y como $n \cdot k + t \cdot k = m \cdot k$, se tiene que $nk < mk$.
+
+Lo anterior nos permite probar la propiedad cancelativa del producto.
+
+* Si $n,m,k \in \mathbb{N}$ son tales que $n \cdot k=m \cdot k$ y $k \neq 0$, entonces $n=m$.
+
+Si suponemos por el absurdo que $n \neq m$, entonces $n < m$ o $m < n$. Supongamos sin pérdida de generalidad que $n < m$, entonces por la propiedad anterior, $n \cdot k < m \cdot k$, lo cual es una contradicción. Por lo tanto, $n=m$.
+
+De lo anterior se deduce que $S(0)$ es el único neutro, más aún, que si $n \cdot m=n$ para cierto $n \in \mathbb{N} \setminus \{0\}$, entonces $m=S(0)$.
+
+* Si $n,m,k,s \in \mathbb{N}$ son tales que $n \leq m$ y $k \leq s$, entonces $n \cdot k \leq m \cdot s$.
+
+* Si $n,m,k,s \in \mathbb{N}$ son tales que $n < m$ y $k < s$, entonces $n \cdot k  m \cdot s$.
+
+#### No hay divisores de cero en los números naturales
+
+Esto quiere decir que si $n,m \in \mathbb{N}$ son tales que $n \cdot m=0$, entonces $n=0$ o $m=0$. Es decir, la única manera de que el producto de dos números naturales sea cero es que al menos uno de ellos sea cero.
+
+Para probar esto, razonemos por el absurdo. Supongamos que existen $n,m \in \mathbb{N} \setminus \{0\}$ tales que $n \cdot m=0$. Por lo tanto $0 < n$ y $0 < m$ y así de lo anterior, $0 < n \cdot m=0$, lo cual es una contradicción.
+
+
+#### Potenciación
+
+La operación potenciación en los números naturales es una función binaria $^{\wedge} : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}$, definida de la siguiente manera:
+
+* $n^{0}=S(0)$ para todo $n \in \mathbb{N}$.
+* $n^{S(m)}=n \cdot n^{m}$ para todo $n,m \in \mathbb{N}$.
+
+Comencemos observando que en efecto esta es una función. Para probar esto, fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A_n=\{m \in \mathbb{N} : n^{m}~\textrm{está definido}\}.$$ Note que $0 \in A_n$, ya que $n^{0}=S(0) \in \mathbb{N}$. Ahora, si $m \in A_n$ entonces $S(m) \in A_n$ ya que $n^{S(m)}=n \cdot n^{m}$, y como $n^{m}$ está definido y el producto siempre está definido, se sigue que $n^{S(m)}$ está definido. Por lo tanto, por el principio de inducción, se tiene que $A_n=\mathbb{N}$, y por lo tanto, para todo $m \in \mathbb{N}$ se tiene que $n^{m}$ está definido. Esto muestra que para cada $n \in \mathbb{N}$ se tiene que para todo $m \in \mathbb{N}$, $n^{m} \in \mathbb{N}$, y por lo tanto, a todo elemento $(n,m) \in \mathbb{N} \times \mathbb{N}$ le corresponde un único elemento $n^{m} \in \mathbb{N}$.
+
+#### Algunas propiedades de la potenciación
+
+* n^{S(0)}=n para todo $n \in \mathbb{N}$.
+* 0^{n}=0 para todo $n \in \mathbb{N} \setminus \{0\}$.
+* n^{m+k}=n^{m} \cdot n^{k} para todo $n,m,k \in \mathbb{N}$.
+* n^{m \cdot k}=(n^{m})^{k} para todo $n,m,k \in \mathbb{N}$.
