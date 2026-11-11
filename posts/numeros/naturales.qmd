@@ -2599,12 +2599,12 @@ ax.plot([x_ml, x_max], [0, 0], color='crimson', lw=3.5, zorder=3)
 # 3. Marcar puntos antes de ml en negro
 ax.scatter([x_m, x_mk, x_n], [0, 0, 0], color='black', s=35, zorder=4)
 ax.text(x_m, -0.16, '$m$', ha='center', va='top', fontsize=12)
-ax.text(x_mk, -0.16, '$m_k$', ha='center', va='top', fontsize=12)
+ax.text(x_mk, -0.16, '$mk$', ha='center', va='top', fontsize=12)
 ax.text(x_n, -0.16, '$n$', ha='center', va='top', fontsize=12)
 
 # 4. Marcar punto minimal ml en rojo destacado
 ax.scatter(x_ml, 0, color='crimson', s=60, zorder=5)
-ax.text(x_ml, -0.16, '$m_l$', ha='center', va='top', fontsize=13, weight='bold', color='crimson')
+ax.text(x_ml, -0.16, '$ml,~~l=S(k)$', ha='center', va='top', fontsize=13, weight='bold', color='crimson')
 ax.text(x_ml, -0.36, '(elemento minimal de $B$)', ha='center', va='top', fontsize=9.5, color='crimson')
 ax.text(x_ml, 0.16, '$l = S(k)$', ha='center', va='bottom', fontsize=11, color='crimson', weight='bold')
 
@@ -2613,8 +2613,7 @@ ax.text((x_ml + x_max)/2, 0.4, r'$B = \{m_t \mid n < m_t\}$', ha='center', va='b
         fontsize=12, color='crimson', weight='bold')
 
 # Soporte visual de llave/llaves
-ax.annotate('', xy=(x_ml, 0.32), xytext=(x_max, 0.32),
-            arrowprops=dict(arrowstyle="|-|", color='crimson', lw=1.2))
+
 
 ax.set_xlim(-0.8, x_max + 0.6)
 ax.set_ylim(-0.55, 0.7)
