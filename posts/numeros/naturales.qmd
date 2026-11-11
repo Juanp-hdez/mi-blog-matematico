@@ -2574,8 +2574,8 @@ Supongamos entonces que $m \leq n$. Consideremos el conjunto $$A=\{m \cdot l \in
 Por el principio del buen orden, el conjunto $A$ tiene un elemento minimal, digamos que es $m \cdot l$. Como $l \neq 0$, se tiene que $l=S(k)$ para algún $k \in \mathbb{N}$. Ahora, note que $m \cdot k \notin A$ ya que $k < S(k)=l$ y por tanto $m \cdot k < m \cdot l$, luego $m \cdot k \leq n$. Esto quiere decir que $n=m \cdot k + s$ para cierto $s \in \mathbb{N}$.   
 
 ```{python}
-#| label: fig-euclides-recta-py
-#| fig-cap: "Conjunto $B = \\{mt \\mid n < mt\\}$, $n$ a la derecha de $m$, $mk < n$, y $ml = \\min B$ con $l = S(k)$."
+#| label: fig-euclides-recta-roja-py
+#| fig-cap: "El conjunto $B = \\{m_t \\mid n < m_t\\}$ a la derecha de $m_l$, con $m_l = \\min B$ en rojo."
 #| echo: false
 
 import matplotlib.pyplot as plt
@@ -2584,42 +2584,40 @@ fig, ax = plt.subplots(figsize=(9, 2.6), dpi=200)
 
 # Posiciones en la recta
 x_m = 1.5
-x_mk = 3.6
+x_mk = 3.5
 x_n = 5.2
-x_ml = 7.0
-x_next = 8.5
-x_max = 9.8
+x_ml = 6.8
+x_max = 9.4
 
-# 1. Sombrear el conjunto B a la derecha de n
-ax.axvspan(x_n, x_max, color='royalblue', alpha=0.15)
-
-# 2. Dibujar la recta numérica
-ax.annotate('', xy=(x_max, 0), xytext=(-0.5, 0),
+# 1. Dibujar la recta numérica principal (atenuada a la derecha de ml para el contraste)
+ax.annotate('', xy=(x_max + 0.4, 0), xytext=(-0.5, 0),
             arrowprops=dict(arrowstyle="-|>", lw=1.6, color='black'))
 
-# 3. Marcar puntos anteriores a n
-ax.scatter([x_m, x_mk], [0, 0], color='black', s=35, zorder=3)
+# 2. Segmento en rojo fuerte a la derecha de ml
+ax.plot([x_ml, x_max], [0, 0], color='crimson', lw=3.5, zorder=3)
+
+# 3. Marcar puntos antes de ml en negro
+ax.scatter([x_m, x_mk, x_n], [0, 0, 0], color='black', s=35, zorder=4)
 ax.text(x_m, -0.16, '$m$', ha='center', va='top', fontsize=12)
-ax.text(x_mk, -0.16, '$mk$', ha='center', va='top', fontsize=12)
+ax.text(x_mk, -0.16, '$m_k$', ha='center', va='top', fontsize=12)
+ax.text(x_n, -0.16, '$n$', ha='center', va='top', fontsize=12)
 
-# 4. Marcar punto n
-ax.scatter(x_n, 0, color='crimson', s=45, zorder=4)
-ax.text(x_n, -0.16, '$n$', ha='center', va='top', fontsize=13, weight='bold', color='crimson')
-ax.axvline(x_n, color='crimson', linestyle='--', lw=1.2, ymin=0.25, ymax=0.75)
+# 4. Marcar punto minimal ml en rojo destacado
+ax.scatter(x_ml, 0, color='crimson', s=60, zorder=5)
+ax.text(x_ml, -0.16, '$m_l$', ha='center', va='top', fontsize=13, weight='bold', color='crimson')
+ax.text(x_ml, -0.36, '(elemento minimal de $B$)', ha='center', va='top', fontsize=9.5, color='crimson')
+ax.text(x_ml, 0.16, '$l = S(k)$', ha='center', va='bottom', fontsize=11, color='crimson', weight='bold')
 
-# 5. Marcar elemento minimal ml y múltiplos en B
-ax.scatter([x_ml, x_next], [0, 0], color='navy', s=40, zorder=4)
-ax.text(x_ml, -0.16, '$ml$\n($\\min B$)', ha='center', va='top', fontsize=11, color='navy')
-ax.text(x_ml, 0.16, '$l = S(k)$', ha='center', va='bottom', fontsize=11, color='navy', weight='bold')
+# 5. Etiqueta del conjunto B sobre el segmento rojo
+ax.text((x_ml + x_max)/2, 0.4, r'$B = \{m_t \mid n < m_t\}$', ha='center', va='bottom',
+        fontsize=12, color='crimson', weight='bold')
 
-ax.text(x_next, -0.16, '$m(l+1)$', ha='center', va='top', fontsize=10, color='gray')
+# Soporte visual de llave/llaves
+ax.annotate('', xy=(x_ml, 0.32), xytext=(x_max, 0.32),
+            arrowprops=dict(arrowstyle="|-|", color='crimson', lw=1.2))
 
-# 6. Etiqueta del conjunto B
-ax.text(7.5, 0.42, r'$B = \{mt \mid n < mt\}$', ha='center', va='bottom',
-        fontsize=11.5, color='royalblue', weight='bold')
-
-ax.set_xlim(-0.8, x_max + 0.3)
-ax.set_ylim(-0.45, 0.7)
+ax.set_xlim(-0.8, x_max + 0.6)
+ax.set_ylim(-0.55, 0.7)
 ax.axis('off')
 plt.show()
 ```

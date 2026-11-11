@@ -2302,7 +2302,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Observe que <img src="https://latex.codecogs.com/png.latex?0%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">, y que si <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%3C%20S(m)">.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="2b89a1c1" class="cell" data-execution_count="1">
+<div id="ddd687ee" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2312,7 +2312,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="8b6107ad" class="cell" data-execution_count="2">
+<div id="5cb6ebce" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2443,15 +2443,15 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 <p>Observemos que si <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m"> entonces <img src="https://latex.codecogs.com/png.latex?n=m%20%5Ccdots%200%20+%200">.</p>
 <p>Supongamos entonces que <img src="https://latex.codecogs.com/png.latex?m%20%5Cleq%20n">. Consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A=%5C%7Bm%20%5Ccdot%20l%20%5Cin%20%5Cmathbb%7BN%7D~%20:~%20n%20%3C%20m%20%5Ccdot%20l%20%5C%7D."> Observemos que <img src="https://latex.codecogs.com/png.latex?A"> es un subconjunto no vacío de <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">, ya que de lo contrario se tendría que <img src="https://latex.codecogs.com/png.latex?m%20%5Ccdot%20l%20%5Cleq%20n"> para todo <img src="https://latex.codecogs.com/png.latex?l%20%5Cin%20%5Cmathbb%7BN%7D">, lo que implica <img src="https://latex.codecogs.com/png.latex?l%20%5Cleq%20m%20%5Ccdot%20l%20%5Cleq%20n"> para todo <img src="https://latex.codecogs.com/png.latex?l%20%5Cin%20%5Cmathbb%7BN%7D"> y por lo tanto <img src="https://latex.codecogs.com/png.latex?n"> sería un elemento maximal de <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">, lo cual es absurdo.</p>
 <p>Por el principio del buen orden, el conjunto <img src="https://latex.codecogs.com/png.latex?A"> tiene un elemento minimal, digamos que es <img src="https://latex.codecogs.com/png.latex?m%20%5Ccdot%20l">. Como <img src="https://latex.codecogs.com/png.latex?l%20%5Cneq%200">, se tiene que <img src="https://latex.codecogs.com/png.latex?l=S(k)"> para algún <img src="https://latex.codecogs.com/png.latex?k%20%5Cin%20%5Cmathbb%7BN%7D">. Ahora, note que <img src="https://latex.codecogs.com/png.latex?m%20%5Ccdot%20k%20%5Cnotin%20A"> ya que <img src="https://latex.codecogs.com/png.latex?k%20%3C%20S(k)=l"> y por tanto <img src="https://latex.codecogs.com/png.latex?m%20%5Ccdot%20k%20%3C%20m%20%5Ccdot%20l">, luego <img src="https://latex.codecogs.com/png.latex?m%20%5Ccdot%20k%20%5Cleq%20n">. Esto quiere decir que <img src="https://latex.codecogs.com/png.latex?n=m%20%5Ccdot%20k%20+%20s"> para cierto <img src="https://latex.codecogs.com/png.latex?s%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
-<div id="cell-fig-euclides-recta-py" class="cell" data-execution_count="4">
+<div id="cell-fig-euclides-recta-roja-py" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
-<div id="fig-euclides-recta-py" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-euclides-recta-roja-py" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-euclides-recta-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://your-website-url.example.com/posts/numeros/naturales_files/figure-html/fig-euclides-recta-py-output-1.png" width="1434" height="440" class="figure-img">
+<div aria-describedby="fig-euclides-recta-roja-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://your-website-url.example.com/posts/numeros/naturales_files/figure-html/fig-euclides-recta-roja-py-output-1.png" width="1434" height="440" class="figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-euclides-recta-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Conjunto <img src="https://latex.codecogs.com/png.latex?B%20=%20%5C%7Bmt%20%5Cmid%20n%20%3C%20mt%5C%7D">, <img src="https://latex.codecogs.com/png.latex?n"> a la derecha de <img src="https://latex.codecogs.com/png.latex?m">, <img src="https://latex.codecogs.com/png.latex?mk%20%3C%20n">, y <img src="https://latex.codecogs.com/png.latex?ml%20=%20%5Cmin%20B"> con <img src="https://latex.codecogs.com/png.latex?l%20=%20S(k)">.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-euclides-recta-roja-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: El conjunto <img src="https://latex.codecogs.com/png.latex?B%20=%20%5C%7Bm_t%20%5Cmid%20n%20%3C%20m_t%5C%7D"> a la derecha de <img src="https://latex.codecogs.com/png.latex?m_l">, con <img src="https://latex.codecogs.com/png.latex?m_l%20=%20%5Cmin%20B"> en rojo.
 </figcaption>
 </figure>
 </div>
