@@ -2315,6 +2315,18 @@ Veamos que en efecto esta es una relación de orden total en $\mathbb{N}$.
 * **Totalidad**: Dado $m \in \mathbb{N}$ consideremos el conjunto $$A_{m}=\{n \in \mathbb{N} : n \leq m~ \vee ~ m \leq n\}.$$ Note que $0 \in A_{m}$, ya que $0 \leq m$ para todo $m \in \mathbb{N}$. Ahora, si $n \in A_{m}$ entonces $S(n) \in A_{m}$. Para probar esto necesitamos analizar dos casos: cuando $n \leq m$ y cuando $m \leq n$. Veamos solamente el primer caso ya que el otro caso es análogo. Supongamos entonces que $n \leq m$, luego $m=n+t$ para cierto $t \in \mathbb{N}$. Si $t=0$ entonces $m=n$ y por lo tanto $m \leq S(m)=S(n)$, luego $S(n) \in A_{m}$. Ahora, si $t \neq 0$ entonces $t=S(k)$ para cierto $k \in \mathbb{N}$, luego $m=n+S(k)=S(n)+k$ y por lo tanto $S(n) \leq m$, así $S(n) \in A_{m}$. Del principio de inducción se sigue que $A_{m}=\mathbb{N}$, y por lo tanto, para todo $n \in \mathbb{N}$ se tiene que $n \leq m$ o $m \leq n$.
 Como $m$ era arbitrario, se sigue que para todo $n,m \in \mathbb{N}$ se tiene que $n \leq m$ o $m \leq n$.
 
+#### Ejercicios:
+
+Demuestre que la cancelación de la suma también se tiene con desigualdades, es decir,  
+
+* Si $n+m < n+k$, entonces $m < k$.
+* Si $n+m \leq n+k$, entonces $m \leq k$.
+
+Demuestre que las desigualdades son aditivas, es decir,
+
+* Si $n < m$ y $k \leq  s$ entonces $n+k < m + s$.
+* Si $n \leq m$ y $k \leq s$ entonces $n+k \leq m+s$.
+
 **Observaciones:** 
 
 * Al tener la relación de orden total $\leq$ en el conjunto de los números naturales, podemos definir la relación $<$ de la siguiente manera: diremos que $n < m$ si $n \leq m$ y $n \neq m$. Observe que $n<m$ si y solo si existe un número natural $k \in \mathbb{N} \setminus \{0\}$ tal que $n+k=m$.
@@ -2526,15 +2538,27 @@ Si suponemos por el absurdo que $n \neq m$, entonces $n < m$ o $m < n$. Supongam
 
 De lo anterior se deduce que $S(0)$ es el único neutro, más aún, que si $n \cdot m=n$ para cierto $n \in \mathbb{N} \setminus \{0\}$, entonces $m=S(0)$.
 
+#### Ejercicio
+
 * Si $n,m,k,s \in \mathbb{N}$ son tales que $n \leq m$ y $k \leq s$, entonces $n \cdot k \leq m \cdot s$.
 
 * Si $n,m,k,s \in \mathbb{N}$ son tales que $n < m$ y $k < s$, entonces $n \cdot k < m \cdot s$.
+
+* ¿Qué pasa si $n < m$ y $k \leq s$ con $k \neq 0$?
+
 
 #### No hay divisores de cero en los números naturales
 
 Esto quiere decir que si $n,m \in \mathbb{N}$ son tales que $n \cdot m=0$, entonces $n=0$ o $m=0$. Es decir, la única manera de que el producto de dos números naturales sea cero es que al menos uno de ellos sea cero.
 
 Para probar esto, razonemos por el absurdo. Supongamos que existen $n,m \in \mathbb{N} \setminus \{0\}$ tales que $n \cdot m=0$. Por lo tanto $0 < n$ y $0 < m$ y así de lo anterior, $0 < n \cdot m=0$, lo cual es una contradicción.
+
+#### Ejercicio
+
+Demuestre que la cancelación del producto también se tiene con desigualdades, es decir,
+
+* Si $n \cdot k < m \cdot k$, entonces $n < m$.
+* Si $n \cdot k \leq m \cdot k$, entonces $n \leq m$.
 
 
 #### Potenciación
@@ -2555,6 +2579,47 @@ Para probar esto, fijemos un elemento arbitrario $n \in \mathbb{N}$ y considerem
 * $n^{m+k}=n^{m} \cdot n^{k}$ para todo $n,m,k \in \mathbb{N}$.
 * $n^{m \cdot k}=(n^{m})^{k}$ para todo $n,m,k \in \mathbb{N}$.
 
+### Inducción matemática
+
+El axioma de inducción que esta entre los axiomas de Peano utilizados para construir el conjunto $\mathbb{N}$, produce un método de demostración conocido con el nombre de **inducción matematica**. De manera más precisa, da un método de demostración para fórmulas que dependan de los números naturales. 
+
+**Inducción matemática**
+
+Dada una fórmula $\psi(n)$ que dependa de $n \in \mathbb{N}$, si:
+
+* $\psi(k_{0})$ es cierta para cierto $k_{0} \in \mathbb{N}$ (paso inicial).
+** Para todo $k \geq k_{0}$, $\psi(k)$ cierta (hipótesis de inducción) implica $\psi(S(k))$ cierta.
+
+Entonces $\psi(n)$ es cierta para todo $n \geq k_{0}$.
+
+#### Ejemplo
+
+Probemos usando inducción matemática, que si $2 \leq m$ entonces $S(n) \leq m \cdot n$ para todo $n > 0$.
+
+Definamos la fórmula $\psi(n)=\{S(n) \leq m \cdot n\}$.
+
+Comencemos verificando el paso inicial, en este caso, $k_{0}=S(0)$. Note que $2=S(S(0)) \leq m \cdot S(0)=m$, es decir, $\psi(S(0))$ es cierta.
+
+Tomemos un $k \geq S(0)=k_{0}$ y supongamos que $\psi(k)$ es cierta (hipótesis de inducción). Entonces $m \cdot S(k)=m + m \cdot k \geq m + S(k) > S(0)+S(k)=S(S(k))$, es decir, $S(S(k)) < m \cdot S(k)$ y por lo tanto $\psi(S(k))$ es cierta.
+
+Por lo tanto, la inducción matemática nos dice que $\psi(n)$ es cierta para todo $n \geq S(0)$, es decir, $S(n) \leq m \cdot n$ para todo $n \geq 1$.
+
+De la prueba anterior, podemos observar que si $m > 2$ entonces $S(n) < m \cdot n$ para todo $n \geq 1$.
+
+#### Ejemplo
+
+Supongamos que queremos demostrar que $n < 10^{n}$ para todo $n \in \mathbb{N}$. Definamos la fórmula $$\psi(n)=\{n < 10^{n}\}$$.
+
+Para usar inducción matemática, primero verificamos el paso inicial, en este caso, $k_{0}=0$, es decir, verificamos que $\psi(0)$ sea cierta. Como $0 < S(0)=10^{0}$ entonces en efecto $\psi(0)$ es cierta.
+
+Ahora suponemos que $\psi(k)$ es cierto, es decir, asumimos la hipótesis de inducción y probemos que $\psi(S(k))$ es cierto. Si tenemos que $k < 10^{k}$, multiplicando a ambos lados por $10$, obtenemos que $10 \cdot k < 10 \cdot 10^{k}=10^{S(k)}$. Como $S(k) < 10 \cdot k$ entonces $S(k) < 10^{S(k)}$. Por lo tanto $\psi(S(k))$ es cierto.
+
+De la hipótesis de inducción se concluye que la fórmula $\psi(n)$ es cierta para todo $n \in \mathbb{N}$, es decir, $n < 10^{n}$ para todo $n \in \mathbb{N}$.
+
+
+
+
+
 ### Representación de los números naturales en base diez
 
 Definamos el número natural **diez** como el sucesor del $9$, que denotaremos con el símbolo $10$.
@@ -2569,9 +2634,9 @@ Dados dos números naturales $n,m \in \mathbb{N}$ con $m \neq 0$, existen único
 
 Observemos que si $n < m$ entonces $n=m \cdots 0 + 0$.
 
-Supongamos entonces que $m \leq n$. Consideremos el conjunto $$A=\{m \cdot l \in \mathbb{N}~ :~ n < m \cdot l \}.$$ Observemos que $A$ es un subconjunto no vacío de $\mathbb{N}$, ya que de lo contrario se tendría que $m \cdot l \leq n$ para todo $l \in \mathbb{N}$, lo que implica $l \leq m \cdot l \leq n$ para todo $l \in \mathbb{N}$ y por lo tanto $n$ sería un elemento maximal de $\mathbb{N}$, lo cual es absurdo. 
+Supongamos entonces que $m \leq n$. Consideremos el conjunto $$B=\{m \cdot l \in \mathbb{N}~ :~ n < m \cdot l \}.$$ Observemos que $B$ es un subconjunto no vacío de $\mathbb{N}$, ya que de lo contrario se tendría que $m \cdot l \leq n$ para todo $l \in \mathbb{N}$, lo que implica $l \leq m \cdot l \leq n$ para todo $l \in \mathbb{N}$ y por lo tanto $n$ sería un elemento maximal de $\mathbb{N}$, lo cual es absurdo. 
 
-Por el principio del buen orden, el conjunto $A$ tiene un elemento minimal, digamos que es $m \cdot l$. Como $l \neq 0$, se tiene que $l=S(k)$ para algún $k \in \mathbb{N}$. Ahora, note que $m \cdot k \notin A$ ya que $k < S(k)=l$ y por tanto $m \cdot k < m \cdot l$, luego $m \cdot k \leq n$. Esto quiere decir que $n=m \cdot k + s$ para cierto $s \in \mathbb{N}$.   
+Por el principio del buen orden, el conjunto $B$ tiene un elemento minimal, digamos que es $m \cdot l$. Como $l \neq 0$, se tiene que $l=S(k)$ para algún $k \in \mathbb{N}$. Ahora, $m \cdot k \notin B$ ya que $k < S(k)=l$ y por tanto $m \cdot k < m \cdot l$. Luego $m \cdot k \leq n$ y por lo tanto, $n=m \cdot k + s$ para cierto $s \in \mathbb{N}$.   
 
 ```{python}
 #| label: fig-euclides-recta-roja-py
@@ -2621,8 +2686,37 @@ ax.axis('off')
 plt.show()
 ```
 
-Veamos que $s < m$. Supongamos por el absurdo que $m \leq s$, entonces $s=m+t$ para cierto $t \in \mathbb{N}$. Sustituyendo en la ecuación anterior, obtenemos que $$n=m+m \cdot k + t = m \cdot S(k) + t = m \cdot l + t,$$ lo que implica que $m \cdot S(k) \leq n$, lo cual es absurdo, ya que $S(k)=l$ donde $l$ es el elemento minimal de $A$, luego $l \in A$ y por lo tanto $n < m \cdot l$.
+Veamos que $s < m$. Supongamos por el absurdo que $m \leq s$, entonces $s=m+t$ para cierto $t \in \mathbb{N}$. Sustituyendo en la ecuación anterior, obtenemos que $$n=m+m \cdot k + t = m \cdot S(k) + t = m \cdot l + t,$$ lo que implica que $m \cdot S(k) \leq n$, lo cual es absurdo, ya que $S(k)=l$ donde $l$ es el elemento minimal de $B$, luego $l \in B$ y por lo tanto $n < m \cdot l$.
 
 **Unicidad:**
 
-Supongamos que tenemos $n=m \cdot k +s$ y $n=m \cdot l + t$ con $0 \leq s < m$ y $0 \leq t < m$. Supongamos por el absurdo que $k \neq l$. Sin pérdida de generalidad, supongamos que $k < l$, luego $l=k+u$ para cierto $u \in \mathbb{N} \setminus \{0\}$. Sustituyendo en la segunda ecuación, obtenemos que $$n=m \cdot k + s = m \cdot (k+u) + t = m \cdot k + m \cdot u + t,$$ lo que implica que $s=m \cdot u + t$. Como $u \neq 0$, se tiene que $m \cdot u \neq 0$, y por lo tanto, $s > t$, lo cual es absurdo ya que $s < m$ y $t < m$. 
+Para ver la unicidad, primero observemos que si $n=m \cdot q + t$ con $t < m$, entonces $m \cdot S(q)$ es un elemento minimal del conjunto $B$. 
+
+En efecto, $n=m \cdot q +t < m \cdot q + m = m \cdot S(q)$, lo que implica que $m \cdot S(q) \in B$.  Ahora, si $m \cdot p \in B$ entonces $m \cdot q \leq m \cdot q + t =n < m \cdot p$ y por lo tanto $q < p$. De quí se sigue que $S(q) \leq p$, de donde $m \cdot S(q) \leq m \cdot p$.
+
+Supongamos que tenemos dos escrituras $n=m \cdot k +s$ y $n= m \cdot q + t$ con $s,t < m$. De lo anterior, $m \cdot S(k)$ y $m \cdot S(q)$ son elementos minimales del conjunto $B$, y por lo tanto, $m \cdot S(k)=m \cdot S(q)$. Como $m \neq 0$, de la propiedad cancelativa del producto se sigue que $S(k)=S(q)$ y por la inyectividad de la función sucesor $S$, $k=q$.
+
+Tenemos entonces $m \cdot k + s =n = m \cdot k + t$, y de la propiedad cancelativa de la suma, $t=s$.
+
+Nuestro próximo objetivo es probar que todo número natural se puede escribir de manera única como una suma finita de elementos del conjunto $\{0,1, \dots, 9\}$ por potencias del número $10$.
+
+#### Ejercicio
+
+* Demuestre que si $2 \leq m$, entonces $S(n) \leq m \cdot n$ para todo $n \in \mathbb{N} \setminus \{0\}$.  
+
+* Demuestre que si $m \in \mathbb{N}$ es tal que $2 \leq m$, entonces para todo $n \in \mathbb{N}$ se tiene que $n < m^{n}$.
+
+**Escritura en base $10$**
+
+Dado un número natural $n$, con $1 \leq n$, consideremos el conjunto $$A=\{10^{k}~ :~ n < 10^{k}\}$$. Observe que este conjunto es no vacío ya que por el ejercicio anterior, al ser $2 < 10$ se tiene que $n < 10^{n}$, y por lo tanto $10^{n} \in A$.
+
+Por el principio del buen orden, existe un elemento minimal $10^{k} \in A$ con $k \neq 0$. Por lo tanto, $k=S(t)$ para cierto $t \in \mathbb{N}$. Note que $10^{t} \notin A$, es decir, $10^{t} < n < 10^{S(t)}=10^{k}$. Esto quiere decir que $10^{t}$ es la potencia más grande de $10$ que es menor que $n$. 
+
+
+Usando el algoritmo de la división tenemos que $n=10^{t}q+r$ con $r < 10^{t}$, donde observe que $q \leq 9$, ya que si $9 < q$ entonces $10 \leq q$ y por lo tanto $q=10+a$ para cierto $a \in \mathbb{N}$, luego reemplazando, $n=10^{t}(10+a)+r=10^{S(t)}+a10^{t}+r$ lo que implica que $10^{S(t)}=10^{k} \leq n$, absurdo.
+
+**Conclusión:**
+
+Todo $n \in \mathbb{N}$ con $1 \leq n$, se puede expresar como: $$n=10^{t_{1}}n_{1}+r_{1},$$ para cierto $t_{1} \in \mathbb{N}$, con $n_{1} \leq 9$ y $r_{1} < 10^{t_{1}}$.
+
+Repetimos lo mismo con $r_{1}$ y obtenemos $$r_{1}=10^{t_{2}}n_{2}+r_{2},$$ para cierto $t_{2} \in \mathbb{N}$, $t_{2} < t_{1}$, $n_{2} \leq 9$ y $r_{2}<10^{t_{2}}$.
