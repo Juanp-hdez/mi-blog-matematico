@@ -2493,7 +2493,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="db212faa" class="cell" data-execution_count="1">
+<div id="0763841d" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2503,7 +2503,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="9078f26a" class="cell" data-execution_count="2">
+<div id="01f1c39a" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2639,26 +2639,31 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <h3 class="anchored" data-anchor-id="inducción-matemática">Inducción matemática</h3>
 <p>El axioma de inducción que esta entre los axiomas de Peano utilizados para construir el conjunto <span class="math inline">\(\mathbb{N}\)</span>, produce un método de demostración conocido con el nombre de <strong>inducción matematica</strong>. De manera más precisa, da un método de demostración para fórmulas que dependan de los números naturales.</p>
 <p><strong>Inducción matemática</strong></p>
-<p>Dada una fórmula <span class="math inline">\(\psi(n)\)</span> que dependa de <span class="math inline">\(n \in \mathbb{N}\)</span>, si:</p>
+<p>Dada una fórmula <span class="math inline">\(\phi(n)\)</span> que dependa de <span class="math inline">\(n \in \mathbb{N}\)</span>, si:</p>
 <ul>
-<li><span class="math inline">\(\psi(k_{0})\)</span> es cierta para cierto <span class="math inline">\(k_{0} \in \mathbb{N}\)</span> (paso inicial). ** Para todo <span class="math inline">\(k \geq k_{0}\)</span>, <span class="math inline">\(\psi(k)\)</span> cierta (hipótesis de inducción) implica <span class="math inline">\(\psi(S(k))\)</span> cierta.</li>
+<li><span class="math inline">\(\phi(k_{0})\)</span> es cierta para cierto <span class="math inline">\(k_{0} \in \mathbb{N}\)</span> (paso inicial).</li>
+<li>Para todo <span class="math inline">\(k \geq k_{0}\)</span>, <span class="math inline">\(\phi(k)\)</span> cierta (hipótesis de inducción) implica <span class="math inline">\(\phi(S(k))\)</span> cierta.</li>
 </ul>
-<p>Entonces <span class="math inline">\(\psi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq k_{0}\)</span>.</p>
+<p>Entonces <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq k_{0}\)</span>.</p>
 <section id="ejemplo" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo">Ejemplo</h4>
 <p>Probemos usando inducción matemática, que si <span class="math inline">\(2 \leq m\)</span> entonces <span class="math inline">\(S(n) \leq m \cdot n\)</span> para todo <span class="math inline">\(n &gt; 0\)</span>.</p>
-<p>Definamos la fórmula <span class="math inline">\(\psi(n)=\{S(n) \leq m \cdot n\}\)</span>.</p>
-<p>Comencemos verificando el paso inicial, en este caso, <span class="math inline">\(k_{0}=S(0)\)</span>. Note que <span class="math inline">\(2=S(S(0)) \leq m \cdot S(0)=m\)</span>, es decir, <span class="math inline">\(\psi(S(0))\)</span> es cierta.</p>
-<p>Tomemos un <span class="math inline">\(k \geq S(0)=k_{0}\)</span> y supongamos que <span class="math inline">\(\psi(k)\)</span> es cierta (hipótesis de inducción). Entonces <span class="math inline">\(m \cdot S(k)=m + m \cdot k \geq m + S(k) &gt; S(0)+S(k)=S(S(k))\)</span>, es decir, <span class="math inline">\(S(S(k)) &lt; m \cdot S(k)\)</span> y por lo tanto <span class="math inline">\(\psi(S(k))\)</span> es cierta.</p>
-<p>Por lo tanto, la inducción matemática nos dice que <span class="math inline">\(\psi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq S(0)\)</span>, es decir, <span class="math inline">\(S(n) \leq m \cdot n\)</span> para todo <span class="math inline">\(n \geq 1\)</span>.</p>
+<p>Definamos la fórmula <span class="math inline">\(\phi(n)=\{S(n) \leq m \cdot n\}\)</span>.</p>
+<p>Comencemos verificando el paso inicial, en este caso, <span class="math inline">\(k_{0}=S(0)\)</span>. Note que <span class="math inline">\(2=S(S(0)) \leq m \cdot S(0)=m\)</span>, es decir, <span class="math inline">\(\phi(S(0))\)</span> es cierta.</p>
+<p>Tomemos un <span class="math inline">\(k \geq S(0)=k_{0}\)</span> y supongamos que <span class="math inline">\(\psi(k)\)</span> es cierta (hipótesis de inducción). Entonces <span class="math inline">\(m \cdot S(k)=m + m \cdot k \geq m + S(k) &gt; S(0)+S(k)=S(S(k))\)</span>, es decir, <span class="math inline">\(S(S(k)) &lt; m \cdot S(k)\)</span> y por lo tanto <span class="math inline">\(\phi(S(k))\)</span> es cierta.</p>
+<p>Por lo tanto, la inducción matemática nos dice que <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq S(0)\)</span>, es decir, <span class="math inline">\(S(n) \leq m \cdot n\)</span> para todo <span class="math inline">\(n \geq 1\)</span>.</p>
 <p>De la prueba anterior, podemos observar que si <span class="math inline">\(m &gt; 2\)</span> entonces <span class="math inline">\(S(n) &lt; m \cdot n\)</span> para todo <span class="math inline">\(n \geq 1\)</span>.</p>
 </section>
 <section id="ejemplo-1" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-1">Ejemplo</h4>
-<p>Supongamos que queremos demostrar que <span class="math inline">\(n &lt; 10^{n}\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>. Definamos la fórmula <span class="math display">\[\psi(n)=\{n &lt; 10^{n}\}\]</span>.</p>
-<p>Para usar inducción matemática, primero verificamos el paso inicial, en este caso, <span class="math inline">\(k_{0}=0\)</span>, es decir, verificamos que <span class="math inline">\(\psi(0)\)</span> sea cierta. Como <span class="math inline">\(0 &lt; S(0)=10^{0}\)</span> entonces en efecto <span class="math inline">\(\psi(0)\)</span> es cierta.</p>
-<p>Ahora suponemos que <span class="math inline">\(\psi(k)\)</span> es cierto, es decir, asumimos la hipótesis de inducción y probemos que <span class="math inline">\(\psi(S(k))\)</span> es cierto. Si tenemos que <span class="math inline">\(k &lt; 10^{k}\)</span>, multiplicando a ambos lados por <span class="math inline">\(10\)</span>, obtenemos que <span class="math inline">\(10 \cdot k &lt; 10 \cdot 10^{k}=10^{S(k)}\)</span>. Como <span class="math inline">\(S(k) &lt; 10 \cdot k\)</span> entonces <span class="math inline">\(S(k) &lt; 10^{S(k)}\)</span>. Por lo tanto <span class="math inline">\(\psi(S(k))\)</span> es cierto.</p>
-<p>De la hipótesis de inducción se concluye que la fórmula <span class="math inline">\(\psi(n)\)</span> es cierta para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, es decir, <span class="math inline">\(n &lt; 10^{n}\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<p>Supongamos que queremos demostrar que <span class="math inline">\(n &lt; 10^{n}\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>. Definamos la fórmula <span class="math display">\[\phi(n)=\{n &lt; 10^{n}\}\]</span>.</p>
+<p>Para usar inducción matemática, primero verificamos el paso inicial, en este caso, <span class="math inline">\(k_{0}=0\)</span>, es decir, verificamos que <span class="math inline">\(\phi(0)\)</span> sea cierta. Como <span class="math inline">\(0 &lt; S(0)=10^{0}\)</span> entonces en efecto <span class="math inline">\(\phi(0)\)</span> es cierta.</p>
+<p>Ahora suponemos que <span class="math inline">\(\phi(k)\)</span> es cierto, es decir, asumimos la hipótesis de inducción y probemos que <span class="math inline">\(\phi(S(k))\)</span> es cierto. Si tenemos que <span class="math inline">\(k &lt; 10^{k}\)</span>, multiplicando a ambos lados por <span class="math inline">\(10\)</span>, obtenemos que <span class="math inline">\(10 \cdot k &lt; 10 \cdot 10^{k}=10^{S(k)}\)</span>. Como <span class="math inline">\(S(k) &lt; 10 \cdot k\)</span> entonces <span class="math inline">\(S(k) &lt; 10^{S(k)}\)</span>. Por lo tanto <span class="math inline">\(\phi(S(k))\)</span> es cierto.</p>
+<p>De la hipótesis de inducción se concluye que la fórmula <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, es decir, <span class="math inline">\(n &lt; 10^{n}\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+</section>
+<section id="ejemplo-2" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-2">Ejemplo</h4>
+<p>Usemos la notación <span class="math inline">\(1+2+ \cdot + n\)</span> para denotar la suma de los números naturales que están entre <span class="math inline">\(1\)</span> y <span class="math inline">\(n\)</span></p>
 </section>
 </section>
 <section id="representación-de-los-números-naturales-en-base-diez" class="level3">

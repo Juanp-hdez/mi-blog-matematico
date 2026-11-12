@@ -2585,40 +2585,40 @@ El axioma de inducción que esta entre los axiomas de Peano utilizados para cons
 
 **Inducción matemática**
 
-Dada una fórmula $\psi(n)$ que dependa de $n \in \mathbb{N}$, si:
+Dada una fórmula $\phi(n)$ que dependa de $n \in \mathbb{N}$, si:
 
-* $\psi(k_{0})$ es cierta para cierto $k_{0} \in \mathbb{N}$ (paso inicial).
-** Para todo $k \geq k_{0}$, $\psi(k)$ cierta (hipótesis de inducción) implica $\psi(S(k))$ cierta.
+* $\phi(k_{0})$ es cierta para cierto $k_{0} \in \mathbb{N}$ (paso inicial).
+* Para todo $k \geq k_{0}$, $\phi(k)$ cierta (hipótesis de inducción) implica $\phi(S(k))$ cierta.
 
-Entonces $\psi(n)$ es cierta para todo $n \geq k_{0}$.
+Entonces $\phi(n)$ es cierta para todo $n \geq k_{0}$.
 
 #### Ejemplo
 
 Probemos usando inducción matemática, que si $2 \leq m$ entonces $S(n) \leq m \cdot n$ para todo $n > 0$.
 
-Definamos la fórmula $\psi(n)=\{S(n) \leq m \cdot n\}$.
+Definamos la fórmula $\phi(n)=\{S(n) \leq m \cdot n\}$.
 
-Comencemos verificando el paso inicial, en este caso, $k_{0}=S(0)$. Note que $2=S(S(0)) \leq m \cdot S(0)=m$, es decir, $\psi(S(0))$ es cierta.
+Comencemos verificando el paso inicial, en este caso, $k_{0}=S(0)$. Note que $2=S(S(0)) \leq m \cdot S(0)=m$, es decir, $\phi(S(0))$ es cierta.
 
-Tomemos un $k \geq S(0)=k_{0}$ y supongamos que $\psi(k)$ es cierta (hipótesis de inducción). Entonces $m \cdot S(k)=m + m \cdot k \geq m + S(k) > S(0)+S(k)=S(S(k))$, es decir, $S(S(k)) < m \cdot S(k)$ y por lo tanto $\psi(S(k))$ es cierta.
+Tomemos un $k \geq S(0)=k_{0}$ y supongamos que $\psi(k)$ es cierta (hipótesis de inducción). Entonces $m \cdot S(k)=m + m \cdot k \geq m + S(k) > S(0)+S(k)=S(S(k))$, es decir, $S(S(k)) < m \cdot S(k)$ y por lo tanto $\phi(S(k))$ es cierta.
 
-Por lo tanto, la inducción matemática nos dice que $\psi(n)$ es cierta para todo $n \geq S(0)$, es decir, $S(n) \leq m \cdot n$ para todo $n \geq 1$.
+Por lo tanto, la inducción matemática nos dice que $\phi(n)$ es cierta para todo $n \geq S(0)$, es decir, $S(n) \leq m \cdot n$ para todo $n \geq 1$.
 
 De la prueba anterior, podemos observar que si $m > 2$ entonces $S(n) < m \cdot n$ para todo $n \geq 1$.
 
 #### Ejemplo
 
-Supongamos que queremos demostrar que $n < 10^{n}$ para todo $n \in \mathbb{N}$. Definamos la fórmula $$\psi(n)=\{n < 10^{n}\}$$.
+Supongamos que queremos demostrar que $n < 10^{n}$ para todo $n \in \mathbb{N}$. Definamos la fórmula $$\phi(n)=\{n < 10^{n}\}$$.
 
-Para usar inducción matemática, primero verificamos el paso inicial, en este caso, $k_{0}=0$, es decir, verificamos que $\psi(0)$ sea cierta. Como $0 < S(0)=10^{0}$ entonces en efecto $\psi(0)$ es cierta.
+Para usar inducción matemática, primero verificamos el paso inicial, en este caso, $k_{0}=0$, es decir, verificamos que $\phi(0)$ sea cierta. Como $0 < S(0)=10^{0}$ entonces en efecto $\phi(0)$ es cierta.
 
-Ahora suponemos que $\psi(k)$ es cierto, es decir, asumimos la hipótesis de inducción y probemos que $\psi(S(k))$ es cierto. Si tenemos que $k < 10^{k}$, multiplicando a ambos lados por $10$, obtenemos que $10 \cdot k < 10 \cdot 10^{k}=10^{S(k)}$. Como $S(k) < 10 \cdot k$ entonces $S(k) < 10^{S(k)}$. Por lo tanto $\psi(S(k))$ es cierto.
+Ahora suponemos que $\phi(k)$ es cierto, es decir, asumimos la hipótesis de inducción y probemos que $\phi(S(k))$ es cierto. Si tenemos que $k < 10^{k}$, multiplicando a ambos lados por $10$, obtenemos que $10 \cdot k < 10 \cdot 10^{k}=10^{S(k)}$. Como $S(k) < 10 \cdot k$ entonces $S(k) < 10^{S(k)}$. Por lo tanto $\phi(S(k))$ es cierto.
 
-De la hipótesis de inducción se concluye que la fórmula $\psi(n)$ es cierta para todo $n \in \mathbb{N}$, es decir, $n < 10^{n}$ para todo $n \in \mathbb{N}$.
+De la hipótesis de inducción se concluye que la fórmula $\phi(n)$ es cierta para todo $n \in \mathbb{N}$, es decir, $n < 10^{n}$ para todo $n \in \mathbb{N}$.
 
+#### Ejemplo
 
-
-
+Usemos la notación $1+2+ \cdot + n$ para denotar la suma de los números naturales que están entre $1$ y $n$
 
 ### Representación de los números naturales en base diez
 

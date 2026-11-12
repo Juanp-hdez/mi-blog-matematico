@@ -2315,7 +2315,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Observe que <img src="https://latex.codecogs.com/png.latex?0%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">, y que si <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%3C%20S(m)">.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="db212faa" class="cell" data-execution_count="1">
+<div id="0763841d" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2325,7 +2325,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="9078f26a" class="cell" data-execution_count="2">
+<div id="01f1c39a" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2461,26 +2461,31 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 <h3 class="anchored" data-anchor-id="inducción-matemática">Inducción matemática</h3>
 <p>El axioma de inducción que esta entre los axiomas de Peano utilizados para construir el conjunto <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">, produce un método de demostración conocido con el nombre de <strong>inducción matematica</strong>. De manera más precisa, da un método de demostración para fórmulas que dependan de los números naturales.</p>
 <p><strong>Inducción matemática</strong></p>
-<p>Dada una fórmula <img src="https://latex.codecogs.com/png.latex?%5Cpsi(n)"> que dependa de <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, si:</p>
+<p>Dada una fórmula <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> que dependa de <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, si:</p>
 <ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cpsi(k_%7B0%7D)"> es cierta para cierto <img src="https://latex.codecogs.com/png.latex?k_%7B0%7D%20%5Cin%20%5Cmathbb%7BN%7D"> (paso inicial). ** Para todo <img src="https://latex.codecogs.com/png.latex?k%20%5Cgeq%20k_%7B0%7D">, <img src="https://latex.codecogs.com/png.latex?%5Cpsi(k)"> cierta (hipótesis de inducción) implica <img src="https://latex.codecogs.com/png.latex?%5Cpsi(S(k))"> cierta.</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cphi(k_%7B0%7D)"> es cierta para cierto <img src="https://latex.codecogs.com/png.latex?k_%7B0%7D%20%5Cin%20%5Cmathbb%7BN%7D"> (paso inicial).</li>
+<li>Para todo <img src="https://latex.codecogs.com/png.latex?k%20%5Cgeq%20k_%7B0%7D">, <img src="https://latex.codecogs.com/png.latex?%5Cphi(k)"> cierta (hipótesis de inducción) implica <img src="https://latex.codecogs.com/png.latex?%5Cphi(S(k))"> cierta.</li>
 </ul>
-<p>Entonces <img src="https://latex.codecogs.com/png.latex?%5Cpsi(n)"> es cierta para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%20k_%7B0%7D">.</p>
+<p>Entonces <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> es cierta para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%20k_%7B0%7D">.</p>
 <section id="ejemplo" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo">Ejemplo</h4>
 <p>Probemos usando inducción matemática, que si <img src="https://latex.codecogs.com/png.latex?2%20%5Cleq%20m"> entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%5Cleq%20m%20%5Ccdot%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%3E%200">.</p>
-<p>Definamos la fórmula <img src="https://latex.codecogs.com/png.latex?%5Cpsi(n)=%5C%7BS(n)%20%5Cleq%20m%20%5Ccdot%20n%5C%7D">.</p>
-<p>Comencemos verificando el paso inicial, en este caso, <img src="https://latex.codecogs.com/png.latex?k_%7B0%7D=S(0)">. Note que <img src="https://latex.codecogs.com/png.latex?2=S(S(0))%20%5Cleq%20m%20%5Ccdot%20S(0)=m">, es decir, <img src="https://latex.codecogs.com/png.latex?%5Cpsi(S(0))"> es cierta.</p>
-<p>Tomemos un <img src="https://latex.codecogs.com/png.latex?k%20%5Cgeq%20S(0)=k_%7B0%7D"> y supongamos que <img src="https://latex.codecogs.com/png.latex?%5Cpsi(k)"> es cierta (hipótesis de inducción). Entonces <img src="https://latex.codecogs.com/png.latex?m%20%5Ccdot%20S(k)=m%20+%20m%20%5Ccdot%20k%20%5Cgeq%20m%20+%20S(k)%20%3E%20S(0)+S(k)=S(S(k))">, es decir, <img src="https://latex.codecogs.com/png.latex?S(S(k))%20%3C%20m%20%5Ccdot%20S(k)"> y por lo tanto <img src="https://latex.codecogs.com/png.latex?%5Cpsi(S(k))"> es cierta.</p>
-<p>Por lo tanto, la inducción matemática nos dice que <img src="https://latex.codecogs.com/png.latex?%5Cpsi(n)"> es cierta para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%20S(0)">, es decir, <img src="https://latex.codecogs.com/png.latex?S(n)%20%5Cleq%20m%20%5Ccdot%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%201">.</p>
+<p>Definamos la fórmula <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)=%5C%7BS(n)%20%5Cleq%20m%20%5Ccdot%20n%5C%7D">.</p>
+<p>Comencemos verificando el paso inicial, en este caso, <img src="https://latex.codecogs.com/png.latex?k_%7B0%7D=S(0)">. Note que <img src="https://latex.codecogs.com/png.latex?2=S(S(0))%20%5Cleq%20m%20%5Ccdot%20S(0)=m">, es decir, <img src="https://latex.codecogs.com/png.latex?%5Cphi(S(0))"> es cierta.</p>
+<p>Tomemos un <img src="https://latex.codecogs.com/png.latex?k%20%5Cgeq%20S(0)=k_%7B0%7D"> y supongamos que <img src="https://latex.codecogs.com/png.latex?%5Cpsi(k)"> es cierta (hipótesis de inducción). Entonces <img src="https://latex.codecogs.com/png.latex?m%20%5Ccdot%20S(k)=m%20+%20m%20%5Ccdot%20k%20%5Cgeq%20m%20+%20S(k)%20%3E%20S(0)+S(k)=S(S(k))">, es decir, <img src="https://latex.codecogs.com/png.latex?S(S(k))%20%3C%20m%20%5Ccdot%20S(k)"> y por lo tanto <img src="https://latex.codecogs.com/png.latex?%5Cphi(S(k))"> es cierta.</p>
+<p>Por lo tanto, la inducción matemática nos dice que <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> es cierta para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%20S(0)">, es decir, <img src="https://latex.codecogs.com/png.latex?S(n)%20%5Cleq%20m%20%5Ccdot%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%201">.</p>
 <p>De la prueba anterior, podemos observar que si <img src="https://latex.codecogs.com/png.latex?m%20%3E%202"> entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%3C%20m%20%5Ccdot%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%201">.</p>
 </section>
 <section id="ejemplo-1" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-1">Ejemplo</h4>
-<p>Supongamos que queremos demostrar que <img src="https://latex.codecogs.com/png.latex?n%20%3C%2010%5E%7Bn%7D"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">. Definamos la fórmula <img src="https://latex.codecogs.com/png.latex?%5Cpsi(n)=%5C%7Bn%20%3C%2010%5E%7Bn%7D%5C%7D">.</p>
-<p>Para usar inducción matemática, primero verificamos el paso inicial, en este caso, <img src="https://latex.codecogs.com/png.latex?k_%7B0%7D=0">, es decir, verificamos que <img src="https://latex.codecogs.com/png.latex?%5Cpsi(0)"> sea cierta. Como <img src="https://latex.codecogs.com/png.latex?0%20%3C%20S(0)=10%5E%7B0%7D"> entonces en efecto <img src="https://latex.codecogs.com/png.latex?%5Cpsi(0)"> es cierta.</p>
-<p>Ahora suponemos que <img src="https://latex.codecogs.com/png.latex?%5Cpsi(k)"> es cierto, es decir, asumimos la hipótesis de inducción y probemos que <img src="https://latex.codecogs.com/png.latex?%5Cpsi(S(k))"> es cierto. Si tenemos que <img src="https://latex.codecogs.com/png.latex?k%20%3C%2010%5E%7Bk%7D">, multiplicando a ambos lados por <img src="https://latex.codecogs.com/png.latex?10">, obtenemos que <img src="https://latex.codecogs.com/png.latex?10%20%5Ccdot%20k%20%3C%2010%20%5Ccdot%2010%5E%7Bk%7D=10%5E%7BS(k)%7D">. Como <img src="https://latex.codecogs.com/png.latex?S(k)%20%3C%2010%20%5Ccdot%20k"> entonces <img src="https://latex.codecogs.com/png.latex?S(k)%20%3C%2010%5E%7BS(k)%7D">. Por lo tanto <img src="https://latex.codecogs.com/png.latex?%5Cpsi(S(k))"> es cierto.</p>
-<p>De la hipótesis de inducción se concluye que la fórmula <img src="https://latex.codecogs.com/png.latex?%5Cpsi(n)"> es cierta para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, es decir, <img src="https://latex.codecogs.com/png.latex?n%20%3C%2010%5E%7Bn%7D"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
+<p>Supongamos que queremos demostrar que <img src="https://latex.codecogs.com/png.latex?n%20%3C%2010%5E%7Bn%7D"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">. Definamos la fórmula <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)=%5C%7Bn%20%3C%2010%5E%7Bn%7D%5C%7D">.</p>
+<p>Para usar inducción matemática, primero verificamos el paso inicial, en este caso, <img src="https://latex.codecogs.com/png.latex?k_%7B0%7D=0">, es decir, verificamos que <img src="https://latex.codecogs.com/png.latex?%5Cphi(0)"> sea cierta. Como <img src="https://latex.codecogs.com/png.latex?0%20%3C%20S(0)=10%5E%7B0%7D"> entonces en efecto <img src="https://latex.codecogs.com/png.latex?%5Cphi(0)"> es cierta.</p>
+<p>Ahora suponemos que <img src="https://latex.codecogs.com/png.latex?%5Cphi(k)"> es cierto, es decir, asumimos la hipótesis de inducción y probemos que <img src="https://latex.codecogs.com/png.latex?%5Cphi(S(k))"> es cierto. Si tenemos que <img src="https://latex.codecogs.com/png.latex?k%20%3C%2010%5E%7Bk%7D">, multiplicando a ambos lados por <img src="https://latex.codecogs.com/png.latex?10">, obtenemos que <img src="https://latex.codecogs.com/png.latex?10%20%5Ccdot%20k%20%3C%2010%20%5Ccdot%2010%5E%7Bk%7D=10%5E%7BS(k)%7D">. Como <img src="https://latex.codecogs.com/png.latex?S(k)%20%3C%2010%20%5Ccdot%20k"> entonces <img src="https://latex.codecogs.com/png.latex?S(k)%20%3C%2010%5E%7BS(k)%7D">. Por lo tanto <img src="https://latex.codecogs.com/png.latex?%5Cphi(S(k))"> es cierto.</p>
+<p>De la hipótesis de inducción se concluye que la fórmula <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> es cierta para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, es decir, <img src="https://latex.codecogs.com/png.latex?n%20%3C%2010%5E%7Bn%7D"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
+</section>
+<section id="ejemplo-2" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-2">Ejemplo</h4>
+<p>Usemos la notación <img src="https://latex.codecogs.com/png.latex?1+2+%20%5Ccdot%20+%20n"> para denotar la suma de los números naturales que están entre <img src="https://latex.codecogs.com/png.latex?1"> y <img src="https://latex.codecogs.com/png.latex?n"></p>
 </section>
 </section>
 <section id="representación-de-los-números-naturales-en-base-diez" class="level3">
