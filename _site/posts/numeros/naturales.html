@@ -2465,6 +2465,19 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <li><strong>Transitividad</strong>: Supongamos que <span class="math inline">\(n,m,k \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n \leq m\)</span> y <span class="math inline">\(m \leq k\)</span>. Entonces existen <span class="math inline">\(t, s \in \mathbb{N}\)</span> tales que <span class="math inline">\(n+t=m\)</span> y <span class="math inline">\(m+s=k\)</span>. Sustituyendo en la segunda ecuación <span class="math inline">\(m\)</span> por <span class="math inline">\(n+t\)</span>, obtenemos que <span class="math inline">\((n+t)+s=k\)</span>, y por la asociatividad de la suma tenemos que <span class="math inline">\(n+(t+s)=k\)</span>, y como <span class="math inline">\(t+s \in \mathbb{N}\)</span>, se sigue que <span class="math inline">\(n \leq k\)</span>.</li>
 <li><strong>Totalidad</strong>: Dado <span class="math inline">\(m \in \mathbb{N}\)</span> consideremos el conjunto <span class="math display">\[A_{m}=\{n \in \mathbb{N} : n \leq m~ \vee ~ m \leq n\}.\]</span> Note que <span class="math inline">\(0 \in A_{m}\)</span>, ya que <span class="math inline">\(0 \leq m\)</span> para todo <span class="math inline">\(m \in \mathbb{N}\)</span>. Ahora, si <span class="math inline">\(n \in A_{m}\)</span> entonces <span class="math inline">\(S(n) \in A_{m}\)</span>. Para probar esto necesitamos analizar dos casos: cuando <span class="math inline">\(n \leq m\)</span> y cuando <span class="math inline">\(m \leq n\)</span>. Veamos solamente el primer caso ya que el otro caso es análogo. Supongamos entonces que <span class="math inline">\(n \leq m\)</span>, luego <span class="math inline">\(m=n+t\)</span> para cierto <span class="math inline">\(t \in \mathbb{N}\)</span>. Si <span class="math inline">\(t=0\)</span> entonces <span class="math inline">\(m=n\)</span> y por lo tanto <span class="math inline">\(m \leq S(m)=S(n)\)</span>, luego <span class="math inline">\(S(n) \in A_{m}\)</span>. Ahora, si <span class="math inline">\(t \neq 0\)</span> entonces <span class="math inline">\(t=S(k)\)</span> para cierto <span class="math inline">\(k \in \mathbb{N}\)</span>, luego <span class="math inline">\(m=n+S(k)=S(n)+k\)</span> y por lo tanto <span class="math inline">\(S(n) \leq m\)</span>, así <span class="math inline">\(S(n) \in A_{m}\)</span>. Del principio de inducción se sigue que <span class="math inline">\(A_{m}=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n \leq m\)</span> o <span class="math inline">\(m \leq n\)</span>. Como <span class="math inline">\(m\)</span> era arbitrario, se sigue que para todo <span class="math inline">\(n,m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n \leq m\)</span> o <span class="math inline">\(m \leq n\)</span>.</li>
 </ul>
+</section>
+<section id="ejercicios" class="level4">
+<h4 class="anchored" data-anchor-id="ejercicios">Ejercicios:</h4>
+<p>Demuestre que la cancelación de la suma también se tiene con desigualdades, es decir,</p>
+<ul>
+<li>Si <span class="math inline">\(n+m &lt; n+k\)</span>, entonces <span class="math inline">\(m &lt; k\)</span>.</li>
+<li>Si <span class="math inline">\(n+m \leq n+k\)</span>, entonces <span class="math inline">\(m \leq k\)</span>.</li>
+</ul>
+<p>Demuestre que las desigualdades son aditivas, es decir,</p>
+<ul>
+<li>Si <span class="math inline">\(n &lt; m\)</span> y <span class="math inline">\(k \leq  s\)</span> entonces <span class="math inline">\(n+k &lt; m + s\)</span>.</li>
+<li>Si <span class="math inline">\(n \leq m\)</span> y <span class="math inline">\(k \leq s\)</span> entonces <span class="math inline">\(n+k \leq m+s\)</span>.</li>
+</ul>
 <p><strong>Observaciones:</strong></p>
 <ul>
 <li><p>Al tener la relación de orden total <span class="math inline">\(\leq\)</span> en el conjunto de los números naturales, podemos definir la relación <span class="math inline">\(&lt;\)</span> de la siguiente manera: diremos que <span class="math inline">\(n &lt; m\)</span> si <span class="math inline">\(n \leq m\)</span> y <span class="math inline">\(n \neq m\)</span>. Observe que <span class="math inline">\(n&lt;m\)</span> si y solo si existe un número natural <span class="math inline">\(k \in \mathbb{N} \setminus \{0\}\)</span> tal que <span class="math inline">\(n+k=m\)</span>.</p></li>
@@ -2480,7 +2493,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="8c280233" class="cell" data-execution_count="1">
+<div id="db212faa" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2490,7 +2503,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="325f468c" class="cell" data-execution_count="2">
+<div id="9078f26a" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2580,15 +2593,27 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </ul>
 <p>Si suponemos por el absurdo que <span class="math inline">\(n \neq m\)</span>, entonces <span class="math inline">\(n &lt; m\)</span> o <span class="math inline">\(m &lt; n\)</span>. Supongamos sin pérdida de generalidad que <span class="math inline">\(n &lt; m\)</span>, entonces por la propiedad anterior, <span class="math inline">\(n \cdot k &lt; m \cdot k\)</span>, lo cual es una contradicción. Por lo tanto, <span class="math inline">\(n=m\)</span>.</p>
 <p>De lo anterior se deduce que <span class="math inline">\(S(0)\)</span> es el único neutro, más aún, que si <span class="math inline">\(n \cdot m=n\)</span> para cierto <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, entonces <span class="math inline">\(m=S(0)\)</span>.</p>
+</section>
+<section id="ejercicio" class="level4">
+<h4 class="anchored" data-anchor-id="ejercicio">Ejercicio</h4>
 <ul>
 <li><p>Si <span class="math inline">\(n,m,k,s \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n \leq m\)</span> y <span class="math inline">\(k \leq s\)</span>, entonces <span class="math inline">\(n \cdot k \leq m \cdot s\)</span>.</p></li>
 <li><p>Si <span class="math inline">\(n,m,k,s \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span> y <span class="math inline">\(k &lt; s\)</span>, entonces <span class="math inline">\(n \cdot k &lt; m \cdot s\)</span>.</p></li>
+<li><p>¿Qué pasa si <span class="math inline">\(n &lt; m\)</span> y <span class="math inline">\(k \leq s\)</span> con <span class="math inline">\(k \neq 0\)</span>?</p></li>
 </ul>
 </section>
 <section id="no-hay-divisores-de-cero-en-los-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="no-hay-divisores-de-cero-en-los-números-naturales">No hay divisores de cero en los números naturales</h4>
 <p>Esto quiere decir que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n \cdot m=0\)</span>, entonces <span class="math inline">\(n=0\)</span> o <span class="math inline">\(m=0\)</span>. Es decir, la única manera de que el producto de dos números naturales sea cero es que al menos uno de ellos sea cero.</p>
 <p>Para probar esto, razonemos por el absurdo. Supongamos que existen <span class="math inline">\(n,m \in \mathbb{N} \setminus \{0\}\)</span> tales que <span class="math inline">\(n \cdot m=0\)</span>. Por lo tanto <span class="math inline">\(0 &lt; n\)</span> y <span class="math inline">\(0 &lt; m\)</span> y así de lo anterior, <span class="math inline">\(0 &lt; n \cdot m=0\)</span>, lo cual es una contradicción.</p>
+</section>
+<section id="ejercicio-1" class="level4">
+<h4 class="anchored" data-anchor-id="ejercicio-1">Ejercicio</h4>
+<p>Demuestre que la cancelación del producto también se tiene con desigualdades, es decir,</p>
+<ul>
+<li>Si <span class="math inline">\(n \cdot k &lt; m \cdot k\)</span>, entonces <span class="math inline">\(n &lt; m\)</span>.</li>
+<li>Si <span class="math inline">\(n \cdot k \leq m \cdot k\)</span>, entonces <span class="math inline">\(n \leq m\)</span>.</li>
+</ul>
 </section>
 <section id="potenciación" class="level4">
 <h4 class="anchored" data-anchor-id="potenciación">Potenciación</h4>
@@ -2610,6 +2635,32 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </ul>
 </section>
 </section>
+<section id="inducción-matemática" class="level3">
+<h3 class="anchored" data-anchor-id="inducción-matemática">Inducción matemática</h3>
+<p>El axioma de inducción que esta entre los axiomas de Peano utilizados para construir el conjunto <span class="math inline">\(\mathbb{N}\)</span>, produce un método de demostración conocido con el nombre de <strong>inducción matematica</strong>. De manera más precisa, da un método de demostración para fórmulas que dependan de los números naturales.</p>
+<p><strong>Inducción matemática</strong></p>
+<p>Dada una fórmula <span class="math inline">\(\psi(n)\)</span> que dependa de <span class="math inline">\(n \in \mathbb{N}\)</span>, si:</p>
+<ul>
+<li><span class="math inline">\(\psi(k_{0})\)</span> es cierta para cierto <span class="math inline">\(k_{0} \in \mathbb{N}\)</span> (paso inicial). ** Para todo <span class="math inline">\(k \geq k_{0}\)</span>, <span class="math inline">\(\psi(k)\)</span> cierta (hipótesis de inducción) implica <span class="math inline">\(\psi(S(k))\)</span> cierta.</li>
+</ul>
+<p>Entonces <span class="math inline">\(\psi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq k_{0}\)</span>.</p>
+<section id="ejemplo" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo">Ejemplo</h4>
+<p>Probemos usando inducción matemática, que si <span class="math inline">\(2 \leq m\)</span> entonces <span class="math inline">\(S(n) \leq m \cdot n\)</span> para todo <span class="math inline">\(n &gt; 0\)</span>.</p>
+<p>Definamos la fórmula <span class="math inline">\(\psi(n)=\{S(n) \leq m \cdot n\}\)</span>.</p>
+<p>Comencemos verificando el paso inicial, en este caso, <span class="math inline">\(k_{0}=S(0)\)</span>. Note que <span class="math inline">\(2=S(S(0)) \leq m \cdot S(0)=m\)</span>, es decir, <span class="math inline">\(\psi(S(0))\)</span> es cierta.</p>
+<p>Tomemos un <span class="math inline">\(k \geq S(0)=k_{0}\)</span> y supongamos que <span class="math inline">\(\psi(k)\)</span> es cierta (hipótesis de inducción). Entonces <span class="math inline">\(m \cdot S(k)=m + m \cdot k \geq m + S(k) &gt; S(0)+S(k)=S(S(k))\)</span>, es decir, <span class="math inline">\(S(S(k)) &lt; m \cdot S(k)\)</span> y por lo tanto <span class="math inline">\(\psi(S(k))\)</span> es cierta.</p>
+<p>Por lo tanto, la inducción matemática nos dice que <span class="math inline">\(\psi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq S(0)\)</span>, es decir, <span class="math inline">\(S(n) \leq m \cdot n\)</span> para todo <span class="math inline">\(n \geq 1\)</span>.</p>
+<p>De la prueba anterior, podemos observar que si <span class="math inline">\(m &gt; 2\)</span> entonces <span class="math inline">\(S(n) &lt; m \cdot n\)</span> para todo <span class="math inline">\(n \geq 1\)</span>.</p>
+</section>
+<section id="ejemplo-1" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-1">Ejemplo</h4>
+<p>Supongamos que queremos demostrar que <span class="math inline">\(n &lt; 10^{n}\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>. Definamos la fórmula <span class="math display">\[\psi(n)=\{n &lt; 10^{n}\}\]</span>.</p>
+<p>Para usar inducción matemática, primero verificamos el paso inicial, en este caso, <span class="math inline">\(k_{0}=0\)</span>, es decir, verificamos que <span class="math inline">\(\psi(0)\)</span> sea cierta. Como <span class="math inline">\(0 &lt; S(0)=10^{0}\)</span> entonces en efecto <span class="math inline">\(\psi(0)\)</span> es cierta.</p>
+<p>Ahora suponemos que <span class="math inline">\(\psi(k)\)</span> es cierto, es decir, asumimos la hipótesis de inducción y probemos que <span class="math inline">\(\psi(S(k))\)</span> es cierto. Si tenemos que <span class="math inline">\(k &lt; 10^{k}\)</span>, multiplicando a ambos lados por <span class="math inline">\(10\)</span>, obtenemos que <span class="math inline">\(10 \cdot k &lt; 10 \cdot 10^{k}=10^{S(k)}\)</span>. Como <span class="math inline">\(S(k) &lt; 10 \cdot k\)</span> entonces <span class="math inline">\(S(k) &lt; 10^{S(k)}\)</span>. Por lo tanto <span class="math inline">\(\psi(S(k))\)</span> es cierto.</p>
+<p>De la hipótesis de inducción se concluye que la fórmula <span class="math inline">\(\psi(n)\)</span> es cierta para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, es decir, <span class="math inline">\(n &lt; 10^{n}\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+</section>
+</section>
 <section id="representación-de-los-números-naturales-en-base-diez" class="level3">
 <h3 class="anchored" data-anchor-id="representación-de-los-números-naturales-en-base-diez">Representación de los números naturales en base diez</h3>
 <p>Definamos el número natural <strong>diez</strong> como el sucesor del <span class="math inline">\(9\)</span>, que denotaremos con el símbolo <span class="math inline">\(10\)</span>.</p>
@@ -2619,8 +2670,8 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>Dados dos números naturales <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(m \neq 0\)</span>, existen únicos números naturales <span class="math inline">\(k,s \in \mathbb{N}\)</span> tales que <span class="math inline">\(n=m \cdot k + s\)</span> y <span class="math inline">\(0 \leq s &lt; m\)</span>.</p>
 <p><strong>Existencia:</strong></p>
 <p>Observemos que si <span class="math inline">\(n &lt; m\)</span> entonces <span class="math inline">\(n=m \cdots 0 + 0\)</span>.</p>
-<p>Supongamos entonces que <span class="math inline">\(m \leq n\)</span>. Consideremos el conjunto <span class="math display">\[A=\{m \cdot l \in \mathbb{N}~ :~ n &lt; m \cdot l \}.\]</span> Observemos que <span class="math inline">\(A\)</span> es un subconjunto no vacío de <span class="math inline">\(\mathbb{N}\)</span>, ya que de lo contrario se tendría que <span class="math inline">\(m \cdot l \leq n\)</span> para todo <span class="math inline">\(l \in \mathbb{N}\)</span>, lo que implica <span class="math inline">\(l \leq m \cdot l \leq n\)</span> para todo <span class="math inline">\(l \in \mathbb{N}\)</span> y por lo tanto <span class="math inline">\(n\)</span> sería un elemento maximal de <span class="math inline">\(\mathbb{N}\)</span>, lo cual es absurdo.</p>
-<p>Por el principio del buen orden, el conjunto <span class="math inline">\(A\)</span> tiene un elemento minimal, digamos que es <span class="math inline">\(m \cdot l\)</span>. Como <span class="math inline">\(l \neq 0\)</span>, se tiene que <span class="math inline">\(l=S(k)\)</span> para algún <span class="math inline">\(k \in \mathbb{N}\)</span>. Ahora, note que <span class="math inline">\(m \cdot k \notin A\)</span> ya que <span class="math inline">\(k &lt; S(k)=l\)</span> y por tanto <span class="math inline">\(m \cdot k &lt; m \cdot l\)</span>, luego <span class="math inline">\(m \cdot k \leq n\)</span>. Esto quiere decir que <span class="math inline">\(n=m \cdot k + s\)</span> para cierto <span class="math inline">\(s \in \mathbb{N}\)</span>.</p>
+<p>Supongamos entonces que <span class="math inline">\(m \leq n\)</span>. Consideremos el conjunto <span class="math display">\[B=\{m \cdot l \in \mathbb{N}~ :~ n &lt; m \cdot l \}.\]</span> Observemos que <span class="math inline">\(B\)</span> es un subconjunto no vacío de <span class="math inline">\(\mathbb{N}\)</span>, ya que de lo contrario se tendría que <span class="math inline">\(m \cdot l \leq n\)</span> para todo <span class="math inline">\(l \in \mathbb{N}\)</span>, lo que implica <span class="math inline">\(l \leq m \cdot l \leq n\)</span> para todo <span class="math inline">\(l \in \mathbb{N}\)</span> y por lo tanto <span class="math inline">\(n\)</span> sería un elemento maximal de <span class="math inline">\(\mathbb{N}\)</span>, lo cual es absurdo.</p>
+<p>Por el principio del buen orden, el conjunto <span class="math inline">\(B\)</span> tiene un elemento minimal, digamos que es <span class="math inline">\(m \cdot l\)</span>. Como <span class="math inline">\(l \neq 0\)</span>, se tiene que <span class="math inline">\(l=S(k)\)</span> para algún <span class="math inline">\(k \in \mathbb{N}\)</span>. Ahora, <span class="math inline">\(m \cdot k \notin B\)</span> ya que <span class="math inline">\(k &lt; S(k)=l\)</span> y por tanto <span class="math inline">\(m \cdot k &lt; m \cdot l\)</span>. Luego <span class="math inline">\(m \cdot k \leq n\)</span> y por lo tanto, <span class="math inline">\(n=m \cdot k + s\)</span> para cierto <span class="math inline">\(s \in \mathbb{N}\)</span>.</p>
 <div id="cell-fig-euclides-recta-roja-py" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div id="fig-euclides-recta-roja-py" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -2635,9 +2686,27 @@ Figure&nbsp;2: El conjunto <span class="math inline">\(B = \{mt \mid n &lt; mt\}
 </div>
 </div>
 </div>
-<p>Veamos que <span class="math inline">\(s &lt; m\)</span>. Supongamos por el absurdo que <span class="math inline">\(m \leq s\)</span>, entonces <span class="math inline">\(s=m+t\)</span> para cierto <span class="math inline">\(t \in \mathbb{N}\)</span>. Sustituyendo en la ecuación anterior, obtenemos que <span class="math display">\[n=m+m \cdot k + t = m \cdot S(k) + t = m \cdot l + t,\]</span> lo que implica que <span class="math inline">\(m \cdot S(k) \leq n\)</span>, lo cual es absurdo, ya que <span class="math inline">\(S(k)=l\)</span> donde <span class="math inline">\(l\)</span> es el elemento minimal de <span class="math inline">\(A\)</span>, luego <span class="math inline">\(l \in A\)</span> y por lo tanto <span class="math inline">\(n &lt; m \cdot l\)</span>.</p>
+<p>Veamos que <span class="math inline">\(s &lt; m\)</span>. Supongamos por el absurdo que <span class="math inline">\(m \leq s\)</span>, entonces <span class="math inline">\(s=m+t\)</span> para cierto <span class="math inline">\(t \in \mathbb{N}\)</span>. Sustituyendo en la ecuación anterior, obtenemos que <span class="math display">\[n=m+m \cdot k + t = m \cdot S(k) + t = m \cdot l + t,\]</span> lo que implica que <span class="math inline">\(m \cdot S(k) \leq n\)</span>, lo cual es absurdo, ya que <span class="math inline">\(S(k)=l\)</span> donde <span class="math inline">\(l\)</span> es el elemento minimal de <span class="math inline">\(B\)</span>, luego <span class="math inline">\(l \in B\)</span> y por lo tanto <span class="math inline">\(n &lt; m \cdot l\)</span>.</p>
 <p><strong>Unicidad:</strong></p>
-<p>Supongamos que tenemos <span class="math inline">\(n=m \cdot k +s\)</span> y <span class="math inline">\(n=m \cdot l + t\)</span> con <span class="math inline">\(0 \leq s &lt; m\)</span> y <span class="math inline">\(0 \leq t &lt; m\)</span>. Supongamos por el absurdo que <span class="math inline">\(k \neq l\)</span>. Sin pérdida de generalidad, supongamos que <span class="math inline">\(k &lt; l\)</span>, luego <span class="math inline">\(l=k+u\)</span> para cierto <span class="math inline">\(u \in \mathbb{N} \setminus \{0\}\)</span>. Sustituyendo en la segunda ecuación, obtenemos que <span class="math display">\[n=m \cdot k + s = m \cdot (k+u) + t = m \cdot k + m \cdot u + t,\]</span> lo que implica que <span class="math inline">\(s=m \cdot u + t\)</span>. Como <span class="math inline">\(u \neq 0\)</span>, se tiene que <span class="math inline">\(m \cdot u \neq 0\)</span>, y por lo tanto, <span class="math inline">\(s &gt; t\)</span>, lo cual es absurdo ya que <span class="math inline">\(s &lt; m\)</span> y <span class="math inline">\(t &lt; m\)</span>.</p>
+<p>Para ver la unicidad, primero observemos que si <span class="math inline">\(n=m \cdot q + t\)</span> con <span class="math inline">\(t &lt; m\)</span>, entonces <span class="math inline">\(m \cdot S(q)\)</span> es un elemento minimal del conjunto <span class="math inline">\(B\)</span>.</p>
+<p>En efecto, <span class="math inline">\(n=m \cdot q +t &lt; m \cdot q + m = m \cdot S(q)\)</span>, lo que implica que <span class="math inline">\(m \cdot S(q) \in B\)</span>. Ahora, si <span class="math inline">\(m \cdot p \in B\)</span> entonces <span class="math inline">\(m \cdot q \leq m \cdot q + t =n &lt; m \cdot p\)</span> y por lo tanto <span class="math inline">\(q &lt; p\)</span>. De quí se sigue que <span class="math inline">\(S(q) \leq p\)</span>, de donde <span class="math inline">\(m \cdot S(q) \leq m \cdot p\)</span>.</p>
+<p>Supongamos que tenemos dos escrituras <span class="math inline">\(n=m \cdot k +s\)</span> y <span class="math inline">\(n= m \cdot q + t\)</span> con <span class="math inline">\(s,t &lt; m\)</span>. De lo anterior, <span class="math inline">\(m \cdot S(k)\)</span> y <span class="math inline">\(m \cdot S(q)\)</span> son elementos minimales del conjunto <span class="math inline">\(B\)</span>, y por lo tanto, <span class="math inline">\(m \cdot S(k)=m \cdot S(q)\)</span>. Como <span class="math inline">\(m \neq 0\)</span>, de la propiedad cancelativa del producto se sigue que <span class="math inline">\(S(k)=S(q)\)</span> y por la inyectividad de la función sucesor <span class="math inline">\(S\)</span>, <span class="math inline">\(k=q\)</span>.</p>
+<p>Tenemos entonces <span class="math inline">\(m \cdot k + s =n = m \cdot k + t\)</span>, y de la propiedad cancelativa de la suma, <span class="math inline">\(t=s\)</span>.</p>
+<p>Nuestro próximo objetivo es probar que todo número natural se puede escribir de manera única como una suma finita de elementos del conjunto <span class="math inline">\(\{0,1, \dots, 9\}\)</span> por potencias del número <span class="math inline">\(10\)</span>.</p>
+</section>
+<section id="ejercicio-2" class="level4">
+<h4 class="anchored" data-anchor-id="ejercicio-2">Ejercicio</h4>
+<ul>
+<li><p>Demuestre que si <span class="math inline">\(2 \leq m\)</span>, entonces <span class="math inline">\(S(n) \leq m \cdot n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>.</p></li>
+<li><p>Demuestre que si <span class="math inline">\(m \in \mathbb{N}\)</span> es tal que <span class="math inline">\(2 \leq m\)</span>, entonces para todo <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n &lt; m^{n}\)</span>.</p></li>
+</ul>
+<p><strong>Escritura en base <span class="math inline">\(10\)</span></strong></p>
+<p>Dado un número natural <span class="math inline">\(n\)</span>, con <span class="math inline">\(1 \leq n\)</span>, consideremos el conjunto <span class="math display">\[A=\{10^{k}~ :~ n &lt; 10^{k}\}\]</span>. Observe que este conjunto es no vacío ya que por el ejercicio anterior, al ser <span class="math inline">\(2 &lt; 10\)</span> se tiene que <span class="math inline">\(n &lt; 10^{n}\)</span>, y por lo tanto <span class="math inline">\(10^{n} \in A\)</span>.</p>
+<p>Por el principio del buen orden, existe un elemento minimal <span class="math inline">\(10^{k} \in A\)</span> con <span class="math inline">\(k \neq 0\)</span>. Por lo tanto, <span class="math inline">\(k=S(t)\)</span> para cierto <span class="math inline">\(t \in \mathbb{N}\)</span>. Note que <span class="math inline">\(10^{t} \notin A\)</span>, es decir, <span class="math inline">\(10^{t} &lt; n &lt; 10^{S(t)}=10^{k}\)</span>. Esto quiere decir que <span class="math inline">\(10^{t}\)</span> es la potencia más grande de <span class="math inline">\(10\)</span> que es menor que <span class="math inline">\(n\)</span>.</p>
+<p>Usando el algoritmo de la división tenemos que <span class="math inline">\(n=10^{t}q+r\)</span> con <span class="math inline">\(r &lt; 10^{t}\)</span>, donde observe que <span class="math inline">\(q \leq 9\)</span>, ya que si <span class="math inline">\(9 &lt; q\)</span> entonces <span class="math inline">\(10 \leq q\)</span> y por lo tanto <span class="math inline">\(q=10+a\)</span> para cierto <span class="math inline">\(a \in \mathbb{N}\)</span>, luego reemplazando, <span class="math inline">\(n=10^{t}(10+a)+r=10^{S(t)}+a10^{t}+r\)</span> lo que implica que <span class="math inline">\(10^{S(t)}=10^{k} \leq n\)</span>, absurdo.</p>
+<p><strong>Conclusión:</strong></p>
+<p>Todo <span class="math inline">\(n \in \mathbb{N}\)</span> con <span class="math inline">\(1 \leq n\)</span>, se puede expresar como: <span class="math display">\[n=10^{t_{1}}n_{1}+r_{1},\]</span> para cierto <span class="math inline">\(t_{1} \in \mathbb{N}\)</span>, con <span class="math inline">\(n_{1} \leq 9\)</span> y <span class="math inline">\(r_{1} &lt; 10^{t_{1}}\)</span>.</p>
+<p>Repetimos lo mismo con <span class="math inline">\(r_{1}\)</span> y obtenemos <span class="math display">\[r_{1}=10^{t_{2}}n_{2}+r_{2},\]</span> para cierto <span class="math inline">\(t_{2} \in \mathbb{N}\)</span>, <span class="math inline">\(t_{2} &lt; t_{1}\)</span>, <span class="math inline">\(n_{2} \leq 9\)</span> y <span class="math inline">\(r_{2}&lt;10^{t_{2}}\)</span>.</p>
 
 
 </section>
