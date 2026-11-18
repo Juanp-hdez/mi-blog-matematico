@@ -2581,14 +2581,14 @@ Para probar esto, fijemos un elemento arbitrario $n \in \mathbb{N}$ y considerem
 
 ### Inducción matemática
 
-El axioma de inducción que esta entre los axiomas de Peano utilizados para construir el conjunto $\mathbb{N}$, produce un método de demostración conocido con el nombre de **inducción matematica**. De manera más precisa, da un método de demostración para fórmulas que dependan de los números naturales. 
+El axioma de inducción que está entre los axiomas de Peano utilizados para construir el conjunto $\mathbb{N}$, produce un método de demostración conocido con el nombre de **inducción matematica**. De manera más precisa, da un método de demostración para fórmulas que dependan de los números naturales. 
 
 **Inducción matemática**
 
 Dada una fórmula $\phi(n)$ que dependa de $n \in \mathbb{N}$, si:
 
-* $\phi(k_{0})$ es cierta para cierto $k_{0} \in \mathbb{N}$ (paso inicial).
-* Para todo $k \geq k_{0}$, $\phi(k)$ cierta (hipótesis de inducción) implica $\phi(S(k))$ cierta.
+* $\phi(k_{0})$ es cierta para cierto $k_{0} \in \mathbb{N}$ (paso inicial)
+* Para todo $k \geq k_{0}$, $\phi(k)$ cierta (hipótesis de inducción) implica $\phi(S(k))$ cierta,
 
 Entonces $\phi(n)$ es cierta para todo $n \geq k_{0}$.
 
@@ -2618,7 +2618,17 @@ De la hipótesis de inducción se concluye que la fórmula $\phi(n)$ es cierta p
 
 #### Ejemplo
 
-Usemos la notación $1+2+ \cdot + n$ para denotar la suma de los números naturales que están entre $1$ y $n$
+Usemos la notación $1+ \cdot + n$ para denotar la suma de los números naturales que están entre $1$ y $n$.
+
+Probemos que para todo $n \in \mathbb{N}$ con $1 \leq n$, se tiene que $2 \cdot (1+ \cdots + n)=n \cdot S(n)$.
+
+Definamos la fórmula $\phi(n)=\{2 \cdot (1+ \cdots +n)=n \cdot S(n)\}$. 
+
+Verifiquemos el paso inicial: para $n=1$ se cumple claramente que $2 \cdot (1)=1 \cdot S(1)$.
+
+Supongamos ahora que $\phi(n)$ es cierta y veamos que $\phi(S(n))$ es cierta. En efecto, $$2 \cdot (1 + \cdots + S(n))= 2 \cdot ((1+ \cdots + n)+S(n))=2 \cdot (1+ \cdots + n) + 2 \cdot S(n)=n \cdot S(n)+ 2 \cdot S(n)=S(n) \cdot S(S(n)).$$
+
+La inducción matemática nos permite concluir que $\phi(n)$ es cierta para todo $n \geq 1$.
 
 ### Representación de los números naturales en base diez
 
