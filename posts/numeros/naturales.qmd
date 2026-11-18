@@ -1,5 +1,6 @@
 ---
 title: "Números"
+lang: es
 description: "Construyendo los números naturales, los números racionales y los números reales."
 author: "Juan Pablo Hernández Rodas"
 date: "2026-09-09"

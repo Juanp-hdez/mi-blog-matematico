@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Juan Pablo Hernández Rodas">
-<meta name="dcterms.date" content="2026-09-09">
 <meta name="description" content="Construyendo los números naturales, los números racionales y los números reales.">
 
 <title>Números – Calculo diferencial interactivo</title>
@@ -63,17 +62,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 <style>
@@ -129,8 +128,8 @@ window.Quarto = {
     <span class="navbar-title">Calculo diferencial interactivo</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -177,16 +176,16 @@ window.Quarto = {
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-heading">Autor/a</div>
       <div class="quarto-title-meta-contents">
                <p>Juan Pablo Hernández Rodas </p>
             </div>
     </div>
       
       <div>
-      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-heading">Fecha de publicación</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 9, 2026</p>
+        <p class="date">9 de septiembre de 2026</p>
       </div>
     </div>
     
@@ -2504,7 +2503,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="236078e6" class="cell" data-execution_count="1">
+<div id="a3b22f31" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2514,7 +2513,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="c92decd5" class="cell" data-execution_count="2">
+<div id="62c5f4db" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2541,7 +2540,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <img src="naturales_files/figure-html/fig-segmento-interrumpido-py-output-1.png" width="1280" height="378" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-segmento-interrumpido-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(n\)</span> y <span class="math inline">\(S(n)\)</span>.
+Figura&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(n\)</span> y <span class="math inline">\(S(n)\)</span>.
 </figcaption>
 </figure>
 </div>
@@ -2556,7 +2555,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>Antes de demostrar este principio, observemos que el conjunto <span class="math inline">\(\mathbb{N}\)</span> tiene un elemento minimal que es el <span class="math inline">\(0\)</span>.</p>
 <p>Demostremos el principio del buen orden. Supongamos por el absurdo que existe un subconjunto no vacío <span class="math inline">\(A \subseteq \mathbb{N}\)</span> que no tiene elemento minimal. Note que <span class="math inline">\(0 \notin A\)</span> ya que <span class="math inline">\(A\)</span> no tiene elemento minimal. Consideremos el conjunto <span class="math display">\[B=\{m \in \mathbb{N} : m &lt; n~ \textrm{para todo} ~n \in A\}\]</span>. Es claro que <span class="math inline">\(0 \in B\)</span>, y si <span class="math inline">\(n \in B\)</span> entonces <span class="math inline">\(S(n) \in B\)</span>, ya que como <span class="math inline">\(m &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span> entonces <span class="math inline">\(S(m) \leq n\)</span> para todo <span class="math inline">\(n \in A\)</span>, pero <span class="math inline">\(S(m) \notin A\)</span> puesto que <span class="math inline">\(A\)</span> no tiene elemento minimal, luego <span class="math inline">\(S(m) &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span>. Del principio de inducción se sigue que <span class="math inline">\(B=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(m &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span>, en particular, dado <span class="math inline">\(n \in A\)</span>, se tiene que <span class="math inline">\(n &lt; n\)</span>, lo cual es absurdo. Por lo tanto, todo subconjunto no vacío de <span class="math inline">\(\mathbb{N}\)</span> tiene un elemento minimal.</p>
 <div id="thm-vai" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (<span style="color: #e92121;">Variaciones del axioma de inducción</span>)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Teorema 1 (<span style="color: #e92121;">Variaciones del axioma de inducción</span>)</strong></span> &nbsp;</p>
 </div>
 <p><strong>Primera variación:</strong></p>
 <p>Supongamos que <span class="math inline">\(A\)</span> es un subconjunto del conjunto de los números naturales <span class="math inline">\(\mathbb{N}\)</span> que satisface:</p>
@@ -2752,7 +2751,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>Verifiquemos el paso inicial: para <span class="math inline">\(n=1\)</span> se cumple claramente que <span class="math inline">\(2 \cdot (1)=1 \cdot S(1)\)</span>.</p>
 <p>Supongamos ahora que <span class="math inline">\(\phi(n)\)</span> es cierta y veamos que <span class="math inline">\(\phi(S(n))\)</span> es cierta. En efecto, <span class="math display">\[2 \cdot (1 + \cdots + S(n))= 2 \cdot ((1+ \cdots + n)+S(n))=2 \cdot (1+ \cdots + n) + 2 \cdot S(n)=n \cdot S(n)+ 2 \cdot S(n)=S(n) \cdot S(S(n)).\]</span></p>
 <p>La inducción matemática nos permite concluir que <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq 1\)</span>.</p>
-<p>De <a href="#thm-vai" class="quarto-xref">Theorem&nbsp;1</a> se sigue la inducción matemática.</p>
+<p>De <a href="#thm-vai" class="quarto-xref">Teorema&nbsp;1</a> se sigue la inducción matemática.</p>
 </section>
 </section>
 <section id="representación-de-los-números-naturales-en-base-diez" class="level3">
@@ -2774,7 +2773,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <img src="naturales_files/figure-html/fig-euclides-recta-roja-py-output-1.png" width="1434" height="440" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-euclides-recta-roja-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: El conjunto <span class="math inline">\(B = \{mt \mid n &lt; mt\}\)</span> a la derecha de <span class="math inline">\(ml\)</span>, con <span class="math inline">\(ml = \min B\)</span> en rojo.
+Figura&nbsp;2: El conjunto <span class="math inline">\(B = \{mt \mid n &lt; mt\}\)</span> a la derecha de <span class="math inline">\(ml\)</span>, con <span class="math inline">\(ml = \min B\)</span> en rojo.
 </figcaption>
 </figure>
 </div>
@@ -2833,12 +2832,12 @@ Figure&nbsp;2: El conjunto <span class="math inline">\(B = \{mt \mid n &lt; mt\}
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiado");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiado");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

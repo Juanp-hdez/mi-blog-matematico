@@ -2318,7 +2318,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <img src="https://latex.codecogs.com/png.latex?0%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">, y que si <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%3C%20S(m)">.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="236078e6" class="cell" data-execution_count="1">
+<div id="a3b22f31" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2328,7 +2328,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="c92decd5" class="cell" data-execution_count="2">
+<div id="62c5f4db" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2355,7 +2355,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <img src="https://your-website-url.example.com/posts/numeros/naturales_files/figure-html/fig-segmento-interrumpido-py-output-1.png" width="1280" height="378" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-segmento-interrumpido-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.codecogs.com/png.latex?n"> y <img src="https://latex.codecogs.com/png.latex?S(n)">.
+Figura&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.codecogs.com/png.latex?n"> y <img src="https://latex.codecogs.com/png.latex?S(n)">.
 </figcaption>
 </figure>
 </div>
@@ -2370,7 +2370,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 <p>Antes de demostrar este principio, observemos que el conjunto <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> tiene un elemento minimal que es el <img src="https://latex.codecogs.com/png.latex?0">.</p>
 <p>Demostremos el principio del buen orden. Supongamos por el absurdo que existe un subconjunto no vacío <img src="https://latex.codecogs.com/png.latex?A%20%5Csubseteq%20%5Cmathbb%7BN%7D"> que no tiene elemento minimal. Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cnotin%20A"> ya que <img src="https://latex.codecogs.com/png.latex?A"> no tiene elemento minimal. Consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?B=%5C%7Bm%20%5Cin%20%5Cmathbb%7BN%7D%20:%20m%20%3C%20n~%20%5Ctextrm%7Bpara%20todo%7D%20~n%20%5Cin%20A%5C%7D">. Es claro que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20B">, y si <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20B"> entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%5Cin%20B">, ya que como <img src="https://latex.codecogs.com/png.latex?m%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A"> entonces <img src="https://latex.codecogs.com/png.latex?S(m)%20%5Cleq%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A">, pero <img src="https://latex.codecogs.com/png.latex?S(m)%20%5Cnotin%20A"> puesto que <img src="https://latex.codecogs.com/png.latex?A"> no tiene elemento minimal, luego <img src="https://latex.codecogs.com/png.latex?S(m)%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A">. Del principio de inducción se sigue que <img src="https://latex.codecogs.com/png.latex?B=%5Cmathbb%7BN%7D">, y por lo tanto, para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?m%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A">, en particular, dado <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A">, se tiene que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20n">, lo cual es absurdo. Por lo tanto, todo subconjunto no vacío de <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> tiene un elemento minimal.</p>
 <div id="thm-vai" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (<span style="color: #e92121;">Variaciones del axioma de inducción</span>)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Teorema 1 (<span style="color: #e92121;">Variaciones del axioma de inducción</span>)</strong></span> &nbsp;</p>
 </div>
 <p><strong>Primera variación:</strong></p>
 <p>Supongamos que <img src="https://latex.codecogs.com/png.latex?A"> es un subconjunto del conjunto de los números naturales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> que satisface:</p>
@@ -2566,7 +2566,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 <p>Verifiquemos el paso inicial: para <img src="https://latex.codecogs.com/png.latex?n=1"> se cumple claramente que <img src="https://latex.codecogs.com/png.latex?2%20%5Ccdot%20(1)=1%20%5Ccdot%20S(1)">.</p>
 <p>Supongamos ahora que <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> es cierta y veamos que <img src="https://latex.codecogs.com/png.latex?%5Cphi(S(n))"> es cierta. En efecto, <img src="https://latex.codecogs.com/png.latex?2%20%5Ccdot%20(1%20+%20%5Ccdots%20+%20S(n))=%202%20%5Ccdot%20((1+%20%5Ccdots%20+%20n)+S(n))=2%20%5Ccdot%20(1+%20%5Ccdots%20+%20n)%20+%202%20%5Ccdot%20S(n)=n%20%5Ccdot%20S(n)+%202%20%5Ccdot%20S(n)=S(n)%20%5Ccdot%20S(S(n))."></p>
 <p>La inducción matemática nos permite concluir que <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> es cierta para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%201">.</p>
-<p>De Theorem&nbsp;1 se sigue la inducción matemática.</p>
+<p>De Teorema&nbsp;1 se sigue la inducción matemática.</p>
 </section>
 </section>
 <section id="representación-de-los-números-naturales-en-base-diez" class="level3">
@@ -2588,7 +2588,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 <img src="https://your-website-url.example.com/posts/numeros/naturales_files/figure-html/fig-euclides-recta-roja-py-output-1.png" width="1434" height="440" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-euclides-recta-roja-py-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: El conjunto <img src="https://latex.codecogs.com/png.latex?B%20=%20%5C%7Bmt%20%5Cmid%20n%20%3C%20mt%5C%7D"> a la derecha de <img src="https://latex.codecogs.com/png.latex?ml">, con <img src="https://latex.codecogs.com/png.latex?ml%20=%20%5Cmin%20B"> en rojo.
+Figura&nbsp;2: El conjunto <img src="https://latex.codecogs.com/png.latex?B%20=%20%5C%7Bmt%20%5Cmid%20n%20%3C%20mt%5C%7D"> a la derecha de <img src="https://latex.codecogs.com/png.latex?ml">, con <img src="https://latex.codecogs.com/png.latex?ml%20=%20%5Cmin%20B"> en rojo.
 </figcaption>
 </figure>
 </div>
