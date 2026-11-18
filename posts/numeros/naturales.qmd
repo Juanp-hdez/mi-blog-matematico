@@ -2557,10 +2557,10 @@ Si $k_{0}$ es el elemento minimal de $A$, entonces $A=\{n \in \mathbb{N}~ :~ n \
 </div>
  ```
 
-Lo anterior es una consecuencia inmediata del axioma de inducción, ya que si consideramos $B=A \bigcup \{n \in \mathbb{N}~ :~ n < k_{0}\}$ entonces el conjunto $B$ cumple las hipótesis del axioma de inducción:
+Lo anterior es una consecuencia inmediata del axioma de inducción, ya que si consideramos $$B=A \bigcup \{n \in \mathbb{N}~ :~ n < k_{0}\},$$ entonces el conjunto $B$ cumple las hipótesis del axioma de inducción:
 
 * $0 \in B$.
-* Si $m \in B$ entonces $S(m) \in B$: esto ya que si $m \in A$ y $m \geq k_{0}$ entonces $S(m) \in A \subseteq B, y si $m < k_{0}$ se tiene que $S(m) \leq k_{0}$, y por lo tanto $S(m)=k_{0} \in A \subseteq B$ o $S(m) \in \{n \in \mathbb{N}~ :~ n < k_{0}\} \subseteq B$.
+* Si $m \in B$ entonces $S(m) \in B$: esto ya que si $m \in A$ y $m \geq k_{0}$ entonces $S(m) \in A \subseteq B$, y si $m < k_{0}$ se tiene que $S(m) \leq k_{0}$, y por lo tanto $S(m)=k_{0} \in A \subseteq B$ o $S(m) \in \{n \in \mathbb{N}~ :~ n < k_{0}\} \subseteq B$.
 
 Por lo tanto, $B=\mathbb{N}$, es decir, $A \bigcup \{n \in \mathbb{N}~ :~ n \leq k_{0}\}=\mathbb{N}$. 
 De lo anterior, si tenemos $n \in \mathbb{N}$ tal que $n \geq k_{0}$, entonces $n \in A \bigcup \{n \in \mathbb{N}~ :~ n \leq k_{0}\}$, pero $n \notin \{n \in \mathbb{N}~ :~ n \leq k_{0}\}$ y por tanto $n \in A$.
@@ -2576,7 +2576,11 @@ Supongamos que $A$ es un subconjunto de $\mathbb{N}$ que satisface:
 
 Entonces $\{n \in \mathbb{N} ~:~ n \geq k_{0}\} \subseteq A$. Si $k_{0}$ es el elemento minimal de $A$, entonces $\{n \in \mathbb{N} ~:~ n \geq k_{0}\}=A$.
 
-Para demostrar esto, veamos que la segunda variación implica la primera. 
+Para demostrar esto, denotemos para cada $n,m \in \mathbb{N}$ con $n \leq m$, $[n,m]=\{k \in \mathbb{N} ~:~ n \leq k \leq m\}$ y consideremos el conjunto $$B=\{n \geq k_{0} ~:~ [k_{0},n] \subseteq A\}.$$
+Observemos que $k_{0} \in B$ ya que $[k_{0},k_{0}]=\{k_{0}\} \subseteq A$.
+Ahora, si $n \in B$ entonces $[k_{0},n] \subseteq A$, pero por hipótesis esto implica que $S(n) \in A$, luego $[k_{0},S(n)]=[k_{0},n] \bigcup \{S(n)\} \subseteq A$, es decir, $S(n) \in B$.
+De la primera variación tenemos que $\{n \in \mathbb{N}~ :~ n \geq k_{0}\} \subseteq B$. 
+Por lo tanto, para todo $n \geq k_{0}$ se tiene que $[k_{0},n] \subseteq A$, en particular, $n \in A$. Esto muestra que $\{n \in \mathbb{N} ~:~ n \geq k_{0}\} \subseteq A$.
 
 
 #### [Producto de números naturales]{style="color: #e92121;"}
