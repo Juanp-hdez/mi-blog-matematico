@@ -2496,7 +2496,9 @@ Antes de demostrar este principio, observemos que el conjunto $\mathbb{N}$ tiene
 
 Demostremos el principio del buen orden. Supongamos por el absurdo que existe un subconjunto no vacío $A \subseteq \mathbb{N}$ que no tiene elemento minimal. Note que $0 \notin A$ ya que $A$ no tiene elemento minimal. Consideremos el conjunto $$B=\{m \in \mathbb{N} : m < n~ \textrm{para todo} ~n \in A\}$$. Es claro que $0 \in B$, y si $n \in B$ entonces $S(n) \in B$, ya que como $m < n$ para todo $n \in A$ entonces $S(m) \leq n$ para todo $n \in A$, pero $S(m) \notin A$ puesto que $A$ no tiene elemento minimal, luego $S(m) < n$ para todo $n \in A$. Del principio de inducción se sigue que $B=\mathbb{N}$, y por lo tanto, para todo $m \in \mathbb{N}$ se tiene que $m < n$ para todo $n \in A$, en particular, dado $n \in A$, se tiene que $n < n$, lo cual es absurdo. Por lo tanto, todo subconjunto no vacío de $\mathbb{N}$ tiene un elemento minimal.
 
-#### [Variación del axioma de inducción]{style="color: #e92121;"}
+#### [Variaciones del axioma de inducción]{style="color: #e92121;"}
+
+**Primera variación:**
 
 Supongamos que $A$ es un subconjunto del conjunto de los números naturales $\mathbb{N}$ que satisface:
 
@@ -2554,6 +2556,28 @@ Si $k_{0}$ es el elemento minimal de $A$, entonces $A=\{n \in \mathbb{N}~ :~ n \
 </svg>
 </div>
  ```
+
+Lo anterior es una consecuencia inmediata del axioma de inducción, ya que si consideramos $B=A \bigcup \{n \in \mathbb{N}~ :~ n < k_{0}\}$ entonces el conjunto $B$ cumple las hipótesis del axioma de inducción:
+
+* $0 \in B$.
+* Si $m \in B$ entonces $S(m) \in B$: esto ya que si $m \in A$ y $m \geq k_{0}$ entonces $S(m) \in A \subseteq B, y si $m < k_{0}$ se tiene que $S(m) \leq k_{0}$, y por lo tanto $S(m)=k_{0} \in A \subseteq B$ o $S(m) \in \{n \in \mathbb{N}~ :~ n < k_{0}\} \subseteq B$.
+
+Por lo tanto, $B=\mathbb{N}$, es decir, $A \bigcup \{n \in \mathbb{N}~ :~ n \leq k_{0}\}=\mathbb{N}$. 
+De lo anterior, si tenemos $n \in \mathbb{N}$ tal que $n \geq k_{0}$, entonces $n \in A \bigcup \{n \in \mathbb{N}~ :~ n \leq k_{0}\}$, pero $n \notin \{n \in \mathbb{N}~ :~ n \leq k_{0}\}$ y por tanto $n \in A$.
+
+Así concluimos que $\{n \in \mathbb{N}~ :~ n \leq k_{0}\} \subseteq A$.
+
+**Segunda variación:**
+
+Supongamos que $A$ es un subconjunto de $\mathbb{N}$ que satisface:
+
+* $k_{0} \in A$.
+* Para todo $n \geq k_{0}$, $\{k \in \mathbb{N} ~ :~ k_{0} \leq k \leq n\} \subseteq A$ implica $S(n) \in A$.
+
+Entonces $\{n \in \mathbb{N} ~:~ n \geq k_{0}\} \subseteq A$. Si $k_{0}$ es el elemento minimal de $A$, entonces $\{n \in \mathbb{N} ~:~ n \geq k_{0}\}=A$.
+
+Para demostrar esto, veamos que la segunda variación implica la primera. 
+
 
 #### [Producto de números naturales]{style="color: #e92121;"}
 
