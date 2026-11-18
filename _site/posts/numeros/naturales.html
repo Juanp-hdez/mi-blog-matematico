@@ -2493,7 +2493,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="0763841d" class="cell" data-execution_count="1">
+<div id="6182f7e3" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2503,7 +2503,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="01f1c39a" class="cell" data-execution_count="2">
+<div id="e28c9152" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2637,12 +2637,12 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </section>
 <section id="inducción-matemática" class="level3">
 <h3 class="anchored" data-anchor-id="inducción-matemática">Inducción matemática</h3>
-<p>El axioma de inducción que esta entre los axiomas de Peano utilizados para construir el conjunto <span class="math inline">\(\mathbb{N}\)</span>, produce un método de demostración conocido con el nombre de <strong>inducción matematica</strong>. De manera más precisa, da un método de demostración para fórmulas que dependan de los números naturales.</p>
+<p>El axioma de inducción que está entre los axiomas de Peano utilizados para construir el conjunto <span class="math inline">\(\mathbb{N}\)</span>, produce un método de demostración conocido con el nombre de <strong>inducción matematica</strong>. De manera más precisa, da un método de demostración para fórmulas que dependan de los números naturales.</p>
 <p><strong>Inducción matemática</strong></p>
 <p>Dada una fórmula <span class="math inline">\(\phi(n)\)</span> que dependa de <span class="math inline">\(n \in \mathbb{N}\)</span>, si:</p>
 <ul>
-<li><span class="math inline">\(\phi(k_{0})\)</span> es cierta para cierto <span class="math inline">\(k_{0} \in \mathbb{N}\)</span> (paso inicial).</li>
-<li>Para todo <span class="math inline">\(k \geq k_{0}\)</span>, <span class="math inline">\(\phi(k)\)</span> cierta (hipótesis de inducción) implica <span class="math inline">\(\phi(S(k))\)</span> cierta.</li>
+<li><span class="math inline">\(\phi(k_{0})\)</span> es cierta para cierto <span class="math inline">\(k_{0} \in \mathbb{N}\)</span> (paso inicial)</li>
+<li>Para todo <span class="math inline">\(k \geq k_{0}\)</span>, <span class="math inline">\(\phi(k)\)</span> cierta (hipótesis de inducción) implica <span class="math inline">\(\phi(S(k))\)</span> cierta,</li>
 </ul>
 <p>Entonces <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq k_{0}\)</span>.</p>
 <section id="ejemplo" class="level4">
@@ -2663,7 +2663,12 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </section>
 <section id="ejemplo-2" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-2">Ejemplo</h4>
-<p>Usemos la notación <span class="math inline">\(1+2+ \cdot + n\)</span> para denotar la suma de los números naturales que están entre <span class="math inline">\(1\)</span> y <span class="math inline">\(n\)</span></p>
+<p>Usemos la notación <span class="math inline">\(1+ \cdot + n\)</span> para denotar la suma de los números naturales que están entre <span class="math inline">\(1\)</span> y <span class="math inline">\(n\)</span>.</p>
+<p>Probemos que para todo <span class="math inline">\(n \in \mathbb{N}\)</span> con <span class="math inline">\(1 \leq n\)</span>, se tiene que <span class="math inline">\(2 \cdot (1+ \cdots + n)=n \cdot S(n)\)</span>.</p>
+<p>Definamos la fórmula <span class="math inline">\(\phi(n)=\{2 \cdot (1+ \cdots +n)=n \cdot S(n)\}\)</span>.</p>
+<p>Verifiquemos el paso inicial: para <span class="math inline">\(n=1\)</span> se cumple claramente que <span class="math inline">\(2 \cdot (1)=1 \cdot S(1)\)</span>.</p>
+<p>Supongamos ahora que <span class="math inline">\(\phi(n)\)</span> es cierta y veamos que <span class="math inline">\(\phi(S(n))\)</span> es cierta. En efecto, <span class="math display">\[2 \cdot (1 + \cdots + S(n))= 2 \cdot ((1+ \cdots + n)+S(n))=2 \cdot (1+ \cdots + n) + 2 \cdot S(n)=n \cdot S(n)+ 2 \cdot S(n)=S(n) \cdot S(S(n)).\]</span></p>
+<p>La inducción matemática nos permite concluir que <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq 1\)</span>.</p>
 </section>
 </section>
 <section id="representación-de-los-números-naturales-en-base-diez" class="level3">
