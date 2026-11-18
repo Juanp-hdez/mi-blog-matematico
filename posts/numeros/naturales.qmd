@@ -4,7 +4,18 @@ description: "Construyendo los números naturales, los números racionales y los
 author: "Juan Pablo Hernández Rodas"
 date: "2026-09-09"
 categories: [Cálculo, Interactivo]
-format: html
+format: 
+  html:
+    include-in-header:
+      text: |
+        <style>
+          .title {
+            color: #c0392b; /* Título principal */
+          }
+          h1, h2, h3 {
+            color: #1f618d; /* Títulos de sección */
+          }
+        </style>
 ---
 
 Todo el cálculo diferencial se desarrolla sobre el conjunto de los números reales $\mathbb{R}$. Las propiedades que definen este conjunto, son las que permiten definir formalmente el concepto de límite, que es la idea central para el desarrollo del cálculo diferencial.
@@ -2618,7 +2629,7 @@ De la hipótesis de inducción se concluye que la fórmula $\phi(n)$ es cierta p
 
 #### Ejemplo
 
-Usemos la notación $1+ \cdot + n$ para denotar la suma de los números naturales que están entre $1$ y $n$.
+Usemos la notación $1+ \cdots + n$ para denotar la suma de los números naturales que están entre $1$ y $n$.
 
 Probemos que para todo $n \in \mathbb{N}$ con $1 \leq n$, se tiene que $2 \cdot (1+ \cdots + n)=n \cdot S(n)$.
 
