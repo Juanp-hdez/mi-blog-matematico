@@ -207,11 +207,11 @@ window.Quarto = {
 
 <p>Todo el cálculo diferencial se desarrolla sobre el conjunto de los números reales <span class="math inline">\(\mathbb{R}\)</span>. Las propiedades que definen este conjunto, son las que permiten definir formalmente el concepto de límite, que es la idea central para el desarrollo del cálculo diferencial.</p>
 <section id="los-números-naturales-mathbbn" class="level2">
-<h2 class="anchored" data-anchor-id="los-números-naturales-mathbbn"><span style="color: #1e8449;">Los números naturales <span class="math inline">\(\mathbb{N}\)</span></span></h2>
+<h2 class="anchored" data-anchor-id="los-números-naturales-mathbbn"><span style="color: #2158c7;">Los números naturales <span class="math inline">\(\mathbb{N}\)</span></span></h2>
 <p>La construcción de los números naturales <span class="math inline">\(\mathbb{N}\)</span> es el paso inicial en la construcción de los números reales. Los naturales son el conjunto que usamos para contar, que generalmente escribimos como <span class="math inline">\(\mathbb{N}=\{1,2, \dots, n, \dots\}\)</span>. A pesar de que estamos muy acostumbrados a usar el conjunto de los números naturales, para tener una formalización matemática de este conjunto, tocó esperar hasta el siglo XIX, cuando en el año 1889, el matemático italiano Giuseppe Peano introdujo un conjunto de axiomas conocidos como los <strong>Axiomas de Peano</strong>. Existen otras construcciones de los números naturales, como por ejemplo la construcción a partir de la teoría de conjuntos, desarrollada por Ernst Zermelo y Abraham Fraenkel.</p>
 <p>Antes de introducir los axiomas de Peano, definamos el concepto de función.</p>
 <section id="funciones" class="level3">
-<h3 class="anchored" data-anchor-id="funciones">Funciones</h3>
+<h3 class="anchored" data-anchor-id="funciones"><span style="color: #1e8449;">Funciones</span></h3>
 <p>De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida <span class="math inline">\(A\)</span> y un conjunto de llegada <span class="math inline">\(B\)</span>, que a cada elemento del conjunto <span class="math inline">\(A\)</span> le asigna un único elemento del conjunto <span class="math inline">\(B\)</span>.</p>
 <p>Una manera de representar las funciones es mediante un diagrama de flechas, como muestra la siguiente figura:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -228,7 +228,7 @@ window.Quarto = {
 </figure>
 </div>
 <section id="ejemplo-de-función" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-de-función">Ejemplo de función</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-de-función"><span style="color: #e92121;">Ejemplo de función</span></h4>
 <p>Consideremos un conjunto con tres elementos <span class="math inline">\(A=\{a, b, c\}\)</span> y un conjunto con cinco elementos <span class="math inline">\(B=\{x,y,z,w,v\}\)</span>. La asignación <span class="math inline">\(a \mapsto z\)</span>, <span class="math inline">\(b \mapsto v\)</span> y <span class="math inline">\(c \mapsto z\)</span> es un ejemplo de una función <span class="math inline">\(f\)</span> representada gráficamente como:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -238,7 +238,7 @@ window.Quarto = {
 </div>
 </section>
 <section id="ejemplo-de-alguien-que-no-es-una-función" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-de-alguien-que-no-es-una-función">Ejemplo de alguien que no es una función</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-de-alguien-que-no-es-una-función"><span style="color: #e92121;">Ejemplo de alguien que no es una función</span></h4>
 <p>Con los mismos conjuntos del ejemplo anterior, la figura</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -249,7 +249,7 @@ window.Quarto = {
 <p>no representa una función, ya que al elemento <span class="math inline">\(b\)</span> <strong>no</strong> se le está asignando un único elemento del conjunto <span class="math inline">\(B\)</span>, sino que se le están asignando dos elementos distintos, <span class="math inline">\(v\)</span> y <span class="math inline">\(w\)</span>.</p>
 </section>
 <section id="definición-formal-de-función" class="level4">
-<h4 class="anchored" data-anchor-id="definición-formal-de-función">Definición formal de función</h4>
+<h4 class="anchored" data-anchor-id="definición-formal-de-función"><span style="color: #e92121;">Definición formal de función</span></h4>
 <p>Recordemos que si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son dos conjuntos, el producto cartesiano <span class="math inline">\(A \times B\)</span> se define como <span class="math display">\[A \times B = \{(a,b) : a \in A, b \in B\}.\]</span></p>
 <p>De manera formal, una función de un conjunto <span class="math inline">\(A\)</span> a un conjunto <span class="math inline">\(B\)</span>, es un subconjunto <span class="math inline">\(F \subseteq A \times B\)</span> tal que:</p>
 <ol type="1">
@@ -259,7 +259,7 @@ window.Quarto = {
 <p>Veamos que esta definición formal coincide con la noción informal anterior. Si <span class="math inline">\(F \subseteq A \times B\)</span> es una función, la condición <span class="math inline">\((a,b) \in F\)</span> la vamos a escribir como <span class="math inline">\(b=f(a)\)</span>, y a la función <span class="math inline">\(F \subseteq A \times B\)</span> la representaremos por <span class="math inline">\(f: A \rightarrow B\)</span>. Con esta notación, 1) se convierte en: para todo <span class="math inline">\(a \in A\)</span> existe <span class="math inline">\(b \in B\)</span> tal que <span class="math inline">\(b=f(a)\)</span>, es decir, a cada elemento de <span class="math inline">\(A\)</span> le corresponde un elemento de <span class="math inline">\(B\)</span>, y la condición 2) se traduce en: si <span class="math inline">\(f(a)=b\)</span> y <span class="math inline">\(f(a)=c\)</span> entonces <span class="math inline">\(b=c\)</span>, lo que garantiza que a cada elemento de <span class="math inline">\(A\)</span> le corresponde un único elemento de <span class="math inline">\(B\)</span>.</p>
 </section>
 <section id="ejemplo-interactivo-de-función" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función">Ejemplo interactivo de función</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función"><span style="color: #e92121;">Ejemplo interactivo de función</span></h4>
 <p>En el siguiente ejemplo interactivo, al decidir la asignación de flechas que a cada elemento del conjunto <span class="math inline">\(A\)</span> lo apareja con un único elemento del conjunto <span class="math inline">\(B\)</span>, se está construyendo una función <span class="math inline">\(f: A \rightarrow B\)</span>, que en la parte de abajo es representada de manera formal como un subconjunto de <span class="math inline">\(A \times B\)</span>.</p>
 <div id="interactivo-funcion">
 <div style="font-family: sans-serif; max-width: 500px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
@@ -384,11 +384,11 @@ dibujarSVG();
 </div>
 </section>
 <section id="notación-para-las-funciones" class="level4">
-<h4 class="anchored" data-anchor-id="notación-para-las-funciones">Notación para las funciones</h4>
+<h4 class="anchored" data-anchor-id="notación-para-las-funciones"><span style="color: #e92121;">Notación para las funciones</span></h4>
 <p>De ahora en adelante, denotaremos a una función <span class="math inline">\(F \subseteq A \times B\)</span> como <span class="math inline">\(f: A \rightarrow B\)</span> donde para cada <span class="math inline">\(a \in A\)</span> denotaremos por <span class="math inline">\(f(a)\)</span> al único elemento del conjunto <span class="math inline">\(B\)</span> tal que <span class="math inline">\((a,f(a)) \in F\)</span>. El conjunto <span class="math inline">\(A\)</span> recibe el nombre de conjunto de salida o dominio de la función <span class="math inline">\(f\)</span>, y el conjunto <span class="math inline">\(B\)</span> recibe el nombre de conjunto de llegada o codominio de la función <span class="math inline">\(f\)</span>.</p>
 </section>
 <section id="otros-ejemplos-de-funciones" class="level4">
-<h4 class="anchored" data-anchor-id="otros-ejemplos-de-funciones">Otros ejemplos de funciones</h4>
+<h4 class="anchored" data-anchor-id="otros-ejemplos-de-funciones"><span style="color: #e92121;">Otros ejemplos de funciones</span></h4>
 <ol type="1">
 <li><p>Supongamos que <span class="math inline">\(A \subseteq B\)</span> es un subconjunto. Definimos la función <strong>inclusión</strong> <span class="math inline">\(i: A \rightarrow B\)</span>, como la función que a cada elemento <span class="math inline">\(a \in A\)</span> le asigna el mismo elemento <span class="math inline">\(a \in B\)</span>, es decir, <span class="math inline">\(i(a)=a\)</span> para todo <span class="math inline">\(a \in A\)</span>. Si vemos esta función como un subconjunto de <span class="math inline">\(A \times B\)</span>, tenemos que el subconjunto correspondiente es <span class="math inline">\(\{(a,a): a \in A\} \subseteq A \times B\)</span>, que claramente satisface las dos condiciones de la definición formal de función.</p></li>
 <li><p>Supongamos que tenemos dos conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>. Definimos las funciones proyecciones <span class="math inline">\(\pi_{1}: A \times B \rightarrow A\)</span> y <span class="math inline">\(\pi_{2}: A \times B \rightarrow B\)</span> como <span class="math inline">\(\pi_{1}(a,b)=a\)</span> y <span class="math inline">\(\pi_{2}(a,b)=b\)</span> para todo <span class="math inline">\((a,b) \in A \times B\)</span>. Los respectivos conjuntos correspondientes a estas funciones son <span class="math display">\[\{((a,b),a): (a,b) \in A \times B\} \subseteq (A \times B) \times A\]</span> y <span class="math display">\[\{((a,b),b): (a,b) \in A \times B\} \subseteq (A \times B) \times B,\]</span> que satisfacen las dos condiciones de la definición formal de función.</p></li>
@@ -446,15 +446,15 @@ dibujarSVG();
 </div>
 </section>
 <section id="cuándo-dos-funciones-son-iguales" class="level4">
-<h4 class="anchored" data-anchor-id="cuándo-dos-funciones-son-iguales">¿Cuándo dos funciones son iguales?</h4>
+<h4 class="anchored" data-anchor-id="cuándo-dos-funciones-son-iguales"><span style="color: #e92121;">¿Cuándo dos funciones son iguales?</span></h4>
 <p>Formalmente, dos funciones de <span class="math inline">\(A\)</span> a <span class="math inline">\(B\)</span> son iguales, si definen el mismo subconjunto de <span class="math inline">\(A \times B\)</span>. Con nuestra nueva notación, dos funciones <span class="math inline">\(f: A \rightarrow B\)</span> y <span class="math inline">\(g: C \rightarrow D\)</span> son iguales, si <span class="math inline">\(A=C\)</span>, <span class="math inline">\(B=D\)</span> y <span class="math inline">\(f(a)=g(a)\)</span> para todo <span class="math inline">\(a \in A\)</span>.</p>
 </section>
 <section id="pregunta" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta"><span style="color: #e92121;">Pregunta</span></h4>
 <p>En <a href="#interactivo-funcion">ejemplo interactivo de función</a>, ¿cuántas funciones distintas se pueden construir?</p>
 </section>
 <section id="funciones-sobreyectivas-e-inyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="funciones-sobreyectivas-e-inyectivas">Funciones sobreyectivas e inyectivas</h4>
+<h4 class="anchored" data-anchor-id="funciones-sobreyectivas-e-inyectivas"><span style="color: #e92121;">Funciones sobreyectivas e inyectivas</span></h4>
 <p>Observe que en la definición de función <span class="math inline">\(f:A \rightarrow B\)</span>, se permite que elementos del conjunto <span class="math inline">\(B\)</span> no estén relacionados con ningún elemento del conjunto <span class="math inline">\(A\)</span>, es decir, puede existir un elemento <span class="math inline">\(b \in B\)</span> para el cual no existe ningún <span class="math inline">\(a \in A\)</span> tal que <span class="math inline">\(b=f(a)\)</span>, o de manera equivalente, tal que <span class="math inline">\((a,b) \notin F \subseteq A \times B\)</span>.</p>
 <p>Por ejemplo, en la función</p>
 <div class="quarto-figure quarto-figure-center">
@@ -475,7 +475,7 @@ dibujarSVG();
 <p>es sobreyectiva, ya que todos los elementos del conjunto <span class="math inline">\(B\)</span> están relacionados con algún elemento del conjunto <span class="math inline">\(A\)</span>.</p>
 </section>
 <section id="pregunta-1" class="level4">
-<h4 class="anchored">Pregunta</h4>
+<h4 class="anchored"><span style="color: #e92121;">Pregunta</span></h4>
 <p>¿Es posible construir una función sobreyectiva <span class="math inline">\(f: \{a,b,c\} \rightarrow \{x,y,z,w\}\)</span>?</p>
 <p>Esta pregunta es equivalente al siguiente problema:</p>
 <div id="interactivo-principio-del-palomar">
@@ -690,7 +690,7 @@ render();
 <p>El problema anterior es un ejemplo del <strong>Principio del Palomar</strong>, que establece que si hay más palomas que huecos en el palomar y se quieren guardar todas las palomas en los huecos, obligatoriamente en alguno de los huecos del palomar se tendrán que ubicar por lo menos dos palomas.</p>
 </section>
 <section id="ejemplos-de-funciones-sobreyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-sobreyectivas">Ejemplos de funciones sobreyectivas</h4>
+<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-sobreyectivas"><span style="color: #e92121;">Ejemplos de funciones sobreyectivas</span></h4>
 <ol type="1">
 <li><p>Si <span class="math inline">\(A\)</span> es un conjunto, definimos la función identidad <span class="math inline">\(\textrm{id}_{A}: A \rightarrow A\)</span> que a cada elemento <span class="math inline">\(a \in A\)</span> le asigna el mismo elemento <span class="math inline">\(a \in A\)</span>, es decir, <span class="math inline">\(\textrm{id}_{A}(a)=a\)</span>. Esta función como subconjunto de <span class="math inline">\(A \times A\)</span> corresponde a <span class="math inline">\(F=\{(a,a)~ :~ a \in A\}\)</span>. Esta función es claramente sobreyectiva, ya que todo elemento del conjunto de llegada <span class="math inline">\(a \in A\)</span> está relacionado con el mismo elemento <span class="math inline">\(a \in A\)</span> del conjunto de salida.</p></li>
 <li><p>Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son conjuntos, las funciones proyecciones <span class="math inline">\(\pi_{1}: A \times B \rightarrow A\)</span> y <span class="math inline">\(\pi_{2}: A \times B \rightarrow B\)</span> definidas como <span class="math inline">\(\pi_{1}(a,b)=a\)</span> y <span class="math inline">\(\pi_{2}(a,b)=b\)</span> para todo <span class="math inline">\((a,b) \in A \times B\)</span>, son sobreyectivas. Como se puede ver en el siguiente gráfico, un elemento <span class="math inline">\(a \in A\)</span> está relacionado con todos los elementos de la linea roja vertical continua por medio de la función <span class="math inline">\(\pi_{1}\)</span>, y un elemento <span class="math inline">\(b \in B\)</span> está relacionado con todos los elementos de la linea azul horizontal continua por medio de la función <span class="math inline">\(\pi_{2}\)</span>.</p></li>
@@ -750,7 +750,7 @@ render();
 </div>
 </section>
 <section id="ejemplo-interactivo-de-función-sobreyectiva" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-sobreyectiva">Ejemplo interactivo de función sobreyectiva</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-sobreyectiva"><span style="color: #e92121;">Ejemplo interactivo de función sobreyectiva</span></h4>
 <div id="construyendo-funcion-sobreyectiva">
 <div id="app-sobreyectiva-v3" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
   <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
@@ -916,14 +916,14 @@ render();
 </div>
 </section>
 <section id="pregunta-2" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta-2">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta-2"><span style="color: #e92121;">Pregunta</span></h4>
 <p>¿Cuántas funciones sobreyectivas distintas se pueden construir en <a href="#construyendo-funcion-sobreyectiva">Construyendo una función sobreyectiva</a> ?</p>
 <p><strong>Ayuda:</strong> Encuentre cuántas funciones que no sean sobreyectivas se pueden construir y réstelas del total de funciones posibles.</p>
 <p><strong>Imagen de una función:</strong> Dada una función <span class="math inline">\(f:A \rightarrow B\)</span> definimos su imagen que denotaremos <span class="math inline">\(\textrm{im}(f) \subseteq B\)</span> como el conjunto de todos los elementos de <span class="math inline">\(B\)</span> que están relacionados con algún elemento de <span class="math inline">\(A\)</span>, es decir, <span class="math inline">\(\textrm{im}(f)=\{b \in B~ :~ \textrm{existe}~ a \in A~ \textrm{con}~ f(a)=b\}\)</span>.</p>
 <p>Una función <span class="math inline">\(f: A \rightarrow B\)</span> es sobreyectiva si y solo si <span class="math inline">\(\textrm{im}(f)=B\)</span>.</p>
 </section>
 <section id="funciones-inyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="funciones-inyectivas">Funciones inyectivas</h4>
+<h4 class="anchored" data-anchor-id="funciones-inyectivas"><span style="color: #e92121;">Funciones inyectivas</span></h4>
 <p>En la definición de función <span class="math inline">\(f:A \rightarrow B\)</span>, sabemos que cada elemento de <span class="math inline">\(A\)</span> tiene que estar conectado con un único elemento de <span class="math inline">\(B\)</span>, pero en la definición de función se permite que dos elementos distintos del conjunto <span class="math inline">\(A\)</span> estén relacionados con el mismo elemento del conjunto <span class="math inline">\(B\)</span>, es decir, puede existir un elemento <span class="math inline">\(b \in B\)</span> para el cual existen dos elementos distintos <span class="math inline">\(a_{1}, a_{2} \in A\)</span> tal que <span class="math inline">\(b=f(a_{1})=f(a_{2})\)</span>, o de manera equivalente, tal que <span class="math inline">\((a_{1},b), (a_{2},b) \in F \subseteq A \times B\)</span>.</p>
 <p>Por ejemplo, en la función del siguiente gráfico,</p>
 <div class="quarto-figure quarto-figure-center">
@@ -938,14 +938,14 @@ render();
 <p>Del gráfico <a href="#sobreyectividad-proyecciones">Sobreyectividad de las funciones proyecciones</a>, podemos ver que las funciones <span class="math inline">\(\pi_{1}: A \times B \rightarrow A\)</span> y <span class="math inline">\(\pi_{2}: A \times B \rightarrow B\)</span> no son inyectivas, ya que dado <span class="math inline">\(a \in A\)</span> todos los elementos de la línea roja vertical continua se relacionan con el mismo elemento <span class="math inline">\(a \in A\)</span>, y dado <span class="math inline">\(b \in B\)</span> todos los elementos de la línea azul horizontal continua se relacionan con el mismo elemento <span class="math inline">\(b \in B\)</span>.</p>
 </section>
 <section id="ejemplos-de-funciones-inyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-inyectivas">Ejemplos de funciones inyectivas</h4>
+<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-inyectivas"><span style="color: #e92121;">Ejemplos de funciones inyectivas</span></h4>
 <ol type="1">
 <li><p>Si <span class="math inline">\(A\)</span> es un conjunto, la función identidad <span class="math inline">\(\textrm{id}_{A}: A \rightarrow A\)</span> que a cada elemento <span class="math inline">\(a \in A\)</span> le asigna el mismo elemento <span class="math inline">\(a \in A\)</span>, es decir, <span class="math inline">\(\textrm{id}_{A}(a)=a\)</span> para todo <span class="math inline">\(a \in A\)</span>, es una función inyectiva.</p></li>
 <li><p>Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son conjunto y fijamos un elemento <span class="math inline">\(b_{0} \in B\)</span>, entonces la función <span class="math inline">\(f: A \rightarrow A \times B\)</span> definida como <span class="math inline">\(f(a)=(a,b_{0})\)</span> para todo <span class="math inline">\(a \in A\)</span>, es inyectiva, ya que si <span class="math inline">\(f(a_1)=f(a_2)\)</span>, entonces <span class="math inline">\((a_1,b_{0})=(a_2,b_{0})\)</span>, lo que implica <span class="math inline">\(a_1=a_2\)</span>.</p></li>
 </ol>
 </section>
 <section id="ejemplo-interactivo-de-función-inyectiva" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-inyectiva">Ejemplo interactivo de función inyectiva</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-inyectiva"><span style="color: #e92121;">Ejemplo interactivo de función inyectiva</span></h4>
 <div id="construyendo-funcion-inyectiva">
 <div id="app-inyectiva-v1" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
   <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
@@ -1116,20 +1116,20 @@ render();
 </div>
 </section>
 <section id="pregunta-3" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta-3">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta-3"><span style="color: #e92121;">Pregunta</span></h4>
 <p>¿Cuántas funciones inyectivas distintas se pueden construir en <a href="#construyendo-funcion-inyectiva">Construyendo una función inyectiva</a>?</p>
 </section>
 <section id="funciones-biyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="funciones-biyectivas">Funciones biyectivas</h4>
+<h4 class="anchored" data-anchor-id="funciones-biyectivas"><span style="color: #e92121;">Funciones biyectivas</span></h4>
 <p>Una función <span class="math inline">\(f: A \rightarrow B\)</span> es <strong>biyectiva</strong> si es inyectiva y sobreyectiva.</p>
 <p>Por ejemplo la función identidad <span class="math inline">\(\textrm{id}_{A}: A \rightarrow A\)</span> es biyectiva, ya que es inyectiva y sobreyectiva.</p>
 </section>
 <section id="pregunta-4" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta-4">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta-4"><span style="color: #e92121;">Pregunta</span></h4>
 <p>¿Es posible construir una función biyectiva en <a href="#construyendo-funcion-sobreyectiva">Construyendo una función sobreyectiva</a> o en <a href="#construyendo-funcion-inyectiva">Construyendo una función inyectiva</a>?</p>
 </section>
 <section id="ejemplo-interactivo-de-función-biyectiva" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-biyectiva">Ejemplo interactivo de función biyectiva</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-biyectiva"><span style="color: #e92121;">Ejemplo interactivo de función biyectiva</span></h4>
 <div id="construyendo-funcion-biyectiva">
 <div id="app-biyectiva-v1" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
   <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
@@ -1296,11 +1296,11 @@ render();
 </div>
 </section>
 <section id="pregunta-5" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta-5">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta-5"><span style="color: #e92121;">Pregunta</span></h4>
 <p>¿Cuántas funciones biyectivas distintas se pueden construir en <a href="#construyendo-funcion-biyectiva">Construyendo una función biyectiva</a>?</p>
 </section>
 <section id="composición-de-funciones" class="level4">
-<h4 class="anchored" data-anchor-id="composición-de-funciones">Composición de funciones</h4>
+<h4 class="anchored" data-anchor-id="composición-de-funciones"><span style="color: #e92121;">Composición de funciones</span></h4>
 <p>En algunos casos, bajo ciertas condiciones, es posible construir una función a partir de dos funciones dadas. Si tenemos por ejemplo una función <span class="math inline">\(f: A \rightarrow B\)</span> y <span class="math inline">\(g: B \rightarrow C\)</span>, a un elemento <span class="math inline">\(a \in A\)</span> le corresponde un único elemento <span class="math inline">\(f(a) \in B\)</span> por ser <span class="math inline">\(f\)</span> una función, pero como <span class="math inline">\(g\)</span> también es función, a este elemento <span class="math inline">\(f(a) \in B\)</span> le corresponde un único elemento <span class="math inline">\(g(f(a)) \in C\)</span>. Lo anterior nos permite asignarle a cada elemento <span class="math inline">\(a \in A\)</span> un único elemento <span class="math inline">\(g(f(a)) \in C\)</span>. Lo anterior es la definción de la compuesta o composición de dos funciones.</p>
 <p><strong>Composición de funciones:</strong> Dadas dos funciones <span class="math inline">\(f:A \rightarrow B\)</span> y <span class="math inline">\(g:B \rightarrow C\)</span>, definimos la compuesta de <span class="math inline">\(g\)</span> con <span class="math inline">\(f\)</span> que denotaremos por <span class="math inline">\(g \circ f: A \rightarrow C\)</span>, como <span class="math inline">\(g \circ f(a)=g(f(a))\)</span>.</p>
 <p>Por ejemplo, en el gráfico</p>
@@ -1315,7 +1315,7 @@ b \mapsto g(f(b))=g(x)=v \\
 c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
 </section>
 <section id="ejemplo-interactivo-de-composición-de-funciones" class="level4">
-<h4 class="anchored">Ejemplo interactivo de composición de funciones</h4>
+<h4 class="anchored"><span style="color: #e92121;">Ejemplo interactivo de composición de funciones</span></h4>
 <div id="app-composicion-aleatoria-v2" style="font-family: system-ui, -apple-system, sans-serif; max-width: 880px; margin: 15px auto; padding: 22px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
 
   <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="ejemplo-interactivo-de-composición-de-funciones">Composición de Funciones</h3>
@@ -1653,11 +1653,11 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
 </script>
 </div></section>
 <section id="observación" class="level4">
-<h4 class="anchored" data-anchor-id="observación">Observación:</h4>
+<h4 class="anchored" data-anchor-id="observación"><span style="color: #e92121;">Observación:</span></h4>
 <p>Al tener dos funciones <span class="math inline">\(f: A \rightarrow B\)</span> y <span class="math inline">\(g: B \rightarrow C\)</span>, lo que hace que tenga sentido la definición de <span class="math inline">\(g \circ f\)</span>, es que el codominio de <span class="math inline">\(f\)</span> coincide con el dominio de <span class="math inline">\(g\)</span>. Tenga en cuenta que la notación <span class="math inline">\(g \circ f\)</span> quiere decir que primero se aplica la función <span class="math inline">\(f\)</span> y luego la función <span class="math inline">\(g\)</span>, es decir, se lee de derecha a izquierda. Si tenemos funciones <span class="math inline">\(f: A \rightarrow B\)</span> y <span class="math inline">\(g: B \rightarrow C\)</span>, tenemos entonces la nueva función <span class="math inline">\(g \circ f: A \rightarrow C\)</span>. Sin embargo, para que <span class="math inline">\(f \circ g\)</span> tenga sentido es necesario que <span class="math inline">\(A=C\)</span>. Por lo tanto, si tenemos funciones <span class="math inline">\(f: A \rightarrow B\)</span> y <span class="math inline">\(g: B \rightarrow A\)</span>, con la composición de funciones obtenemos las funciones <span class="math inline">\(g \circ f: A \rightarrow A\)</span> y <span class="math inline">\(f \circ g: B \rightarrow B\)</span>.</p>
 </section>
 <section id="ejemplo-interactivo-de-compuesta-de-funciones" class="level4">
-<h4 class="anchored">Ejemplo interactivo de compuesta de funciones</h4>
+<h4 class="anchored"><span style="color: #e92121;">Ejemplo interactivo de compuesta de funciones</span></h4>
 <div id="app-composicion-horizontal" style="font-family: system-ui, -apple-system, sans-serif; max-width: 960px; margin: 15px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); box-sizing: border-box;">
 
   <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="ejemplo-interactivo-de-compuesta-de-funciones">Compuestas entre dos  funciones</h3>
@@ -2027,7 +2027,7 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
 </script>
 </section>
 <section id="restricción-de-una-función" class="level4">
-<h4 class="anchored" data-anchor-id="restricción-de-una-función">Restricción de una función</h4>
+<h4 class="anchored" data-anchor-id="restricción-de-una-función"><span style="color: #e92121;">Restricción de una función</span></h4>
 <p>Supongamos que tenemos una función <span class="math inline">\(f: A \rightarrow B\)</span> y que <span class="math inline">\(C \subseteq A\)</span> es un subconjunto. La función <span class="math inline">\(f\)</span> induce una función <span class="math inline">\(f|_{C}: C \rightarrow B\)</span> que llamaremos la restricción de <span class="math inline">\(f\)</span> al subconjunto <span class="math inline">\(C\)</span>, definida como <span class="math inline">\(f|_{C}(x)=f(x)\)</span> si <span class="math inline">\(x \in C\)</span>.</p>
 <p>Si <span class="math inline">\(F \subseteq A \times B\)</span> es el conjunto que define a la función <span class="math inline">\(f\)</span>, el conjunto que define a <span class="math inline">\(f|_{C}\)</span> es <span class="math inline">\(\{(x,y) \in F ~ :~ x \in C\}\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -2038,12 +2038,12 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
 </div>
 </section>
 <section id="pregunta-6" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta-6">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta-6"><span style="color: #e92121;">Pregunta</span></h4>
 <p>¿Qué puede decir sobre la restricción del codominio?, es decir, si <span class="math inline">\(f: A \rightarrow B\)</span> y <span class="math inline">\(C \subset B\)</span>, ¿es <span class="math inline">\(f: A \rightarrow C\)</span> una función?</p>
 <p>Demuestre que si <span class="math inline">\(f: A \rightarrow B\)</span> es una función y <span class="math inline">\(C \subset B\)</span>, entonces <span class="math inline">\(f: A \rightarrow C\)</span> es una función si y solo si <span class="math inline">\(\textrm{im}(f) \subseteq C\)</span>.</p>
 </section>
 <section id="inversa-de-una-función-con-respecto-a-la-composición" class="level4">
-<h4 class="anchored" data-anchor-id="inversa-de-una-función-con-respecto-a-la-composición">Inversa de una función con respecto a la composición</h4>
+<h4 class="anchored" data-anchor-id="inversa-de-una-función-con-respecto-a-la-composición"><span style="color: #e92121;">Inversa de una función con respecto a la composición</span></h4>
 <p>Una propiedad importante de las funciones inyectivas, es que al invertir la dirección de las flechas, se obtiene una función. Si <span class="math inline">\(f: A \rightarrow B\)</span> es una función inyectiva, al reversar las flechas se obtiene una función <span class="math inline">\(f^{-1}: \textrm{im}(f) \rightarrow A\)</span>.</p>
 <p>En la siguiente figura se muestra una función inyectiva junto con el gráfico que se obtiene al reversar las flechas.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -2053,7 +2053,10 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
 </figure>
 </div>
 <p>Observe que en la figura anterior, el gráfico de la derecha produce una función cuando se restringe a la imagen de <span class="math inline">\(f\)</span>, es decir, al conjunto <span class="math inline">\(\textrm{im}(f)=\{x,z,w\}\)</span>. Esta función será denotada como <span class="math inline">\(f^{-1}: \textrm{im}(f) \rightarrow A\)</span>.</p>
-<p><strong>Definición formal de inversa:</strong> Si <span class="math inline">\(f: A \rightarrow B\)</span> es una función inyectiva, definimos la función <span class="math inline">\(f^{-1}: \textrm{im}(f) \rightarrow A\)</span> como <span class="math inline">\(f^{-1}(b)=a\)</span> si <span class="math inline">\(f(a)=b\)</span>, es decir, para cada <span class="math inline">\(b \in \textrm{im}(f)\)</span> se tiene que <span class="math inline">\(b=f(a)\)</span> para algún <span class="math inline">\(a \in A\)</span>, lo que nos permite definir <span class="math inline">\(b \mapsto a\)</span> (invertir la flecha), y por la inyectividad de <span class="math inline">\(f\)</span> este <span class="math inline">\(a\)</span> es único, lo que garantiza que <span class="math inline">\(f^{-1}\)</span> es una función.</p>
+</section>
+<section id="definición-formal-de-inversa" class="level4">
+<h4 class="anchored" data-anchor-id="definición-formal-de-inversa"><span style="color: #e92121;">Definición formal de inversa:</span></h4>
+<p>Si <span class="math inline">\(f: A \rightarrow B\)</span> es una función inyectiva, definimos la función <span class="math inline">\(f^{-1}: \textrm{im}(f) \rightarrow A\)</span> como <span class="math inline">\(f^{-1}(b)=a\)</span> si <span class="math inline">\(f(a)=b\)</span>, es decir, para cada <span class="math inline">\(b \in \textrm{im}(f)\)</span> se tiene que <span class="math inline">\(b=f(a)\)</span> para algún <span class="math inline">\(a \in A\)</span>, lo que nos permite definir <span class="math inline">\(b \mapsto a\)</span> (invertir la flecha), y por la inyectividad de <span class="math inline">\(f\)</span> este <span class="math inline">\(a\)</span> es único, lo que garantiza que <span class="math inline">\(f^{-1}\)</span> es una función.</p>
 <p>Observe que <span class="math inline">\(f^{-1}\)</span> corresponde al subconjunto <span class="math inline">\(\{(b,a) \in \textrm{im}(f) \times A ~ : ~ f(a)=b\}\)</span> o de manera equivalente, si <span class="math inline">\(F \subseteq A \times B\)</span> es el conjunto que define a la función <span class="math inline">\(f\)</span>, el conjunto que define a <span class="math inline">\(f^{-1}\)</span> es <span class="math inline">\(\{(b,a) \in B \times A ~ :~ (a,b) \in F\}\)</span>.</p>
 <p>Si una función <span class="math inline">\(f\)</span> no es inyectiva entonces al invertir el sentido de las flechas (mirar el gráfico de derecha a izquierda) no es función, o de manera equivalente, como <span class="math inline">\(f\)</span> no es inyectiva entonces existen <span class="math inline">\(a_1, a_2 \in A\)</span> con <span class="math inline">\(a_1 \neq a_2\)</span> tales que <span class="math inline">\(f(a_1)=b=f(a_2)\)</span>, lo que implica que al invertir las flechas <span class="math inline">\(b \mapsto a_{1}\)</span> y <span class="math inline">\(b \mapsto a_{2}\)</span> y por lo tanto <span class="math inline">\(f^{-1}\)</span> no es función.</p>
 <p>Por ejemplo, en la siguiente figura se muestra una función <span class="math inline">\(f\)</span> que no es inyectiva, y en el gráfico de la derecha se puede observar que si se mira de derecha a izquierda hay dos flechas que salen de un mismo punto, lo que implica que no define una función.</p>
@@ -2068,12 +2071,12 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
 <p>En resumen, si <span class="math inline">\(f: A \rightarrow B\)</span> es biyectiva la función <span class="math inline">\(f^{-1}: B \rightarrow A\)</span> es tal que <span class="math inline">\(f \circ f^{-1}=\textrm{id}_B\)</span> y <span class="math inline">\(f^{-1} \circ f=\textrm{id}_A\)</span>.</p>
 </section>
 <section id="pregunta-7" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta-7">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta-7"><span style="color: #e92121;">Pregunta</span></h4>
 <p>Si <span class="math inline">\(f: A \rightarrow B\)</span> es una función biyectiva, ¿Existe una función <span class="math inline">\(g: B \rightarrow A\)</span> diferente de la función <span class="math inline">\(f^{-1}\)</span> tal que <span class="math inline">\(f \circ g=\textrm{id}_B\)</span> y <span class="math inline">\(g \circ f=\textrm{id}_A\)</span>?.</p>
 <p><strong>Ayuda:</strong> Use que la composición de funciones es asociativa, es decir, si <span class="math inline">\(f: A \rightarrow B\)</span>, <span class="math inline">\(g: B \rightarrow C\)</span> y <span class="math inline">\(h: C \rightarrow D\)</span> son funciones, entonces <span class="math inline">\(h \circ (g \circ f)=(h \circ g) \circ f\)</span>.</p>
 </section>
 <section id="ejemplo-interactivo-de-la-inversa-de-una-función" class="level4">
-<h4 class="anchored">Ejemplo interactivo de la inversa de una función</h4>
+<h4 class="anchored"><span style="color: #e92121;">Ejemplo interactivo de la inversa de una función</span></h4>
 <div id="app-biyectiva-inversa" style="font-family: system-ui, -apple-system, sans-serif; max-width: 900px; margin: 15px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); box-sizing: border-box;">
 
   <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="ejemplo-interactivo-de-la-inversa-de-una-función">Función Biyectiva y su Inversa</h3>
@@ -2357,10 +2360,10 @@ c \mapsto g(f(c))=g(w)=u.  \end{aligned}\end{equation*}\)</span></p>
 </section>
 </section>
 <section id="construcción-de-los-números-naturales" class="level2">
-<h2 class="anchored" data-anchor-id="construcción-de-los-números-naturales">Construcción de los números naturales</h2>
+<h2 class="anchored" data-anchor-id="construcción-de-los-números-naturales"><span style="color: #2158c7;">Construcción de los números naturales</span></h2>
 <p>Como dijimos anteriormente, hay distintas formas de construir los números naturales, y una de ellas es a partir de los axiomas de Peano.</p>
 <section id="axiomas-de-peano" class="level3">
-<h3 class="anchored" data-anchor-id="axiomas-de-peano">Axiomas de Peano</h3>
+<h3 class="anchored" data-anchor-id="axiomas-de-peano"><span style="color: #1e8449;">Axiomas de Peano</span></h3>
 <p>El conjunto de los números naturales que denotaremos por <span class="math inline">\(\mathbb{N}\)</span>, se define como un conjunto que satisface los siguientes axiomas:</p>
 <ul>
 <li>Existe un elemento <span class="math inline">\(0 \in\)</span> <span class="math inline">\(\mathbb{N}\)</span>.</li>
@@ -2372,7 +2375,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <p>Del principio de inducción se deduce que <span class="math inline">\(\textrm{im}(S) \cup \{0\}=\mathbb{N}\)</span>, ya que <span class="math inline">\(0 \in \textrm{im}(S) \cup \{0\}\)</span>, y si <span class="math inline">\(n \in \mathbb{N}\)</span> es tal que <span class="math inline">\(n \in \textrm{im}(S) \cup \{0\}\)</span> entonces <span class="math inline">\(S(n) \in \textrm{im}(S) \subset \textrm{im}(S) \cup \{0\}\)</span>. Por lo tanto <span class="math inline">\(\mathbb{N} \subseteq \textrm{im}(S) \cup \{0\}\)</span>, y como claramente <span class="math inline">\(\textrm{im}(S) \cup \{0\} \subseteq \mathbb{N}\)</span>, se tiene que <span class="math inline">\(\textrm{im}(S) \cup \{0\}=\mathbb{N}\)</span>. Como <span class="math inline">\(0 \notin \textrm{im}(S)\)</span>, se tiene que <span class="math inline">\(\textrm{im}(S)=\mathbb{N} \setminus \{0\}\)</span>. Esto equivale a decir que la función <span class="math inline">\(S: \mathbb{N} \rightarrow \mathbb{N} \setminus \{0\}\)</span> es sobreyectiva.</p>
 <p>Observe que como <span class="math inline">\(S: \mathbb{N} \rightarrow \mathbb{N}\)</span> es inyectiva, entonces la función <span class="math inline">\(S: \mathbb{N} \rightarrow \mathbb{N} \setminus \{0\}\)</span> también es inyectiva, y al ser sobreyectiva tenemos entonces que <span class="math inline">\(S: \mathbb{N} \rightarrow \mathbb{N} \setminus \{0\}\)</span> es biyectiva.</p>
 <section id="notación" class="level4">
-<h4 class="anchored" data-anchor-id="notación">Notación</h4>
+<h4 class="anchored" data-anchor-id="notación"><span style="color: #e92121;">Notación</span></h4>
 <p>Vamos a usar los símbolos <span class="math inline">\(1, 2, 3, 4, 5, 6, 7, 8, 9\)</span> (que estamos acostumbrados a utilizar día a día) para denotar los primeros siguientes términos que se obtienen al iterar <span class="math inline">\(S\)</span> con ella misma y evaluar en el elemento <span class="math inline">\(0\)</span>.</p>
 <ul>
 <li><span class="math inline">\(1=S(0)\)</span></li>
@@ -2389,15 +2392,15 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <p>Gracias a la aritmética de los números naturales, vamos a poder expresar todos los elementos del conjunto <span class="math inline">\(\mathbb{N}\)</span> usando los símbolos anteriores.</p>
 </section>
 <section id="función-predecesor" class="level4">
-<h4 class="anchored" data-anchor-id="función-predecesor">Función predecesor</h4>
+<h4 class="anchored" data-anchor-id="función-predecesor"><span style="color: #e92121;">Función predecesor</span></h4>
 <p>Como la función <span class="math inline">\(S: \mathbb{N} \rightarrow \mathbb{N} \setminus \{0\}\)</span> es biyectiva, entonces existe una función inversa <span class="math inline">\(S^{-1}: \mathbb{N} \setminus \{0\} \rightarrow \mathbb{N}\)</span> que llamaremos función predecesor, y que denotaremos por <span class="math inline">\(P\)</span>. Por definición, para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span> se tiene que <span class="math inline">\(P(n)=S^{-1}(n)\)</span>, es decir, <span class="math inline">\(P(n)=m\)</span> si <span class="math inline">\(S(m)=n\)</span>.</p>
 </section>
 </section>
 <section id="artitmética-de-los-números-naturales" class="level3">
-<h3 class="anchored" data-anchor-id="artitmética-de-los-números-naturales">Artitmética de los números naturales</h3>
+<h3 class="anchored" data-anchor-id="artitmética-de-los-números-naturales"><span style="color: #1e8449;">Artitmética de los números naturales</span></h3>
 <p>De manera general, una operación binaria en un conjunto <span class="math inline">\(A\)</span>, es una función <span class="math inline">\(f: A \times A \rightarrow A\)</span>. Veamos que en el conjunto de los números naturales, hay una operación binaria que llamaremos suma, que permite obtener todos los elementos de <span class="math inline">\(\mathbb{N}\)</span> a partir del <span class="math inline">\(0\)</span> y de la función sucesor <span class="math inline">\(S\)</span>.</p>
 <section id="suma-de-números-naturales" class="level4">
-<h4 class="anchored" data-anchor-id="suma-de-números-naturales">Suma de números naturales</h4>
+<h4 class="anchored" data-anchor-id="suma-de-números-naturales"><span style="color: #e92121;">Suma de números naturales</span></h4>
 <p>Definamos la operación binaria suma en el conjunto <span class="math inline">\(\mathbb{N}\)</span>, que denotaremos por <span class="math inline">\(+ : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}\)</span>, de la siguiente manera:</p>
 <ul>
 <li>Para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, definimos <span class="math inline">\(+(n,0)=n\)</span>.</li>
@@ -2414,7 +2417,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <p>Comencemos observando que para todo <span class="math inline">\(n,m \in \mathbb{N}\)</span>, la expresión <span class="math inline">\(n+m\)</span> está definida, es decir, <span class="math inline">\(+(n,m)=n+m \in \mathbb{N}\)</span>. Esto lo podemos probar usando el axioma de inducción (principio de inducción). Fijemos un elemento arbitrario <span class="math inline">\(n \in \mathbb{N}\)</span> y consideremos el conjunto <span class="math inline">\(A_{n}=\{m \in \mathbb{N} ~ : ~ n+m~ \textrm{está definido}\}\)</span>. Notemos que <span class="math inline">\(0 \in A_{n}\)</span>, ya que <span class="math inline">\(n+0=n \in \mathbb{N}\)</span>. Ahora supongamos que <span class="math inline">\(m \in A_{n}\)</span>, es decir, <span class="math inline">\(n+m\)</span> está definido. Por definición <span class="math inline">\(n+S(m)=S(n+m)\)</span>, y como <span class="math inline">\(n+m \in \mathbb{N}\)</span>, se tiene que <span class="math inline">\(S(n+m) \in \mathbb{N}\)</span>, es decir, <span class="math inline">\(n+S(m)\)</span> está definido. Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_{n}=\mathbb{N}\)</span>, es decir, para todo <span class="math inline">\(m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n+m\)</span> está definido. Lo anterior muestra que para cada <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que para todo <span class="math inline">\(m \in \mathbb{N}\)</span>, <span class="math inline">\(n+m \in \mathbb{N}\)</span>, y por lo tanto, a todo elemento <span class="math inline">\((n,m) \in \mathbb{N} \times \mathbb{N}\)</span>, le corresponde un único elemento <span class="math inline">\(n+m \in \mathbb{N}\)</span>.</p>
 </section>
 <section id="propiedades-de-la-suma" class="level4">
-<h4 class="anchored" data-anchor-id="propiedades-de-la-suma">Propiedades de la suma</h4>
+<h4 class="anchored" data-anchor-id="propiedades-de-la-suma"><span style="color: #e92121;">Propiedades de la suma</span></h4>
 <ul>
 <li>La suma es asociativa, es decir, para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span> se tiene que <span class="math inline">\((n+m)+k=n+(m+k)\)</span>.</li>
 </ul>
@@ -2431,7 +2434,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </ul>
 </section>
 <section id="otras-propiedades-de-la-suma" class="level4">
-<h4 class="anchored" data-anchor-id="otras-propiedades-de-la-suma">Otras propiedades de la suma</h4>
+<h4 class="anchored" data-anchor-id="otras-propiedades-de-la-suma"><span style="color: #e92121;">Otras propiedades de la suma</span></h4>
 <ul>
 <li>La suma es cancelativa, es decir, si <span class="math inline">\(n,m,k \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n+m=n+k\)</span>, entonces <span class="math inline">\(m=k\)</span>.</li>
 </ul>
@@ -2448,7 +2451,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <p><span class="math inline">\(S: \mathbb{N} \to \mathbb{N} \setminus \{0\}\)</span> es sobreyectiva, tenemos que <span class="math inline">\(n=S(k)\)</span> para cierto <span class="math inline">\(k \in \mathbb{N}\)</span>. Luego <span class="math inline">\(s(k)+t=0\)</span> lo que implica que <span class="math inline">\(0=S(k+t)\)</span>, lo que es absurso ya que <span class="math inline">\(0\)</span> no es el sucesor de nadie.</p>
 </section>
 <section id="relación-de-orden-total-en-los-números-naturales" class="level4">
-<h4 class="anchored" data-anchor-id="relación-de-orden-total-en-los-números-naturales">Relación de orden total en los números naturales</h4>
+<h4 class="anchored" data-anchor-id="relación-de-orden-total-en-los-números-naturales"><span style="color: #e92121;">Relación de orden total en los números naturales</span></h4>
 <p>De manera general, una relación de orden en un conjunto <span class="math inline">\(A\)</span> es un subconjunto <span class="math inline">\(R \subseteq A \times A\)</span> que satisface las siguientes propiedades:</p>
 <ul>
 <li><strong>Reflexividad</strong>: Para todo <span class="math inline">\(a \in A\)</span>, se tiene que <span class="math inline">\((a,a) \in R\)</span>.</li>
@@ -2475,7 +2478,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </ul>
 </section>
 <section id="ejercicios" class="level4">
-<h4 class="anchored" data-anchor-id="ejercicios">Ejercicios:</h4>
+<h4 class="anchored" data-anchor-id="ejercicios"><span style="color: #e92121;">Ejercicios:</span></h4>
 <p>Demuestre que la cancelación de la suma también se tiene con desigualdades, es decir,</p>
 <ul>
 <li>Si <span class="math inline">\(n+m &lt; n+k\)</span>, entonces <span class="math inline">\(m &lt; k\)</span>.</li>
@@ -2498,10 +2501,10 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <p>También podemos deducir que el conjunto <span class="math inline">\(\mathbb{N}\)</span> no tiene un elemento maximal, es decir, dado un número natural <span class="math inline">\(n \in \mathbb{N}\)</span>, siempre existe un número natural <span class="math inline">\(m \in \mathbb{N}\)</span> tal que <span class="math inline">\(n &lt; m\)</span>, por ejemplo <span class="math inline">\(S(n)\)</span>, o dicho de manera equivalente, no existe un número natural que sea mayor o igual que todos los demás números naturales.</p>
 </section>
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
-<h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
+<h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="98050cd1" class="cell" data-execution_count="1">
+<div id="beb3e39b" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2511,7 +2514,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="ad59f643" class="cell" data-execution_count="2">
+<div id="4c869a11" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2522,7 +2525,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </section>
 <section id="otras-desigualdades-importantes" class="level4">
-<h4 class="anchored" data-anchor-id="otras-desigualdades-importantes">Otras desigualdades importantes</h4>
+<h4 class="anchored" data-anchor-id="otras-desigualdades-importantes"><span style="color: #e92121;">Otras desigualdades importantes</span></h4>
 <ul>
 <li>k &lt; S(n) implica que k ≤ n.&nbsp;</li>
 </ul>
@@ -2546,7 +2549,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </div>
 </section>
 <section id="principio-del-buen-orden" class="level4">
-<h4 class="anchored" data-anchor-id="principio-del-buen-orden">Principio del buen orden</h4>
+<h4 class="anchored" data-anchor-id="principio-del-buen-orden"><span style="color: #e92121;">Principio del buen orden</span></h4>
 <p>Dado un conjunto totalmente ordenado <span class="math inline">\((A, \leq)\)</span>, decimos que <span class="math inline">\(a \in A\)</span> es un elemento minimal si <span class="math inline">\(a \leq b\)</span> para todo <span class="math inline">\(b \in A\)</span>.</p>
 <p>El conjunto de los números naturales tiene una propiedad muy importante respecto a la relación de orden total <span class="math inline">\(\leq\)</span>, que se conoce como el principio del buen orden, y que dice lo siguiente:</p>
 <p><strong>Principio del buen orden:</strong> Todo subconjunto no vacío de <span class="math inline">\(\mathbb{N}\)</span> tiene un elemento minimal.</p>
@@ -2554,7 +2557,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>Demostremos el principio del buen orden. Supongamos por el absurdo que existe un subconjunto no vacío <span class="math inline">\(A \subseteq \mathbb{N}\)</span> que no tiene elemento minimal. Note que <span class="math inline">\(0 \notin A\)</span> ya que <span class="math inline">\(A\)</span> no tiene elemento minimal. Consideremos el conjunto <span class="math display">\[B=\{m \in \mathbb{N} : m &lt; n~ \textrm{para todo} ~n \in A\}\]</span>. Es claro que <span class="math inline">\(0 \in B\)</span>, y si <span class="math inline">\(n \in B\)</span> entonces <span class="math inline">\(S(n) \in B\)</span>, ya que como <span class="math inline">\(m &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span> entonces <span class="math inline">\(S(m) \leq n\)</span> para todo <span class="math inline">\(n \in A\)</span>, pero <span class="math inline">\(S(m) \notin A\)</span> puesto que <span class="math inline">\(A\)</span> no tiene elemento minimal, luego <span class="math inline">\(S(m) &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span>. Del principio de inducción se sigue que <span class="math inline">\(B=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(m &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span>, en particular, dado <span class="math inline">\(n \in A\)</span>, se tiene que <span class="math inline">\(n &lt; n\)</span>, lo cual es absurdo. Por lo tanto, todo subconjunto no vacío de <span class="math inline">\(\mathbb{N}\)</span> tiene un elemento minimal.</p>
 </section>
 <section id="producto-de-números-naturales" class="level4">
-<h4 class="anchored" data-anchor-id="producto-de-números-naturales">Producto de números naturales</h4>
+<h4 class="anchored" data-anchor-id="producto-de-números-naturales"><span style="color: #e92121;">Producto de números naturales</span></h4>
 <p>Vamos a definir ahora otra operación binaria en el conjunto de los números naturales <span class="math inline">\(\mathbb{N}\)</span>, que llamaremos producto y denotaremos por <span class="math inline">\(\cdot : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}\)</span>, de la siguiente manera:</p>
 <ul>
 <li><span class="math inline">\(n \cdot 0 = 0\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
@@ -2582,11 +2585,12 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </ul>
 <p>Fijemos un elemento arbitrario <span class="math inline">\(n \in \mathbb{N}\)</span> y consideremos el conjunto <span class="math display">\[A_n=\{m \in \mathbb{N} : n \cdot m=m \cdot n\}.\]</span> Note que <span class="math inline">\(0 \in A_n\)</span>, ya que <span class="math inline">\(n \cdot 0=0=0 \cdot n\)</span>. Ahora, si <span class="math inline">\(m \in A_n\)</span> entonces <span class="math inline">\(S(m) \in A_n\)</span> ya que <span class="math display">\[n \cdot S(m)=n+(n \cdot m)=n+(m \cdot n)=m+n\cdot n=m\cdot S(n).\]</span> Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_n=\mathbb{N}\)</span>, y por lo tanto, <span class="math inline">\(n \cdot m=m \cdot n\)</span> para todo <span class="math inline">\(m \in \mathbb{N}\)</span>.</p>
 </section>
-<section id="ejercicio-demnuestre-que-s0-es-el-único-elemento-de-mathbbn-que-satisface-n-cdot-s0n-para-todo-n-in-mathbbn-es-decir-si-m-in-mathbbn-es-tal-que-n-cdot-mn-para-todo-n-in-mathbbn-entonces-ms0." class="level4">
-<h4 class="anchored" data-anchor-id="ejercicio-demnuestre-que-s0-es-el-único-elemento-de-mathbbn-que-satisface-n-cdot-s0n-para-todo-n-in-mathbbn-es-decir-si-m-in-mathbbn-es-tal-que-n-cdot-mn-para-todo-n-in-mathbbn-entonces-ms0.">Ejercicio: Demnuestre que <span class="math inline">\(S(0)\)</span> es el único elemento de <span class="math inline">\(\mathbb{N}\)</span> que satisface <span class="math inline">\(n \cdot S(0)=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, es decir, si <span class="math inline">\(m \in \mathbb{N}\)</span> es tal que <span class="math inline">\(n \cdot m=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, entonces <span class="math inline">\(m=S(0)\)</span>.</h4>
+<section id="ejercicio" class="level4">
+<h4 class="anchored" data-anchor-id="ejercicio"><span style="color: #e92121;">Ejercicio:</span></h4>
+<p>Demnuestre que <span class="math inline">\(S(0)\)</span> es el único elemento de <span class="math inline">\(\mathbb{N}\)</span> que satisface <span class="math inline">\(n \cdot S(0)=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, es decir, si <span class="math inline">\(m \in \mathbb{N}\)</span> es tal que <span class="math inline">\(n \cdot m=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, entonces <span class="math inline">\(m=S(0)\)</span>.</p>
 </section>
-<section id="propiedad-de-la-relación-de-orden-respecto-al-producto" class="level4">
-<h4 class="anchored" data-anchor-id="propiedad-de-la-relación-de-orden-respecto-al-producto">Propiedad de la relación de orden respecto al producto</h4>
+<section id="propiedades-de-la-relación-de-orden-respecto-al-producto" class="level4">
+<h4 class="anchored" data-anchor-id="propiedades-de-la-relación-de-orden-respecto-al-producto"><span style="color: #e92121;">Propiedades de la relación de orden respecto al producto</span></h4>
 <ul>
 <li>Si tenemos <span class="math inline">\(n,m,k \in \mathbb{N}\)</span> con <span class="math inline">\(n \leq m\)</span>, entonces <span class="math inline">\(n \cdot k \leq m \cdot k\)</span>.</li>
 </ul>
@@ -2602,8 +2606,8 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>Si suponemos por el absurdo que <span class="math inline">\(n \neq m\)</span>, entonces <span class="math inline">\(n &lt; m\)</span> o <span class="math inline">\(m &lt; n\)</span>. Supongamos sin pérdida de generalidad que <span class="math inline">\(n &lt; m\)</span>, entonces por la propiedad anterior, <span class="math inline">\(n \cdot k &lt; m \cdot k\)</span>, lo cual es una contradicción. Por lo tanto, <span class="math inline">\(n=m\)</span>.</p>
 <p>De lo anterior se deduce que <span class="math inline">\(S(0)\)</span> es el único neutro, más aún, que si <span class="math inline">\(n \cdot m=n\)</span> para cierto <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, entonces <span class="math inline">\(m=S(0)\)</span>.</p>
 </section>
-<section id="ejercicio" class="level4">
-<h4 class="anchored" data-anchor-id="ejercicio">Ejercicio</h4>
+<section id="ejercicio-1" class="level4">
+<h4 class="anchored" data-anchor-id="ejercicio-1"><span style="color: #e92121;">Ejercicio</span></h4>
 <ul>
 <li><p>Si <span class="math inline">\(n,m,k,s \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n \leq m\)</span> y <span class="math inline">\(k \leq s\)</span>, entonces <span class="math inline">\(n \cdot k \leq m \cdot s\)</span>.</p></li>
 <li><p>Si <span class="math inline">\(n,m,k,s \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span> y <span class="math inline">\(k &lt; s\)</span>, entonces <span class="math inline">\(n \cdot k &lt; m \cdot s\)</span>.</p></li>
@@ -2611,12 +2615,12 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </ul>
 </section>
 <section id="no-hay-divisores-de-cero-en-los-números-naturales" class="level4">
-<h4 class="anchored" data-anchor-id="no-hay-divisores-de-cero-en-los-números-naturales">No hay divisores de cero en los números naturales</h4>
+<h4 class="anchored" data-anchor-id="no-hay-divisores-de-cero-en-los-números-naturales"><span style="color: #e92121;">No hay divisores de cero en los números naturales</span></h4>
 <p>Esto quiere decir que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n \cdot m=0\)</span>, entonces <span class="math inline">\(n=0\)</span> o <span class="math inline">\(m=0\)</span>. Es decir, la única manera de que el producto de dos números naturales sea cero es que al menos uno de ellos sea cero.</p>
 <p>Para probar esto, razonemos por el absurdo. Supongamos que existen <span class="math inline">\(n,m \in \mathbb{N} \setminus \{0\}\)</span> tales que <span class="math inline">\(n \cdot m=0\)</span>. Por lo tanto <span class="math inline">\(0 &lt; n\)</span> y <span class="math inline">\(0 &lt; m\)</span> y así de lo anterior, <span class="math inline">\(0 &lt; n \cdot m=0\)</span>, lo cual es una contradicción.</p>
 </section>
-<section id="ejercicio-1" class="level4">
-<h4 class="anchored" data-anchor-id="ejercicio-1">Ejercicio</h4>
+<section id="ejercicio-2" class="level4">
+<h4 class="anchored" data-anchor-id="ejercicio-2"><span style="color: #e92121;">Ejercicio</span></h4>
 <p>Demuestre que la cancelación del producto también se tiene con desigualdades, es decir,</p>
 <ul>
 <li>Si <span class="math inline">\(n \cdot k &lt; m \cdot k\)</span>, entonces <span class="math inline">\(n &lt; m\)</span>.</li>
@@ -2624,7 +2628,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </ul>
 </section>
 <section id="potenciación" class="level4">
-<h4 class="anchored" data-anchor-id="potenciación">Potenciación</h4>
+<h4 class="anchored" data-anchor-id="potenciación"><span style="color: #e92121;">Potenciación</span></h4>
 <p>La operación potenciación en los números naturales es una función binaria <span class="math inline">\(^{\wedge} : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}\)</span>, definida de la siguiente manera:</p>
 <ul>
 <li><span class="math inline">\(n^{0}=S(0)\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
@@ -2634,7 +2638,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>Para probar esto, fijemos un elemento arbitrario <span class="math inline">\(n \in \mathbb{N}\)</span> y consideremos el conjunto <span class="math display">\[A_n=\{m \in \mathbb{N} : n^{m}~\textrm{está definido}\}.\]</span> Note que <span class="math inline">\(0 \in A_n\)</span>, ya que <span class="math inline">\(n^{0}=S(0) \in \mathbb{N}\)</span>. Ahora, si <span class="math inline">\(m \in A_n\)</span> entonces <span class="math inline">\(S(m) \in A_n\)</span> ya que <span class="math inline">\(n^{S(m)}=n \cdot n^{m}\)</span>, y como <span class="math inline">\(n^{m}\)</span> está definido y el producto siempre está definido, se sigue que <span class="math inline">\(n^{S(m)}\)</span> está definido. Por lo tanto, por el principio de inducción, se tiene que <span class="math inline">\(A_n=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n^{m}\)</span> está definido. Esto muestra que para cada <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que para todo <span class="math inline">\(m \in \mathbb{N}\)</span>, <span class="math inline">\(n^{m} \in \mathbb{N}\)</span>, y por lo tanto, a todo elemento <span class="math inline">\((n,m) \in \mathbb{N} \times \mathbb{N}\)</span> le corresponde un único elemento <span class="math inline">\(n^{m} \in \mathbb{N}\)</span>.</p>
 </section>
 <section id="algunas-propiedades-de-la-potenciación" class="level4">
-<h4 class="anchored" data-anchor-id="algunas-propiedades-de-la-potenciación">Algunas propiedades de la potenciación</h4>
+<h4 class="anchored" data-anchor-id="algunas-propiedades-de-la-potenciación"><span style="color: #e92121;">Algunas propiedades de la potenciación</span></h4>
 <ul>
 <li><span class="math inline">\(n^{S(0)}=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
 <li><span class="math inline">\(0^{n}=0\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>.</li>
@@ -2644,7 +2648,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </section>
 </section>
 <section id="inducción-matemática" class="level3">
-<h3 class="anchored" data-anchor-id="inducción-matemática">Inducción matemática</h3>
+<h3 class="anchored" data-anchor-id="inducción-matemática"><span style="color: #1e8449;">Inducción matemática</span></h3>
 <p>El axioma de inducción que está entre los axiomas de Peano utilizados para construir el conjunto <span class="math inline">\(\mathbb{N}\)</span>, produce un método de demostración conocido con el nombre de <strong>inducción matematica</strong>. De manera más precisa, da un método de demostración para fórmulas que dependan de los números naturales.</p>
 <p><strong>Inducción matemática</strong></p>
 <p>Dada una fórmula <span class="math inline">\(\phi(n)\)</span> que dependa de <span class="math inline">\(n \in \mathbb{N}\)</span>, si:</p>
@@ -2654,7 +2658,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </ul>
 <p>Entonces <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq k_{0}\)</span>.</p>
 <section id="ejemplo" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo">Ejemplo</h4>
+<h4 class="anchored" data-anchor-id="ejemplo"><span style="color: #e92121;">Ejemplo</span></h4>
 <p>Probemos usando inducción matemática, que si <span class="math inline">\(2 \leq m\)</span> entonces <span class="math inline">\(S(n) \leq m \cdot n\)</span> para todo <span class="math inline">\(n &gt; 0\)</span>.</p>
 <p>Definamos la fórmula <span class="math inline">\(\phi(n)=\{S(n) \leq m \cdot n\}\)</span>.</p>
 <p>Comencemos verificando el paso inicial, en este caso, <span class="math inline">\(k_{0}=S(0)\)</span>. Note que <span class="math inline">\(2=S(S(0)) \leq m \cdot S(0)=m\)</span>, es decir, <span class="math inline">\(\phi(S(0))\)</span> es cierta.</p>
@@ -2663,14 +2667,14 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>De la prueba anterior, podemos observar que si <span class="math inline">\(m &gt; 2\)</span> entonces <span class="math inline">\(S(n) &lt; m \cdot n\)</span> para todo <span class="math inline">\(n \geq 1\)</span>.</p>
 </section>
 <section id="ejemplo-1" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-1">Ejemplo</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-1"><span style="color: #e92121;">Ejemplo</span></h4>
 <p>Supongamos que queremos demostrar que <span class="math inline">\(n &lt; 10^{n}\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>. Definamos la fórmula <span class="math display">\[\phi(n)=\{n &lt; 10^{n}\}\]</span>.</p>
 <p>Para usar inducción matemática, primero verificamos el paso inicial, en este caso, <span class="math inline">\(k_{0}=0\)</span>, es decir, verificamos que <span class="math inline">\(\phi(0)\)</span> sea cierta. Como <span class="math inline">\(0 &lt; S(0)=10^{0}\)</span> entonces en efecto <span class="math inline">\(\phi(0)\)</span> es cierta.</p>
 <p>Ahora suponemos que <span class="math inline">\(\phi(k)\)</span> es cierto, es decir, asumimos la hipótesis de inducción y probemos que <span class="math inline">\(\phi(S(k))\)</span> es cierto. Si tenemos que <span class="math inline">\(k &lt; 10^{k}\)</span>, multiplicando a ambos lados por <span class="math inline">\(10\)</span>, obtenemos que <span class="math inline">\(10 \cdot k &lt; 10 \cdot 10^{k}=10^{S(k)}\)</span>. Como <span class="math inline">\(S(k) &lt; 10 \cdot k\)</span> entonces <span class="math inline">\(S(k) &lt; 10^{S(k)}\)</span>. Por lo tanto <span class="math inline">\(\phi(S(k))\)</span> es cierto.</p>
 <p>De la hipótesis de inducción se concluye que la fórmula <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, es decir, <span class="math inline">\(n &lt; 10^{n}\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
 </section>
 <section id="ejemplo-2" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-2">Ejemplo</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-2"><span style="color: #e92121;">Ejemplo</span></h4>
 <p>Usemos la notación <span class="math inline">\(1+ \cdots + n\)</span> para denotar la suma de los números naturales que están entre <span class="math inline">\(1\)</span> y <span class="math inline">\(n\)</span>.</p>
 <p>Probemos que para todo <span class="math inline">\(n \in \mathbb{N}\)</span> con <span class="math inline">\(1 \leq n\)</span>, se tiene que <span class="math inline">\(2 \cdot (1+ \cdots + n)=n \cdot S(n)\)</span>.</p>
 <p>Definamos la fórmula <span class="math inline">\(\phi(n)=\{2 \cdot (1+ \cdots +n)=n \cdot S(n)\}\)</span>.</p>
@@ -2680,11 +2684,11 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </section>
 </section>
 <section id="representación-de-los-números-naturales-en-base-diez" class="level3">
-<h3 class="anchored" data-anchor-id="representación-de-los-números-naturales-en-base-diez">Representación de los números naturales en base diez</h3>
+<h3 class="anchored" data-anchor-id="representación-de-los-números-naturales-en-base-diez"><span style="color: #1e8449;">Representación de los números naturales en base diez</span></h3>
 <p>Definamos el número natural <strong>diez</strong> como el sucesor del <span class="math inline">\(9\)</span>, que denotaremos con el símbolo <span class="math inline">\(10\)</span>.</p>
 <p>El primer algortimo de la historia es conocido con el nombre de “algoritmo de la división” y fue desarrollado por los matemáticos árabes. Este algoritmo permite representar cualquier número natural en base diez, es decir, como una suma de potencias de diez multiplicadas por dígitos del 0 al 9.</p>
 <section id="algoritmo-de-la-división" class="level4">
-<h4 class="anchored" data-anchor-id="algoritmo-de-la-división">Algoritmo de la división</h4>
+<h4 class="anchored" data-anchor-id="algoritmo-de-la-división"><span style="color: #e92121;">Algoritmo de la división</span></h4>
 <p>Dados dos números naturales <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(m \neq 0\)</span>, existen únicos números naturales <span class="math inline">\(k,s \in \mathbb{N}\)</span> tales que <span class="math inline">\(n=m \cdot k + s\)</span> y <span class="math inline">\(0 \leq s &lt; m\)</span>.</p>
 <p><strong>Existencia:</strong></p>
 <p>Observemos que si <span class="math inline">\(n &lt; m\)</span> entonces <span class="math inline">\(n=m \cdots 0 + 0\)</span>.</p>
@@ -2712,8 +2716,8 @@ Figure&nbsp;2: El conjunto <span class="math inline">\(B = \{mt \mid n &lt; mt\}
 <p>Tenemos entonces <span class="math inline">\(m \cdot k + s =n = m \cdot k + t\)</span>, y de la propiedad cancelativa de la suma, <span class="math inline">\(t=s\)</span>.</p>
 <p>Nuestro próximo objetivo es probar que todo número natural se puede escribir de manera única como una suma finita de elementos del conjunto <span class="math inline">\(\{0,1, \dots, 9\}\)</span> por potencias del número <span class="math inline">\(10\)</span>.</p>
 </section>
-<section id="ejercicio-2" class="level4">
-<h4 class="anchored" data-anchor-id="ejercicio-2">Ejercicio</h4>
+<section id="ejercicio-3" class="level4">
+<h4 class="anchored" data-anchor-id="ejercicio-3">Ejercicio</h4>
 <ul>
 <li><p>Demuestre que si <span class="math inline">\(2 \leq m\)</span>, entonces <span class="math inline">\(S(n) \leq m \cdot n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>.</p></li>
 <li><p>Demuestre que si <span class="math inline">\(m \in \mathbb{N}\)</span> es tal que <span class="math inline">\(2 \leq m\)</span>, entonces para todo <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n &lt; m^{n}\)</span>.</p></li>

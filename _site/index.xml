@@ -23,11 +23,11 @@
 
 <p>Todo el cálculo diferencial se desarrolla sobre el conjunto de los números reales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D">. Las propiedades que definen este conjunto, son las que permiten definir formalmente el concepto de límite, que es la idea central para el desarrollo del cálculo diferencial.</p>
 <section id="los-números-naturales-mathbbn" class="level2">
-<h2 class="anchored" data-anchor-id="los-números-naturales-mathbbn"><span style="color: #1e8449;">Los números naturales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"></span></h2>
+<h2 class="anchored" data-anchor-id="los-números-naturales-mathbbn"><span style="color: #2158c7;">Los números naturales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"></span></h2>
 <p>La construcción de los números naturales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> es el paso inicial en la construcción de los números reales. Los naturales son el conjunto que usamos para contar, que generalmente escribimos como <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D=%5C%7B1,2,%20%5Cdots,%20n,%20%5Cdots%5C%7D">. A pesar de que estamos muy acostumbrados a usar el conjunto de los números naturales, para tener una formalización matemática de este conjunto, tocó esperar hasta el siglo XIX, cuando en el año 1889, el matemático italiano Giuseppe Peano introdujo un conjunto de axiomas conocidos como los <strong>Axiomas de Peano</strong>. Existen otras construcciones de los números naturales, como por ejemplo la construcción a partir de la teoría de conjuntos, desarrollada por Ernst Zermelo y Abraham Fraenkel.</p>
 <p>Antes de introducir los axiomas de Peano, definamos el concepto de función.</p>
 <section id="funciones" class="level3">
-<h3 class="anchored" data-anchor-id="funciones">Funciones</h3>
+<h3 class="anchored" data-anchor-id="funciones"><span style="color: #1e8449;">Funciones</span></h3>
 <p>De manera informal, una función es una regla de asignación entre dos conjuntos, un conjunto de salida <img src="https://latex.codecogs.com/png.latex?A"> y un conjunto de llegada <img src="https://latex.codecogs.com/png.latex?B">, que a cada elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A"> le asigna un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">.</p>
 <p>Una manera de representar las funciones es mediante un diagrama de flechas, como muestra la siguiente figura:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -44,7 +44,7 @@
 </figure>
 </div>
 <section id="ejemplo-de-función" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-de-función">Ejemplo de función</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-de-función"><span style="color: #e92121;">Ejemplo de función</span></h4>
 <p>Consideremos un conjunto con tres elementos <img src="https://latex.codecogs.com/png.latex?A=%5C%7Ba,%20b,%20c%5C%7D"> y un conjunto con cinco elementos <img src="https://latex.codecogs.com/png.latex?B=%5C%7Bx,y,z,w,v%5C%7D">. La asignación <img src="https://latex.codecogs.com/png.latex?a%20%5Cmapsto%20z">, <img src="https://latex.codecogs.com/png.latex?b%20%5Cmapsto%20v"> y <img src="https://latex.codecogs.com/png.latex?c%20%5Cmapsto%20z"> es un ejemplo de una función <img src="https://latex.codecogs.com/png.latex?f"> representada gráficamente como:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -54,7 +54,7 @@
 </div>
 </section>
 <section id="ejemplo-de-alguien-que-no-es-una-función" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-de-alguien-que-no-es-una-función">Ejemplo de alguien que no es una función</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-de-alguien-que-no-es-una-función"><span style="color: #e92121;">Ejemplo de alguien que no es una función</span></h4>
 <p>Con los mismos conjuntos del ejemplo anterior, la figura</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -65,7 +65,7 @@
 <p>no representa una función, ya que al elemento <img src="https://latex.codecogs.com/png.latex?b"> <strong>no</strong> se le está asignando un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">, sino que se le están asignando dos elementos distintos, <img src="https://latex.codecogs.com/png.latex?v"> y <img src="https://latex.codecogs.com/png.latex?w">.</p>
 </section>
 <section id="definición-formal-de-función" class="level4">
-<h4 class="anchored" data-anchor-id="definición-formal-de-función">Definición formal de función</h4>
+<h4 class="anchored" data-anchor-id="definición-formal-de-función"><span style="color: #e92121;">Definición formal de función</span></h4>
 <p>Recordemos que si <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B"> son dos conjuntos, el producto cartesiano <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20B"> se define como <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20B%20=%20%5C%7B(a,b)%20:%20a%20%5Cin%20A,%20b%20%5Cin%20B%5C%7D."></p>
 <p>De manera formal, una función de un conjunto <img src="https://latex.codecogs.com/png.latex?A"> a un conjunto <img src="https://latex.codecogs.com/png.latex?B">, es un subconjunto <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> tal que:</p>
 <ol type="1">
@@ -75,7 +75,7 @@
 <p>Veamos que esta definición formal coincide con la noción informal anterior. Si <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> es una función, la condición <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20F"> la vamos a escribir como <img src="https://latex.codecogs.com/png.latex?b=f(a)">, y a la función <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> la representaremos por <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B">. Con esta notación, 1) se convierte en: para todo <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> existe <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> tal que <img src="https://latex.codecogs.com/png.latex?b=f(a)">, es decir, a cada elemento de <img src="https://latex.codecogs.com/png.latex?A"> le corresponde un elemento de <img src="https://latex.codecogs.com/png.latex?B">, y la condición 2) se traduce en: si <img src="https://latex.codecogs.com/png.latex?f(a)=b"> y <img src="https://latex.codecogs.com/png.latex?f(a)=c"> entonces <img src="https://latex.codecogs.com/png.latex?b=c">, lo que garantiza que a cada elemento de <img src="https://latex.codecogs.com/png.latex?A"> le corresponde un único elemento de <img src="https://latex.codecogs.com/png.latex?B">.</p>
 </section>
 <section id="ejemplo-interactivo-de-función" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función">Ejemplo interactivo de función</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función"><span style="color: #e92121;">Ejemplo interactivo de función</span></h4>
 <p>En el siguiente ejemplo interactivo, al decidir la asignación de flechas que a cada elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A"> lo apareja con un único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">, se está construyendo una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B">, que en la parte de abajo es representada de manera formal como un subconjunto de <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20B">.</p>
 <div id="interactivo-funcion">
 <div style="font-family: sans-serif; max-width: 500px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
@@ -200,11 +200,11 @@ dibujarSVG();
 </div>
 </section>
 <section id="notación-para-las-funciones" class="level4">
-<h4 class="anchored" data-anchor-id="notación-para-las-funciones">Notación para las funciones</h4>
+<h4 class="anchored" data-anchor-id="notación-para-las-funciones"><span style="color: #e92121;">Notación para las funciones</span></h4>
 <p>De ahora en adelante, denotaremos a una función <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> como <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> donde para cada <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> denotaremos por <img src="https://latex.codecogs.com/png.latex?f(a)"> al único elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B"> tal que <img src="https://latex.codecogs.com/png.latex?(a,f(a))%20%5Cin%20F">. El conjunto <img src="https://latex.codecogs.com/png.latex?A"> recibe el nombre de conjunto de salida o dominio de la función <img src="https://latex.codecogs.com/png.latex?f">, y el conjunto <img src="https://latex.codecogs.com/png.latex?B"> recibe el nombre de conjunto de llegada o codominio de la función <img src="https://latex.codecogs.com/png.latex?f">.</p>
 </section>
 <section id="otros-ejemplos-de-funciones" class="level4">
-<h4 class="anchored" data-anchor-id="otros-ejemplos-de-funciones">Otros ejemplos de funciones</h4>
+<h4 class="anchored" data-anchor-id="otros-ejemplos-de-funciones"><span style="color: #e92121;">Otros ejemplos de funciones</span></h4>
 <ol type="1">
 <li><p>Supongamos que <img src="https://latex.codecogs.com/png.latex?A%20%5Csubseteq%20B"> es un subconjunto. Definimos la función <strong>inclusión</strong> <img src="https://latex.codecogs.com/png.latex?i:%20A%20%5Crightarrow%20B">, como la función que a cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> le asigna el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20B">, es decir, <img src="https://latex.codecogs.com/png.latex?i(a)=a"> para todo <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">. Si vemos esta función como un subconjunto de <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20B">, tenemos que el subconjunto correspondiente es <img src="https://latex.codecogs.com/png.latex?%5C%7B(a,a):%20a%20%5Cin%20A%5C%7D%20%5Csubseteq%20A%20%5Ctimes%20B">, que claramente satisface las dos condiciones de la definición formal de función.</p></li>
 <li><p>Supongamos que tenemos dos conjuntos <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B">. Definimos las funciones proyecciones <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20A"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20B"> como <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D(a,b)=a"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D(a,b)=b"> para todo <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20A%20%5Ctimes%20B">. Los respectivos conjuntos correspondientes a estas funciones son <img src="https://latex.codecogs.com/png.latex?%5C%7B((a,b),a):%20(a,b)%20%5Cin%20A%20%5Ctimes%20B%5C%7D%20%5Csubseteq%20(A%20%5Ctimes%20B)%20%5Ctimes%20A"> y <img src="https://latex.codecogs.com/png.latex?%5C%7B((a,b),b):%20(a,b)%20%5Cin%20A%20%5Ctimes%20B%5C%7D%20%5Csubseteq%20(A%20%5Ctimes%20B)%20%5Ctimes%20B,"> que satisfacen las dos condiciones de la definición formal de función.</p></li>
@@ -262,15 +262,15 @@ dibujarSVG();
 </div>
 </section>
 <section id="cuándo-dos-funciones-son-iguales" class="level4">
-<h4 class="anchored" data-anchor-id="cuándo-dos-funciones-son-iguales">¿Cuándo dos funciones son iguales?</h4>
+<h4 class="anchored" data-anchor-id="cuándo-dos-funciones-son-iguales"><span style="color: #e92121;">¿Cuándo dos funciones son iguales?</span></h4>
 <p>Formalmente, dos funciones de <img src="https://latex.codecogs.com/png.latex?A"> a <img src="https://latex.codecogs.com/png.latex?B"> son iguales, si definen el mismo subconjunto de <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20B">. Con nuestra nueva notación, dos funciones <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y <img src="https://latex.codecogs.com/png.latex?g:%20C%20%5Crightarrow%20D"> son iguales, si <img src="https://latex.codecogs.com/png.latex?A=C">, <img src="https://latex.codecogs.com/png.latex?B=D"> y <img src="https://latex.codecogs.com/png.latex?f(a)=g(a)"> para todo <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">.</p>
 </section>
 <section id="pregunta" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta"><span style="color: #e92121;">Pregunta</span></h4>
 <p>En ejemplo interactivo de función, ¿cuántas funciones distintas se pueden construir?</p>
 </section>
 <section id="funciones-sobreyectivas-e-inyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="funciones-sobreyectivas-e-inyectivas">Funciones sobreyectivas e inyectivas</h4>
+<h4 class="anchored" data-anchor-id="funciones-sobreyectivas-e-inyectivas"><span style="color: #e92121;">Funciones sobreyectivas e inyectivas</span></h4>
 <p>Observe que en la definición de función <img src="https://latex.codecogs.com/png.latex?f:A%20%5Crightarrow%20B">, se permite que elementos del conjunto <img src="https://latex.codecogs.com/png.latex?B"> no estén relacionados con ningún elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A">, es decir, puede existir un elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> para el cual no existe ningún <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> tal que <img src="https://latex.codecogs.com/png.latex?b=f(a)">, o de manera equivalente, tal que <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cnotin%20F%20%5Csubseteq%20A%20%5Ctimes%20B">.</p>
 <p>Por ejemplo, en la función</p>
 <div class="quarto-figure quarto-figure-center">
@@ -291,7 +291,7 @@ dibujarSVG();
 <p>es sobreyectiva, ya que todos los elementos del conjunto <img src="https://latex.codecogs.com/png.latex?B"> están relacionados con algún elemento del conjunto <img src="https://latex.codecogs.com/png.latex?A">.</p>
 </section>
 <section id="pregunta-1" class="level4">
-<h4 class="anchored">Pregunta</h4>
+<h4 class="anchored"><span style="color: #e92121;">Pregunta</span></h4>
 <p>¿Es posible construir una función sobreyectiva <img src="https://latex.codecogs.com/png.latex?f:%20%5C%7Ba,b,c%5C%7D%20%5Crightarrow%20%5C%7Bx,y,z,w%5C%7D">?</p>
 <p>Esta pregunta es equivalente al siguiente problema:</p>
 <div id="interactivo-principio-del-palomar">
@@ -506,7 +506,7 @@ render();
 <p>El problema anterior es un ejemplo del <strong>Principio del Palomar</strong>, que establece que si hay más palomas que huecos en el palomar y se quieren guardar todas las palomas en los huecos, obligatoriamente en alguno de los huecos del palomar se tendrán que ubicar por lo menos dos palomas.</p>
 </section>
 <section id="ejemplos-de-funciones-sobreyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-sobreyectivas">Ejemplos de funciones sobreyectivas</h4>
+<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-sobreyectivas"><span style="color: #e92121;">Ejemplos de funciones sobreyectivas</span></h4>
 <ol type="1">
 <li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> es un conjunto, definimos la función identidad <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D:%20A%20%5Crightarrow%20A"> que a cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> le asigna el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, es decir, <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D(a)=a">. Esta función como subconjunto de <img src="https://latex.codecogs.com/png.latex?A%20%5Ctimes%20A"> corresponde a <img src="https://latex.codecogs.com/png.latex?F=%5C%7B(a,a)~%20:~%20a%20%5Cin%20A%5C%7D">. Esta función es claramente sobreyectiva, ya que todo elemento del conjunto de llegada <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> está relacionado con el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> del conjunto de salida.</p></li>
 <li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B"> son conjuntos, las funciones proyecciones <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20A"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20B"> definidas como <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D(a,b)=a"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D(a,b)=b"> para todo <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20A%20%5Ctimes%20B">, son sobreyectivas. Como se puede ver en el siguiente gráfico, un elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> está relacionado con todos los elementos de la linea roja vertical continua por medio de la función <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D">, y un elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> está relacionado con todos los elementos de la linea azul horizontal continua por medio de la función <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D">.</p></li>
@@ -566,7 +566,7 @@ render();
 </div>
 </section>
 <section id="ejemplo-interactivo-de-función-sobreyectiva" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-sobreyectiva">Ejemplo interactivo de función sobreyectiva</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-sobreyectiva"><span style="color: #e92121;">Ejemplo interactivo de función sobreyectiva</span></h4>
 <div id="construyendo-funcion-sobreyectiva">
 <div id="app-sobreyectiva-v3" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
   <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
@@ -732,14 +732,14 @@ render();
 </div>
 </section>
 <section id="pregunta-2" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta-2">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta-2"><span style="color: #e92121;">Pregunta</span></h4>
 <p>¿Cuántas funciones sobreyectivas distintas se pueden construir en Construyendo una función sobreyectiva ?</p>
 <p><strong>Ayuda:</strong> Encuentre cuántas funciones que no sean sobreyectivas se pueden construir y réstelas del total de funciones posibles.</p>
 <p><strong>Imagen de una función:</strong> Dada una función <img src="https://latex.codecogs.com/png.latex?f:A%20%5Crightarrow%20B"> definimos su imagen que denotaremos <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(f)%20%5Csubseteq%20B"> como el conjunto de todos los elementos de <img src="https://latex.codecogs.com/png.latex?B"> que están relacionados con algún elemento de <img src="https://latex.codecogs.com/png.latex?A">, es decir, <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(f)=%5C%7Bb%20%5Cin%20B~%20:~%20%5Ctextrm%7Bexiste%7D~%20a%20%5Cin%20A~%20%5Ctextrm%7Bcon%7D~%20f(a)=b%5C%7D">.</p>
 <p>Una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es sobreyectiva si y solo si <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(f)=B">.</p>
 </section>
 <section id="funciones-inyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="funciones-inyectivas">Funciones inyectivas</h4>
+<h4 class="anchored" data-anchor-id="funciones-inyectivas"><span style="color: #e92121;">Funciones inyectivas</span></h4>
 <p>En la definición de función <img src="https://latex.codecogs.com/png.latex?f:A%20%5Crightarrow%20B">, sabemos que cada elemento de <img src="https://latex.codecogs.com/png.latex?A"> tiene que estar conectado con un único elemento de <img src="https://latex.codecogs.com/png.latex?B">, pero en la definición de función se permite que dos elementos distintos del conjunto <img src="https://latex.codecogs.com/png.latex?A"> estén relacionados con el mismo elemento del conjunto <img src="https://latex.codecogs.com/png.latex?B">, es decir, puede existir un elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> para el cual existen dos elementos distintos <img src="https://latex.codecogs.com/png.latex?a_%7B1%7D,%20a_%7B2%7D%20%5Cin%20A"> tal que <img src="https://latex.codecogs.com/png.latex?b=f(a_%7B1%7D)=f(a_%7B2%7D)">, o de manera equivalente, tal que <img src="https://latex.codecogs.com/png.latex?(a_%7B1%7D,b),%20(a_%7B2%7D,b)%20%5Cin%20F%20%5Csubseteq%20A%20%5Ctimes%20B">.</p>
 <p>Por ejemplo, en la función del siguiente gráfico,</p>
 <div class="quarto-figure quarto-figure-center">
@@ -754,14 +754,14 @@ render();
 <p>Del gráfico Sobreyectividad de las funciones proyecciones, podemos ver que las funciones <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B1%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20A"> y <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7B2%7D:%20A%20%5Ctimes%20B%20%5Crightarrow%20B"> no son inyectivas, ya que dado <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> todos los elementos de la línea roja vertical continua se relacionan con el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, y dado <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B"> todos los elementos de la línea azul horizontal continua se relacionan con el mismo elemento <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20B">.</p>
 </section>
 <section id="ejemplos-de-funciones-inyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-inyectivas">Ejemplos de funciones inyectivas</h4>
+<h4 class="anchored" data-anchor-id="ejemplos-de-funciones-inyectivas"><span style="color: #e92121;">Ejemplos de funciones inyectivas</span></h4>
 <ol type="1">
 <li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> es un conjunto, la función identidad <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D:%20A%20%5Crightarrow%20A"> que a cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> le asigna el mismo elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, es decir, <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D(a)=a"> para todo <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, es una función inyectiva.</p></li>
 <li><p>Si <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B"> son conjunto y fijamos un elemento <img src="https://latex.codecogs.com/png.latex?b_%7B0%7D%20%5Cin%20B">, entonces la función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20A%20%5Ctimes%20B"> definida como <img src="https://latex.codecogs.com/png.latex?f(a)=(a,b_%7B0%7D)"> para todo <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, es inyectiva, ya que si <img src="https://latex.codecogs.com/png.latex?f(a_1)=f(a_2)">, entonces <img src="https://latex.codecogs.com/png.latex?(a_1,b_%7B0%7D)=(a_2,b_%7B0%7D)">, lo que implica <img src="https://latex.codecogs.com/png.latex?a_1=a_2">.</p></li>
 </ol>
 </section>
 <section id="ejemplo-interactivo-de-función-inyectiva" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-inyectiva">Ejemplo interactivo de función inyectiva</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-inyectiva"><span style="color: #e92121;">Ejemplo interactivo de función inyectiva</span></h4>
 <div id="construyendo-funcion-inyectiva">
 <div id="app-inyectiva-v1" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
   <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
@@ -932,20 +932,20 @@ render();
 </div>
 </section>
 <section id="pregunta-3" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta-3">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta-3"><span style="color: #e92121;">Pregunta</span></h4>
 <p>¿Cuántas funciones inyectivas distintas se pueden construir en Construyendo una función inyectiva?</p>
 </section>
 <section id="funciones-biyectivas" class="level4">
-<h4 class="anchored" data-anchor-id="funciones-biyectivas">Funciones biyectivas</h4>
+<h4 class="anchored" data-anchor-id="funciones-biyectivas"><span style="color: #e92121;">Funciones biyectivas</span></h4>
 <p>Una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es <strong>biyectiva</strong> si es inyectiva y sobreyectiva.</p>
 <p>Por ejemplo la función identidad <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bid%7D_%7BA%7D:%20A%20%5Crightarrow%20A"> es biyectiva, ya que es inyectiva y sobreyectiva.</p>
 </section>
 <section id="pregunta-4" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta-4">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta-4"><span style="color: #e92121;">Pregunta</span></h4>
 <p>¿Es posible construir una función biyectiva en Construyendo una función sobreyectiva o en Construyendo una función inyectiva?</p>
 </section>
 <section id="ejemplo-interactivo-de-función-biyectiva" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-biyectiva">Ejemplo interactivo de función biyectiva</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-interactivo-de-función-biyectiva"><span style="color: #e92121;">Ejemplo interactivo de función biyectiva</span></h4>
 <div id="construyendo-funcion-biyectiva">
 <div id="app-biyectiva-v1" style="font-family: system-ui, -apple-system, sans-serif; max-width: 520px; margin: 10px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
   <p style="text-align: center; font-size: 15px; color: #4a5568; margin-top: 0;">
@@ -1112,11 +1112,11 @@ render();
 </div>
 </section>
 <section id="pregunta-5" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta-5">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta-5"><span style="color: #e92121;">Pregunta</span></h4>
 <p>¿Cuántas funciones biyectivas distintas se pueden construir en Construyendo una función biyectiva?</p>
 </section>
 <section id="composición-de-funciones" class="level4">
-<h4 class="anchored" data-anchor-id="composición-de-funciones">Composición de funciones</h4>
+<h4 class="anchored" data-anchor-id="composición-de-funciones"><span style="color: #e92121;">Composición de funciones</span></h4>
 <p>En algunos casos, bajo ciertas condiciones, es posible construir una función a partir de dos funciones dadas. Si tenemos por ejemplo una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y <img src="https://latex.codecogs.com/png.latex?g:%20B%20%5Crightarrow%20C">, a un elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> le corresponde un único elemento <img src="https://latex.codecogs.com/png.latex?f(a)%20%5Cin%20B"> por ser <img src="https://latex.codecogs.com/png.latex?f"> una función, pero como <img src="https://latex.codecogs.com/png.latex?g"> también es función, a este elemento <img src="https://latex.codecogs.com/png.latex?f(a)%20%5Cin%20B"> le corresponde un único elemento <img src="https://latex.codecogs.com/png.latex?g(f(a))%20%5Cin%20C">. Lo anterior nos permite asignarle a cada elemento <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> un único elemento <img src="https://latex.codecogs.com/png.latex?g(f(a))%20%5Cin%20C">. Lo anterior es la definción de la compuesta o composición de dos funciones.</p>
 <p><strong>Composición de funciones:</strong> Dadas dos funciones <img src="https://latex.codecogs.com/png.latex?f:A%20%5Crightarrow%20B"> y <img src="https://latex.codecogs.com/png.latex?g:B%20%5Crightarrow%20C">, definimos la compuesta de <img src="https://latex.codecogs.com/png.latex?g"> con <img src="https://latex.codecogs.com/png.latex?f"> que denotaremos por <img src="https://latex.codecogs.com/png.latex?g%20%5Ccirc%20f:%20A%20%5Crightarrow%20C">, como <img src="https://latex.codecogs.com/png.latex?g%20%5Ccirc%20f(a)=g(f(a))">.</p>
 <p>Por ejemplo, en el gráfico</p>
@@ -1129,7 +1129,7 @@ render();
 <p>se muestran las funciones <img src="https://latex.codecogs.com/png.latex?f"> y <img src="https://latex.codecogs.com/png.latex?g">. Al hacer la composición de <img src="https://latex.codecogs.com/png.latex?g"> con <img src="https://latex.codecogs.com/png.latex?f"> obtenemos la función <img src="https://latex.codecogs.com/png.latex?g%20%5Ccirc%20f">, que envía: <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation*%7D%5Cbegin%7Baligned%7D%20a%20%5Cmapsto%20g(f(a))=g(y)=t%5C%5C%0Ab%20%5Cmapsto%20g(f(b))=g(x)=v%20%5C%5C%0Ac%20%5Cmapsto%20g(f(c))=g(w)=u.%20%20%5Cend%7Baligned%7D%5Cend%7Bequation*%7D"></p>
 </section>
 <section id="ejemplo-interactivo-de-composición-de-funciones" class="level4">
-<h4 class="anchored">Ejemplo interactivo de composición de funciones</h4>
+<h4 class="anchored"><span style="color: #e92121;">Ejemplo interactivo de composición de funciones</span></h4>
 <div id="app-composicion-aleatoria-v2" style="font-family: system-ui, -apple-system, sans-serif; max-width: 880px; margin: 15px auto; padding: 22px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
 
   <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="ejemplo-interactivo-de-composición-de-funciones">Composición de Funciones</h3>
@@ -1467,11 +1467,11 @@ render();
 </script>
 </div></section>
 <section id="observación" class="level4">
-<h4 class="anchored" data-anchor-id="observación">Observación:</h4>
+<h4 class="anchored" data-anchor-id="observación"><span style="color: #e92121;">Observación:</span></h4>
 <p>Al tener dos funciones <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y <img src="https://latex.codecogs.com/png.latex?g:%20B%20%5Crightarrow%20C">, lo que hace que tenga sentido la definición de <img src="https://latex.codecogs.com/png.latex?g%20%5Ccirc%20f">, es que el codominio de <img src="https://latex.codecogs.com/png.latex?f"> coincide con el dominio de <img src="https://latex.codecogs.com/png.latex?g">. Tenga en cuenta que la notación <img src="https://latex.codecogs.com/png.latex?g%20%5Ccirc%20f"> quiere decir que primero se aplica la función <img src="https://latex.codecogs.com/png.latex?f"> y luego la función <img src="https://latex.codecogs.com/png.latex?g">, es decir, se lee de derecha a izquierda. Si tenemos funciones <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y <img src="https://latex.codecogs.com/png.latex?g:%20B%20%5Crightarrow%20C">, tenemos entonces la nueva función <img src="https://latex.codecogs.com/png.latex?g%20%5Ccirc%20f:%20A%20%5Crightarrow%20C">. Sin embargo, para que <img src="https://latex.codecogs.com/png.latex?f%20%5Ccirc%20g"> tenga sentido es necesario que <img src="https://latex.codecogs.com/png.latex?A=C">. Por lo tanto, si tenemos funciones <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y <img src="https://latex.codecogs.com/png.latex?g:%20B%20%5Crightarrow%20A">, con la composición de funciones obtenemos las funciones <img src="https://latex.codecogs.com/png.latex?g%20%5Ccirc%20f:%20A%20%5Crightarrow%20A"> y <img src="https://latex.codecogs.com/png.latex?f%20%5Ccirc%20g:%20B%20%5Crightarrow%20B">.</p>
 </section>
 <section id="ejemplo-interactivo-de-compuesta-de-funciones" class="level4">
-<h4 class="anchored">Ejemplo interactivo de compuesta de funciones</h4>
+<h4 class="anchored"><span style="color: #e92121;">Ejemplo interactivo de compuesta de funciones</span></h4>
 <div id="app-composicion-horizontal" style="font-family: system-ui, -apple-system, sans-serif; max-width: 960px; margin: 15px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); box-sizing: border-box;">
 
   <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="ejemplo-interactivo-de-compuesta-de-funciones">Compuestas entre dos  funciones</h3>
@@ -1841,7 +1841,7 @@ render();
 </script>
 </section>
 <section id="restricción-de-una-función" class="level4">
-<h4 class="anchored" data-anchor-id="restricción-de-una-función">Restricción de una función</h4>
+<h4 class="anchored" data-anchor-id="restricción-de-una-función"><span style="color: #e92121;">Restricción de una función</span></h4>
 <p>Supongamos que tenemos una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y que <img src="https://latex.codecogs.com/png.latex?C%20%5Csubseteq%20A"> es un subconjunto. La función <img src="https://latex.codecogs.com/png.latex?f"> induce una función <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D:%20C%20%5Crightarrow%20B"> que llamaremos la restricción de <img src="https://latex.codecogs.com/png.latex?f"> al subconjunto <img src="https://latex.codecogs.com/png.latex?C">, definida como <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D(x)=f(x)"> si <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20C">.</p>
 <p>Si <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> es el conjunto que define a la función <img src="https://latex.codecogs.com/png.latex?f">, el conjunto que define a <img src="https://latex.codecogs.com/png.latex?f%7C_%7BC%7D"> es <img src="https://latex.codecogs.com/png.latex?%5C%7B(x,y)%20%5Cin%20F%20~%20:~%20x%20%5Cin%20C%5C%7D">.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -1852,12 +1852,12 @@ render();
 </div>
 </section>
 <section id="pregunta-6" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta-6">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta-6"><span style="color: #e92121;">Pregunta</span></h4>
 <p>¿Qué puede decir sobre la restricción del codominio?, es decir, si <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> y <img src="https://latex.codecogs.com/png.latex?C%20%5Csubset%20B">, ¿es <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20C"> una función?</p>
 <p>Demuestre que si <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es una función y <img src="https://latex.codecogs.com/png.latex?C%20%5Csubset%20B">, entonces <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20C"> es una función si y solo si <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(f)%20%5Csubseteq%20C">.</p>
 </section>
 <section id="inversa-de-una-función-con-respecto-a-la-composición" class="level4">
-<h4 class="anchored" data-anchor-id="inversa-de-una-función-con-respecto-a-la-composición">Inversa de una función con respecto a la composición</h4>
+<h4 class="anchored" data-anchor-id="inversa-de-una-función-con-respecto-a-la-composición"><span style="color: #e92121;">Inversa de una función con respecto a la composición</span></h4>
 <p>Una propiedad importante de las funciones inyectivas, es que al invertir la dirección de las flechas, se obtiene una función. Si <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es una función inyectiva, al reversar las flechas se obtiene una función <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D:%20%5Ctextrm%7Bim%7D(f)%20%5Crightarrow%20A">.</p>
 <p>En la siguiente figura se muestra una función inyectiva junto con el gráfico que se obtiene al reversar las flechas.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -1867,7 +1867,10 @@ render();
 </figure>
 </div>
 <p>Observe que en la figura anterior, el gráfico de la derecha produce una función cuando se restringe a la imagen de <img src="https://latex.codecogs.com/png.latex?f">, es decir, al conjunto <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(f)=%5C%7Bx,z,w%5C%7D">. Esta función será denotada como <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D:%20%5Ctextrm%7Bim%7D(f)%20%5Crightarrow%20A">.</p>
-<p><strong>Definición formal de inversa:</strong> Si <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es una función inyectiva, definimos la función <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D:%20%5Ctextrm%7Bim%7D(f)%20%5Crightarrow%20A"> como <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D(b)=a"> si <img src="https://latex.codecogs.com/png.latex?f(a)=b">, es decir, para cada <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20%5Ctextrm%7Bim%7D(f)"> se tiene que <img src="https://latex.codecogs.com/png.latex?b=f(a)"> para algún <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, lo que nos permite definir <img src="https://latex.codecogs.com/png.latex?b%20%5Cmapsto%20a"> (invertir la flecha), y por la inyectividad de <img src="https://latex.codecogs.com/png.latex?f"> este <img src="https://latex.codecogs.com/png.latex?a"> es único, lo que garantiza que <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D"> es una función.</p>
+</section>
+<section id="definición-formal-de-inversa" class="level4">
+<h4 class="anchored" data-anchor-id="definición-formal-de-inversa"><span style="color: #e92121;">Definición formal de inversa:</span></h4>
+<p>Si <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es una función inyectiva, definimos la función <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D:%20%5Ctextrm%7Bim%7D(f)%20%5Crightarrow%20A"> como <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D(b)=a"> si <img src="https://latex.codecogs.com/png.latex?f(a)=b">, es decir, para cada <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20%5Ctextrm%7Bim%7D(f)"> se tiene que <img src="https://latex.codecogs.com/png.latex?b=f(a)"> para algún <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, lo que nos permite definir <img src="https://latex.codecogs.com/png.latex?b%20%5Cmapsto%20a"> (invertir la flecha), y por la inyectividad de <img src="https://latex.codecogs.com/png.latex?f"> este <img src="https://latex.codecogs.com/png.latex?a"> es único, lo que garantiza que <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D"> es una función.</p>
 <p>Observe que <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D"> corresponde al subconjunto <img src="https://latex.codecogs.com/png.latex?%5C%7B(b,a)%20%5Cin%20%5Ctextrm%7Bim%7D(f)%20%5Ctimes%20A%20~%20:%20~%20f(a)=b%5C%7D"> o de manera equivalente, si <img src="https://latex.codecogs.com/png.latex?F%20%5Csubseteq%20A%20%5Ctimes%20B"> es el conjunto que define a la función <img src="https://latex.codecogs.com/png.latex?f">, el conjunto que define a <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D"> es <img src="https://latex.codecogs.com/png.latex?%5C%7B(b,a)%20%5Cin%20B%20%5Ctimes%20A%20~%20:~%20(a,b)%20%5Cin%20F%5C%7D">.</p>
 <p>Si una función <img src="https://latex.codecogs.com/png.latex?f"> no es inyectiva entonces al invertir el sentido de las flechas (mirar el gráfico de derecha a izquierda) no es función, o de manera equivalente, como <img src="https://latex.codecogs.com/png.latex?f"> no es inyectiva entonces existen <img src="https://latex.codecogs.com/png.latex?a_1,%20a_2%20%5Cin%20A"> con <img src="https://latex.codecogs.com/png.latex?a_1%20%5Cneq%20a_2"> tales que <img src="https://latex.codecogs.com/png.latex?f(a_1)=b=f(a_2)">, lo que implica que al invertir las flechas <img src="https://latex.codecogs.com/png.latex?b%20%5Cmapsto%20a_%7B1%7D"> y <img src="https://latex.codecogs.com/png.latex?b%20%5Cmapsto%20a_%7B2%7D"> y por lo tanto <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D"> no es función.</p>
 <p>Por ejemplo, en la siguiente figura se muestra una función <img src="https://latex.codecogs.com/png.latex?f"> que no es inyectiva, y en el gráfico de la derecha se puede observar que si se mira de derecha a izquierda hay dos flechas que salen de un mismo punto, lo que implica que no define una función.</p>
@@ -1882,12 +1885,12 @@ render();
 <p>En resumen, si <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es biyectiva la función <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D:%20B%20%5Crightarrow%20A"> es tal que <img src="https://latex.codecogs.com/png.latex?f%20%5Ccirc%20f%5E%7B-1%7D=%5Ctextrm%7Bid%7D_B"> y <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D%20%5Ccirc%20f=%5Ctextrm%7Bid%7D_A">.</p>
 </section>
 <section id="pregunta-7" class="level4">
-<h4 class="anchored" data-anchor-id="pregunta-7">Pregunta</h4>
+<h4 class="anchored" data-anchor-id="pregunta-7"><span style="color: #e92121;">Pregunta</span></h4>
 <p>Si <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B"> es una función biyectiva, ¿Existe una función <img src="https://latex.codecogs.com/png.latex?g:%20B%20%5Crightarrow%20A"> diferente de la función <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D"> tal que <img src="https://latex.codecogs.com/png.latex?f%20%5Ccirc%20g=%5Ctextrm%7Bid%7D_B"> y <img src="https://latex.codecogs.com/png.latex?g%20%5Ccirc%20f=%5Ctextrm%7Bid%7D_A">?.</p>
 <p><strong>Ayuda:</strong> Use que la composición de funciones es asociativa, es decir, si <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Crightarrow%20B">, <img src="https://latex.codecogs.com/png.latex?g:%20B%20%5Crightarrow%20C"> y <img src="https://latex.codecogs.com/png.latex?h:%20C%20%5Crightarrow%20D"> son funciones, entonces <img src="https://latex.codecogs.com/png.latex?h%20%5Ccirc%20(g%20%5Ccirc%20f)=(h%20%5Ccirc%20g)%20%5Ccirc%20f">.</p>
 </section>
 <section id="ejemplo-interactivo-de-la-inversa-de-una-función" class="level4">
-<h4 class="anchored">Ejemplo interactivo de la inversa de una función</h4>
+<h4 class="anchored"><span style="color: #e92121;">Ejemplo interactivo de la inversa de una función</span></h4>
 <div id="app-biyectiva-inversa" style="font-family: system-ui, -apple-system, sans-serif; max-width: 900px; margin: 15px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); box-sizing: border-box;">
 
   <h3 style="text-align: center; color: #1e293b; margin-top: 0; margin-bottom: 6px;" class="anchored" data-anchor-id="ejemplo-interactivo-de-la-inversa-de-una-función">Función Biyectiva y su Inversa</h3>
@@ -2171,10 +2174,10 @@ render();
 </section>
 </section>
 <section id="construcción-de-los-números-naturales" class="level2">
-<h2 class="anchored" data-anchor-id="construcción-de-los-números-naturales">Construcción de los números naturales</h2>
+<h2 class="anchored" data-anchor-id="construcción-de-los-números-naturales"><span style="color: #2158c7;">Construcción de los números naturales</span></h2>
 <p>Como dijimos anteriormente, hay distintas formas de construir los números naturales, y una de ellas es a partir de los axiomas de Peano.</p>
 <section id="axiomas-de-peano" class="level3">
-<h3 class="anchored" data-anchor-id="axiomas-de-peano">Axiomas de Peano</h3>
+<h3 class="anchored" data-anchor-id="axiomas-de-peano"><span style="color: #1e8449;">Axiomas de Peano</span></h3>
 <p>El conjunto de los números naturales que denotaremos por <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">, se define como un conjunto que satisface los siguientes axiomas:</p>
 <ul>
 <li>Existe un elemento <img src="https://latex.codecogs.com/png.latex?0%20%5Cin"> <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">.</li>
@@ -2186,7 +2189,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <p>Del principio de inducción se deduce que <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(S)%20%5Ccup%20%5C%7B0%5C%7D=%5Cmathbb%7BN%7D">, ya que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20%5Ctextrm%7Bim%7D(S)%20%5Ccup%20%5C%7B0%5C%7D">, y si <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> es tal que <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Ctextrm%7Bim%7D(S)%20%5Ccup%20%5C%7B0%5C%7D"> entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%5Cin%20%5Ctextrm%7Bim%7D(S)%20%5Csubset%20%5Ctextrm%7Bim%7D(S)%20%5Ccup%20%5C%7B0%5C%7D">. Por lo tanto <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csubseteq%20%5Ctextrm%7Bim%7D(S)%20%5Ccup%20%5C%7B0%5C%7D">, y como claramente <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(S)%20%5Ccup%20%5C%7B0%5C%7D%20%5Csubseteq%20%5Cmathbb%7BN%7D">, se tiene que <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(S)%20%5Ccup%20%5C%7B0%5C%7D=%5Cmathbb%7BN%7D">. Como <img src="https://latex.codecogs.com/png.latex?0%20%5Cnotin%20%5Ctextrm%7Bim%7D(S)">, se tiene que <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%7Bim%7D(S)=%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">. Esto equivale a decir que la función <img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D"> es sobreyectiva.</p>
 <p>Observe que como <img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D"> es inyectiva, entonces la función <img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D"> también es inyectiva, y al ser sobreyectiva tenemos entonces que <img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D"> es biyectiva.</p>
 <section id="notación" class="level4">
-<h4 class="anchored" data-anchor-id="notación">Notación</h4>
+<h4 class="anchored" data-anchor-id="notación"><span style="color: #e92121;">Notación</span></h4>
 <p>Vamos a usar los símbolos <img src="https://latex.codecogs.com/png.latex?1,%202,%203,%204,%205,%206,%207,%208,%209"> (que estamos acostumbrados a utilizar día a día) para denotar los primeros siguientes términos que se obtienen al iterar <img src="https://latex.codecogs.com/png.latex?S"> con ella misma y evaluar en el elemento <img src="https://latex.codecogs.com/png.latex?0">.</p>
 <ul>
 <li><img src="https://latex.codecogs.com/png.latex?1=S(0)"></li>
@@ -2203,15 +2206,15 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <p>Gracias a la aritmética de los números naturales, vamos a poder expresar todos los elementos del conjunto <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> usando los símbolos anteriores.</p>
 </section>
 <section id="función-predecesor" class="level4">
-<h4 class="anchored" data-anchor-id="función-predecesor">Función predecesor</h4>
+<h4 class="anchored" data-anchor-id="función-predecesor"><span style="color: #e92121;">Función predecesor</span></h4>
 <p>Como la función <img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D"> es biyectiva, entonces existe una función inversa <img src="https://latex.codecogs.com/png.latex?S%5E%7B-1%7D:%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D"> que llamaremos función predecesor, y que denotaremos por <img src="https://latex.codecogs.com/png.latex?P">. Por definición, para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?P(n)=S%5E%7B-1%7D(n)">, es decir, <img src="https://latex.codecogs.com/png.latex?P(n)=m"> si <img src="https://latex.codecogs.com/png.latex?S(m)=n">.</p>
 </section>
 </section>
 <section id="artitmética-de-los-números-naturales" class="level3">
-<h3 class="anchored" data-anchor-id="artitmética-de-los-números-naturales">Artitmética de los números naturales</h3>
+<h3 class="anchored" data-anchor-id="artitmética-de-los-números-naturales"><span style="color: #1e8449;">Artitmética de los números naturales</span></h3>
 <p>De manera general, una operación binaria en un conjunto <img src="https://latex.codecogs.com/png.latex?A">, es una función <img src="https://latex.codecogs.com/png.latex?f:%20A%20%5Ctimes%20A%20%5Crightarrow%20A">. Veamos que en el conjunto de los números naturales, hay una operación binaria que llamaremos suma, que permite obtener todos los elementos de <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> a partir del <img src="https://latex.codecogs.com/png.latex?0"> y de la función sucesor <img src="https://latex.codecogs.com/png.latex?S">.</p>
 <section id="suma-de-números-naturales" class="level4">
-<h4 class="anchored" data-anchor-id="suma-de-números-naturales">Suma de números naturales</h4>
+<h4 class="anchored" data-anchor-id="suma-de-números-naturales"><span style="color: #e92121;">Suma de números naturales</span></h4>
 <p>Definamos la operación binaria suma en el conjunto <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">, que denotaremos por <img src="https://latex.codecogs.com/png.latex?+%20:%20%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D">, de la siguiente manera:</p>
 <ul>
 <li>Para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, definimos <img src="https://latex.codecogs.com/png.latex?+(n,0)=n">.</li>
@@ -2228,7 +2231,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <p>Comencemos observando que para todo <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D">, la expresión <img src="https://latex.codecogs.com/png.latex?n+m"> está definida, es decir, <img src="https://latex.codecogs.com/png.latex?+(n,m)=n+m%20%5Cin%20%5Cmathbb%7BN%7D">. Esto lo podemos probar usando el axioma de inducción (principio de inducción). Fijemos un elemento arbitrario <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> y consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A_%7Bn%7D=%5C%7Bm%20%5Cin%20%5Cmathbb%7BN%7D%20~%20:%20~%20n+m~%20%5Ctextrm%7Best%C3%A1%20definido%7D%5C%7D">. Notemos que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A_%7Bn%7D">, ya que <img src="https://latex.codecogs.com/png.latex?n+0=n%20%5Cin%20%5Cmathbb%7BN%7D">. Ahora supongamos que <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20A_%7Bn%7D">, es decir, <img src="https://latex.codecogs.com/png.latex?n+m"> está definido. Por definición <img src="https://latex.codecogs.com/png.latex?n+S(m)=S(n+m)">, y como <img src="https://latex.codecogs.com/png.latex?n+m%20%5Cin%20%5Cmathbb%7BN%7D">, se tiene que <img src="https://latex.codecogs.com/png.latex?S(n+m)%20%5Cin%20%5Cmathbb%7BN%7D">, es decir, <img src="https://latex.codecogs.com/png.latex?n+S(m)"> está definido. Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A_%7Bn%7D=%5Cmathbb%7BN%7D">, es decir, para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?n+m"> está definido. Lo anterior muestra que para cada <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D">, <img src="https://latex.codecogs.com/png.latex?n+m%20%5Cin%20%5Cmathbb%7BN%7D">, y por lo tanto, a todo elemento <img src="https://latex.codecogs.com/png.latex?(n,m)%20%5Cin%20%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D">, le corresponde un único elemento <img src="https://latex.codecogs.com/png.latex?n+m%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
 </section>
 <section id="propiedades-de-la-suma" class="level4">
-<h4 class="anchored" data-anchor-id="propiedades-de-la-suma">Propiedades de la suma</h4>
+<h4 class="anchored" data-anchor-id="propiedades-de-la-suma"><span style="color: #e92121;">Propiedades de la suma</span></h4>
 <ul>
 <li>La suma es asociativa, es decir, para todo <img src="https://latex.codecogs.com/png.latex?n,m,k%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?(n+m)+k=n+(m+k)">.</li>
 </ul>
@@ -2245,7 +2248,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </ul>
 </section>
 <section id="otras-propiedades-de-la-suma" class="level4">
-<h4 class="anchored" data-anchor-id="otras-propiedades-de-la-suma">Otras propiedades de la suma</h4>
+<h4 class="anchored" data-anchor-id="otras-propiedades-de-la-suma"><span style="color: #e92121;">Otras propiedades de la suma</span></h4>
 <ul>
 <li>La suma es cancelativa, es decir, si <img src="https://latex.codecogs.com/png.latex?n,m,k%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n+m=n+k">, entonces <img src="https://latex.codecogs.com/png.latex?m=k">.</li>
 </ul>
@@ -2262,7 +2265,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <p><img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Cto%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D"> es sobreyectiva, tenemos que <img src="https://latex.codecogs.com/png.latex?n=S(k)"> para cierto <img src="https://latex.codecogs.com/png.latex?k%20%5Cin%20%5Cmathbb%7BN%7D">. Luego <img src="https://latex.codecogs.com/png.latex?s(k)+t=0"> lo que implica que <img src="https://latex.codecogs.com/png.latex?0=S(k+t)">, lo que es absurso ya que <img src="https://latex.codecogs.com/png.latex?0"> no es el sucesor de nadie.</p>
 </section>
 <section id="relación-de-orden-total-en-los-números-naturales" class="level4">
-<h4 class="anchored" data-anchor-id="relación-de-orden-total-en-los-números-naturales">Relación de orden total en los números naturales</h4>
+<h4 class="anchored" data-anchor-id="relación-de-orden-total-en-los-números-naturales"><span style="color: #e92121;">Relación de orden total en los números naturales</span></h4>
 <p>De manera general, una relación de orden en un conjunto <img src="https://latex.codecogs.com/png.latex?A"> es un subconjunto <img src="https://latex.codecogs.com/png.latex?R%20%5Csubseteq%20A%20%5Ctimes%20A"> que satisface las siguientes propiedades:</p>
 <ul>
 <li><strong>Reflexividad</strong>: Para todo <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A">, se tiene que <img src="https://latex.codecogs.com/png.latex?(a,a)%20%5Cin%20R">.</li>
@@ -2289,7 +2292,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </ul>
 </section>
 <section id="ejercicios" class="level4">
-<h4 class="anchored" data-anchor-id="ejercicios">Ejercicios:</h4>
+<h4 class="anchored" data-anchor-id="ejercicios"><span style="color: #e92121;">Ejercicios:</span></h4>
 <p>Demuestre que la cancelación de la suma también se tiene con desigualdades, es decir,</p>
 <ul>
 <li>Si <img src="https://latex.codecogs.com/png.latex?n+m%20%3C%20n+k">, entonces <img src="https://latex.codecogs.com/png.latex?m%20%3C%20k">.</li>
@@ -2312,10 +2315,10 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <p>También podemos deducir que el conjunto <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> no tiene un elemento maximal, es decir, dado un número natural <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, siempre existe un número natural <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> tal que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, por ejemplo <img src="https://latex.codecogs.com/png.latex?S(n)">, o dicho de manera equivalente, no existe un número natural que sea mayor o igual que todos los demás números naturales.</p>
 </section>
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
-<h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales">Representación gráfica de los números naturales</h4>
+<h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <img src="https://latex.codecogs.com/png.latex?0%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">, y que si <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%3C%20S(m)">.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="98050cd1" class="cell" data-execution_count="1">
+<div id="beb3e39b" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2325,7 +2328,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="ad59f643" class="cell" data-execution_count="2">
+<div id="4c869a11" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2336,7 +2339,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </section>
 <section id="otras-desigualdades-importantes" class="level4">
-<h4 class="anchored" data-anchor-id="otras-desigualdades-importantes">Otras desigualdades importantes</h4>
+<h4 class="anchored" data-anchor-id="otras-desigualdades-importantes"><span style="color: #e92121;">Otras desigualdades importantes</span></h4>
 <ul>
 <li>k &lt; S(n) implica que k ≤ n.&nbsp;</li>
 </ul>
@@ -2360,7 +2363,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 </div>
 </section>
 <section id="principio-del-buen-orden" class="level4">
-<h4 class="anchored" data-anchor-id="principio-del-buen-orden">Principio del buen orden</h4>
+<h4 class="anchored" data-anchor-id="principio-del-buen-orden"><span style="color: #e92121;">Principio del buen orden</span></h4>
 <p>Dado un conjunto totalmente ordenado <img src="https://latex.codecogs.com/png.latex?(A,%20%5Cleq)">, decimos que <img src="https://latex.codecogs.com/png.latex?a%20%5Cin%20A"> es un elemento minimal si <img src="https://latex.codecogs.com/png.latex?a%20%5Cleq%20b"> para todo <img src="https://latex.codecogs.com/png.latex?b%20%5Cin%20A">.</p>
 <p>El conjunto de los números naturales tiene una propiedad muy importante respecto a la relación de orden total <img src="https://latex.codecogs.com/png.latex?%5Cleq">, que se conoce como el principio del buen orden, y que dice lo siguiente:</p>
 <p><strong>Principio del buen orden:</strong> Todo subconjunto no vacío de <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> tiene un elemento minimal.</p>
@@ -2368,7 +2371,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 <p>Demostremos el principio del buen orden. Supongamos por el absurdo que existe un subconjunto no vacío <img src="https://latex.codecogs.com/png.latex?A%20%5Csubseteq%20%5Cmathbb%7BN%7D"> que no tiene elemento minimal. Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cnotin%20A"> ya que <img src="https://latex.codecogs.com/png.latex?A"> no tiene elemento minimal. Consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?B=%5C%7Bm%20%5Cin%20%5Cmathbb%7BN%7D%20:%20m%20%3C%20n~%20%5Ctextrm%7Bpara%20todo%7D%20~n%20%5Cin%20A%5C%7D">. Es claro que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20B">, y si <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20B"> entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%5Cin%20B">, ya que como <img src="https://latex.codecogs.com/png.latex?m%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A"> entonces <img src="https://latex.codecogs.com/png.latex?S(m)%20%5Cleq%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A">, pero <img src="https://latex.codecogs.com/png.latex?S(m)%20%5Cnotin%20A"> puesto que <img src="https://latex.codecogs.com/png.latex?A"> no tiene elemento minimal, luego <img src="https://latex.codecogs.com/png.latex?S(m)%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A">. Del principio de inducción se sigue que <img src="https://latex.codecogs.com/png.latex?B=%5Cmathbb%7BN%7D">, y por lo tanto, para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?m%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A">, en particular, dado <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20A">, se tiene que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20n">, lo cual es absurdo. Por lo tanto, todo subconjunto no vacío de <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> tiene un elemento minimal.</p>
 </section>
 <section id="producto-de-números-naturales" class="level4">
-<h4 class="anchored" data-anchor-id="producto-de-números-naturales">Producto de números naturales</h4>
+<h4 class="anchored" data-anchor-id="producto-de-números-naturales"><span style="color: #e92121;">Producto de números naturales</span></h4>
 <p>Vamos a definir ahora otra operación binaria en el conjunto de los números naturales <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">, que llamaremos producto y denotaremos por <img src="https://latex.codecogs.com/png.latex?%5Ccdot%20:%20%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D">, de la siguiente manera:</p>
 <ul>
 <li><img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%200%20=%200"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
@@ -2396,11 +2399,12 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 </ul>
 <p>Fijemos un elemento arbitrario <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> y consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A_n=%5C%7Bm%20%5Cin%20%5Cmathbb%7BN%7D%20:%20n%20%5Ccdot%20m=m%20%5Ccdot%20n%5C%7D."> Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A_n">, ya que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%200=0=0%20%5Ccdot%20n">. Ahora, si <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20A_n"> entonces <img src="https://latex.codecogs.com/png.latex?S(m)%20%5Cin%20A_n"> ya que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20S(m)=n+(n%20%5Ccdot%20m)=n+(m%20%5Ccdot%20n)=m+n%5Ccdot%20n=m%5Ccdot%20S(n)."> Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A_n=%5Cmathbb%7BN%7D">, y por lo tanto, <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m=m%20%5Ccdot%20n"> para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
 </section>
-<section id="ejercicio-demnuestre-que-s0-es-el-único-elemento-de-mathbbn-que-satisface-n-cdot-s0n-para-todo-n-in-mathbbn-es-decir-si-m-in-mathbbn-es-tal-que-n-cdot-mn-para-todo-n-in-mathbbn-entonces-ms0." class="level4">
-<h4 class="anchored" data-anchor-id="ejercicio-demnuestre-que-s0-es-el-único-elemento-de-mathbbn-que-satisface-n-cdot-s0n-para-todo-n-in-mathbbn-es-decir-si-m-in-mathbbn-es-tal-que-n-cdot-mn-para-todo-n-in-mathbbn-entonces-ms0.">Ejercicio: Demnuestre que <img src="https://latex.codecogs.com/png.latex?S(0)"> es el único elemento de <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> que satisface <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20S(0)=n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, es decir, si <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> es tal que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m=n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, entonces <img src="https://latex.codecogs.com/png.latex?m=S(0)">.</h4>
+<section id="ejercicio" class="level4">
+<h4 class="anchored" data-anchor-id="ejercicio"><span style="color: #e92121;">Ejercicio:</span></h4>
+<p>Demnuestre que <img src="https://latex.codecogs.com/png.latex?S(0)"> es el único elemento de <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> que satisface <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20S(0)=n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, es decir, si <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> es tal que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m=n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, entonces <img src="https://latex.codecogs.com/png.latex?m=S(0)">.</p>
 </section>
-<section id="propiedad-de-la-relación-de-orden-respecto-al-producto" class="level4">
-<h4 class="anchored" data-anchor-id="propiedad-de-la-relación-de-orden-respecto-al-producto">Propiedad de la relación de orden respecto al producto</h4>
+<section id="propiedades-de-la-relación-de-orden-respecto-al-producto" class="level4">
+<h4 class="anchored" data-anchor-id="propiedades-de-la-relación-de-orden-respecto-al-producto"><span style="color: #e92121;">Propiedades de la relación de orden respecto al producto</span></h4>
 <ul>
 <li>Si tenemos <img src="https://latex.codecogs.com/png.latex?n,m,k%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%5Cleq%20m">, entonces <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20k%20%5Cleq%20m%20%5Ccdot%20k">.</li>
 </ul>
@@ -2416,8 +2420,8 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 <p>Si suponemos por el absurdo que <img src="https://latex.codecogs.com/png.latex?n%20%5Cneq%20m">, entonces <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m"> o <img src="https://latex.codecogs.com/png.latex?m%20%3C%20n">. Supongamos sin pérdida de generalidad que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, entonces por la propiedad anterior, <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20k%20%3C%20m%20%5Ccdot%20k">, lo cual es una contradicción. Por lo tanto, <img src="https://latex.codecogs.com/png.latex?n=m">.</p>
 <p>De lo anterior se deduce que <img src="https://latex.codecogs.com/png.latex?S(0)"> es el único neutro, más aún, que si <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m=n"> para cierto <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">, entonces <img src="https://latex.codecogs.com/png.latex?m=S(0)">.</p>
 </section>
-<section id="ejercicio" class="level4">
-<h4 class="anchored" data-anchor-id="ejercicio">Ejercicio</h4>
+<section id="ejercicio-1" class="level4">
+<h4 class="anchored" data-anchor-id="ejercicio-1"><span style="color: #e92121;">Ejercicio</span></h4>
 <ul>
 <li><p>Si <img src="https://latex.codecogs.com/png.latex?n,m,k,s%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%5Cleq%20m"> y <img src="https://latex.codecogs.com/png.latex?k%20%5Cleq%20s">, entonces <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20k%20%5Cleq%20m%20%5Ccdot%20s">.</p></li>
 <li><p>Si <img src="https://latex.codecogs.com/png.latex?n,m,k,s%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m"> y <img src="https://latex.codecogs.com/png.latex?k%20%3C%20s">, entonces <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20k%20%3C%20m%20%5Ccdot%20s">.</p></li>
@@ -2425,12 +2429,12 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 </ul>
 </section>
 <section id="no-hay-divisores-de-cero-en-los-números-naturales" class="level4">
-<h4 class="anchored" data-anchor-id="no-hay-divisores-de-cero-en-los-números-naturales">No hay divisores de cero en los números naturales</h4>
+<h4 class="anchored" data-anchor-id="no-hay-divisores-de-cero-en-los-números-naturales"><span style="color: #e92121;">No hay divisores de cero en los números naturales</span></h4>
 <p>Esto quiere decir que si <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m=0">, entonces <img src="https://latex.codecogs.com/png.latex?n=0"> o <img src="https://latex.codecogs.com/png.latex?m=0">. Es decir, la única manera de que el producto de dos números naturales sea cero es que al menos uno de ellos sea cero.</p>
 <p>Para probar esto, razonemos por el absurdo. Supongamos que existen <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D"> tales que <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20m=0">. Por lo tanto <img src="https://latex.codecogs.com/png.latex?0%20%3C%20n"> y <img src="https://latex.codecogs.com/png.latex?0%20%3C%20m"> y así de lo anterior, <img src="https://latex.codecogs.com/png.latex?0%20%3C%20n%20%5Ccdot%20m=0">, lo cual es una contradicción.</p>
 </section>
-<section id="ejercicio-1" class="level4">
-<h4 class="anchored" data-anchor-id="ejercicio-1">Ejercicio</h4>
+<section id="ejercicio-2" class="level4">
+<h4 class="anchored" data-anchor-id="ejercicio-2"><span style="color: #e92121;">Ejercicio</span></h4>
 <p>Demuestre que la cancelación del producto también se tiene con desigualdades, es decir,</p>
 <ul>
 <li>Si <img src="https://latex.codecogs.com/png.latex?n%20%5Ccdot%20k%20%3C%20m%20%5Ccdot%20k">, entonces <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">.</li>
@@ -2438,7 +2442,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 </ul>
 </section>
 <section id="potenciación" class="level4">
-<h4 class="anchored" data-anchor-id="potenciación">Potenciación</h4>
+<h4 class="anchored" data-anchor-id="potenciación"><span style="color: #e92121;">Potenciación</span></h4>
 <p>La operación potenciación en los números naturales es una función binaria <img src="https://latex.codecogs.com/png.latex?%5E%7B%5Cwedge%7D%20:%20%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D">, definida de la siguiente manera:</p>
 <ul>
 <li><img src="https://latex.codecogs.com/png.latex?n%5E%7B0%7D=S(0)"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
@@ -2448,7 +2452,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 <p>Para probar esto, fijemos un elemento arbitrario <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> y consideremos el conjunto <img src="https://latex.codecogs.com/png.latex?A_n=%5C%7Bm%20%5Cin%20%5Cmathbb%7BN%7D%20:%20n%5E%7Bm%7D~%5Ctextrm%7Best%C3%A1%20definido%7D%5C%7D."> Note que <img src="https://latex.codecogs.com/png.latex?0%20%5Cin%20A_n">, ya que <img src="https://latex.codecogs.com/png.latex?n%5E%7B0%7D=S(0)%20%5Cin%20%5Cmathbb%7BN%7D">. Ahora, si <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20A_n"> entonces <img src="https://latex.codecogs.com/png.latex?S(m)%20%5Cin%20A_n"> ya que <img src="https://latex.codecogs.com/png.latex?n%5E%7BS(m)%7D=n%20%5Ccdot%20n%5E%7Bm%7D">, y como <img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%7D"> está definido y el producto siempre está definido, se sigue que <img src="https://latex.codecogs.com/png.latex?n%5E%7BS(m)%7D"> está definido. Por lo tanto, por el principio de inducción, se tiene que <img src="https://latex.codecogs.com/png.latex?A_n=%5Cmathbb%7BN%7D">, y por lo tanto, para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%7D"> está definido. Esto muestra que para cada <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que para todo <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D">, <img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%7D%20%5Cin%20%5Cmathbb%7BN%7D">, y por lo tanto, a todo elemento <img src="https://latex.codecogs.com/png.latex?(n,m)%20%5Cin%20%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D"> le corresponde un único elemento <img src="https://latex.codecogs.com/png.latex?n%5E%7Bm%7D%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
 </section>
 <section id="algunas-propiedades-de-la-potenciación" class="level4">
-<h4 class="anchored" data-anchor-id="algunas-propiedades-de-la-potenciación">Algunas propiedades de la potenciación</h4>
+<h4 class="anchored" data-anchor-id="algunas-propiedades-de-la-potenciación"><span style="color: #e92121;">Algunas propiedades de la potenciación</span></h4>
 <ul>
 <li><img src="https://latex.codecogs.com/png.latex?n%5E%7BS(0)%7D=n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">.</li>
 <li><img src="https://latex.codecogs.com/png.latex?0%5E%7Bn%7D=0"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">.</li>
@@ -2458,7 +2462,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 </section>
 </section>
 <section id="inducción-matemática" class="level3">
-<h3 class="anchored" data-anchor-id="inducción-matemática">Inducción matemática</h3>
+<h3 class="anchored" data-anchor-id="inducción-matemática"><span style="color: #1e8449;">Inducción matemática</span></h3>
 <p>El axioma de inducción que está entre los axiomas de Peano utilizados para construir el conjunto <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">, produce un método de demostración conocido con el nombre de <strong>inducción matematica</strong>. De manera más precisa, da un método de demostración para fórmulas que dependan de los números naturales.</p>
 <p><strong>Inducción matemática</strong></p>
 <p>Dada una fórmula <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> que dependa de <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, si:</p>
@@ -2468,7 +2472,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 </ul>
 <p>Entonces <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> es cierta para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%20k_%7B0%7D">.</p>
 <section id="ejemplo" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo">Ejemplo</h4>
+<h4 class="anchored" data-anchor-id="ejemplo"><span style="color: #e92121;">Ejemplo</span></h4>
 <p>Probemos usando inducción matemática, que si <img src="https://latex.codecogs.com/png.latex?2%20%5Cleq%20m"> entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%5Cleq%20m%20%5Ccdot%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%3E%200">.</p>
 <p>Definamos la fórmula <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)=%5C%7BS(n)%20%5Cleq%20m%20%5Ccdot%20n%5C%7D">.</p>
 <p>Comencemos verificando el paso inicial, en este caso, <img src="https://latex.codecogs.com/png.latex?k_%7B0%7D=S(0)">. Note que <img src="https://latex.codecogs.com/png.latex?2=S(S(0))%20%5Cleq%20m%20%5Ccdot%20S(0)=m">, es decir, <img src="https://latex.codecogs.com/png.latex?%5Cphi(S(0))"> es cierta.</p>
@@ -2477,14 +2481,14 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 <p>De la prueba anterior, podemos observar que si <img src="https://latex.codecogs.com/png.latex?m%20%3E%202"> entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%3C%20m%20%5Ccdot%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%201">.</p>
 </section>
 <section id="ejemplo-1" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-1">Ejemplo</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-1"><span style="color: #e92121;">Ejemplo</span></h4>
 <p>Supongamos que queremos demostrar que <img src="https://latex.codecogs.com/png.latex?n%20%3C%2010%5E%7Bn%7D"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">. Definamos la fórmula <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)=%5C%7Bn%20%3C%2010%5E%7Bn%7D%5C%7D">.</p>
 <p>Para usar inducción matemática, primero verificamos el paso inicial, en este caso, <img src="https://latex.codecogs.com/png.latex?k_%7B0%7D=0">, es decir, verificamos que <img src="https://latex.codecogs.com/png.latex?%5Cphi(0)"> sea cierta. Como <img src="https://latex.codecogs.com/png.latex?0%20%3C%20S(0)=10%5E%7B0%7D"> entonces en efecto <img src="https://latex.codecogs.com/png.latex?%5Cphi(0)"> es cierta.</p>
 <p>Ahora suponemos que <img src="https://latex.codecogs.com/png.latex?%5Cphi(k)"> es cierto, es decir, asumimos la hipótesis de inducción y probemos que <img src="https://latex.codecogs.com/png.latex?%5Cphi(S(k))"> es cierto. Si tenemos que <img src="https://latex.codecogs.com/png.latex?k%20%3C%2010%5E%7Bk%7D">, multiplicando a ambos lados por <img src="https://latex.codecogs.com/png.latex?10">, obtenemos que <img src="https://latex.codecogs.com/png.latex?10%20%5Ccdot%20k%20%3C%2010%20%5Ccdot%2010%5E%7Bk%7D=10%5E%7BS(k)%7D">. Como <img src="https://latex.codecogs.com/png.latex?S(k)%20%3C%2010%20%5Ccdot%20k"> entonces <img src="https://latex.codecogs.com/png.latex?S(k)%20%3C%2010%5E%7BS(k)%7D">. Por lo tanto <img src="https://latex.codecogs.com/png.latex?%5Cphi(S(k))"> es cierto.</p>
 <p>De la hipótesis de inducción se concluye que la fórmula <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> es cierta para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, es decir, <img src="https://latex.codecogs.com/png.latex?n%20%3C%2010%5E%7Bn%7D"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">.</p>
 </section>
 <section id="ejemplo-2" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplo-2">Ejemplo</h4>
+<h4 class="anchored" data-anchor-id="ejemplo-2"><span style="color: #e92121;">Ejemplo</span></h4>
 <p>Usemos la notación <img src="https://latex.codecogs.com/png.latex?1+%20%5Ccdots%20+%20n"> para denotar la suma de los números naturales que están entre <img src="https://latex.codecogs.com/png.latex?1"> y <img src="https://latex.codecogs.com/png.latex?n">.</p>
 <p>Probemos que para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?1%20%5Cleq%20n">, se tiene que <img src="https://latex.codecogs.com/png.latex?2%20%5Ccdot%20(1+%20%5Ccdots%20+%20n)=n%20%5Ccdot%20S(n)">.</p>
 <p>Definamos la fórmula <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)=%5C%7B2%20%5Ccdot%20(1+%20%5Ccdots%20+n)=n%20%5Ccdot%20S(n)%5C%7D">.</p>
@@ -2494,11 +2498,11 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 </section>
 </section>
 <section id="representación-de-los-números-naturales-en-base-diez" class="level3">
-<h3 class="anchored" data-anchor-id="representación-de-los-números-naturales-en-base-diez">Representación de los números naturales en base diez</h3>
+<h3 class="anchored" data-anchor-id="representación-de-los-números-naturales-en-base-diez"><span style="color: #1e8449;">Representación de los números naturales en base diez</span></h3>
 <p>Definamos el número natural <strong>diez</strong> como el sucesor del <img src="https://latex.codecogs.com/png.latex?9">, que denotaremos con el símbolo <img src="https://latex.codecogs.com/png.latex?10">.</p>
 <p>El primer algortimo de la historia es conocido con el nombre de “algoritmo de la división” y fue desarrollado por los matemáticos árabes. Este algoritmo permite representar cualquier número natural en base diez, es decir, como una suma de potencias de diez multiplicadas por dígitos del 0 al 9.</p>
 <section id="algoritmo-de-la-división" class="level4">
-<h4 class="anchored" data-anchor-id="algoritmo-de-la-división">Algoritmo de la división</h4>
+<h4 class="anchored" data-anchor-id="algoritmo-de-la-división"><span style="color: #e92121;">Algoritmo de la división</span></h4>
 <p>Dados dos números naturales <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?m%20%5Cneq%200">, existen únicos números naturales <img src="https://latex.codecogs.com/png.latex?k,s%20%5Cin%20%5Cmathbb%7BN%7D"> tales que <img src="https://latex.codecogs.com/png.latex?n=m%20%5Ccdot%20k%20+%20s"> y <img src="https://latex.codecogs.com/png.latex?0%20%5Cleq%20s%20%3C%20m">.</p>
 <p><strong>Existencia:</strong></p>
 <p>Observemos que si <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m"> entonces <img src="https://latex.codecogs.com/png.latex?n=m%20%5Ccdots%200%20+%200">.</p>
@@ -2526,8 +2530,8 @@ Figure&nbsp;2: El conjunto <img src="https://latex.codecogs.com/png.latex?B%20=%
 <p>Tenemos entonces <img src="https://latex.codecogs.com/png.latex?m%20%5Ccdot%20k%20+%20s%20=n%20=%20m%20%5Ccdot%20k%20+%20t">, y de la propiedad cancelativa de la suma, <img src="https://latex.codecogs.com/png.latex?t=s">.</p>
 <p>Nuestro próximo objetivo es probar que todo número natural se puede escribir de manera única como una suma finita de elementos del conjunto <img src="https://latex.codecogs.com/png.latex?%5C%7B0,1,%20%5Cdots,%209%5C%7D"> por potencias del número <img src="https://latex.codecogs.com/png.latex?10">.</p>
 </section>
-<section id="ejercicio-2" class="level4">
-<h4 class="anchored" data-anchor-id="ejercicio-2">Ejercicio</h4>
+<section id="ejercicio-3" class="level4">
+<h4 class="anchored" data-anchor-id="ejercicio-3">Ejercicio</h4>
 <ul>
 <li><p>Demuestre que si <img src="https://latex.codecogs.com/png.latex?2%20%5Cleq%20m">, entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%5Cleq%20m%20%5Ccdot%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">.</p></li>
 <li><p>Demuestre que si <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> es tal que <img src="https://latex.codecogs.com/png.latex?2%20%5Cleq%20m">, entonces para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m%5E%7Bn%7D">.</p></li>
