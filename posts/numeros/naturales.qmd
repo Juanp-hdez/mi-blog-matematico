@@ -2483,6 +2483,7 @@ ax.axis('off')
 plt.show()
 ```
 
+
 #### [Principio del buen orden]{style="color: #e92121;"}
 
 Dado un conjunto totalmente ordenado $(A, \leq)$, decimos que $a \in A$ es un elemento minimal si $a \leq b$ para todo $b \in A$.
@@ -2494,6 +2495,16 @@ El conjunto de los números naturales tiene una propiedad muy importante respect
 Antes de demostrar este principio, observemos que el conjunto $\mathbb{N}$ tiene un elemento minimal que es el $0$.
 
 Demostremos el principio del buen orden. Supongamos por el absurdo que existe un subconjunto no vacío $A \subseteq \mathbb{N}$ que no tiene elemento minimal. Note que $0 \notin A$ ya que $A$ no tiene elemento minimal. Consideremos el conjunto $$B=\{m \in \mathbb{N} : m < n~ \textrm{para todo} ~n \in A\}$$. Es claro que $0 \in B$, y si $n \in B$ entonces $S(n) \in B$, ya que como $m < n$ para todo $n \in A$ entonces $S(m) \leq n$ para todo $n \in A$, pero $S(m) \notin A$ puesto que $A$ no tiene elemento minimal, luego $S(m) < n$ para todo $n \in A$. Del principio de inducción se sigue que $B=\mathbb{N}$, y por lo tanto, para todo $m \in \mathbb{N}$ se tiene que $m < n$ para todo $n \in A$, en particular, dado $n \in A$, se tiene que $n < n$, lo cual es absurdo. Por lo tanto, todo subconjunto no vacío de $\mathbb{N}$ tiene un elemento minimal.
+
+#### [Variación del axioma de inducción]{style="color: #e92121;"}
+
+Supongamos que $A$ es un subconjunto del conjunto de los números naturales $\mathbb{N}$ que satisface:
+* $k_{0} \in A$.
+* Para todo $k \geq k_{0}$, si $k \in A$ entonces $S(k) \in A$.
+
+Entonces $\{n \in \mathbb{N}~ :~ n \geq k_{0}\} \subseteq A$.
+Si $k_{0}$ es el elemento minimal de $A$, entonces $A=\{n \in \mathbb{N}~ :~ n \geq k_{0}\}$. 
+
 
 #### [Producto de números naturales]{style="color: #e92121;"}
 
@@ -2532,7 +2543,7 @@ Fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conjunto $$A
 
 #### [Ejercicio:]{style="color: #e92121;"}
  
-Demnuestre que $S(0)$ es el único elemento de $\mathbb{N}$ que satisface $n \cdot S(0)=n$ para todo $n \in \mathbb{N}$, es decir, si $m \in \mathbb{N}$ es tal que $n \cdot m=n$ para todo $n \in \mathbb{N}$, entonces $m=S(0)$.
+Demuestre que $S(0)$ es el único elemento de $\mathbb{N}$ que satisface $n \cdot S(0)=n$ para todo $n \in \mathbb{N}$, es decir, si $m \in \mathbb{N}$ es tal que $n \cdot m=n$ para todo $n \in \mathbb{N}$, entonces $m=S(0)$.
 
 #### [Propiedades de la relación de orden respecto al producto]{style="color: #e92121;"}
 
@@ -2614,7 +2625,7 @@ Definamos la fórmula $\phi(n)=\{S(n) \leq m \cdot n\}$.
 
 Comencemos verificando el paso inicial, en este caso, $k_{0}=S(0)$. Note que $2=S(S(0)) \leq m \cdot S(0)=m$, es decir, $\phi(S(0))$ es cierta.
 
-Tomemos un $k \geq S(0)=k_{0}$ y supongamos que $\psi(k)$ es cierta (hipótesis de inducción). Entonces $m \cdot S(k)=m + m \cdot k \geq m + S(k) > S(0)+S(k)=S(S(k))$, es decir, $S(S(k)) < m \cdot S(k)$ y por lo tanto $\phi(S(k))$ es cierta.
+Tomemos un $k \geq S(0)=k_{0}$ y supongamos que $\phi(k)$ es cierta (hipótesis de inducción). Entonces $m \cdot S(k)=m + m \cdot k \geq m + S(k) > S(0)+S(k)=S(S(k))$, es decir, $S(S(k)) < m \cdot S(k)$ y por lo tanto $\phi(S(k))$ es cierta.
 
 Por lo tanto, la inducción matemática nos dice que $\phi(n)$ es cierta para todo $n \geq S(0)$, es decir, $S(n) \leq m \cdot n$ para todo $n \geq 1$.
 
@@ -2622,11 +2633,11 @@ De la prueba anterior, podemos observar que si $m > 2$ entonces $S(n) < m \cdot 
 
 #### [Ejemplo]{style="color: #e92121;"}
 
-Supongamos que queremos demostrar que $n < 10^{n}$ para todo $n \in \mathbb{N}$. Definamos la fórmula $$\phi(n)=\{n < 10^{n}\}$$.
+Supongamos que queremos demostrar que $n < 10^{n}$ para todo $n \in \mathbb{N}$. Definamos la fórmula $$\phi(n)=\{n < 10^{n}\}.$$
 
 Para usar inducción matemática, primero verificamos el paso inicial, en este caso, $k_{0}=0$, es decir, verificamos que $\phi(0)$ sea cierta. Como $0 < S(0)=10^{0}$ entonces en efecto $\phi(0)$ es cierta.
 
-Ahora suponemos que $\phi(k)$ es cierto, es decir, asumimos la hipótesis de inducción y probemos que $\phi(S(k))$ es cierto. Si tenemos que $k < 10^{k}$, multiplicando a ambos lados por $10$, obtenemos que $10 \cdot k < 10 \cdot 10^{k}=10^{S(k)}$. Como $S(k) < 10 \cdot k$ entonces $S(k) < 10^{S(k)}$. Por lo tanto $\phi(S(k))$ es cierto.
+Ahora supongamos que $\phi(k)$ es cierto, es decir, asumimos la hipótesis de inducción y probemos que $\phi(S(k))$ es cierto. Si tenemos que $k < 10^{k}$, multiplicando a ambos lados por $10$, obtenemos que $10 \cdot k < 10 \cdot 10^{k}=10^{S(k)}$. Como $S(k) < 10 \cdot k$ entonces $S(k) < 10^{S(k)}$. Por lo tanto $\phi(S(k))$ es cierto.
 
 De la hipótesis de inducción se concluye que la fórmula $\phi(n)$ es cierta para todo $n \in \mathbb{N}$, es decir, $n < 10^{n}$ para todo $n \in \mathbb{N}$.
 

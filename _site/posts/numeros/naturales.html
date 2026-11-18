@@ -2504,7 +2504,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="beb3e39b" class="cell" data-execution_count="1">
+<div id="8728141e" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2514,7 +2514,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="4c869a11" class="cell" data-execution_count="2">
+<div id="0d04ae09" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2556,6 +2556,11 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>Antes de demostrar este principio, observemos que el conjunto <span class="math inline">\(\mathbb{N}\)</span> tiene un elemento minimal que es el <span class="math inline">\(0\)</span>.</p>
 <p>Demostremos el principio del buen orden. Supongamos por el absurdo que existe un subconjunto no vacío <span class="math inline">\(A \subseteq \mathbb{N}\)</span> que no tiene elemento minimal. Note que <span class="math inline">\(0 \notin A\)</span> ya que <span class="math inline">\(A\)</span> no tiene elemento minimal. Consideremos el conjunto <span class="math display">\[B=\{m \in \mathbb{N} : m &lt; n~ \textrm{para todo} ~n \in A\}\]</span>. Es claro que <span class="math inline">\(0 \in B\)</span>, y si <span class="math inline">\(n \in B\)</span> entonces <span class="math inline">\(S(n) \in B\)</span>, ya que como <span class="math inline">\(m &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span> entonces <span class="math inline">\(S(m) \leq n\)</span> para todo <span class="math inline">\(n \in A\)</span>, pero <span class="math inline">\(S(m) \notin A\)</span> puesto que <span class="math inline">\(A\)</span> no tiene elemento minimal, luego <span class="math inline">\(S(m) &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span>. Del principio de inducción se sigue que <span class="math inline">\(B=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(m &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span>, en particular, dado <span class="math inline">\(n \in A\)</span>, se tiene que <span class="math inline">\(n &lt; n\)</span>, lo cual es absurdo. Por lo tanto, todo subconjunto no vacío de <span class="math inline">\(\mathbb{N}\)</span> tiene un elemento minimal.</p>
 </section>
+<section id="variación-del-axioma-de-inducción" class="level4">
+<h4 class="anchored" data-anchor-id="variación-del-axioma-de-inducción"><span style="color: #e92121;">Variación del axioma de inducción</span></h4>
+<p>Supongamos que <span class="math inline">\(A\)</span> es un subconjunto del conjunto de los números naturales <span class="math inline">\(\mathbb{N}\)</span> que satisface: * <span class="math inline">\(k_{0} \in A\)</span>. * Para todo <span class="math inline">\(k \geq k_{0}\)</span>, si <span class="math inline">\(k \in A\)</span> entonces <span class="math inline">\(S(k) \in A\)</span>.</p>
+<p>Entonces <span class="math inline">\(\{n \in \mathbb{N}~ :~ n \geq k_{0}\} \subseteq A\)</span>. Si <span class="math inline">\(k_{0}\)</span> es el elemento minimal de <span class="math inline">\(A\)</span>, entonces <span class="math inline">\(A=\{n \in \mathbb{N}~ :~ n \geq k_{0}\}\)</span>.</p>
+</section>
 <section id="producto-de-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="producto-de-números-naturales"><span style="color: #e92121;">Producto de números naturales</span></h4>
 <p>Vamos a definir ahora otra operación binaria en el conjunto de los números naturales <span class="math inline">\(\mathbb{N}\)</span>, que llamaremos producto y denotaremos por <span class="math inline">\(\cdot : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}\)</span>, de la siguiente manera:</p>
@@ -2587,7 +2592,7 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </section>
 <section id="ejercicio" class="level4">
 <h4 class="anchored" data-anchor-id="ejercicio"><span style="color: #e92121;">Ejercicio:</span></h4>
-<p>Demnuestre que <span class="math inline">\(S(0)\)</span> es el único elemento de <span class="math inline">\(\mathbb{N}\)</span> que satisface <span class="math inline">\(n \cdot S(0)=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, es decir, si <span class="math inline">\(m \in \mathbb{N}\)</span> es tal que <span class="math inline">\(n \cdot m=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, entonces <span class="math inline">\(m=S(0)\)</span>.</p>
+<p>Demuestre que <span class="math inline">\(S(0)\)</span> es el único elemento de <span class="math inline">\(\mathbb{N}\)</span> que satisface <span class="math inline">\(n \cdot S(0)=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, es decir, si <span class="math inline">\(m \in \mathbb{N}\)</span> es tal que <span class="math inline">\(n \cdot m=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, entonces <span class="math inline">\(m=S(0)\)</span>.</p>
 </section>
 <section id="propiedades-de-la-relación-de-orden-respecto-al-producto" class="level4">
 <h4 class="anchored" data-anchor-id="propiedades-de-la-relación-de-orden-respecto-al-producto"><span style="color: #e92121;">Propiedades de la relación de orden respecto al producto</span></h4>
@@ -2662,15 +2667,15 @@ Figure&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>Probemos usando inducción matemática, que si <span class="math inline">\(2 \leq m\)</span> entonces <span class="math inline">\(S(n) \leq m \cdot n\)</span> para todo <span class="math inline">\(n &gt; 0\)</span>.</p>
 <p>Definamos la fórmula <span class="math inline">\(\phi(n)=\{S(n) \leq m \cdot n\}\)</span>.</p>
 <p>Comencemos verificando el paso inicial, en este caso, <span class="math inline">\(k_{0}=S(0)\)</span>. Note que <span class="math inline">\(2=S(S(0)) \leq m \cdot S(0)=m\)</span>, es decir, <span class="math inline">\(\phi(S(0))\)</span> es cierta.</p>
-<p>Tomemos un <span class="math inline">\(k \geq S(0)=k_{0}\)</span> y supongamos que <span class="math inline">\(\psi(k)\)</span> es cierta (hipótesis de inducción). Entonces <span class="math inline">\(m \cdot S(k)=m + m \cdot k \geq m + S(k) &gt; S(0)+S(k)=S(S(k))\)</span>, es decir, <span class="math inline">\(S(S(k)) &lt; m \cdot S(k)\)</span> y por lo tanto <span class="math inline">\(\phi(S(k))\)</span> es cierta.</p>
+<p>Tomemos un <span class="math inline">\(k \geq S(0)=k_{0}\)</span> y supongamos que <span class="math inline">\(\phi(k)\)</span> es cierta (hipótesis de inducción). Entonces <span class="math inline">\(m \cdot S(k)=m + m \cdot k \geq m + S(k) &gt; S(0)+S(k)=S(S(k))\)</span>, es decir, <span class="math inline">\(S(S(k)) &lt; m \cdot S(k)\)</span> y por lo tanto <span class="math inline">\(\phi(S(k))\)</span> es cierta.</p>
 <p>Por lo tanto, la inducción matemática nos dice que <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq S(0)\)</span>, es decir, <span class="math inline">\(S(n) \leq m \cdot n\)</span> para todo <span class="math inline">\(n \geq 1\)</span>.</p>
 <p>De la prueba anterior, podemos observar que si <span class="math inline">\(m &gt; 2\)</span> entonces <span class="math inline">\(S(n) &lt; m \cdot n\)</span> para todo <span class="math inline">\(n \geq 1\)</span>.</p>
 </section>
 <section id="ejemplo-1" class="level4">
 <h4 class="anchored" data-anchor-id="ejemplo-1"><span style="color: #e92121;">Ejemplo</span></h4>
-<p>Supongamos que queremos demostrar que <span class="math inline">\(n &lt; 10^{n}\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>. Definamos la fórmula <span class="math display">\[\phi(n)=\{n &lt; 10^{n}\}\]</span>.</p>
+<p>Supongamos que queremos demostrar que <span class="math inline">\(n &lt; 10^{n}\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>. Definamos la fórmula <span class="math display">\[\phi(n)=\{n &lt; 10^{n}\}.\]</span></p>
 <p>Para usar inducción matemática, primero verificamos el paso inicial, en este caso, <span class="math inline">\(k_{0}=0\)</span>, es decir, verificamos que <span class="math inline">\(\phi(0)\)</span> sea cierta. Como <span class="math inline">\(0 &lt; S(0)=10^{0}\)</span> entonces en efecto <span class="math inline">\(\phi(0)\)</span> es cierta.</p>
-<p>Ahora suponemos que <span class="math inline">\(\phi(k)\)</span> es cierto, es decir, asumimos la hipótesis de inducción y probemos que <span class="math inline">\(\phi(S(k))\)</span> es cierto. Si tenemos que <span class="math inline">\(k &lt; 10^{k}\)</span>, multiplicando a ambos lados por <span class="math inline">\(10\)</span>, obtenemos que <span class="math inline">\(10 \cdot k &lt; 10 \cdot 10^{k}=10^{S(k)}\)</span>. Como <span class="math inline">\(S(k) &lt; 10 \cdot k\)</span> entonces <span class="math inline">\(S(k) &lt; 10^{S(k)}\)</span>. Por lo tanto <span class="math inline">\(\phi(S(k))\)</span> es cierto.</p>
+<p>Ahora supongamos que <span class="math inline">\(\phi(k)\)</span> es cierto, es decir, asumimos la hipótesis de inducción y probemos que <span class="math inline">\(\phi(S(k))\)</span> es cierto. Si tenemos que <span class="math inline">\(k &lt; 10^{k}\)</span>, multiplicando a ambos lados por <span class="math inline">\(10\)</span>, obtenemos que <span class="math inline">\(10 \cdot k &lt; 10 \cdot 10^{k}=10^{S(k)}\)</span>. Como <span class="math inline">\(S(k) &lt; 10 \cdot k\)</span> entonces <span class="math inline">\(S(k) &lt; 10^{S(k)}\)</span>. Por lo tanto <span class="math inline">\(\phi(S(k))\)</span> es cierto.</p>
 <p>De la hipótesis de inducción se concluye que la fórmula <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, es decir, <span class="math inline">\(n &lt; 10^{n}\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
 </section>
 <section id="ejemplo-2" class="level4">
