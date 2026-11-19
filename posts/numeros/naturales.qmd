@@ -2219,7 +2219,7 @@ Observe que como $S: \mathbb{N} \rightarrow \mathbb{N}$ es inyectiva, entonces l
 
 #### [Notación]{style="color: #e92121;"}
 
-Vamos a usar los símbolos $1, 2, 3, 4, 5, 6, 7, 8, 9$ (que estamos acostumbrados a utilizar día a día) para denotar los primeros siguientes términos que se obtienen al iterar $S$ con ella misma y evaluar en el elemento $0$. 
+Vamos a usar los símbolos $1, 2, 3, 4, 5, 6, 7, 8, 9$ (que estamos acostumbrados a utilizar día a día) para denotar los siguientes términos que se obtienen al iterar $S$ con ella misma y evaluar en el elemento $0$. 
 
 * $1=S(0)$
 * $2=S(S(0))=S(1)$
@@ -2497,7 +2497,7 @@ Antes de demostrar este principio, observemos que el conjunto $\mathbb{N}$ tiene
 
 Demostremos el principio del buen orden. Supongamos por el absurdo que existe un subconjunto no vacío $A \subseteq \mathbb{N}$ que no tiene elemento minimal. Note que $0 \notin A$ ya que $A$ no tiene elemento minimal. Consideremos el conjunto $$B=\{m \in \mathbb{N} : m < n~ \textrm{para todo} ~n \in A\}$$. Es claro que $0 \in B$, y si $n \in B$ entonces $S(n) \in B$, ya que como $m < n$ para todo $n \in A$ entonces $S(m) \leq n$ para todo $n \in A$, pero $S(m) \notin A$ puesto que $A$ no tiene elemento minimal, luego $S(m) < n$ para todo $n \in A$. Del principio de inducción se sigue que $B=\mathbb{N}$, y por lo tanto, para todo $m \in \mathbb{N}$ se tiene que $m < n$ para todo $n \in A$, en particular, dado $n \in A$, se tiene que $n < n$, lo cual es absurdo. Por lo tanto, todo subconjunto no vacío de $\mathbb{N}$ tiene un elemento minimal.
 
-::: {#thm-vai}
+::: {#alg-vai}
 #### [Variaciones del axioma de inducción]{style="color: #e92121;"}
 :::
 
@@ -2735,7 +2735,7 @@ Supongamos ahora que $\phi(n)$ es cierta y veamos que $\phi(S(n))$ es cierta. En
 
 La inducción matemática nos permite concluir que $\phi(n)$ es cierta para todo $n \geq 1$.
 
-De @thm-vai se sigue la inducción matemática.
+De @alg-vai se sigue la inducción matemática.
 
 ### [Representación de los números naturales en base diez]{style="color: #1e8449;"}
 

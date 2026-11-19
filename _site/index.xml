@@ -2190,7 +2190,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <p>Observe que como <img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D"> es inyectiva, entonces la función <img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D"> también es inyectiva, y al ser sobreyectiva tenemos entonces que <img src="https://latex.codecogs.com/png.latex?S:%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D"> es biyectiva.</p>
 <section id="notación" class="level4">
 <h4 class="anchored" data-anchor-id="notación"><span style="color: #e92121;">Notación</span></h4>
-<p>Vamos a usar los símbolos <img src="https://latex.codecogs.com/png.latex?1,%202,%203,%204,%205,%206,%207,%208,%209"> (que estamos acostumbrados a utilizar día a día) para denotar los primeros siguientes términos que se obtienen al iterar <img src="https://latex.codecogs.com/png.latex?S"> con ella misma y evaluar en el elemento <img src="https://latex.codecogs.com/png.latex?0">.</p>
+<p>Vamos a usar los símbolos <img src="https://latex.codecogs.com/png.latex?1,%202,%203,%204,%205,%206,%207,%208,%209"> (que estamos acostumbrados a utilizar día a día) para denotar los siguientes términos que se obtienen al iterar <img src="https://latex.codecogs.com/png.latex?S"> con ella misma y evaluar en el elemento <img src="https://latex.codecogs.com/png.latex?0">.</p>
 <ul>
 <li><img src="https://latex.codecogs.com/png.latex?1=S(0)"></li>
 <li><img src="https://latex.codecogs.com/png.latex?2=S(S(0))=S(1)"></li>
@@ -2318,7 +2318,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <img src="https://latex.codecogs.com/png.latex?0%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">, y que si <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%3C%20S(m)">.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="a3b22f31" class="cell" data-execution_count="1">
+<div id="2ae65fd2" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2328,7 +2328,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="62c5f4db" class="cell" data-execution_count="2">
+<div id="403b0c1c" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
