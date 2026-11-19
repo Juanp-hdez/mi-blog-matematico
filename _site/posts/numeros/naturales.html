@@ -2503,7 +2503,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="5b9662bb" class="cell" data-execution_count="1">
+<div id="8481cbb7" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2513,7 +2513,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="dbecea26" class="cell" data-execution_count="2">
+<div id="aaf7f574" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2799,7 +2799,7 @@ Figura&nbsp;2: El conjunto <span class="math inline">\(B = \{mt \mid n &lt; mt\}
 <p>Nuestro próximo objetivo es probar que todo número natural se puede escribir de manera única como una suma finita de elementos del conjunto <span class="math inline">\(\{0,1, \dots, 9\}\)</span> por potencias del número <span class="math inline">\(10\)</span>.</p>
 </section>
 <section id="ejercicio-3" class="level4">
-<h4 class="anchored" data-anchor-id="ejercicio-3">Ejercicio</h4>
+<h4 class="anchored" data-anchor-id="ejercicio-3"><span style="color: #e92121;">Ejercicio</span></h4>
 <ul>
 <li><p>Demuestre que si <span class="math inline">\(2 \leq m\)</span>, entonces <span class="math inline">\(S(n) \leq m \cdot n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>.</p></li>
 <li><p>Demuestre que si <span class="math inline">\(m \in \mathbb{N}\)</span> es tal que <span class="math inline">\(2 \leq m\)</span>, entonces para todo <span class="math inline">\(n \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(n &lt; m^{n}\)</span>.</p></li>
@@ -2811,6 +2811,11 @@ Figura&nbsp;2: El conjunto <span class="math inline">\(B = \{mt \mid n &lt; mt\}
 <p><strong>Conclusión:</strong></p>
 <p>Todo <span class="math inline">\(n \in \mathbb{N}\)</span> con <span class="math inline">\(1 \leq n\)</span>, se puede expresar como: <span class="math display">\[n=10^{t_{1}}n_{1}+r_{1},\]</span> para cierto <span class="math inline">\(t_{1} \in \mathbb{N}\)</span>, con <span class="math inline">\(n_{1} \leq 9\)</span> y <span class="math inline">\(r_{1} &lt; 10^{t_{1}}\)</span>.</p>
 <p>Repetimos lo mismo con <span class="math inline">\(r_{1}\)</span> y obtenemos <span class="math display">\[r_{1}=10^{t_{2}}n_{2}+r_{2},\]</span> para cierto <span class="math inline">\(t_{2} \in \mathbb{N}\)</span>, <span class="math inline">\(t_{2} &lt; t_{1}\)</span>, <span class="math inline">\(n_{2} \leq 9\)</span> y <span class="math inline">\(r_{2}&lt;10^{t_{2}}\)</span>.</p>
+</section>
+<section id="escritura-en-base-10" class="level4">
+<h4 class="anchored" data-anchor-id="escritura-en-base-10"><span style="color: #e92121;">Escritura en base <span class="math inline">\(10\)</span></span></h4>
+<p>Todo <span class="math inline">\(n \in \mathbb{N}\)</span> con <span class="math inline">\(n \geq 1\)</span> se puede escribir como una suma <span class="math display">\[n=r_{0}+r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k}\]</span> para cierto <span class="math inline">\(k \in \mathbb{N}\)</span> y donde <span class="math inline">\(0 \leq r_{i} \leq 9\)</span> para <span class="math inline">\(i=1, \dots ,k\)</span>. Además esta escritura es única.</p>
+<p>Vamos a demostrar esto por inducción (ver <span id="eim">ejercicio sobre variación de la inducción matemática</span>).</p>
 
 
 </section>

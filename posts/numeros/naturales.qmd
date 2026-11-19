@@ -2826,7 +2826,7 @@ Tenemos entonces $m \cdot k + s =n = m \cdot k + t$, y de la propiedad cancelati
 
 Nuestro próximo objetivo es probar que todo número natural se puede escribir de manera única como una suma finita de elementos del conjunto $\{0,1, \dots, 9\}$ por potencias del número $10$.
 
-#### Ejercicio
+#### [Ejercicio]{style="color: #e92121;"}
 
 * Demuestre que si $2 \leq m$, entonces $S(n) \leq m \cdot n$ para todo $n \in \mathbb{N} \setminus \{0\}$.  
 
@@ -2846,3 +2846,9 @@ Usando el algoritmo de la división tenemos que $n=10^{t}q+r$ con $r < 10^{t}$, 
 Todo $n \in \mathbb{N}$ con $1 \leq n$, se puede expresar como: $$n=10^{t_{1}}n_{1}+r_{1},$$ para cierto $t_{1} \in \mathbb{N}$, con $n_{1} \leq 9$ y $r_{1} < 10^{t_{1}}$.
 
 Repetimos lo mismo con $r_{1}$ y obtenemos $$r_{1}=10^{t_{2}}n_{2}+r_{2},$$ para cierto $t_{2} \in \mathbb{N}$, $t_{2} < t_{1}$, $n_{2} \leq 9$ y $r_{2}<10^{t_{2}}$.
+
+#### [Escritura en base $10$]{style="color: #e92121;"}
+
+Todo $n \in \mathbb{N}$ con $n \geq 1$ se puede escribir como una suma $$n=r_{0}+r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k}$$ para cierto $k \in \mathbb{N}$ y donde $0 \leq r_{i} \leq 9$ para $i=1, \dots ,k$. Además esta escritura es única.
+
+Vamos a demostrar esto por inducción (ver [ejercicio sobre variación de la inducción matemática]{#eim}).
