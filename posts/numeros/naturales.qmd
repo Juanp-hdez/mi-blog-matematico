@@ -2743,7 +2743,7 @@ De las [variaciones del axioma de inducción](#vai) se sigue la inducción matem
 * Probar la siguiente variación de la inducción matemática:
 Si $\phi(n)$ es una fórmula que depende de $n \in \mathbb{N}$ y es tal que:
 * $\phi(k_{0})$ es cierta (paso inicial)
-* Para todo $n \geq k_{0}$, $\phi(k)$ es cierta para todo $k_{0} < k \leq n$ implica $\phi(S(n))$ cierta,
+* Para todo $n \geq k_{0}$, $\phi(k)$ es cierta para todo $k_{0} \leq k \leq n$ (hipótesis de inducción) implica $\phi(S(n))$ cierta,
 entonces $\phi(n)$ es cierta para todo $n \geq k_{0}$.
 
 ### [Representación de los números naturales en base diez]{style="color: #1e8449;"}
@@ -2853,4 +2853,4 @@ Todo $n \in \mathbb{N}$ con $n \geq 1$ se puede escribir como una suma $$n=r_{0}
 
 
 Vamos a demostrar esto por inducción (ver [ejercicio sobre variación de la inducción matemática](#eim)).
-Consideremos la fórmula $\phi(n)=\{n~ \textrm{tiene una escritura como en}~ @eq-b10 \}$.
+Consideremos la fórmula $\phi(n)=\{n~ \textrm{tiene una escritura como en}~ \eqref{eq-b10}\}$.
