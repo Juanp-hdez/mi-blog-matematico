@@ -2849,8 +2849,11 @@ Repetimos lo mismo con $r_{1}$ y obtenemos $$r_{1}=10^{t_{2}}n_{2}+r_{2},$$ para
 
 #### [Escritura en base $10$]{style="color: #e92121;"}
 
-Todo $n \in \mathbb{N}$ con $n \geq 1$ se puede escribir como una suma $$n=r_{0}+r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k}$$ {#eq-b10} para cierto $k \in \mathbb{N}$ y donde $0 \leq r_{i} \leq 9$ para $i=1, \dots ,k$. Además esta escritura es única.
+Todo $n \in \mathbb{N}$ con $n \geq 1$ se puede escribir como una suma 
+\begin{equation}
+n=r_{0}+r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k} \label{eq:b10}
+\end{equation}  para cierto $k \in \mathbb{N}$ y donde $0 \leq r_{i} \leq 9$ para $i=1, \dots ,k$. Además esta escritura es única.
 
 
 Vamos a demostrar esto por inducción (ver [ejercicio sobre variación de la inducción matemática](#eim)).
-Consideremos la fórmula $\phi(n)=\{n~ \textrm{tiene una escritura como en}~ \eqref{eq-b10}\}$.
+Consideremos la fórmula $\phi(n)=\{n~ \textrm{tiene una escritura como en}~ \eqref{eq:b10}\}$.
