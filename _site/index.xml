@@ -2318,7 +2318,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <img src="https://latex.codecogs.com/png.latex?0%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">, y que si <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%3C%20S(m)">.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="fa53c3eb" class="cell" data-execution_count="1">
+<div id="5b9662bb" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2328,7 +2328,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="da21192a" class="cell" data-execution_count="2">
+<div id="dbecea26" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2569,6 +2569,15 @@ Figura&nbsp;1: Segmento de recta interrumpido entre <img src="https://latex.code
 <p>Supongamos ahora que <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> es cierta y veamos que <img src="https://latex.codecogs.com/png.latex?%5Cphi(S(n))"> es cierta. En efecto, <img src="https://latex.codecogs.com/png.latex?2%20%5Ccdot%20(1%20+%20%5Ccdots%20+%20S(n))=%202%20%5Ccdot%20((1+%20%5Ccdots%20+%20n)+S(n))=2%20%5Ccdot%20(1+%20%5Ccdots%20+%20n)%20+%202%20%5Ccdot%20S(n)=n%20%5Ccdot%20S(n)+%202%20%5Ccdot%20S(n)=S(n)%20%5Ccdot%20S(S(n))."></p>
 <p>La inducción matemática nos permite concluir que <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> es cierta para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%201">.</p>
 <p>De las variaciones del axioma de inducción se sigue la inducción matemática.</p>
+</section>
+<section id="eim" class="level4">
+<h4 class="anchored" data-anchor-id="eim"><span style="color: #e92121;">Ejercicio</span></h4>
+<ul>
+<li>Demostrar la inducción matemática</li>
+<li>Probar la siguiente variación de la inducción matemática: Si <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> es una fórmula que depende de <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> y es tal que:</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cphi(k_%7B0%7D)"> es cierta (paso inicial)</li>
+<li>Para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%20k_%7B0%7D">, <img src="https://latex.codecogs.com/png.latex?%5Cphi(k)"> es cierta para todo <img src="https://latex.codecogs.com/png.latex?k_%7B0%7D%20%3C%20k%20%5Cleq%20n"> implica <img src="https://latex.codecogs.com/png.latex?%5Cphi(S(n))"> cierta, entonces <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)"> es cierta para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%20k_%7B0%7D">.</li>
+</ul>
 </section>
 </section>
 <section id="representación-de-los-números-naturales-en-base-diez" class="level3">

@@ -2503,7 +2503,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="fa53c3eb" class="cell" data-execution_count="1">
+<div id="5b9662bb" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2513,7 +2513,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="da21192a" class="cell" data-execution_count="2">
+<div id="dbecea26" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2754,6 +2754,15 @@ Figura&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>Supongamos ahora que <span class="math inline">\(\phi(n)\)</span> es cierta y veamos que <span class="math inline">\(\phi(S(n))\)</span> es cierta. En efecto, <span class="math display">\[2 \cdot (1 + \cdots + S(n))= 2 \cdot ((1+ \cdots + n)+S(n))=2 \cdot (1+ \cdots + n) + 2 \cdot S(n)=n \cdot S(n)+ 2 \cdot S(n)=S(n) \cdot S(S(n)).\]</span></p>
 <p>La inducción matemática nos permite concluir que <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq 1\)</span>.</p>
 <p>De las <a href="#vai">variaciones del axioma de inducción</a> se sigue la inducción matemática.</p>
+</section>
+<section id="eim" class="level4">
+<h4 class="anchored" data-anchor-id="eim"><span style="color: #e92121;">Ejercicio</span></h4>
+<ul>
+<li>Demostrar la inducción matemática</li>
+<li>Probar la siguiente variación de la inducción matemática: Si <span class="math inline">\(\phi(n)\)</span> es una fórmula que depende de <span class="math inline">\(n \in \mathbb{N}\)</span> y es tal que:</li>
+<li><span class="math inline">\(\phi(k_{0})\)</span> es cierta (paso inicial)</li>
+<li>Para todo <span class="math inline">\(n \geq k_{0}\)</span>, <span class="math inline">\(\phi(k)\)</span> es cierta para todo <span class="math inline">\(k_{0} &lt; k \leq n\)</span> implica <span class="math inline">\(\phi(S(n))\)</span> cierta, entonces <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq k_{0}\)</span>.</li>
+</ul>
 </section>
 </section>
 <section id="representación-de-los-números-naturales-en-base-diez" class="level3">

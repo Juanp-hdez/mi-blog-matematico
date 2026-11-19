@@ -2737,6 +2737,15 @@ La inducción matemática nos permite concluir que $\phi(n)$ es cierta para todo
 
 De las [variaciones del axioma de inducción](#vai) se sigue la inducción matemática.
 
+#### [Ejercicio]{style="color: #e92121;"}{#eim}
+
+* Demostrar la inducción matemática
+* Probar la siguiente variación de la inducción matemática:
+Si $\phi(n)$ es una fórmula que depende de $n \in \mathbb{N}$ y es tal que:
+* $\phi(k_{0})$ es cierta (paso inicial)
+* Para todo $n \geq k_{0}$, $\phi(k)$ es cierta para todo $k_{0} < k \leq n$ implica $\phi(S(n))$ cierta,
+entonces $\phi(n)$ es cierta para todo $n \geq k_{0}$.
+
 ### [Representación de los números naturales en base diez]{style="color: #1e8449;"}
 
 Definamos el número natural **diez** como el sucesor del $9$, que denotaremos con el símbolo $10$.
