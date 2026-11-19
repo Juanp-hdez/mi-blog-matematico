@@ -2856,4 +2856,4 @@ n=r_{0}+r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k} \label{
 
 
 Vamos a demostrar esto por inducción (ver [ejercicio sobre variación de la inducción matemática](#eim)).
-Consideremos la fórmula $\phi(n)=\{n~ \textrm{tiene una escritura como en}~ \eqref{eq:b10}\}$.
+Consideremos la fórmula $\phi(n)=\{n~ \textrm{tiene una escritura como en \eqref{eq:b10}}\}$.
