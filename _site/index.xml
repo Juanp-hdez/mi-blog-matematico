@@ -2318,7 +2318,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <img src="https://latex.codecogs.com/png.latex?0%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">, y que si <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%3C%20S(m)">.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="7d70c9a7" class="cell" data-execution_count="1">
+<div id="f26cf2e4" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2328,7 +2328,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="81a505aa" class="cell" data-execution_count="2">
+<div id="225ab8e1" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2630,7 +2630,7 @@ Figura&nbsp;2: El conjunto <img src="https://latex.codecogs.com/png.latex?B%20=%
 <section id="escritura-en-base-10" class="level4">
 <h4 class="anchored" data-anchor-id="escritura-en-base-10"><span style="color: #e92121;">Escritura en base <img src="https://latex.codecogs.com/png.latex?10"></span></h4>
 <p>Todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%201"> se puede escribir como una suma <span id="eq-b10"><img src="https://latex.codecogs.com/png.latex?n=r_%7B0%7D+r_%7B1%7D%20%5Ccdot%2010%20+%20r_%7B2%7D%20%5Ccdot%2010%5E%7B2%7D+%20%5Ccdots%20+%20r_%7Bk%7D%20%5Ccdot%2010%5E%7Bk%7D%20%5Ctag%7B1%7D"></span> para cierto <img src="https://latex.codecogs.com/png.latex?k%20%5Cin%20%5Cmathbb%7BN%7D"> y donde <img src="https://latex.codecogs.com/png.latex?0%20%5Cleq%20r_%7Bi%7D%20%5Cleq%209"> para <img src="https://latex.codecogs.com/png.latex?i=1,%20%5Cdots%20,k">. Además esta escritura es única.</p>
-<p>Vamos a demostrar esto por inducción (ver ejercicio sobre variación de la inducción matemática). Consideremos la fórmula <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)=%5C%7Bn~%20%5Ctextrm%7Btiene%20una%20escritura%20como%20en%20@eq-b10%7D%5C%7D">.</p>
+<p>Vamos a demostrar esto por inducción (ver ejercicio sobre variación de la inducción matemática). Consideremos la fórmula <img src="https://latex.codecogs.com/png.latex?%5Cphi(n)=%5C%7Bn~%20%5Ctextrm%7Btiene%20una%20escritura%20como%20en%7D~%20@eq-b10%20%5C%7D">.</p>
 
 
 </section>
