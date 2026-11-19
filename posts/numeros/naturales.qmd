@@ -2747,7 +2747,7 @@ Definamos el número natural **diez** como el sucesor del $9$, que denotaremos c
 
 El primer algortimo de la historia es conocido con el nombre de "algoritmo de la división" y fue desarrollado por los matemáticos árabes. Este algoritmo permite representar cualquier número natural en base diez, es decir, como una suma de potencias de diez multiplicadas por dígitos del 0 al 9.
 
-#### [Algoritmo de la división]{style="color: #e92121;"}
+#### [Algoritmo de la división]{style="color: #e92121;"}{#alg-div}
 
 Dados dos números naturales $n,m \in \mathbb{N}$ con $m \neq 0$, existen únicos números naturales $k,s \in \mathbb{N}$ tales que $n=m \cdot k + s$ y $0 \leq s < m$.
 
@@ -2838,9 +2838,9 @@ Usando el algoritmo de la división tenemos que $n=10^{t}q+r$ con $r < 10^{t}$, 
 
 **Conclusión:**
 
-Todo $n \in \mathbb{N}$ con $1 \leq n$, se puede expresar como: $$n=10^{t_{1}}n_{1}+r_{1},$$ para cierto $t_{1} \in \mathbb{N}$, con $n_{1} \leq 9$ y $r_{1} < 10^{t_{1}}$.
+Todo $n \in \mathbb{N}$ con $1 \leq n$, se puede expresar como: $$n=10^{t_{1}}n_{1}+r_{1},$$ para cierto $t_{1} \in \mathbb{N}$, con $n_{1} \leq 9$ y $r_{1} < 10^{t_{1}} < n$.
 
-Repetimos lo mismo con $r_{1}$ y obtenemos $$r_{1}=10^{t_{2}}n_{2}+r_{2},$$ para cierto $t_{2} \in \mathbb{N}$, $t_{2} < t_{1}$, $n_{2} \leq 9$ y $r_{2}<10^{t_{2}}$.
+
 
 #### [Escritura en base $10$]{style="color: #e92121;"}
 
@@ -2852,3 +2852,12 @@ n=r_{0}+r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k} \label{
 
 Vamos a demostrar esto por inducción (ver [ejercicio sobre variación de la inducción matemática](#eim)).
 Consideremos la fórmula $\phi(n)=\{n~ \textrm{tiene una escritura como en \eqref{eq:b10}}\}$.
+Para $n=1$ tenemos que $\phi(1)$ es cierta (paso inicial).
+Ahora supongamos que $\phi(k)$ es cierta para todo $1 \leq k \leq n$ (hipótesis de inducción) y veamos que $\phi(S(n))$ es cierta.
+De la conclusión anterior tenemos que $S(n)=10^{t} \cdot r + m$ donde $0 \leq m < 10^{t} < S(n)$ y $0 \leq r \leq 9$.
+Si $m=0$ entonces $S(n)=r \cdot 10^{t}$ con $0 < r \leq 9$ y por lo tanto $\phi(S(n))$ es cierta.
+Ahora supongamos que $m \neq 0$.
+Como $m < S(n)$ entonces $m \leq n$ y por la hipótesis de inducción $\phi(m)$ es cierta. Esto quiere decir que $$m=r_{0}+ r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k}$$ para cierto $k \in \mathbb{N}$ y donde $0 \leq r_{i} \leq 9$ para $i=1, \dots ,k$ y además $r_{k} \neq 0$. En particular, $m \geq 10^{k}$.
+Reemplazando tenemos que $$S(n)=$r_{0}+ r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k}+r \cdot 10^{t}$$ con $r_{0}, r_{1}, \dots, r_{k}, r \in \{0,1, \dots, 9\}$. 
+Notemos que $10^{k} < 10^{t}$, ya que si $10^{t} \leq 10^{k}$ entonces $m \geq 10^{t}$ lo cual es absurdo.
+Concluimos entonces que $\phi(S(n))$ es cierta y por lo tanto de la inducción matemática tenemos que $\phi(n)$ es cierta para todo $n \geq 1$.
