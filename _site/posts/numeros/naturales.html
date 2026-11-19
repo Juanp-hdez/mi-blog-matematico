@@ -2503,7 +2503,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="78a42f72" class="cell" data-execution_count="1">
+<div id="fa53c3eb" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2513,7 +2513,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="59b6a35e" class="cell" data-execution_count="2">
+<div id="da21192a" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2554,8 +2554,11 @@ Figura&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p><strong>Principio del buen orden:</strong> Todo subconjunto no vacío de <span class="math inline">\(\mathbb{N}\)</span> tiene un elemento minimal.</p>
 <p>Antes de demostrar este principio, observemos que el conjunto <span class="math inline">\(\mathbb{N}\)</span> tiene un elemento minimal que es el <span class="math inline">\(0\)</span>.</p>
 <p>Demostremos el principio del buen orden. Supongamos por el absurdo que existe un subconjunto no vacío <span class="math inline">\(A \subseteq \mathbb{N}\)</span> que no tiene elemento minimal. Note que <span class="math inline">\(0 \notin A\)</span> ya que <span class="math inline">\(A\)</span> no tiene elemento minimal. Consideremos el conjunto <span class="math display">\[B=\{m \in \mathbb{N} : m &lt; n~ \textrm{para todo} ~n \in A\}\]</span>. Es claro que <span class="math inline">\(0 \in B\)</span>, y si <span class="math inline">\(n \in B\)</span> entonces <span class="math inline">\(S(n) \in B\)</span>, ya que como <span class="math inline">\(m &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span> entonces <span class="math inline">\(S(m) \leq n\)</span> para todo <span class="math inline">\(n \in A\)</span>, pero <span class="math inline">\(S(m) \notin A\)</span> puesto que <span class="math inline">\(A\)</span> no tiene elemento minimal, luego <span class="math inline">\(S(m) &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span>. Del principio de inducción se sigue que <span class="math inline">\(B=\mathbb{N}\)</span>, y por lo tanto, para todo <span class="math inline">\(m \in \mathbb{N}\)</span> se tiene que <span class="math inline">\(m &lt; n\)</span> para todo <span class="math inline">\(n \in A\)</span>, en particular, dado <span class="math inline">\(n \in A\)</span>, se tiene que <span class="math inline">\(n &lt; n\)</span>, lo cual es absurdo. Por lo tanto, todo subconjunto no vacío de <span class="math inline">\(\mathbb{N}\)</span> tiene un elemento minimal.</p>
-<div id="alg-vai" class="theorem algorithm">
-<p><span class="theorem-title"><strong>Algorithm 1 (<span style="color: #e92121;">Variaciones del axioma de inducción</span>)</strong></span> &nbsp;</p>
+</section>
+<div id="vai">
+<section id="variaciones-del-axioma-de-inducción" class="level4">
+<h4 class="anchored" data-anchor-id="variaciones-del-axioma-de-inducción"><span style="color: #e92121;">Variaciones del axioma de inducción</span></h4>
+</section>
 </div>
 <p><strong>Primera variación:</strong></p>
 <p>Supongamos que <span class="math inline">\(A\)</span> es un subconjunto del conjunto de los números naturales <span class="math inline">\(\mathbb{N}\)</span> que satisface:</p>
@@ -2625,7 +2628,6 @@ Figura&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 </ul>
 <p>Entonces <span class="math inline">\(\{n \in \mathbb{N} ~:~ n \geq k_{0}\} \subseteq A\)</span>. Si <span class="math inline">\(k_{0}\)</span> es el elemento minimal de <span class="math inline">\(A\)</span>, entonces <span class="math inline">\(\{n \in \mathbb{N} ~:~ n \geq k_{0}\}=A\)</span>.</p>
 <p>Para demostrar esto, denotemos para cada <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n \leq m\)</span>, <span class="math inline">\([n,m]=\{k \in \mathbb{N} ~:~ n \leq k \leq m\}\)</span> y consideremos el conjunto <span class="math display">\[B=\{n \geq k_{0} ~:~ [k_{0},n] \subseteq A\}.\]</span> Observemos que <span class="math inline">\(k_{0} \in B\)</span> ya que <span class="math inline">\([k_{0},k_{0}]=\{k_{0}\} \subseteq A\)</span>. Ahora, si <span class="math inline">\(n \in B\)</span> entonces <span class="math inline">\([k_{0},n] \subseteq A\)</span>, pero por hipótesis esto implica que <span class="math inline">\(S(n) \in A\)</span>, luego <span class="math inline">\([k_{0},S(n)]=[k_{0},n] \bigcup \{S(n)\} \subseteq A\)</span>, es decir, <span class="math inline">\(S(n) \in B\)</span>. De la primera variación tenemos que <span class="math inline">\(\{n \in \mathbb{N}~ :~ n \geq k_{0}\} \subseteq B\)</span>. Por lo tanto, para todo <span class="math inline">\(n \geq k_{0}\)</span> se tiene que <span class="math inline">\([k_{0},n] \subseteq A\)</span>, en particular, <span class="math inline">\(n \in A\)</span>. Esto muestra que <span class="math inline">\(\{n \in \mathbb{N} ~:~ n \geq k_{0}\} \subseteq A\)</span>.</p>
-</section>
 <section id="producto-de-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="producto-de-números-naturales"><span style="color: #e92121;">Producto de números naturales</span></h4>
 <p>Vamos a definir ahora otra operación binaria en el conjunto de los números naturales <span class="math inline">\(\mathbb{N}\)</span>, que llamaremos producto y denotaremos por <span class="math inline">\(\cdot : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}\)</span>, de la siguiente manera:</p>
@@ -2751,7 +2753,7 @@ Figura&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <p>Verifiquemos el paso inicial: para <span class="math inline">\(n=1\)</span> se cumple claramente que <span class="math inline">\(2 \cdot (1)=1 \cdot S(1)\)</span>.</p>
 <p>Supongamos ahora que <span class="math inline">\(\phi(n)\)</span> es cierta y veamos que <span class="math inline">\(\phi(S(n))\)</span> es cierta. En efecto, <span class="math display">\[2 \cdot (1 + \cdots + S(n))= 2 \cdot ((1+ \cdots + n)+S(n))=2 \cdot (1+ \cdots + n) + 2 \cdot S(n)=n \cdot S(n)+ 2 \cdot S(n)=S(n) \cdot S(S(n)).\]</span></p>
 <p>La inducción matemática nos permite concluir que <span class="math inline">\(\phi(n)\)</span> es cierta para todo <span class="math inline">\(n \geq 1\)</span>.</p>
-<p>De <a href="#alg-vai" class="quarto-xref">alg.&nbsp;1</a> se sigue la inducción matemática.</p>
+<p>De las <a href="#vai">variaciones del axioma de inducción</a> se sigue la inducción matemática.</p>
 </section>
 </section>
 <section id="representación-de-los-números-naturales-en-base-diez" class="level3">
