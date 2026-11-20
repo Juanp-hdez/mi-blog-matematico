@@ -2895,6 +2895,6 @@ De la inducción matemática concluimos que la fórmula es cierta para todo $k \
 
 Resumamos lo anterior en un teorema:
 
-#### [Expresión en base $10$]{#thm:b10}{style="color: #e92121;"}
+#### [Expresión en base $10$]{style="color: #e92121;"}{#thm:b10}
 
 Todo número $n \in \mathbb{N}$ se puede expresar de manera única como $$n=a_{0}+a_{1}10+a_{2}10^{2}+ \cdots +a_{k}10^{k},$$ donde $0 \leq a_{i} \leq 9$ y donde $10^{k}$.
