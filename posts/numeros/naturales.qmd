@@ -2892,3 +2892,9 @@ Verifiquemos el paso inicial. Si $k=1$ esto quiere decir que $n=r10^{t}$ es una 
 Supongamos ahora que la unicidad es cierta para $k > 1$ y probemos que es cierta para $S(k)=k+1$. Si tenemos una escritura $$n=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k+1}10^{t_{k+1}}$$ como en \eqref{eq:ub10} para $n$ y suponemos que $$n=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + c_{l}10^{s_{l}}$$ es otra escritura como en \eqref{eq:ub10} para $n$, entonces al igualarlas sabemos que tenemos que $t_{k+1}=s_{l}$ y $r_{k+1}=c_{l}$. Al cancelar obtenemos la igualdad $$r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}}=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + c_{l-1}10^{s_{l-1}},$$ dos escrituras como en \eqref{eq:ub10} que tienen que coincidir por la hipótesis de inducción, es decir, $k=l-1$ y $r_{i}=c_{i}$ para todo $i=1, \dots, k$.
 Hemos demostrado que si la fórmula es cierta para $k$ entonces es cierta para $S(k)=k+1$.
 De la inducción matemática concluimos que la fórmula es cierta para todo $k \geq 1$, lo que muestra la unicidad. 
+
+Resumamos lo anterior en un teorema:
+
+#### [Expresión en base $10$]{#thm:b10}{style="color: #e92121;"}
+
+Todo número $n \in \mathbb{N}$ se puede expresar de manera única como $$n=a_{0}+a_{1}10+a_{2}10^{2}+ \cdots +a_{k}10^{k},$$ donde $0 \leq a_{i} \leq 9$ y donde $10^{k}$.
