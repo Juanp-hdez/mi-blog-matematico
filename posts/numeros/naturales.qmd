@@ -2275,6 +2275,7 @@ Ahora, fijemos un elemento arbitrario $n \in \mathbb{N}$ y consideremos el conju
 
 * El elemento $0$ es llamado el neutro de la suma, ya que al sumarlo con otro elemento no lo cambia, es decir, para todo $n \in \mathbb{N}$ se tiene que $n+0=n=0+n$. Además, $0$ es el único elemento con esta propiedad. En efecto, supongamos que $n \in \mathbb{N}$ es tal que $n+m=m$ para todo $m \in \mathbb{N}$ ($n$ es otro neutro). En particular, $n+0=0$, y como $n+0=n$, se tiene que $n=0$.
 
+
 #### [Otras propiedades de la suma]{style="color: #e92121;"}
 
 * La suma es cancelativa, es decir, si $n,m,k \in \mathbb{N}$ son tales que $n+m=n+k$, entonces $m=k$.
@@ -2350,6 +2351,11 @@ Esto se puede probar usando el principio de inducción. Consideremos el conjunto
 De lo anterior tenemos que $0<S(0)=1 < S(1)=2 < S(2)=3 < S(3)=4 < S(4)=5 < S(5)=6 < S(6)=7 < S(7)=8 < S(8)=9$.
 
 También podemos deducir que el conjunto $\mathbb{N}$ no tiene un elemento maximal, es decir, dado un número natural $n \in \mathbb{N}$, siempre existe un número natural $m \in \mathbb{N}$ tal que $n < m$, por ejemplo $S(n)$, o dicho de manera equivalente, no existe un número natural que sea mayor o igual que todos los demás números naturales.  
+
+#### [Observaciones:]{style="color: #e92121;"}
+
+* Para todo $n \in \mathbb{N}$ se tiene que $S(n)=n+1$.
+* Si $n \in \mathbb{N}$ es tal que $1 \leq n$, entonces $P(n) \in \mathbb{N}$ es tal que $S(P(n))=n$, es decir, $P(n)+1=n$. Esto motiva la siguiente notación: Para cada $n \geq 1$, denotaremos $n-1=P(n)$.
 
 #### [Representación gráfica de los números naturales]{style="color: #e92121;"}
 

@@ -2314,11 +2314,18 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <p>De lo anterior tenemos que <img src="https://latex.codecogs.com/png.latex?0%3CS(0)=1%20%3C%20S(1)=2%20%3C%20S(2)=3%20%3C%20S(3)=4%20%3C%20S(4)=5%20%3C%20S(5)=6%20%3C%20S(6)=7%20%3C%20S(7)=8%20%3C%20S(8)=9">.</p>
 <p>También podemos deducir que el conjunto <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> no tiene un elemento maximal, es decir, dado un número natural <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, siempre existe un número natural <img src="https://latex.codecogs.com/png.latex?m%20%5Cin%20%5Cmathbb%7BN%7D"> tal que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, por ejemplo <img src="https://latex.codecogs.com/png.latex?S(n)">, o dicho de manera equivalente, no existe un número natural que sea mayor o igual que todos los demás números naturales.</p>
 </section>
+<section id="observaciones" class="level4">
+<h4 class="anchored" data-anchor-id="observaciones"><span style="color: #e92121;">Observaciones:</span></h4>
+<ul>
+<li>Para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> se tiene que <img src="https://latex.codecogs.com/png.latex?S(n)=n+1">.</li>
+<li>Si <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> es tal que <img src="https://latex.codecogs.com/png.latex?1%20%5Cleq%20n">, entonces <img src="https://latex.codecogs.com/png.latex?P(n)%20%5Cin%20%5Cmathbb%7BN%7D"> es tal que <img src="https://latex.codecogs.com/png.latex?S(P(n))=n">, es decir, <img src="https://latex.codecogs.com/png.latex?P(n)+1=n">. Esto motiva la siguiente notación: Para cada <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%201">, denotaremos <img src="https://latex.codecogs.com/png.latex?n-1=P(n)">.</li>
+</ul>
+</section>
 <section id="representación-gráfica-de-los-números-naturales" class="level4">
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <img src="https://latex.codecogs.com/png.latex?0%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">, y que si <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%3C%20S(m)">.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="7041ab4a" class="cell" data-execution_count="1">
+<div id="9521f302" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2328,7 +2335,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="7875b282" class="cell" data-execution_count="2">
+<div id="5c7f08cb" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
