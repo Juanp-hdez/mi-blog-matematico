@@ -2498,7 +2498,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="debd714c" class="cell" data-execution_count="1">
+<div id="7041ab4a" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2508,7 +2508,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="d50a9850" class="cell" data-execution_count="2">
+<div id="7875b282" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2709,8 +2709,16 @@ Figura&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <ul>
 <li><span class="math inline">\(n^{S(0)}=n\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
 <li><span class="math inline">\(0^{n}=0\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>.</li>
+<li><span class="math inline">\(n^{m}=0\)</span> si y solo si <span class="math inline">\(n=0\)</span> y <span class="math inline">\(m \neq 0\)</span>.</li>
 <li><span class="math inline">\(n^{m+k}=n^{m} \cdot n^{k}\)</span> para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span>.</li>
 <li><span class="math inline">\(n^{m \cdot k}=(n^{m})^{k}\)</span> para todo <span class="math inline">\(n,m,k \in \mathbb{N}\)</span>.</li>
+</ul>
+</section>
+<section id="propiedades-de-la-potenciación-respecto-a-la-relación-de-orden" class="level4">
+<h4 class="anchored" data-anchor-id="propiedades-de-la-potenciación-respecto-a-la-relación-de-orden"><span style="color: #e92121;">Propiedades de la potenciación respecto a la relación de orden</span></h4>
+<ul>
+<li>Si <span class="math inline">\(k \in \mathbb{N}\)</span> y <span class="math inline">\(k &gt; S(0)\)</span>, entonces <span class="math inline">\(k \cdot m^{n} &gt; m^{n}\)</span> para todo <span class="math inline">\(m,n \in \mathbb{N}\)</span> con <span class="math inline">\(m \neq 0\)</span>.</li>
+<li>Si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span> entonces <span class="math inline">\(k^{n} &lt; k^{m}\)</span> para todo <span class="math inline">\(k \in \mathbb{N} \setminus \{0\}\)</span>.</li>
 </ul>
 </section>
 </section>
@@ -2815,7 +2823,7 @@ n=r_{0}+r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k} \label{
 <p>Consideremos <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(n \geq 1\)</span>. Lo anterior nos permite expresar <span class="math display">\[\begin{equation}
 n=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}} \label{eq:ub10}
 \end{equation}\]</span> con <span class="math inline">\(0 &lt; r_{i} \leq 9\)</span> y <span class="math inline">\(t_{1} &lt; t_{2} &lt; \cdots &lt; t_{k}\)</span>.</p>
-<p>Veamos que esta escritura es única. Para esto comencemos observando que la escritura en <span class="math inline">\(\eqref{eq:ub10}\)</span> implica que <span class="math inline">\(10^{t_{k}}\)</span> es la potencia más grande de <span class="math inline">\(10\)</span> que es menor o igual a <span class="math inline">\(n\)</span>. Luego si tenemos dos escrituras para <span class="math inline">\(n \geq 1\)</span> como en <span class="math inline">\(\eqref{eq:ub10}\)</span> digamos, <span class="math display">\[n=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}}\]</span> y <span class="math display">\[n=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + c_{l}10^{t_{l}}\]</span>, de lo anterior tenemos que <span class="math inline">\(t_{k}=s_{l}\)</span>. Veamos que esto obliga a que <span class="math inline">\(r_{k}=c_{l}\)</span>. En efecto, si suponemos por el absurdo que <span class="math inline">\(r_{k} \neq c_{l}\)</span>, entonces suponiendo sin pérdida de generalidad que <span class="math inline">\(r_{k} &lt; c_{l}\)</span> tenemos que <span class="math inline">\(c_{l}=r_{k}+a\)</span> con <span class="math inline">\(a &gt; 0\)</span>, luego reemplazando tenemos que <span class="math display">\[r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}}=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + r_{k}10^{t_{k}}+a10^{t_{k}}.\]</span> Cancelando tenemos que <span class="math display">\[r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}-1}=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + a10^{t_{k}}.\]</span> Del lado izquierdo de esta última igualdad se sigue que <span class="math inline">\(10^{t_{k}-1}\)</span> es la mayor potencia menor o igual a <span class="math inline">\(m=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}-1}\)</span> y del lado derecho que <span class="math inline">\(10^{t_{k}} \leq 10^{t_{k}-1}\)</span>, lo que es absurdo ya que <span class="math inline">\(t_{k}-1 &lt; t_{k}\)</span>.</p>
+<p>Veamos que esta escritura es única. Para esto comencemos observando que la escritura en <span class="math inline">\(\eqref{eq:ub10}\)</span> implica que <span class="math inline">\(10^{t_{k}}\)</span> es la potencia más grande de <span class="math inline">\(10\)</span> que es menor o igual a <span class="math inline">\(n\)</span>. Luego si tenemos dos escrituras para <span class="math inline">\(n \geq 1\)</span> como en <span class="math inline">\(\eqref{eq:ub10}\)</span> digamos, <span class="math display">\[n=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}}\]</span> y <span class="math display">\[n=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + c_{l}10^{s_{l}},\]</span> de lo anterior tenemos que <span class="math inline">\(t_{k}=s_{l}\)</span>. Veamos que esto obliga a que <span class="math inline">\(r_{k}=c_{l}\)</span>. En efecto, si suponemos por el absurdo que <span class="math inline">\(r_{k} \neq c_{l}\)</span>, entonces suponiendo sin pérdida de generalidad que <span class="math inline">\(r_{k} &lt; c_{l}\)</span> tenemos que <span class="math inline">\(c_{l}=r_{k}+a\)</span> con <span class="math inline">\(a &gt; 0\)</span>, luego reemplazando tenemos que <span class="math display">\[r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}}=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + r_{k}10^{t_{k}}+a10^{t_{k}}.\]</span> Cancelando tenemos que <span class="math display">\[r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k-1}}=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + a10^{t_{k}}.\]</span> Del lado izquierdo de esta última igualdad se sigue que <span class="math inline">\(10^{t_{k}-1}\)</span> es la mayor potencia menor o igual a <span class="math inline">\(m=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k-1}}\)</span> y del lado derecho se sigue que <span class="math inline">\(10^{t_{k}} \leq 10^{t_{k-1}}\)</span>, lo que es absurdo ya que <span class="math inline">\(t_{k-1} &lt; t_{k}\)</span>.</p>
 
 
 </section>

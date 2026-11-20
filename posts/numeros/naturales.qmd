@@ -2676,8 +2676,15 @@ Para probar esto, fijemos un elemento arbitrario $n \in \mathbb{N}$ y considerem
 
 * $n^{S(0)}=n$ para todo $n \in \mathbb{N}$.
 * $0^{n}=0$ para todo $n \in \mathbb{N} \setminus \{0\}$.
+* $n^{m}=0$ si y solo si $n=0$ y $m \neq 0$.
 * $n^{m+k}=n^{m} \cdot n^{k}$ para todo $n,m,k \in \mathbb{N}$.
 * $n^{m \cdot k}=(n^{m})^{k}$ para todo $n,m,k \in \mathbb{N}$.
+
+#### [Propiedades de la potenciación respecto a la relación de orden]{style="color: #e92121;"}
+
+* Si $k \in \mathbb{N}$ y $k > S(0)$, entonces $k \cdot m^{n} > m^{n}$ para todo $m,n \in \mathbb{N}$ con $m \neq 0$.
+* Si $n,m \in \mathbb{N}$ son tales que $n < m$ entonces $k^{n} < k^{m}$ para todo $k \in \mathbb{N} \setminus \{0\}$.
+
 
 ### [Inducción matemática]{style="color: #1e8449;"}
 
@@ -2868,6 +2875,6 @@ n=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}} \label{eq:ub10}
 \end{equation}
 con $0 < r_{i} \leq 9$ y $t_{1} < t_{2} < \cdots < t_{k}$.
 
-Veamos que esta escritura es única. Para esto comencemos observando que la escritura en \eqref{eq:ub10} implica que $10^{t_{k}}$ es la potencia más grande de $10$ que es menor o igual a $n$. Luego si tenemos dos escrituras para $n \geq 1$ como en \eqref{eq:ub10} digamos, $$n=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}}$$ y $$n=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + c_{l}10^{t_{l}}$$, de lo anterior tenemos que $t_{k}=s_{l}$. 
+Veamos que esta escritura es única. Para esto comencemos observando que la escritura en \eqref{eq:ub10} implica que $10^{t_{k}}$ es la potencia más grande de $10$ que es menor o igual a $n$. Luego si tenemos dos escrituras para $n \geq 1$ como en \eqref{eq:ub10} digamos, $$n=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}}$$ y $$n=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + c_{l}10^{s_{l}},$$ de lo anterior tenemos que $t_{k}=s_{l}$. 
 Veamos que esto obliga a que $r_{k}=c_{l}$. 
-En efecto, si suponemos por el absurdo que $r_{k} \neq c_{l}$, entonces suponiendo sin pérdida de generalidad que $r_{k} < c_{l}$ tenemos que $c_{l}=r_{k}+a$ con $a > 0$, luego reemplazando tenemos que $$r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}}=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + r_{k}10^{t_{k}}+a10^{t_{k}}.$$ Cancelando tenemos que $$r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}-1}=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + a10^{t_{k}}.$$ Del lado izquierdo de esta última igualdad se sigue que $10^{t_{k}-1}$ es la mayor potencia menor o igual a $m=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}-1}$ y del lado derecho que $10^{t_{k}} \leq 10^{t_{k}-1}$, lo que es absurdo ya que $t_{k}-1 < t_{k}$.
+En efecto, si suponemos por el absurdo que $r_{k} \neq c_{l}$, entonces suponiendo sin pérdida de generalidad que $r_{k} < c_{l}$ tenemos que $c_{l}=r_{k}+a$ con $a > 0$, luego reemplazando tenemos que $$r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}}=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + r_{k}10^{t_{k}}+a10^{t_{k}}.$$ Cancelando tenemos que $$r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k-1}}=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + a10^{t_{k}}.$$ Del lado izquierdo de esta última igualdad se sigue que $10^{t_{k}-1}$ es la mayor potencia menor o igual a $m=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k-1}}$ y del lado derecho se sigue que $10^{t_{k}} \leq 10^{t_{k-1}}$, lo que es absurdo ya que $t_{k-1} < t_{k}$.
