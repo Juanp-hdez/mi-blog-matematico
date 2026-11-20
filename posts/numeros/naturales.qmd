@@ -2844,20 +2844,30 @@ Todo $n \in \mathbb{N}$ con $1 \leq n$, se puede expresar como: $$n=10^{t_{1}}n_
 
 #### [Escritura en base $10$]{style="color: #e92121;"}
 
-Todo $n \in \mathbb{N}$ con $n \geq 1$ se puede escribir como una suma 
+Todo $n \in \mathbb{N}$ se puede escribir como una suma 
 \begin{equation}
 n=r_{0}+r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k} \label{eq:b10}
-\end{equation}  para cierto $k \in \mathbb{N}$ y donde $0 \leq r_{i} \leq 9$ para $i=1, \dots ,k$. Además esta escritura es única.
+\end{equation}  para cierto $k \in \mathbb{N}$ y donde $0 \leq r_{i} \leq 9$ para $i=1, \dots ,k$. 
 
 
 Vamos a demostrar esto por inducción (ver [ejercicio sobre variación de la inducción matemática](#eim)).
 Consideremos la fórmula $\phi(n)=\{n~ \textrm{tiene una escritura como en \eqref{eq:b10}}\}$.
-Para $n=1$ tenemos que $\phi(1)$ es cierta (paso inicial).
-Ahora supongamos que $\phi(k)$ es cierta para todo $1 \leq k \leq n$ (hipótesis de inducción) y veamos que $\phi(S(n))$ es cierta.
+Para $n=0$ tenemos que $\phi(0)$ es cierta (paso inicial).
+Ahora supongamos que $\phi(k)$ es cierta para todo $0 \leq k \leq n$ (hipótesis de inducción) y veamos que $\phi(S(n))$ es cierta.
 De la conclusión anterior tenemos que $S(n)=10^{t} \cdot r + m$ donde $0 \leq m < 10^{t} < S(n)$ y $0 \leq r \leq 9$.
 Si $m=0$ entonces $S(n)=r \cdot 10^{t}$ con $0 < r \leq 9$ y por lo tanto $\phi(S(n))$ es cierta.
 Ahora supongamos que $m \neq 0$.
 Como $m < S(n)$ entonces $m \leq n$ y por la hipótesis de inducción $\phi(m)$ es cierta. Esto quiere decir que $$m=r_{0}+ r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k}$$ para cierto $k \in \mathbb{N}$ y donde $0 \leq r_{i} \leq 9$ para $i=1, \dots ,k$ y además $r_{k} \neq 0$. En particular, $m \geq 10^{k}$.
-Reemplazando tenemos que $$S(n)=$r_{0}+ r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k}+r \cdot 10^{t}$$ con $r_{0}, r_{1}, \dots, r_{k}, r \in \{0,1, \dots, 9\}$. 
+Reemplazando tenemos que $$S(n)=r_{0}+ r_{1} \cdot 10 + r_{2} \cdot 10^{2}+ \cdots + r_{k} \cdot 10^{k}+r \cdot 10^{t}$$ con $r_{0}, r_{1}, \dots, r_{k}, r \in \{0,1, \dots, 9\}$. 
 Notemos que $10^{k} < 10^{t}$, ya que si $10^{t} \leq 10^{k}$ entonces $m \geq 10^{t}$ lo cual es absurdo.
-Concluimos entonces que $\phi(S(n))$ es cierta y por lo tanto de la inducción matemática tenemos que $\phi(n)$ es cierta para todo $n \geq 1$.
+Concluimos entonces que $\phi(S(n))$ es cierta y por lo tanto de la inducción matemática tenemos que $\phi(n)$ es cierta para todo $n \in \mathbb{N}$.
+
+Consideremos $n \in \mathbb{N}$, $n \geq 1$. Lo anterior nos permite expresar 
+\begin{equation}
+n=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}} \label{eq:ub10}
+\end{equation}
+con $0 < r_{i} \leq 9$ y $t_{1} < t_{2} < \cdots < t_{k}$.
+
+Veamos que esta escritura es única. Para esto comencemos observando que la escritura en \eqref{eq:ub10} implica que $10^{t_{k}}$ es la potencia más grande de $10$ que es menor o igual a $n$. Luego si tenemos dos escrituras para $n \geq 1$ como en \eqref{eq:ub10} digamos, $$n=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}}$$ y $$n=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + c_{l}10^{t_{l}}$$, de lo anterior tenemos que $t_{k}=s_{l}$. 
+Veamos que esto obliga a que $r_{k}=c_{l}$. 
+En efecto, si suponemos por el absurdo que $r_{k} \neq c_{l}$, entonces suponiendo sin pérdida de generalidad que $r_{k} < c_{l}$ tenemos que $c_{l}=r_{k}+a$ con $a > 0$, luego reemplazando tenemos que $$r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}}=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + r_{k}10^{t_{k}}+a10^{t_{k}}.$$ Cancelando tenemos que $$r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}-1}=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + a10^{t_{k}}.$$ Del lado izquierdo de esta última igualdad se sigue que $10^{t_{k}-1}$ es la mayor potencia menor o igual a $m=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}-1}$ y del lado derecho que $10^{t_{k}} \leq 10^{t_{k}-1}$, lo que es absurdo ya que $t_{k}-1 < t_{k}$.
