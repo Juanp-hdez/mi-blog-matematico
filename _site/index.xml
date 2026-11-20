@@ -2325,7 +2325,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <img src="https://latex.codecogs.com/png.latex?0%20%3C%20n"> para todo <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D%20%5Csetminus%20%5C%7B0%5C%7D">, y que si <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> son tales que <img src="https://latex.codecogs.com/png.latex?n%20%3C%20m">, entonces <img src="https://latex.codecogs.com/png.latex?S(n)%20%3C%20S(m)">.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <img src="https://latex.codecogs.com/png.latex?0"> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="0ff080a1" class="cell" data-execution_count="1">
+<div id="e054bb89" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2335,7 +2335,7 @@ entonces <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Csu
 </div>
 </div>
 <p>En general, dados <img src="https://latex.codecogs.com/png.latex?n,m%20%5Cin%20%5Cmathbb%7BN%7D"> con <img src="https://latex.codecogs.com/png.latex?n%20%3Cm">, gráficamente los representaremos con <img src="https://latex.codecogs.com/png.latex?m"> a la derecha de <img src="https://latex.codecogs.com/png.latex?n">, como muestra la siguiente figura:</p>
-<div id="270a7b30" class="cell" data-execution_count="2">
+<div id="c629fce8" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2655,6 +2655,12 @@ Figura&nbsp;2: El conjunto <img src="https://latex.codecogs.com/png.latex?B%20=%
 <h4 class="anchored" data-anchor-id="b10"><span style="color: #e92121;">Escritura en base <img src="https://latex.codecogs.com/png.latex?10"></span></h4>
 <p>Todo número <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> se puede expresar de manera única como <img src="https://latex.codecogs.com/png.latex?n=a_%7B0%7D+a_%7B1%7D10+a_%7B2%7D10%5E%7B2%7D+%20%5Ccdots%20+a_%7Bk%7D10%5E%7Bk%7D,"> donde <img src="https://latex.codecogs.com/png.latex?0%20%5Cleq%20a_%7Bi%7D%20%5Cleq%209"> para <img src="https://latex.codecogs.com/png.latex?i=0,1,%20%5Cdots,%20k-1"> y <img src="https://latex.codecogs.com/png.latex?0%20%3C%20a_%7Bk%7D%20%5Cleq%209">.</p>
 <p>Esto nos permite representar todo número natural como una secuencia <img src="https://latex.codecogs.com/png.latex?a_%7Bk%7Da_%7Bk-1%7D%20%5Ccdots%20a_%7B1%7Da_%7B0%7D"> con <img src="https://latex.codecogs.com/png.latex?a_%7B0%7D,%20a_%7B1%7D,%20%5Cdots,%20a_%7Bk%7D%20%5Cin%20%5C%7B0,1,%20%5Cdots,%209%5C%7D"> y <img src="https://latex.codecogs.com/png.latex?a_%7Bk%7D%20%5Cneq%200">.</p>
+</section>
+<section id="ejemplo-3" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-3"><span style="color: #e92121;">Ejemplo</span></h4>
+<ul>
+<li>La representación <img src="https://latex.codecogs.com/png.latex?8054032"> cooresponde al número natural <img src="https://latex.codecogs.com/png.latex?n=2+3%20%5Ccdot%2010%20+%204%20%5Ccdot%2010%5E%7B3%7D%20+%205%20%5Ccdot%2010%5E%7B4%7D%20+%208%20%5Ccdot%2010%5E%7B6%7D.">$</li>
+</ul>
 
 
 </section>

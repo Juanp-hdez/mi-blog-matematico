@@ -2900,3 +2900,7 @@ Resumamos lo anterior en un teorema:
 Todo número $n \in \mathbb{N}$ se puede expresar de manera única como $$n=a_{0}+a_{1}10+a_{2}10^{2}+ \cdots +a_{k}10^{k},$$ donde $0 \leq a_{i} \leq 9$ para $i=0,1, \dots, k-1$ y $0 < a_{k} \leq 9$.
 
 Esto nos permite representar todo número natural como una secuencia $a_{k}a_{k-1} \cdots a_{1}a_{0}$ con $a_{0}, a_{1}, \dots, a_{k} \in \{0,1, \dots, 9\}$ y $a_{k} \neq 0$.
+
+#### [Ejemplo]{style="color: #e92121;"}
+
+* La representación $8054032$ cooresponde al número natural $n=2+3 \cdot 10 + 4 \cdot 10^{3} + 5 \cdot 10^{4} + 8 \cdot 10^{6}.$$
