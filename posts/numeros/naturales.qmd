@@ -2760,7 +2760,7 @@ Definamos el número natural **diez** como el sucesor del $9$, que denotaremos c
 
 El primer algortimo de la historia es conocido con el nombre de "algoritmo de la división" y fue desarrollado por los matemáticos árabes. Este algoritmo permite representar cualquier número natural en base diez, es decir, como una suma de potencias de diez multiplicadas por dígitos del 0 al 9.
 
-#### [Algoritmo de la división]{style="color: #e92121;"}{#alg-div}
+#### [Algoritmo de la división]{style="color: #e92121;"}{#div}
 
 Dados dos números naturales $n,m \in \mathbb{N}$ con $m \neq 0$, existen únicos números naturales $k,s \in \mathbb{N}$ tales que $n=m \cdot k + s$ y $0 \leq s < m$.
 
@@ -2895,6 +2895,8 @@ De la inducción matemática concluimos que la fórmula es cierta para todo $k \
 
 Resumamos lo anterior en un teorema:
 
-#### [Expresión en base $10$]{style="color: #e92121;"}{#thm:b10}
+#### [Escritura en base $10$]{style="color: #e92121;"}{#b10}
 
-Todo número $n \in \mathbb{N}$ se puede expresar de manera única como $$n=a_{0}+a_{1}10+a_{2}10^{2}+ \cdots +a_{k}10^{k},$$ donde $0 \leq a_{i} \leq 9$ y donde $10^{k}$.
+Todo número $n \in \mathbb{N}$ se puede expresar de manera única como $$n=a_{0}+a_{1}10+a_{2}10^{2}+ \cdots +a_{k}10^{k},$$ donde $0 \leq a_{i} \leq 9$ para $i=0,1, \dots, k-1$ y $0 < a_{k} \leq 9$.
+
+Esto nos permite representar todo número natural como una secuencia $a_{k}a_{k-1} \cdots a_{1}a_{0}$ con $a_{0}, a_{1}, \dots, a_{k} \in \{0,1, \dots, 9\}$ y $a_{k} \neq 0$.

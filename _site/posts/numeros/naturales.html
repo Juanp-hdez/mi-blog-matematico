@@ -2505,7 +2505,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="dee12994" class="cell" data-execution_count="1">
+<div id="0ff080a1" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2515,7 +2515,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="fc3ecd23" class="cell" data-execution_count="2">
+<div id="270a7b30" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2779,8 +2779,8 @@ Figura&nbsp;1: Segmento de recta interrumpido entre <span class="math inline">\(
 <h3 class="anchored" data-anchor-id="representación-de-los-números-naturales-en-base-diez"><span style="color: #1e8449;">Representación de los números naturales en base diez</span></h3>
 <p>Definamos el número natural <strong>diez</strong> como el sucesor del <span class="math inline">\(9\)</span>, que denotaremos con el símbolo <span class="math inline">\(10\)</span>.</p>
 <p>El primer algortimo de la historia es conocido con el nombre de “algoritmo de la división” y fue desarrollado por los matemáticos árabes. Este algoritmo permite representar cualquier número natural en base diez, es decir, como una suma de potencias de diez multiplicadas por dígitos del 0 al 9.</p>
-<section id="alg-div" class="level4">
-<h4 class="anchored" data-anchor-id="alg-div"><span style="color: #e92121;">Algoritmo de la división</span></h4>
+<section id="div" class="level4">
+<h4 class="anchored" data-anchor-id="div"><span style="color: #e92121;">Algoritmo de la división</span></h4>
 <p>Dados dos números naturales <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(m \neq 0\)</span>, existen únicos números naturales <span class="math inline">\(k,s \in \mathbb{N}\)</span> tales que <span class="math inline">\(n=m \cdot k + s\)</span> y <span class="math inline">\(0 \leq s &lt; m\)</span>.</p>
 <p><strong>Existencia:</strong></p>
 <p>Observemos que si <span class="math inline">\(n &lt; m\)</span> entonces <span class="math inline">\(n=m \cdots 0 + 0\)</span>.</p>
@@ -2835,9 +2835,10 @@ n=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}} \label{eq:ub10}
 <p>Verifiquemos el paso inicial. Si <span class="math inline">\(k=1\)</span> esto quiere decir que <span class="math inline">\(n=r10^{t}\)</span> es una escritura en base <span class="math inline">\(10\)</span> para <span class="math inline">\(n\)</span>. Si <span class="math inline">\(n=c_{1}10^{s_{1}} + \cdots + c_{l}10^{s_{l}}\)</span> es otra escritura como en <span class="math inline">\(\eqref{eq:ub10}\)</span>, entonces de lo anterior, <span class="math inline">\(t=s_{l}\)</span> y <span class="math inline">\(r=c_{l}\)</span>, luego cancelando obtenemos que <span class="math inline">\(0=c_{1}10^{s_{1}}+ \cdots +c_{l-1}10^{s_{l-1}}\)</span>, pero esto solo se tiene si <span class="math inline">\(c_{1}= \cdots = c_{l-1}=0\)</span>, lo que muestra la unicidad. Supongamos ahora que la unicidad es cierta para <span class="math inline">\(k &gt; 1\)</span> y probemos que es cierta para <span class="math inline">\(S(k)=k+1\)</span>. Si tenemos una escritura <span class="math display">\[n=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k+1}10^{t_{k+1}}\]</span> como en <span class="math inline">\(\eqref{eq:ub10}\)</span> para <span class="math inline">\(n\)</span> y suponemos que <span class="math display">\[n=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + c_{l}10^{s_{l}}\]</span> es otra escritura como en <span class="math inline">\(\eqref{eq:ub10}\)</span> para <span class="math inline">\(n\)</span>, entonces al igualarlas sabemos que tenemos que <span class="math inline">\(t_{k+1}=s_{l}\)</span> y <span class="math inline">\(r_{k+1}=c_{l}\)</span>. Al cancelar obtenemos la igualdad <span class="math display">\[r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}}=c_{1}10^{s_{1}} + c_{2}10^{s_{2}}+ \cdots + c_{l-1}10^{s_{l-1}},\]</span> dos escrituras como en <span class="math inline">\(\eqref{eq:ub10}\)</span> que tienen que coincidir por la hipótesis de inducción, es decir, <span class="math inline">\(k=l-1\)</span> y <span class="math inline">\(r_{i}=c_{i}\)</span> para todo <span class="math inline">\(i=1, \dots, k\)</span>. Hemos demostrado que si la fórmula es cierta para <span class="math inline">\(k\)</span> entonces es cierta para <span class="math inline">\(S(k)=k+1\)</span>. De la inducción matemática concluimos que la fórmula es cierta para todo <span class="math inline">\(k \geq 1\)</span>, lo que muestra la unicidad.</p>
 <p>Resumamos lo anterior en un teorema:</p>
 </section>
-<section id="thm:b10" class="level4">
-<h4 class="anchored" data-anchor-id="thm:b10"><span style="color: #e92121;">Expresión en base <span class="math inline">\(10\)</span></span></h4>
-<p>Todo número <span class="math inline">\(n \in \mathbb{N}\)</span> se puede expresar de manera única como <span class="math display">\[n=a_{0}+a_{1}10+a_{2}10^{2}+ \cdots +a_{k}10^{k},\]</span> donde <span class="math inline">\(0 \leq a_{i} \leq 9\)</span> y donde <span class="math inline">\(10^{k}\)</span>.</p>
+<section id="b10" class="level4">
+<h4 class="anchored" data-anchor-id="b10"><span style="color: #e92121;">Escritura en base <span class="math inline">\(10\)</span></span></h4>
+<p>Todo número <span class="math inline">\(n \in \mathbb{N}\)</span> se puede expresar de manera única como <span class="math display">\[n=a_{0}+a_{1}10+a_{2}10^{2}+ \cdots +a_{k}10^{k},\]</span> donde <span class="math inline">\(0 \leq a_{i} \leq 9\)</span> para <span class="math inline">\(i=0,1, \dots, k-1\)</span> y <span class="math inline">\(0 &lt; a_{k} \leq 9\)</span>.</p>
+<p>Esto nos permite representar todo número natural como una secuencia <span class="math inline">\(a_{k}a_{k-1} \cdots a_{1}a_{0}\)</span> con <span class="math inline">\(a_{0}, a_{1}, \dots, a_{k} \in \{0,1, \dots, 9\}\)</span> y <span class="math inline">\(a_{k} \neq 0\)</span>.</p>
 
 
 </section>
