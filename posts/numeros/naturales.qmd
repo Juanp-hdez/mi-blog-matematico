@@ -2903,4 +2903,4 @@ Esto nos permite representar todo número natural como una secuencia $a_{k}a_{k-
 
 #### [Ejemplo]{style="color: #e92121;"}
 
-* La representación $8054032$ cooresponde al número natural $n=2+3 \cdot 10 + 4 \cdot 10^{3} + 5 \cdot 10^{4} + 8 \cdot 10^{6}.$$
+* La representación $8054032$ cooresponde al número natural $$n=2+3 \cdot 10 + 4 \cdot 10^{3} + 5 \cdot 10^{4} + 8 \cdot 10^{6}.$$
