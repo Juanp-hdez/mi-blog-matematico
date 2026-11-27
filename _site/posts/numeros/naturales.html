@@ -2505,7 +2505,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 <h4 class="anchored" data-anchor-id="representación-gráfica-de-los-números-naturales"><span style="color: #e92121;">Representación gráfica de los números naturales</span></h4>
 <p>Observe que <span class="math inline">\(0 &lt; n\)</span> para todo <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span>, y que si <span class="math inline">\(n,m \in \mathbb{N}\)</span> son tales que <span class="math inline">\(n &lt; m\)</span>, entonces <span class="math inline">\(S(n) &lt; S(m)\)</span>.</p>
 <p>Vamos a representar los números naturales de izquierda a derecha comenzando con el menor que es el <span class="math inline">\(0\)</span> y continuando con sus sucesores, como muestra la siguiente figura:</p>
-<div id="4c4114bc" class="cell" data-execution_count="1">
+<div id="b54fc744" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2515,7 +2515,7 @@ entonces <span class="math inline">\(\mathbb{N} \subseteq A\)</span>. Es decir, 
 </div>
 </div>
 <p>En general, dados <span class="math inline">\(n,m \in \mathbb{N}\)</span> con <span class="math inline">\(n &lt;m\)</span>, gráficamente los representaremos con <span class="math inline">\(m\)</span> a la derecha de <span class="math inline">\(n\)</span>, como muestra la siguiente figura:</p>
-<div id="01e868c6" class="cell" data-execution_count="2">
+<div id="d5a8df7e" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2845,7 +2845,8 @@ n=r_{1}10^{t_{1}} + r_{2}10^{t_{2}}+ \cdots + r_{k}10^{t_{k}} \label{eq:ub10}
 <ul>
 <li>La representación <span class="math inline">\(8054032\)</span> corresponde al número natural <span class="math display">\[n=2+3 \cdot 10 + 4 \cdot 10^{3} + 5 \cdot 10^{4} + 8 \cdot 10^{6}.\]</span></li>
 </ul>
-<p>La representación anterior permite ver que la aritmética de los números naturales, depende solamente de la arit</p>
+<p>La representación anterior permite ver que la aritmética de los números naturales, depende solamente de la aritmética de los primeros términos <span class="math inline">\(0,1, \dots, 9\)</span>.</p>
+<p>Supongamos que queremos sumar dos números naturales con representaciones <span class="math display">\[n=a_{k}a_{k-1} \cdots a_{1}a_{0}\]</span> y <span class="math display">\[m=b_{s}b_{s-1} \cdots b_{1}b_{0}.\]</span> Supongamos sin pérdidad de generalidad que <span class="math inline">\(k \geq s\)</span>, luego podemos escribir <span class="math inline">\(m=b_{k}b_{k-1} \cdots b_{s+1}b_{s} \cdots b_{1}b_{0}\)</span> con <span class="math inline">\(b_{i}=0\)</span> para <span class="math inline">\(i=s+1, \dots, k\)</span>. De la propiedad distributiva se sigue que <span class="math display">\[n+m=(a_{k}+b_{k}) \cdot 10^{k}+ \cdots +(a_{s}+b_{s}) \cdot 10^{s}+ \cdots +(a_{1}+b_{1}) \cdot 10^{1}+(a_{0}+b_{0}) \cdot 10^{0},\]</span> pero note que en esta expresi'on no podemos garantizar que <span class="math inline">\(a_{i}+b_{i} &lt; 10\)</span>, es decir, esta no corresponde necesariamente a la escritura en base <span class="math inline">\(10\)</span> del número <span class="math inline">\(n+m\)</span>. Analicemos la expresión anterior de derecha a izquierda. Usando el <a href="#div">algoritmo de la división</a></p>
 
 
 </section>
