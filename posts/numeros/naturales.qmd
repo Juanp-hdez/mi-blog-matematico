@@ -2766,7 +2766,7 @@ Dados dos números naturales $n,m \in \mathbb{N}$ con $m \neq 0$, existen único
 
 **Existencia:**
 
-Observemos que si $n < m$ entonces $n=m \cdots 0 + 0$.
+Observemos que si $n < m$ entonces $n=m \cdot 0 + 0$.
 
 Supongamos entonces que $m \leq n$. Consideremos el conjunto $$B=\{m \cdot l \in \mathbb{N}~ :~ n < m \cdot l \}.$$ Observemos que $B$ es un subconjunto no vacío de $\mathbb{N}$, ya que de lo contrario se tendría que $m \cdot l \leq n$ para todo $l \in \mathbb{N}$, lo que implica $l \leq m \cdot l \leq n$ para todo $l \in \mathbb{N}$ y por lo tanto $n$ sería un elemento maximal de $\mathbb{N}$, lo cual es absurdo. 
 
@@ -2909,4 +2909,4 @@ La representación anterior permite ver que la aritmética de los números natur
 
 Supongamos que queremos sumar dos números naturales con representaciones $$n=a_{k}a_{k-1} \cdots a_{1}a_{0}$$ y $$m=b_{s}b_{s-1} \cdots b_{1}b_{0}.$$ Supongamos sin pérdidad de generalidad que $k \geq s$, luego podemos escribir $m=b_{k}b_{k-1} \cdots b_{s+1}b_{s} \cdots b_{1}b_{0}$ con $b_{i}=0$ para $i=s+1, \dots, k$.
 De la propiedad distributiva se sigue que $$n+m=(a_{k}+b_{k}) \cdot 10^{k}+ \cdots +(a_{s}+b_{s}) \cdot 10^{s}+ \cdots +(a_{1}+b_{1}) \cdot 10^{1}+(a_{0}+b_{0}) \cdot 10^{0},$$ pero note que en esta expresi\'on no podemos garantizar que $a_{i}+b_{i} < 10$, es decir, esta no corresponde necesariamente a la escritura en base $10$ del número $n+m$.
-Analicemos la expresión anterior de derecha a izquierda. Usando el [algoritmo de la división](#div) 
+Analicemos la expresión anterior de derecha a izquierda. Usando el [algoritmo de la división](#div) podemos escribir $$a_{0}+b_{0}=c_{0}10+r_{0},$$ con $0 \leq r_{0} \leq 9$. Note que como $0 \leq a_{0},b_{0} < 10$ entonces $a_{0}+b_{0} < 2 \cdot 10$, y por lo tanto $0 \leq c_{0} \leq 1$. Esto permite escribir $$n+m=(a_{k}+b_{k}) \cdot 10^{k}+ \cdots +(a_{s}+b_{s}) \cdot 10^{s}+ \cdots +(a_{1}+b_{1}+c_{0}) \cdot 10^{1}+r_{0} \cdot 10^{0}.$$ Observemos en general que si $k,s \in \mathbb{N}$ son tales que $0 \leq k,s \leq 9$, entonces $k+s+1 < 2 \cdot 10.$ En efecto, $$2 \cdot 10= 10+10=(9+1)+(9+1)=9+9+1+1=S(9+9+1),$$ luego $k+s+1 \leq 9+9+1 < S(9+9+1)=2 \cdot 10$.
