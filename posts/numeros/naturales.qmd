@@ -2911,3 +2911,13 @@ Supongamos que queremos sumar dos números naturales con representaciones $$n=a_
 De la propiedad distributiva se sigue que $$n+m=(a_{k}+b_{k}) \cdot 10^{k}+ \cdots +(a_{s}+b_{s}) \cdot 10^{s}+ \cdots +(a_{1}+b_{1}) \cdot 10^{1}+(a_{0}+b_{0}) \cdot 10^{0},$$ pero note que en esta expresi\'on no podemos garantizar que $a_{i}+b_{i} < 10$, es decir, esta no corresponde necesariamente a la escritura en base $10$ del número $n+m$.
 Analicemos la expresión anterior de derecha a izquierda. Usando el [algoritmo de la división](#div) podemos escribir $$a_{0}+b_{0}=c_{0}10+r_{0},$$ con $0 \leq r_{0} \leq 9$. Note que como $0 \leq a_{0},b_{0} < 10$ entonces $a_{0}+b_{0} < 2 \cdot 10$, y por lo tanto $0 \leq c_{0} \leq 1$. Esto permite escribir $$n+m=(a_{k}+b_{k}) \cdot 10^{k}+ \cdots +(a_{s}+b_{s}) \cdot 10^{s}+ \cdots +(a_{1}+b_{1}+c_{0}) \cdot 10^{1}+r_{0} \cdot 10^{0}.$$ Observemos en general que si $k,s \in \mathbb{N}$ son tales que $0 \leq k,s \leq 9$, entonces $k+s+1 < 2 \cdot 10.$ En efecto, $$2 \cdot 10= 10+10=(9+1)+(9+1)=9+9+1+1=S(9+9+1),$$ luego $k+s+1 \leq 9+9+1 < S(9+9+1)=2 \cdot 10$.
 Repitiendo lo anterior con el término $a_{1}+b_{1}+c_{0}$ tenemos que $$a_{1}+b_{1}+c_{0}=c_{1} \cdot 10 + r_{1}$$ con $0 \leq r_{1} \leq 9$ y con $0 \leq c_{1} \leq 1$, ya que de la observación anterior se tiene que $a_{1}+b_{1}+c_{0} < 2 \cdot 10$. Así, $$n+m=(a_{k}+b_{k}) \cdot 10^{k}+ \cdots +(a_{2}+b_{2}+c_{1}) \cdot 10^{2} + r_{1} \cdot 10^{1}+r_{0} \cdot 10^{0}.$$
+Continuando de esta manera obtenemos que $$n+m=(a_{k}+b_{k}+c_{k-1}) \cdot 10^{k}+r_{k-1} \cdot 10^{k-1}+ \cdots + r_{1} \cdot 10^{1}+r_{0} \cdot 10^{0},$$ con $0 \leq r_{i} \leq 9$ para $i=1, \dots, k-1,$ y finalmente escribiendo $a_{k}+b_{k}+c_{k-1}=c_{k} \cdot 10+ r_{k}$ con $0 \leq r_{k} \leq 9$ y $0 \leq c_{k} \leq 1$, obtenemos $$n+m=c_{k} \cdot 10^{k+1}+r_{k} \cdot 10^{k}+ \cdots + r_{1} \cdot 10^{1}+ r_{0} \cdot 10^{0}$$ la escritura en base $10$ para $n+m$.
+
+#### [Ejemplo]{style="color: #e92121;"}
+
+Sumemos los números en base $10$, $n=92873$ y $m=2178$. Siguiendo el algoritmo anterior, tenemos que $3+8=1 \cdot 10+1$, $7+7+1=1 \cdot 10+5$, $8+1+1=1 \cdot 10 +0$, $2+2+1= 0 \cdot 10+5$ y $9+0=0 \cdot 10 +9$, por lo tanto,
+$$\begin{array}{lllllll}
+& 9 & 2 & 8 & 7 & 3 & + \\ 
+& 0 & 2 & 1 & 7 & 8 & \\ \hline
+0 & 9 & 5 & 0 & 5 & 1 &
+\end{array}\] es decir, $92873+2178=95051.$$
