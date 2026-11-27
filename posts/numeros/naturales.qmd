@@ -2924,6 +2924,16 @@ $$\begin{array}{lllllll}
 
 Ahora, para multiplicar dos números en base $10$, de la propiedad distributiva se sigue que basta tener un algoritmo para multiplicar cualquier número natural por un número natural entre $0$ y $9$. Por ejemplo, si tenemos dos números naturales con escrituras en base $10$, $$n=a_{k}a_{k-1} \cdots a_{1}a_{0}$$ y $$m=b_{s}b_{s-1} \cdots b_{1}b_{0},$$ la multiplicación $$n \cdot m=(a_{k} \cdot 10^{k}+a_{k-1} \cdot 10^{k-1}+ \cdots +a_{1} \cdot 10^{1}+a_{0} \cdot 10^{0}) \cdot (b_{s} \cdot 10^{s}+b_{s-1} \cdot 10^{s-1}+ \cdots +b_{1} \cdot 10^{1}+b_{0} \cdot 10^{0}),$$ y de la propiedad distributiva, $$n \cdot m=n \cdot (b_{s} \cdot 10^{s})+n \cdot (b_{s-1} \cdot 10^{s-1})+ \cdots + n \cdot (b_{1} \cdot 10^{1})+ n \cdot (b_{0} \cdot 10^{0}).$$
 Ya que tenemos un algoritmo para sumar números en base $10$, de esta última igualdad se sigue que un algoritmo para la multiplicación en base $10$ es consecuencia de un algoritmo para la multiplicación en base $10$ por números de la forma $a \cdot 10^{t}$ con $0 \leq a \leq 9$.
+
 Supongamos entonces que tenemos $n=a_{k} \cdot 10^{k}+a_{k-1} \cdot 10^{k-1}+ \cdots +a_{1} \cdot 10^{1}+a_{0} \cdot 10^{0}$ en base $10$ y queremos encontrar un algoritmo para encontrar la escritura en base $10$ del producto $n \cdot (a \cdot 10^{t})$ con $0 \leq a \leq 9$.
+
 Primero que todo observemos que $n \cdot 10^{t}=a_{k} \cdot 10^{k+t}+a_{k-1} \cdot 10^{k+t-1}+ \cdots +a_{1} \cdot 10^{1+t}+a_{0} \cdot 10^{t}$ y esta escritura corresponde a la única en base $10$ para el número $n \cdot 10^{t}$.
 En pocas palabras, el algoritmo para producto por potencias de $10$ es trivial.
+
+Esto último reduce el problema de encontrar un algoritmo para el producto en base $10$, a encontrar un algoritmo para el producto por números entre $0$ y $9$.
+
+Supongamos que tenemos $n=a_{k} \cdot 10^{k}+a_{k-1} \cdot 10^{k-1}+ \cdots +a_{1} \cdot 10^{1}+a_{0} \cdot 10^{0}$ y $0 \leq c \leq 9$. Entonces se sigue que $$n \cdot c=(a_{k} \cdot c) \cdot 10^{k}+(a_{k-1} \cdot c) \cdot 10^{k-1}+ \cdots +(a_{1} \cdot c) \cdot 10^{1}+(a_{0} \cdot c) \cdot 10^{0}.$$ Esta última igualdad no corresponde necesariamente a la escritura en base $10$ de $n \cdot c$, ya que $a_{i} \cdot c$ podría ser mayor que $9$.
+
+Usando el [algoritmo de la división](#div) tenemos que $a_{0} \cdot c=c_{0} \cdot 10 + r_{0}$ con $0 \leq r_{0} \leq 9$, pero como $a_{0} \cdot c \leq 9^{2} < 9 \cdot 10$ entonces $0 \leq c_{0} < 9$. Lo anterior nos permite escribir $$n \cdot c= (a_{k} \cdot c) \cdot 10^{k}+(a_{k-1} \cdot c) \cdot 10^{k-1}+ \cdots +(a_{1} \cdot c + c_{0}) \cdot 10^{1}+r_{0} \cdot 10^{0},$$ con $0 \leq r_{0} \leq 9$.
+
+Observemos que dados $k,s \in \mathbb{N}$ tales que $k,s \leq 9$ y dado $l \in \mathbb{N}$ con $l < 9$, se tiene que $(k \cdot s)+l < 9 \cdot 10$. Esto ya que $k \cdot s \leq 9^{2}$, luego $(k \cdot s)+l < 9^{2}+9=9(9+1)=9 \cdot 10$.
